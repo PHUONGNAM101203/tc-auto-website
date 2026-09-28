@@ -16,6 +16,13 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
           ...document.querySelectorAll<HTMLImageElement>(".tc-lift-card img"),
         ].every((img) => img.complete && img.naturalWidth > 1),
     );
+    // Cung ly do voi app-cards: ep hieu ung xuat hien ve trang thai cuoi roi
+    // moi do, khong thi moc do bi lay giua chung.
+    await page.evaluate(() => {
+      for (const el of document.querySelectorAll(".rv, .sl, .tc-lift-card")) {
+        el.classList.add("is-in", "is-settled");
+      }
+    });
     await page.waitForTimeout(250);
   });
 

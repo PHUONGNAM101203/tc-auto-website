@@ -1,7 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { nextSlide, prevSlide, type PhotoSlider as Slider } from "@/lib/photo-sliders";
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  nextSlide,
+  prevSlide,
+  type PhotoSlider as Slider,
+} from "@/lib/photo-sliders";
+
+/**
+ * Thoi gian mot the truot di. Phai KHOP voi `--tc-stack-ms` trong overlay.css:
+ * het thoi gian nay thi the vua truot moi duoc xep ra sau chong.
+ */
+const SLIDE_MS = 520;
 
 /**
  * Mot tam anh trong ban thiet ke co ve san mui ten "›" — day la lop lam cho mui
@@ -14,6 +24,67 @@ import { nextSlide, prevSlide, type PhotoSlider as Slider } from "@/lib/photo-sl
  */
 function Slide({ slider }: { slider: Slider }) {
   const [index, setIndex] = useState(0);
+  /**
+   * The dang TRUOT DI, kem huong. Thiet ke yeu cau: bam mui ten thi tam tren
+   * cung luot sang phai roi moi chuyen ra sau chong — chu khong phai mo cheo
+   * tai cho nhu truoc.
+   */
+  const [leaving, setLeaving] = useState<{ slide: number; dir: 1 | -1 } | null>(
+    null,
+  );
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  /** Cu bam trong luc dang truot — nho lai de lam ngay sau, dung bo. */
+  const queued = useRef<(1 | -1) | null>(null);
+
+  useEffect(
+    () => () => {
+      if (timer.current) {
+        clearTimeout(timer.current);
+      }
+    },
+    [],
+  );
+
+  const go = useCallback(
+    (dir: 1 | -1) => {
+      const count = slider.slides.length;
+      if (count < 2) {
+        return;
+      }
+      if (timer.current) {
+        // Dang truot: ghi nho cu bam nay roi lam ngay khi truot xong. Bo qua
+        // thi nguoi dung bam nhanh se thay nut "chet".
+        queued.current = dir;
+        return;
+      }
+      const reduce =
+        typeof matchMedia === "function" &&
+        matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const advance = () =>
+        setIndex((current) =>
+          dir === 1 ? nextSlide(current, count) : prevSlide(current, count),
+        );
+
+      if (reduce) {
+        advance();
+        return;
+      }
+
+      setLeaving({ slide: index, dir });
+      advance();
+      timer.current = setTimeout(() => {
+        timer.current = null;
+        setLeaving(null);
+        const next = queued.current;
+        queued.current = null;
+        if (next) {
+          go(next);
+        }
+      }, SLIDE_MS);
+    },
+    [index, slider.slides.length],
+  );
 
   return (
     <>
@@ -39,6 +110,9 @@ function Slide({ slider }: { slider: Slider }) {
             aria-hidden={slideIndex === index ? undefined : true}
             className="tc-photoslide"
             data-on={slideIndex === index || undefined}
+            data-leaving={
+              leaving?.slide === slideIndex ? leaving.dir : undefined
+            }
             width={slider.box.width}
             height={slider.box.height}
             loading="lazy"
@@ -55,7 +129,7 @@ function Slide({ slider }: { slider: Slider }) {
           type="button"
           className="tc-photoslider-arrow"
           data-dir="prev"
-          onClick={() => setIndex((current) => prevSlide(current, slider.slides.length))}
+          onClick={() => go(-1)}
           style={{
             left: slider.prev.x,
             top: slider.prev.y,
@@ -69,7 +143,7 @@ function Slide({ slider }: { slider: Slider }) {
       <button
         type="button"
         className="tc-photoslider-arrow"
-        onClick={() => setIndex((current) => nextSlide(current, slider.slides.length))}
+        onClick={() => go(1)}
         style={{
           left: slider.arrow.x,
           top: slider.arrow.y,

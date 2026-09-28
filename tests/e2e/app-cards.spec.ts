@@ -14,6 +14,16 @@ test.describe("ba thẻ Ứng dụng", () => {
         (img) => img.complete && img.naturalWidth > 1,
       ),
     );
+    // Ep hieu ung XUAT HIEN ve trang thai cuoi truoc khi do. Khong lam vay thi
+    // moc do co the bi lay giua luc the con dang truot len, va phep so "the nao
+    // nhich len" mat nghia — day la cho test nay tung chap chon khi chay ca bo.
+    await page.evaluate(() => {
+      for (const el of document.querySelectorAll(
+        ".rv, .sl, .tc-card, .tc-card-lift",
+      )) {
+        el.classList.add("is-in", "is-settled");
+      }
+    });
     await page.waitForTimeout(250);
   });
 

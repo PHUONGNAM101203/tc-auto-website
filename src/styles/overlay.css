@@ -1091,23 +1091,65 @@
   background: #03111c;
 }
 
+/* Thoi gian mot the truot di. PHAI khop voi SLIDE_MS trong PhotoSlider.tsx —
+   het thoi gian nay component moi xep the vua truot ra sau chong. */
+:root {
+  --tc-stack-ms: 520ms;
+}
+
 .tc-photoslide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  /* Anh cu MO HAN TRUOC roi anh moi moi hien. Neu de hai anh mo cheo cung luc
-     thi cho giao nhau lo ra hai lop chong nhau va mau bi xin di. */
-  transition: opacity 0.26s ease-out;
+  /* Cac the chua toi luot nam LUI VE SAU mot chut, dung sau the tren cung —
+     dung y thiet ke: mot chong anh chu khong phai mot o anh doi cho. */
+  transform: translateX(0) scale(0.965);
+  transition:
+    opacity 0.26s ease-out,
+    transform 0.26s ease-out;
   pointer-events: none;
   user-select: none;
 }
 
 .tc-photoslide[data-on] {
   opacity: 1;
-  /* Cho anh cu mo xong da roi moi hien len. */
-  transition: opacity 0.3s ease-in 0.26s;
+  transform: none;
+  z-index: 2;
+  /* Cho the cu truot di gan xong roi the moi len — de hai the khong de len nhau
+     giua chung. */
+  transition:
+    opacity 0.28s ease-in calc(var(--tc-stack-ms) * 0.45),
+    transform 0.34s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--tc-stack-ms) * 0.4);
+}
+
+/* The dang ra khoi chong: luot sang PHAI (hoac trai neu bam lui), nho lai roi
+   mo di — het luot thi component xep no ra sau. */
+.tc-photoslide[data-leaving] {
+  opacity: 0;
+  z-index: 3;
+  transition:
+    opacity var(--tc-stack-ms) ease-in,
+    transform var(--tc-stack-ms) cubic-bezier(0.32, 0, 0.67, 0);
+}
+
+.tc-photoslide[data-leaving="1"] {
+  transform: translateX(46%) scale(0.9) rotate(1.4deg);
+}
+
+.tc-photoslide[data-leaving="-1"] {
+  transform: translateX(-46%) scale(0.9) rotate(-1.4deg);
+}
+
+/* Tat hieu ung: doi anh dut khoat, khong truot. */
+@media (prefers-reduced-motion: reduce) {
+  .tc-photoslide,
+  .tc-photoslide[data-on],
+  .tc-photoslide[data-leaving] {
+    transition: none;
+    transform: none;
+  }
 }
 
 .tc-photoslider-arrow {
