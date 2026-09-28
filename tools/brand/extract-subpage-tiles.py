@@ -34,7 +34,8 @@ ROOT = Path(__file__).resolve().parent.parent.parent
 # Bo tai nguyen roi (khach gui bo sung 27/09/2026) — anh GOC, phan giai cao,
 # khong bi chu de len. Dung cho nhung trang ma anh va chu chong nhau nen khong
 # cat duoc o nao sach tu chinh trang.
-ASSETS = Path("/Users/phuongnam/Downloads/Tài nguyên Web")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from asset_source import find as find_asset  # noqa: E402
 SUBPAGES = ROOT / "src" / "data" / "subpages"
 TEXT = ROOT / "src" / "data" / "subpage-text.json"
 SLICE_DIR = ROOT / "public" / "slices" / "sub"
@@ -390,7 +391,7 @@ def main() -> int:
             # anh goc trong bo tai nguyen roi.
             anchor = text_bands[0]["bottom"] if text_bands else HEADER_BOTTOM
             for index, name in enumerate(SUBPAGE_ASSETS.get(slug, [])):
-                source = ASSETS / name
+                source = find_asset(name)
                 if not source.is_file():
                     print(f"    thieu anh roi: {source}")
                     continue

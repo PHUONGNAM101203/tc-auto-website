@@ -5,17 +5,17 @@
   "section": "nhan-su",
   "isArticle": true,
   "canvasWidth": 1440,
-  "height": 4661.0,
+  "height": 4142.0,
   "slices": [
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@2x.webp?v=10bcd0b6",
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@2x.webp?v=0420a2f7",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@2x.webp?v=10bcd0b6",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@2x.webp?v=0420a2f7",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@3x.webp?v=872c3e16",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@3x.webp?v=9678b532",
           "scale": 3
         }
       ],
@@ -23,21 +23,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 185044,
+      "bytes": 240574,
       "bytesByScale": {
-        "2": 185044,
-        "3": 335462
+        "2": 240574,
+        "3": 432840
       }
     },
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@2x.webp?v=c5a3dd74",
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@2x.webp?v=2e249e49",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@2x.webp?v=c5a3dd74",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@2x.webp?v=2e249e49",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@3x.webp?v=0ce553ca",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@3x.webp?v=0050a6c1",
           "scale": 3
         }
       ],
@@ -45,21 +45,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 122806,
+      "bytes": 118188,
       "bytesByScale": {
-        "2": 122806,
-        "3": 213360
+        "2": 118188,
+        "3": 201214
       }
     },
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@2x.webp?v=69c1d0ff",
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@2x.webp?v=0960f146",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@2x.webp?v=69c1d0ff",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@2x.webp?v=0960f146",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@3x.webp?v=2e41f373",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@3x.webp?v=1b519e50",
           "scale": 3
         }
       ],
@@ -67,21 +67,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 265930,
+      "bytes": 268514,
       "bytesByScale": {
-        "2": 265930,
-        "3": 457568
+        "2": 268514,
+        "3": 440468
       }
     },
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@2x.webp?v=71058b53",
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@2x.webp?v=fe6728ad",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@2x.webp?v=71058b53",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@2x.webp?v=fe6728ad",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@3x.webp?v=90bc9e18",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@3x.webp?v=de741c83",
           "scale": 3
         }
       ],
@@ -89,54 +89,32 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 229742,
+      "bytes": 189772,
       "bytesByScale": {
-        "2": 229742,
-        "3": 408590
+        "2": 189772,
+        "3": 311424
       }
     },
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@2x.webp?v=303e6137",
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@2x.webp?v=597fa0a4",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@2x.webp?v=303e6137",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@2x.webp?v=597fa0a4",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@3x.webp?v=82f2a509",
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@3x.webp?v=77efd89f",
           "scale": 3
         }
       ],
       "y": 3600.0,
-      "displayHeight": 900,
+      "displayHeight": 542.0,
       "intrinsicWidth": 2880,
-      "intrinsicHeight": 1800,
-      "bytes": 110150,
+      "intrinsicHeight": 1084,
+      "bytes": 58452,
       "bytesByScale": {
-        "2": 110150,
-        "3": 192420
-      }
-    },
-    {
-      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-5@2x.webp?v=1476a21f",
-      "srcSet": [
-        {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-5@2x.webp?v=1476a21f",
-          "scale": 2
-        },
-        {
-          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-5@3x.webp?v=803bdc9f",
-          "scale": 3
-        }
-      ],
-      "y": 4500.0,
-      "displayHeight": 161.0,
-      "intrinsicWidth": 2880,
-      "intrinsicHeight": 322,
-      "bytes": 35546,
-      "bytesByScale": {
-        "2": 35546,
-        "3": 58642
+        "2": 58452,
+        "3": 98156
       }
     }
   ],
@@ -173,7 +151,7 @@
     }
   ],
   "contactForm": {
-    "y": 4538.0
+    "y": 4019.0
   },
   "breadcrumb": [
     {

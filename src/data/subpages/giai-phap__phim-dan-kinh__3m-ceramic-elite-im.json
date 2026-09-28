@@ -5,17 +5,17 @@
   "section": "giai-phap",
   "isArticle": true,
   "canvasWidth": 1440,
-  "height": 8325.0,
+  "height": 7510.0,
   "slices": [
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0@2x.webp?v=11ac2425",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0@2x.webp?v=3fa88ab3",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0@2x.webp?v=11ac2425",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0@2x.webp?v=3fa88ab3",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0@3x.webp?v=2bc4b902",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0@3x.webp?v=23de65e5",
           "scale": 3
         }
       ],
@@ -23,21 +23,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 189438,
+      "bytes": 189714,
       "bytesByScale": {
-        "2": 189438,
-        "3": 339904
+        "2": 189714,
+        "3": 339508
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1@2x.webp?v=2e56373f",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1@2x.webp?v=c2eb5947",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1@2x.webp?v=2e56373f",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1@2x.webp?v=c2eb5947",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1@3x.webp?v=6a7918ad",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1@3x.webp?v=5dc1872f",
           "scale": 3
         }
       ],
@@ -45,21 +45,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 206518,
+      "bytes": 186370,
       "bytesByScale": {
-        "2": 206518,
-        "3": 368418
+        "2": 186370,
+        "3": 314634
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2@2x.webp?v=d42c046f",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2@2x.webp?v=6a28afdf",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2@2x.webp?v=d42c046f",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2@2x.webp?v=6a28afdf",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2@3x.webp?v=db1bad51",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2@3x.webp?v=ae0ac896",
           "scale": 3
         }
       ],
@@ -67,21 +67,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 264302,
+      "bytes": 285620,
       "bytesByScale": {
-        "2": 264302,
-        "3": 445552
+        "2": 285620,
+        "3": 463512
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-3@2x.webp?v=1f1e26eb",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-3@2x.webp?v=be512396",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-3@2x.webp?v=1f1e26eb",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-3@2x.webp?v=be512396",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-3@3x.webp?v=58390a62",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-3@3x.webp?v=cd75a9da",
           "scale": 3
         }
       ],
@@ -89,21 +89,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 193936,
+      "bytes": 144712,
       "bytesByScale": {
-        "2": 193936,
-        "3": 327964
+        "2": 144712,
+        "3": 251696
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-4@2x.webp?v=71fac531",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-4@2x.webp?v=51fb2530",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-4@2x.webp?v=71fac531",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-4@2x.webp?v=51fb2530",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-4@3x.webp?v=3a16ee98",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-4@3x.webp?v=89bfe159",
           "scale": 3
         }
       ],
@@ -111,21 +111,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 172998,
+      "bytes": 177414,
       "bytesByScale": {
-        "2": 172998,
-        "3": 294792
+        "2": 177414,
+        "3": 307720
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-5@2x.webp?v=5dac9b30",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-5@2x.webp?v=1d12b5ff",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-5@2x.webp?v=5dac9b30",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-5@2x.webp?v=1d12b5ff",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-5@3x.webp?v=cc425b6f",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-5@3x.webp?v=05ade902",
           "scale": 3
         }
       ],
@@ -133,21 +133,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 156312,
+      "bytes": 214140,
       "bytesByScale": {
-        "2": 156312,
-        "3": 273544
+        "2": 214140,
+        "3": 361412
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-6@2x.webp?v=5b13c718",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-6@2x.webp?v=5eaf5567",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-6@2x.webp?v=5b13c718",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-6@2x.webp?v=5eaf5567",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-6@3x.webp?v=43557ba6",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-6@3x.webp?v=6b07cf41",
           "scale": 3
         }
       ],
@@ -155,21 +155,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 240100,
+      "bytes": 231564,
       "bytesByScale": {
-        "2": 240100,
-        "3": 401158
+        "2": 231564,
+        "3": 411300
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-7@2x.webp?v=051fbab3",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-7@2x.webp?v=24fcf20e",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-7@2x.webp?v=051fbab3",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-7@2x.webp?v=24fcf20e",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-7@3x.webp?v=22330f83",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-7@3x.webp?v=2dbccff3",
           "scale": 3
         }
       ],
@@ -177,54 +177,32 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 229874,
+      "bytes": 249234,
       "bytesByScale": {
-        "2": 229874,
-        "3": 395540
+        "2": 249234,
+        "3": 438442
       }
     },
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-8@2x.webp?v=4a0020be",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-8@2x.webp?v=b193b4fe",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-8@2x.webp?v=4a0020be",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-8@2x.webp?v=b193b4fe",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-8@3x.webp?v=1aa028d7",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-8@3x.webp?v=a25f27ae",
           "scale": 3
         }
       ],
       "y": 7200.0,
-      "displayHeight": 900,
+      "displayHeight": 310.0,
       "intrinsicWidth": 2880,
-      "intrinsicHeight": 1800,
-      "bytes": 239502,
+      "intrinsicHeight": 620,
+      "bytes": 37874,
       "bytesByScale": {
-        "2": 239502,
-        "3": 424076
-      }
-    },
-    {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-9@2x.webp?v=dbb2e274",
-      "srcSet": [
-        {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-9@2x.webp?v=dbb2e274",
-          "scale": 2
-        },
-        {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-9@3x.webp?v=9c374811",
-          "scale": 3
-        }
-      ],
-      "y": 8100.0,
-      "displayHeight": 225.0,
-      "intrinsicWidth": 2880,
-      "intrinsicHeight": 450,
-      "bytes": 36428,
-      "bytesByScale": {
-        "2": 36428,
-        "3": 60902
+        "2": 37874,
+        "3": 63588
       }
     }
   ],
@@ -261,7 +239,7 @@
     }
   ],
   "contactForm": {
-    "y": 8202.0
+    "y": 7387.0
   },
   "breadcrumb": [
     {

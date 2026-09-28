@@ -31,7 +31,10 @@ from _backdrop import rebuild_background  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent.parent
 DOWNLOADS = Path("/Users/phuongnam/Downloads/[TC] Website")
 SOURCE = DOWNLOADS / "Website_TC" / "3.Page_Giải pháp" / "3.PPF.png"
-ASSETS = DOWNLOADS / "Tài nguyên Web" / "2. Page_Giải pháp" / "2.3. PPF"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from asset_source import find as find_asset  # noqa: E402
+
+ASSET_DIR = "2. Page_Giải pháp/2.3. PPF"
 OUT = ROOT / "public" / "ppf"
 SLICE_DIR = ROOT / "public" / "slices" / "sub"
 SPEC = ROOT / "src" / "data" / "subpages" / "giai-phap__ppf.json"
@@ -132,7 +135,7 @@ ART_HEIGHT = 235
 
 def build_cut_card(shell: Image.Image, art_name: str, scale: int) -> Image.Image:
     """Dung lai mot the bi cat: nen the rong + anh minh hoa dan len dau."""
-    source = ASSETS / art_name
+    source = find_asset(f"{ASSET_DIR}/{art_name}")
     if not source.is_file():
         raise SystemExit(f"Thieu anh minh hoa: {source}")
 
@@ -150,7 +153,7 @@ def export_cards() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     page = Image.open(SOURCE)
     scale = round(page.width / CANVAS_WIDTH)
-    shell = Image.open(ASSETS / "Rectangle 189.png").convert("RGBA")
+    shell = Image.open(find_asset(f"{ASSET_DIR}/Rectangle 189.png")).convert("RGBA")
     manifest = []
 
     for card in CARDS:

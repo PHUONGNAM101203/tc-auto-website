@@ -47,20 +47,45 @@ test.describe("băng chuyền chồng thẻ", () => {
   test("bấm mũi tên thì tấm trên cùng lướt sang phải rồi ra sau chồng", async ({
     page,
   }) => {
-    await page.locator(".tc-photoslider-arrow:not([data-dir='prev'])").first().click();
+    // GHI LAI dinh thay vi bat dung khoanh khac.
+    //
+    // Lan dau test nay lay mau giua luc hoat anh chay, ma cua so do chi 520ms:
+    // may ban thi mau dau tien roi vao luc da chay xong, x quay ve 0 va test
+    // rot oan. Gio cai mot bo ghi chay theo tung khung hinh, ghi lai do dich
+    // xa nhat — khong the truot mat nua.
+    await page.evaluate(() => {
+      const img = document.querySelector(".tc-photoslider .tc-photoslide");
+      const w = window as unknown as { __peak: number };
+      w.__peak = 0;
+      const tick = () => {
+        const x =
+          Number(getComputedStyle(img!).transform.split(",").slice(-2)[0]) || 0;
+        w.__peak = Math.max(w.__peak, x);
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
 
-    // Giua chung: tam cu mang dau hieu dang roi di va DA dich sang phai.
+    await page
+      .locator(".tc-photoslider-arrow:not([data-dir='prev'])")
+      .first()
+      .click();
+
+    // Dau hieu `data-leaving` do React dat ngay khi bam va giu suot nhip truot,
+    // nen doi no la chac chan.
     await expect
-      .poll(async () => (await state(page))[0].x, {
-        message: "tấm đầu phải trượt sang phải",
+      .poll(async () => (await state(page))[0].leaving, {
+        message: "tấm đầu phải được đánh dấu là đang rời đi",
       })
-      .toBeGreaterThan(10);
-    const mid = await state(page);
-    expect(mid[0].leaving).toBe("1");
-    expect(mid[0].opacity).toBeLessThan(1);
+      .toBe("1");
 
-    // Xong: tam thu hai len hang, tam cu ve sau chong.
+    // Cho tron nhip roi doc dinh da ghi.
     await expect.poll(async () => (await state(page))[1].opacity).toBe(1);
+    const peak = await page.evaluate(
+      () => (window as unknown as { __peak: number }).__peak,
+    );
+    expect(peak, "tấm đầu phải trượt sang phải").toBeGreaterThan(10);
+
     // Tam cu con truot NGUOC ve cho trong chong them mot nhip nua. Luc do do
     // mo cua no da bang 0 nen khong ai thay, nhung phai cho no ve han roi moi
     // chot — khong thi test bat dung giua duong ve.
@@ -77,8 +102,6 @@ test.describe("băng chuyền chồng thẻ", () => {
       test.skip(true, "slider này không có mũi tên lùi trong thiết kế");
     }
     await prev.click();
-    await expect
-      .poll(async () => (await state(page))[0].x)
-      .toBeLessThan(-10);
+    await expect.poll(async () => (await state(page))[0].x).toBeLessThan(-10);
   });
 });

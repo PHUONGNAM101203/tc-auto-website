@@ -29,7 +29,11 @@ QUALITY = 80
 
 def main() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    # CO Y khong dung `sourceRoot`: do la nguon cua TRANG CON va co the tro
+    # sang bo khung moi. Anh nen @3x cua trang chinh phai cung doi voi ban
+    # prototype HTML dang dung, neu khong thi man retina va man thuong hien hai
+    # thiet ke khac nhau — ma gate pixel chay o ti le 1 nen khong bat duoc.
+    source_root = Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
     mains = {p["slug"]: p for p in manifest["pages"] if p.get("main")}
 
     total = 0

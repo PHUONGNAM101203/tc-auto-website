@@ -17,6 +17,7 @@ Chay: python3 tools/brand/extract-solution-cards.py
 """
 from __future__ import annotations
 
+import sys
 import json
 from pathlib import Path
 
@@ -25,7 +26,11 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent.parent
 DOWNLOADS = Path("/Users/phuongnam/Downloads/[TC] Website")
 SOURCE = DOWNLOADS / "Website_TC" / "1. Page_Home" / "Home.png"
-ASSETS = DOWNLOADS / "Tài nguyên Web" / "0. Homepage"
+# Tim khap ca ba bo tai nguyen, lay ban to nhat — xem tools/brand/asset_source.py
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from asset_source import find as find_asset  # noqa: E402
+
+ASSET_DIR = "0. Homepage"
 OUT = ROOT / "public" / "solutions"
 SLICE_DIR = ROOT / "public" / "slices"
 SPEC = ROOT / "src" / "data" / "pages" / "home.json"
@@ -103,7 +108,7 @@ def export_cards() -> None:
                 )
             ).convert("RGB")
         else:
-            source = ASSETS / card["from"]
+            source = find_asset(f"{ASSET_DIR}/{card['from']}")
             if not source.is_file():
                 raise SystemExit(f"Thieu anh the: {source}")
             art = Image.open(source).convert("RGB")

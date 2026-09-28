@@ -69,11 +69,11 @@
       "tiles": []
     },
     "giai-phap/du-an/dai-ly-winca-pham-gia-auto": {
-      "hero": "/mobile/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-hero.webp?v=3549f18d",
+      "hero": "/mobile/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-hero.webp?v=ae334fcd",
       "tiles": [
         {
           "after": 1515.7,
-          "src": "/mobile/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0.webp?v=af49dab1"
+          "src": "/mobile/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0.webp?v=ff36b505"
         }
       ]
     },
@@ -99,21 +99,8 @@
       "tiles": []
     },
     "giai-phap/phim-dan-kinh/3m-ceramic-elite-im": {
-      "hero": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-hero.webp?v=226ebfac",
-      "tiles": [
-        {
-          "after": 1518.0,
-          "src": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-0.webp?v=8aaf97e4"
-        },
-        {
-          "after": 6279.0,
-          "src": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-1.webp?v=67030a53"
-        },
-        {
-          "after": 7472.5,
-          "src": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-2.webp?v=a29df38d"
-        }
-      ]
+      "hero": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-hero.webp?v=2da2d8c8",
+      "tiles": []
     },
     "giai-phap/ppf": {
       "hero": "/mobile/sub/giai-phap__ppf-hero.webp?v=2619019e",
@@ -146,7 +133,7 @@
       "tiles": []
     },
     "nhan-su/tuyen-dung/vi-tri-dang-tuyen/ky-thuat-dan-phim-va-man-hinh": {
-      "hero": "/mobile/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-hero.webp?v=95770cc0",
+      "hero": "/mobile/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-hero.webp?v=78d03796",
       "tiles": []
     },
     "nhan-su/van-hoa-tc": {
@@ -163,11 +150,11 @@
       ]
     },
     "nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep": {
-      "hero": "/mobile/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-hero.webp?v=c7d03132",
+      "hero": "/mobile/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-hero.webp?v=65f08aaf",
       "tiles": [
         {
           "after": 1271.1000000000001,
-          "src": "/mobile/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0.webp?v=7c9346b2"
+          "src": "/mobile/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0.webp?v=d32f44cb"
         }
       ]
     },

@@ -8,14 +8,14 @@
   "height": 1846.0,
   "slices": [
     {
-      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@2x.webp?v=67478f2c",
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@2x.webp?v=6a96c2d5",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@2x.webp?v=67478f2c",
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@2x.webp?v=6a96c2d5",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@3x.webp?v=9b5dab40",
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@3x.webp?v=803a777e",
           "scale": 3
         }
       ],
@@ -23,21 +23,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 189670,
+      "bytes": 188296,
       "bytesByScale": {
-        "2": 189670,
-        "3": 341162
+        "2": 188296,
+        "3": 338558
       }
     },
     {
-      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@2x.webp?v=de0e3004",
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@2x.webp?v=2802e234",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@2x.webp?v=de0e3004",
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@2x.webp?v=2802e234",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@3x.webp?v=ee398deb",
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@3x.webp?v=97d79956",
           "scale": 3
         }
       ],
@@ -45,21 +45,21 @@
       "displayHeight": 900,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 1800,
-      "bytes": 125090,
+      "bytes": 125034,
       "bytesByScale": {
-        "2": 125090,
-        "3": 203698
+        "2": 125034,
+        "3": 203660
       }
     },
     {
-      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@2x.webp?v=36e707c8",
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@2x.webp?v=998cc812",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@2x.webp?v=36e707c8",
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@2x.webp?v=998cc812",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@3x.webp?v=b355743f",
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@3x.webp?v=72ef5a13",
           "scale": 3
         }
       ],
@@ -67,10 +67,10 @@
       "displayHeight": 46.0,
       "intrinsicWidth": 2880,
       "intrinsicHeight": 92,
-      "bytes": 6970,
+      "bytes": 6988,
       "bytesByScale": {
-        "2": 6970,
-        "3": 11700
+        "2": 6988,
+        "3": 11664
       }
     }
   ],

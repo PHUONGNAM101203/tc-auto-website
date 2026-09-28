@@ -15,6 +15,7 @@ Chay: python3 tools/brand/extract-photo-sliders.py
 """
 from __future__ import annotations
 
+import sys
 import json
 from pathlib import Path
 
@@ -23,7 +24,13 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent.parent
 DOWNLOADS = Path("/Users/phuongnam/Downloads/[TC] Website")
 DESIGN = DOWNLOADS / "Website_TC"
-ASSETS = DOWNLOADS / "Tài nguyên Web"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from asset_source import find as find_asset  # noqa: E402
+
+
+def ASSET(*parts: str):
+    """Ban to nhat cua anh nay trong cac bo tai nguyen."""
+    return find_asset("/".join(parts))
 OUT = ROOT / "public" / "sliders"
 DATA = ROOT / "src" / "data" / "photo-sliders.json"
 
@@ -41,8 +48,8 @@ SLIDERS = [
         # Mui ten "›" ve san trong anh, do bang tools/detect-arrows.py.
         "arrow": {"x": 1335, "y": 3108, "width": 12, "height": 33},
         "extra": [
-            ASSETS / "0. Homepage" / "Rectangle 23 — 3D Transform.png",
-            ASSETS / "0. Homepage" / "Rectangle 23 — 3D Transform-1.png",
+            ASSET("0. Homepage", "Rectangle 23 — 3D Transform.png"),
+            ASSET("0. Homepage", "Rectangle 23 — 3D Transform-1.png"),
         ],
     },
     {
@@ -54,12 +61,8 @@ SLIDERS = [
         "box": {"x": 650, "y": 2167, "width": 697, "height": 416},
         "arrow": {"x": 1386, "y": 2370, "width": 12, "height": 30},
         "extra": [
-            ASSETS
-            / "4. Page_Đại lý"
-            / "Rectangle 186 — Perspective Warp — Perspective Warp-1.png",
-            ASSETS
-            / "4. Page_Đại lý"
-            / "Rectangle 186 — Perspective Warp — Perspective Warp-2.png",
+            ASSET("4. Page_Đại lý", "Rectangle 186 — Perspective Warp — Perspective Warp-1.png"),
+            ASSET("4. Page_Đại lý", "Rectangle 186 — Perspective Warp — Perspective Warp-2.png"),
         ],
     },
     {
@@ -73,9 +76,9 @@ SLIDERS = [
         "arrow": {"x": 1218, "y": 1497, "width": 12, "height": 33},
         "prev": {"x": 210, "y": 1497, "width": 12, "height": 33},
         "extra": [
-            ASSETS / "5. Page_Nhân sự" / "Rectangle 186.png",
-            ASSETS / "5. Page_Nhân sự" / "Rectangle 187.png",
-            ASSETS / "5. Page_Nhân sự" / "Rectangle 188.png",
+            ASSET("5. Page_Nhân sự", "Rectangle 186.png"),
+            ASSET("5. Page_Nhân sự", "Rectangle 187.png"),
+            ASSET("5. Page_Nhân sự", "Rectangle 188.png"),
         ],
     },
 ]

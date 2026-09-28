@@ -35,6 +35,8 @@ function Slide({ slider }: { slider: Slider }) {
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   /** Cu bam trong luc dang truot — nho lai de lam ngay sau, dung bo. */
   const queued = useRef<(1 | -1) | null>(null);
+  /** Ban MOI NHAT cua `go`, de cu bam duoc nho lai khong chay ban cu. */
+  const goRef = useRef<((dir: 1 | -1) => void) | null>(null);
 
   useEffect(
     () => () => {
@@ -79,12 +81,21 @@ function Slide({ slider }: { slider: Slider }) {
         const next = queued.current;
         queued.current = null;
         if (next) {
-          go(next);
+          // Goi qua ref chu khong goi thang `go`: goi thang la dung lai BAN CU
+          // cua ham, ban do con giu `index` cua nhip truoc nen cu bam duoc nho
+          // lai se nhay sai mot the.
+          goRef.current?.(next);
         }
       }, SLIDE_MS);
     },
     [index, slider.slides.length],
   );
+
+  // Gan trong effect chu khong gan luc render: ghi vao ref giua render la tac
+  // dung phu, React co the render lai ma khong dung ket qua do.
+  useEffect(() => {
+    goRef.current = go;
+  }, [go]);
 
   return (
     <>

@@ -240,6 +240,12 @@ test.describe("tải ảnh theo lượt cuộn", () => {
   test("vào trang chỉ tải ảnh đầu, cuộn tới đâu tải tới đó", async ({
     page,
   }) => {
+    const sliceCount =
+      INDEX.find(
+        (row) => row.slug === "giai-phap/phim-dan-kinh/3m-ceramic-elite-im",
+      )?.slices ?? 0;
+    expect(sliceCount, "phải đọc được số lát từ dữ liệu").toBeGreaterThan(1);
+
     const seen = new Set<string>();
     page.on("response", (r) => {
       const url = r.url();
@@ -254,7 +260,8 @@ test.describe("tải ảnh theo lượt cuộn", () => {
     await page.waitForTimeout(1200);
     const atEntry = seen.size;
 
-    // Trang nay co 10 lat — vao trang khong duoc tai het.
+    // So lat doc TU DU LIEU chu khong ghi cung: thiet ke doi la so lat doi
+    // theo (ban 28/09 lam trang nay ngan di, tu 10 lat con 9).
     expect(atEntry).toBeGreaterThan(0);
     expect(atEntry, "vào trang không được tải hết ảnh").toBeLessThanOrEqual(3);
 
@@ -269,7 +276,9 @@ test.describe("tải ảnh theo lượt cuộn", () => {
     });
     await page.waitForTimeout(900);
 
-    expect(seen.size, "cuộn hết phải tải đủ 10 lát").toBe(10);
+    expect(seen.size, `cuộn hết phải tải đủ ${sliceCount} lát`).toBe(
+      sliceCount,
+    );
 
     const broken = await page.evaluate(
       () =>

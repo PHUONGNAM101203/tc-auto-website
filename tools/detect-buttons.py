@@ -123,7 +123,12 @@ def detect(path: Path) -> list[dict[str, int]]:
 def validate() -> int:
     """Doi chieu ket qua do voi toa do that cua 6 trang chinh."""
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    # Trang chinh phai doi chieu voi bo khung CUNG DOI voi prototype dang dung,
+    # khong phai bo moi nhat — xem tools/manifest_source.py. Lay nham bo la ham
+    # nay bao sai: thiet ke moi cua trang Cong nghe bo bot mot nut, doi chieu
+    # voi no thi site bi bao "thua 1 nut" trong khi site dang dung dung
+    # prototype cua no.
+    source_root = Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
     mains = {e["slug"]: e for e in manifest["pages"] if e.get("main")}
 
     total_expected = total_matched = total_extra = 0
