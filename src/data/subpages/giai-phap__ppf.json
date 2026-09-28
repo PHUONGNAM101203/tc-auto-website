@@ -1,0 +1,145 @@
+{
+  "slug": "giai-phap/ppf",
+  "route": "/giai-phap/ppf",
+  "title": "PPF",
+  "section": "giai-phap",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3271.0,
+  "slices": [
+    {
+      "src": "/slices/sub/giai-phap__ppf-0@2x.webp?v=c6432c84",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__ppf-0@2x.webp?v=c6432c84",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__ppf-0@3x.webp?v=c23d9f59",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 183214,
+      "bytesByScale": {
+        "2": 183214,
+        "3": 324652
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__ppf-1@2x.webp?v=57cd98b6",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__ppf-1@2x.webp?v=57cd98b6",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__ppf-1@3x.webp?v=c3f32cf5",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 154884,
+      "bytesByScale": {
+        "2": 154884,
+        "3": 258474
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__ppf-2@2x.webp?v=a2c2fb7c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__ppf-2@2x.webp?v=a2c2fb7c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__ppf-2@3x.webp?v=70407057",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 248304,
+      "bytesByScale": {
+        "2": 248304,
+        "3": 436230
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__ppf-3@2x.webp?v=c05c5cda",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__ppf-3@2x.webp?v=c05c5cda",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__ppf-3@3x.webp?v=52e4ed78",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 571.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1142,
+      "bytes": 86486,
+      "bytesByScale": {
+        "2": 86486,
+        "3": 146116
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": true
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3148.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Giải pháp",
+      "href": "/giai-phap"
+    }
+  ],
+  "sourceFile": "3.PPF.png"
+}

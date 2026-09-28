@@ -1,0 +1,167 @@
+{
+  "slug": "dai-ly/gallery-by-brand",
+  "route": "/dai-ly/gallery-by-brand",
+  "title": "Gallery by brand",
+  "section": "dai-ly",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3857.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__gallery-by-brand-0@2x.webp?v=817f20de",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-0@2x.webp?v=817f20de",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-0@3x.webp?v=5202ef81",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 190134,
+      "bytesByScale": {
+        "2": 190134,
+        "3": 340874
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__gallery-by-brand-1@2x.webp?v=8275fcc8",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-1@2x.webp?v=8275fcc8",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-1@3x.webp?v=a89227fe",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 292574,
+      "bytesByScale": {
+        "2": 292574,
+        "3": 478064
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__gallery-by-brand-2@2x.webp?v=65e480d0",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-2@2x.webp?v=65e480d0",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-2@3x.webp?v=aa538879",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 310128,
+      "bytesByScale": {
+        "2": 310128,
+        "3": 508414
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__gallery-by-brand-3@2x.webp?v=7d3385fb",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-3@2x.webp?v=7d3385fb",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-3@3x.webp?v=8e257fe4",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 253546,
+      "bytesByScale": {
+        "2": 253546,
+        "3": 418616
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__gallery-by-brand-4@2x.webp?v=6e89d253",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-4@2x.webp?v=6e89d253",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__gallery-by-brand-4@3x.webp?v=1b20a2e8",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 257.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 514,
+      "bytes": 36414,
+      "bytesByScale": {
+        "2": 36414,
+        "3": 60800
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3734.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    }
+  ],
+  "sourceFile": "6. GALLERY BY BRAND.png"
+}

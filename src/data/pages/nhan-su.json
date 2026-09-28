@@ -1,0 +1,382 @@
+{
+  "slug": "nhan-su",
+  "route": "/nhan-su",
+  "title": "Nhân sự",
+  "canvasWidth": 1440,
+  "height": 3374.0,
+  "slices": [
+    {
+      "src": "/slices/nhan-su-0.webp?v=5f409115",
+      "y": 0.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 181290,
+      "srcSet": [
+        {
+          "src": "/slices/nhan-su-0.webp?v=5f409115",
+          "scale": 2
+        },
+        {
+          "src": "/slices/nhan-su-0@3x.webp?v=21ced563",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 181290,
+        "3": 430268
+      }
+    },
+    {
+      "src": "/slices/nhan-su-1.webp?v=41f95247",
+      "y": 900.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 104060,
+      "srcSet": [
+        {
+          "src": "/slices/nhan-su-1.webp?v=41f95247",
+          "scale": 2
+        },
+        {
+          "src": "/slices/nhan-su-1@3x.webp?v=8c411a6d",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 104060,
+        "3": 287478
+      }
+    },
+    {
+      "src": "/slices/nhan-su-2.webp?v=ef0bcfd4",
+      "y": 1800.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 73142,
+      "srcSet": [
+        {
+          "src": "/slices/nhan-su-2.webp?v=ef0bcfd4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/nhan-su-2@3x.webp?v=bb0989d8",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 73142,
+        "3": 228124
+      }
+    },
+    {
+      "src": "/slices/nhan-su-3.webp?v=2aa4b7cf",
+      "y": 2700.0,
+      "displayHeight": 674.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1348,
+      "bytes": 100186,
+      "srcSet": [
+        {
+          "src": "/slices/nhan-su-3.webp?v=2aa4b7cf",
+          "scale": 2
+        },
+        {
+          "src": "/slices/nhan-su-3@3x.webp?v=d9a49a87",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 100186,
+        "3": 274198
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "items": [
+    {
+      "id": "nhan-su-000",
+      "tag": "div",
+      "classes": [
+        "herot"
+      ],
+      "x": 82.0,
+      "y": 645.0,
+      "w": 500.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "THẾ GIỚI CỦA TC",
+      "text": "THẾ GIỚI CỦA TC"
+    },
+    {
+      "id": "nhan-su-001",
+      "tag": "div",
+      "classes": [
+        "slogan"
+      ],
+      "x": 82.0,
+      "y": 710.0,
+      "w": 470.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "DRIVE · <span class=\"c-blue\">EXPERIENCE</span> · <span class=\"c-red\">ELEVATE</span>",
+      "text": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    {
+      "id": "nhan-su-002",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 86.0,
+      "y": 914.0,
+      "w": 300.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "VĂN HOÁ TC",
+      "text": "VĂN HOÁ TC"
+    },
+    {
+      "id": "nhan-su-003",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 410.0,
+      "y": 988.0,
+      "w": 620.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "NƠI GIÁ TRỊ CHUNG TẠO<br>NÊN SỨC MẠNH CHUNG.",
+      "text": "NƠI GIÁ TRỊ CHUNG TẠONÊN SỨC MẠNH CHUNG."
+    },
+    {
+      "id": "nhan-su-004",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 370.0,
+      "y": 1133.0,
+      "w": 700.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da8b2"
+      },
+      "href": null,
+      "html": "Văn hoá TC AUTO được xây dựng từ sự chính trực, tinh thần chủ động và khát vọng không ngừng tiến về phía trước. Mỗi cá nhân cùng chia sẻ giá trị, cùng phát huy thế mạnh và tạo nên một tập thể khác biệt, chuyên nghiệp và bền vững.",
+      "text": "Văn hoá TC AUTO được xây dựng từ sự chính trực, tinh thần chủ động và khát vọng không ngừng tiến về phía trước. Mỗi cá nhân cùng chia sẻ giá trị, cùng phát huy thế mạnh và tạo nên một tập thể khác biệt, chuyên nghiệp và bền vững."
+    },
+    {
+      "id": "nhan-su-005",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 631.0,
+      "y": 1232.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "nhan-su-006",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 86.0,
+      "y": 1946.0,
+      "w": 300.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "NHÂN SỰ TC",
+      "text": "NHÂN SỰ TC"
+    },
+    {
+      "id": "nhan-su-007",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 2103.0,
+      "w": 500.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "ĐẰNG SAU MỖI BƯỚC<br>TIẾN LÀ MỘT TẬP THỂ.",
+      "text": "ĐẰNG SAU MỖI BƯỚCTIẾN LÀ MỘT TẬP THỂ."
+    },
+    {
+      "id": "nhan-su-008",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 2264.0,
+      "w": 460.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da4ac"
+      },
+      "href": null,
+      "html": "Từ những cá nhân giàu năng lực đến một tập thể cùng chung mục tiêu, TC AUTO xây dựng môi trường nơi mỗi người được phát huy thế mạnh, không ngừng phát triển và cùng tạo nên những giá trị bền vững.",
+      "text": "Từ những cá nhân giàu năng lực đến một tập thể cùng chung mục tiêu, TC AUTO xây dựng môi trường nơi mỗi người được phát huy thế mạnh, không ngừng phát triển và cùng tạo nên những giá trị bền vững."
+    },
+    {
+      "id": "nhan-su-009",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 84.0,
+      "y": 2461.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "nhan-su-010",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 86.0,
+      "y": 2620.0,
+      "w": 320.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "TUYỂN DỤNG",
+      "text": "TUYỂN DỤNG"
+    },
+    {
+      "id": "nhan-su-011",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 2726.0,
+      "w": 520.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "CÙNG NHAU TẠO NÊN<br>ĐIỀU LỚN HƠN.",
+      "text": "CÙNG NHAU TẠO NÊNĐIỀU LỚN HƠN."
+    },
+    {
+      "id": "nhan-su-012",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 2884.0,
+      "w": 520.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da4ac"
+      },
+      "href": null,
+      "html": "TC AUTO tin rằng những giá trị lớn được tạo nên từ những con người cùng chung tinh thần và khát vọng. Mỗi thành viên được trao cơ hội phát huy thế mạnh, không ngừng học hỏi và cùng đóng góp vào hành trình phát triển chung.",
+      "text": "TC AUTO tin rằng những giá trị lớn được tạo nên từ những con người cùng chung tinh thần và khát vọng. Mỗi thành viên được trao cơ hội phát huy thế mạnh, không ngừng học hỏi và cùng đóng góp vào hành trình phát triển chung."
+    },
+    {
+      "id": "nhan-su-013",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 84.0,
+      "y": 3032.0,
+      "w": 234.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "THAM GIA TUYỂN DỤNG",
+      "text": "THAM GIA TUYỂN DỤNG"
+    }
+  ],
+  "contactForm": {
+    "y": 3251.0
+  }
+}

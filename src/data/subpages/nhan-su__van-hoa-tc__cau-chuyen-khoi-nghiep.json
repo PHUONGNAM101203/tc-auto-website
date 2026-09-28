@@ -1,0 +1,193 @@
+{
+  "slug": "nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep",
+  "route": "/nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep",
+  "title": "Câu chuyện khởi nghiệp",
+  "section": "nhan-su",
+  "isArticle": true,
+  "canvasWidth": 1440,
+  "height": 4661.0,
+  "slices": [
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@2x.webp?v=10bcd0b6",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@2x.webp?v=10bcd0b6",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-0@3x.webp?v=872c3e16",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 185044,
+      "bytesByScale": {
+        "2": 185044,
+        "3": 335462
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@2x.webp?v=c5a3dd74",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@2x.webp?v=c5a3dd74",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-1@3x.webp?v=0ce553ca",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 122806,
+      "bytesByScale": {
+        "2": 122806,
+        "3": 213360
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@2x.webp?v=69c1d0ff",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@2x.webp?v=69c1d0ff",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-2@3x.webp?v=2e41f373",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 265930,
+      "bytesByScale": {
+        "2": 265930,
+        "3": 457568
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@2x.webp?v=71058b53",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@2x.webp?v=71058b53",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-3@3x.webp?v=90bc9e18",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 229742,
+      "bytesByScale": {
+        "2": 229742,
+        "3": 408590
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@2x.webp?v=303e6137",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@2x.webp?v=303e6137",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-4@3x.webp?v=82f2a509",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 110150,
+      "bytesByScale": {
+        "2": 110150,
+        "3": 192420
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-5@2x.webp?v=1476a21f",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-5@2x.webp?v=1476a21f",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-5@3x.webp?v=803bdc9f",
+          "scale": 3
+        }
+      ],
+      "y": 4500.0,
+      "displayHeight": 161.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 322,
+      "bytes": 35546,
+      "bytesByScale": {
+        "2": 35546,
+        "3": 58642
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "contactForm": {
+    "y": 4538.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Nhân sự",
+      "href": "/nhan-su"
+    },
+    {
+      "label": "Văn hoá TC",
+      "href": "/nhan-su/van-hoa-tc"
+    }
+  ],
+  "sourceFile": "2.2 CÂU CHUYỆN KHỞI NGHIỆP.png"
+}

@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------------
+   reset.css — reset goc cua prototype.
+   PHAI import TRUOC canvas.css: canvas.css chua cac gia tri padding chinh xac
+   tu Figma (.search padding-left 22px, .nv padding 0 12px, .ff input 17px...)
+   va phai thang reset nay.
+--------------------------------------------------------------------------- */
+.tc-root *,
+.tc-root *::before,
+.tc-root *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

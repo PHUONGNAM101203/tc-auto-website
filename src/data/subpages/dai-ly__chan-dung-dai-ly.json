@@ -1,0 +1,167 @@
+{
+  "slug": "dai-ly/chan-dung-dai-ly",
+  "route": "/dai-ly/chan-dung-dai-ly",
+  "title": "Chân dung đại lý",
+  "section": "dai-ly",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 4184.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly-0@2x.webp?v=6acd378b",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-0@2x.webp?v=6acd378b",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-0@3x.webp?v=95534830",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 187924,
+      "bytesByScale": {
+        "2": 187924,
+        "3": 337732
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly-1@2x.webp?v=c2298eb2",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-1@2x.webp?v=c2298eb2",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-1@3x.webp?v=e0663c96",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 91324,
+      "bytesByScale": {
+        "2": 91324,
+        "3": 152242
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly-2@2x.webp?v=18d69c23",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-2@2x.webp?v=18d69c23",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-2@3x.webp?v=071dc371",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 121040,
+      "bytesByScale": {
+        "2": 121040,
+        "3": 200692
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly-3@2x.webp?v=fefdb153",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-3@2x.webp?v=fefdb153",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-3@3x.webp?v=62e078f9",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 117468,
+      "bytesByScale": {
+        "2": 117468,
+        "3": 195946
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly-4@2x.webp?v=c178664c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-4@2x.webp?v=c178664c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly-4@3x.webp?v=646cb680",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 584.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1168,
+      "bytes": 70330,
+      "bytesByScale": {
+        "2": 70330,
+        "3": 115350
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 4061.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    }
+  ],
+  "sourceFile": "4.1 CHÂN DUNG ĐẠI LÝ.png"
+}

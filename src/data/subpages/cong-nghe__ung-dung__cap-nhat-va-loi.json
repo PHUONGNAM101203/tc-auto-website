@@ -1,0 +1,171 @@
+{
+  "slug": "cong-nghe/ung-dung/cap-nhat-va-loi",
+  "route": "/cong-nghe/ung-dung/cap-nhat-va-loi",
+  "title": "Cập nhật & vá lỗi",
+  "section": "cong-nghe",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3682.0,
+  "slices": [
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-0@2x.webp?v=5f864e7e",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-0@2x.webp?v=5f864e7e",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-0@3x.webp?v=215356cf",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 152588,
+      "bytesByScale": {
+        "2": 152588,
+        "3": 272470
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-1@2x.webp?v=ca4c6dc8",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-1@2x.webp?v=ca4c6dc8",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-1@3x.webp?v=75658849",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 99438,
+      "bytesByScale": {
+        "2": 99438,
+        "3": 156696
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-2@2x.webp?v=a110cf36",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-2@2x.webp?v=a110cf36",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-2@3x.webp?v=83855c7d",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 100580,
+      "bytesByScale": {
+        "2": 100580,
+        "3": 156990
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-3@2x.webp?v=21d5cf21",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-3@2x.webp?v=21d5cf21",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-3@3x.webp?v=4a2846d6",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 99578,
+      "bytesByScale": {
+        "2": 99578,
+        "3": 159474
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-4@2x.webp?v=ace34b22",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-4@2x.webp?v=ace34b22",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__cap-nhat-va-loi-4@3x.webp?v=f5a2d33f",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 82.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 164,
+      "bytes": 12374,
+      "bytesByScale": {
+        "2": 12374,
+        "3": 20312
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": true
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3559.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Công nghệ",
+      "href": "/cong-nghe"
+    },
+    {
+      "label": "Ứng dụng",
+      "href": "/cong-nghe/ung-dung"
+    }
+  ],
+  "sourceFile": "3.2 CẬP NHÂT & VÁ LỖI.png"
+}

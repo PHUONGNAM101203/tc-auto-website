@@ -1,0 +1,118 @@
+{
+  "_doc": "Cac slide cua bang hero tren trang chu. Thiet ke ve san 5 vach chi muc (y=826) va hai mui ten (x 32 va x 1398, y 432..465) — y do la bang 5 slide.",
+  "_howToAdd": "Thay anh: bo file vao public/hero/ (xuat @2x va @3x), roi sua muc tuong ung trong mang slides. Khong phai sua code.",
+  "_important": "Anh slide phai la anh SACH — khong co san vach chi muc va mui ten ve trong anh, vi slider tu ve cac dieu khien do.",
+  "region": {
+    "x": 0,
+    "y": 0,
+    "width": 1440,
+    "height": 900
+  },
+  "controls": {
+    "prev": {
+      "x": 16,
+      "y": 426,
+      "width": 40,
+      "height": 50
+    },
+    "next": {
+      "x": 1385,
+      "y": 423,
+      "width": 40,
+      "height": 50
+    },
+    "indicator": {
+      "x": 640,
+      "y": 826,
+      "width": 160,
+      "height": 2,
+      "dashWidth": 11,
+      "activeWidth": 84,
+      "gap": 8
+    }
+  },
+  "slides": [
+    {
+      "id": "hero-1",
+      "alt": "TC Auto Solutions — trải nghiệm trên mọi hành trình",
+      "src": "/hero/home-hero@2x.webp?v=85592e62",
+      "srcSet": [
+        {
+          "src": "/hero/home-hero@2x.webp?v=85592e62",
+          "scale": 2
+        },
+        {
+          "src": "/hero/home-hero@3x.webp?v=4bbd1983",
+          "scale": 3
+        }
+      ]
+    },
+    {
+      "id": "hero-2",
+      "alt": "Cung đường ven biển lúc bình minh — TC Auto Solutions",
+      "placeholder": true,
+      "src": "/slices/trai-nghiem-0.webp?v=cb82d6c6",
+      "srcSet": [
+        {
+          "src": "/slices/trai-nghiem-0.webp?v=cb82d6c6",
+          "scale": 2
+        },
+        {
+          "src": "/slices/trai-nghiem-0@3x.webp?v=8f6ad569",
+          "scale": 3
+        }
+      ]
+    },
+    {
+      "id": "hero-3",
+      "alt": "Hoàng hôn trên cung đường ven vịnh — TC Auto Solutions",
+      "placeholder": true,
+      "src": "/slices/giai-phap-0.webp?v=2d1fa1f1",
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-0.webp?v=2d1fa1f1",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-0@3x.webp?v=d4322c78",
+          "scale": 3
+        }
+      ]
+    },
+    {
+      "id": "hero-4",
+      "alt": "Đường đèo qua rừng lúc chạng vạng — TC Auto Solutions",
+      "placeholder": true,
+      "src": "/slices/cong-nghe-0.webp?v=5cb10ef4",
+      "srcSet": [
+        {
+          "src": "/slices/cong-nghe-0.webp?v=5cb10ef4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/cong-nghe-0@3x.webp?v=e6be32a7",
+          "scale": 3
+        }
+      ]
+    },
+    {
+      "id": "hero-5",
+      "alt": "Cung đường ven biển ban ngày — TC Auto Solutions",
+      "placeholder": true,
+      "src": "/slices/dai-ly-0.webp?v=50d04ffd",
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-0.webp?v=50d04ffd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-0@3x.webp?v=5a226d05",
+          "scale": 3
+        }
+      ]
+    }
+  ],
+  "_placeholder": "Bo thiet ke CHI CO MOT anh hero rieng cho trang chu (slide 1). Cac slide 2-6 dang muon anh hero cua 5 trang chinh con lai — deu la anh THAT cua TC Auto trong chinh file thiet ke, khong phai anh bia ra, nhung KHONG phai anh duoc thiet ke cho bang hero. Dung de gui khach review; khi khach cap anh hero rieng thi thay vao day.",
+  "_measured": "So do lay tu frame goc Home.png: vach chi muc y=826, x 640..800 (11 / 12 / 84(dang chon) / 12 / 11, khe 7-8px); mui ten trai x32..40 y437..464; mui ten phai x1400..1410 y432..464.",
+  "_cleanedAsset": "Slide 1 dung ban anh DA XOA vach va mui ten ve san (tools/brand/clean-hero.py). Neu de nguyen anh goc thi dieu khien bi ve doi va vach sang cua anh (vach thu 3) khong khop vach sang that theo slide dang xem."
+}

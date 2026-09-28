@@ -1,0 +1,482 @@
+[
+ {
+  "h": 27.3,
+  "w": 98.37,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "x": 131.86,
+  "y": 37.7
+ },
+ {
+  "h": 16.8,
+  "w": 108.84,
+  "confidence": 1,
+  "text": "Q Nhập để tìm kiếm....",
+  "x": 1149.07,
+  "y": 43.93
+ },
+ {
+  "h": 19.39,
+  "w": 65.91,
+  "confidence": 1,
+  "text": "ĐẠI LÝ >",
+  "x": 830.36,
+  "y": 51.1
+ },
+ {
+  "h": 22.32,
+  "w": 116.02,
+  "confidence": 1,
+  "text": "TRẢI NGHIỆM ›",
+  "x": 439.07,
+  "y": 51.12
+ },
+ {
+  "h": 18.54,
+  "w": 90.35,
+  "confidence": 1,
+  "text": "GIẢI PHÁP ›",
+  "x": 581.71,
+  "y": 52.85
+ },
+ {
+  "h": 16.92,
+  "w": 106.74,
+  "confidence": 1,
+  "text": "CÔNG NGHỆ ›",
+  "x": 696.98,
+  "y": 54.29
+ },
+ {
+  "h": 19.01,
+  "w": 98.37,
+  "confidence": 1,
+  "text": "NHÂN SỰ ›",
+  "x": 904.19,
+  "y": 54.29
+ },
+ {
+  "h": 12.7,
+  "w": 69.09,
+  "confidence": 1,
+  "text": "CLARITY",
+  "x": 1253.71,
+  "y": 502.55
+ },
+ {
+  "h": 10.71,
+  "w": 92.09,
+  "confidence": 1,
+  "text": "Tầm nhìn sắc nét",
+  "x": 1251.63,
+  "y": 517.14
+ },
+ {
+  "h": 12.57,
+  "w": 102.56,
+  "confidence": 1,
+  "text": "PROTECTION",
+  "x": 1253.72,
+  "y": 571.73
+ },
+ {
+  "h": 10.47,
+  "w": 71.16,
+  "confidence": 1,
+  "text": "Bảo vệ tối ưu",
+  "x": 1251.63,
+  "y": 586.39
+ },
+ {
+  "h": 18.1,
+  "w": 47.78,
+  "confidence": 1,
+  "text": "IC AUT",
+  "x": 658.39,
+  "y": 624.98
+ },
+ {
+  "h": 12.57,
+  "w": 81.63,
+  "confidence": 1,
+  "text": "COMFORT",
+  "x": 1253.72,
+  "y": 636.65
+ },
+ {
+  "h": 50.36,
+  "w": 374.65,
+  "confidence": 1,
+  "text": "HÀNH TRÌNH",
+  "x": 81.63,
+  "y": 645
+ },
+ {
+  "h": 12.62,
+  "w": 98.37,
+  "confidence": 1,
+  "text": "Thoải mái trên mọi",
+  "x": 1253.72,
+  "y": 651.31
+ },
+ {
+  "h": 10.47,
+  "w": 58.6,
+  "confidence": 1,
+  "text": "hành trình",
+  "x": 1251.63,
+  "y": 663.87
+ },
+ {
+  "h": 27.73,
+  "w": 148.7,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "x": 81.58,
+  "y": 713.88
+ },
+ {
+  "h": 12.57,
+  "w": 104.65,
+  "confidence": 1,
+  "text": "CONFIDENCE",
+  "x": 1253.72,
+  "y": 714.14
+ },
+ {
+  "h": 10.49,
+  "w": 108.84,
+  "confidence": 1,
+  "text": "Trái nghiệm trọn vẹn",
+  "x": 1251.63,
+  "y": 728.8
+ },
+ {
+  "h": 41.81,
+  "w": 450,
+  "confidence": 1,
+  "text": "HÀNH TRÌNH SỞ HỮU XE",
+  "x": 750,
+  "y": 951.04
+ },
+ {
+  "h": 19.02,
+  "w": 123.49,
+  "confidence": 1,
+  "text": "Ngày 20.8.2026",
+  "x": 755.58,
+  "y": 998.57
+ },
+ {
+  "h": 19,
+  "w": 412.33,
+  "confidence": 1,
+  "text": "Từ chiếc xe bạn chọn. Đến hành trình bạn tạo nên.",
+  "x": 755.58,
+  "y": 1055.29
+ },
+ {
+  "h": 22.37,
+  "w": 604.99,
+  "confidence": 1,
+  "text": "Sở hữu một chiếc xe chưa bao giờ chỉ là một giao dịch. Đó là khoảnh khắc",
+  "x": 753.44,
+  "y": 1092.91
+ },
+ {
+  "h": 21.07,
+  "w": 583.95,
+  "confidence": 1,
+  "text": "bạn bắt đầu viết nên một hành trình mới - từ những ngày đầu tìm kiếm",
+  "x": 755.58,
+  "y": 1113.93
+ },
+ {
+  "h": 18.85,
+  "w": 592.33,
+  "confidence": 1,
+  "text": "chiếc xe phù hợp, đến từng trải nghiệm trên cung đường, từng chuyễn đi",
+  "x": 755.58,
+  "y": 1134.87
+ },
+ {
+  "h": 21.09,
+  "w": 609.07,
+  "confidence": 1,
+  "text": "và những khoảnh khắc đáng nhớ phía trước. Mỗi lựa chọn về chiếc xe, tiện",
+  "x": 753.49,
+  "y": 1153.57
+ },
+ {
+  "h": 18.93,
+  "w": 563.02,
+  "confidence": 1,
+  "text": "nghi hay công nghệ đều góp phần tạo nên cách bạn tận hưởng cuộc",
+  "x": 757.67,
+  "y": 1174.64
+ },
+ {
+  "h": 21.87,
+  "w": 48.3,
+  "confidence": 1,
+  "text": "sông.",
+  "x": 752.38,
+  "y": 1193.85
+ },
+ {
+  "h": 21.07,
+  "w": 571.4,
+  "confidence": 1,
+  "text": "Tại TC AUTO, chúng tôi nhìn hành trình sở hữu xe như một trải nghiệm",
+  "x": 755.58,
+  "y": 1233.21
+ },
+ {
+  "h": 16.83,
+  "w": 567.21,
+  "confidence": 1,
+  "text": "xuyên suốt. Từ lựa chọn, sở hữu, cá nhân hóa, nâng cấp đến chăm sóc",
+  "x": 755.58,
+  "y": 1254.24
+ },
+ {
+  "h": 22.01,
+  "w": 117.4,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "x": 757.58,
+  "y": 1289.31
+ },
+ {
+  "h": 41.93,
+  "w": 390,
+  "confidence": 1,
+  "text": "GƠI Ý THEO NHU CẦU",
+  "x": 756,
+  "y": 1446.43
+ },
+ {
+  "h": 21.09,
+  "w": 123.49,
+  "confidence": 1,
+  "text": "Ngày 20.8.2026",
+  "x": 755.58,
+  "y": 1499.27
+ },
+ {
+  "h": 16.84,
+  "w": 575.58,
+  "confidence": 1,
+  "text": "Không có chiếc xe tốt nhất cho tất cả. Chỉ có chiếc xe phù hợp nhất với",
+  "x": 755.58,
+  "y": 1553.51
+ },
+ {
+  "h": 15,
+  "w": 165.35,
+  "confidence": 1,
+  "text": "hành trình của bạn.",
+  "x": 755.58,
+  "y": 1574.29
+ },
+ {
+  "h": 21,
+  "w": 598.71,
+  "confidence": 1,
+  "text": "Mỗi người tìm đến một chiếc xe với một nhu cầu khác nhau. Có người cần",
+  "x": 755.53,
+  "y": 1612.07
+ },
+ {
+  "h": 18.85,
+  "w": 592.33,
+  "confidence": 1,
+  "text": "một không gian rộng rãi cho gia đình, có người ưu tiên sự linh hoạt trong",
+  "x": 755.58,
+  "y": 1633.11
+ },
+ {
+  "h": 21.12,
+  "w": 577.67,
+  "confidence": 1,
+  "text": "phố thị, cũng có người tìm kiếm cảm giác lái, tiện nghi và dấu ấn riêng",
+  "x": 753.49,
+  "y": 1651.79
+ },
+ {
+  "h": 21.75,
+  "w": 584.08,
+  "confidence": 1,
+  "text": "trên mỗi cung đường. Vì vậy, lựa chọn một chiếc xe nên bắt đầu từ cách",
+  "x": 755.52,
+  "y": 1670.89
+ },
+ {
+  "h": 19.01,
+  "w": 565.12,
+  "confidence": 1,
+  "text": "bạn sống và cách bạn di chuyễn, thay vì chỉ nhìn vào thông số hay xu",
+  "x": 753.49,
+  "y": 1693.85
+ },
+ {
+  "h": 20.3,
+  "w": 59.86,
+  "confidence": 1,
+  "text": "hướng.",
+  "x": 752.89,
+  "y": 1713.52
+ },
+ {
+  "h": 16.83,
+  "w": 567.21,
+  "confidence": 1,
+  "text": "TC AUTO gợi ý lựa chọn xe dựa trên những nhu cầu thực tê trong cuộc.",
+  "x": 757.67,
+  "y": 1754.59
+ },
+ {
+  "h": 16.91,
+  "w": 560.93,
+  "confidence": 1,
+  "text": "sống — từ tần suất sử dụng, số người đồng hành, loại hành trình đến",
+  "x": 755.58,
+  "y": 1773.45
+ },
+ {
+  "h": 12.63,
+  "w": 259.53,
+  "confidence": 1,
+  "text": "ai nghiem ma bạn mong muon.",
+  "x": 893.72,
+  "y": 1796.43
+ },
+ {
+  "h": 19.03,
+  "w": 115.12,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "x": 759.77,
+  "y": 1806.79
+ },
+ {
+  "h": 16.92,
+  "w": 257.44,
+  "confidence": 1,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "x": 79.53,
+  "y": 1993.21
+ },
+ {
+  "h": 15,
+  "w": 282.56,
+  "confidence": 1,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN",
+  "x": 730.47,
+  "y": 1993.21
+ },
+ {
+  "h": 15,
+  "w": 98.37,
+  "confidence": 1,
+  "text": "KẾT NỐI VỚI TC",
+  "x": 1234.88,
+  "y": 1993.21
+ },
+ {
+  "h": 10.51,
+  "w": 60.7,
+  "confidence": 1,
+  "text": "093 617 6996",
+  "x": 1251.63,
+  "y": 2014.29
+ },
+ {
+  "h": 12.86,
+  "w": 92.09,
+  "confidence": 1,
+  "text": "Họ và tên của bạn",
+  "x": 749.3,
+  "y": 2024.64
+ },
+ {
+  "h": 10.47,
+  "w": 104.65,
+  "confidence": 0.5,
+  "text": "infor@tcautosolutions.vn",
+  "x": 1255.81,
+  "y": 2028.99
+ },
+ {
+  "h": 12.58,
+  "w": 213.49,
+  "confidence": 1,
+  "text": "TC luôn sẵn sàng lắng nghe và tư vấn giải giáp phù",
+  "x": 81.63,
+  "y": 2031.07
+ },
+ {
+  "h": 12.86,
+  "w": 133.95,
+  "confidence": 1,
+  "text": "Nhu cầu, câu hỏi của bạn...",
+  "x": 937.67,
+  "y": 2039.29
+ },
+ {
+  "h": 10.71,
+  "w": 100.47,
+  "confidence": 1,
+  "text": "hợp nhất dành cho bạn.",
+  "x": 81.63,
+  "y": 2041.43
+ },
+ {
+  "h": 16.83,
+  "w": 96.28,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "x": 491.86,
+  "y": 2043.57
+ },
+ {
+  "h": 10.5,
+  "w": 90,
+  "confidence": 1,
+  "text": "Thứ 2 - 7 |8:00 - 17:30",
+  "x": 1255.81,
+  "y": 2045.71
+ },
+ {
+  "h": 13.01,
+  "w": 67.53,
+  "confidence": 1,
+  "text": "Số điện thoại",
+  "x": 748.96,
+  "y": 2056.31
+ },
+ {
+  "h": 8.38,
+  "w": 92.09,
+  "confidence": 1,
+  "text": "SOLUTIONS",
+  "x": 496.05,
+  "y": 2060.41
+ },
+ {
+  "h": 14.66,
+  "w": 27.21,
+  "confidence": 1,
+  "text": "GỬI",
+  "x": 1059.07,
+  "y": 2083.45
+ },
+ {
+  "h": 12.57,
+  "w": 221.86,
+  "confidence": 1,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "x": 81.63,
+  "y": 2093.92
+ }
+]

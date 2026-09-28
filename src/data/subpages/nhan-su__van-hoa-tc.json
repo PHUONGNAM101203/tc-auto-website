@@ -1,0 +1,145 @@
+{
+  "slug": "nhan-su/van-hoa-tc",
+  "route": "/nhan-su/van-hoa-tc",
+  "title": "Văn hoá TC",
+  "section": "nhan-su",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2786.0,
+  "slices": [
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc-0@2x.webp?v=063a7743",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-0@2x.webp?v=063a7743",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-0@3x.webp?v=a21e501d",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 249554,
+      "bytesByScale": {
+        "2": 249554,
+        "3": 416908
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc-1@2x.webp?v=7ea332b8",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-1@2x.webp?v=7ea332b8",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-1@3x.webp?v=3b90fc12",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 117502,
+      "bytesByScale": {
+        "2": 117502,
+        "3": 196502
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc-2@2x.webp?v=10f8a22c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-2@2x.webp?v=10f8a22c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-2@3x.webp?v=3c1c5828",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 214908,
+      "bytesByScale": {
+        "2": 214908,
+        "3": 353856
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__van-hoa-tc-3@2x.webp?v=b1535fe4",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-3@2x.webp?v=b1535fe4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__van-hoa-tc-3@3x.webp?v=51b90b1c",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 86.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 172,
+      "bytes": 12870,
+      "bytesByScale": {
+        "2": 12870,
+        "3": 21252
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "contactForm": {
+    "y": 2663.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Nhân sự",
+      "href": "/nhan-su"
+    }
+  ],
+  "sourceFile": "2.1 VĂN HOÁ TC.png"
+}

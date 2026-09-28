@@ -1,0 +1,145 @@
+{
+  "slug": "giai-phap/phim-dan-kinh",
+  "route": "/giai-phap/phim-dan-kinh",
+  "title": "Phim dán kính",
+  "section": "giai-phap",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3278.0,
+  "slices": [
+    {
+      "src": "/slices/sub/giai-phap__phim-dan-kinh-0@2x.webp?v=807cc50f",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-0@2x.webp?v=807cc50f",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-0@3x.webp?v=485e4a89",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 187880,
+      "bytesByScale": {
+        "2": 187880,
+        "3": 337446
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__phim-dan-kinh-1@2x.webp?v=9868c7ef",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-1@2x.webp?v=9868c7ef",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-1@3x.webp?v=05728b4d",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 191876,
+      "bytesByScale": {
+        "2": 191876,
+        "3": 338306
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__phim-dan-kinh-2@2x.webp?v=22c0cecc",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-2@2x.webp?v=22c0cecc",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-2@3x.webp?v=36dfef27",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 240492,
+      "bytesByScale": {
+        "2": 240492,
+        "3": 423444
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__phim-dan-kinh-3@2x.webp?v=24c4482d",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-3@2x.webp?v=24c4482d",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-3@3x.webp?v=477037f2",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 578.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1156,
+      "bytes": 87270,
+      "bytesByScale": {
+        "2": 87270,
+        "3": 145238
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": true
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3155.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Giải pháp",
+      "href": "/giai-phap"
+    }
+  ],
+  "sourceFile": "2.1 Phim Dán Kính.png"
+}

@@ -1,0 +1,110 @@
+{
+  "_doc": "Cac the anh duoc tach khoi anh nen de ro chuot vao la noi len. Hinh hoc do tu ban thiet ke; cho cac the vua roi da duoc dung lai nen.",
+  "pages": {
+    "home": [
+      {
+        "id": "innovation",
+        "title": "INNOVATION",
+        "subtitle": "Tiên phong công nghệ",
+        "href": "/cong-nghe/tien-phong-cong-nghe",
+        "x": 134,
+        "y": 2066,
+        "width": 262,
+        "height": 330,
+        "src": "/lift/home-innovation.webp?v=0fb4d3ba"
+      },
+      {
+        "id": "applications",
+        "title": "APPLICATIONS",
+        "subtitle": "Ứng dụng đa dạng",
+        "href": "/cong-nghe/ung-dung",
+        "x": 438,
+        "y": 2066,
+        "width": 262,
+        "height": 330,
+        "src": "/lift/home-applications.webp?v=68c4e08e"
+      },
+      {
+        "id": "warranty",
+        "title": "WARRANTY",
+        "subtitle": "Bảo hành chính hãng",
+        "href": "/cong-nghe",
+        "x": 742,
+        "y": 2066,
+        "width": 262,
+        "height": 330,
+        "src": "/lift/home-warranty.webp?v=d94b7ecf"
+      },
+      {
+        "id": "experience-lab",
+        "title": "EXPERIENCE LAB",
+        "subtitle": "Thử nghiệm · Trải nghiệm · Tin cậy",
+        "href": "/cong-nghe",
+        "x": 1046,
+        "y": 2066,
+        "width": 260,
+        "height": 330,
+        "src": "/lift/home-experience-lab.webp?v=4b0574b3"
+      }
+    ],
+    "dai-ly": [
+      {
+        "id": "hanh-trinh-hop-tac",
+        "title": "HÀNH TRÌNH HỢP TÁC",
+        "subtitle": "Tin cậy từ kết nối. Bền vững trong đồng hành.",
+        "href": "/dai-ly/cau-chuyen-dong-hanh",
+        "x": 82,
+        "y": 1574,
+        "width": 358,
+        "height": 495,
+        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=077a5208"
+      },
+      {
+        "id": "gia-tri-cung-dat-duoc",
+        "title": "GIÁ TRỊ CÙNG ĐẠT ĐƯỢC",
+        "subtitle": "Cùng tạo giá trị. Cùng phát triển bền vững.",
+        "href": "/dai-ly/cau-chuyen-dong-hanh",
+        "x": 454,
+        "y": 1574,
+        "width": 358,
+        "height": 495,
+        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=27a2e563"
+      }
+    ],
+    "giai-phap": [
+      {
+        "id": "phim-3m",
+        "title": "PHIM CÁCH NHIỆT 3M",
+        "subtitle": "Giải pháp cách nhiệt cao cấp",
+        "href": "/giai-phap/phim-dan-kinh",
+        "x": 49,
+        "y": 2205,
+        "width": 429,
+        "height": 697,
+        "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea"
+      },
+      {
+        "id": "phim-nano-sun",
+        "title": "PHIM CÁCH NHIỆT NANO SUN",
+        "subtitle": "Công nghệ Nano window film",
+        "href": "/giai-phap/phim-dan-kinh",
+        "x": 502,
+        "y": 2205,
+        "width": 429,
+        "height": 697,
+        "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739"
+      },
+      {
+        "id": "phim-5do",
+        "title": "PHIM CÁCH NHIỆT 5DO",
+        "subtitle": "Lựa chọn tối ưu chi phí",
+        "href": "/giai-phap/phim-dan-kinh",
+        "x": 955,
+        "y": 2205,
+        "width": 429,
+        "height": 697,
+        "src": "/lift/giai-phap-phim-5do.webp?v=390d453c"
+      }
+    ]
+  }
+}

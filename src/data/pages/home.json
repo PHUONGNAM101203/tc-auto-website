@@ -1,0 +1,546 @@
+{
+  "slug": "home",
+  "route": "/",
+  "title": "Trang chủ",
+  "canvasWidth": 1440,
+  "height": 3566.0,
+  "slices": [
+    {
+      "src": "/slices/home-0.webp?v=42cb85ca",
+      "y": 0.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 146186,
+      "srcSet": [
+        {
+          "src": "/slices/home-0.webp?v=42cb85ca",
+          "scale": 2
+        },
+        {
+          "src": "/slices/home-0@3x.webp?v=704059e7",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 146186,
+        "3": 387978
+      }
+    },
+    {
+      "src": "/slices/home-1.webp?v=d4fb9ae9",
+      "y": 900.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 275482,
+      "srcSet": [
+        {
+          "src": "/slices/home-1.webp?v=d4fb9ae9",
+          "scale": 2
+        },
+        {
+          "src": "/slices/home-1@3x.webp?v=d94a9f9a",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 275482,
+        "3": 724948
+      }
+    },
+    {
+      "src": "/slices/home-2.webp?v=d10c0290",
+      "y": 1800.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 107808,
+      "srcSet": [
+        {
+          "src": "/slices/home-2.webp?v=d10c0290",
+          "scale": 2
+        },
+        {
+          "src": "/slices/home-2@3x.webp?v=e95f2aa7",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 107808,
+        "3": 298952
+      }
+    },
+    {
+      "src": "/slices/home-3.webp?v=6a38eae6",
+      "y": 2700.0,
+      "displayHeight": 866.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1732,
+      "bytes": 134372,
+      "srcSet": [
+        {
+          "src": "/slices/home-3.webp?v=6a38eae6",
+          "scale": 2
+        },
+        {
+          "src": "/slices/home-3@3x.webp?v=9f1ba183",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 134372,
+        "3": 369476
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 449.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 591.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 707.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 840.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 927.0,
+      "active": false
+    }
+  ],
+  "items": [
+    {
+      "id": "home-000",
+      "tag": "div",
+      "classes": [
+        "herot"
+      ],
+      "x": 82.0,
+      "y": 252.0,
+      "w": 500.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "THẾ GIỚI CỦA TC",
+      "text": "THẾ GIỚI CỦA TC"
+    },
+    {
+      "id": "home-001",
+      "tag": "div",
+      "classes": [
+        "slogan"
+      ],
+      "x": 82.0,
+      "y": 318.0,
+      "w": 470.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "DRIVE · <span class=\"c-blue\">EXPERIENCE</span> · <span class=\"c-red\">ELEVATE</span>",
+      "text": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    {
+      "id": "home-002",
+      "tag": "div",
+      "classes": [
+        "p"
+      ],
+      "x": 82.0,
+      "y": 372.0,
+      "w": 520.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#fff"
+      },
+      "href": null,
+      "html": "TC Auto Solutions kiến tạo những giải pháp nâng tầm trải nghiệm lái xe – nơi công nghệ, thẩm mỹ và cảm xúc hòa quyện trong từng hành trình.",
+      "text": "TC Auto Solutions kiến tạo những giải pháp nâng tầm trải nghiệm lái xe – nơi công nghệ, thẩm mỹ và cảm xúc hòa quyện trong từng hành trình."
+    },
+    {
+      "id": "home-003",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 82.0,
+      "y": 917.0,
+      "w": 200.0,
+      "h": 24.0,
+      "css": {
+        "line-height": "24px",
+        "font-size": "20px",
+        "padding-left": "18px",
+        "--tri": "7px"
+      },
+      "href": null,
+      "html": "TRẢI NGHIỆM",
+      "text": "TRẢI NGHIỆM"
+    },
+    {
+      "id": "home-004",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 1026.0,
+      "w": 310.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "TỪNG KHOẢNH<br>KHẮC, KIẾN TẠO<br>HÀNH TRÌNH.",
+      "text": "TỪNG KHOẢNHKHẮC, KIẾN TẠOHÀNH TRÌNH."
+    },
+    {
+      "id": "home-005",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 1205.0,
+      "w": 290.0,
+      "h": null,
+      "css": {
+        "font-size": "14px",
+        "line-height": "17px",
+        "color": "#838b93"
+      },
+      "href": null,
+      "html": "Khám phá những khoảnh khắc truyền cảm hứng và phong cách sống dành riêng cho những người yêu xe",
+      "text": "Khám phá những khoảnh khắc truyền cảm hứng và phong cách sống dành riêng cho những người yêu xe"
+    },
+    {
+      "id": "home-006",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 1342.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": "/trai-nghiem",
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "home-007",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 82.0,
+      "y": 1453.0,
+      "w": 160.0,
+      "h": 24.0,
+      "css": {
+        "line-height": "24px",
+        "font-size": "20px",
+        "padding-left": "18px",
+        "--tri": "7px"
+      },
+      "href": null,
+      "html": "GIẢI PHÁP",
+      "text": "GIẢI PHÁP"
+    },
+    {
+      "id": "home-008",
+      "tag": "div",
+      "classes": [
+        "hi",
+        "dark"
+      ],
+      "x": 82.0,
+      "y": 1502.0,
+      "w": 430.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "46px"
+      },
+      "href": null,
+      "html": "KIẾN TẠO GIẢI PHÁP<br>NÂNG TẦM TRẢI NGHIỆM.",
+      "text": "KIẾN TẠO GIẢI PHÁPNÂNG TẦM TRẢI NGHIỆM."
+    },
+    {
+      "id": "home-009",
+      "tag": "div",
+      "classes": [
+        "p"
+      ],
+      "x": 82.0,
+      "y": 1609.0,
+      "w": 392.0,
+      "h": null,
+      "css": {
+        "font-size": "14px",
+        "line-height": "17px",
+        "color": "#02111C"
+      },
+      "href": null,
+      "html": "Mỗi giải pháp được thiết kế để nâng tầm trải nghiệm lái xe của bạn - tinh tế, bền vững và khác biệt.",
+      "text": "Mỗi giải pháp được thiết kế để nâng tầm trải nghiệm lái xe của bạn - tinh tế, bền vững và khác biệt."
+    },
+    {
+      "id": "home-010",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 1776.0,
+      "w": 183.0,
+      "h": 34.0,
+      "css": {},
+      "href": "/giai-phap",
+      "html": "XEM GIẢI PHÁP",
+      "text": "XEM GIẢI PHÁP"
+    },
+    {
+      "id": "home-011",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 82.0,
+      "y": 1894.0,
+      "w": 180.0,
+      "h": 24.0,
+      "css": {
+        "line-height": "24px",
+        "font-size": "20px",
+        "padding-left": "18px",
+        "--tri": "7px"
+      },
+      "href": null,
+      "html": "CÔNG NGHỆ",
+      "text": "CÔNG NGHỆ"
+    },
+    {
+      "id": "home-012",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 380.0,
+      "y": 1888.0,
+      "w": 680.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "46px",
+        "line-height": "50px"
+      },
+      "href": null,
+      "html": "CÔNG NGHỆ TIÊN PHONG.<br>GIÁ TRỊ TRƯỜNG TỒN.",
+      "text": "CÔNG NGHỆ TIÊN PHONG.GIÁ TRỊ TRƯỜNG TỒN."
+    },
+    {
+      "id": "home-013",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 420.0,
+      "y": 1996.0,
+      "w": 600.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "14px",
+        "line-height": "17px",
+        "color": "#838b93"
+      },
+      "href": null,
+      "html": "Công nghệ tiên tiến - Kiểm nghiệm thực tế - Bảo chứng dài lâu.",
+      "text": "Công nghệ tiên tiến - Kiểm nghiệm thực tế - Bảo chứng dài lâu."
+    },
+    {
+      "id": "home-014",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 628.0,
+      "y": 2428.0,
+      "w": 183.0,
+      "h": 34.0,
+      "css": {},
+      "href": "/cong-nghe",
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "home-015",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 976.0,
+      "y": 2524.0,
+      "w": 140.0,
+      "h": 24.0,
+      "css": {
+        "line-height": "24px",
+        "font-size": "20px",
+        "padding-left": "27px",
+        "--tri": "7px"
+      },
+      "href": null,
+      "html": "ĐẠI LÝ",
+      "text": "ĐẠI LÝ"
+    },
+    {
+      "id": "home-016",
+      "tag": "div",
+      "classes": [
+        "hi"
+      ],
+      "x": 976.0,
+      "y": 2576.0,
+      "w": 430.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "ĐỒNG LÒNG MẠNH.<br>CÙNG TIẾN XA.",
+      "text": "ĐỒNG LÒNG MẠNH.CÙNG TIẾN XA."
+    },
+    {
+      "id": "home-017",
+      "tag": "div",
+      "classes": [
+        "p"
+      ],
+      "x": 976.0,
+      "y": 2694.0,
+      "w": 400.0,
+      "h": null,
+      "css": {
+        "font-size": "14px",
+        "line-height": "17px",
+        "color": "#fff"
+      },
+      "href": null,
+      "html": "Mạng lưới đại uý uy tín cùng đồng hành, mang đến trải nghiệm tốt nhất cho khách hàng.",
+      "text": "Mạng lưới đại uý uy tín cùng đồng hành, mang đến trải nghiệm tốt nhất cho khách hàng."
+    },
+    {
+      "id": "home-018",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 976.0,
+      "y": 2835.0,
+      "w": 270.0,
+      "h": 34.0,
+      "css": {},
+      "href": "/dai-ly",
+      "html": "KHÁM PHÁ HỆ THỐNG ĐẠI LÝ",
+      "text": "KHÁM PHÁ HỆ THỐNG ĐẠI LÝ"
+    },
+    {
+      "id": "home-019",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 82.0,
+      "y": 2934.0,
+      "w": 360.0,
+      "h": 24.0,
+      "css": {
+        "line-height": "24px",
+        "font-size": "20px",
+        "padding-left": "18px",
+        "--tri": "7px"
+      },
+      "href": null,
+      "html": "CÂU CHUYỆN KHỞI NGHIỆP",
+      "text": "CÂU CHUYỆN KHỞI NGHIỆP"
+    },
+    {
+      "id": "home-020",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 3010.0,
+      "w": 330.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "KHỞI NGHIỆP<br>KHÔNG DỄ.",
+      "text": "KHỞI NGHIỆPKHÔNG DỄ."
+    },
+    {
+      "id": "home-021",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 3139.0,
+      "w": 330.0,
+      "h": null,
+      "css": {
+        "font-size": "14px",
+        "line-height": "17px",
+        "color": "#838b93"
+      },
+      "href": null,
+      "html": "Đằng sau một thương hiệu được nhiều người biết đến là những câu chuyện khởi nghiệp phải đánh đổi cả thanh xuân...",
+      "text": "Đằng sau một thương hiệu được nhiều người biết đến là những câu chuyện khởi nghiệp phải đánh đổi cả thanh xuân..."
+    },
+    {
+      "id": "home-022",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 3240.0,
+      "w": 251.0,
+      "h": 34.0,
+      "css": {},
+      "href": "/nhan-su",
+      "html": "KHÁM PHÁ CON NGƯỜI TC",
+      "text": "KHÁM PHÁ CON NGƯỜI TC"
+    }
+  ],
+  "contactForm": {
+    "y": 3443.0
+  }
+}

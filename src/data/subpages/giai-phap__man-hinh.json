@@ -1,0 +1,145 @@
+{
+  "slug": "giai-phap/man-hinh",
+  "route": "/giai-phap/man-hinh",
+  "title": "Màn hình ô tô",
+  "section": "giai-phap",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3042.0,
+  "slices": [
+    {
+      "src": "/slices/sub/giai-phap__man-hinh-0@2x.webp?v=f9493ead",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-0@2x.webp?v=f9493ead",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-0@3x.webp?v=bb2e744c",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 192200,
+      "bytesByScale": {
+        "2": 192200,
+        "3": 336264
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__man-hinh-1@2x.webp?v=c71da713",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-1@2x.webp?v=c71da713",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-1@3x.webp?v=a2d81b63",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 207490,
+      "bytesByScale": {
+        "2": 207490,
+        "3": 350946
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__man-hinh-2@2x.webp?v=c678b64c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-2@2x.webp?v=c678b64c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-2@3x.webp?v=25169258",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 222774,
+      "bytesByScale": {
+        "2": 222774,
+        "3": 375572
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__man-hinh-3@2x.webp?v=09859261",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-3@2x.webp?v=09859261",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__man-hinh-3@3x.webp?v=7f34308f",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 342.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 684,
+      "bytes": 37958,
+      "bytesByScale": {
+        "2": 37958,
+        "3": 64994
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": true
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 2919.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Giải pháp",
+      "href": "/giai-phap"
+    }
+  ],
+  "sourceFile": "5.Màn hình.png"
+}

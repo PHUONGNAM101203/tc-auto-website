@@ -1,0 +1,1850 @@
+[
+ {
+  "y": 41.36,
+  "w": 101.19,
+  "text": "TC AUTO",
+  "x": 127.36,
+  "h": 20.45,
+  "confidence": 1
+ },
+ {
+  "y": 43.93,
+  "w": 108.84,
+  "text": "Q Nhập để tìm kiếm....",
+  "x": 1149.07,
+  "h": 16.8,
+  "confidence": 1
+ },
+ {
+  "y": 53.3,
+  "w": 60.12,
+  "text": "ĐẠI LÝ ›",
+  "x": 830.23,
+  "h": 21.26,
+  "confidence": 1
+ },
+ {
+  "y": 54.29,
+  "w": 113.02,
+  "text": "TRẢI NGHIỆM ›",
+  "x": 441.63,
+  "h": 16.92,
+  "confidence": 1
+ },
+ {
+  "y": 54.29,
+  "w": 104.65,
+  "text": "CÔNG NGHỆ›",
+  "x": 699.07,
+  "h": 16.92,
+  "confidence": 1
+ },
+ {
+  "y": 54.29,
+  "w": 81.63,
+  "text": "NHÂN SỰ >",
+  "x": 918.84,
+  "h": 19.01,
+  "confidence": 1
+ },
+ {
+  "y": 54.32,
+  "w": 85.86,
+  "text": "GIẢI PHÁP ›",
+  "x": 586.02,
+  "h": 14.92,
+  "confidence": 1
+ },
+ {
+  "y": 62.83,
+  "w": 35.58,
+  "text": "SULI",
+  "x": 136.05,
+  "h": 4.19,
+  "confidence": 0.5
+ },
+ {
+  "y": 62.83,
+  "w": 35.58,
+  "text": "IUYS",
+  "x": 190.47,
+  "h": 4.19,
+  "confidence": 0.3
+ },
+ {
+  "y": 474.35,
+  "w": 99.43,
+  "text": "WTTEFETT",
+  "x": 690.18,
+  "h": 22.46,
+  "confidence": 0.3
+ },
+ {
+  "y": 502.05,
+  "w": 69.27,
+  "text": "CLARITY",
+  "x": 1253.62,
+  "h": 13.7,
+  "confidence": 1
+ },
+ {
+  "y": 517.14,
+  "w": 90,
+  "text": "Tầm nhìn sắc nét",
+  "x": 1253.72,
+  "h": 10.71,
+  "confidence": 1
+ },
+ {
+  "y": 540.31,
+  "w": 58.6,
+  "text": "TC AUTO",
+  "x": 688.6,
+  "h": 10.47,
+  "confidence": 1
+ },
+ {
+  "y": 571.73,
+  "w": 102.56,
+  "text": "PROTECTION",
+  "x": 1253.72,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 584.29,
+  "w": 71.16,
+  "text": "Bảo vệ tối ưu",
+  "x": 1251.63,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 636.65,
+  "w": 81.63,
+  "text": "COMFORT",
+  "x": 1253.72,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 645,
+  "w": 755.58,
+  "text": "BỘ SƯU TẬP THƯƠNG HIỆU",
+  "x": 81.63,
+  "h": 60.76,
+  "confidence": 1
+ },
+ {
+  "y": 651.31,
+  "w": 98.37,
+  "text": "Thoải mái trên mọi",
+  "x": 1253.72,
+  "h": 10.48,
+  "confidence": 1
+ },
+ {
+  "y": 663.87,
+  "w": 58.6,
+  "text": "hành trình",
+  "x": 1251.63,
+  "h": 10.47,
+  "confidence": 1
+ },
+ {
+  "y": 712.04,
+  "w": 148.6,
+  "text": "TC AUTO",
+  "x": 81.63,
+  "h": 29.39,
+  "confidence": 1
+ },
+ {
+  "y": 712.04,
+  "w": 104.65,
+  "text": "CONFIDENCE",
+  "x": 1253.72,
+  "h": 14.66,
+  "confidence": 1
+ },
+ {
+  "y": 728.8,
+  "w": 108.84,
+  "text": "Trái nghiệm trọn vẹn",
+  "x": 1251.63,
+  "h": 10.49,
+  "confidence": 1
+ },
+ {
+  "y": 912.86,
+  "w": 203.02,
+  "text": "NANO SUN",
+  "x": 1098.84,
+  "h": 29.34,
+  "confidence": 1
+ },
+ {
+  "y": 912.88,
+  "w": 62.79,
+  "text": "ЗМ",
+  "x": 688.6,
+  "h": 29.32,
+  "confidence": 0.3
+ },
+ {
+  "y": 914.97,
+  "w": 83.72,
+  "text": "5DO",
+  "x": 198.84,
+  "h": 27.23,
+  "confidence": 0.5
+ },
+ {
+  "y": 1082.5,
+  "w": 238.6,
+  "text": "TÊN BÀI VIẾT",
+  "x": 83.72,
+  "h": 35.71,
+  "confidence": 1
+ },
+ {
+  "y": 1083.99,
+  "w": 74.07,
+  "text": "WINGH",
+  "x": 882.98,
+  "h": 25.48,
+  "confidence": 1
+ },
+ {
+  "y": 1084.61,
+  "w": 69.07,
+  "text": "BR VE",
+  "x": 971.16,
+  "h": 27.23,
+  "confidence": 1
+ },
+ {
+  "y": 1105.36,
+  "w": 145.13,
+  "text": "PHAY GIA AutO",
+  "x": 1100.53,
+  "h": 21.5,
+  "confidence": 1
+ },
+ {
+  "y": 1109.59,
+  "w": 44.05,
+  "text": "AUTO",
+  "x": 784.84,
+  "h": 14.95,
+  "confidence": 1
+ },
+ {
+  "y": 1109.64,
+  "w": 73.26,
+  "text": "DANG MAN C",
+  "x": 1285.12,
+  "h": 12.66,
+  "confidence": 1
+ },
+ {
+  "y": 1111.79,
+  "w": 152.79,
+  "text": "MÀN HÌNH ANDROID THƯƠNG HIỆU TOÀN CẦU",
+  "x": 883.26,
+  "h": 10.52,
+  "confidence": 1
+ },
+ {
+  "y": 1128.57,
+  "w": 125.58,
+  "text": "Ngày 20.8.2026",
+  "x": 81.63,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 1135.19,
+  "w": 40.79,
+  "text": "C AUTO",
+  "x": 886.03,
+  "h": 18.65,
+  "confidence": 1
+ },
+ {
+  "y": 1141.15,
+  "w": 52.33,
+  "text": "WINCA",
+  "x": 1287.21,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 1155.26,
+  "w": 107.52,
+  "text": "WINGF BRAS",
+  "x": 931,
+  "h": 22.59,
+  "confidence": 1
+ },
+ {
+  "y": 1156.29,
+  "w": 134.6,
+  "text": "Ê KÝ KẾT",
+  "x": 778.11,
+  "h": 44.89,
+  "confidence": 1
+ },
+ {
+  "y": 1160.6,
+  "w": 99.74,
+  "text": "CHĂM SỐC XE PHẠM GUA",
+  "x": 1060.46,
+  "h": 22.39,
+  "confidence": 1
+ },
+ {
+  "y": 1174.64,
+  "w": 594.42,
+  "text": "TC AUTO không chỉ cung cấp sản phẩm và giải pháp, mà còn đồng hành",
+  "x": 83.72,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 1177.31,
+  "w": 115.67,
+  "text": "ẠI LÝ CHÍNH HÃNG TẠI QUẢNG NAM",
+  "x": 1060.93,
+  "h": 15.09,
+  "confidence": 1
+ },
+ {
+  "y": 1182.66,
+  "w": 132.05,
+  "text": "LỄ KÝ KÉ",
+  "x": 1230.6,
+  "h": 34.27,
+  "confidence": 1
+ },
+ {
+  "y": 1191.74,
+  "w": 116.86,
+  "text": "ỢP TÁC CHIẾN LƯỢC",
+  "x": 781.95,
+  "h": 23.55,
+  "confidence": 1
+ },
+ {
+  "y": 1195.6,
+  "w": 579.77,
+  "text": "cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nối",
+  "x": 83.72,
+  "h": 16.9,
+  "confidence": 1
+ },
+ {
+  "y": 1203.93,
+  "w": 165.35,
+  "text": "MAN HINH WINCA THẾ HỆ MỞ",
+  "x": 971.16,
+  "h": 14.71,
+  "confidence": 1
+ },
+ {
+  "y": 1212.75,
+  "w": 193.48,
+  "text": "IÊN PHONG CÔNG NGHỆ - QLED 2K",
+  "x": 960.3,
+  "h": 21.26,
+  "confidence": 1
+ },
+ {
+  "y": 1214.29,
+  "w": 583.95,
+  "text": "với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng",
+  "x": 79.53,
+  "h": 21.11,
+  "confidence": 1
+ },
+ {
+  "y": 1217.13,
+  "w": 101.44,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 788.58,
+  "h": 17.67,
+  "confidence": 1
+ },
+ {
+  "y": 1218.57,
+  "w": 115.12,
+  "text": "HỢP TÁC CHIÊN LƯỢC",
+  "x": 1243.26,
+  "h": 12.63,
+  "confidence": 1
+ },
+ {
+  "y": 1232.52,
+  "w": 98.9,
+  "text": "ĐẠI LÝ PHÂN PHỔI",
+  "x": 1251.47,
+  "h": 21.71,
+  "confidence": 1
+ },
+ {
+  "y": 1233.56,
+  "w": 573.62,
+  "text": "bộ, giúp đại lý có thêm nguồn lực để chủ động triển khai marketing và",
+  "x": 81.56,
+  "h": 22.93,
+  "confidence": 1
+ },
+ {
+  "y": 1256.34,
+  "w": 171.63,
+  "text": "phát triền thị trường.",
+  "x": 81.63,
+  "h": 19.02,
+  "confidence": 1
+ },
+ {
+  "y": 1272.28,
+  "w": 136.63,
+  "text": "bí vượt thời gian",
+  "x": 782.48,
+  "h": 17.91,
+  "confidence": 1
+ },
+ {
+  "y": 1286.03,
+  "w": 146.99,
+  "text": "Bền bỉ vượt thời gia",
+  "x": 1214.7,
+  "h": 32.05,
+  "confidence": 1
+ },
+ {
+  "y": 1287.75,
+  "w": 150.7,
+  "text": ": mà cùng năm tháng",
+  "x": 782.79,
+  "h": 14.75,
+  "confidence": 1
+ },
+ {
+  "y": 1293.93,
+  "w": 267.91,
+  "text": "Hỗ trợ từ nền tảng thương hiệu",
+  "x": 81.63,
+  "h": 21.07,
+  "confidence": 1
+ },
+ {
+  "y": 1301.32,
+  "w": 158.97,
+  "text": "Mượt mà cùng năm th",
+  "x": 1202.42,
+  "h": 27.17,
+  "confidence": 1
+ },
+ {
+  "y": 1335.92,
+  "w": 604.88,
+  "text": "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu.",
+  "x": 81.63,
+  "h": 18.85,
+  "confidence": 1
+ },
+ {
+  "y": 1356.79,
+  "w": 596.51,
+  "text": "được chuân hóa, giúp đại lý duy trì hình ánh chuyên nghiệp và nhật quán",
+  "x": 83.72,
+  "h": 16.83,
+  "confidence": 1
+ },
+ {
+  "y": 1375.71,
+  "w": 563.02,
+  "text": "trên mọi điểm chạm. Từ hình ảnh sản phẩm, video, POSM đến các nội",
+  "x": 83.72,
+  "h": 16.79,
+  "confidence": 1
+ },
+ {
+  "y": 1396.65,
+  "w": 431.16,
+  "text": "ng trên nên tảng sô, đại lý có thê dễ dàng ứng dụng '",
+  "x": 211.4,
+  "h": 14.78,
+  "confidence": 1
+ },
+ {
+  "y": 1407.44,
+  "w": 115.5,
+  "text": "> XEM THÊM",
+  "x": 85.6,
+  "h": 20,
+  "confidence": 1
+ },
+ {
+  "y": 1563.93,
+  "w": 240.7,
+  "text": "TÊN BÀI VIẾT",
+  "x": 81.63,
+  "h": 35.71,
+  "confidence": 1
+ },
+ {
+  "y": 1565.66,
+  "w": 73.51,
+  "text": "WINGH",
+  "x": 883.13,
+  "h": 23.85,
+  "confidence": 1
+ },
+ {
+  "y": 1566.07,
+  "w": 69.07,
+  "text": "BR AVE",
+  "x": 971.16,
+  "h": 27.23,
+  "confidence": 1
+ },
+ {
+  "y": 1589.11,
+  "w": 43.95,
+  "text": "AUTO",
+  "x": 784.88,
+  "h": 16.75,
+  "confidence": 1
+ },
+ {
+  "y": 1589.11,
+  "w": 138.14,
+  "text": "PHAY GIA Auto",
+  "x": 1107.21,
+  "h": 14.82,
+  "confidence": 1
+ },
+ {
+  "y": 1591.07,
+  "w": 73.26,
+  "text": "DANG MAN C",
+  "x": 1285.12,
+  "h": 10.71,
+  "confidence": 1
+ },
+ {
+  "y": 1593.21,
+  "w": 150.7,
+  "text": "MÀN HÌNH ANDROID THƯƠNG HIỆU TOÀN CẦU",
+  "x": 885.35,
+  "h": 10.71,
+  "confidence": 1
+ },
+ {
+  "y": 1605.58,
+  "w": 126.52,
+  "text": "Ngày 20.8.2026",
+  "x": 81.1,
+  "h": 24.81,
+  "confidence": 1
+ },
+ {
+  "y": 1616.45,
+  "w": 42.66,
+  "text": "TC AUTO",
+  "x": 884.1,
+  "h": 18.34,
+  "confidence": 1
+ },
+ {
+  "y": 1620.84,
+  "w": 45.34,
+  "text": "WINCF",
+  "x": 1288.5,
+  "h": 15.23,
+  "confidence": 1
+ },
+ {
+  "y": 1635.5,
+  "w": 136.17,
+  "text": "Ẽ KÝ KẾT",
+  "x": 777.19,
+  "h": 50.3,
+  "confidence": 1
+ },
+ {
+  "y": 1639.29,
+  "w": 106.74,
+  "text": "WINGH BRAS",
+  "x": 931.4,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 1642.49,
+  "w": 99.57,
+  "text": "CHĂM SỐC XE PHẠM GIA",
+  "x": 1060.55,
+  "h": 19.6,
+  "confidence": 1
+ },
+ {
+  "y": 1656.07,
+  "w": 596.51,
+  "text": "TC AUTO không chỉ cung cấp sản phẩm và giải pháp, mà còn đồng hành",
+  "x": 81.63,
+  "h": 21.07,
+  "confidence": 1
+ },
+ {
+  "y": 1660.31,
+  "w": 117.21,
+  "text": "ẠI LÝ CHÍNH HÃNG TẠI QUÀNG NAM",
+  "x": 1061.16,
+  "h": 10.47,
+  "confidence": 1
+ },
+ {
+  "y": 1663.4,
+  "w": 132.32,
+  "text": "LỄ KÝ KÉ",
+  "x": 1230.39,
+  "h": 33.91,
+  "confidence": 1
+ },
+ {
+  "y": 1674.15,
+  "w": 114.72,
+  "text": "ỢP TÁC CHIẾN LƯỢC",
+  "x": 784.01,
+  "h": 21.27,
+  "confidence": 1
+ },
+ {
+  "y": 1677.07,
+  "w": 579.77,
+  "text": "cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nỗi",
+  "x": 83.72,
+  "h": 16.86,
+  "confidence": 1
+ },
+ {
+  "y": 1681.22,
+  "w": 176.7,
+  "text": "MÀN HÌNH WINCA THÊ HỆ MỚI",
+  "x": 964.4,
+  "h": 21.06,
+  "confidence": 1
+ },
+ {
+  "y": 1694.35,
+  "w": 205.93,
+  "text": "TIÊN PHONG CÔNG NGHỆ - QLED 2K",
+  "x": 954.01,
+  "h": 22.23,
+  "confidence": 1
+ },
+ {
+  "y": 1695.92,
+  "w": 579.77,
+  "text": "với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng",
+  "x": 83.72,
+  "h": 18.85,
+  "confidence": 1
+ },
+ {
+  "y": 1698.63,
+  "w": 99.29,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 788.61,
+  "h": 17.45,
+  "confidence": 1
+ },
+ {
+  "y": 1700,
+  "w": 117.21,
+  "text": "HỢP TÁC CHIÊN LƯỢC",
+  "x": 1243.26,
+  "h": 12.67,
+  "confidence": 1
+ },
+ {
+  "y": 1716.79,
+  "w": 571.4,
+  "text": "bộ, giúp đại lý có thêm nguồn lực đề chủ động triễn khai marketing và",
+  "x": 83.72,
+  "h": 16.83,
+  "confidence": 1
+ },
+ {
+  "y": 1721.05,
+  "w": 98.37,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 1251.63,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 1735.85,
+  "w": 174.14,
+  "text": "phát triền thị trường.",
+  "x": 81.43,
+  "h": 21.03,
+  "confidence": 1
+ },
+ {
+  "y": 1751.73,
+  "w": 136.67,
+  "text": "bỉ vượt thời gian",
+  "x": 782.49,
+  "h": 19.86,
+  "confidence": 1
+ },
+ {
+  "y": 1768.35,
+  "w": 143.97,
+  "text": "Bền bỉ vượt thời gia",
+  "x": 1217.31,
+  "h": 25.1,
+  "confidence": 1
+ },
+ {
+  "y": 1769.21,
+  "w": 148.6,
+  "text": "mà cùng năm tháng",
+  "x": 784.88,
+  "h": 14.71,
+  "confidence": 1
+ },
+ {
+  "y": 1775.36,
+  "w": 267.91,
+  "text": "Hỗ trợ từ nền tảng thương hiệu",
+  "x": 81.63,
+  "h": 21.08,
+  "confidence": 1
+ },
+ {
+  "y": 1781.29,
+  "w": 160.85,
+  "text": "Mượt mà cùng năm th",
+  "x": 1200.47,
+  "h": 29.07,
+  "confidence": 1
+ },
+ {
+  "y": 1817.38,
+  "w": 604.88,
+  "text": "TC AUTO cung cấp hệ thông hình ánh, nội dung và nhận diện thương hiệu.",
+  "x": 81.63,
+  "h": 18.85,
+  "confidence": 1
+ },
+ {
+  "y": 1836.07,
+  "w": 600.7,
+  "text": "được chuẩn hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán",
+  "x": 81.63,
+  "h": 19.01,
+  "confidence": 1
+ },
+ {
+  "y": 1842.5,
+  "w": 29.3,
+  "text": "16:25| •",
+  "x": 1243.26,
+  "h": 12.58,
+  "confidence": 1
+ },
+ {
+  "y": 1857.14,
+  "w": 563.02,
+  "text": "trên mọi điểm chạm. Từ hình ảnh sản phầm, video, POSM đến các nội",
+  "x": 83.72,
+  "h": 16.79,
+  "confidence": 1
+ },
+ {
+  "y": 1877.19,
+  "w": 289.06,
+  "text": "ng tren hen tang so, đại lý có thệ dễ",
+  "x": 215.49,
+  "h": 19.09,
+  "confidence": 1
+ },
+ {
+  "y": 1877.8,
+  "w": 105.2,
+  "text": "ung dụng và",
+  "x": 556.54,
+  "h": 16.91,
+  "confidence": 1
+ },
+ {
+  "y": 1887.96,
+  "w": 115.34,
+  "text": "> XEM THÊM",
+  "x": 85.7,
+  "h": 22.2,
+  "confidence": 1
+ },
+ {
+  "y": 2045.65,
+  "w": 238.6,
+  "text": "TÊN BÀI VIẾT",
+  "x": 83.72,
+  "h": 33.63,
+  "confidence": 1
+ },
+ {
+  "y": 2047.75,
+  "w": 73.26,
+  "text": "WINGH",
+  "x": 883.26,
+  "h": 23.04,
+  "confidence": 1
+ },
+ {
+  "y": 2047.75,
+  "w": 66.98,
+  "text": "BRAVS",
+  "x": 973.26,
+  "h": 25.13,
+  "confidence": 1
+ },
+ {
+  "y": 2070.71,
+  "w": 138.14,
+  "text": "CEiY GI: Auto",
+  "x": 1107.21,
+  "h": 12.64,
+  "confidence": 1
+ },
+ {
+  "y": 2070.79,
+  "w": 48.14,
+  "text": "AUTO",
+  "x": 782.79,
+  "h": 14.66,
+  "confidence": 1
+ },
+ {
+  "y": 2072.86,
+  "w": 73.26,
+  "text": "DANG MAN C",
+  "x": 1285.12,
+  "h": 10.49,
+  "confidence": 1
+ },
+ {
+  "y": 2075.12,
+  "w": 42.36,
+  "text": "ẸU TOÀN CẦI",
+  "x": 989.78,
+  "h": 8.91,
+  "confidence": 1
+ },
+ {
+  "y": 2077.07,
+  "w": 85.81,
+  "text": "MAN HINH ANDROID THUO",
+  "x": 885.35,
+  "h": 4.36,
+  "confidence": 1
+ },
+ {
+  "y": 2089.63,
+  "w": 123.49,
+  "text": "Ngày 20.8.2026",
+  "x": 81.63,
+  "h": 21.08,
+  "confidence": 1
+ },
+ {
+  "y": 2103.99,
+  "w": 50.8,
+  "text": "WINCA",
+  "x": 1286.9,
+  "h": 12.03,
+  "confidence": 1
+ },
+ {
+  "y": 2117.17,
+  "w": 135.6,
+  "text": "Ê KÝ KẾT",
+  "x": 777.63,
+  "h": 48.22,
+  "confidence": 1
+ },
+ {
+  "y": 2118.93,
+  "w": 104.65,
+  "text": "WINGF BRAVS",
+  "x": 931.4,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 2124.46,
+  "w": 97.01,
+  "text": "CHĂM SỐC XE PHẠM GIA",
+  "x": 1060.82,
+  "h": 17.09,
+  "confidence": 1
+ },
+ {
+  "y": 2137.8,
+  "w": 596.51,
+  "text": "TC AUTO không chỉ cung cấp sản phầm và giải pháp, mà còn đồng hành",
+  "x": 81.63,
+  "h": 18.98,
+  "confidence": 1
+ },
+ {
+  "y": 2141.99,
+  "w": 115.12,
+  "text": "ẠI LY CHÍNH HÃNG TẠI QUẢNG NAM",
+  "x": 1061.16,
+  "h": 10.51,
+  "confidence": 1
+ },
+ {
+  "y": 2145.96,
+  "w": 129.87,
+  "text": "LỄ KÝ KÉ",
+  "x": 1232.74,
+  "h": 31.84,
+  "confidence": 1
+ },
+ {
+  "y": 2154.19,
+  "w": 116.75,
+  "text": "ỢP TÁC CHIẾN LƯỢC",
+  "x": 782.08,
+  "h": 22.76,
+  "confidence": 1
+ },
+ {
+  "y": 2156.13,
+  "w": 582,
+  "text": "cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nối",
+  "x": 81.56,
+  "h": 23.32,
+  "confidence": 1
+ },
+ {
+  "y": 2163.51,
+  "w": 168.22,
+  "text": "MÀN HÌNH WINCA THÊ HỆ MỚ",
+  "x": 968.65,
+  "h": 19.42,
+  "confidence": 1
+ },
+ {
+  "y": 2175.7,
+  "w": 197.58,
+  "text": "TIÊN PHONG CÔNG NGHỆ - QLED 2K",
+  "x": 958.19,
+  "h": 20.23,
+  "confidence": 1
+ },
+ {
+  "y": 2177.35,
+  "w": 99.8,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 788.45,
+  "h": 20.53,
+  "confidence": 1
+ },
+ {
+  "y": 2177.5,
+  "w": 581.86,
+  "text": "với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng",
+  "x": 81.63,
+  "h": 18.94,
+  "confidence": 1
+ },
+ {
+  "y": 2179.73,
+  "w": 115.5,
+  "text": "HỢP TÁC CHIÊN LƯỢC",
+  "x": 1243.08,
+  "h": 14.92,
+  "confidence": 1
+ },
+ {
+  "y": 2191.73,
+  "w": 100.72,
+  "text": "ĐẠI LÝ PHẦN PHỐI",
+  "x": 1249.41,
+  "h": 26.18,
+  "confidence": 1
+ },
+ {
+  "y": 2198.53,
+  "w": 571.4,
+  "text": "bộ, giúp đại lý có thêm nguồn lực đề chú động triền khai marketing và",
+  "x": 83.72,
+  "h": 16.82,
+  "confidence": 1
+ },
+ {
+  "y": 2219.48,
+  "w": 173.72,
+  "text": "phat trien thị trương.",
+  "x": 81.63,
+  "h": 16.75,
+  "confidence": 1
+ },
+ {
+  "y": 2233.33,
+  "w": 136.68,
+  "text": "bỉ vượt thời gian",
+  "x": 782.48,
+  "h": 19.89,
+  "confidence": 1
+ },
+ {
+  "y": 2249.29,
+  "w": 144.23,
+  "text": "Bền bỉ vượt thời gia",
+  "x": 1217.11,
+  "h": 26.27,
+  "confidence": 1
+ },
+ {
+  "y": 2250.71,
+  "w": 146.51,
+  "text": "mà cùng năm tháng",
+  "x": 786.98,
+  "h": 15,
+  "confidence": 1
+ },
+ {
+  "y": 2254.85,
+  "w": 268.23,
+  "text": "Hỗ trợ từ nền tảng thương hiệu",
+  "x": 81.46,
+  "h": 25.3,
+  "confidence": 1
+ },
+ {
+  "y": 2262.55,
+  "w": 158.84,
+  "text": "Mượt mà cùng năm th",
+  "x": 1202.54,
+  "h": 27.53,
+  "confidence": 1
+ },
+ {
+  "y": 2296.79,
+  "w": 604.88,
+  "text": "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu",
+  "x": 81.63,
+  "h": 21.12,
+  "confidence": 1
+ },
+ {
+  "y": 2298.85,
+  "w": 602.79,
+  "text": "TC AUTO cung câp hệ thông hình ánh, nội dung và nhận diện thương hiệu",
+  "x": 83.72,
+  "h": 16.87,
+  "confidence": 1
+ },
+ {
+  "y": 2317.7,
+  "w": 598.6,
+  "text": "được chuần hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán",
+  "x": 83.72,
+  "h": 16.75,
+  "confidence": 1
+ },
+ {
+  "y": 2323.93,
+  "w": 27.21,
+  "text": "16:25 | -",
+  "x": 1245.35,
+  "h": 10.52,
+  "confidence": 1
+ },
+ {
+  "y": 2338.57,
+  "w": 565.12,
+  "text": "trên mọi điềm chạm. Từ hình ảnh sán phầm, video, POSM đến các nội",
+  "x": 83.72,
+  "h": 16.82,
+  "confidence": 1
+ },
+ {
+  "y": 2359.58,
+  "w": 450,
+  "text": "ng trên hên tăng sô, đại lý có thể de dăng ứng dụng vài",
+  "x": 211.4,
+  "h": 14.7,
+  "confidence": 1
+ },
+ {
+  "y": 2369.42,
+  "w": 115.34,
+  "text": "> XEM THEM",
+  "x": 85.7,
+  "h": 22.21,
+  "confidence": 1
+ },
+ {
+  "y": 2525,
+  "w": 242.79,
+  "text": "TÊN BÀI VIẾT",
+  "x": 79.53,
+  "h": 37.86,
+  "confidence": 1
+ },
+ {
+  "y": 2526.84,
+  "w": 73.97,
+  "text": "WINGH",
+  "x": 883.06,
+  "h": 25.21,
+  "confidence": 1
+ },
+ {
+  "y": 2534.27,
+  "w": 35.79,
+  "text": "BRY",
+  "x": 971.99,
+  "h": 19.39,
+  "confidence": 1
+ },
+ {
+  "y": 2550,
+  "w": 144.42,
+  "text": "PHAY GIA Auto",
+  "x": 1100.93,
+  "h": 16.91,
+  "confidence": 1
+ },
+ {
+  "y": 2552.14,
+  "w": 73.26,
+  "text": "DANG MAN C",
+  "x": 1285.12,
+  "h": 12.67,
+  "confidence": 1
+ },
+ {
+  "y": 2552.25,
+  "w": 43.95,
+  "text": "AUTO",
+  "x": 784.88,
+  "h": 16.75,
+  "confidence": 1
+ },
+ {
+  "y": 2556.43,
+  "w": 152.79,
+  "text": "MÀN HÌNH ANDROID THƯƠNG HIỆU TOÀN CẦU",
+  "x": 883.26,
+  "h": 8.39,
+  "confidence": 1
+ },
+ {
+  "y": 2571.07,
+  "w": 125.58,
+  "text": "Ngày 20.8.2026",
+  "x": 81.63,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 2577.54,
+  "w": 34.94,
+  "text": "IC AUT",
+  "x": 885.91,
+  "h": 18.2,
+  "confidence": 1
+ },
+ {
+  "y": 2583.66,
+  "w": 48.14,
+  "text": "WINCA",
+  "x": 1289.3,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 2596.58,
+  "w": 136.12,
+  "text": "Ẽ KÝ KẾT",
+  "x": 777.22,
+  "h": 50.26,
+  "confidence": 1
+ },
+ {
+  "y": 2598.37,
+  "w": 107.35,
+  "text": "WINGF BR VS",
+  "x": 931.06,
+  "h": 23.2,
+  "confidence": 1
+ },
+ {
+  "y": 2604.81,
+  "w": 99.39,
+  "text": "CHĂM SỐC XE PHẠM GIA",
+  "x": 1060.7,
+  "h": 18.74,
+  "confidence": 1
+ },
+ {
+  "y": 2617.14,
+  "w": 596.51,
+  "text": "TC AUTO không chỉ cung cấp sản phẩm và giải pháp, mà còn đồng hành",
+  "x": 81.63,
+  "h": 21.07,
+  "confidence": 1
+ },
+ {
+  "y": 2620.02,
+  "w": 117.85,
+  "text": "ẠI LÝ CHÍNH HÃNG TẠI QUẢNG NAM",
+  "x": 1060.87,
+  "h": 15.85,
+  "confidence": 1
+ },
+ {
+  "y": 2627.2,
+  "w": 132.07,
+  "text": "LỄ KÝ KÉ",
+  "x": 1230.59,
+  "h": 32.3,
+  "confidence": 1
+ },
+ {
+  "y": 2635.18,
+  "w": 116.86,
+  "text": "ỢP TÁC CHIÊN LƯỢC",
+  "x": 782.07,
+  "h": 23.45,
+  "confidence": 1
+ },
+ {
+  "y": 2638.12,
+  "w": 579.77,
+  "text": "cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nối",
+  "x": 83.72,
+  "h": 16.88,
+  "confidence": 1
+ },
+ {
+  "y": 2642.44,
+  "w": 176.73,
+  "text": "MÀN HÌNH WINCA THẾ HỆ MỚI",
+  "x": 964.43,
+  "h": 22.25,
+  "confidence": 1
+ },
+ {
+  "y": 2656.24,
+  "w": 206,
+  "text": "TIÊN PHONG CÔNG NGHỆ - QLED 2K",
+  "x": 953.98,
+  "h": 22.06,
+  "confidence": 1
+ },
+ {
+  "y": 2656.79,
+  "w": 583.95,
+  "text": "với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng",
+  "x": 79.53,
+  "h": 21.12,
+  "confidence": 1
+ },
+ {
+  "y": 2660.64,
+  "w": 101.4,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 788.59,
+  "h": 16.35,
+  "confidence": 1
+ },
+ {
+  "y": 2661.07,
+  "w": 117.21,
+  "text": "HỢP TÁC CHIẾN LƯỢC",
+  "x": 1243.26,
+  "h": 14.74,
+  "confidence": 1
+ },
+ {
+  "y": 2677.86,
+  "w": 571.4,
+  "text": "bộ, giúp đại lý có thêm nguồn lực để chủ động triển khai marketing và",
+  "x": 83.72,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 2682.09,
+  "w": 98.37,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 1251.63,
+  "h": 14.69,
+  "confidence": 1
+ },
+ {
+  "y": 2698.85,
+  "w": 171.63,
+  "text": "phát triền thị trường.",
+  "x": 83.72,
+  "h": 16.87,
+  "confidence": 1
+ },
+ {
+  "y": 2714.79,
+  "w": 136.74,
+  "text": "bỉ vượt thời gian",
+  "x": 782.42,
+  "h": 19.95,
+  "confidence": 1
+ },
+ {
+  "y": 2730.85,
+  "w": 144.19,
+  "text": "Bền bỉ vượt thời gia",
+  "x": 1217.14,
+  "h": 25.83,
+  "confidence": 1
+ },
+ {
+  "y": 2732.36,
+  "w": 148.6,
+  "text": "mà cùng năm tháng",
+  "x": 784.88,
+  "h": 14.79,
+  "confidence": 1
+ },
+ {
+  "y": 2736.32,
+  "w": 268.21,
+  "text": "Hỗ trợ từ nền tảng thương hiệu",
+  "x": 81.46,
+  "h": 25.3,
+  "confidence": 1
+ },
+ {
+  "y": 2743.83,
+  "w": 160.89,
+  "text": "Mượt mà cùng năm th",
+  "x": 1200.49,
+  "h": 27.23,
+  "confidence": 1
+ },
+ {
+  "y": 2778.43,
+  "w": 602.79,
+  "text": "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu",
+  "x": 83.72,
+  "h": 16.93,
+  "confidence": 1
+ },
+ {
+  "y": 2799.29,
+  "w": 598.6,
+  "text": "được chuân hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán",
+  "x": 83.72,
+  "h": 16.84,
+  "confidence": 1
+ },
+ {
+  "y": 2811.79,
+  "w": 31.4,
+  "text": "IC AUTO",
+  "x": 975.35,
+  "h": 10.71,
+  "confidence": 1
+ },
+ {
+  "y": 2820.31,
+  "w": 565.12,
+  "text": "trên mọi điêm chạm. Từ hình ánh sán phâm, video, POSM đên các nội",
+  "x": 83.72,
+  "h": 14.69,
+  "confidence": 1
+ },
+ {
+  "y": 2839.16,
+  "w": 447.91,
+  "text": "ng trên nền tảng số, đại lý có thể dề dàng ứng dụng và.",
+  "x": 213.49,
+  "h": 14.77,
+  "confidence": 1
+ },
+ {
+  "y": 2850.68,
+  "w": 115.48,
+  "text": "> XEM THÊM",
+  "x": 85.63,
+  "h": 23.04,
+  "confidence": 1
+ },
+ {
+  "y": 3006.7,
+  "w": 238.6,
+  "text": "TÊN BÀI VIẾT",
+  "x": 83.72,
+  "h": 35.6,
+  "confidence": 1
+ },
+ {
+  "y": 3008.25,
+  "w": 75.91,
+  "text": "WINGH®",
+  "x": 883.07,
+  "h": 25.38,
+  "confidence": 1
+ },
+ {
+  "y": 3010.89,
+  "w": 66.98,
+  "text": "BRAVS",
+  "x": 973.26,
+  "h": 25.13,
+  "confidence": 1
+ },
+ {
+  "y": 3029.55,
+  "w": 145.03,
+  "text": "PHAY GIA AutO",
+  "x": 1100.58,
+  "h": 19.36,
+  "confidence": 1
+ },
+ {
+  "y": 3031.53,
+  "w": 46.26,
+  "text": "AUTO",
+  "x": 782.68,
+  "h": 17.36,
+  "confidence": 1
+ },
+ {
+  "y": 3033.93,
+  "w": 73.26,
+  "text": "DANG MAN C",
+  "x": 1285.12,
+  "h": 10.47,
+  "confidence": 1
+ },
+ {
+  "y": 3036.02,
+  "w": 148.6,
+  "text": "MÀN HÌNH ANDROID THƯƠNG HIỆU TOÀN CẦU",
+  "x": 885.35,
+  "h": 10.47,
+  "confidence": 1
+ },
+ {
+  "y": 3040,
+  "w": 150.7,
+  "text": "MAN HINH ANDROID THUONG HIEU TOAN CAU",
+  "x": 883.26,
+  "h": 4.29,
+  "confidence": 1
+ },
+ {
+  "y": 3040,
+  "w": 43.95,
+  "text": "SUUUOO",
+  "x": 1121.86,
+  "h": 4.19,
+  "confidence": 0.3
+ },
+ {
+  "y": 3050.28,
+  "w": 126.13,
+  "text": "Ngày 20.8.2026",
+  "x": 81.36,
+  "h": 21.93,
+  "confidence": 1
+ },
+ {
+  "y": 3058.61,
+  "w": 42.99,
+  "text": "TC AUTO",
+  "x": 883.9,
+  "h": 19.81,
+  "confidence": 1
+ },
+ {
+  "y": 3065.34,
+  "w": 50.23,
+  "text": "WINCA",
+  "x": 1287.21,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 3067.23,
+  "w": 50.23,
+  "text": "WINCF",
+  "x": 1287.21,
+  "h": 10.47,
+  "confidence": 1
+ },
+ {
+  "y": 3077.16,
+  "w": 52.6,
+  "text": "WINGF",
+  "x": 930.46,
+  "h": 23.33,
+  "confidence": 0.5
+ },
+ {
+  "y": 3081.88,
+  "w": 50.23,
+  "text": "BRAVS",
+  "x": 987.91,
+  "h": 18.85,
+  "confidence": 0.5
+ },
+ {
+  "y": 3082.79,
+  "w": 131.38,
+  "text": "KÝ KẾT",
+  "x": 781.13,
+  "h": 41.92,
+  "confidence": 1
+ },
+ {
+  "y": 3084.82,
+  "w": 99.62,
+  "text": "CHĂM SỐC XE PHẠM GIA",
+  "x": 1060.64,
+  "h": 20.03,
+  "confidence": 1
+ },
+ {
+  "y": 3098.57,
+  "w": 594.42,
+  "text": "TC AUTO không chỉ cung cấp sản phẩm và giải pháp, mà còn đồng hành",
+  "x": 83.72,
+  "h": 18.93,
+  "confidence": 1
+ },
+ {
+  "y": 3101.92,
+  "w": 119.73,
+  "text": "ĐẠI LÝ CHÍNH HÃNG TẠI QUẢNG NAM",
+  "x": 1058.85,
+  "h": 14.6,
+  "confidence": 1
+ },
+ {
+  "y": 3106.16,
+  "w": 132.28,
+  "text": "LỄ KÝ KÉ",
+  "x": 1230.49,
+  "h": 35.22,
+  "confidence": 1
+ },
+ {
+  "y": 3116.03,
+  "w": 116.67,
+  "text": "ỢP TÁC CHIẾN LƯỢC",
+  "x": 782.12,
+  "h": 23.24,
+  "confidence": 1
+ },
+ {
+  "y": 3119.58,
+  "w": 579.77,
+  "text": "cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nối",
+  "x": 83.72,
+  "h": 16.85,
+  "confidence": 1
+ },
+ {
+  "y": 3124.42,
+  "w": 176.58,
+  "text": "MÀN HÌNH WINCA THẾ HỆ MỚI",
+  "x": 966.57,
+  "h": 20.77,
+  "confidence": 1
+ },
+ {
+  "y": 3137.8,
+  "w": 203.94,
+  "text": "TIÊN PHONG CÔNG NGHỆ - QLED 2K",
+  "x": 956.04,
+  "h": 20.91,
+  "confidence": 1
+ },
+ {
+  "y": 3138.43,
+  "w": 581.86,
+  "text": "với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng",
+  "x": 81.63,
+  "h": 18.85,
+  "confidence": 1
+ },
+ {
+  "y": 3141.25,
+  "w": 101.32,
+  "text": "ĐẠI LÝ PHÂN PHỐI",
+  "x": 788.65,
+  "h": 17.04,
+  "confidence": 1
+ },
+ {
+  "y": 3142.5,
+  "w": 115.12,
+  "text": "HỢP TÁC CHIÊN LƯỢC",
+  "x": 1243.26,
+  "h": 12.86,
+  "confidence": 1
+ },
+ {
+  "y": 3159.29,
+  "w": 573.49,
+  "text": "bộ, giúp đại lý có thêm nguồn lực để chủ động triển khai marketing và",
+  "x": 81.63,
+  "h": 21.07,
+  "confidence": 1
+ },
+ {
+  "y": 3165.65,
+  "w": 98.37,
+  "text": "ĐẠI LÝ PHÂN PHỒI",
+  "x": 1251.63,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 3180.31,
+  "w": 173.72,
+  "text": "phát triền thị trường.",
+  "x": 81.63,
+  "h": 18.97,
+  "confidence": 1
+ },
+ {
+  "y": 3196.11,
+  "w": 138.67,
+  "text": "n bí vượt thời gian",
+  "x": 780.44,
+  "h": 18.12,
+  "confidence": 1
+ },
+ {
+  "y": 3211.73,
+  "w": 154.88,
+  "text": "mà cùng năm tháng",
+  "x": 784.88,
+  "h": 14.7,
+  "confidence": 1
+ },
+ {
+  "y": 3212.4,
+  "w": 146.03,
+  "text": "Bên bỉ vượt thời gia",
+  "x": 1215.26,
+  "h": 25.11,
+  "confidence": 1
+ },
+ {
+  "y": 3217.86,
+  "w": 267.91,
+  "text": "Hỗ trợ từ nền tảng thương hiệu",
+  "x": 81.63,
+  "h": 21.1,
+  "confidence": 1
+ },
+ {
+  "y": 3225.47,
+  "w": 158.94,
+  "text": "Mượt mà cùng năm th",
+  "x": 1202.43,
+  "h": 26.93,
+  "confidence": 1
+ },
+ {
+  "y": 3259.9,
+  "w": 604.88,
+  "text": "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu.",
+  "x": 81.63,
+  "h": 18.85,
+  "confidence": 1
+ },
+ {
+  "y": 3280.71,
+  "w": 598.6,
+  "text": "được chuân hóa, giúp đại lý duy trì hình ánh chuyên nghiệp và nhật quán",
+  "x": 83.72,
+  "h": 16.88,
+  "confidence": 1
+ },
+ {
+  "y": 3289.21,
+  "w": 27.21,
+  "text": "10•25",
+  "x": 1243.26,
+  "h": 6.28,
+  "confidence": 1
+ },
+ {
+  "y": 3299.64,
+  "w": 565.12,
+  "text": "trên mọi điểm chạm. Từ hình ảnh sản phẩm, video, POSM đến các nội",
+  "x": 83.72,
+  "h": 16.8,
+  "confidence": 1
+ },
+ {
+  "y": 3320.63,
+  "w": 450,
+  "text": "ng trên nên tảng sô, đại lý có thê dễ dàng ứng dụng vài",
+  "x": 211.4,
+  "h": 14.73,
+  "confidence": 1
+ },
+ {
+  "y": 3330.41,
+  "w": 115.36,
+  "text": "> XEM THÊM",
+  "x": 85.69,
+  "h": 22.33,
+  "confidence": 1
+ },
+ {
+  "y": 3510.32,
+  "w": 71.19,
+  "text": "2 3 ...",
+  "x": 716.92,
+  "h": 22.98,
+  "confidence": 1
+ },
+ {
+  "y": 3710,
+  "w": 257.44,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "x": 79.53,
+  "h": 16.91,
+  "confidence": 1
+ },
+ {
+  "y": 3710,
+  "w": 282.56,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN",
+  "x": 730.47,
+  "h": 14.82,
+  "confidence": 1
+ },
+ {
+  "y": 3710,
+  "w": 98.37,
+  "text": "KẾT NỐI VỚI TC",
+  "x": 1232.79,
+  "h": 14.82,
+  "confidence": 1
+ },
+ {
+  "y": 3731.07,
+  "w": 58.6,
+  "text": "093 617 6996",
+  "x": 1253.72,
+  "h": 8.57,
+  "confidence": 1
+ },
+ {
+  "y": 3741.43,
+  "w": 92.09,
+  "text": "Họ và tên của bạn",
+  "x": 749.3,
+  "h": 10.71,
+  "confidence": 1
+ },
+ {
+  "y": 3747.85,
+  "w": 213.49,
+  "text": "TC luôn sẵn sàng lắng nghe và tư vấn giải giáp phù",
+  "x": 81.63,
+  "h": 12.57,
+  "confidence": 1
+ },
+ {
+  "y": 3749.95,
+  "w": 102.56,
+  "text": "inror@tcautosolutons.vn",
+  "x": 1255.81,
+  "h": 4.19,
+  "confidence": 0.3
+ },
+ {
+  "y": 3756.07,
+  "w": 138.14,
+  "text": "Nhu cầu, câu hỏi của bạn...",
+  "x": 935.58,
+  "h": 14.82,
+  "confidence": 1
+ },
+ {
+  "y": 3758.21,
+  "w": 100.47,
+  "text": "hợp nhất dành cho bạn.",
+  "x": 81.63,
+  "h": 12.68,
+  "confidence": 1
+ },
+ {
+  "y": 3760.36,
+  "w": 96.28,
+  "text": "TC AUTO",
+  "x": 491.86,
+  "h": 14.72,
+  "confidence": 1
+ },
+ {
+  "y": 3762.5,
+  "w": 85.81,
+  "text": "Thứ 2 - 7 | 8:00 - 17:30",
+  "x": 1257.91,
+  "h": 10.48,
+  "confidence": 1
+ },
+ {
+  "y": 3771.9,
+  "w": 67.7,
+  "text": "Số điện thoại",
+  "x": 748.91,
+  "h": 14.03,
+  "confidence": 1
+ },
+ {
+  "y": 3777.17,
+  "w": 90,
+  "text": "SOLUTIONS",
+  "x": 496.05,
+  "h": 8.38,
+  "confidence": 1
+ },
+ {
+  "y": 3798.12,
+  "w": 29.3,
+  "text": "GỬI",
+  "x": 1056.98,
+  "h": 16.75,
+  "confidence": 1
+ },
+ {
+  "y": 3810.18,
+  "w": 221.86,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "x": 81.63,
+  "h": 12.27,
+  "confidence": 1
+ }
+]

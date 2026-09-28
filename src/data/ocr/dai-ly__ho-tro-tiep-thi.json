@@ -1,0 +1,634 @@
+[
+ {
+  "w": 101.19,
+  "confidence": 1,
+  "x": 127.36,
+  "text": "TC AUTO",
+  "y": 41.36,
+  "h": 20.45
+ },
+ {
+  "w": 108.84,
+  "confidence": 1,
+  "x": 1149.07,
+  "text": "Q Nhập để tìm kiếm....",
+  "y": 43.93,
+  "h": 16.8
+ },
+ {
+  "w": 60.12,
+  "confidence": 1,
+  "x": 830.23,
+  "text": "ĐẠI LÝ ›",
+  "y": 53.3,
+  "h": 21.26
+ },
+ {
+  "w": 113.02,
+  "confidence": 1,
+  "x": 441.63,
+  "text": "TRẢI NGHIỆM ›",
+  "y": 54.29,
+  "h": 16.92
+ },
+ {
+  "w": 104.65,
+  "confidence": 1,
+  "x": 699.07,
+  "text": "CÔNG NGHỆ›",
+  "y": 54.29,
+  "h": 16.92
+ },
+ {
+  "w": 81.63,
+  "confidence": 1,
+  "x": 918.84,
+  "text": "NHÂN SỰ >",
+  "y": 54.29,
+  "h": 19.01
+ },
+ {
+  "w": 87.96,
+  "confidence": 1,
+  "x": 583.93,
+  "text": "GIÁI PHÁP ›",
+  "y": 54.32,
+  "h": 17.02
+ },
+ {
+  "w": 35.58,
+  "confidence": 0.5,
+  "x": 136.05,
+  "text": "SULI",
+  "y": 62.83,
+  "h": 4.19
+ },
+ {
+  "w": 99.43,
+  "confidence": 0.3,
+  "x": 690.18,
+  "text": "WT EFEET",
+  "y": 474.35,
+  "h": 22.46
+ },
+ {
+  "w": 69.27,
+  "confidence": 1,
+  "x": 1253.62,
+  "text": "CLARITY",
+  "y": 502.05,
+  "h": 13.7
+ },
+ {
+  "w": 90,
+  "confidence": 1,
+  "x": 1253.72,
+  "text": "Tầm nhìn sắc nét",
+  "y": 517.14,
+  "h": 10.71
+ },
+ {
+  "w": 59.51,
+  "confidence": 1,
+  "x": 688.19,
+  "text": "TC AUTO",
+  "y": 536.25,
+  "h": 15.08
+ },
+ {
+  "w": 102.56,
+  "confidence": 1,
+  "x": 1253.72,
+  "text": "PROTECTION",
+  "y": 571.73,
+  "h": 12.57
+ },
+ {
+  "w": 71.16,
+  "confidence": 1,
+  "x": 1251.63,
+  "text": "Bảo vệ tối ưu",
+  "y": 584.29,
+  "h": 12.57
+ },
+ {
+  "w": 81.63,
+  "confidence": 1,
+  "x": 1253.72,
+  "text": "COMFORT",
+  "y": 636.65,
+  "h": 12.57
+ },
+ {
+  "w": 478.3,
+  "confidence": 1,
+  "x": 81.27,
+  "text": "HỖ TRỢ TIẾP THỊ",
+  "y": 638.3,
+  "h": 71.35
+ },
+ {
+  "w": 98.37,
+  "confidence": 1,
+  "x": 1253.72,
+  "text": "Thoải mái trên mọi",
+  "y": 651.31,
+  "h": 10.48
+ },
+ {
+  "w": 58.6,
+  "confidence": 1,
+  "x": 1251.63,
+  "text": "hành trình",
+  "y": 663.87,
+  "h": 10.47
+ },
+ {
+  "w": 104.65,
+  "confidence": 1,
+  "x": 1253.72,
+  "text": "CONFIDENCE",
+  "y": 712.04,
+  "h": 14.66
+ },
+ {
+  "w": 148.6,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "TC AUTO",
+  "y": 714.14,
+  "h": 27.29
+ },
+ {
+  "w": 108.84,
+  "confidence": 1,
+  "x": 1251.63,
+  "text": "Trái nghiệm trọn vẹn",
+  "y": 728.8,
+  "h": 10.49
+ },
+ {
+  "w": 618.16,
+  "confidence": 1,
+  "x": 83.37,
+  "text": "ĐỒNG HÀNH CÙNG ĐẠI LÝ TRONG",
+  "y": 951.93,
+  "h": 48.02
+ },
+ {
+  "w": 540,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "HÀNH TRÌNH TRUYỀN THÔNG",
+  "y": 992.46,
+  "h": 35.75
+ },
+ {
+  "w": 125.58,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "Ngày 20.8.2026",
+  "y": 1040.63,
+  "h": 19.01
+ },
+ {
+  "w": 394.5,
+  "confidence": 1,
+  "x": 926.56,
+  "text": "TC AUTO",
+  "y": 1078.03,
+  "h": 75.05
+ },
+ {
+  "w": 596.51,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "TC AUTO không chỉ cung cấp sản phẩm và giải pháp, mà còn đồng hành",
+  "y": 1082.5,
+  "h": 18.93
+ },
+ {
+  "w": 579.9,
+  "confidence": 1,
+  "x": 81.57,
+  "text": "cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nối",
+  "y": 1101.31,
+  "h": 22.66
+ },
+ {
+  "w": 583.95,
+  "confidence": 1,
+  "x": 79.53,
+  "text": "với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng",
+  "y": 1120.21,
+  "h": 23.04
+ },
+ {
+  "w": 573.49,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "bộ, giúp đại lý có thêm nguồn lực đề chú động triễn khai marketing và",
+  "y": 1143.21,
+  "h": 18.93
+ },
+ {
+  "w": 336.98,
+  "confidence": 1,
+  "x": 971.16,
+  "text": "SOLUTIONS",
+  "y": 1157.91,
+  "h": 27.23
+ },
+ {
+  "w": 172,
+  "confidence": 1,
+  "x": 83.55,
+  "text": "phát triển thị trường.",
+  "y": 1161.17,
+  "h": 19.96
+ },
+ {
+  "w": 268.24,
+  "confidence": 1,
+  "x": 81.45,
+  "text": "Hỗ trợ từ nền tảng thương hiệu",
+  "y": 1199.55,
+  "h": 25.41
+ },
+ {
+  "w": 602.79,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu.",
+  "y": 1241.68,
+  "h": 18.85
+ },
+ {
+  "w": 115.51,
+  "confidence": 1,
+  "x": 85.57,
+  "text": "> XEM THÊM",
+  "y": 1258.78,
+  "h": 22.04
+ },
+ {
+  "w": 170.8,
+  "confidence": 1,
+  "x": 78.96,
+  "text": "ĐÀO TẠO",
+  "y": 1390.65,
+  "h": 41.33
+ },
+ {
+  "w": 123.49,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "Ngày 20.8.2026",
+  "y": 1438.53,
+  "h": 18.97
+ },
+ {
+  "w": 576,
+  "confidence": 1,
+  "x": 90,
+  "text": "ại TC AUTO, chúng tôi tin rằng một hệ thống đại lý vững mạnh bắt đầu",
+  "y": 1470.36,
+  "h": 30
+ },
+ {
+  "w": 592.43,
+  "confidence": 1,
+  "x": 81.57,
+  "text": "từ một đội ngũ có chuyên môn, tư duy dịch vụ và khả năng thích ứng với",
+  "y": 1497.31,
+  "h": 21.39
+ },
+ {
+  "w": 592.33,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "thị trường. Vì vậy, đào tạo không chỉ là hoạt động hỗ trợ, mà là một phần",
+  "y": 1518.12,
+  "h": 18.85
+ },
+ {
+  "w": 473.14,
+  "confidence": 1,
+  "x": 81.57,
+  "text": "trong hành trình đồng hành và phát triển cùng mỗi đại lý.",
+  "y": 1538.51,
+  "h": 21.17
+ },
+ {
+  "w": 401.94,
+  "confidence": 1,
+  "x": 925.83,
+  "text": "TC AUTO",
+  "y": 1569.52,
+  "h": 83.69
+ },
+ {
+  "w": 403.95,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "Nâng cao chuyên môn. Chuẩn hóa trải nghiệm.",
+  "y": 1578.57,
+  "h": 18.93
+ },
+ {
+  "w": 569.41,
+  "confidence": 1,
+  "x": 83.67,
+  "text": "TC AUTO xây dựng chương trình đào tạo toàn diện, giúp đội ngũ đại lý a",
+  "y": 1618.39,
+  "h": 20.78
+ },
+ {
+  "w": 577.67,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "hiểu sâu về sản phẩm, công nghệ và quy trình dịch vụ. Từ kiến thức sản",
+  "y": 1639.29,
+  "h": 16.84
+ },
+ {
+  "w": 334.88,
+  "confidence": 1,
+  "x": 977.44,
+  "text": "SOLUTIONS",
+  "y": 1649.84,
+  "h": 27.23
+ },
+ {
+  "w": 602.79,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "phầm, kỹ thuật lắp đặt đền tư vần và chăm sóc khách hàng, môi nội dung",
+  "y": 1660.31,
+  "h": 16.83
+ },
+ {
+  "w": 592.33,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "đào tạo đều hương đên việc nãng cao năng lực thực tê và đám báo chát.",
+  "y": 1681.26,
+  "h": 14.81
+ },
+ {
+  "w": 360,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "lượng dịch vụ nhat quan tren toan hẹ thong.",
+  "y": 1702.14,
+  "h": 12.62
+ },
+ {
+  "w": 115.28,
+  "confidence": 1,
+  "x": 85.73,
+  "text": "> XEM THEM",
+  "y": 1743.61,
+  "h": 21.88
+ },
+ {
+  "w": 387.21,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "CÔNG CỤ BÁN HÀNG",
+  "y": 1915.71,
+  "h": 42.14
+ },
+ {
+  "w": 124.07,
+  "confidence": 1,
+  "x": 81.36,
+  "text": "Ngày 20.8.2026",
+  "y": 1963.79,
+  "h": 21.56
+ },
+ {
+  "w": 602.79,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "TC AUTO trang bị cho đại lý hệ thống công cụ bán hàng đồng bộ, giúp đội",
+  "y": 2005.71,
+  "h": 19
+ },
+ {
+  "w": 604.88,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "ngũ tư vẫn dễ dàng giới thiệu sán phấm, truyên tái giá trị và nâng cao trái",
+  "y": 2026.79,
+  "h": 16.79
+ },
+ {
+  "w": 394.64,
+  "confidence": 1,
+  "x": 926.4,
+  "text": "TC AUTO",
+  "y": 2038.8,
+  "h": 73.88
+ },
+ {
+  "w": 577.67,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "nghiệm khách hàng. Từ tài liệu sản phẩm, hình ảnh trực quan đến các",
+  "y": 2045.65,
+  "h": 16.85
+ },
+ {
+  "w": 575.58,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "công cụ hỗ trợ tư vấn, mỗi điểm chạm đều được xây dựng để quá trình",
+  "y": 2064.5,
+  "h": 20.94
+ },
+ {
+  "w": 475.12,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "bán hàng trở nên chuyên nghiệp, rỗ ràng và hiệu quả hơn.",
+  "y": 2085.36,
+  "h": 16.84
+ },
+ {
+  "w": 336.98,
+  "confidence": 1,
+  "x": 971.16,
+  "text": "SOLUTIONS",
+  "y": 2118.95,
+  "h": 25.13
+ },
+ {
+  "w": 293.02,
+  "confidence": 1,
+  "x": 81.63,
+  "text": "Đầy đủ thông tin. Dễ dàng tư vấn.",
+  "y": 2123.14,
+  "h": 23.04
+ },
+ {
+  "w": 588.14,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "Đại lý được cung cấp hệ thống tài liệu sản phẩm với thông tin rõ ràng về",
+  "y": 2165,
+  "h": 18.93
+ },
+ {
+  "w": 600.7,
+  "confidence": 1,
+  "x": 83.72,
+  "text": "tính năng, công nghệ, ưu điềm và ứng dụng thực tế. Đây là nền tảng giúp",
+  "y": 2185.97,
+  "h": 16.89
+ },
+ {
+  "w": 479.3,
+  "confidence": 1,
+  "x": 194.65,
+  "text": "chủ động nắm bắt sản phẩm, giải đáp nhu cầu và đưa rai",
+  "y": 2204.64,
+  "h": 16.93
+ },
+ {
+  "w": 115.33,
+  "confidence": 1,
+  "x": 85.71,
+  "text": "> XEM THÊM",
+  "y": 2218.86,
+  "h": 22.17
+ },
+ {
+  "w": 255.2,
+  "confidence": 1,
+  "x": 81.99,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "y": 2409.22,
+  "h": 15.05
+ },
+ {
+  "w": 280.7,
+  "confidence": 1,
+  "x": 730.93,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN",
+  "y": 2409.77,
+  "h": 15.73
+ },
+ {
+  "w": 97,
+  "confidence": 1,
+  "x": 1233.3,
+  "text": "KẾT NỐI VỚI TC",
+  "y": 2410.29,
+  "h": 13.98
+ },
+ {
+  "w": 55.43,
+  "confidence": 1,
+  "x": 1257.55,
+  "text": "093 617 6996",
+  "y": 2431.2,
+  "h": 9.23
+ },
+ {
+  "w": 90.07,
+  "confidence": 1,
+  "x": 749.45,
+  "text": "Họ và tên của bạn",
+  "y": 2441.58,
+  "h": 11.54
+ },
+ {
+  "w": 101.62,
+  "confidence": 0.5,
+  "x": 1257.55,
+  "text": "infor@tcautosolutions.vn",
+  "y": 2448.51,
+  "h": 6.92
+ },
+ {
+  "w": 210.17,
+  "confidence": 1,
+  "x": 81.99,
+  "text": "TC luôn sẵn sàng lắng nghe và tư vấn giải giáp phù",
+  "y": 2449.56,
+  "h": 9.34
+ },
+ {
+  "w": 133.08,
+  "confidence": 1,
+  "x": 941.01,
+  "text": "Nhu cầu, câu hỏi của bạn....",
+  "y": 2456.45,
+  "h": 14.08
+ },
+ {
+  "w": 99.45,
+  "confidence": 1,
+  "x": 490.71,
+  "text": "TC AUTO",
+  "y": 2457.41,
+  "h": 21.44
+ },
+ {
+  "w": 99.31,
+  "confidence": 1,
+  "x": 81.99,
+  "text": "hợp nhất dành cho bạn.",
+  "y": 2459.91,
+  "h": 8.22
+ },
+ {
+  "w": 86.61,
+  "confidence": 1,
+  "x": 1256.39,
+  "text": "Thứ 2 - 7 | 8:00 - 17:30",
+  "y": 2463.48,
+  "h": 9.28
+ },
+ {
+  "w": 65.82,
+  "confidence": 1,
+  "x": 749.45,
+  "text": "Số điện thoại",
+  "y": 2473.83,
+  "h": 11.78
+ },
+ {
+  "w": 92.38,
+  "confidence": 1,
+  "x": 494.24,
+  "text": "SOLUTIONS",
+  "y": 2476.21,
+  "h": 10.39
+ },
+ {
+  "w": 26.56,
+  "confidence": 1,
+  "x": 1060.08,
+  "text": "GỬI",
+  "y": 2499.29,
+  "h": 13.85
+ },
+ {
+  "w": 18.48,
+  "confidence": 1,
+  "x": 1306.05,
+  "text": "Zalo",
+  "y": 2501.6,
+  "h": 12.7
+ },
+ {
+  "w": 219.63,
+  "confidence": 1,
+  "x": 81.85,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "y": 2508.73,
+  "h": 15.83
+ }
+]

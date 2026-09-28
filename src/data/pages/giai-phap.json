@@ -1,0 +1,612 @@
+{
+  "slug": "giai-phap",
+  "route": "/giai-phap",
+  "title": "Giải pháp",
+  "canvasWidth": 1440,
+  "height": 5977.0,
+  "slices": [
+    {
+      "src": "/slices/giai-phap-0.webp?v=2d1fa1f1",
+      "y": 0.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 136788,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-0.webp?v=2d1fa1f1",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-0@3x.webp?v=d4322c78",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 136788,
+        "3": 344710
+      }
+    },
+    {
+      "src": "/slices/giai-phap-1.webp?v=77cd1472",
+      "y": 900.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 81110,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-1.webp?v=77cd1472",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-1@3x.webp?v=20ce61de",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 81110,
+        "3": 248310
+      }
+    },
+    {
+      "src": "/slices/giai-phap-2.webp?v=4ca3a265",
+      "y": 1800.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 144408,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-2.webp?v=4ca3a265",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-2@3x.webp?v=56052d29",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 144408,
+        "3": 333018
+      }
+    },
+    {
+      "src": "/slices/giai-phap-3.webp?v=f3204c00",
+      "y": 2700.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 98872,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-3.webp?v=f3204c00",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-3@3x.webp?v=7abf2c82",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 98872,
+        "3": 310174
+      }
+    },
+    {
+      "src": "/slices/giai-phap-4.webp?v=80a3c7a5",
+      "y": 3600.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 75738,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-4.webp?v=80a3c7a5",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-4@3x.webp?v=fa64a837",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 75738,
+        "3": 229192
+      }
+    },
+    {
+      "src": "/slices/giai-phap-5.webp?v=62882101",
+      "y": 4500.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 78754,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-5.webp?v=62882101",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-5@3x.webp?v=48e2f1db",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 78754,
+        "3": 321810
+      }
+    },
+    {
+      "src": "/slices/giai-phap-6.webp?v=2cdc1f79",
+      "y": 5400.0,
+      "displayHeight": 577.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1154,
+      "bytes": 180912,
+      "srcSet": [
+        {
+          "src": "/slices/giai-phap-6.webp?v=2cdc1f79",
+          "scale": 2
+        },
+        {
+          "src": "/slices/giai-phap-6@3x.webp?v=44298f38",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 180912,
+        "3": 367608
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": true
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "items": [
+    {
+      "id": "giai-phap-000",
+      "tag": "div",
+      "classes": [
+        "herot"
+      ],
+      "x": 82.0,
+      "y": 645.0,
+      "w": 500.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "THẾ GIỚI CỦA TC",
+      "text": "THẾ GIỚI CỦA TC"
+    },
+    {
+      "id": "giai-phap-001",
+      "tag": "div",
+      "classes": [
+        "slogan"
+      ],
+      "x": 82.0,
+      "y": 710.0,
+      "w": 470.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "DRIVE · <span class=\"c-blue\">EXPERIENCE</span> · <span class=\"c-red\">ELEVATE</span>",
+      "text": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    {
+      "id": "giai-phap-002",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 946.0,
+      "w": 620.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "TC MANG ĐẾN <span class=\"c-red\">GIẢI PHÁP</span><br>NÂNG TẦM TRẢI NGHIỆM.",
+      "text": "TC MANG ĐẾN GIẢI PHÁPNÂNG TẦM TRẢI NGHIỆM."
+    },
+    {
+      "id": "giai-phap-003",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 820.0,
+      "y": 988.0,
+      "w": 545.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#fff"
+      },
+      "href": null,
+      "html": "TC Auto Solutions kiến tạo những giải pháp nâng tầm trải nghiệm lái xe – nơi công nghệ, thẩm mỹ và cảm xúc hòa quyện trong từng hành trình.",
+      "text": "TC Auto Solutions kiến tạo những giải pháp nâng tầm trải nghiệm lái xe – nơi công nghệ, thẩm mỹ và cảm xúc hòa quyện trong từng hành trình."
+    },
+    {
+      "id": "giai-phap-004",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 56.0,
+      "y": 2006.0,
+      "w": 420.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "PHIM CÁCH NHIỆT",
+      "text": "PHIM CÁCH NHIỆT"
+    },
+    {
+      "id": "giai-phap-005",
+      "tag": "div",
+      "classes": [
+        "hi"
+      ],
+      "x": 420.0,
+      "y": 2078.0,
+      "w": 600.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "LÁ CHẮN NHIỆT CÔNG NGHỆ CAO<br>NÂNG TẦM TRẢI NGHIỆM LÁI.",
+      "text": "LÁ CHẮN NHIỆT CÔNG NGHỆ CAONÂNG TẦM TRẢI NGHIỆM LÁI."
+    },
+    {
+      "id": "giai-phap-006",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 808.0,
+      "y": 2982.0,
+      "w": 160.0,
+      "h": 38.0,
+      "css": {
+        "line-height": "38px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "PPF",
+      "text": "PPF"
+    },
+    {
+      "id": "giai-phap-007",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 806.0,
+      "y": 3183.0,
+      "w": 580.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "BẢO VỆ VẺ ĐẸP NGUYÊN BẢN.<br>GIỮ TRỌN GIÁ TRỊ XE.",
+      "text": "BẢO VỆ VẺ ĐẸP NGUYÊN BẢN.GIỮ TRỌN GIÁ TRỊ XE."
+    },
+    {
+      "id": "giai-phap-008",
+      "tag": "div",
+      "classes": [
+        "raw"
+      ],
+      "x": 812.0,
+      "y": 3305.0,
+      "w": 420.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "<div class=\"ub800 c-red\" style=\"font-size:28px;line-height:38px\">3M | NANO SUN | 5DO</div>",
+      "text": "3M | NANO SUN | 5DO"
+    },
+    {
+      "id": "giai-phap-009",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 812.0,
+      "y": 3377.0,
+      "w": 500.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9bacbc"
+      },
+      "href": null,
+      "html": "PPF chính hãng tại TC Auto giúp bảo vệ lớp sơn nguyên bản trước trầy xước, đá văng và tác động môi trường, giữ cho chiếc xe luôn sáng bóng và bền đẹp theo thời gian.",
+      "text": "PPF chính hãng tại TC Auto giúp bảo vệ lớp sơn nguyên bản trước trầy xước, đá văng và tác động môi trường, giữ cho chiếc xe luôn sáng bóng và bền đẹp theo thời gian."
+    },
+    {
+      "id": "giai-phap-010",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 813.0,
+      "y": 3596.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "giai-phap-011",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 3758.0,
+      "w": 330.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "40px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "LOA NỘI THẤT",
+      "text": "LOA NỘI THẤT"
+    },
+    {
+      "id": "giai-phap-012",
+      "tag": "div",
+      "classes": [
+        "hi"
+      ],
+      "x": 82.0,
+      "y": 3872.0,
+      "w": 440.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "ÂM THANH CHUẨN MỰC<br>TRẢI NGHIỆM XỨNG TẦM.",
+      "text": "ÂM THANH CHUẨN MỰCTRẢI NGHIỆM XỨNG TẦM."
+    },
+    {
+      "id": "giai-phap-013",
+      "tag": "div",
+      "classes": [
+        "p"
+      ],
+      "x": 758.0,
+      "y": 3876.0,
+      "w": 602.0,
+      "h": null,
+      "css": {
+        "text-align": "right",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#fff"
+      },
+      "href": null,
+      "html": "DEGO tại TC Auto mang đến trải nghiệm âm thanh chuẩn Đức với khả năng tái tạo âm sắc tự nhiên, chi tiết và cân bằng. Từng hệ thống được lựa chọn và nâng cấp phù hợp với không gian xe, để mỗi giai điệu trở nên sống động hơn và mỗi hành trình trở thành một trải nghiệm đáng nhớ.",
+      "text": "DEGO tại TC Auto mang đến trải nghiệm âm thanh chuẩn Đức với khả năng tái tạo âm sắc tự nhiên, chi tiết và cân bằng. Từng hệ thống được lựa chọn và nâng cấp phù hợp với không gian xe, để mỗi giai điệu trở nên sống động hơn và mỗi hành trình trở thành một trải nghiệm đáng nhớ."
+    },
+    {
+      "id": "giai-phap-014",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 4676.0,
+      "w": 360.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "40px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "MÀN HÌNH Ô TÔ",
+      "text": "MÀN HÌNH Ô TÔ"
+    },
+    {
+      "id": "giai-phap-015",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 4742.0,
+      "w": 470.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "NÂNG TẦM TRẢI NGHIỆM<br>DẪN LỐI TƯƠNG LAI.",
+      "text": "NÂNG TẦM TRẢI NGHIỆMDẪN LỐI TƯƠNG LAI."
+    },
+    {
+      "id": "giai-phap-016",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 86.0,
+      "y": 4870.0,
+      "w": 400.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9ea5ac"
+      },
+      "href": null,
+      "html": "Màn hình ô tô chính hãng tại TC Auto mang đến không gian giải trí và kết nối thông minh, tích hợp dẫn đường, nghe nhạc, gọi điện và các tiện ích hỗ trợ lái, giúp mỗi hành trình trở nên tiện nghi, trực quan và trọn vẹn hơn.",
+      "text": "Màn hình ô tô chính hãng tại TC Auto mang đến không gian giải trí và kết nối thông minh, tích hợp dẫn đường, nghe nhạc, gọi điện và các tiện ích hỗ trợ lái, giúp mỗi hành trình trở nên tiện nghi, trực quan và trọn vẹn hơn."
+    },
+    {
+      "id": "giai-phap-017",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 93.0,
+      "y": 5040.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "giai-phap-018",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 5186.0,
+      "w": 520.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "18px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "CÁC DỰ ÁN ĐÃ TRIỂN KHAI",
+      "text": "CÁC DỰ ÁN ĐÃ TRIỂN KHAI"
+    },
+    {
+      "id": "giai-phap-019",
+      "tag": "div",
+      "classes": [
+        "h",
+        "dark"
+      ],
+      "x": 82.0,
+      "y": 5245.0,
+      "w": 540.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "KẾT NỐI HỆ SINH THÁI<br>CÙNG NHAU VƯƠN XA.",
+      "text": "KẾT NỐI HỆ SINH THÁICÙNG NHAU VƯƠN XA."
+    },
+    {
+      "id": "giai-phap-020",
+      "tag": "div",
+      "classes": [
+        "raw"
+      ],
+      "x": 86.0,
+      "y": 5356.0,
+      "w": 240.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "<div class=\"mont\" style=\"font-size:26px;line-height:32px;font-style:italic;font-weight:300;color:#8a8f96\">Ngày 20.8.2026</div>",
+      "text": "Ngày 20.8.2026"
+    },
+    {
+      "id": "giai-phap-021",
+      "tag": "div",
+      "classes": [
+        "p"
+      ],
+      "x": 758.0,
+      "y": 5194.0,
+      "w": 602.0,
+      "h": null,
+      "css": {
+        "text-align": "right",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#5b6168"
+      },
+      "href": null,
+      "html": "TC Auto đồng hành cùng các đại lý và đối tác trên toàn quốc, kết nối sản phẩm chính hãng, giải pháp chuyên nghiệp và quy trình hỗ trợ toàn diện để cùng kiến tạo những giá trị bền vững trong ngành phụ kiện ô tô.TC Auto đồng hành cùng các đại lý và đối tác trên toàn quốc, kết nối sản phẩm chính hãng, giải pháp chuyên nghiệp và quy trình hỗ trợ toàn diện để cùng kiến tạo những giá trị.",
+      "text": "TC Auto đồng hành cùng các đại lý và đối tác trên toàn quốc, kết nối sản phẩm chính hãng, giải pháp chuyên nghiệp và quy trình hỗ trợ toàn diện để cùng kiến tạo những giá trị bền vững trong ngành phụ kiện ô tô.TC Auto đồng hành cùng các đại lý và đối tác trên toàn quốc, kết nối sản phẩm chính hãng, giải pháp chuyên nghiệp và quy trình hỗ trợ toàn diện để cùng kiến tạo những giá trị."
+    },
+    {
+      "id": "giai-phap-022",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 1180.0,
+      "y": 5351.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "XEM DỰ ÁN",
+      "text": "XEM DỰ ÁN"
+    }
+  ],
+  "contactForm": {
+    "y": 5854.0
+  }
+}

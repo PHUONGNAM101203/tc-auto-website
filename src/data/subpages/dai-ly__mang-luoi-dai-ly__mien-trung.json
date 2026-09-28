@@ -1,0 +1,127 @@
+{
+  "slug": "dai-ly/mang-luoi-dai-ly/mien-trung",
+  "route": "/dai-ly/mang-luoi-dai-ly/mien-trung",
+  "title": "Mạng lưới đại lý — trang 2",
+  "section": "dai-ly",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2033.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-0@2x.webp?v=1a909efd",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-0@2x.webp?v=1a909efd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-0@3x.webp?v=d01615f8",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 196198,
+      "bytesByScale": {
+        "2": 196198,
+        "3": 332746
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-1@2x.webp?v=e8e4572c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-1@2x.webp?v=e8e4572c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-1@3x.webp?v=2a9d4ae3",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 143064,
+      "bytesByScale": {
+        "2": 143064,
+        "3": 243276
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-2@2x.webp?v=612b97bd",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-2@2x.webp?v=612b97bd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly__mien-trung-2@3x.webp?v=8ce76962",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 233.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 466,
+      "bytes": 36368,
+      "bytesByScale": {
+        "2": 36368,
+        "3": 60438
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 1910.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    },
+    {
+      "label": "Mạng lưới đại lý",
+      "href": "/dai-ly/mang-luoi-dai-ly"
+    }
+  ],
+  "sourceFile": "2.2 MẠNG LƯỚI ĐẠI LÝ - 2.png"
+}

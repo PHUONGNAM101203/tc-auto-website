@@ -1,0 +1,171 @@
+{
+  "slug": "cong-nghe/ung-dung/kho-ung-dung",
+  "route": "/cong-nghe/ung-dung/kho-ung-dung",
+  "title": "Kho ứng dụng",
+  "section": "cong-nghe",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3682.0,
+  "slices": [
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-0@2x.webp?v=7caae7ce",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-0@2x.webp?v=7caae7ce",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-0@3x.webp?v=6f5b6972",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 150620,
+      "bytesByScale": {
+        "2": 150620,
+        "3": 273194
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-1@2x.webp?v=e26f4d06",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-1@2x.webp?v=e26f4d06",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-1@3x.webp?v=90337a0c",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 90890,
+      "bytesByScale": {
+        "2": 90890,
+        "3": 147260
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-2@2x.webp?v=df86f700",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-2@2x.webp?v=df86f700",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-2@3x.webp?v=d90a9695",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 89606,
+      "bytesByScale": {
+        "2": 89606,
+        "3": 143550
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-3@2x.webp?v=6df41a60",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-3@2x.webp?v=6df41a60",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-3@3x.webp?v=6e57c0c9",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 85884,
+      "bytesByScale": {
+        "2": 85884,
+        "3": 139476
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-4@2x.webp?v=ace34b22",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-4@2x.webp?v=ace34b22",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung__kho-ung-dung-4@3x.webp?v=f5a2d33f",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 82.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 164,
+      "bytes": 12374,
+      "bytesByScale": {
+        "2": 12374,
+        "3": 20312
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": true
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3559.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Công nghệ",
+      "href": "/cong-nghe"
+    },
+    {
+      "label": "Ứng dụng",
+      "href": "/cong-nghe/ung-dung"
+    }
+  ],
+  "sourceFile": "3.2 KHO ỨNG DỤNG.png"
+}

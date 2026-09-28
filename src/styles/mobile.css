@@ -1,0 +1,480 @@
+/* ===========================================================================
+   Ban MOBILE.
+
+   Canvas 1440px la khung CUNG — tren dien thoai no bi thu con 27% va chu than
+   bai chi con 3-4px. Vi vay duoi nguong MOBILE_MAX, canvas duoc an di va ban
+   nay hien ra. Ca hai noi cung mot noi dung (xem src/lib/mobile-sections.ts).
+   =========================================================================== */
+
+/* Nguong: duoi 900px thi canvas 1440px bi thu qua 62% — bat dau kho doc. */
+@media (min-width: 900px) {
+  .tc-m {
+    display: none;
+  }
+}
+
+@media (max-width: 899.98px) {
+  .tc-canvas {
+    display: none;
+  }
+
+  .tc-root {
+    /* Khong con canvas cao 4000px nen nen phai tu phu het man hinh. */
+    min-height: 100dvh;
+  }
+}
+
+.tc-m {
+  background: var(--navy);
+  color: #fff;
+  padding-bottom: 64px;
+}
+
+/* ---------- Thanh tren + ngan keo ---------- */
+.tc-m-bar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  background: rgba(2, 17, 28, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.tc-m-logo img {
+  display: block;
+  height: 26px;
+  width: auto;
+}
+
+/* Nut ba gach — vung bam 44px cho du ngon tay. */
+.tc-m-burger {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin: -9px -12px -9px 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.tc-m-burger span[aria-hidden] {
+  position: absolute;
+  left: 11px;
+  top: 21px;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.25s, background 0.25s;
+}
+
+.tc-m-burger span[aria-hidden]::before,
+.tc-m-burger span[aria-hidden]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.25s;
+}
+
+.tc-m-burger span[aria-hidden]::before {
+  transform: translateY(-7px);
+}
+
+.tc-m-burger span[aria-hidden]::after {
+  transform: translateY(7px);
+}
+
+.tc-m-burger[aria-expanded="true"] span[aria-hidden] {
+  background: transparent;
+}
+
+.tc-m-burger[aria-expanded="true"] span[aria-hidden]::before {
+  transform: rotate(45deg);
+}
+
+.tc-m-burger[aria-expanded="true"] span[aria-hidden]::after {
+  transform: rotate(-45deg);
+}
+
+.tc-m-drawer {
+  position: fixed;
+  inset: 62px 0 auto;
+  z-index: 39;
+  padding: 10px 18px 22px;
+  background: #041a2a;
+  box-shadow: 0 24px 50px -20px rgba(0, 0, 0, 0.9);
+  animation: tc-m-slide 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tc-m-slide {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: none; }
+}
+
+.tc-m-drawer nav {
+  display: grid;
+}
+
+.tc-m-drawer a {
+  padding: 15px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font: 700 14px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+}
+
+.tc-m-drawer a[data-active] {
+  color: var(--red-nav);
+}
+
+.tc-m-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 38;
+  border: 0;
+  background: rgba(2, 17, 28, 0.6);
+}
+
+/* ---------- Hero ---------- */
+.tc-m-hero {
+  position: relative;
+}
+
+.tc-m-hero img {
+  display: block;
+  width: 100%;
+  height: min(72dvh, 520px);
+  object-fit: cover;
+}
+
+.tc-m-hero-text {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 0 20px 26px;
+  background: linear-gradient(to top, rgba(2, 17, 28, 0.92), rgba(2, 17, 28, 0));
+}
+
+.tc-m-hero-text h1 {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  font-size: clamp(30px, 9vw, 42px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.tc-m-hero-text p {
+  margin-top: 8px;
+  font: italic 400 12.5px/1.5 "Montserrat", sans-serif;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+/* ---------- Tung muc ---------- */
+.tc-m-sec {
+  padding: 40px 20px 0;
+}
+
+.tc-m-label {
+  position: relative;
+  padding-left: 14px;
+  font: 800 11px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.16em;
+  color: var(--red-nav);
+}
+
+/* Mui ten nho truoc nhan — dung ngon ngu voi thiet ke desktop. */
+.tc-m-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-left: 6px solid var(--red-nav);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.tc-m-sec h2 {
+  display: grid;
+  margin-top: 12px;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  font-size: clamp(24px, 7vw, 32px);
+  line-height: 1.16;
+  text-transform: uppercase;
+}
+
+.tc-m-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 18px;
+  border-radius: 14px;
+}
+
+.tc-m-body {
+  margin-top: 16px;
+  font: 400 14.5px/1.8 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.tc-m-cta {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 22px;
+  border-radius: 8px;
+  background: var(--red);
+  color: #fff;
+  font: 700 12px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.tc-m-contact {
+  margin-top: 44px;
+  padding: 0 20px;
+}
+
+/* ---------- Form lien he ban doc ---------- */
+/* Form trong canvas dat tuyet doi tung o; o day xep doc va co dan. */
+.tc-m-form.ff {
+  position: static;
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.tc-m-form.ff input,
+.tc-m-form.ff textarea,
+.tc-m-form.ff button {
+  position: static;
+  width: 100%;
+  left: auto;
+  top: auto;
+}
+
+.tc-m-form.ff input,
+.tc-m-form.ff textarea {
+  /* 16px tro len thi iOS khong tu phong to khi go. */
+  font-size: 16px;
+  padding: 13px 14px;
+  border-radius: 8px;
+}
+
+.tc-m-form.ff textarea {
+  min-height: 116px;
+  resize: vertical;
+}
+
+.tc-m-form.ff button {
+  padding: 14px;
+  border-radius: 8px;
+  font: 700 13px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+/* Honeypot phai an nguyen trang thai cu du da doi bo cuc. */
+.tc-m-form.ff input[aria-hidden="true"] {
+  position: absolute !important;
+  width: 1px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-m-drawer {
+    animation: none;
+  }
+}
+
+/* ---------- Trang con ban doc ---------- */
+.tc-m-hero-sub img {
+  height: min(44dvh, 320px);
+}
+
+.tc-m-article {
+  padding: 34px 20px 0;
+}
+
+.tc-m-article h2 {
+  margin-top: 30px;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 700;
+  font-size: clamp(22px, 6.4vw, 28px);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.tc-m-article h2:first-child {
+  margin-top: 0;
+}
+
+.tc-m-article p {
+  margin-top: 14px;
+  font: 400 14.5px/1.8 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.tc-m-children {
+  margin-top: 40px;
+  padding: 0 20px;
+  display: grid;
+  gap: 2px;
+}
+
+.tc-m-children h2 {
+  margin-bottom: 10px;
+  font: 800 11px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.16em;
+  color: var(--red-nav);
+  text-transform: uppercase;
+}
+
+.tc-m-children a {
+  display: block;
+  padding: 15px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  font: 600 14px/1.4 "Montserrat", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tc-m-children a::after {
+  content: " ›";
+  color: var(--red-nav);
+}
+
+/* ---------- Chan trang ---------- */
+/* Desktop ve chan trang chet vao anh nen; ban mobile dung lai bang phan tu that
+   de so dien thoai, email va muc luc deu bam duoc. */
+.tc-m-foot {
+  margin-top: 52px;
+  padding: 36px 20px calc(32px + env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 60%);
+}
+
+.tc-m-foot-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.tc-m-foot-slogan {
+  margin-top: 16px;
+  font: 400 italic 12.5px/1.4 "Montserrat", sans-serif;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.tc-m-foot-pitch {
+  margin-top: 10px;
+  font: 400 italic 13px/1.7 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tc-m-foot-head {
+  margin-top: 30px;
+  font: 700 13px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.tc-m-foot-list {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  font: 400 italic 14px/1.4 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.tc-m-foot-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tc-m-foot-nav ul {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  list-style: none;
+  padding: 0;
+}
+
+.tc-m-foot-nav a {
+  display: inline-block;
+  padding: 6px 0;
+  font: 700 11.5px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+}
+
+.tc-m-foot-copy {
+  margin-top: 28px;
+  font: 400 italic 11.5px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+/* ---------- Nhip doc giua cac muc ---------- */
+/* Truoc day moi muc chi co le TREN, khoang ho giua cac muc phu thuoc vao phan
+   tu cuoi cua muc truoc nen cao thap khong deu. */
+.tc-m-sec + .tc-m-sec {
+  padding-top: 46px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 46px;
+}
+
+.tc-m-sec:last-of-type {
+  padding-bottom: 8px;
+}
+
+.tc-m-contact-head {
+  margin-bottom: 16px;
+  font: 700 13px/1.5 "Unbounded", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.tc-m-foot-list li {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.tc-m-foot-list svg {
+  width: 17px;
+  height: 17px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hàng mạng xã hội. Instagram chưa có tài khoản thật nên không hiện — xem
+   ghi chú trong src/lib/site-contact.ts. */
+.tc-m-foot-social {
+  margin-top: 24px;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.tc-m-foot-social a {
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  color: rgb(255 255 255 / 0.8);
+  text-decoration: none;
+  font: 600 12px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.04em;
+}

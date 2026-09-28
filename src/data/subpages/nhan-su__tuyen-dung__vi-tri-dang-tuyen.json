@@ -1,0 +1,171 @@
+{
+  "slug": "nhan-su/tuyen-dung/vi-tri-dang-tuyen",
+  "route": "/nhan-su/tuyen-dung/vi-tri-dang-tuyen",
+  "title": "Vị trí đang tuyển",
+  "section": "nhan-su",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3629.0,
+  "slices": [
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-0@2x.webp?v=687027fd",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-0@2x.webp?v=687027fd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-0@3x.webp?v=7afa704c",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 240164,
+      "bytesByScale": {
+        "2": 240164,
+        "3": 432784
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-1@2x.webp?v=b0d1fd32",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-1@2x.webp?v=b0d1fd32",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-1@3x.webp?v=d38cb74d",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 270788,
+      "bytesByScale": {
+        "2": 270788,
+        "3": 432472
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-2@2x.webp?v=80e0ab6d",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-2@2x.webp?v=80e0ab6d",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-2@3x.webp?v=96b365a4",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 279114,
+      "bytesByScale": {
+        "2": 279114,
+        "3": 452290
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-3@2x.webp?v=441f66fd",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-3@2x.webp?v=441f66fd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-3@3x.webp?v=b95da6be",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 154444,
+      "bytesByScale": {
+        "2": 154444,
+        "3": 268738
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-4@2x.webp?v=05233565",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-4@2x.webp?v=05233565",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-4@3x.webp?v=db4f18b4",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 29.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 58,
+      "bytes": 2012,
+      "bytesByScale": {
+        "2": 2012,
+        "3": 3594
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "contactForm": {
+    "y": 3506.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Nhân sự",
+      "href": "/nhan-su"
+    },
+    {
+      "label": "Tuyển dụng",
+      "href": "/nhan-su/tuyen-dung"
+    }
+  ],
+  "sourceFile": "4.2 VỊ TRÍ ĐANG TUYỂN.png"
+}

@@ -1,0 +1,62 @@
+{
+ "trai-nghiem/phong-cach-song": {
+  "x": 591,
+  "y": 3802,
+  "width": 257,
+  "height": 56
+ },
+ "giai-phap/man-hinh": {
+  "x": 591,
+  "y": 2688,
+  "width": 257,
+  "height": 56
+ },
+ "giai-phap/du-an": {
+  "x": 591,
+  "y": 3360,
+  "width": 257,
+  "height": 64
+ },
+ "cong-nghe/tien-phong-cong-nghe/bai-viet": {
+  "x": 591,
+  "y": 3287,
+  "width": 257,
+  "height": 65
+ },
+ "cong-nghe/ung-dung/cap-nhat-va-loi": {
+  "x": 591,
+  "y": 3337,
+  "width": 257,
+  "height": 56
+ },
+ "cong-nghe/ung-dung/kho-ung-dung": {
+  "x": 591,
+  "y": 3337,
+  "width": 257,
+  "height": 56
+ },
+ "dai-ly/cau-chuyen-dong-hanh": {
+  "x": 591,
+  "y": 3456,
+  "width": 257,
+  "height": 56
+ },
+ "dai-ly/chan-dung-dai-ly": {
+  "x": 591,
+  "y": 3854,
+  "width": 257,
+  "height": 56
+ },
+ "dai-ly/gallery-by-brand": {
+  "x": 591,
+  "y": 3497,
+  "width": 257,
+  "height": 56
+ },
+ "nhan-su/tuyen-dung/vi-tri-dang-tuyen": {
+  "x": 591,
+  "y": 3298,
+  "width": 257,
+  "height": 56
+ }
+}

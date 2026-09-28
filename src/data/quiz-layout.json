@@ -1,0 +1,42 @@
+{
+  "_doc": "Hinh hoc khoi trac nghiem tren /trai-nghiem/ban-sac-rieng, do tu 3.BẢN SẮC RIÊNG.png. Noi dung cau hoi o src/lib/style-quiz.ts. Xem tools/brand/extract-quiz.py.",
+  "scrub": {
+    "x": 310,
+    "y": 1424,
+    "width": 830,
+    "height": 572
+  },
+  "layout": {
+    "title": {
+      "y": 1444,
+      "height": 41,
+      "fontSize": 40
+    },
+    "question": {
+      "x": 389,
+      "y": 1545,
+      "fontSize": 18,
+      "lineHeight": 26
+    },
+    "options": {
+      "x": 376,
+      "y": 1597,
+      "step": 48.2,
+      "fontSize": 15,
+      "lineHeight": 22
+    },
+    "input": {
+      "x": 370,
+      "y": 1827,
+      "width": 708,
+      "height": 97,
+      "fontSize": 15
+    },
+    "button": {
+      "x": 620,
+      "y": 1946,
+      "width": 200,
+      "height": 44
+    }
+  }
+}

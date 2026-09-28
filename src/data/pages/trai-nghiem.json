@@ -1,0 +1,455 @@
+{
+  "slug": "trai-nghiem",
+  "route": "/trai-nghiem",
+  "title": "Trải nghiệm",
+  "canvasWidth": 1440,
+  "height": 3464.0,
+  "slices": [
+    {
+      "src": "/slices/trai-nghiem-0.webp?v=cb82d6c6",
+      "y": 0.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 66324,
+      "srcSet": [
+        {
+          "src": "/slices/trai-nghiem-0.webp?v=cb82d6c6",
+          "scale": 2
+        },
+        {
+          "src": "/slices/trai-nghiem-0@3x.webp?v=8f6ad569",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 66324,
+        "3": 185734
+      }
+    },
+    {
+      "src": "/slices/trai-nghiem-1.webp?v=db71b826",
+      "y": 900.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 141230,
+      "srcSet": [
+        {
+          "src": "/slices/trai-nghiem-1.webp?v=db71b826",
+          "scale": 2
+        },
+        {
+          "src": "/slices/trai-nghiem-1@3x.webp?v=048a7639",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 141230,
+        "3": 470688
+      }
+    },
+    {
+      "src": "/slices/trai-nghiem-2.webp?v=56adf287",
+      "y": 1800.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 101474,
+      "srcSet": [
+        {
+          "src": "/slices/trai-nghiem-2.webp?v=56adf287",
+          "scale": 2
+        },
+        {
+          "src": "/slices/trai-nghiem-2@3x.webp?v=a0510df3",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 101474,
+        "3": 353086
+      }
+    },
+    {
+      "src": "/slices/trai-nghiem-3.webp?v=a2874336",
+      "y": 2700.0,
+      "displayHeight": 764.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1528,
+      "bytes": 75840,
+      "srcSet": [
+        {
+          "src": "/slices/trai-nghiem-3.webp?v=a2874336",
+          "scale": 2
+        },
+        {
+          "src": "/slices/trai-nghiem-3@3x.webp?v=2cb53b96",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 75840,
+        "3": 251798
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "items": [
+    {
+      "id": "trai-nghiem-000",
+      "tag": "div",
+      "classes": [
+        "herot"
+      ],
+      "x": 82.0,
+      "y": 645.0,
+      "w": 500.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "THẾ GIỚI CỦA TC",
+      "text": "THẾ GIỚI CỦA TC"
+    },
+    {
+      "id": "trai-nghiem-001",
+      "tag": "div",
+      "classes": [
+        "slogan"
+      ],
+      "x": 82.0,
+      "y": 710.0,
+      "w": 470.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "DRIVE · <span class=\"c-blue\">EXPERIENCE</span> · <span class=\"c-red\">ELEVATE</span>",
+      "text": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    {
+      "id": "trai-nghiem-002",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 790.0,
+      "y": 942.0,
+      "w": 300.0,
+      "h": 38.0,
+      "css": {
+        "line-height": "38px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "HÀNH TRÌNH",
+      "text": "HÀNH TRÌNH"
+    },
+    {
+      "id": "trai-nghiem-003",
+      "tag": "div",
+      "classes": [
+        "hi"
+      ],
+      "x": 788.0,
+      "y": 1058.0,
+      "w": 480.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "TẬN HƯỞNG TỪNG KHOẢNH<br>KHẮC TRÊN HÀNH TRÌNH.",
+      "text": "TẬN HƯỞNG TỪNG KHOẢNHKHẮC TRÊN HÀNH TRÌNH."
+    },
+    {
+      "id": "trai-nghiem-004",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 788.0,
+      "y": 1192.0,
+      "w": 532.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#a6abaf"
+      },
+      "href": null,
+      "html": "TC AUTO tin rằng mỗi hành trình không chỉ được đo bằng quãng đường, mà còn bằng những trải nghiệm trên từng cung đường. Từ cảm giác lái, sự tiện nghi đến những khám phá mới, chúng tôi mang đến những giải pháp giúp mỗi chuyến đi trở nên trọn vẹn, thoải mái và đáng nhớ hơn.",
+      "text": "TC AUTO tin rằng mỗi hành trình không chỉ được đo bằng quãng đường, mà còn bằng những trải nghiệm trên từng cung đường. Từ cảm giác lái, sự tiện nghi đến những khám phá mới, chúng tôi mang đến những giải pháp giúp mỗi chuyến đi trở nên trọn vẹn, thoải mái và đáng nhớ hơn."
+    },
+    {
+      "id": "trai-nghiem-005",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 788.0,
+      "y": 1332.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "trai-nghiem-006",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 1526.0,
+      "w": 360.0,
+      "h": 38.0,
+      "css": {
+        "line-height": "38px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "BẢN SẮC RIÊNG",
+      "text": "BẢN SẮC RIÊNG"
+    },
+    {
+      "id": "trai-nghiem-007",
+      "tag": "div",
+      "classes": [
+        "hi",
+        "dark"
+      ],
+      "x": 82.0,
+      "y": 1643.0,
+      "w": 450.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "ĐỊNH HÌNH DẤU ẤN.<br>KHẲNG ĐỊNH CHẤT RIÊNG.",
+      "text": "ĐỊNH HÌNH DẤU ẤN.KHẲNG ĐỊNH CHẤT RIÊNG."
+    },
+    {
+      "id": "trai-nghiem-008",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 1776.0,
+      "w": 530.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#5b656c"
+      },
+      "href": null,
+      "html": "TC AUTO tin rằng mỗi chiếc xe là một cách thể hiện cá tính và dấu ấn riêng. Từ những lựa chọn về công nghệ, tiện nghi đến từng chi tiết nâng cấp, chúng tôi giúp bạn tạo nên không gian phù hợp với nhu cầu, gu thẩm mỹ và cách tận hưởng hành trình của riêng mình.",
+      "text": "TC AUTO tin rằng mỗi chiếc xe là một cách thể hiện cá tính và dấu ấn riêng. Từ những lựa chọn về công nghệ, tiện nghi đến từng chi tiết nâng cấp, chúng tôi giúp bạn tạo nên không gian phù hợp với nhu cầu, gu thẩm mỹ và cách tận hưởng hành trình của riêng mình."
+    },
+    {
+      "id": "trai-nghiem-009",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 1916.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "trai-nghiem-010",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 525.0,
+      "y": 2094.0,
+      "w": 360.0,
+      "h": 38.0,
+      "css": {
+        "line-height": "38px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "KHOẢNH KHẮC",
+      "text": "KHOẢNH KHẮC"
+    },
+    {
+      "id": "trai-nghiem-011",
+      "tag": "div",
+      "classes": [
+        "hi"
+      ],
+      "x": 420.0,
+      "y": 2211.0,
+      "w": 600.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "LƯU GIỮ NHỮNG<br>KHOẢNH KHẮC ĐÁNG NHỚ.",
+      "text": "LƯU GIỮ NHỮNGKHOẢNH KHẮC ĐÁNG NHỚ."
+    },
+    {
+      "id": "trai-nghiem-012",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 425.0,
+      "y": 2342.0,
+      "w": 590.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#a6abaf"
+      },
+      "href": null,
+      "html": "TC AUTO trân trọng những khoảnh khắc được tạo nên trên mỗi hành trình. Từ những chuyến đi xa đến những phút giây đời thường, mỗi trải nghiệm đều mang một câu chuyện riêng - nơi chiếc xe không chỉ đồng hành, mà trở thành một phần của những ký ức đáng nhớ.",
+      "text": "TC AUTO trân trọng những khoảnh khắc được tạo nên trên mỗi hành trình. Từ những chuyến đi xa đến những phút giây đời thường, mỗi trải nghiệm đều mang một câu chuyện riêng - nơi chiếc xe không chỉ đồng hành, mà trở thành một phần của những ký ức đáng nhớ."
+    },
+    {
+      "id": "trai-nghiem-013",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 630.0,
+      "y": 2483.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "trai-nghiem-014",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 2697.0,
+      "w": 460.0,
+      "h": 38.0,
+      "css": {
+        "line-height": "38px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "PHONG CÁCH SỐNG",
+      "text": "PHONG CÁCH SỐNG"
+    },
+    {
+      "id": "trai-nghiem-015",
+      "tag": "div",
+      "classes": [
+        "hi"
+      ],
+      "x": 82.0,
+      "y": 2866.0,
+      "w": 560.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "TẬN HƯỞNG CUNG ĐƯỜNG.<br>ĐỊNH HÌNH PHONG CÁCH SỐNG.",
+      "text": "TẬN HƯỞNG CUNG ĐƯỜNG.ĐỊNH HÌNH PHONG CÁCH SỐNG."
+    },
+    {
+      "id": "trai-nghiem-016",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 2992.0,
+      "w": 510.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#a6abaf"
+      },
+      "href": null,
+      "html": "Không chỉ là phương tiện di chuyển, chiếc xe trở thành không gian để tận hưởng và thể hiện cá tính. TC AUTO đồng hành cùng bạn trên mọi cung đường, nâng tầm trải nghiệm và tạo nên phong cách sống riêng.",
+      "text": "Không chỉ là phương tiện di chuyển, chiếc xe trở thành không gian để tận hưởng và thể hiện cá tính. TC AUTO đồng hành cùng bạn trên mọi cung đường, nâng tầm trải nghiệm và tạo nên phong cách sống riêng."
+    },
+    {
+      "id": "trai-nghiem-017",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 3119.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    }
+  ],
+  "contactForm": {
+    "y": 3341.0
+  }
+}

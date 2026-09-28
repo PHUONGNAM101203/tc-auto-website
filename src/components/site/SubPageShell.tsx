@@ -1,0 +1,166 @@
+import Link from "next/link";
+import { MobileSubPage } from "@/components/mobile/MobileSubPage";
+import { SliceImage } from "@/components/canvas/SliceImage";
+import { ContactForm } from "@/components/site/ContactForm";
+import { FooterSocial } from "@/components/site/FooterSocial";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import type { SubPageSpec } from "@/lib/subpage-schema";
+import { getMobileBlocks } from "@/lib/mobile-subpage";
+import { getPageText, type TextBlock } from "@/lib/subpage-text";
+
+export interface Hotspot {
+  readonly x: number;
+  readonly y: number;
+  readonly w: number;
+  readonly h: number;
+  readonly href: string;
+  readonly label: string;
+}
+
+interface SubPageShellProps {
+  readonly page: SubPageSpec;
+  /** Vung bam de len nut CTA duoc ve san trong anh thiet ke. */
+  readonly hotspots?: readonly Hotspot[];
+  /** Trang con truc tiep — dung cho lien ket an phuc vu SEO / dieu huong. */
+  readonly childPages?: readonly SubPageSpec[];
+  /** Tinh nang tuong tac rieng cua trang (vi du form tim dai ly). */
+  readonly feature?: React.ReactNode;
+}
+
+/**
+ * Dung mot trang con tu frame thiet ke da render.
+ *
+ * Khac voi 6 trang chinh (dung tu toa do + van ban that), trang con den tu
+ * PNG @3x nen chu nam TRONG anh. Vi vay:
+ *   - nen  : cac lat WebP @2x, giu nguyen 100% pixel thiet ke
+ *   - tren : header / form / vung bam that o dang "ghost" (xem overlay.css)
+ *   - an   : breadcrumb + lien ket trang con cho screen reader va SEO
+ */
+export function SubPageShell({ page, hotspots = [], childPages = [], feature }: SubPageShellProps) {
+  return (
+    <>
+    {/* Duoi 900px, canvas duoc an di va ban nay hien ra — chu trong anh khong
+        the doc duoc khi thu xuong be rong dien thoai. */}
+    <MobileSubPage
+      page={page}
+      nav={page.nav}
+      blocks={getMobileBlocks(page)}
+      childPages={childPages}
+      contact={
+        page.contactForm ? (
+          <ContactForm y={0} sourcePage={page.route} layout="mobile" />
+        ) : null
+      }
+    />
+    <div className="tc-canvas tc-ghost">
+      <section
+        className="pg"
+        style={{ height: `${page.height}px` }}
+        aria-label={page.title}
+      >
+        <div className="bg">
+          {page.slices.map((slice, index) => (
+            <SliceImage
+              key={slice.src}
+              slice={slice}
+              index={index}
+              alt={index === 0 ? `${page.title} — TC Auto Solutions` : ""}
+            />
+          ))}
+        </div>
+
+        <SiteHeader nav={page.nav} />
+
+        {/* Duong dan phan cap — an voi mat thuong (thiet ke khong co breadcrumb)
+            nhung screen reader va cong cu tim kiem van doc duoc. */}
+        <nav className="tc-sr" aria-label="Đường dẫn">
+          <ol>
+            {page.breadcrumb.map((crumb) => (
+              <li key={crumb.href}>
+                <Link href={crumb.href}>{crumb.label}</Link>
+              </li>
+            ))}
+            <li aria-current="page">{page.title}</li>
+          </ol>
+        </nav>
+
+        {hotspots.map((spot) => (
+          <Link
+            key={`${spot.x}-${spot.y}-${spot.href}`}
+            href={spot.href}
+            prefetch={false}
+            className="tc-hotspot rv"
+            data-rv="scale"
+            data-magnetic=""
+            aria-label={spot.label}
+            style={{
+              left: `${spot.x}px`,
+              top: `${spot.y}px`,
+              width: `${spot.w}px`,
+              height: `${spot.h}px`,
+            }}
+          />
+        ))}
+
+        {/* Lop van ban cho trinh doc man hinh va cong cu tim kiem.
+            Trang la anh nen chu khong co trong DOM — thieu lop nay thi trang
+            "rong" voi Google. Trich bang OCR tu chinh frame thiet ke. */}
+        <ReadableText title={page.title} blocks={getPageText(page.slug).blocks} />
+
+        {childPages.length > 0 && (
+          <nav className="tc-sr" aria-label={`Trang con của ${page.title}`}>
+            <ul>
+              {childPages.map((child) => (
+                <li key={child.slug}>
+                  <Link href={child.route}>{child.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        {feature}
+
+        <ContactForm y={page.contactForm.y} sourcePage={page.route} />
+        <FooterSocial pageHeight={page.height} />
+      </section>
+    </div>
+    </>
+  );
+}
+
+/**
+ * Dung cau truc heading hop le tu cac khoi van ban OCR.
+ * Phan cap theo chieu cao chu: chu cang lon -> cap tieu de cang cao.
+ */
+function ReadableText({
+  title,
+  blocks,
+}: {
+  readonly title: string;
+  readonly blocks: readonly TextBlock[];
+}) {
+  if (blocks.length === 0) {
+    return (
+      <div className="tc-sr" data-text-layer="">
+        <h1>{title}</h1>
+      </div>
+    );
+  }
+
+  return (
+    <div className="tc-sr" data-text-layer="">
+      <h1>{title}</h1>
+      {blocks.map((block, index) => {
+        const key = `${block.y}-${block.x}-${index}`;
+        if (block.kind === "h2") {
+          return <h2 key={key}>{block.text}</h2>;
+        }
+        if (block.kind === "h3") {
+          return <h3 key={key}>{block.text}</h3>;
+        }
+        return <p key={key}>{block.text}</p>;
+      })}
+    </div>
+  );
+}

@@ -1,0 +1,986 @@
+[
+ {
+  "confidence": 1,
+  "text": "TC AUTO",
+  "h": 27.88,
+  "y": 39.46,
+  "x": 133.86,
+  "w": 94.37
+ },
+ {
+  "confidence": 1,
+  "text": "Q Nhập để tìm kiếm....",
+  "h": 16.8,
+  "y": 43.93,
+  "x": 1149.07,
+  "w": 108.84
+ },
+ {
+  "confidence": 1,
+  "text": "NHÂN SỰ›",
+  "h": 19.05,
+  "y": 53.3,
+  "x": 920.71,
+  "w": 82.07
+ },
+ {
+  "confidence": 1,
+  "text": "ĐẠI LÝ >",
+  "h": 17.07,
+  "y": 53.58,
+  "x": 832.47,
+  "w": 57.65
+ },
+ {
+  "confidence": 1,
+  "text": "TRẢI NGHIỆM ›",
+  "h": 16.92,
+  "y": 54.29,
+  "x": 439.53,
+  "w": 115.12
+ },
+ {
+  "confidence": 1,
+  "text": "GIẢI PHÁP ›",
+  "h": 15,
+  "y": 54.29,
+  "x": 586.05,
+  "w": 85.81
+ },
+ {
+  "confidence": 1,
+  "text": "CÔNG NGHỆ›",
+  "h": 16.92,
+  "y": 54.29,
+  "x": 699.07,
+  "w": 104.65
+ },
+ {
+  "confidence": 1,
+  "text": "IONS",
+  "h": 10.47,
+  "y": 58.64,
+  "x": 186.28,
+  "w": 41.86
+ },
+ {
+  "confidence": 1,
+  "text": "CLARITY",
+  "h": 16.75,
+  "y": 500.52,
+  "x": 1251.63,
+  "w": 71.16
+ },
+ {
+  "confidence": 1,
+  "text": "Tâm nhìn sắc nét",
+  "h": 10.71,
+  "y": 517.14,
+  "x": 1251.63,
+  "w": 92.09
+ },
+ {
+  "confidence": 1,
+  "text": "PROTECTION",
+  "h": 12.57,
+  "y": 571.73,
+  "x": 1253.72,
+  "w": 102.56
+ },
+ {
+  "confidence": 1,
+  "text": "Bảo vệ tối ưu",
+  "h": 12.57,
+  "y": 584.29,
+  "x": 1251.63,
+  "w": 71.16
+ },
+ {
+  "confidence": 1,
+  "text": "VỊ TRÍ ĐANG TUYỂN",
+  "h": 68.51,
+  "y": 636.39,
+  "x": 80.89,
+  "w": 560.19
+ },
+ {
+  "confidence": 1,
+  "text": "COMFORT",
+  "h": 12.57,
+  "y": 636.65,
+  "x": 1253.72,
+  "w": 81.63
+ },
+ {
+  "confidence": 1,
+  "text": "Thoải mái trên mọi",
+  "h": 10.48,
+  "y": 651.31,
+  "x": 1251.63,
+  "w": 100.47
+ },
+ {
+  "confidence": 1,
+  "text": "hành trình",
+  "h": 10.47,
+  "y": 663.87,
+  "x": 1251.63,
+  "w": 58.6
+ },
+ {
+  "confidence": 1,
+  "text": "-TC AUTO",
+  "h": 15.29,
+  "y": 702.38,
+  "x": 867.8,
+  "w": 47.64
+ },
+ {
+  "confidence": 1,
+  "text": "CONFIDENCE",
+  "h": 14.66,
+  "y": 712.04,
+  "x": 1253.72,
+  "w": 104.65
+ },
+ {
+  "confidence": 1,
+  "text": "TC AUTO",
+  "h": 27.87,
+  "y": 713.81,
+  "x": 81.57,
+  "w": 148.72
+ },
+ {
+  "confidence": 1,
+  "text": "Trái nghiệm trọn vẹn",
+  "h": 10.49,
+  "y": 728.8,
+  "x": 1251.63,
+  "w": 108.84
+ },
+ {
+  "confidence": 1,
+  "text": "TC AUTO TUYỄN KỸ THUẬT DÁN PHIM",
+  "h": 35.82,
+  "y": 933.13,
+  "x": 762,
+  "w": 534
+ },
+ {
+  "confidence": 1,
+  "text": "CÁCH NHIỆT VÀ LẮP ĐẶT MÀN HÌNH Ô TÔ",
+  "h": 35.74,
+  "y": 961.05,
+  "x": 755.58,
+  "w": 596.51
+ },
+ {
+  "confidence": 1,
+  "text": "CÔNG TY TNHH TC AUTO",
+  "h": 18.85,
+  "y": 981.99,
+  "x": 129.77,
+  "w": 217.67
+ },
+ {
+  "confidence": 1,
+  "text": "Ngày 22.4.2026",
+  "h": 22.65,
+  "y": 1003.93,
+  "x": 753.1,
+  "w": 124.3
+ },
+ {
+  "confidence": 1,
+  "text": "TUYỂN DỤNG",
+  "h": 39.84,
+  "y": 1030.92,
+  "x": 129.54,
+  "w": 226.6
+ },
+ {
+  "confidence": 1,
+  "text": "Số lượng: 02",
+  "h": 19.11,
+  "y": 1055.16,
+  "x": 751.37,
+  "w": 104.7
+ },
+ {
+  "confidence": 1,
+  "text": "Thu nhập: 9 - 15 triệu/ tháng + Thưởng Tháng 13 + BHXH + 12 ngày nghỉ",
+  "h": 30,
+  "y": 1088.21,
+  "x": 756,
+  "w": 576
+ },
+ {
+  "confidence": 1,
+  "text": "KY THUẬT VIÊN",
+  "h": 26.65,
+  "y": 1093.74,
+  "x": 131.74,
+  "w": 163.48
+ },
+ {
+  "confidence": 1,
+  "text": "phép/ năm",
+  "h": 19.76,
+  "y": 1113.47,
+  "x": 751.31,
+  "w": 96.45
+ },
+ {
+  "confidence": 1,
+  "text": "DÁN PHIM CÁCH NHIỆT &",
+  "h": 23.21,
+  "y": 1122.14,
+  "x": 131.86,
+  "w": 267.91
+ },
+ {
+  "confidence": 1,
+  "text": "LẮP ĐẶT MÀN HÌNH Ô TÔ",
+  "h": 29.19,
+  "y": 1147.21,
+  "x": 131.7,
+  "w": 266.14
+ },
+ {
+  "confidence": 1,
+  "text": "MÔ TẢ CÔNG VIỆC",
+  "h": 24.51,
+  "y": 1150.3,
+  "x": 753.17,
+  "w": 153.51
+ },
+ {
+  "confidence": 1,
+  "text": "• Hỗ trợ Đại lý dán phim cách nhiệt và lắp màn hình",
+  "h": 18.93,
+  "y": 1172.5,
+  "x": 761.86,
+  "w": 431.16
+ },
+ {
+  "confidence": 1,
+  "text": "• Hương dân và đào tạo kỹ thuật dán phim và lắp đặt màn hình cho đại",
+  "h": 18.85,
+  "y": 1195.6,
+  "x": 759.77,
+  "w": 594.42
+ },
+ {
+  "confidence": 1,
+  "text": "YEU CÂU",
+  "h": 18.47,
+  "y": 1233.48,
+  "x": 753.22,
+  "w": 75.98
+ },
+ {
+  "confidence": 1,
+  "text": "Fanpage",
+  "h": 16.86,
+  "y": 1241.03,
+  "x": 135.34,
+  "w": 45.32
+ },
+ {
+  "confidence": 1,
+  "text": "Website",
+  "h": 12.57,
+  "y": 1241.68,
+  "x": 196.74,
+  "w": 41.86
+ },
+ {
+  "confidence": 1,
+  "text": "Có kinh nghiệm dán phim hoặc lắp đặt màn hình, nếu có kinh nghiệm",
+  "h": 16.83,
+  "y": 1254.24,
+  "x": 780.7,
+  "w": 573.49
+ },
+ {
+  "confidence": 1,
+  "text": "X CV gửi đến: hr.tcauto@gmail.com",
+  "h": 14.68,
+  "y": 1266.79,
+  "x": 140.23,
+  "w": 194.65
+ },
+ {
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "h": 21.64,
+  "y": 1272.74,
+  "x": 757.61,
+  "w": 115.24
+ },
+ {
+  "confidence": 1,
+  "text": "Q 0789 468 101",
+  "h": 18.03,
+  "y": 1282.92,
+  "x": 140.12,
+  "w": 90.23
+ },
+ {
+  "confidence": 1,
+  "text": "CÔNG TY TNHH TC AUTO TUYỂN DỤNG",
+  "h": 37.75,
+  "y": 1388.48,
+  "x": 755.49,
+  "w": 567.42
+ },
+ {
+  "confidence": 1,
+  "text": "THỰC TẬP SINH TIỀM NĂNG 2025",
+  "h": 39.71,
+  "y": 1419.14,
+  "x": 753.23,
+  "w": 494.45
+ },
+ {
+  "confidence": 1,
+  "text": "THỰC TẬP SINH TIỀM NĂNG",
+  "h": 61.7,
+  "y": 1429.98,
+  "x": 116.64,
+  "w": 396.42
+ },
+ {
+  "confidence": 1,
+  "text": "Ngày 19.7.2025",
+  "h": 19.95,
+  "y": 1467.92,
+  "x": 753.28,
+  "w": 117.67
+ },
+ {
+  "confidence": 1,
+  "text": "V Content Creator TikTok, Fanpage",
+  "h": 24.14,
+  "y": 1503.2,
+  "x": 117.08,
+  "w": 293.31
+ },
+ {
+  "confidence": 1,
+  "text": "Content Creator - Video Editor - SEO Content - Quán trị kinh doanh",
+  "h": 14.69,
+  "y": 1516.02,
+  "x": 755.58,
+  "w": 548.37
+ },
+ {
+  "confidence": 1,
+  "text": "conten credtor - vaeo zaror - szo content - vuan r nnn aoann",
+  "h": 10.47,
+  "y": 1520,
+  "x": 755.58,
+  "w": 548.37
+ },
+ {
+  "confidence": 1,
+  "text": "Video Editor",
+  "h": 20.94,
+  "y": 1526.28,
+  "x": 119.3,
+  "w": 125.58
+ },
+ {
+  "confidence": 1,
+  "text": "/ Video Editor",
+  "h": 18.93,
+  "y": 1528.57,
+  "x": 117.21,
+  "w": 127.67
+ },
+ {
+  "confidence": 1,
+  "text": "SEO Content Writer",
+  "h": 21.07,
+  "y": 1549.29,
+  "x": 119.3,
+  "w": 182.09
+ },
+ {
+  "confidence": 1,
+  "text": "Làm việc tại Đà Nẵng | Phù hợp sinh viên năm cuối hoặc mới tốt nghiệp",
+  "h": 20.94,
+  "y": 1553.51,
+  "x": 757.67,
+  "w": 588.14
+ },
+ {
+  "confidence": 1,
+  "text": "V Quản Trị Kinh Doanh",
+  "h": 24.67,
+  "y": 1574.18,
+  "x": 119.1,
+  "w": 188.79
+ },
+ {
+  "confidence": 1,
+  "text": "Bạn đang tìm kiếm cơ hội thực tập có định hướng rỗ ràng, vừa được đào",
+  "h": 16.92,
+  "y": 1574.29,
+  "x": 757.67,
+  "w": 586.05
+ },
+ {
+  "confidence": 1,
+  "text": "tạo chuyên sâu, vừa có cơ hội phát triền lầu dài?",
+  "h": 16.79,
+  "y": 1595.36,
+  "x": 753.49,
+  "w": 397.67
+ },
+ {
+  "confidence": 1,
+  "text": "Hãy gia nhập đội ngũ TC Auto - đơn vị phân phối các sản phẩm công",
+  "h": 18.85,
+  "y": 1635.18,
+  "x": 753.49,
+  "w": 565.12
+ },
+ {
+  "confidence": 1,
+  "text": "nghệ và nội thất ô tô hàng đầu khu vực Miền Trung - Tây Nguyên, với hệ",
+  "h": 22.04,
+  "y": 1652.04,
+  "x": 755.51,
+  "w": 586.2
+ },
+ {
+  "confidence": 1,
+  "text": "thống đại lý phủ rộng, môi trường trẻ trung và đội ngũ hô trợ tận tâm.",
+  "h": 16.81,
+  "y": 1674.97,
+  "x": 755.58,
+  "w": 567.21
+ },
+ {
+  "confidence": 1,
+  "text": "Website",
+  "h": 17.23,
+  "y": 1685.21,
+  "x": 177.83,
+  "w": 48.3
+ },
+ {
+  "confidence": 1,
+  "text": "Fanpage",
+  "h": 16.55,
+  "y": 1686.04,
+  "x": 106.37,
+  "w": 50.94
+ },
+ {
+  "confidence": 1,
+  "text": "• CV gửi đến:",
+  "h": 32.86,
+  "y": 1704.61,
+  "x": 106.84,
+  "w": 99.82
+ },
+ {
+  "confidence": 0.5,
+  "text": "hr.tcauto@gmail.com",
+  "h": 14.66,
+  "y": 1725.24,
+  "x": 127.67,
+  "w": 140.23
+ },
+ {
+  "confidence": 1,
+  "text": "1 0708 03 8686",
+  "h": 16.84,
+  "y": 1737.8,
+  "x": 113.02,
+  "w": 104.65
+ },
+ {
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "h": 18.85,
+  "y": 1739.9,
+  "x": 757.67,
+  "w": 115.12
+ },
+ {
+  "confidence": 1,
+  "text": "CÔNG TY TNHH TC AUTO TUYỂN DỤNG",
+  "h": 37.77,
+  "y": 1884.6,
+  "x": 755.48,
+  "w": 567.43
+ },
+ {
+  "confidence": 1,
+  "text": "TRƯỞNG PHÒNG KINH DOANH & NHÂN",
+  "h": 29.32,
+  "y": 1920,
+  "x": 755.58,
+  "w": 567.21
+ },
+ {
+  "confidence": 1,
+  "text": "TUYỀN DỤNG",
+  "h": 41.55,
+  "y": 1922.94,
+  "x": 196.53,
+  "w": 237.14
+ },
+ {
+  "confidence": 1,
+  "text": "VIÊN KINH DOANH 2025",
+  "h": 27.23,
+  "y": 1951.41,
+  "x": 755.58,
+  "w": 355.81
+ },
+ {
+  "confidence": 1,
+  "text": "TRƯỞNG PHÒNG KINH DOANH &",
+  "h": 31.88,
+  "y": 1965.7,
+  "x": 102.47,
+  "w": 452.31
+ },
+ {
+  "confidence": 1,
+  "text": "NHÂN VIÊN KINH DOANH",
+  "h": 29.4,
+  "y": 1993.21,
+  "x": 104.65,
+  "w": 349.53
+ },
+ {
+  "confidence": 1,
+  "text": "Ngày 21.5.2025",
+  "h": 18.93,
+  "y": 1993.21,
+  "x": 751.4,
+  "w": 119.3
+ },
+ {
+  "confidence": 1,
+  "text": "Thu nhập từ 13 - 20 triệu/tháng | Làm việc tại Đà Nẵng | Môi trường",
+  "h": 18.94,
+  "y": 2043.56,
+  "x": 755.58,
+  "w": 544.19
+ },
+ {
+  "confidence": 1,
+  "text": "chuyên nghiệp - Cơ hội thăng tiến rõ ràng",
+  "h": 20.97,
+  "y": 2062.45,
+  "x": 755.48,
+  "w": 341.38
+ },
+ {
+  "confidence": 1,
+  "text": "Công ty TNHH TC Auto là đơn vị phân phối chính thức các dòng sản phẩm",
+  "h": 18.93,
+  "y": 2104.29,
+  "x": 753.49,
+  "w": 602.79
+ },
+ {
+  "confidence": 1,
+  "text": "Fanpage",
+  "h": 20.65,
+  "y": 2107.67,
+  "x": 109.66,
+  "w": 52.54
+ },
+ {
+  "confidence": 1,
+  "text": "Website",
+  "h": 16.86,
+  "y": 2108.43,
+  "x": 182.08,
+  "w": 48.17
+ },
+ {
+  "confidence": 1,
+  "text": "phụ kiện, công nghệ ô tô hàng đầu tại khu vực Miền Trung - Tây Nguyên,",
+  "h": 20.94,
+  "y": 2123.14,
+  "x": 753.49,
+  "w": 592.33
+ },
+ {
+  "confidence": 1,
+  "text": "CV gửi đến:",
+  "h": 15.11,
+  "y": 2133.39,
+  "x": 131.82,
+  "w": 77.53
+ },
+ {
+  "confidence": 1,
+  "text": "bao gồm: phim cách nhiệt 3M AutoFilm, Nano Sun, màn hình DVD Winca,",
+  "h": 16.91,
+  "y": 2143.93,
+  "x": 755.58,
+  "w": 598.6
+ },
+ {
+  "confidence": 0.5,
+  "text": "hr.tcauto@gmail.com",
+  "h": 12.57,
+  "y": 2148.27,
+  "x": 131.86,
+  "w": 142.33
+ },
+ {
+  "confidence": 1,
+  "text": "0 0708 03 8686",
+  "h": 14.73,
+  "y": 2162.86,
+  "x": 115.12,
+  "w": 106.74
+ },
+ {
+  "confidence": 1,
+  "text": "thiết bị nội thất ô tô cao cấp....",
+  "h": 19.03,
+  "y": 2162.95,
+  "x": 755.46,
+  "w": 240.98
+ },
+ {
+  "confidence": 1,
+  "text": "Với định hướng mở rộng quy mô và xây dựng đội ngũ kinh doanh chuyên.",
+  "h": 19.02,
+  "y": 2204.64,
+  "x": 751.4,
+  "w": 596.51
+ },
+ {
+  "confidence": 1,
+  "text": "> XEM THÊM",
+  "h": 21.31,
+  "y": 2229.76,
+  "x": 757.64,
+  "w": 115.18
+ },
+ {
+  "confidence": 1,
+  "text": "TÊN BÀI VIẾT",
+  "h": 33.12,
+  "y": 2354.54,
+  "x": 755.44,
+  "w": 190.74
+ },
+ {
+  "confidence": 1,
+  "text": "Ngày 20.8.2026",
+  "h": 18.93,
+  "y": 2401.43,
+  "x": 753.49,
+  "w": 123.49
+ },
+ {
+  "confidence": 1,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "h": 16.79,
+  "y": 2447.5,
+  "x": 755.58,
+  "w": 575.58
+ },
+ {
+  "confidence": 1,
+  "text": "thống phân phối của TC.",
+  "h": 21.11,
+  "y": 2466.39,
+  "x": 751.4,
+  "w": 205.12
+ },
+ {
+  "confidence": 1,
+  "text": "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
+  "h": 16.86,
+  "y": 2506.07,
+  "x": 755.58,
+  "w": 588.14
+ },
+ {
+  "confidence": 1,
+  "text": "thống phân phổi sản phầm màn hình ô tô Winca, mang đến cho khách",
+  "h": 16.81,
+  "y": 2527.12,
+  "x": 755.58,
+  "w": 581.86
+ },
+ {
+  "confidence": 1,
+  "text": "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+  "h": 20.94,
+  "y": 2545.97,
+  "x": 753.49,
+  "w": 544.19
+ },
+ {
+  "confidence": 1,
+  "text": "TC AUTO",
+  "h": 19.92,
+  "y": 2575.73,
+  "x": 479.05,
+  "w": 84.21
+ },
+ {
+  "confidence": 1,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc -",
+  "h": 22.15,
+  "y": 2584.4,
+  "x": 755.52,
+  "w": 592.45
+ },
+ {
+  "confidence": 1,
+  "text": "lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm",
+  "h": 16.87,
+  "y": 2606.7,
+  "x": 755.58,
+  "w": 569.3
+ },
+ {
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "h": 20.78,
+  "y": 2698.75,
+  "x": 759.44,
+  "w": 113.62
+ },
+ {
+  "confidence": 1,
+  "text": "TÊN BÀI VIẾT",
+  "h": 31.45,
+  "y": 2834.97,
+  "x": 755.58,
+  "w": 192.56
+ },
+ {
+  "confidence": 1,
+  "text": "Ngày 20.8.2026",
+  "h": 24.14,
+  "y": 2876.64,
+  "x": 750.95,
+  "w": 126.57
+ },
+ {
+  "confidence": 1,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "h": 18.93,
+  "y": 2925,
+  "x": 755.58,
+  "w": 575.58
+ },
+ {
+  "confidence": 1,
+  "text": "thống phân phối của TC.",
+  "h": 18.85,
+  "y": 2945.97,
+  "x": 751.4,
+  "w": 205.12
+ },
+ {
+  "confidence": 1,
+  "text": "Sự kiện này đánh dấu bước phát triền quan trọng trong việc mở rộng hệ",
+  "h": 18.93,
+  "y": 2985.71,
+  "x": 753.49,
+  "w": 590.23
+ },
+ {
+  "confidence": 1,
+  "text": "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
+  "h": 18.96,
+  "y": 3004.61,
+  "x": 755.58,
+  "w": 581.86
+ },
+ {
+  "confidence": 1,
+  "text": "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+  "h": 20.85,
+  "y": 3023.62,
+  "x": 755.52,
+  "w": 542.22
+ },
+ {
+  "confidence": 1,
+  "text": "TC AUTO",
+  "h": 19.9,
+  "y": 3054.07,
+  "x": 481.27,
+  "w": 79.79
+ },
+ {
+  "confidence": 1,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc -",
+  "h": 18.92,
+  "y": 3064.99,
+  "x": 755.58,
+  "w": 594.42
+ },
+ {
+  "confidence": 1,
+  "text": "Pham Gia Auto là đơn vi hoat đôna trona lĩnh vực nâna cấp - chăm sóc .",
+  "h": 12.57,
+  "y": 3065.34,
+  "x": 755.58,
+  "w": 583.95
+ },
+ {
+  "confidence": 1,
+  "text": "lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm",
+  "h": 16.88,
+  "y": 3085.95,
+  "x": 755.58,
+  "w": 569.3
+ },
+ {
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "h": 20.45,
+  "y": 3177.89,
+  "x": 757.47,
+  "w": 115.61
+ },
+ {
+  "confidence": 1,
+  "text": "2 3 ...",
+  "h": 23.25,
+  "y": 3310.47,
+  "x": 716.92,
+  "w": 73.28
+ },
+ {
+  "confidence": 1,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "h": 16.71,
+  "y": 3480.71,
+  "x": 79.53,
+  "w": 257.44
+ },
+ {
+  "confidence": 1,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BAN",
+  "h": 14.79,
+  "y": 3480.71,
+  "x": 730.47,
+  "w": 282.56
+ },
+ {
+  "confidence": 1,
+  "text": "KẾT NỐI VỚI TC",
+  "h": 16.71,
+  "y": 3480.71,
+  "x": 1230.7,
+  "w": 102.56
+ },
+ {
+  "confidence": 1,
+  "text": "093 677 6996",
+  "h": 10.47,
+  "y": 3501.56,
+  "x": 1249.53,
+  "w": 62.79
+ },
+ {
+  "confidence": 1,
+  "text": "Họ và tên của bạn",
+  "h": 12.65,
+  "y": 3511.91,
+  "x": 747.21,
+  "w": 94.19
+ },
+ {
+  "confidence": 0.5,
+  "text": "infor@tcautosolutions.vn",
+  "h": 12.53,
+  "y": 3516.21,
+  "x": 1255.81,
+  "w": 106.74
+ },
+ {
+  "confidence": 1,
+  "text": "TC luôn sẵn sàng lắng nghe và tư vấn giải giáp phù",
+  "h": 12.53,
+  "y": 3518.3,
+  "x": 81.63,
+  "w": 211.4
+ },
+ {
+  "confidence": 1,
+  "text": "Nhu cầu, câu hỏi của ban...",
+  "h": 12.64,
+  "y": 3526.55,
+  "x": 935.58,
+  "w": 136.05
+ },
+ {
+  "confidence": 1,
+  "text": "hợp nhất dành cho ban.",
+  "h": 10.5,
+  "y": 3528.69,
+  "x": 81.63,
+  "w": 100.47
+ },
+ {
+  "confidence": 1,
+  "text": "TC AUTO",
+  "h": 14.64,
+  "y": 3530.83,
+  "x": 485.58,
+  "w": 102.56
+ },
+ {
+  "confidence": 1,
+  "text": "Thứ 2 - 7/8:00 - 17:30",
+  "h": 10.44,
+  "y": 3532.92,
+  "x": 1255.81,
+  "w": 90
+ },
+ {
+  "confidence": 1,
+  "text": "Số điện thoại",
+  "h": 13.43,
+  "y": 3542.92,
+  "x": 749.22,
+  "w": 67.14
+ },
+ {
+  "confidence": 1,
+  "text": "SOLUTIONS",
+  "h": 8.35,
+  "y": 3547.54,
+  "x": 496.05,
+  "w": 90
+ },
+ {
+  "confidence": 1,
+  "text": "GỬI",
+  "h": 14.62,
+  "y": 3570.52,
+  "x": 1059.07,
+  "w": 27.21
+ },
+ {
+  "confidence": 1,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "h": 12.85,
+  "y": 3580.81,
+  "x": 81.63,
+  "w": 221.86
+ }
+]

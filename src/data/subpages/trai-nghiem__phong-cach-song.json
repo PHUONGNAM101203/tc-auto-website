@@ -1,0 +1,167 @@
+{
+  "slug": "trai-nghiem/phong-cach-song",
+  "route": "/trai-nghiem/phong-cach-song",
+  "title": "Phong cách sống",
+  "section": "trai-nghiem",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 4137.0,
+  "slices": [
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song-0@2x.webp?v=33b3e46b",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-0@2x.webp?v=33b3e46b",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-0@3x.webp?v=abe12f74",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 101920,
+      "bytesByScale": {
+        "2": 101920,
+        "3": 177990
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song-1@2x.webp?v=f608b417",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-1@2x.webp?v=f608b417",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-1@3x.webp?v=fd430f45",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 201888,
+      "bytesByScale": {
+        "2": 201888,
+        "3": 333276
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song-2@2x.webp?v=e693d6ad",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-2@2x.webp?v=e693d6ad",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-2@3x.webp?v=2fe340c5",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 178260,
+      "bytesByScale": {
+        "2": 178260,
+        "3": 297672
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song-3@2x.webp?v=70044380",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-3@2x.webp?v=70044380",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-3@3x.webp?v=f2681e1e",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 189234,
+      "bytesByScale": {
+        "2": 189234,
+        "3": 316038
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song-4@2x.webp?v=db49c445",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-4@2x.webp?v=db49c445",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song-4@3x.webp?v=dad08f12",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 537.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1074,
+      "bytes": 56442,
+      "bytesByScale": {
+        "2": 56442,
+        "3": 96540
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 4014.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Trải nghiệm",
+      "href": "/trai-nghiem"
+    }
+  ],
+  "sourceFile": "5.PHONG CÁCH SỐNG.png"
+}

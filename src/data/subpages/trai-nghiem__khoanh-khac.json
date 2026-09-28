@@ -1,0 +1,123 @@
+{
+  "slug": "trai-nghiem/khoanh-khac",
+  "route": "/trai-nghiem/khoanh-khac",
+  "title": "Khoảnh khắc",
+  "section": "trai-nghiem",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2644.0,
+  "slices": [
+    {
+      "src": "/slices/sub/trai-nghiem__khoanh-khac-0@2x.webp?v=16754bc2",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__khoanh-khac-0@2x.webp?v=16754bc2",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__khoanh-khac-0@3x.webp?v=553d4d1b",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 100184,
+      "bytesByScale": {
+        "2": 100184,
+        "3": 176614
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__khoanh-khac-1@2x.webp?v=9cd64606",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__khoanh-khac-1@2x.webp?v=9cd64606",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__khoanh-khac-1@3x.webp?v=a3015d0a",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 205016,
+      "bytesByScale": {
+        "2": 205016,
+        "3": 347260
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__khoanh-khac-2@2x.webp?v=322882a4",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__khoanh-khac-2@2x.webp?v=322882a4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__khoanh-khac-2@3x.webp?v=9b968741",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 844.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1688,
+      "bytes": 106496,
+      "bytesByScale": {
+        "2": 106496,
+        "3": 186230
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 2521.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Trải nghiệm",
+      "href": "/trai-nghiem"
+    }
+  ],
+  "sourceFile": "4.KHOẢNH KHẮC.png"
+}

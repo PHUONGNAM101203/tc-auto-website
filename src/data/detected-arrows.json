@@ -1,0 +1,586 @@
+{
+ "Home.png": [
+  {
+   "x": 1398,
+   "y": 1629,
+   "width": 12,
+   "height": 30
+  },
+  {
+   "x": 1224,
+   "y": 2325,
+   "width": 45,
+   "height": 15
+  },
+  {
+   "x": 1335,
+   "y": 3108,
+   "width": 12,
+   "height": 33
+  },
+  {
+   "x": 1062,
+   "y": 3507,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "1.Trải nghiệm.png": [
+  {
+   "x": 1062,
+   "y": 3405,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.HÀNH TRÌNH.png": [
+  {
+   "x": 204,
+   "y": 1134,
+   "width": 39,
+   "height": 12
+  },
+  {
+   "x": 1062,
+   "y": 2082,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "3.BẢN SẮC RIÊNG.png": [
+  {
+   "x": 1062,
+   "y": 2199,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "4.KHOẢNH KHẮC.png": [
+  {
+   "x": 1062,
+   "y": 2586,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "5.1ĐỔI MÀU, ĐỔI DIỆN MẠO. CÒN ĐIỀU GÌ VẪN Ở ĐÓ_.png": [
+  {
+   "x": 1062,
+   "y": 3516,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "5.PHONG CÁCH SỐNG.png": [
+  {
+   "x": 546,
+   "y": 3513,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 675,
+   "y": 3813,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 4080,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "1.Giải pháp.png": [
+  {
+   "x": 1149,
+   "y": 45,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 699,
+   "y": 1989,
+   "width": 42,
+   "height": 15
+  },
+  {
+   "x": 1062,
+   "y": 5919,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "2.1 Phim Dán Kính.png": [
+  {
+   "x": 1149,
+   "y": 45,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 366,
+   "y": 1824,
+   "width": 21,
+   "height": 27
+  },
+  {
+   "x": 1062,
+   "y": 3219,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.2 3M Ceramic Elite IM.png": [
+  {
+   "x": 231,
+   "y": 7971,
+   "width": 42,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 8265,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "3.PPF.png": [
+  {
+   "x": 1149,
+   "y": 45,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 198,
+   "y": 1200,
+   "width": 6,
+   "height": 30
+  },
+  {
+   "x": 36,
+   "y": 1305,
+   "width": 15,
+   "height": 42
+  },
+  {
+   "x": 1389,
+   "y": 1305,
+   "width": 15,
+   "height": 42
+  },
+  {
+   "x": 1062,
+   "y": 3213,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "4.Loa.png": [
+  {
+   "x": 1149,
+   "y": 45,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 1062,
+   "y": 2367,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "5.Màn hình.png": [
+  {
+   "x": 1149,
+   "y": 45,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 675,
+   "y": 2700,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 2985,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "6.1 CÁC DỰ ÁN ĐÃ TRIỂN KHAI.png": [
+  {
+   "x": 1149,
+   "y": 45,
+   "width": 15,
+   "height": 15
+  },
+  {
+   "x": 84,
+   "y": 1956,
+   "width": 21,
+   "height": 12
+  },
+  {
+   "x": 675,
+   "y": 3384,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 3633,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "6.2 Trở thành Đại lý Winca chính hãng của PHẠM GIA AUTO.png": [
+  {
+   "x": 915,
+   "y": 1242,
+   "width": 24,
+   "height": 30
+  },
+  {
+   "x": 1062,
+   "y": 4983,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "1. Công Nghệ.png": [
+  {
+   "x": 1062,
+   "y": 4029,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "2.1 Tiên Phong Công Nghệ.png": [
+  {
+   "x": 1062,
+   "y": 2508,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "2.2 BÀI VIẾT CÔNG NGHỆ.png": [
+  {
+   "x": 675,
+   "y": 3312,
+   "width": 9,
+   "height": 15
+  },
+  {
+   "x": 1062,
+   "y": 3573,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "3.1 ỨNG DỤNG.png": [
+  {
+   "x": 1062,
+   "y": 3189,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "3.2 CẬP NHÂT & VÁ LỖI.png": [
+  {
+   "x": 675,
+   "y": 3348,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 3624,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "3.2 KHO ỨNG DỤNG.png": [
+  {
+   "x": 675,
+   "y": 3348,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 3624,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "1. Đại lý.png": [
+  {
+   "x": 1386,
+   "y": 2370,
+   "width": 12,
+   "height": 30
+  },
+  {
+   "x": 660,
+   "y": 4107,
+   "width": 9,
+   "height": 24
+  },
+  {
+   "x": 1062,
+   "y": 4518,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.1 MẠNG LƯỚI ĐẠI LÝ - 1.png": [
+  {
+   "x": 1062,
+   "y": 1974,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.2 MẠNG LƯỚI ĐẠI LÝ - 2.png": [
+  {
+   "x": 1062,
+   "y": 1974,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.3 MẠNG LƯỚI ĐẠI LÝ - 3.png": [
+  {
+   "x": 1062,
+   "y": 1974,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "3. CÂU CHUYỆN ĐỒNG HÀNH.png": [
+  {
+   "x": 1200,
+   "y": 2697,
+   "width": 36,
+   "height": 15
+  },
+  {
+   "x": 675,
+   "y": 3468,
+   "width": 9,
+   "height": 15
+  },
+  {
+   "x": 1062,
+   "y": 3729,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "4.1 CHÂN DUNG ĐẠI LÝ.png": [
+  {
+   "x": 675,
+   "y": 3864,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 4125,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "4.2 Trở thành Đại lý Winca chính hãng của PHẠM GIA AUTO.png": [
+  {
+   "x": 915,
+   "y": 1242,
+   "width": 24,
+   "height": 30
+  },
+  {
+   "x": 1062,
+   "y": 4983,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "5. HỖ TRỢ TIẾP THỊ.png": [
+  {
+   "x": 1266,
+   "y": 1095,
+   "width": 39,
+   "height": 39
+  },
+  {
+   "x": 1272,
+   "y": 1587,
+   "width": 39,
+   "height": 39
+  },
+  {
+   "x": 1266,
+   "y": 2055,
+   "width": 39,
+   "height": 39
+  },
+  {
+   "x": 1062,
+   "y": 2499,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "6. GALLERY BY BRAND.png": [
+  {
+   "x": 786,
+   "y": 1110,
+   "width": 42,
+   "height": 12
+  },
+  {
+   "x": 786,
+   "y": 1590,
+   "width": 42,
+   "height": 12
+  },
+  {
+   "x": 786,
+   "y": 2070,
+   "width": 42,
+   "height": 12
+  },
+  {
+   "x": 786,
+   "y": 2553,
+   "width": 42,
+   "height": 12
+  },
+  {
+   "x": 786,
+   "y": 3033,
+   "width": 42,
+   "height": 12
+  },
+  {
+   "x": 675,
+   "y": 3510,
+   "width": 9,
+   "height": 15
+  },
+  {
+   "x": 1062,
+   "y": 3798,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "1. Nhân sự.png": [
+  {
+   "x": 330,
+   "y": 1323,
+   "width": 39,
+   "height": 18
+  },
+  {
+   "x": 1071,
+   "y": 1326,
+   "width": 6,
+   "height": 24
+  },
+  {
+   "x": 210,
+   "y": 1497,
+   "width": 12,
+   "height": 33
+  },
+  {
+   "x": 1218,
+   "y": 1497,
+   "width": 12,
+   "height": 33
+  },
+  {
+   "x": 1062,
+   "y": 3315,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.1 VĂN HOÁ TC.png": [
+  {
+   "x": 306,
+   "y": 2352,
+   "width": 24,
+   "height": 15
+  },
+  {
+   "x": 1062,
+   "y": 2727,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "2.2 CÂU CHUYỆN KHỞI NGHIỆP.png": [
+  {
+   "x": 228,
+   "y": 1614,
+   "width": 24,
+   "height": 27
+  },
+  {
+   "x": 1062,
+   "y": 4602,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "3. NHÂN SỰ TC.png": [
+  {
+   "x": 375,
+   "y": 2442,
+   "width": 21,
+   "height": 42
+  },
+  {
+   "x": 1062,
+   "y": 2832,
+   "width": 21,
+   "height": 12
+  }
+ ],
+ "4.1 TUYỂN DỤNG.png": [
+  {
+   "x": 1062,
+   "y": 2421,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "4.2 VỊ TRÍ ĐANG TUYỂN.png": [
+  {
+   "x": 675,
+   "y": 3309,
+   "width": 9,
+   "height": 18
+  },
+  {
+   "x": 1062,
+   "y": 3570,
+   "width": 21,
+   "height": 15
+  }
+ ],
+ "4.3 TC AUTO TUYỂN KỸ THUẬT DÁN PHIM CÁCH NHIỆT VÀ LẮP ĐẶT MÀN HÌNH Ô TÔ.png": [
+  {
+   "x": 1062,
+   "y": 1788,
+   "width": 21,
+   "height": 12
+  }
+ ]
+}

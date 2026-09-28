@@ -1,0 +1,171 @@
+{
+  "slug": "cong-nghe/tien-phong-cong-nghe/bai-viet",
+  "route": "/cong-nghe/tien-phong-cong-nghe/bai-viet",
+  "title": "Bài viết công nghệ",
+  "section": "cong-nghe",
+  "isArticle": true,
+  "canvasWidth": 1440,
+  "height": 3630.0,
+  "slices": [
+    {
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@2x.webp?v=3820e488",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@2x.webp?v=3820e488",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@3x.webp?v=f895abb7",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 151918,
+      "bytesByScale": {
+        "2": 151918,
+        "3": 274808
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-1@2x.webp?v=eed111c8",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-1@2x.webp?v=eed111c8",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-1@3x.webp?v=4d6823d4",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 238784,
+      "bytesByScale": {
+        "2": 238784,
+        "3": 424104
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-2@2x.webp?v=20ad9831",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-2@2x.webp?v=20ad9831",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-2@3x.webp?v=724b8da1",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 267718,
+      "bytesByScale": {
+        "2": 267718,
+        "3": 475116
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-3@2x.webp?v=d914209a",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-3@2x.webp?v=d914209a",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-3@3x.webp?v=95730f65",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 150780,
+      "bytesByScale": {
+        "2": 150780,
+        "3": 262324
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-4@2x.webp?v=f9d03076",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-4@2x.webp?v=f9d03076",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-4@3x.webp?v=72148036",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 30.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 60,
+      "bytes": 1998,
+      "bytesByScale": {
+        "2": 1998,
+        "3": 3540
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": true
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3507.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Công nghệ",
+      "href": "/cong-nghe"
+    },
+    {
+      "label": "Tiên phong công nghệ",
+      "href": "/cong-nghe/tien-phong-cong-nghe"
+    }
+  ],
+  "sourceFile": "2.2 BÀI VIẾT CÔNG NGHỆ.png"
+}

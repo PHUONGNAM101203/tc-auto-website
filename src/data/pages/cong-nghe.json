@@ -1,0 +1,506 @@
+{
+  "slug": "cong-nghe",
+  "route": "/cong-nghe",
+  "title": "Công nghệ",
+  "canvasWidth": 1440,
+  "height": 4087.0,
+  "slices": [
+    {
+      "src": "/slices/cong-nghe-0.webp?v=5cb10ef4",
+      "y": 0.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 112468,
+      "srcSet": [
+        {
+          "src": "/slices/cong-nghe-0.webp?v=5cb10ef4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/cong-nghe-0@3x.webp?v=e6be32a7",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 112468,
+        "3": 282184
+      }
+    },
+    {
+      "src": "/slices/cong-nghe-1.webp?v=e155d6bc",
+      "y": 900.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 115942,
+      "srcSet": [
+        {
+          "src": "/slices/cong-nghe-1.webp?v=e155d6bc",
+          "scale": 2
+        },
+        {
+          "src": "/slices/cong-nghe-1@3x.webp?v=7d41cb78",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 115942,
+        "3": 397994
+      }
+    },
+    {
+      "src": "/slices/cong-nghe-2.webp?v=1b9c05b6",
+      "y": 1800.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 65724,
+      "srcSet": [
+        {
+          "src": "/slices/cong-nghe-2.webp?v=1b9c05b6",
+          "scale": 2
+        },
+        {
+          "src": "/slices/cong-nghe-2@3x.webp?v=3f509eba",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 65724,
+        "3": 186802
+      }
+    },
+    {
+      "src": "/slices/cong-nghe-3.webp?v=ae67eed3",
+      "y": 2700.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 53318,
+      "srcSet": [
+        {
+          "src": "/slices/cong-nghe-3.webp?v=ae67eed3",
+          "scale": 2
+        },
+        {
+          "src": "/slices/cong-nghe-3@3x.webp?v=6ba647ee",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 53318,
+        "3": 292328
+      }
+    },
+    {
+      "src": "/slices/cong-nghe-4.webp?v=ffc9937a",
+      "y": 3600.0,
+      "displayHeight": 487.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 974,
+      "bytes": 41370,
+      "srcSet": [
+        {
+          "src": "/slices/cong-nghe-4.webp?v=ffc9937a",
+          "scale": 2
+        },
+        {
+          "src": "/slices/cong-nghe-4@3x.webp?v=b6e5073b",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 41370,
+        "3": 130536
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": true
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "items": [
+    {
+      "id": "cong-nghe-000",
+      "tag": "div",
+      "classes": [
+        "herot"
+      ],
+      "x": 82.0,
+      "y": 645.0,
+      "w": 500.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "THẾ GIỚI CỦA TC",
+      "text": "THẾ GIỚI CỦA TC"
+    },
+    {
+      "id": "cong-nghe-001",
+      "tag": "div",
+      "classes": [
+        "slogan"
+      ],
+      "x": 82.0,
+      "y": 710.0,
+      "w": 470.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "DRIVE · <span class=\"c-blue\">EXPERIENCE</span> · <span class=\"c-red\">ELEVATE</span>",
+      "text": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    {
+      "id": "cong-nghe-002",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 930.0,
+      "w": 560.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "TIÊN PHONG CÔNG NGHỆ",
+      "text": "TIÊN PHONG CÔNG NGHỆ"
+    },
+    {
+      "id": "cong-nghe-003",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 96.0,
+      "y": 1010.0,
+      "w": 520.0,
+      "h": null,
+      "css": {
+        "font-size": "37px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "TIÊN PHONG CÔNG NGHỆ.<br>TRẢI NGHIỆM NÂNG TẦM.",
+      "text": "TIÊN PHONG CÔNG NGHỆ.TRẢI NGHIỆM NÂNG TẦM."
+    },
+    {
+      "id": "cong-nghe-004",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 1143.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "TÌM HIỂU THÊM",
+      "text": "TÌM HIỂU THÊM"
+    },
+    {
+      "id": "cong-nghe-005",
+      "tag": "div",
+      "classes": [
+        "raw"
+      ],
+      "x": 65.0,
+      "y": 1265.0,
+      "w": 330.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "<div class=\"ub800\" style=\"font-size:20px;line-height:26px;color:#fff;white-space:nowrap\">NGHIÊN CỨU &amp; PHÁT TRIỂN</div>",
+      "text": "NGHIÊN CỨU & PHÁT TRIỂN"
+    },
+    {
+      "id": "cong-nghe-006",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 68.0,
+      "y": 1322.0,
+      "w": 530.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da4ac"
+      },
+      "href": null,
+      "html": "TC AUTO ứng dụng công nghệ tiên tiến để tạo nên những giải pháp vượt trội, tối ưu hiệu suất, nâng cao trải nghiệm và đồng hành cùng mọi hành trình",
+      "text": "TC AUTO ứng dụng công nghệ tiên tiến để tạo nên những giải pháp vượt trội, tối ưu hiệu suất, nâng cao trải nghiệm và đồng hành cùng mọi hành trình"
+    },
+    {
+      "id": "cong-nghe-007",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 1452.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "TÌM HIỂU THÊM",
+      "text": "TÌM HIỂU THÊM"
+    },
+    {
+      "id": "cong-nghe-008",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 1628.0,
+      "w": 260.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "ỨNG DỤNG",
+      "text": "ỨNG DỤNG"
+    },
+    {
+      "id": "cong-nghe-009",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 400.0,
+      "y": 1672.0,
+      "w": 640.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "TIÊN PHONG CÔNG NGHỆ.<br>TRẢI NGHIỆM NÂNG TẦM.",
+      "text": "TIÊN PHONG CÔNG NGHỆ.TRẢI NGHIỆM NÂNG TẦM."
+    },
+    {
+      "id": "cong-nghe-010",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 455.0,
+      "y": 1808.0,
+      "w": 530.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da5ae"
+      },
+      "href": null,
+      "html": "TC AUTO ứng dụng công nghệ tiên tiến để tạo nên những giải pháp vượt trội, tối ưu hiệu suất, nâng cao trải nghiệm và đồng hành cùng mọi hành trình.",
+      "text": "TC AUTO ứng dụng công nghệ tiên tiến để tạo nên những giải pháp vượt trội, tối ưu hiệu suất, nâng cao trải nghiệm và đồng hành cùng mọi hành trình."
+    },
+    {
+      "id": "cong-nghe-011",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 630.0,
+      "y": 1903.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "cong-nghe-012",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 82.0,
+      "y": 2496.0,
+      "w": 260.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "46px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "BẢO HÀNH",
+      "text": "BẢO HÀNH"
+    },
+    {
+      "id": "cong-nghe-013",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 2682.0,
+      "w": 560.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "NÂNG TẦM GIÁ TRỊ.<br>ĐỒNG HÀNH BỀN VỮNG.",
+      "text": "NÂNG TẦM GIÁ TRỊ.ĐỒNG HÀNH BỀN VỮNG."
+    },
+    {
+      "id": "cong-nghe-014",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 2896.0,
+      "w": 512.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9ea7ae"
+      },
+      "href": null,
+      "html": "TC AUTO cam kết bảo vệ giá trị sản phẩm bằng chính sách bảo hành minh bạch, rõ ràng và chuyên nghiệp, mang đến sự an tâm trong suốt quá trình sử dụng. Không chỉ đồng hành từ thời điểm lựa chọn và lắp đặt sản phẩm, TC AUTO luôn sẵn sàng hỗ trợ, tiếp nhận và xử lý các vấn đề phát sinh một cách tận tâm, nhanh chóng và trách nhiệm. Với định hướng lấy trải nghiệm khách hàng làm trọng tâm, TC AUTO xây dựng chính sách bảo hành như một lời cam kết về chất lượng sản phẩm, dịch vụ hậu mãi và sự đồng hành lâu dài, giúp khách hàng an tâm tận hưởng giá trị sản phẩm theo thời gian.",
+      "text": "TC AUTO cam kết bảo vệ giá trị sản phẩm bằng chính sách bảo hành minh bạch, rõ ràng và chuyên nghiệp, mang đến sự an tâm trong suốt quá trình sử dụng. Không chỉ đồng hành từ thời điểm lựa chọn và lắp đặt sản phẩm, TC AUTO luôn sẵn sàng hỗ trợ, tiếp nhận và xử lý các vấn đề phát sinh một cách tận tâm, nhanh chóng và trách nhiệm. Với định hướng lấy trải nghiệm khách hàng làm trọng tâm, TC AUTO xây dựng chính sách bảo hành như một lời cam kết về chất lượng sản phẩm, dịch vụ hậu mãi và sự đồng hành lâu dài, giúp khách hàng an tâm tận hưởng giá trị sản phẩm theo thời gian."
+    },
+    {
+      "id": "cong-nghe-015",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 82.0,
+      "y": 3147.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "cong-nghe-016",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 790.0,
+      "y": 3396.0,
+      "w": 570.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "KHÔNG GIAN TRẢI NGHIỆM",
+      "text": "KHÔNG GIAN TRẢI NGHIỆM"
+    },
+    {
+      "id": "cong-nghe-017",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 788.0,
+      "y": 3508.0,
+      "w": 570.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "TRẢI NGHIỆM TRỰC TIẾP.<br>LỰA CHỌN KHÁC BIỆT.",
+      "text": "TRẢI NGHIỆM TRỰC TIẾP.LỰA CHỌN KHÁC BIỆT."
+    },
+    {
+      "id": "cong-nghe-018",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 788.0,
+      "y": 3649.0,
+      "w": 480.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9ea5ac"
+      },
+      "href": null,
+      "html": "Đến trực tiếp TCAUTO để trải nghiệm công nghệ ô tô tiên tiến, khám phá đa dạng giải pháp phù hợp và tìm ra lựa chọn hoàn hảo, giúp nâng tầm diện mạo, tiện nghi và trải nghiệm trên mỗi hành trình của bạn.",
+      "text": "Đến trực tiếp TCAUTO để trải nghiệm công nghệ ô tô tiên tiến, khám phá đa dạng giải pháp phù hợp và tìm ra lựa chọn hoàn hảo, giúp nâng tầm diện mạo, tiện nghi và trải nghiệm trên mỗi hành trình của bạn."
+    },
+    {
+      "id": "cong-nghe-019",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 788.0,
+      "y": 3774.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    }
+  ],
+  "contactForm": {
+    "y": 3964.0
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "slug": "dai-ly/cau-chuyen-dong-hanh",
+  "route": "/dai-ly/cau-chuyen-dong-hanh",
+  "title": "Câu chuyện đồng hành",
+  "section": "dai-ly",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3786.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-0@2x.webp?v=3bb98f90",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-0@2x.webp?v=3bb98f90",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-0@3x.webp?v=e55d647a",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 190588,
+      "bytesByScale": {
+        "2": 190588,
+        "3": 342458
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-1@2x.webp?v=38e9026d",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-1@2x.webp?v=38e9026d",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-1@3x.webp?v=6e03e08a",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 119164,
+      "bytesByScale": {
+        "2": 119164,
+        "3": 199948
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-2@2x.webp?v=ca11ebf1",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-2@2x.webp?v=ca11ebf1",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-2@3x.webp?v=927df186",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 106036,
+      "bytesByScale": {
+        "2": 106036,
+        "3": 175090
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-3@2x.webp?v=c34e5bc8",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-3@2x.webp?v=c34e5bc8",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-3@3x.webp?v=742edba5",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 98258,
+      "bytesByScale": {
+        "2": 98258,
+        "3": 163328
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-4@2x.webp?v=dcfa606e",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-4@2x.webp?v=dcfa606e",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__cau-chuyen-dong-hanh-4@3x.webp?v=63ff01f9",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 186.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 372,
+      "bytes": 35580,
+      "bytesByScale": {
+        "2": 35580,
+        "3": 58322
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3663.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    }
+  ],
+  "sourceFile": "3. CÂU CHUYỆN ĐỒNG HÀNH.png"
+}

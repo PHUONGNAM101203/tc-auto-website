@@ -1,0 +1,193 @@
+{
+  "slug": "dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto",
+  "route": "/dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto",
+  "title": "Trở thành Đại lý Winca chính hãng của Phạm Gia Auto",
+  "section": "dai-ly",
+  "isArticle": true,
+  "canvasWidth": 1440,
+  "height": 5042.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-0@2x.webp?v=f74b87b1",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-0@2x.webp?v=f74b87b1",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-0@3x.webp?v=6313013f",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 193996,
+      "bytesByScale": {
+        "2": 193996,
+        "3": 345140
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-1@2x.webp?v=7cd5bcee",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-1@2x.webp?v=7cd5bcee",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-1@3x.webp?v=bea53509",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 337834,
+      "bytesByScale": {
+        "2": 337834,
+        "3": 588132
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-2@2x.webp?v=b4f967c4",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-2@2x.webp?v=b4f967c4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-2@3x.webp?v=0d692a0b",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 245252,
+      "bytesByScale": {
+        "2": 245252,
+        "3": 409298
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-3@2x.webp?v=4f7d386a",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-3@2x.webp?v=4f7d386a",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-3@3x.webp?v=b62e7940",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 220550,
+      "bytesByScale": {
+        "2": 220550,
+        "3": 374148
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-4@2x.webp?v=cd7af45c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-4@2x.webp?v=cd7af45c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-4@3x.webp?v=0f9d36c2",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 256902,
+      "bytesByScale": {
+        "2": 256902,
+        "3": 428812
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-5@2x.webp?v=14257e49",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-5@2x.webp?v=14257e49",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-5@3x.webp?v=024441fe",
+          "scale": 3
+        }
+      ],
+      "y": 4500.0,
+      "displayHeight": 542.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1084,
+      "bytes": 141008,
+      "bytesByScale": {
+        "2": 141008,
+        "3": 238378
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 4919.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    },
+    {
+      "label": "Chân dung đại lý",
+      "href": "/dai-ly/chan-dung-dai-ly"
+    }
+  ],
+  "sourceFile": "4.2 Trở thành Đại lý Winca chính hãng của PHẠM GIA AUTO.png"
+}

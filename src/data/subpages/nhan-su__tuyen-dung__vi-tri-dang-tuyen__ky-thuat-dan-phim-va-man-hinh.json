@@ -1,0 +1,131 @@
+{
+  "slug": "nhan-su/tuyen-dung/vi-tri-dang-tuyen/ky-thuat-dan-phim-va-man-hinh",
+  "route": "/nhan-su/tuyen-dung/vi-tri-dang-tuyen/ky-thuat-dan-phim-va-man-hinh",
+  "title": "TC Auto tuyển Kỹ thuật dán phim cách nhiệt và lắp đặt màn hình ô tô",
+  "section": "nhan-su",
+  "isArticle": true,
+  "canvasWidth": 1440,
+  "height": 1846.0,
+  "slices": [
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@2x.webp?v=67478f2c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@2x.webp?v=67478f2c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-0@3x.webp?v=9b5dab40",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 189670,
+      "bytesByScale": {
+        "2": 189670,
+        "3": 341162
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@2x.webp?v=de0e3004",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@2x.webp?v=de0e3004",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-1@3x.webp?v=ee398deb",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 125090,
+      "bytesByScale": {
+        "2": 125090,
+        "3": 203698
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@2x.webp?v=36e707c8",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@2x.webp?v=36e707c8",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-2@3x.webp?v=b355743f",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 46.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 92,
+      "bytes": 6970,
+      "bytesByScale": {
+        "2": 6970,
+        "3": 11700
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "contactForm": {
+    "y": 1723.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Nhân sự",
+      "href": "/nhan-su"
+    },
+    {
+      "label": "Tuyển dụng",
+      "href": "/nhan-su/tuyen-dung"
+    },
+    {
+      "label": "Vị trí đang tuyển",
+      "href": "/nhan-su/tuyen-dung/vi-tri-dang-tuyen"
+    }
+  ],
+  "sourceFile": "4.3 TC AUTO TUYỂN KỸ THUẬT DÁN PHIM CÁCH NHIỆT VÀ LẮP ĐẶT MÀN HÌNH Ô TÔ.png"
+}

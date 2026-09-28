@@ -1,0 +1,42 @@
+{
+  "_doc": "Danh sach dai ly doc tu frame thiet ke '5.Page_Đại lý/2.3 MẠNG LƯỚI ĐẠI LÝ - 3.png' bang OCR. Da sua loi dau cua OCR (vi du 'Đà Năng' -> 'Đà Nẵng') va bo ban trung lap sinh ra o vung chong lan giua cac manh anh. KHONG them dai ly nao ngoai danh sach co trong thiet ke.",
+  "_source": "[TC] Website/Website_TC/5.Page_Đại lý /2.3 MẠNG LƯỚI ĐẠI LÝ - 3.png",
+  "brands": ["3M"],
+  "provinces": [
+    "Đà Nẵng",
+    "Huế",
+    "Hà Tĩnh",
+    "Đắk Lắk",
+    "Khánh Hoà",
+    "Lâm Đồng"
+  ],
+  "mapPins": [
+    "Hà Tĩnh",
+    "Quảng Trị",
+    "Thừa Thiên Huế",
+    "Đà Nẵng",
+    "Quảng Ngãi",
+    "Gia Lai",
+    "Đắk Lắk",
+    "Khánh Hoà",
+    "Đồng Nai"
+  ],
+  "dealers": [
+    { "name": "Thanh Bình Auto CMT8", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Thanh Bình Auto Đường 2/9", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Sài Gòn Auto Art", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Thọ Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Tân Bình Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Nội thất Ô tô 247", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Hưng Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Ô Tô Xanh", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Đại Mỹ Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Tiến Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Huy Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "268 Auto", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Nội thất Ô tô Miền Trung", "area": "Đà Nẵng", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Phúc Nguyễn Auto", "area": "Quế Sơn", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Thành Tiến Auto", "area": "Tam Kỳ", "province": "Đà Nẵng", "brand": "3M" },
+    { "name": "Thái Vỹ Auto", "area": "Núi Thành", "province": "Đà Nẵng", "brand": "3M" }
+  ]
+}

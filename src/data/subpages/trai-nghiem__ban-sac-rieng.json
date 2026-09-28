@@ -1,0 +1,123 @@
+{
+  "slug": "trai-nghiem/ban-sac-rieng",
+  "route": "/trai-nghiem/ban-sac-rieng",
+  "title": "Bản sắc riêng",
+  "section": "trai-nghiem",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2257.0,
+  "slices": [
+    {
+      "src": "/slices/sub/trai-nghiem__ban-sac-rieng-0@2x.webp?v=05635a5d",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__ban-sac-rieng-0@2x.webp?v=05635a5d",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__ban-sac-rieng-0@3x.webp?v=f73f4281",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 100834,
+      "bytesByScale": {
+        "2": 100834,
+        "3": 178006
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__ban-sac-rieng-1@2x.webp?v=0b646baf",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__ban-sac-rieng-1@2x.webp?v=0b646baf",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__ban-sac-rieng-1@3x.webp?v=f031cf40",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 194494,
+      "bytesByScale": {
+        "2": 194494,
+        "3": 345244
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__ban-sac-rieng-2@2x.webp?v=eff2b408",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__ban-sac-rieng-2@2x.webp?v=eff2b408",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__ban-sac-rieng-2@3x.webp?v=a66c1ac1",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 457.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 914,
+      "bytes": 45738,
+      "bytesByScale": {
+        "2": 45738,
+        "3": 76190
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 2134.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Trải nghiệm",
+      "href": "/trai-nghiem"
+    }
+  ],
+  "sourceFile": "3.BẢN SẮC RIÊNG.png"
+}

@@ -1,0 +1,922 @@
+[
+ {
+  "y": 41.36,
+  "text": "TC AUTO",
+  "x": 127.36,
+  "h": 20.45,
+  "confidence": 1,
+  "w": 101.19
+ },
+ {
+  "y": 43.93,
+  "text": "Q Nhập để tìm kiếm....",
+  "x": 1149.07,
+  "h": 16.8,
+  "confidence": 1,
+  "w": 108.84
+ },
+ {
+  "y": 53.3,
+  "text": "ĐẠI LÝ ›",
+  "x": 830.23,
+  "h": 21.26,
+  "confidence": 1,
+  "w": 60.12
+ },
+ {
+  "y": 54.29,
+  "text": "TRẢI NGHIỆM ›",
+  "x": 441.63,
+  "h": 16.92,
+  "confidence": 1,
+  "w": 113.02
+ },
+ {
+  "y": 54.29,
+  "text": "CÔNG NGHỆ›",
+  "x": 699.07,
+  "h": 16.92,
+  "confidence": 1,
+  "w": 104.65
+ },
+ {
+  "y": 54.29,
+  "text": "NHÂN SỰ >",
+  "x": 918.84,
+  "h": 19.01,
+  "confidence": 1,
+  "w": 81.63
+ },
+ {
+  "y": 54.32,
+  "text": "GIÁI PHÁP ›",
+  "x": 583.93,
+  "h": 17.02,
+  "confidence": 1,
+  "w": 87.96
+ },
+ {
+  "y": 62.83,
+  "text": "SULI",
+  "x": 136.05,
+  "h": 4.19,
+  "confidence": 0.5,
+  "w": 35.58
+ },
+ {
+  "y": 62.83,
+  "text": "IUYS",
+  "x": 190.47,
+  "h": 4.19,
+  "confidence": 0.3,
+  "w": 35.58
+ },
+ {
+  "y": 474.35,
+  "text": "WT EFEET",
+  "x": 690.18,
+  "h": 22.46,
+  "confidence": 0.3,
+  "w": 99.43
+ },
+ {
+  "y": 502.05,
+  "text": "CLARITY",
+  "x": 1253.62,
+  "h": 13.7,
+  "confidence": 1,
+  "w": 69.27
+ },
+ {
+  "y": 517.14,
+  "text": "Tầm nhìn sắc nét",
+  "x": 1253.72,
+  "h": 10.71,
+  "confidence": 1,
+  "w": 90
+ },
+ {
+  "y": 537.7,
+  "text": "TC AUTO",
+  "x": 688.36,
+  "h": 12.13,
+  "confidence": 1,
+  "w": 59.05
+ },
+ {
+  "y": 571.73,
+  "text": "PROTECTION",
+  "x": 1253.72,
+  "h": 12.57,
+  "confidence": 1,
+  "w": 102.56
+ },
+ {
+  "y": 584.29,
+  "text": "Bảo vệ tối ưu",
+  "x": 1251.63,
+  "h": 12.57,
+  "confidence": 1,
+  "w": 71.16
+ },
+ {
+  "y": 636.65,
+  "text": "COMFORT",
+  "x": 1253.72,
+  "h": 12.57,
+  "confidence": 1,
+  "w": 81.63
+ },
+ {
+  "y": 642.86,
+  "text": "CHÂN DUNG ĐẠI LÝ",
+  "x": 83.72,
+  "h": 60.81,
+  "confidence": 1,
+  "w": 548.37
+ },
+ {
+  "y": 651.31,
+  "text": "Thoải mái trên mọi",
+  "x": 1253.72,
+  "h": 10.48,
+  "confidence": 1,
+  "w": 98.37
+ },
+ {
+  "y": 663.87,
+  "text": "hành trình",
+  "x": 1251.63,
+  "h": 10.47,
+  "confidence": 1,
+  "w": 58.6
+ },
+ {
+  "y": 712.04,
+  "text": "CONFIDENCE",
+  "x": 1253.72,
+  "h": 14.66,
+  "confidence": 1,
+  "w": 104.65
+ },
+ {
+  "y": 713.67,
+  "text": "TC AUTO",
+  "x": 81.54,
+  "h": 28.15,
+  "confidence": 1,
+  "w": 148.77
+ },
+ {
+  "y": 728.8,
+  "text": "Trái nghiệm trọn vẹn",
+  "x": 1251.63,
+  "h": 10.49,
+  "confidence": 1,
+  "w": 108.84
+ },
+ {
+  "y": 896.77,
+  "text": "TÌM KIẾM ĐẠI LÝ",
+  "x": 562.33,
+  "h": 53.96,
+  "confidence": 1,
+  "w": 315.38
+ },
+ {
+  "y": 1046.79,
+  "text": "CHỌN KHU VỤC",
+  "x": 535.81,
+  "h": 44.1,
+  "confidence": 1,
+  "w": 355.81
+ },
+ {
+  "y": 1095,
+  "text": "THÙA THIÊN HUẾ",
+  "x": 870.7,
+  "h": 12.64,
+  "confidence": 1,
+  "w": 77.44
+ },
+ {
+  "y": 1126.73,
+  "text": "Đà Nẵng",
+  "x": 564.42,
+  "h": 23.34,
+  "confidence": 1,
+  "w": 74.69
+ },
+ {
+  "y": 1151.62,
+  "text": "ĐÀ NĂNG",
+  "x": 954.42,
+  "h": 12.66,
+  "confidence": 1,
+  "w": 50.23
+ },
+ {
+  "y": 1199.79,
+  "text": "ЗМ",
+  "x": 563.02,
+  "h": 16.75,
+  "confidence": 0.3,
+  "w": 31.4
+ },
+ {
+  "y": 1260.36,
+  "text": "TÌM KIẾM NGAY",
+  "x": 655.12,
+  "h": 19.01,
+  "confidence": 1,
+  "w": 127.67
+ },
+ {
+  "y": 1377.8,
+  "text": "ЗМ",
+  "x": 686.51,
+  "h": 27.23,
+  "confidence": 0.3,
+  "w": 64.88
+ },
+ {
+  "y": 1509.1,
+  "text": "TÊN BÀI VIẾT",
+  "x": 79.2,
+  "h": 40.3,
+  "confidence": 1,
+  "w": 243.34
+ },
+ {
+  "y": 1520,
+  "text": "TEN BAI VIET",
+  "x": 81.63,
+  "h": 23.21,
+  "confidence": 1,
+  "w": 242.79
+ },
+ {
+  "y": 1530.47,
+  "text": "ЗМ",
+  "x": 923.02,
+  "h": 136.13,
+  "confidence": 0.3,
+  "w": 270
+ },
+ {
+  "y": 1551.47,
+  "text": "Ngày 20.8.2026",
+  "x": 81.22,
+  "h": 21.99,
+  "confidence": 1,
+  "w": 124.34
+ },
+ {
+  "y": 1591.07,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "x": 83.72,
+  "h": 16.89,
+  "confidence": 1,
+  "w": 575.58
+ },
+ {
+  "y": 1609.04,
+  "text": "thông phân phối của TC.",
+  "x": 81.48,
+  "h": 20.51,
+  "confidence": 1,
+  "w": 203.26
+ },
+ {
+  "y": 1649.84,
+  "text": "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
+  "x": 81.63,
+  "h": 18.85,
+  "confidence": 1,
+  "w": 590.23
+ },
+ {
+  "y": 1670.71,
+  "text": "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
+  "x": 81.63,
+  "h": 16.82,
+  "confidence": 1,
+  "w": 583.95
+ },
+ {
+  "y": 1691.73,
+  "text": "hàng giái pháp giái trí và công nghệ hiện đại ngay tại địa phương.",
+  "x": 83.72,
+  "h": 16.84,
+  "confidence": 1,
+  "w": 540
+ },
+ {
+  "y": 1710.02,
+  "text": "Crystalline",
+  "x": 926.89,
+  "h": 57.78,
+  "confidence": 1,
+  "w": 287.42
+ },
+ {
+  "y": 1731.43,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc -",
+  "x": 83.72,
+  "h": 16.84,
+  "confidence": 1,
+  "w": 592.33
+ },
+ {
+  "y": 1752.46,
+  "text": "lắp đặt phụ kiện ô tô với đội ngũ kỳ thuật có tay nghê và quy trinh làm.",
+  "x": 83.72,
+  "h": 14.68,
+  "confidence": 1,
+  "w": 569.3
+ },
+ {
+  "y": 1759.68,
+  "text": "20 LAYERS",
+  "x": 955.85,
+  "h": 59.14,
+  "confidence": 1,
+  "w": 229.59
+ },
+ {
+  "y": 1814.89,
+  "text": "> XEM THEM",
+  "x": 85.74,
+  "h": 23.84,
+  "confidence": 1,
+  "w": 115.27
+ },
+ {
+  "y": 1986.47,
+  "text": "TÊN BÀI VIẾT",
+  "x": 79.44,
+  "h": 42.97,
+  "confidence": 1,
+  "w": 242.98
+ },
+ {
+  "y": 2007.96,
+  "text": "ЗМ",
+  "x": 923.02,
+  "h": 136.13,
+  "confidence": 0.3,
+  "w": 272.09
+ },
+ {
+  "y": 2033.09,
+  "text": "Ngày 20.8.2026",
+  "x": 79.53,
+  "h": 18.85,
+  "confidence": 1,
+  "w": 125.58
+ },
+ {
+  "y": 2067.18,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "x": 83.63,
+  "h": 22.02,
+  "confidence": 1,
+  "w": 575.74
+ },
+ {
+  "y": 2089.63,
+  "text": "thống phân phối của TC.",
+  "x": 79.53,
+  "h": 18.94,
+  "confidence": 1,
+  "w": 203.02
+ },
+ {
+  "y": 2129.29,
+  "text": "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
+  "x": 79.53,
+  "h": 18.99,
+  "confidence": 1,
+  "w": 590.23
+ },
+ {
+  "y": 2147.78,
+  "text": "thồng phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
+  "x": 81.57,
+  "h": 21.37,
+  "confidence": 1,
+  "w": 584.07
+ },
+ {
+  "y": 2169.21,
+  "text": "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+  "x": 81.63,
+  "h": 19,
+  "confidence": 1,
+  "w": 542.09
+ },
+ {
+  "y": 2189.18,
+  "text": "Crystalline",
+  "x": 929.11,
+  "h": 58.5,
+  "confidence": 1,
+  "w": 285.03
+ },
+ {
+  "y": 2208.93,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc",
+  "x": 83.72,
+  "h": 16.83,
+  "confidence": 1,
+  "w": 581.86
+ },
+ {
+  "y": 2229.95,
+  "text": "lăp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm.",
+  "x": 83.72,
+  "h": 16.84,
+  "confidence": 1,
+  "w": 569.3
+ },
+ {
+  "y": 2248.8,
+  "text": "200",
+  "x": 956.51,
+  "h": 43.98,
+  "confidence": 1,
+  "w": 87.91
+ },
+ {
+  "y": 2265.55,
+  "text": "LAYERS",
+  "x": 1056.98,
+  "h": 27.23,
+  "confidence": 1,
+  "w": 127.67
+ },
+ {
+  "y": 2280,
+  "text": "AS LAILNO",
+  "x": 958.6,
+  "h": 14.66,
+  "confidence": 0.5,
+  "w": 223.95
+ },
+ {
+  "y": 2294.2,
+  "text": "> XEM THEM",
+  "x": 85.73,
+  "h": 21.87,
+  "confidence": 1,
+  "w": 115.28
+ },
+ {
+  "y": 2470.58,
+  "text": "TÊN BÀI VIẾT",
+  "x": 81.63,
+  "h": 33.51,
+  "confidence": 1,
+  "w": 240.7
+ },
+ {
+  "y": 2477.01,
+  "text": "ЗМ",
+  "x": 930,
+  "h": 161.19,
+  "confidence": 0.3,
+  "w": 276
+ },
+ {
+  "y": 2510.13,
+  "text": "Ngày 20.8.2026",
+  "x": 79.3,
+  "h": 21.65,
+  "confidence": 1,
+  "w": 126.14
+ },
+ {
+  "y": 2552.14,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "x": 81.63,
+  "h": 18.96,
+  "confidence": 1,
+  "w": 577.67
+ },
+ {
+  "y": 2571.07,
+  "text": "thống phân phối của TC.",
+  "x": 81.63,
+  "h": 18.93,
+  "confidence": 1,
+  "w": 203.02
+ },
+ {
+  "y": 2610.71,
+  "text": "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
+  "x": 81.63,
+  "h": 19.02,
+  "confidence": 1,
+  "w": 590.23
+ },
+ {
+  "y": 2631.79,
+  "text": "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
+  "x": 81.63,
+  "h": 16.8,
+  "confidence": 1,
+  "w": 583.95
+ },
+ {
+  "y": 2652.77,
+  "text": "hàng giái pháp giái trí và công nghệ hiện đại ngay tại địa phương.",
+  "x": 81.63,
+  "h": 16.87,
+  "confidence": 1,
+  "w": 542.09
+ },
+ {
+  "y": 2667.15,
+  "text": "Crystalline",
+  "x": 923.8,
+  "h": 67.5,
+  "confidence": 1,
+  "w": 294.41
+ },
+ {
+  "y": 2692.5,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc -",
+  "x": 83.72,
+  "h": 16.82,
+  "confidence": 1,
+  "w": 590.23
+ },
+ {
+  "y": 2713.51,
+  "text": "lắp đặt phụ kiện ô tô với đội ngũ ky thuật có tay nghê và quy trinh làm.",
+  "x": 83.72,
+  "h": 14.71,
+  "confidence": 1,
+  "w": 569.3
+ },
+ {
+  "y": 2727.42,
+  "text": "20 LAYERS",
+  "x": 954.26,
+  "h": 51.76,
+  "confidence": 1,
+  "w": 230.56
+ },
+ {
+  "y": 2775.81,
+  "text": "> XEM THEM",
+  "x": 85.71,
+  "h": 24.09,
+  "confidence": 1,
+  "w": 115.32
+ },
+ {
+  "y": 2947.54,
+  "text": "TÊN BÀI VIẾT",
+  "x": 81.29,
+  "h": 38.35,
+  "confidence": 1,
+  "w": 241.29
+ },
+ {
+  "y": 2988.3,
+  "text": "Ngày 20.8.2026",
+  "x": 79.16,
+  "h": 23.85,
+  "confidence": 1,
+  "w": 126.39
+ },
+ {
+  "y": 3029.64,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "x": 83.72,
+  "h": 16.85,
+  "confidence": 1,
+  "w": 573.49
+ },
+ {
+  "y": 3050.36,
+  "text": "thống phân phối cúa TC.",
+  "x": 79.53,
+  "h": 18.96,
+  "confidence": 1,
+  "w": 203.02
+ },
+ {
+  "y": 3050.68,
+  "text": "thông phân phối của TC.",
+  "x": 79.53,
+  "h": 18.96,
+  "confidence": 1,
+  "w": 205.12
+ },
+ {
+  "y": 3090.26,
+  "text": "Sự kiện này đánh dầu bước phát triền quan trọng trong việc mở rộng hệ",
+  "x": 81.63,
+  "h": 16.88,
+  "confidence": 1,
+  "w": 588.14
+ },
+ {
+  "y": 3107.11,
+  "text": "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
+  "x": 81.57,
+  "h": 21.06,
+  "confidence": 1,
+  "w": 584.07
+ },
+ {
+  "y": 3130,
+  "text": "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+  "x": 79.53,
+  "h": 18.93,
+  "confidence": 1,
+  "w": 544.19
+ },
+ {
+  "y": 3152.83,
+  "text": "Crystalline",
+  "x": 927.16,
+  "h": 59.15,
+  "confidence": 1,
+  "w": 286.85
+ },
+ {
+  "y": 3169.84,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc.",
+  "x": 83.72,
+  "h": 16.75,
+  "confidence": 1,
+  "w": 579.77
+ },
+ {
+  "y": 3188.57,
+  "text": "lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm.",
+  "x": 81.63,
+  "h": 18.97,
+  "confidence": 1,
+  "w": 571.4
+ },
+ {
+  "y": 3234.76,
+  "text": "ALAYERS",
+  "x": 1038.14,
+  "h": 18.85,
+  "confidence": 1,
+  "w": 144.42
+ },
+ {
+  "y": 3253.57,
+  "text": "> XEM THEM",
+  "x": 83.72,
+  "h": 18.93,
+  "confidence": 1,
+  "w": 117.21
+ },
+ {
+  "y": 3425.34,
+  "text": "TÊN BÀI VIẾT",
+  "x": 81.63,
+  "h": 35.73,
+  "confidence": 1,
+  "w": 240.7
+ },
+ {
+  "y": 3451.06,
+  "text": "ЗМ",
+  "x": 921.39,
+  "h": 138.98,
+  "confidence": 0.3,
+  "w": 275.14
+ },
+ {
+  "y": 3469.29,
+  "text": "Ngày 20.8.2026",
+  "x": 79.53,
+  "h": 18.93,
+  "confidence": 1,
+  "w": 125.58
+ },
+ {
+  "y": 3509.11,
+  "text": "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
+  "x": 81.63,
+  "h": 18.85,
+  "confidence": 1,
+  "w": 575.58
+ },
+ {
+  "y": 3527.86,
+  "text": "thống phân phối của TC.",
+  "x": 79.53,
+  "h": 21.07,
+  "confidence": 1,
+  "w": 203.02
+ },
+ {
+  "y": 3566.17,
+  "text": "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
+  "x": 81.56,
+  "h": 21.47,
+  "confidence": 1,
+  "w": 590.37
+ },
+ {
+  "y": 3588.57,
+  "text": "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
+  "x": 81.63,
+  "h": 16.87,
+  "confidence": 1,
+  "w": 583.95
+ },
+ {
+  "y": 3609.63,
+  "text": "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+  "x": 79.53,
+  "h": 18.94,
+  "confidence": 1,
+  "w": 544.19
+ },
+ {
+  "y": 3630.66,
+  "text": "Crystalline",
+  "x": 917.92,
+  "h": 60.47,
+  "confidence": 1,
+  "w": 300.15
+ },
+ {
+  "y": 3649.29,
+  "text": "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc",
+  "x": 83.72,
+  "h": 16.89,
+  "confidence": 1,
+  "w": 581.86
+ },
+ {
+  "y": 3668.21,
+  "text": "lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm.",
+  "x": 83.72,
+  "h": 16.81,
+  "confidence": 1,
+  "w": 569.3
+ },
+ {
+  "y": 3692.1,
+  "text": "20 LAYERS",
+  "x": 955.83,
+  "h": 48.87,
+  "confidence": 1,
+  "w": 229.46
+ },
+ {
+  "y": 3733.19,
+  "text": "> XEM THEM",
+  "x": 85.81,
+  "h": 18.95,
+  "confidence": 1,
+  "w": 115.12
+ },
+ {
+  "y": 3864,
+  "text": "1",
+  "x": 667.2,
+  "h": 20.8,
+  "confidence": 1,
+  "w": 20.8
+ },
+ {
+  "y": 3867.75,
+  "text": "2 3 ...",
+  "x": 714.48,
+  "h": 19.6,
+  "confidence": 1,
+  "w": 70.35
+ },
+ {
+  "y": 4035.9,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN",
+  "x": 729.52,
+  "h": 18.61,
+  "confidence": 1,
+  "w": 281.76
+ },
+ {
+  "y": 4036.8,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "x": 81.6,
+  "h": 14.44,
+  "confidence": 1,
+  "w": 254.4
+ },
+ {
+  "y": 4038.39,
+  "text": "KẾT NỒI VỚI TC",
+  "x": 1230.4,
+  "h": 14.41,
+  "confidence": 1,
+  "w": 99.2
+ },
+ {
+  "y": 4057.6,
+  "text": "093 617 6996",
+  "x": 1256,
+  "h": 9.7,
+  "confidence": 1,
+  "w": 54.4
+ },
+ {
+  "y": 4068.73,
+  "text": "Họ và tên của bạn",
+  "x": 748.8,
+  "h": 11.42,
+  "confidence": 1,
+  "w": 91.2
+ },
+ {
+  "y": 4075.2,
+  "text": "infor@tcautosolutions.vn",
+  "x": 1256,
+  "h": 8,
+  "confidence": 0.5,
+  "w": 104
+ },
+ {
+  "y": 4076.8,
+  "text": "TC luôn sẵn sàng lăng nghe và tư vẫn giải giáp phù",
+  "x": 81.6,
+  "h": 9.77,
+  "confidence": 1,
+  "w": 211.2
+ },
+ {
+  "y": 4082.89,
+  "text": "TC AUTO",
+  "x": 491.14,
+  "h": 21.42,
+  "confidence": 1,
+  "w": 99.33
+ },
+ {
+  "y": 4084.79,
+  "text": "Nhu cầu, câu hỏi của bạn...",
+  "x": 939.2,
+  "h": 11.21,
+  "confidence": 1,
+  "w": 132.8
+ },
+ {
+  "y": 4086.4,
+  "text": "hợp nhất dành cho bạn.",
+  "x": 81.6,
+  "h": 9.6,
+  "confidence": 1,
+  "w": 100.8
+ },
+ {
+  "y": 4089.43,
+  "text": "Thứ 2 - 7 | 8:00 - 17:30",
+  "x": 1256,
+  "h": 9.77,
+  "confidence": 1,
+  "w": 86.4
+ },
+ {
+  "y": 4100.8,
+  "text": "Số điện thoại",
+  "x": 748.8,
+  "h": 11.2,
+  "confidence": 1,
+  "w": 67.2
+ },
+ {
+  "y": 4102.4,
+  "text": "SOLUTIONS",
+  "x": 494.4,
+  "h": 11.2,
+  "confidence": 1,
+  "w": 91.2
+ },
+ {
+  "y": 4126.4,
+  "text": "GỬI",
+  "x": 1059.2,
+  "h": 14.4,
+  "confidence": 1,
+  "w": 25.6
+ },
+ {
+  "y": 4136.71,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "x": 81.51,
+  "h": 12.85,
+  "confidence": 1,
+  "w": 220.96
+ }
+]

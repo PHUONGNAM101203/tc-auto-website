@@ -1,0 +1,328 @@
+{
+  "_doc": "Noi dung tung muc cua 6 trang chinh, dung cho ban MOBILE. Chu lay tu page spec; anh cat tu lat nen o cot doi dien voi cot chu (tools/brand/extract-mobile-tiles.py).",
+  "heroes": {
+    "cong-nghe": {
+      "image": "/mobile/cong-nghe-hero.webp?v=481f8e0f",
+      "title": "THẾ GIỚI CỦA TC",
+      "slogan": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    "dai-ly": {
+      "image": "/mobile/dai-ly-hero.webp?v=e5f1b16f",
+      "title": "THẾ GIỚI CỦA TC",
+      "slogan": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    "giai-phap": {
+      "image": "/mobile/giai-phap-hero.webp?v=7c996552",
+      "title": "THẾ GIỚI CỦA TC",
+      "slogan": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    "home": {
+      "image": "/mobile/home-hero.webp?v=9b612d85",
+      "title": "THẾ GIỚI CỦA TC",
+      "slogan": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    "nhan-su": {
+      "image": "/mobile/nhan-su-hero.webp?v=b83f7f32",
+      "title": "THẾ GIỚI CỦA TC",
+      "slogan": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    "trai-nghiem": {
+      "image": "/mobile/trai-nghiem-hero.webp?v=c372354b",
+      "title": "THẾ GIỚI CỦA TC",
+      "slogan": "DRIVE · EXPERIENCE · ELEVATE"
+    }
+  },
+  "pages": {
+    "cong-nghe": [
+      {
+        "id": "cong-nghe-002",
+        "label": "TIÊN PHONG CÔNG NGHỆ",
+        "heading": "TIÊN PHONG CÔNG NGHỆ.<br>TRẢI NGHIỆM NÂNG TẦM.",
+        "body": "TC AUTO ứng dụng công nghệ tiên tiến để tạo nên những giải pháp vượt trội, tối ưu hiệu suất, nâng cao trải nghiệm và đồng hành cùng mọi hành trình",
+        "cta": {
+          "label": "TÌM HIỂU THÊM",
+          "itemId": "cong-nghe-004"
+        },
+        "image": "/mobile/cong-nghe-0.webp?v=5d61ad9c"
+      },
+      {
+        "id": "cong-nghe-008",
+        "label": "ỨNG DỤNG",
+        "heading": "TIÊN PHONG CÔNG NGHỆ.<br>TRẢI NGHIỆM NÂNG TẦM.",
+        "body": "TC AUTO ứng dụng công nghệ tiên tiến để tạo nên những giải pháp vượt trội, tối ưu hiệu suất, nâng cao trải nghiệm và đồng hành cùng mọi hành trình.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "cong-nghe-011"
+        },
+        "image": "/mobile/cong-nghe-1.webp?v=946004f6"
+      },
+      {
+        "id": "cong-nghe-012",
+        "label": "BẢO HÀNH",
+        "heading": "NÂNG TẦM GIÁ TRỊ.<br>ĐỒNG HÀNH BỀN VỮNG.",
+        "body": "TC AUTO cam kết bảo vệ giá trị sản phẩm bằng chính sách bảo hành minh bạch, rõ ràng và chuyên nghiệp, mang đến sự an tâm trong suốt quá trình sử dụng. Không chỉ đồng hành từ thời điểm lựa chọn và lắp đặt sản phẩm, TC AUTO luôn sẵn sàng hỗ trợ, tiếp nhận và xử lý các vấn đề phát sinh một cách tận tâm, nhanh chóng và trách nhiệm. Với định hướng lấy trải nghiệm khách hàng làm trọng tâm, TC AUTO xây dựng chính sách bảo hành như một lời cam kết về chất lượng sản phẩm, dịch vụ hậu mãi và sự đồng hành lâu dài, giúp khách hàng an tâm tận hưởng giá trị sản phẩm theo thời gian.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "cong-nghe-015"
+        },
+        "image": "/mobile/cong-nghe-2.webp?v=59de89d6"
+      },
+      {
+        "id": "cong-nghe-016",
+        "label": "KHÔNG GIAN TRẢI NGHIỆM",
+        "heading": "TRẢI NGHIỆM TRỰC TIẾP.<br>LỰA CHỌN KHÁC BIỆT.",
+        "body": "Đến trực tiếp TCAUTO để trải nghiệm công nghệ ô tô tiên tiến, khám phá đa dạng giải pháp phù hợp và tìm ra lựa chọn hoàn hảo, giúp nâng tầm diện mạo, tiện nghi và trải nghiệm trên mỗi hành trình của bạn.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "cong-nghe-019"
+        },
+        "image": "/mobile/cong-nghe-3.webp?v=5c269e57"
+      }
+    ],
+    "dai-ly": [
+      {
+        "id": "dai-ly-002",
+        "label": "MẠNG LƯỚI ĐẠI LÝ",
+        "heading": "SẴN SÀNG ĐỒNG HÀNH.<br>CÙNG NHAU BỨT PHÁ.",
+        "body": "TCAUTO tìm kiếm những đối tác cùng tầm nhìn để xây dựng mạng lưới phân phối chuyên nghiệp và phát triển lâu dài. Gia nhập ngay hôm nay để cùng khai thác tiềm năng thị trường và tạo nên những bước tiến khác biệt.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "dai-ly-005"
+        },
+        "image": "/mobile/dai-ly-0.webp?v=04553460"
+      },
+      {
+        "id": "dai-ly-006",
+        "label": "CÂU CHUYỆN ĐỒNG HÀNH",
+        "heading": "CÙNG NHAU ĐI XA.<br>CÙNG NHAU TẠO GIÁ TRỊ.",
+        "body": "Mỗi sự hợp tác là một hành trình được xây dựng từ niềm tin và những giá trị chung. Tại TCAUTO, chúng tôi trân trọng từng đối tác đồng hành, cùng đưa sản phẩm và giải pháp ô tô chất lượng đến gần hơn với khách hàng. Cùng nhau phát triển, nâng chuẩn dịch vụ và tạo nên những giá trị bền vững.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "dai-ly-009"
+        },
+        "image": "/mobile/dai-ly-1.webp?v=8a0d1c3e"
+      },
+      {
+        "id": "dai-ly-010",
+        "label": "CHÂN DUNG ĐẠI LÝ",
+        "heading": "NHỮNG CON NGƯỜI<br>TẠO NÊN KHÁC BIỆT.",
+        "body": "TCAUTO tìm kiếm những đối tác cùng tầm nhìn để xây dựng mạng lưới phân phối chuyên nghiệp và phát triển lâu dài. Gia nhập ngay hôm nay để cùng khai thác tiềm năng thị trường và tạo nên những bước tiến khác biệt.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "dai-ly-013"
+        },
+        "image": "/mobile/dai-ly-2.webp?v=d498fa24"
+      },
+      {
+        "id": "dai-ly-014",
+        "label": "HỖ TRỢ TIẾP THỊ",
+        "heading": "ĐỒNG HÀNH TRUYỀN THÔNG.<br>NÂNG TẦM THƯƠNG HIỆU.",
+        "body": "TCAUTO cùng đại lý xây dựng hình ảnh chuyên nghiệp và gia tăng sức mạnh thương hiệu thông qua những giải pháp marketing đồng bộ, sáng tạo và phù hợp với từng thị trường.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "dai-ly-017"
+        },
+        "image": "/mobile/dai-ly-3.webp?v=6b40f8e2"
+      },
+      {
+        "id": "dai-ly-018",
+        "label": "BỘ SƯU TẬP THEO THƯƠNG HIỆU",
+        "heading": "KHÁM PHÁ DẤU ẤN TỪ NHỮNG<br>THƯƠNG HIỆU HÀNG ĐẦU.",
+        "body": "Mỗi thương hiệu mang một tinh thần, một công nghệ và một dấu ấn riêng. Khám phá bộ sưu tập hình ảnh các sản phẩm và giải pháp nổi bật được TCAUTO tuyển chọn, nơi chất lượng, thiết kế và công nghệ cùng tạo nên trải nghiệm khác biệt.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "dai-ly-021"
+        },
+        "image": "/mobile/dai-ly-4.webp?v=be4e9950"
+      }
+    ],
+    "giai-phap": [
+      {
+        "id": "giai-phap-004",
+        "label": "PHIM CÁCH NHIỆT",
+        "heading": "LÁ CHẮN NHIỆT CÔNG NGHỆ CAO<br>NÂNG TẦM TRẢI NGHIỆM LÁI.",
+        "body": "",
+        "cta": null
+      },
+      {
+        "id": "giai-phap-006",
+        "label": "PPF",
+        "heading": "BẢO VỆ VẺ ĐẸP NGUYÊN BẢN.<br>GIỮ TRỌN GIÁ TRỊ XE.",
+        "body": "PPF chính hãng tại TC Auto giúp bảo vệ lớp sơn nguyên bản trước trầy xước, đá văng và tác động môi trường, giữ cho chiếc xe luôn sáng bóng và bền đẹp theo thời gian.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "giai-phap-010"
+        },
+        "image": "/mobile/giai-phap-1.webp?v=3ba5f2cb"
+      },
+      {
+        "id": "giai-phap-011",
+        "label": "LOA NỘI THẤT",
+        "heading": "ÂM THANH CHUẨN MỰC<br>TRẢI NGHIỆM XỨNG TẦM.",
+        "body": "DEGO tại TC Auto mang đến trải nghiệm âm thanh chuẩn Đức với khả năng tái tạo âm sắc tự nhiên, chi tiết và cân bằng. Từng hệ thống được lựa chọn và nâng cấp phù hợp với không gian xe, để mỗi giai điệu trở nên sống động hơn và mỗi hành trình trở thành một trải nghiệm đáng nhớ.",
+        "cta": null,
+        "image": "/mobile/giai-phap-2.webp?v=5af521fc"
+      },
+      {
+        "id": "giai-phap-014",
+        "label": "MÀN HÌNH Ô TÔ",
+        "heading": "NÂNG TẦM TRẢI NGHIỆM<br>DẪN LỐI TƯƠNG LAI.",
+        "body": "Màn hình ô tô chính hãng tại TC Auto mang đến không gian giải trí và kết nối thông minh, tích hợp dẫn đường, nghe nhạc, gọi điện và các tiện ích hỗ trợ lái, giúp mỗi hành trình trở nên tiện nghi, trực quan và trọn vẹn hơn.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "giai-phap-017"
+        },
+        "image": "/mobile/giai-phap-3.webp?v=d3e55a94"
+      },
+      {
+        "id": "giai-phap-018",
+        "label": "CÁC DỰ ÁN ĐÃ TRIỂN KHAI",
+        "heading": "KẾT NỐI HỆ SINH THÁI<br>CÙNG NHAU VƯƠN XA.",
+        "body": "TC Auto đồng hành cùng các đại lý và đối tác trên toàn quốc, kết nối sản phẩm chính hãng, giải pháp chuyên nghiệp và quy trình hỗ trợ toàn diện để cùng kiến tạo những giá trị bền vững trong ngành phụ kiện ô tô.TC Auto đồng hành cùng các đại lý và đối tác trên toàn quốc, kết nối sản phẩm chính hãng, giải pháp chuyên nghiệp và quy trình hỗ trợ toàn diện để cùng kiến tạo những giá trị.",
+        "cta": {
+          "label": "XEM DỰ ÁN",
+          "itemId": "giai-phap-022"
+        },
+        "image": "/mobile/giai-phap-4.webp?v=8f2a05bf"
+      }
+    ],
+    "home": [
+      {
+        "id": "home-003",
+        "label": "TRẢI NGHIỆM",
+        "heading": "TỪNG KHOẢNH<br>KHẮC, KIẾN TẠO<br>HÀNH TRÌNH.",
+        "body": "Khám phá những khoảnh khắc truyền cảm hứng và phong cách sống dành riêng cho những người yêu xe",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "home-006"
+        },
+        "image": "/mobile/home-0.webp?v=d5ba9116"
+      },
+      {
+        "id": "home-007",
+        "label": "GIẢI PHÁP",
+        "heading": "KIẾN TẠO GIẢI PHÁP<br>NÂNG TẦM TRẢI NGHIỆM.",
+        "body": "Mỗi giải pháp được thiết kế để nâng tầm trải nghiệm lái xe của bạn - tinh tế, bền vững và khác biệt.",
+        "cta": {
+          "label": "XEM GIẢI PHÁP",
+          "itemId": "home-010"
+        },
+        "image": "/mobile/home-1.webp?v=370b773e"
+      },
+      {
+        "id": "home-011",
+        "label": "CÔNG NGHỆ",
+        "heading": "CÔNG NGHỆ TIÊN PHONG.<br>GIÁ TRỊ TRƯỜNG TỒN.",
+        "body": "Công nghệ tiên tiến - Kiểm nghiệm thực tế - Bảo chứng dài lâu.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "home-014"
+        },
+        "image": "/mobile/home-2.webp?v=c2145ad1"
+      },
+      {
+        "id": "home-015",
+        "label": "ĐẠI LÝ",
+        "heading": "ĐỒNG LÒNG MẠNH.<br>CÙNG TIẾN XA.",
+        "body": "Mạng lưới đại uý uy tín cùng đồng hành, mang đến trải nghiệm tốt nhất cho khách hàng.",
+        "cta": {
+          "label": "KHÁM PHÁ HỆ THỐNG ĐẠI LÝ",
+          "itemId": "home-018"
+        },
+        "image": "/mobile/home-3.webp?v=dda486ba"
+      },
+      {
+        "id": "home-019",
+        "label": "CÂU CHUYỆN KHỞI NGHIỆP",
+        "heading": "KHỞI NGHIỆP<br>KHÔNG DỄ.",
+        "body": "Đằng sau một thương hiệu được nhiều người biết đến là những câu chuyện khởi nghiệp phải đánh đổi cả thanh xuân...",
+        "cta": {
+          "label": "KHÁM PHÁ CON NGƯỜI TC",
+          "itemId": "home-022"
+        },
+        "image": "/mobile/home-4.webp?v=495fe16c"
+      }
+    ],
+    "nhan-su": [
+      {
+        "id": "nhan-su-002",
+        "label": "VĂN HOÁ TC",
+        "heading": "NƠI GIÁ TRỊ CHUNG TẠO<br>NÊN SỨC MẠNH CHUNG.",
+        "body": "Văn hoá TC AUTO được xây dựng từ sự chính trực, tinh thần chủ động và khát vọng không ngừng tiến về phía trước. Mỗi cá nhân cùng chia sẻ giá trị, cùng phát huy thế mạnh và tạo nên một tập thể khác biệt, chuyên nghiệp và bền vững.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "nhan-su-005"
+        },
+        "image": "/mobile/nhan-su-0.webp?v=88748b1b"
+      },
+      {
+        "id": "nhan-su-006",
+        "label": "NHÂN SỰ TC",
+        "heading": "ĐẰNG SAU MỖI BƯỚC<br>TIẾN LÀ MỘT TẬP THỂ.",
+        "body": "Từ những cá nhân giàu năng lực đến một tập thể cùng chung mục tiêu, TC AUTO xây dựng môi trường nơi mỗi người được phát huy thế mạnh, không ngừng phát triển và cùng tạo nên những giá trị bền vững.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "nhan-su-009"
+        },
+        "image": "/mobile/nhan-su-1.webp?v=b5d4cf39"
+      },
+      {
+        "id": "nhan-su-010",
+        "label": "TUYỂN DỤNG",
+        "heading": "CÙNG NHAU TẠO NÊN<br>ĐIỀU LỚN HƠN.",
+        "body": "TC AUTO tin rằng những giá trị lớn được tạo nên từ những con người cùng chung tinh thần và khát vọng. Mỗi thành viên được trao cơ hội phát huy thế mạnh, không ngừng học hỏi và cùng đóng góp vào hành trình phát triển chung.",
+        "cta": {
+          "label": "THAM GIA TUYỂN DỤNG",
+          "itemId": "nhan-su-013"
+        },
+        "image": "/mobile/nhan-su-2.webp?v=3c48e6d6"
+      }
+    ],
+    "trai-nghiem": [
+      {
+        "id": "trai-nghiem-002",
+        "label": "HÀNH TRÌNH",
+        "heading": "TẬN HƯỞNG TỪNG KHOẢNH<br>KHẮC TRÊN HÀNH TRÌNH.",
+        "body": "TC AUTO tin rằng mỗi hành trình không chỉ được đo bằng quãng đường, mà còn bằng những trải nghiệm trên từng cung đường. Từ cảm giác lái, sự tiện nghi đến những khám phá mới, chúng tôi mang đến những giải pháp giúp mỗi chuyến đi trở nên trọn vẹn, thoải mái và đáng nhớ hơn.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "trai-nghiem-005"
+        },
+        "image": "/mobile/trai-nghiem-0.webp?v=5497c5bf"
+      },
+      {
+        "id": "trai-nghiem-006",
+        "label": "BẢN SẮC RIÊNG",
+        "heading": "ĐỊNH HÌNH DẤU ẤN.<br>KHẲNG ĐỊNH CHẤT RIÊNG.",
+        "body": "TC AUTO tin rằng mỗi chiếc xe là một cách thể hiện cá tính và dấu ấn riêng. Từ những lựa chọn về công nghệ, tiện nghi đến từng chi tiết nâng cấp, chúng tôi giúp bạn tạo nên không gian phù hợp với nhu cầu, gu thẩm mỹ và cách tận hưởng hành trình của riêng mình.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "trai-nghiem-009"
+        },
+        "image": "/mobile/trai-nghiem-1.webp?v=19b3add6"
+      },
+      {
+        "id": "trai-nghiem-010",
+        "label": "KHOẢNH KHẮC",
+        "heading": "LƯU GIỮ NHỮNG<br>KHOẢNH KHẮC ĐÁNG NHỚ.",
+        "body": "TC AUTO trân trọng những khoảnh khắc được tạo nên trên mỗi hành trình. Từ những chuyến đi xa đến những phút giây đời thường, mỗi trải nghiệm đều mang một câu chuyện riêng - nơi chiếc xe không chỉ đồng hành, mà trở thành một phần của những ký ức đáng nhớ.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "trai-nghiem-013"
+        },
+        "image": "/mobile/trai-nghiem-2.webp?v=eb73159a"
+      },
+      {
+        "id": "trai-nghiem-014",
+        "label": "PHONG CÁCH SỐNG",
+        "heading": "TẬN HƯỞNG CUNG ĐƯỜNG.<br>ĐỊNH HÌNH PHONG CÁCH SỐNG.",
+        "body": "Không chỉ là phương tiện di chuyển, chiếc xe trở thành không gian để tận hưởng và thể hiện cá tính. TC AUTO đồng hành cùng bạn trên mọi cung đường, nâng tầm trải nghiệm và tạo nên phong cách sống riêng.",
+        "cta": {
+          "label": "KHÁM PHÁ NGAY",
+          "itemId": "trai-nghiem-017"
+        },
+        "image": "/mobile/trai-nghiem-3.webp?v=a0e36e74"
+      }
+    ]
+  }
+}

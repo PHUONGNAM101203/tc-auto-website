@@ -1,0 +1,123 @@
+{
+  "slug": "dai-ly/mang-luoi-dai-ly",
+  "route": "/dai-ly/mang-luoi-dai-ly",
+  "title": "Mạng lưới đại lý",
+  "section": "dai-ly",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2033.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@2x.webp?v=75f14969",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@2x.webp?v=75f14969",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@3x.webp?v=7eb7b007",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 196096,
+      "bytesByScale": {
+        "2": 196096,
+        "3": 332060
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-1@2x.webp?v=05d57318",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-1@2x.webp?v=05d57318",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-1@3x.webp?v=9d8d38f8",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 138282,
+      "bytesByScale": {
+        "2": 138282,
+        "3": 236794
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-2@2x.webp?v=612b97bd",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-2@2x.webp?v=612b97bd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-2@3x.webp?v=8ce76962",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 233.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 466,
+      "bytes": 36368,
+      "bytesByScale": {
+        "2": 36368,
+        "3": 60438
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 1910.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    }
+  ],
+  "sourceFile": "2.1 MẠNG LƯỚI ĐẠI LÝ - 1.png"
+}

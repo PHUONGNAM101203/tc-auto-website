@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Thu tu quan trong: reset -> fonts -> canvas (thiet ke Figma) -> motion.
+   canvas.css phai nam SAU reset.css de giu dung padding/margin goc. */
+@import "../styles/reset.css";
+@import "../styles/fonts.css";
+@import "../styles/canvas.css";
+@import "../styles/motion.css";
+@import "../styles/overlay.css";
+@import "../styles/authored.css";
+@import "../styles/mobile.css";
+@import "../styles/admin.css";
+
+html,
+body {
+  background: #02111c;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Bo outline mac dinh nhung giu focus-visible cho dieu huong ban phim */
+.tc-root :focus:not(:focus-visible) {
+  outline: none;
+}
+
+.tc-admin {
+  background: #0b1220;
+}
+
+@theme inline {
+  --color-navy: #02111c;
+  --color-navy-soft: #0a2539;
+  --color-brand: #c22326;
+  --color-brand-soft: #f69293;
+  --color-sky: #a6e4ff;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Unbounded", ui-sans-serif, sans-serif;
+  --font-serif: "Cormorant Infant", ui-serif, Georgia, serif;
+}

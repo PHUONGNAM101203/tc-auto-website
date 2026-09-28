@@ -1,0 +1,490 @@
+/* ---------------------------------------------------------------------------
+   motion.css — lop hieu ung bo sung.
+   NGUYEN TAC: trang thai KET THUC cua moi animation phai trung khop 100%
+   voi thiet ke Figma (opacity 1, transform none, clip-path day du).
+   Hieu ung chi tac dong luc vao/hover/focus — khong doi layout, mau, font.
+--------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ---------- 1. Reveal khi cuon toi (text, tieu de, nut) ---------- */
+.rv {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--rv-delay, 0ms);
+}
+
+/* will-change CHI bat trong luc animation dang chay.
+   Bat san tren moi phan tu se tao hang chuc layer GPU cung luc — chinh la nguyen
+   nhan giat khi cuon trang dai. */
+.rv.is-in:not(.is-settled) {
+  will-change: opacity, transform;
+}
+
+.rv[data-rv="left"] {
+  transform: translate3d(-28px, 0, 0);
+}
+
+.rv[data-rv="right"] {
+  transform: translate3d(28px, 0, 0);
+}
+
+.rv[data-rv="scale"] {
+  transform: scale(0.965);
+}
+
+.rv.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Tat will-change sau khi xong de giai phong layer GPU */
+.rv.is-settled {
+  will-change: auto;
+  transition: none;
+}
+
+/* ---------- 2. Slice nen: wipe tu duoi len, vi tri tuyet doi khong doi ---------- */
+.sl {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sl.is-in:not(.is-settled) {
+  will-change: clip-path;
+}
+
+/* DA THU `content-visibility: auto` o day va da BO.
+   Loi thi it (trinh duyet von da khong to phan ngoai khung nhin), nhung hai thi
+   nhieu: phan chua cuon toi khong co hop bo cuc, khien anh dat loading="lazy"
+   khong bao gio duoc tai, va co the chop trang khi cuon nhanh.
+   Thu that su lam het giat la bo `will-change` mac dinh o tren. */
+
+.sl.is-in {
+  clip-path: inset(0 0 0 0);
+}
+
+.sl.is-settled {
+  clip-path: none;
+  will-change: auto;
+  transition: none;
+}
+
+/* ---------- 3. Hero: line mask wipe ---------- */
+.hero-line {
+  display: block;
+  clip-path: inset(0 0 110% 0);
+  transform: translate3d(0, 0.34em, 0);
+  transition: clip-path 1s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--rv-delay, 0ms);
+}
+
+.hero-line.is-in {
+  clip-path: inset(-0.2em 0 -0.2em 0);
+  transform: none;
+}
+
+/* Bo clip-path han sau khi xong: giu lai se tao containing block cho con
+   absolute/fixed va giu mot layer GPU khong can thiet. */
+.hero-line.is-settled {
+  clip-path: none;
+  transform: none;
+  transition: none;
+}
+
+/* ---------- 4. Nut: sheen sweep + lift ---------- */
+/* KHONG dat `position` o day: `.it { position: absolute }` trong canvas.css co
+   cung specificity, neu ghi de thi nut roi vao normal flow va bi .pg cat mat.
+   `.it.btn` va `.ff button` da la absolute nen du lam containing block cho ::after. */
+.btn {
+  overflow: hidden;
+  isolation: isolate;
+  transition: background 0.2s, box-shadow 0.25s, transform 0.25s
+    cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    105deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.38) 50%,
+    transparent 62%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.62s cubic-bezier(0.32, 0.72, 0, 1);
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  transform: translateX(130%);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px -8px rgba(194, 35, 38, 0.65);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------- 5. Nav: gach chan chay tu giua (chi khi hover/focus) ---------- */
+.nv::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 3px;
+  height: 1.5px;
+  background: var(--red-nav);
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
+  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nv:hover::after,
+.nv:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Muc dang active: gach chan chi hien khi hover, giu dung thiet ke tinh. */
+.nv.act::after {
+  left: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.nv i {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nv:hover i {
+  transform: translateX(3px);
+}
+
+/* ---------- 6. Logo hotspot: nhan nhe khi hover ---------- */
+.logo {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logo:hover {
+  transform: scale(1.035);
+}
+
+/* ---------- 7. Thanh tien do cuon ---------- */
+.tc-progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--red) 0%, var(--red-h) 100%);
+  z-index: 60;
+  pointer-events: none;
+}
+
+/* ---------- 8. Chuyen trang: man do queo qua ---------- */
+.tc-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: var(--navy);
+  pointer-events: none;
+  transform: translate3d(0, 100%, 0);
+}
+
+.tc-curtain[data-state="cover"] {
+  animation: tc-cover 0.44s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.tc-curtain[data-state="reveal"] {
+  animation: tc-reveal 0.52s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes tc-cover {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes tc-reveal {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+/* ---------- 9. Con tro vong tron (chi desktop co chuot) ---------- */
+.tc-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  z-index: 65;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s, width 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.28s cubic-bezier(0.16, 1, 0.3, 1), margin 0.28s
+    cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s, background 0.28s;
+}
+
+.tc-cursor.is-on {
+  opacity: 1;
+}
+
+.tc-cursor.is-hot {
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border-color: var(--red-nav);
+  background: rgba(255, 57, 61, 0.12);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .tc-cursor {
+    display: none;
+  }
+}
+
+/* ---------- 10. Form: trang thai gui ---------- */
+.ff button {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ff button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.ff button:disabled {
+  opacity: 0.72;
+  cursor: progress;
+}
+
+.ff input,
+.ff textarea {
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.25s;
+}
+
+.ff input:focus,
+.ff textarea:focus {
+  box-shadow: 0 0 0 3px rgba(166, 228, 255, 0.14);
+}
+
+.ff [aria-invalid="true"] {
+  border-color: var(--red) !important;
+}
+
+/* ---------- 11. Toast (giu nguyen thiet ke prototype) ---------- */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(20px);
+  background: #0a2539;
+  border: 1px solid var(--sky);
+  color: #fff;
+  font: 500 14px "Montserrat", sans-serif;
+  padding: 12px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 99;
+  pointer-events: none;
+  max-width: min(88vw, 420px);
+  text-align: center;
+}
+
+.toast.is-on {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.toast[data-tone="error"] {
+  border-color: var(--red-h);
+}
+
+/* ---------- 12. Ket qua tim kiem (overlay, khong che thiet ke) ---------- */
+.tc-search-pop {
+  position: absolute;
+  left: 0;
+  top: 36px;
+  width: 235px;
+  max-height: 268px;
+  overflow-y: auto;
+  background: #06203a;
+  border: 1px solid rgba(166, 228, 255, 0.35);
+  border-radius: 7px;
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.75);
+  padding: 4px;
+  z-index: 20;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.22s, transform 0.22s;
+}
+
+.tc-search-pop.is-on {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.tc-search-hit {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  padding: 7px 9px;
+  color: #fff;
+  font: 400 10.5px/14px "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: background 0.16s;
+}
+
+.tc-search-hit:hover,
+.tc-search-hit[aria-selected="true"] {
+  background: rgba(166, 228, 255, 0.14);
+}
+
+.tc-search-hit span {
+  display: block;
+  font: 700 9px/12px "Unbounded", sans-serif;
+  color: var(--red-nav);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.tc-search-empty {
+  padding: 10px;
+  font: 300 10px "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- 13. Man cho tai trang dau ---------- */
+.tc-boot {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: var(--navy);
+  display: grid;
+  place-items: center;
+  transition: opacity 0.55s ease 0.1s, visibility 0.55s ease 0.1s;
+}
+
+.tc-boot[data-done="true"] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tc-boot-bar {
+  width: 148px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+
+.tc-boot-bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 40%;
+  background: var(--red);
+  animation: tc-boot-slide 0.9s ease-in-out infinite;
+}
+
+@keyframes tc-boot-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+/* ---------- 14. Ton trong prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .rv,
+  .sl,
+  .hero-line {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  .btn::after,
+  .tc-cursor,
+  .tc-progress {
+    display: none;
+  }
+
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .tc-curtain {
+    display: none;
+  }
+
+  .tc-boot-bar::after {
+    animation: none;
+    width: 100%;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Nhan muc dung lam loi vao trang con ----------
+   Thiet ke khong ve nut cho vai muc, nen chinh nhan muc tro thanh lien ket.
+   Trang thai TINH giu nguyen 100%; chi them tin hieu khi ro chuot vao. */
+.tc-label-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tc-label-link:hover {
+  filter: brightness(1.25);
+}
+
+.tc-label-link:focus-visible {
+  outline: 2px solid var(--red-nav);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-label-link:hover {
+    filter: none;
+  }
+}

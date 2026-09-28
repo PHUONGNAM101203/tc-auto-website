@@ -1,0 +1,167 @@
+{
+  "slug": "giai-phap/du-an",
+  "route": "/giai-phap/du-an",
+  "title": "Các dự án đã triển khai",
+  "section": "giai-phap",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3690.0,
+  "slices": [
+    {
+      "src": "/slices/sub/giai-phap__du-an-0@2x.webp?v=f1cb4e67",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__du-an-0@2x.webp?v=f1cb4e67",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__du-an-0@3x.webp?v=2bcefe81",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 192264,
+      "bytesByScale": {
+        "2": 192264,
+        "3": 344514
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__du-an-1@2x.webp?v=58a41918",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__du-an-1@2x.webp?v=58a41918",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__du-an-1@3x.webp?v=309a7046",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 279016,
+      "bytesByScale": {
+        "2": 279016,
+        "3": 461062
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__du-an-2@2x.webp?v=ba3449cc",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__du-an-2@2x.webp?v=ba3449cc",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__du-an-2@3x.webp?v=65ea5fa8",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 289772,
+      "bytesByScale": {
+        "2": 289772,
+        "3": 473400
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__du-an-3@2x.webp?v=28b24a52",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__du-an-3@2x.webp?v=28b24a52",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__du-an-3@3x.webp?v=a47420e1",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 186496,
+      "bytesByScale": {
+        "2": 186496,
+        "3": 310260
+      }
+    },
+    {
+      "src": "/slices/sub/giai-phap__du-an-4@2x.webp?v=3bdb9b30",
+      "srcSet": [
+        {
+          "src": "/slices/sub/giai-phap__du-an-4@2x.webp?v=3bdb9b30",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/giai-phap__du-an-4@3x.webp?v=52babc7b",
+          "scale": 3
+        }
+      ],
+      "y": 3600.0,
+      "displayHeight": 90.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 180,
+      "bytes": 14270,
+      "bytesByScale": {
+        "2": 14270,
+        "3": 23214
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": true
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3567.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Giải pháp",
+      "href": "/giai-phap"
+    }
+  ],
+  "sourceFile": "6.1 CÁC DỰ ÁN ĐÃ TRIỂN KHAI.png"
+}

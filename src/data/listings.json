@@ -1,0 +1,45 @@
+{
+ "_doc": "So trang cua moi danh sach duoc TINH TU DU LIEU, khong ghi cung. itemsAvailable = so bai/muc thuc su co noi dung (hien bang so dong ve trong thiet ke, tuc dung mot trang). perPage = so muc mot trang theo bo cuc thiet ke. Khi khach bo sung bai, tang itemsAvailable len la so trang tu tang — khong phai sua code.",
+ "listings": {
+  "trai-nghiem/phong-cach-song": {
+   "itemsAvailable": 6,
+   "perPage": 6
+  },
+  "giai-phap/man-hinh": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  },
+  "giai-phap/du-an": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  },
+  "cong-nghe/tien-phong-cong-nghe/bai-viet": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  },
+  "cong-nghe/ung-dung/cap-nhat-va-loi": {
+   "itemsAvailable": 15,
+   "perPage": 15
+  },
+  "cong-nghe/ung-dung/kho-ung-dung": {
+   "itemsAvailable": 15,
+   "perPage": 15
+  },
+  "dai-ly/cau-chuyen-dong-hanh": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  },
+  "dai-ly/chan-dung-dai-ly": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  },
+  "dai-ly/gallery-by-brand": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  },
+  "nhan-su/tuyen-dung/vi-tri-dang-tuyen": {
+   "itemsAvailable": 5,
+   "perPage": 5
+  }
+ }
+}

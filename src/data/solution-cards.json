@@ -1,0 +1,54 @@
+{
+  "_doc": "Dai the muc Giai phap tren trang chu. Hinh hoc do tu Home.png; tieu de doc tu chinh anh thiet ke. The 'loa' bi cat o mep canvas nen khong co chu trong anh — chu do CSS ve, danh dau labelInCss.",
+  "view": {
+    "x": 539,
+    "y": 1458,
+    "width": 901,
+    "height": 371
+  },
+  "card": {
+    "width": 263,
+    "height": 371
+  },
+  "pitch": 279,
+  "arrow": {
+    "x": 1400,
+    "y": 1629,
+    "width": 10.33,
+    "height": 30
+  },
+  "cards": [
+    {
+      "id": "phim-cach-nhiet",
+      "title": "PHIM CÁCH NHIỆT",
+      "subtitle": "3M | 5DO",
+      "href": "/giai-phap/phim-dan-kinh",
+      "src": "/solutions/phim-cach-nhiet.webp?v=e9053237",
+      "labelInCss": false
+    },
+    {
+      "id": "ppf",
+      "title": "PPF",
+      "subtitle": "3M | 5DO",
+      "href": "/giai-phap/ppf",
+      "src": "/solutions/ppf.webp?v=0358c97d",
+      "labelInCss": false
+    },
+    {
+      "id": "phu-kien",
+      "title": "PHỤ KIỆN",
+      "subtitle": "WINCA",
+      "href": "/giai-phap/man-hinh",
+      "src": "/solutions/phu-kien.webp?v=0aa03412",
+      "labelInCss": false
+    },
+    {
+      "id": "loa",
+      "title": "LOA",
+      "subtitle": "DEGO",
+      "href": "/giai-phap/loa",
+      "src": "/solutions/loa.webp?v=d423067a",
+      "labelInCss": true
+    }
+  ]
+}

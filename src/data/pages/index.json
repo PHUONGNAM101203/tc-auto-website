@@ -1,0 +1,50 @@
+[
+ {
+  "slug": "home",
+  "route": "/",
+  "title": "Trang chủ",
+  "height": 3566.0,
+  "items": 23,
+  "slices": 4
+ },
+ {
+  "slug": "trai-nghiem",
+  "route": "/trai-nghiem",
+  "title": "Trải nghiệm",
+  "height": 3464.0,
+  "items": 18,
+  "slices": 4
+ },
+ {
+  "slug": "giai-phap",
+  "route": "/giai-phap",
+  "title": "Giải pháp",
+  "height": 5977.0,
+  "items": 23,
+  "slices": 7
+ },
+ {
+  "slug": "cong-nghe",
+  "route": "/cong-nghe",
+  "title": "Công nghệ",
+  "height": 4087.0,
+  "items": 20,
+  "slices": 5
+ },
+ {
+  "slug": "dai-ly",
+  "route": "/dai-ly",
+  "title": "Đại lý",
+  "height": 4577.0,
+  "items": 22,
+  "slices": 6
+ },
+ {
+  "slug": "nhan-su",
+  "route": "/nhan-su",
+  "title": "Nhân sự",
+  "height": 3374.0,
+  "items": 14,
+  "slices": 4
+ }
+]

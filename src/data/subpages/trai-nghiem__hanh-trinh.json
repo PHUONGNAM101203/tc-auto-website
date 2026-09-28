@@ -1,0 +1,123 @@
+{
+  "slug": "trai-nghiem/hanh-trinh",
+  "route": "/trai-nghiem/hanh-trinh",
+  "title": "Hành trình",
+  "section": "trai-nghiem",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2140.0,
+  "slices": [
+    {
+      "src": "/slices/sub/trai-nghiem__hanh-trinh-0@2x.webp?v=30afeb5f",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-0@2x.webp?v=30afeb5f",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-0@3x.webp?v=1d5f45fd",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 98552,
+      "bytesByScale": {
+        "2": 98552,
+        "3": 174032
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__hanh-trinh-1@2x.webp?v=f955eca2",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-1@2x.webp?v=f955eca2",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-1@3x.webp?v=711d6410",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 195754,
+      "bytesByScale": {
+        "2": 195754,
+        "3": 321110
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__hanh-trinh-2@2x.webp?v=f24e4430",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-2@2x.webp?v=f24e4430",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-2@3x.webp?v=43a407d5",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 340.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 680,
+      "bytes": 45348,
+      "bytesByScale": {
+        "2": 45348,
+        "3": 75996
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 2017.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Trải nghiệm",
+      "href": "/trai-nghiem"
+    }
+  ],
+  "sourceFile": "2.HÀNH TRÌNH.png"
+}

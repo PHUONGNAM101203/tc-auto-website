@@ -1,0 +1,149 @@
+{
+  "slug": "trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao",
+  "route": "/trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao",
+  "title": "Đổi màu, đổi diện mạo. Còn điều gì vẫn ở đó?",
+  "section": "trai-nghiem",
+  "isArticle": true,
+  "canvasWidth": 1440,
+  "height": 3573.0,
+  "slices": [
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-0@2x.webp?v=1e086dbe",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-0@2x.webp?v=1e086dbe",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-0@3x.webp?v=5e4d9cb0",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 104056,
+      "bytesByScale": {
+        "2": 104056,
+        "3": 180634
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-1@2x.webp?v=e2e990dd",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-1@2x.webp?v=e2e990dd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-1@3x.webp?v=5b4a94a8",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 132864,
+      "bytesByScale": {
+        "2": 132864,
+        "3": 223230
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-2@2x.webp?v=451caa77",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-2@2x.webp?v=451caa77",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-2@3x.webp?v=4b186f15",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 67430,
+      "bytesByScale": {
+        "2": 67430,
+        "3": 112920
+      }
+    },
+    {
+      "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-3@2x.webp?v=0b64de26",
+      "srcSet": [
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-3@2x.webp?v=0b64de26",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-3@3x.webp?v=88e16bfc",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 873.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1746,
+      "bytes": 168790,
+      "bytesByScale": {
+        "2": 168790,
+        "3": 285328
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": true
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3450.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Trải nghiệm",
+      "href": "/trai-nghiem"
+    },
+    {
+      "label": "Phong cách sống",
+      "href": "/trai-nghiem/phong-cach-song"
+    }
+  ],
+  "sourceFile": "5.1ĐỔI MÀU, ĐỔI DIỆN MẠO. CÒN ĐIỀU GÌ VẪN Ở ĐÓ_.png"
+}

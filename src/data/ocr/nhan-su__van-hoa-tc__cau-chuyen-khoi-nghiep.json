@@ -1,0 +1,938 @@
+[
+ {
+  "y": 39.19,
+  "confidence": 1,
+  "x": 129.65,
+  "h": 22.14,
+  "w": 102.8,
+  "text": "TC AUTO"
+ },
+ {
+  "y": 43.93,
+  "confidence": 1,
+  "x": 1149.07,
+  "h": 16.8,
+  "w": 106.74,
+  "text": "Q Nhập để tìm kiếm...."
+ },
+ {
+  "y": 53.82,
+  "confidence": 1,
+  "x": 937.55,
+  "h": 18.02,
+  "w": 83.97,
+  "text": "NHÂN SỰ ›"
+ },
+ {
+  "y": 54.18,
+  "confidence": 1,
+  "x": 851.79,
+  "h": 17.29,
+  "w": 60.84,
+  "text": "ĐẠI LÝ >"
+ },
+ {
+  "y": 54.29,
+  "confidence": 1,
+  "x": 462.56,
+  "h": 16.92,
+  "w": 110.93,
+  "text": "TRẢI NGHIỆM ›"
+ },
+ {
+  "y": 54.29,
+  "confidence": 1,
+  "x": 604.88,
+  "h": 15,
+  "w": 85.81,
+  "text": "GIẢI PHÁP ›"
+ },
+ {
+  "y": 54.29,
+  "confidence": 1,
+  "x": 720,
+  "h": 15,
+  "w": 102.56,
+  "text": "CÔNG NGHỆ ›"
+ },
+ {
+  "y": 58.64,
+  "confidence": 1,
+  "x": 136.05,
+  "h": 10.47,
+  "w": 92.09,
+  "text": "SOLUTIONS"
+ },
+ {
+  "y": 502.62,
+  "confidence": 1,
+  "x": 1253.72,
+  "h": 12.57,
+  "w": 69.07,
+  "text": "CLARITY"
+ },
+ {
+  "y": 517.14,
+  "confidence": 1,
+  "x": 1253.72,
+  "h": 12.86,
+  "w": 92.09,
+  "text": "Tầm nhìn sắc nét"
+ },
+ {
+  "y": 531.94,
+  "confidence": 1,
+  "x": 941.86,
+  "h": 14.66,
+  "w": 48.14,
+  "text": "TCAUTO"
+ },
+ {
+  "y": 571.73,
+  "confidence": 1,
+  "x": 1253.72,
+  "h": 12.57,
+  "w": 102.56,
+  "text": "PROTECTION"
+ },
+ {
+  "y": 586.39,
+  "confidence": 1,
+  "x": 1253.72,
+  "h": 10.47,
+  "w": 69.07,
+  "text": "Bảo vệ tối ưu"
+ },
+ {
+  "y": 636.51,
+  "confidence": 1,
+  "x": 1253.7,
+  "h": 14.94,
+  "w": 81.68,
+  "text": "COMFORT"
+ },
+ {
+  "y": 642.22,
+  "confidence": 1,
+  "x": 81.25,
+  "h": 58.08,
+  "w": 352.44,
+  "text": "VĂN HOÁ TC"
+ },
+ {
+  "y": 651.31,
+  "confidence": 1,
+  "x": 1253.72,
+  "h": 12.62,
+  "w": 98.37,
+  "text": "Thoải mái trên mọi"
+ },
+ {
+  "y": 663.87,
+  "confidence": 1,
+  "x": 1251.63,
+  "h": 10.47,
+  "w": 58.6,
+  "text": "hành trình"
+ },
+ {
+  "y": 713.9,
+  "confidence": 1,
+  "x": 81.58,
+  "h": 25.6,
+  "w": 127.77,
+  "text": "TC AUTO"
+ },
+ {
+  "y": 714.14,
+  "confidence": 1,
+  "x": 1253.72,
+  "h": 12.57,
+  "w": 104.65,
+  "text": "CONFIDENCE"
+ },
+ {
+  "y": 726.53,
+  "confidence": 1,
+  "x": 1251.42,
+  "h": 16.53,
+  "w": 111.31,
+  "text": "Trải nghiệm trọn vẹn"
+ },
+ {
+  "y": 896.07,
+  "confidence": 1,
+  "x": 521.16,
+  "h": 31.47,
+  "w": 401.86,
+  "text": "CÂU CHUYỆN KHỞI NGHIỆP"
+ },
+ {
+  "y": 1022.39,
+  "confidence": 1,
+  "x": 81.48,
+  "h": 35.82,
+  "w": 659.61,
+  "text": "TC AUTO - GIẢI PHÁP NÂNG TẦM TRẢI NGHIỆM Ô TÔ"
+ },
+ {
+  "y": 1080.36,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.36,
+  "w": 240.7,
+  "text": "CÂU CHUYỆN TC AUTO"
+ },
+ {
+  "y": 1128.54,
+  "confidence": 1,
+  "x": 79.45,
+  "h": 26.89,
+  "w": 592.49,
+  "text": "\"TC Auto không được xây dựng bởi một người thành công."
+ },
+ {
+  "y": 1151.62,
+  "confidence": 1,
+  "x": 85.81,
+  "h": 27.31,
+  "w": 1075.81,
+  "text": "TC Auto được xây dựng bởi những con người cùng nhau trưởng thành trên hành trình đi tìm thành công.\" ."
+ },
+ {
+  "y": 1226.42,
+  "confidence": 1,
+  "x": 958.43,
+  "h": 22.14,
+  "w": 71.51,
+  "text": "Phước"
+ },
+ {
+  "y": 1247.86,
+  "confidence": 1,
+  "x": 960.7,
+  "h": 23.21,
+  "w": 255.35,
+  "text": "Founder & CEO - TC Auto"
+ },
+ {
+  "y": 1943.04,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.18,
+  "w": 542.09,
+  "text": "1. MỌI HÀNH TRÌNH ĐỀU BĂT ĐẦU TỪ MỘT CÂU HỎI"
+ },
+ {
+  "y": 1993.21,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.36,
+  "w": 1241.16,
+  "text": "Tôi cũng từng là một người trẻ như rất nhiều người khác. Mang trong mình nhiều nhiệt huyết, nhiều hoài bão, nhưng cũng"
+ },
+ {
+  "y": 2016.34,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.13,
+  "w": 1262.09,
+  "text": "không ít lần loay hoay trên hành trình tìm kiếm chính mình. Có những giai đoạn tôi đứng trước rất nhiều lựa chọn. Có những"
+ },
+ {
+  "y": 2040.92,
+  "confidence": 1,
+  "x": 79.49,
+  "h": 27.33,
+  "w": 1170.09,
+  "text": "thời điểm tôi không biết đâu mới là con đường phù hợp với mình. Tôi từng nghĩ thành công là một điều gì đó rất xa."
+ },
+ {
+  "y": 2064.5,
+  "confidence": 1,
+  "x": 85.81,
+  "h": 25.14,
+  "w": 657.21,
+  "text": "Là đích đến dành cho những người giỏi hơn hoặc may mắn hơn."
+ },
+ {
+  "y": 2114.64,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 1276.74,
+  "text": "Nhưng cuộc sống đã dạy tôi một điều khác. Thành công không đến từ may măn. Thành công được tạo nên từ những lần thất"
+ },
+ {
+  "y": 2137.8,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.13,
+  "w": 1241.16,
+  "text": "bại nhưng không bỏ cuộc. Từ những lần vấp ngã nhưng vẫn lựa chọn đứng dậy. Từ việc mỗi ngày cố gắng trở thành phiên"
+ },
+ {
+  "y": 2162.86,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 902.09,
+  "text": "bản tốt hơn của chính mình. Và TC Auto được hình thành từ chính những trải nghiệm đó."
+ },
+ {
+  "y": 2205.63,
+  "confidence": 1,
+  "x": 79.44,
+  "h": 26.75,
+  "w": 502.5,
+  "text": "2. TC AUTO KHÔNG CHỈ BẮT ĐẦU TỪ SẢN PHẨM"
+ },
+ {
+  "y": 2257.14,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.16,
+  "w": 1256.41,
+  "text": "Tôi yêu ô tô. Nhưng điều thôi thúc tôi xây dựng TC Auto không đơn thuẩn là kinh doanh phụ kiện ô tô. Điều tôi thực sự mong ã"
+ },
+ {
+  "y": 2282.09,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.04,
+  "w": 223.95,
+  "text": "muốn là tạo ra giá trị:"
+ },
+ {
+  "y": 2329.3,
+  "confidence": 1,
+  "x": 89.85,
+  "h": 24.24,
+  "w": 268.26,
+  "text": "• Giá trị cho khách hàng."
+ },
+ {
+  "y": 2355.36,
+  "confidence": 1,
+  "x": 92.09,
+  "h": 21.07,
+  "w": 192.56,
+  "text": "• Giá trị cho đại lý."
+ },
+ {
+  "y": 2378.43,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.04,
+  "w": 506.51,
+  "text": "• Giá trị cho những người đồng hành cùng mình."
+ },
+ {
+  "y": 2426.43,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 1234.88,
+  "text": "Ngày hôm nay, TC Auto đang phát triến hệ thống phân phối nội thất và ngoại thất ô tô trên toàn quốc. Tôi luôn trân trọng"
+ },
+ {
+  "y": 2451.73,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 20.94,
+  "w": 1251.63,
+  "text": "từng khách hàng, từng đại lý và từng đồi tác đã lựa chọn đồng hành cùng TC Auto. Những con số tăng trương là điều đáng"
+ },
+ {
+  "y": 2474.64,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 1253.72,
+  "text": "quý. Nhưng điều khiến tôi tự hào hơn cả là phía sau những con số ấy luôn là những con người thật - những khách hàng đã"
+ },
+ {
+  "y": 2497.8,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.13,
+  "w": 1203.49,
+  "text": "tin tưởng, những đại lý đã đồng hành và những cộng sự đã dành tâm huyết để cùng TC Auto trưởng thành từng ngày."
+ },
+ {
+  "y": 2522.86,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 21.07,
+  "w": 529.53,
+  "text": "Chính họ mới là tài sản lớn nhất của hành trình này."
+ },
+ {
+  "y": 2568.93,
+  "confidence": 1,
+  "x": 77.44,
+  "h": 25.36,
+  "w": 546.28,
+  "text": "3. KHÔNG AI XÂY DỰNG DOANH NGHIỆP MỘT MÌNH"
+ },
+ {
+  "y": 2617.14,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.16,
+  "w": 1226.51,
+  "text": "Càng đi xa, tôi càng hiểu rằng doanh nghiệp không được tạo nên bởi người sáng lập. Doanh nghiệp được tạo nên bởi rất"
+ },
+ {
+  "y": 2640.21,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.15,
+  "w": 1257.91,
+  "text": "nhiều con người cùng chung một niềm tin. Mỗi nhân sự xuất hiện trong từng giai đoạn đều là một phần của câu chuyện TC"
+ },
+ {
+  "y": 2665.34,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.13,
+  "w": 981.63,
+  "text": "Auto. Có người đến rồi đi. Có người gắn bó rất lâu. Nhưng mỗi người đều để lại một dấu ấn riêng."
+ },
+ {
+  "y": 2709.85,
+  "confidence": 1,
+  "x": 84,
+  "h": 29.85,
+  "w": 1248,
+  "text": "Từ đội ngũ kinh doanh, marketing, chăm sóc khách hàng, kỹ thuật, vận hành đến hành chính nhân sự. Mỗi vị trí đều mang"
+ },
+ {
+  "y": 2738.57,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 1272.56,
+  "text": "một giá trị quan trọng. Bởi tôi luôn tin răng: Không có mắt xích nào là nhỏ trong một hệ thống đang cùng hướng về một mục"
+ },
+ {
+  "y": 2761.68,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.13,
+  "w": 1234.88,
+  "text": "tiêu lớn. Khi mỗi cá nhân trưởng thành hơn, đội ngũ sẽ mạnh hơn. Khi đội ngũ mạnh hơn, doanh nghiệp sẽ phát triển bền"
+ },
+ {
+  "y": 2786.79,
+  "confidence": 1,
+  "x": 79.31,
+  "h": 23.33,
+  "w": 105.02,
+  "text": "vững hơn."
+ },
+ {
+  "y": 2829.2,
+  "confidence": 1,
+  "x": 79.41,
+  "h": 26.86,
+  "w": 333.04,
+  "text": "4. Ý NGHĨA CỦA LOGO TC AUTO"
+ },
+ {
+  "y": 2881.05,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.13,
+  "w": 1236.98,
+  "text": "Logo TC Auto được hình thành từ hai chữ cái \"T\" và \"C\". Đó là viết tắt của hai chữ \"Thành Công\". Nhưng thành công mà tôi"
+ },
+ {
+  "y": 2906.07,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 23.21,
+  "w": 1092.56,
+  "text": "theo đuổi chưa bao giờ chỉ là doanh số hay lợi nhuận. Đó còn là thành công trong việc phát triển con người."
+ },
+ {
+  "y": 2954.29,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.21,
+  "w": 577.67,
+  "text": "• Là thành công khi một người trẻ tìm thấy định hướng."
+ },
+ {
+  "y": 2979.48,
+  "confidence": 1,
+  "x": 92.09,
+  "h": 23.04,
+  "w": 757.67,
+  "text": "• Là thành công khi một nhân sự trương thành hơn sau những thứ thách."
+ },
+ {
+  "y": 3002.5,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.21,
+  "w": 757.67,
+  "text": "• Là thành công khi một tập thế cùng nhau tạo nên những giá trị tốt đẹp."
+ },
+ {
+  "y": 3044.53,
+  "confidence": 1,
+  "x": 81.54,
+  "h": 28.63,
+  "w": 669.96,
+  "text": "BÊN TRONG LOGO LÀ HÌNH ẢNH MẶT TRĂNG ÔM LÂY MẶT TRỜI"
+ },
+ {
+  "y": 3044.68,
+  "confidence": 1,
+  "x": 81.52,
+  "h": 29.53,
+  "w": 669.98,
+  "text": "BÊN TRONG LOGO LÀ HÌNH ẢNH MẶT TRẰNG ÔM LẤY MẶT TRỜI"
+ },
+ {
+  "y": 3097.93,
+  "confidence": 1,
+  "x": 83.96,
+  "h": 46.87,
+  "w": 1260.19,
+  "text": "hành. Tôi luôn tin rằng một tập thể khỏe mạnh không chi cản nhnng Maư ời niết dại chện cho sự thau hiêu, lăng nghe và đồng"
+ },
+ {
+  "y": 3144.64,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.36,
+  "w": 1262.09,
+  "text": "cần những người biết lắng nghe, thấu cảm và nâng đỡ nhau như mặt trăng. Khi hai nguồn năng lượng ấy gặp nhau, chúng"
+ },
+ {
+  "y": 3169.84,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.16,
+  "w": 962.79,
+  "text": "tạo nên sự cân bằng để cùng phát triển. Đó cũng là điều tôi mong muốn xây dựng tại TC Auto."
+ },
+ {
+  "y": 3213.82,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.13,
+  "w": 311.86,
+  "text": "5. ĐIỀU TÔI MUỐN XÂY DỰNG"
+ },
+ {
+  "y": 3266.07,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 1260,
+  "text": "Nếu chỉ để bán sản phẩm, có lẽ tôi đã không đi xa đến vậy. Điều tôi thực sự muốn xây dựng là một môi trường nơi con người"
+ },
+ {
+  "y": 3288.57,
+  "confidence": 1,
+  "x": 79.39,
+  "h": 26.6,
+  "w": 295.47,
+  "text": "có thể phát triển cùng nhau."
+ },
+ {
+  "y": 3335.67,
+  "confidence": 1,
+  "x": 89.87,
+  "h": 28.85,
+  "w": 429.39,
+  "text": "• Một nơi mà mọi người được trao cơ hội."
+ },
+ {
+  "y": 3362.5,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.21,
+  "w": 167.44,
+  "text": "• Được học hỏi."
+ },
+ {
+  "y": 3387.5,
+  "confidence": 1,
+  "x": 92.09,
+  "h": 21.09,
+  "w": 159.07,
+  "text": "• Được thứ sai."
+ },
+ {
+  "y": 3410.68,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.04,
+  "w": 228.14,
+  "text": "• Được trưởng thành."
+ },
+ {
+  "y": 3433.67,
+  "confidence": 1,
+  "x": 89.93,
+  "h": 26.06,
+  "w": 529.7,
+  "text": "• Và được tôn trọng vì những giá trị mình mang lại."
+ },
+ {
+  "y": 3481.79,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.36,
+  "w": 1260,
+  "text": "Tôi mong rằng TC Auto sẽ không chỉ là nơi mọi người đến để làm việc. Mà còn là nơi mọi người có thể tự hào khi nhìn lại một"
+ },
+ {
+  "y": 3507.02,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 23.04,
+  "w": 376.74,
+  "text": "chặng đường đã đi qua. Và nói răng:"
+ },
+ {
+  "y": 3550.9,
+  "confidence": 1,
+  "x": 79.44,
+  "h": 28.78,
+  "w": 297.48,
+  "text": "\"Tôi đã lớn lên cùng nơi này.\""
+ },
+ {
+  "y": 3595.91,
+  "confidence": 1,
+  "x": 81.53,
+  "h": 28.57,
+  "w": 383.25,
+  "text": "6. HÀNH TRÌNH VẪN ĐANG TIẾP TỤC"
+ },
+ {
+  "y": 3649.29,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.36,
+  "w": 1264.19,
+  "text": "TC Auto hôm nay vẫn còn rất nhiều điều phải học hỏi. Chúng tôi chưa phải là doanh nghiệp hoàn hảo. Nhưng chúng tôi luôn"
+ },
+ {
+  "y": 3672.46,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 25.13,
+  "w": 272.09,
+  "text": "cố gắng tốt hơn mỗi ngày."
+ },
+ {
+  "y": 3722.72,
+  "confidence": 1,
+  "x": 92.09,
+  "h": 23.04,
+  "w": 1029.77,
+  "text": "• Tôi tin răng khi những con người tử tế cùng chung một lý tưởng, những điều tốt đẹp sẽ được tạo ra."
+ },
+ {
+  "y": 3745.53,
+  "confidence": 1,
+  "x": 92.06,
+  "h": 25.33,
+  "w": 1147.05,
+  "text": "• Tôi tin rằng khi con người được trao cơ hội, họ có thế tạo nên những điều vượt xa những gì bán thân từng nghĩ."
+ },
+ {
+  "y": 3770.71,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.21,
+  "w": 1266.28,
+  "text": "• Và tôi tin răng hành trình phía trước của TC Auto sẽ tiếp tục được viết nên bởi những con người cùng chung một ngọn lửa."
+ },
+ {
+  "y": 3818.85,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.04,
+  "w": 186.28,
+  "text": "Một ngọn lửa của:"
+ },
+ {
+  "y": 3866.13,
+  "confidence": 1,
+  "x": 89.83,
+  "h": 22.72,
+  "w": 102.91,
+  "text": "• Sự tứ tề"
+ },
+ {
+  "y": 3890,
+  "confidence": 1,
+  "x": 90,
+  "h": 21.07,
+  "w": 203.02,
+  "text": "• Tinh thần học hỏi"
+ },
+ {
+  "y": 3915.18,
+  "confidence": 1,
+  "x": 90,
+  "h": 23.04,
+  "w": 234.42,
+  "text": "• Khát vọng phát triền"
+ },
+ {
+  "y": 3959.16,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.13,
+  "w": 318.14,
+  "text": "GIÁ TRỊ CỐT LÕI CỦA TC AUTO"
+ },
+ {
+  "y": 4006.6,
+  "confidence": 1,
+  "x": 81.51,
+  "h": 24.49,
+  "w": 136.29,
+  "text": "CHÍNH TRỰC"
+ },
+ {
+  "y": 4034.55,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 23.04,
+  "w": 378.84,
+  "text": "Làm đúng - Dám chịu - Trách nhiệm"
+ },
+ {
+  "y": 4080.2,
+  "confidence": 1,
+  "x": 81.54,
+  "h": 21.8,
+  "w": 96.46,
+  "text": "TÂN TÂM"
+ },
+ {
+  "y": 4105.71,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 25.18,
+  "w": 424.88,
+  "text": "Vì khách hàng - Vì đại lý - Vì đồng nghiệp"
+ },
+ {
+  "y": 4151.58,
+  "confidence": 1,
+  "x": 81.58,
+  "h": 23.54,
+  "w": 119.4,
+  "text": "CHỦ ĐỘNG"
+ },
+ {
+  "y": 4178.93,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.21,
+  "w": 395.58,
+  "text": "Không chờ đợi - Luôn tìm cách tốt hơn"
+ },
+ {
+  "y": 4222.29,
+  "confidence": 1,
+  "x": 79.39,
+  "h": 24.53,
+  "w": 117.49,
+  "text": "ĐOÀN KẾT"
+ },
+ {
+  "y": 4250.26,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 23.04,
+  "w": 280.47,
+  "text": "Một đội ngũ - Một mục tiêu"
+ },
+ {
+  "y": 4293.74,
+  "confidence": 1,
+  "x": 80.99,
+  "h": 28.04,
+  "w": 108.01,
+  "text": "HIỆU QUẢ"
+ },
+ {
+  "y": 4321.27,
+  "confidence": 1,
+  "x": 81.48,
+  "h": 25.89,
+  "w": 299.59,
+  "text": "Kết quả là thước đo duy nhất"
+ },
+ {
+  "y": 4499.48,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 12.67,
+  "w": 108.84,
+  "text": "LET'S ELEVATE"
+ },
+ {
+  "y": 4512.96,
+  "confidence": 1,
+  "x": 732.46,
+  "h": 18.08,
+  "w": 280.67,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN"
+ },
+ {
+  "y": 4516.07,
+  "confidence": 1,
+  "x": 1234.88,
+  "h": 12.86,
+  "w": 98.37,
+  "text": "KÊT NÔI VỚI TC"
+ },
+ {
+  "y": 4523.99,
+  "confidence": 1,
+  "x": 78.8,
+  "h": 35.73,
+  "w": 208.64,
+  "text": "Your Experience."
+ },
+ {
+  "y": 4535,
+  "confidence": 1,
+  "x": 1255.81,
+  "h": 10.71,
+  "w": 54.42,
+  "text": "093 617 6996"
+ },
+ {
+  "y": 4545.55,
+  "confidence": 1,
+  "x": 749.3,
+  "h": 12.66,
+  "w": 92.09,
+  "text": "Họ và tên của bạn"
+ },
+ {
+  "y": 4549.39,
+  "confidence": 0.5,
+  "x": 1257.67,
+  "h": 14.96,
+  "w": 105.09,
+  "text": "infor@tcautosolutions.vn"
+ },
+ {
+  "y": 4560,
+  "confidence": 1,
+  "x": 450,
+  "h": 29.87,
+  "w": 150,
+  "text": "O TC AUTO"
+ },
+ {
+  "y": 4561.92,
+  "confidence": 1,
+  "x": 1232.77,
+  "h": 18.83,
+  "w": 113.07,
+  "text": "© Thứ2 -718:00-1730"
+ },
+ {
+  "y": 4562.06,
+  "confidence": 1,
+  "x": 939.77,
+  "h": 10.39,
+  "w": 133.95,
+  "text": "Nhu cầu, câu hỏi của bạn...."
+ },
+ {
+  "y": 4562.14,
+  "confidence": 1,
+  "x": 937.67,
+  "h": 10.71,
+  "w": 133.95,
+  "text": "Nhu cầu, câu hỏi của bạn..."
+ },
+ {
+  "y": 4564.29,
+  "confidence": 1,
+  "x": 489.77,
+  "h": 14.77,
+  "w": 98.37,
+  "text": "TC AUTO"
+ },
+ {
+  "y": 4566.1,
+  "confidence": 1,
+  "x": 81.52,
+  "h": 14.39,
+  "w": 213.68,
+  "text": "TC luôn sẵn sàng lắng nghe và tư vấn giải giáp phù"
+ },
+ {
+  "y": 4566.43,
+  "confidence": 1,
+  "x": 1257.91,
+  "h": 10.53,
+  "w": 87.91,
+  "text": "Thứ 2 - 7 | 8:00 - 17:30"
+ },
+ {
+  "y": 4576.3,
+  "confidence": 1,
+  "x": 749.27,
+  "h": 12.74,
+  "w": 67.05,
+  "text": "Số điện thoại"
+ },
+ {
+  "y": 4576.79,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 12.86,
+  "w": 100.47,
+  "text": "hợp nhất dành cho bạn."
+ },
+ {
+  "y": 4580.61,
+  "confidence": 1,
+  "x": 79.53,
+  "h": 6.18,
+  "w": 100.47,
+  "text": "hợp nhat danh cho bạn."
+ },
+ {
+  "y": 4581.15,
+  "confidence": 1,
+  "x": 496.05,
+  "h": 8.38,
+  "w": 90,
+  "text": "SOLUTIONS"
+ },
+ {
+  "y": 4603.29,
+  "confidence": 1,
+  "x": 1059.07,
+  "h": 14.43,
+  "w": 27.21,
+  "text": "GỬI"
+ },
+ {
+  "y": 4613.59,
+  "confidence": 1,
+  "x": 81.63,
+  "h": 12.37,
+  "w": 219.77,
+  "text": "©2026 TC Auto Solutions. All rights reserved"
+ }
+]

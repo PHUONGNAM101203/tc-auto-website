@@ -1,0 +1,506 @@
+[
+ {
+  "x": 127.36,
+  "text": "TC AUTO",
+  "w": 101.19,
+  "h": 20.45,
+  "confidence": 1,
+  "y": 41.36
+ },
+ {
+  "x": 1149.07,
+  "text": "Q Nhập để tìm kiếm....",
+  "w": 108.84,
+  "h": 16.8,
+  "confidence": 1,
+  "y": 43.93
+ },
+ {
+  "x": 830.23,
+  "text": "ĐẠI LÝ ›",
+  "w": 60.12,
+  "h": 21.26,
+  "confidence": 1,
+  "y": 53.3
+ },
+ {
+  "x": 585.97,
+  "text": "GIẢI PHÁP ›",
+  "w": 85.97,
+  "h": 15.59,
+  "confidence": 1,
+  "y": 53.99
+ },
+ {
+  "x": 441.63,
+  "text": "TRẢI NGHIỆM ›",
+  "w": 113.02,
+  "h": 16.92,
+  "confidence": 1,
+  "y": 54.29
+ },
+ {
+  "x": 699.07,
+  "text": "CÔNG NGHỆ›",
+  "w": 104.65,
+  "h": 16.92,
+  "confidence": 1,
+  "y": 54.29
+ },
+ {
+  "x": 918.84,
+  "text": "NHÂN SỰ >",
+  "w": 81.63,
+  "h": 19.01,
+  "confidence": 1,
+  "y": 54.29
+ },
+ {
+  "x": 136.05,
+  "text": "SULI",
+  "w": 35.58,
+  "h": 4.19,
+  "confidence": 0.5,
+  "y": 62.83
+ },
+ {
+  "x": 686,
+  "text": "LET BEETO",
+  "w": 109.88,
+  "h": 22.86,
+  "confidence": 0.3,
+  "y": 474.19
+ },
+ {
+  "x": 1253.62,
+  "text": "CLARITY",
+  "w": 69.27,
+  "h": 13.7,
+  "confidence": 1,
+  "y": 502.05
+ },
+ {
+  "x": 1253.72,
+  "text": "Tầm nhìn sắc nét",
+  "w": 90,
+  "h": 10.71,
+  "confidence": 1,
+  "y": 517.14
+ },
+ {
+  "x": 688.47,
+  "text": "TC AUTO",
+  "w": 58.95,
+  "h": 12.03,
+  "confidence": 1,
+  "y": 537.81
+ },
+ {
+  "x": 1253.72,
+  "text": "PROTECTION",
+  "w": 100.47,
+  "h": 12.57,
+  "confidence": 1,
+  "y": 571.73
+ },
+ {
+  "x": 1251.63,
+  "text": "Bảo vệ tối ưu",
+  "w": 71.16,
+  "h": 12.57,
+  "confidence": 1,
+  "y": 584.29
+ },
+ {
+  "x": 1253.72,
+  "text": "COMFORT",
+  "w": 81.63,
+  "h": 12.57,
+  "confidence": 1,
+  "y": 636.65
+ },
+ {
+  "x": 81.63,
+  "text": "MẠNG LƯỚI ĐẠI LÝ",
+  "w": 527.44,
+  "h": 65,
+  "confidence": 1,
+  "y": 645
+ },
+ {
+  "x": 1253.72,
+  "text": "Thoải mái trên mọi",
+  "w": 98.37,
+  "h": 10.48,
+  "confidence": 1,
+  "y": 651.31
+ },
+ {
+  "x": 1251.63,
+  "text": "hành trình",
+  "w": 58.6,
+  "h": 10.47,
+  "confidence": 1,
+  "y": 663.87
+ },
+ {
+  "x": 81.51,
+  "text": "TC AUTO",
+  "w": 150.94,
+  "h": 30.59,
+  "confidence": 1,
+  "y": 711.4
+ },
+ {
+  "x": 1253.72,
+  "text": "CONFIDENCE",
+  "w": 104.65,
+  "h": 14.66,
+  "confidence": 1,
+  "y": 712.04
+ },
+ {
+  "x": 1251.63,
+  "text": "Trái nghiệm trọn vẹn",
+  "w": 108.84,
+  "h": 10.49,
+  "confidence": 1,
+  "y": 728.8
+ },
+ {
+  "x": 424.88,
+  "text": "HỆ THỐNG ĐẠI LÝ CỦA TC AUTO",
+  "w": 590.23,
+  "h": 46.16,
+  "confidence": 1,
+  "y": 902.41
+ },
+ {
+  "x": 833.02,
+  "text": "HÀ TINH",
+  "w": 37.67,
+  "h": 10.53,
+  "confidence": 1,
+  "y": 1013.4
+ },
+ {
+  "x": 897.91,
+  "text": "QUÁNG TRỊ",
+  "w": 50.23,
+  "h": 12.6,
+  "confidence": 1,
+  "y": 1072.04
+ },
+ {
+  "x": 949.97,
+  "text": "THÙA THIÊN HUẾ",
+  "w": 80.07,
+  "h": 15.99,
+  "confidence": 1,
+  "y": 1122.73
+ },
+ {
+  "x": 81.27,
+  "text": "TÌM KIẾM ĐẠI LY",
+  "w": 360.68,
+  "h": 53.23,
+  "confidence": 1,
+  "y": 1162.4
+ },
+ {
+  "x": 1031.86,
+  "text": "ĐÀ NĂNG",
+  "w": 48.14,
+  "h": 12.57,
+  "confidence": 1,
+  "y": 1176.75
+ },
+ {
+  "x": 110.93,
+  "text": "ЗМ",
+  "w": 29.3,
+  "h": 16.75,
+  "confidence": 0.3,
+  "y": 1254.24
+ },
+ {
+  "x": 1077.91,
+  "text": "QUẢNG NGÃI",
+  "w": 58.6,
+  "h": 12.57,
+  "confidence": 1,
+  "y": 1285.65
+ },
+ {
+  "x": 485.47,
+  "text": "Đà Nẵng",
+  "w": 69.52,
+  "h": 20.51,
+  "confidence": 1,
+  "y": 1322.9
+ },
+ {
+  "x": 113.02,
+  "text": "Tỉnh / Thành phố",
+  "w": 136.05,
+  "h": 18.98,
+  "confidence": 1,
+  "y": 1323.21
+ },
+ {
+  "x": 504.42,
+  "text": "Huế",
+  "w": 35.58,
+  "h": 16.75,
+  "confidence": 1,
+  "y": 1354.76
+ },
+ {
+  "x": 1092.56,
+  "text": "GIA LAI",
+  "w": 33.49,
+  "h": 10.51,
+  "confidence": 1,
+  "y": 1373.57
+ },
+ {
+  "x": 491.86,
+  "text": "Hà Tĩnh",
+  "w": 58.6,
+  "h": 18.85,
+  "confidence": 1,
+  "y": 1381.99
+ },
+ {
+  "x": 133.78,
+  "text": "TÌM KIẾM",
+  "w": 77.78,
+  "h": 20.28,
+  "confidence": 1,
+  "y": 1385.46
+ },
+ {
+  "x": 491.86,
+  "text": "Đắk Lắk",
+  "w": 60.7,
+  "h": 16.91,
+  "confidence": 1,
+  "y": 1411.31
+ },
+ {
+  "x": 479.16,
+  "text": "Khánh Hoà",
+  "w": 84.01,
+  "h": 20.18,
+  "confidence": 1,
+  "y": 1439.96
+ },
+ {
+  "x": 1092.56,
+  "text": "ĐÂK LẮK",
+  "w": 41.86,
+  "h": 10.47,
+  "confidence": 1,
+  "y": 1455.29
+ },
+ {
+  "x": 480.91,
+  "text": "Lâm Đồng",
+  "w": 80.56,
+  "h": 21.35,
+  "confidence": 1,
+  "y": 1467.93
+ },
+ {
+  "x": 1201.4,
+  "text": "KHÁNH HÒA",
+  "w": 56.51,
+  "h": 10.47,
+  "confidence": 1,
+  "y": 1516.02
+ },
+ {
+  "x": 1031.86,
+  "text": "ĐỒNG NAI",
+  "w": 50.23,
+  "h": 12.56,
+  "confidence": 1,
+  "y": 1566.07
+ },
+ {
+  "x": 81.63,
+  "text": "TC AUTO xây dựng mạng lưới đại lý rộng khắp, kết nối những đối",
+  "w": 525.35,
+  "h": 21.09,
+  "confidence": 1,
+  "y": 1580.72
+ },
+ {
+  "x": 79.53,
+  "text": "tác cùng chung định hướng về chất lượng, dịch vụ và trải nghiệm",
+  "w": 535.81,
+  "h": 20.94,
+  "confidence": 1,
+  "y": 1599.57
+ },
+ {
+  "x": 81.63,
+  "text": "khách hàng. Mỗi đại lý không chỉ là điểm phân phối sản phẩm,",
+  "w": 512.79,
+  "h": 21.08,
+  "confidence": 1,
+  "y": 1620.39
+ },
+ {
+  "x": 83.72,
+  "text": "mà còn là một mắt xích quan trọng trong hành trình đưa những",
+  "w": 525.35,
+  "h": 16.81,
+  "confidence": 1,
+  "y": 1641.44
+ },
+ {
+  "x": 956.51,
+  "text": "ĐÔNG NAI",
+  "w": 48.14,
+  "h": 10.53,
+  "confidence": 1,
+  "y": 1647.73
+ },
+ {
+  "x": 79.53,
+  "text": "giải pháp công nghệ và giá trị khác biệt đến gần hơn với khách",
+  "w": 521.16,
+  "h": 20.94,
+  "confidence": 1,
+  "y": 1660.29
+ },
+ {
+  "x": 81.63,
+  "text": "hàng trên toàn quốc.",
+  "w": 173.72,
+  "h": 18.96,
+  "confidence": 1,
+  "y": 1681.12
+ },
+ {
+  "x": 79.38,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "w": 257.74,
+  "h": 20.09,
+  "confidence": 1,
+  "y": 1883.83
+ },
+ {
+  "x": 730.47,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN",
+  "w": 282.56,
+  "h": 14.75,
+  "confidence": 1,
+  "y": 1886.43
+ },
+ {
+  "x": 1230.7,
+  "text": "KẾT NỐI VỚI TC",
+  "w": 100.47,
+  "h": 14.75,
+  "confidence": 1,
+  "y": 1886.43
+ },
+ {
+  "x": 1249.53,
+  "text": "093 617 6996",
+  "w": 60.7,
+  "h": 10.72,
+  "confidence": 1,
+  "y": 1905.11
+ },
+ {
+  "x": 747.21,
+  "text": "Họ và tên của bạn",
+  "w": 96.28,
+  "h": 12.63,
+  "confidence": 1,
+  "y": 1917.84
+ },
+ {
+  "x": 1232.79,
+  "text": "infor@tcautosolutions.vn",
+  "w": 127.67,
+  "h": 10.47,
+  "confidence": 0.5,
+  "y": 1922.02
+ },
+ {
+  "x": 81.63,
+  "text": "TC luôn sẵn sàng lắng nghe và tư vấn giải giáp phù",
+  "w": 211.4,
+  "h": 12.64,
+  "confidence": 1,
+  "y": 1924.04
+ },
+ {
+  "x": 937.67,
+  "text": "Nhu cầu, câu hỏi của bạn...",
+  "w": 133.95,
+  "h": 12.62,
+  "confidence": 1,
+  "y": 1932.49
+ },
+ {
+  "x": 79.53,
+  "text": "hợp nhất dành cho bạn.",
+  "w": 102.56,
+  "h": 10.53,
+  "confidence": 1,
+  "y": 1934.59
+ },
+ {
+  "x": 470.93,
+  "text": ") TC AUTO",
+  "w": 117.21,
+  "h": 16.89,
+  "confidence": 1,
+  "y": 1936.54
+ },
+ {
+  "x": 1257.91,
+  "text": "Thứ 2 - 7| 8:00 - 17:30",
+  "w": 85.81,
+  "h": 10.72,
+  "confidence": 1,
+  "y": 1938.69
+ },
+ {
+  "x": 749.28,
+  "text": "Số điện thoại",
+  "w": 67.02,
+  "h": 12.79,
+  "confidence": 1,
+  "y": 1949.13
+ },
+ {
+  "x": 496.05,
+  "text": "SOLUTIONS",
+  "w": 90,
+  "h": 8.38,
+  "confidence": 1,
+  "y": 1953.43
+ },
+ {
+  "x": 1056.98,
+  "text": "GỬI",
+  "w": 27.21,
+  "h": 16.75,
+  "confidence": 1,
+  "y": 1974.37
+ },
+ {
+  "x": 81.5,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "w": 222.09,
+  "h": 16.11,
+  "confidence": 1,
+  "y": 1984.25
+ }
+]

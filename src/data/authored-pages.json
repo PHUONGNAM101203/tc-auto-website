@@ -1,0 +1,145 @@
+{
+  "_doc": "Trang do CHUNG TA soan, khong co frame trong bo thiet ke. Hai muc 'Bảo hành' va 'Không gian trải nghiệm' tren trang Cong nghe co nut KHÁM PHÁ NGAY nhung thiet ke khong ve trang con — nen trang duoc dung o day. Bo cuc co dan theo be rong man hinh, khong dung canvas 1440px.",
+  "pages": [
+    {
+      "slug": "cong-nghe/bao-hanh",
+      "section": "cong-nghe",
+      "parent": "/cong-nghe",
+      "label": "BẢO HÀNH",
+      "title": "Bảo hành",
+      "heading": "Nâng tầm giá trị. Đồng hành bền vững.",
+      "lead": "TC AUTO cam kết bảo vệ giá trị sản phẩm bằng chính sách bảo hành minh bạch, rõ ràng và chuyên nghiệp, mang đến sự an tâm trong suốt quá trình sử dụng.",
+      "blocks": [
+        {
+          "heading": "Bảo hành bắt đầu từ lúc tư vấn",
+          "paragraphs": [
+            "Phần lớn sự cố về sau bắt nguồn từ một lựa chọn chưa phù hợp ngay từ đầu — sai dòng phim cho điều kiện nắng ở khu vực bạn sống, sai kích thước màn hình cho khoang lái, hoặc một hạng mục lắp thêm không tương thích với hệ thống điện của xe.",
+            "Vì vậy TC AUTO xem khâu tư vấn là phần đầu tiên của bảo hành. Kỹ thuật viên ghi lại dòng xe, điều kiện sử dụng và nhu cầu thực tế của bạn trước khi đề xuất giải pháp, và hồ sơ đó đi theo sản phẩm suốt vòng đời của nó."
+          ]
+        },
+        {
+          "heading": "Khi có vấn đề, bạn liên hệ một đầu mối",
+          "paragraphs": [
+            "Bạn không phải tự đi tìm xem lỗi thuộc về hãng sản xuất, đơn vị phân phối hay nơi thi công. Báo về TC AUTO hoặc đại lý đã lắp đặt, phần còn lại là việc của chúng tôi.",
+            "Mỗi lần tiếp nhận đều được ghi nhận lại: tình trạng, cách xử lý, thời điểm hoàn tất. Lịch sử này giúp lần sau không phải kể lại từ đầu."
+          ]
+        },
+        {
+          "heading": "Mạng lưới đại lý cùng chịu trách nhiệm",
+          "paragraphs": [
+            "Sản phẩm lắp ở đại lý nào trong hệ thống cũng được bảo hành theo cùng một chuẩn. Đại lý được TC AUTO đào tạo kỹ thuật và cấp quyền xử lý bảo hành tại chỗ, nên phần lớn trường hợp được giải quyết ngay tại địa phương mà không phải chuyển xe đi xa."
+          ]
+        }
+      ],
+      "pending": {
+        "heading": "Phần cần TC Auto bổ sung",
+        "items": [
+          "Thời hạn bảo hành cụ thể của từng dòng sản phẩm (phim cách nhiệt, PPF, màn hình, loa).",
+          "Điều kiện áp dụng và các trường hợp không thuộc phạm vi bảo hành.",
+          "Quy trình và thời gian xử lý cam kết.",
+          "Đầu mối tiếp nhận: số điện thoại, email, giờ làm việc."
+        ]
+      },
+      "cta": {
+        "label": "Liên hệ đội ngũ TC Auto",
+        "href": "/cong-nghe#lien-he"
+      },
+      "parentLabel": "Công nghệ"
+    },
+    {
+      "slug": "cong-nghe/khong-gian-trai-nghiem",
+      "section": "cong-nghe",
+      "parent": "/cong-nghe",
+      "label": "KHÔNG GIAN TRẢI NGHIỆM",
+      "title": "Không gian trải nghiệm",
+      "heading": "Trải nghiệm trực tiếp. Lựa chọn khác biệt.",
+      "lead": "Đến trực tiếp TC AUTO để trải nghiệm công nghệ ô tô tiên tiến, khám phá đa dạng giải pháp phù hợp và tìm ra lựa chọn hoàn hảo cho mỗi hành trình của bạn.",
+      "blocks": [
+        {
+          "heading": "Nhìn tận mắt trước khi quyết định",
+          "paragraphs": [
+            "Thông số trên giấy khó nói hết sự khác nhau giữa hai loại phim cách nhiệt, hay giữa hai độ phân giải màn hình. Tại không gian trải nghiệm, các mẫu được trưng bày cạnh nhau trong cùng điều kiện ánh sáng để bạn tự so sánh.",
+            "Bạn có thể áp thử tấm phim lên kính mẫu, xem màn hình chạy thật, nghe hệ thống âm thanh ở mức âm lượng thường dùng — thay vì hình dung qua lời mô tả."
+          ]
+        },
+        {
+          "heading": "Thử trên chính chiếc xe của bạn",
+          "paragraphs": [
+            "Mỗi khoang lái một khác. Kỹ thuật viên sẽ xem xe của bạn, đo vị trí lắp đặt và chỉ ra những điểm cần lưu ý trước khi thi công — chẳng hạn kích thước màn hình vừa vặn với bệ trung tâm, hay loại phim phù hợp với độ cong của kính.",
+            "Nếu cần, bạn có thể đặt lịch để tránh phải chờ."
+          ]
+        },
+        {
+          "heading": "Xem quy trình thi công",
+          "paragraphs": [
+            "Khu vực thi công không tách rời khỏi khu trưng bày. Bạn có thể quan sát cách kỹ thuật viên xử lý từng bước, từ vệ sinh bề mặt đến căn chỉnh và nghiệm thu — phần quyết định chất lượng cuối cùng nhiều hơn bản thân vật liệu."
+          ]
+        }
+      ],
+      "pending": {
+        "heading": "Phần cần TC Auto bổ sung",
+        "items": [
+          "Địa chỉ và bản đồ các không gian trải nghiệm.",
+          "Giờ mở cửa và cách đặt lịch.",
+          "Ảnh chụp thực tế không gian trưng bày.",
+          "Danh mục sản phẩm đang trưng bày tại từng địa điểm."
+        ]
+      },
+      "cta": {
+        "label": "Xem hệ thống đại lý",
+        "href": "/dai-ly/mang-luoi-dai-ly"
+      },
+      "parentLabel": "Công nghệ"
+    },
+    {
+      "slug": "giai-phap/man-hinh/bravo",
+      "section": "giai-phap",
+      "parent": "/giai-phap/man-hinh",
+      "label": "BRAVO",
+      "title": "Màn hình Bravo",
+      "heading": "Bravo. Chuẩn hãng, gọn trong khoang lái.",
+      "lead": "Bên cạnh Winca, TC AUTO phân phối và lắp đặt dòng màn hình Bravo — lựa chọn dành cho người dùng muốn một màn hình Android liền mạch với xe, không cải biến hệ thống điện nguyên bản.",
+      "blocks": [
+        {
+          "heading": "Vì sao có hai thương hiệu",
+          "paragraphs": [
+            "Không có một dòng màn hình nào hợp với mọi khoang lái. Kích thước hốc máy, vị trí cửa gió, cách bố trí phím cứng và cả thói quen dùng xe của từng người đều khác nhau — nên TC AUTO giữ song song hai thương hiệu thay vì ép tất cả về một dòng.",
+            "Winca là dòng được chọn nhiều nhất cho các mẫu xe phổ thông tại Việt Nam. Bravo dành cho những khoang lái cần bản vừa vặn khác, hoặc cho người dùng ưu tiên giao diện và cách vận hành riêng của dòng này."
+          ]
+        },
+        {
+          "heading": "Lắp đặt không đụng vào hệ thống điện nguyên bản",
+          "paragraphs": [
+            "Mọi bản Bravo được lắp qua giắc chuyên dụng theo đúng dòng xe. Không cắt dây, không đấu nối tạm. Đây là điều kiện để xe giữ nguyên bảo hành hãng và để tháo trả về nguyên bản bất cứ lúc nào bạn muốn.",
+            "Kỹ thuật viên kiểm tra nguồn, loa, camera và các tín hiệu có sẵn trước khi lắp, rồi chạy thử toàn bộ chức năng cùng bạn trước khi giao xe."
+          ]
+        },
+        {
+          "heading": "Bảo hành đi cùng hồ sơ lắp đặt",
+          "paragraphs": [
+            "Mỗi xe lắp tại TC AUTO đều có hồ sơ ghi dòng xe, bản màn hình và ngày lắp. Khi cần bảo hành, bạn không phải nhớ lại mình đã lắp gì — hồ sơ đó đi theo sản phẩm suốt thời gian bảo hành.",
+            "Sản phẩm lắp ở đại lý nào trong hệ thống cũng được bảo hành theo cùng một chuẩn, xử lý ngay tại địa phương trong phần lớn trường hợp."
+          ]
+        },
+        {
+          "heading": "Chọn bản nào",
+          "paragraphs": [
+            "Cách nhanh nhất là cho chúng tôi biết dòng xe, đời xe và điều bạn muốn cải thiện nhất — tầm nhìn khi lùi, chất lượng âm thanh, hay đơn giản là một giao diện gọn gàng hơn. TC AUTO sẽ đề xuất bản Bravo hoặc Winca phù hợp, kèm mức giá trọn gói đã gồm công lắp."
+          ]
+        }
+      ],
+      "pending": {
+        "heading": "Đang cập nhật",
+        "items": [
+          "Danh sách đầy đủ các bản Bravo kèm thông số kỹ thuật và hình ảnh sản phẩm",
+          "Bảng giá trọn gói theo từng dòng xe"
+        ]
+      },
+      "cta": {
+        "label": "LIÊN HỆ TƯ VẤN",
+        "href": "/giai-phap/man-hinh"
+      },
+      "parentLabel": "Màn hình ô tô"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "_doc": "Ban do 37 frame thiet ke -> route. File nguon nam trong '[TC] Website/Website_TC'. 6 frame dau moi section la trang chinh (da build tu prototype HTML, KHONG slice lai o day).",
+  "sourceRoot": "/Users/phuongnam/Downloads/[TC] Website/Website_TC",
+  "pages": [
+    { "dir": "1. Page_Home", "file": "Home.png", "slug": "home", "main": true },
+
+    { "dir": "2.Page_Trải nghiệm", "file": "1.Trải nghiệm.png", "slug": "trai-nghiem", "main": true },
+    { "dir": "2.Page_Trải nghiệm", "file": "2.HÀNH TRÌNH.png", "slug": "trai-nghiem/hanh-trinh", "title": "Hành trình", "section": "trai-nghiem" },
+    { "dir": "2.Page_Trải nghiệm", "file": "3.BẢN SẮC RIÊNG.png", "slug": "trai-nghiem/ban-sac-rieng", "title": "Bản sắc riêng", "section": "trai-nghiem" },
+    { "dir": "2.Page_Trải nghiệm", "file": "4.KHOẢNH KHẮC.png", "slug": "trai-nghiem/khoanh-khac", "title": "Khoảnh khắc", "section": "trai-nghiem" },
+    { "dir": "2.Page_Trải nghiệm", "file": "5.PHONG CÁCH SỐNG.png", "slug": "trai-nghiem/phong-cach-song", "title": "Phong cách sống", "section": "trai-nghiem" },
+    { "dir": "2.Page_Trải nghiệm", "file": "5.1ĐỔI MÀU, ĐỔI DIỆN MẠO. CÒN ĐIỀU GÌ VẪN Ở ĐÓ_.png", "slug": "trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao", "title": "Đổi màu, đổi diện mạo. Còn điều gì vẫn ở đó?", "section": "trai-nghiem", "article": true },
+
+    { "dir": "3.Page_Giải pháp", "file": "1.Giải pháp.png", "slug": "giai-phap", "main": true },
+    { "dir": "3.Page_Giải pháp", "file": "2.1 Phim Dán Kính.png", "slug": "giai-phap/phim-dan-kinh", "title": "Phim dán kính", "section": "giai-phap" },
+    { "dir": "3.Page_Giải pháp", "file": "2.2 3M Ceramic Elite IM.png", "slug": "giai-phap/phim-dan-kinh/3m-ceramic-elite-im", "title": "3M Ceramic Elite IM", "section": "giai-phap", "article": true },
+    { "dir": "3.Page_Giải pháp", "file": "3.PPF.png", "slug": "giai-phap/ppf", "title": "PPF", "section": "giai-phap" },
+    { "dir": "3.Page_Giải pháp", "file": "4.Loa.png", "slug": "giai-phap/loa", "title": "Loa nội thất", "section": "giai-phap" },
+    { "dir": "3.Page_Giải pháp", "file": "5.Màn hình.png", "slug": "giai-phap/man-hinh", "title": "Màn hình ô tô", "section": "giai-phap" },
+    { "dir": "3.Page_Giải pháp", "file": "6.1 CÁC DỰ ÁN ĐÃ TRIỂN KHAI.png", "slug": "giai-phap/du-an", "title": "Các dự án đã triển khai", "section": "giai-phap" },
+    { "dir": "3.Page_Giải pháp", "file": "6.2 Trở thành Đại lý Winca chính hãng của PHẠM GIA AUTO.png", "slug": "giai-phap/du-an/dai-ly-winca-pham-gia-auto", "title": "Trở thành Đại lý Winca chính hãng của Phạm Gia Auto", "section": "giai-phap", "article": true },
+
+    { "dir": "4.Page_Công nghệ ", "file": "1. Công Nghệ.png", "slug": "cong-nghe", "main": true },
+    { "dir": "4.Page_Công nghệ ", "file": "2.1 Tiên Phong Công Nghệ.png", "slug": "cong-nghe/tien-phong-cong-nghe", "title": "Tiên phong công nghệ", "section": "cong-nghe" },
+    { "dir": "4.Page_Công nghệ ", "file": "2.2 BÀI VIẾT CÔNG NGHỆ.png", "slug": "cong-nghe/tien-phong-cong-nghe/bai-viet", "title": "Bài viết công nghệ", "section": "cong-nghe", "article": true },
+    { "dir": "4.Page_Công nghệ ", "file": "3.1 ỨNG DỤNG.png", "slug": "cong-nghe/ung-dung", "title": "Ứng dụng", "section": "cong-nghe" },
+    { "dir": "4.Page_Công nghệ ", "file": "3.2 CẬP NHÂT & VÁ LỖI.png", "slug": "cong-nghe/ung-dung/cap-nhat-va-loi", "title": "Cập nhật & vá lỗi", "section": "cong-nghe" },
+    { "dir": "4.Page_Công nghệ ", "file": "3.2 KHO ỨNG DỤNG.png", "slug": "cong-nghe/ung-dung/kho-ung-dung", "title": "Kho ứng dụng", "section": "cong-nghe" },
+
+    { "dir": "5.Page_Đại lý ", "file": "1. Đại lý.png", "slug": "dai-ly", "main": true },
+    { "dir": "5.Page_Đại lý ", "file": "2.1 MẠNG LƯỚI ĐẠI LÝ - 1.png", "slug": "dai-ly/mang-luoi-dai-ly", "title": "Mạng lưới đại lý", "section": "dai-ly" },
+    { "dir": "5.Page_Đại lý ", "file": "2.2 MẠNG LƯỚI ĐẠI LÝ - 2.png", "slug": "dai-ly/mang-luoi-dai-ly/mien-trung", "title": "Mạng lưới đại lý — trang 2", "section": "dai-ly" },
+    { "dir": "5.Page_Đại lý ", "file": "2.3 MẠNG LƯỚI ĐẠI LÝ - 3.png", "slug": "dai-ly/mang-luoi-dai-ly/mien-nam", "title": "Mạng lưới đại lý — trang 3", "section": "dai-ly" },
+    { "dir": "5.Page_Đại lý ", "file": "3. CÂU CHUYỆN ĐỒNG HÀNH.png", "slug": "dai-ly/cau-chuyen-dong-hanh", "title": "Câu chuyện đồng hành", "section": "dai-ly" },
+    { "dir": "5.Page_Đại lý ", "file": "4.1 CHÂN DUNG ĐẠI LÝ.png", "slug": "dai-ly/chan-dung-dai-ly", "title": "Chân dung đại lý", "section": "dai-ly" },
+    { "dir": "5.Page_Đại lý ", "file": "4.2 Trở thành Đại lý Winca chính hãng của PHẠM GIA AUTO.png", "slug": "dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto", "title": "Trở thành Đại lý Winca chính hãng của Phạm Gia Auto", "section": "dai-ly", "article": true },
+    { "dir": "5.Page_Đại lý ", "file": "5. HỖ TRỢ TIẾP THỊ.png", "slug": "dai-ly/ho-tro-tiep-thi", "title": "Hỗ trợ tiếp thị", "section": "dai-ly" },
+    { "dir": "5.Page_Đại lý ", "file": "6. GALLERY BY BRAND.png", "slug": "dai-ly/gallery-by-brand", "title": "Gallery by brand", "section": "dai-ly" },
+
+    { "dir": "6.Page_Nhân Sự ", "file": "1. Nhân sự.png", "slug": "nhan-su", "main": true },
+    { "dir": "6.Page_Nhân Sự ", "file": "2.1 VĂN HOÁ TC.png", "slug": "nhan-su/van-hoa-tc", "title": "Văn hoá TC", "section": "nhan-su" },
+    { "dir": "6.Page_Nhân Sự ", "file": "2.2 CÂU CHUYỆN KHỞI NGHIỆP.png", "slug": "nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep", "title": "Câu chuyện khởi nghiệp", "section": "nhan-su", "article": true },
+    { "dir": "6.Page_Nhân Sự ", "file": "3. NHÂN SỰ TC.png", "slug": "nhan-su/nhan-su-tc", "title": "Nhân sự TC", "section": "nhan-su" },
+    { "dir": "6.Page_Nhân Sự ", "file": "4.1 TUYỂN DỤNG.png", "slug": "nhan-su/tuyen-dung", "title": "Tuyển dụng", "section": "nhan-su" },
+    { "dir": "6.Page_Nhân Sự ", "file": "4.2 VỊ TRÍ ĐANG TUYỂN.png", "slug": "nhan-su/tuyen-dung/vi-tri-dang-tuyen", "title": "Vị trí đang tuyển", "section": "nhan-su" },
+    { "dir": "6.Page_Nhân Sự ", "file": "4.3 TC AUTO TUYỂN KỸ THUẬT DÁN PHIM CÁCH NHIỆT VÀ LẮP ĐẶT MÀN HÌNH Ô TÔ.png", "slug": "nhan-su/tuyen-dung/vi-tri-dang-tuyen/ky-thuat-dan-phim-va-man-hinh", "title": "TC Auto tuyển Kỹ thuật dán phim cách nhiệt và lắp đặt màn hình ô tô", "section": "nhan-su", "article": true }
+  ]
+}

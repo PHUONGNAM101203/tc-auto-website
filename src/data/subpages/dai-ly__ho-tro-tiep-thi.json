@@ -1,0 +1,123 @@
+{
+  "slug": "dai-ly/ho-tro-tiep-thi",
+  "route": "/dai-ly/ho-tro-tiep-thi",
+  "title": "Hỗ trợ tiếp thị",
+  "section": "dai-ly",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2557.0,
+  "slices": [
+    {
+      "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@2x.webp?v=c7cefa28",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@2x.webp?v=c7cefa28",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@3x.webp?v=30935e7c",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 187324,
+      "bytesByScale": {
+        "2": 187324,
+        "3": 335200
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-1@2x.webp?v=abb9e551",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-1@2x.webp?v=abb9e551",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-1@3x.webp?v=0dfe154e",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 159296,
+      "bytesByScale": {
+        "2": 159296,
+        "3": 254172
+      }
+    },
+    {
+      "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-2@2x.webp?v=2c5d6d7c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-2@2x.webp?v=2c5d6d7c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-2@3x.webp?v=04367dc6",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 757.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1514,
+      "bytes": 119692,
+      "bytesByScale": {
+        "2": 119692,
+        "3": 199956
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 2434.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Đại lý",
+      "href": "/dai-ly"
+    }
+  ],
+  "sourceFile": "5. HỖ TRỢ TIẾP THỊ.png"
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "nhan-su/tuyen-dung",
+  "route": "/nhan-su/tuyen-dung",
+  "title": "Tuyển dụng",
+  "section": "nhan-su",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2480.0,
+  "slices": [
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung-0@2x.webp?v=c68bf032",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung-0@2x.webp?v=c68bf032",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung-0@3x.webp?v=f50edae0",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 249550,
+      "bytesByScale": {
+        "2": 249550,
+        "3": 418850
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung-1@2x.webp?v=61be2de5",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung-1@2x.webp?v=61be2de5",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung-1@3x.webp?v=30ec17a0",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 185834,
+      "bytesByScale": {
+        "2": 185834,
+        "3": 304370
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__tuyen-dung-2@2x.webp?v=a3478820",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung-2@2x.webp?v=a3478820",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__tuyen-dung-2@3x.webp?v=1244c0bf",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 680.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1360,
+      "bytes": 103770,
+      "bytesByScale": {
+        "2": 103770,
+        "3": 174228
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "contactForm": {
+    "y": 2357.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Nhân sự",
+      "href": "/nhan-su"
+    }
+  ],
+  "sourceFile": "4.1 TUYỂN DỤNG.png"
+}

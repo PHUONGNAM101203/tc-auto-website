@@ -1,0 +1,874 @@
+[
+ {
+  "y": 37.7,
+  "h": 27.3,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "w": 98.37,
+  "x": 131.86
+ },
+ {
+  "y": 43.93,
+  "h": 16.8,
+  "confidence": 1,
+  "text": "Q Nhập để tìm kiếm....",
+  "w": 108.84,
+  "x": 1149.07
+ },
+ {
+  "y": 51.1,
+  "h": 19.39,
+  "confidence": 1,
+  "text": "ĐẠI LÝ >",
+  "w": 65.91,
+  "x": 830.36
+ },
+ {
+  "y": 51.12,
+  "h": 22.32,
+  "confidence": 1,
+  "text": "TRẢI NGHIỆM ›",
+  "w": 116.02,
+  "x": 439.07
+ },
+ {
+  "y": 52.85,
+  "h": 18.54,
+  "confidence": 1,
+  "text": "GIẢI PHÁP ›",
+  "w": 90.35,
+  "x": 581.71
+ },
+ {
+  "y": 54.29,
+  "h": 16.92,
+  "confidence": 1,
+  "text": "CÔNG NGHỆ ›",
+  "w": 106.74,
+  "x": 696.98
+ },
+ {
+  "y": 54.29,
+  "h": 19.01,
+  "confidence": 1,
+  "text": "NHÂN SỰ ›",
+  "w": 98.37,
+  "x": 904.19
+ },
+ {
+  "y": 502.55,
+  "h": 12.7,
+  "confidence": 1,
+  "text": "CLARITY",
+  "w": 69.09,
+  "x": 1253.71
+ },
+ {
+  "y": 517.14,
+  "h": 10.71,
+  "confidence": 1,
+  "text": "Tầm nhìn sắc nét",
+  "w": 92.09,
+  "x": 1251.63
+ },
+ {
+  "y": 571.73,
+  "h": 12.57,
+  "confidence": 1,
+  "text": "PROTECTION",
+  "w": 102.56,
+  "x": 1253.72
+ },
+ {
+  "y": 586.39,
+  "h": 10.47,
+  "confidence": 1,
+  "text": "Bảo vệ tối ưu",
+  "w": 71.16,
+  "x": 1251.63
+ },
+ {
+  "y": 623.93,
+  "h": 21.1,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "w": 81.63,
+  "x": 642.56
+ },
+ {
+  "y": 636.65,
+  "h": 12.57,
+  "confidence": 1,
+  "text": "COMFORT",
+  "w": 81.63,
+  "x": 1253.72
+ },
+ {
+  "y": 640.71,
+  "h": 56.79,
+  "confidence": 1,
+  "text": "PHONG CÁCH SỐNG",
+  "w": 560.93,
+  "x": 79.53
+ },
+ {
+  "y": 651.31,
+  "h": 12.62,
+  "confidence": 1,
+  "text": "Thoải mái trên mọi",
+  "w": 98.37,
+  "x": 1253.72
+ },
+ {
+  "y": 663.87,
+  "h": 10.47,
+  "confidence": 1,
+  "text": "hành trình",
+  "w": 58.6,
+  "x": 1251.63
+ },
+ {
+  "y": 714.14,
+  "h": 27.29,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "w": 148.6,
+  "x": 81.63
+ },
+ {
+  "y": 714.14,
+  "h": 12.57,
+  "confidence": 1,
+  "text": "CONFIDENCE",
+  "w": 104.65,
+  "x": 1253.72
+ },
+ {
+  "y": 728.8,
+  "h": 10.49,
+  "confidence": 1,
+  "text": "Trái nghiệm trọn vẹn",
+  "w": 108.84,
+  "x": 1251.63
+ },
+ {
+  "y": 919.16,
+  "h": 35.6,
+  "confidence": 1,
+  "text": "CÓ NHỮNG KHOẢNG RIÊNG TƯ",
+  "w": 565.12,
+  "x": 755.58
+ },
+ {
+  "y": 956.79,
+  "h": 35.71,
+  "confidence": 1,
+  "text": "KHÔNG CẦN NÓI RA",
+  "w": 364.19,
+  "x": 757.67
+ },
+ {
+  "y": 1000.64,
+  "h": 20.44,
+  "confidence": 1,
+  "text": "Ngày 19.8.2026",
+  "w": 119.78,
+  "x": 753.27
+ },
+ {
+  "y": 1046.79,
+  "h": 21.07,
+  "confidence": 1,
+  "text": "Có những lúc, thứ mình cần trong xe không phải là thêm một tiện nghi.",
+  "w": 583.95,
+  "x": 753.49
+ },
+ {
+  "y": 1086.7,
+  "h": 20.94,
+  "confidence": 1,
+  "text": "Chỉ là cảm giác được ở một mình.",
+  "w": 276.28,
+  "x": 753.49
+ },
+ {
+  "y": 1126.43,
+  "h": 21.07,
+  "confidence": 1,
+  "text": "Đậu xe bên đường, ngồi chờ một người, tranh thủ trả lời vài tin nhắn, hay",
+  "w": 596.51,
+  "x": 753.49
+ },
+ {
+  "y": 1147.43,
+  "h": 20.94,
+  "confidence": 1,
+  "text": "đơn giản là ngồi yên một lúc trước khi tiếp tục hành trình.",
+  "w": 470.93,
+  "x": 753.49
+ },
+ {
+  "y": 1187.14,
+  "h": 18.93,
+  "confidence": 1,
+  "text": "Bên ngoài vẫn là dòng xe, người qua lại, những ánh nhìn vô tình lướt qua.",
+  "w": 596.51,
+  "x": 755.58
+ },
+ {
+  "y": 1227.02,
+  "h": 20.94,
+  "confidence": 1,
+  "text": "Nhưng bên trong, mình vẫn có một khoảng không của riêng mình.",
+  "w": 544.19,
+  "x": 753.49
+ },
+ {
+  "y": 1266.79,
+  "h": 18.93,
+  "confidence": 1,
+  "text": "Một lớp phim cách nhiệt tốt không chỉ giúp hạn chế nắng và nhiệt đi vào.",
+  "w": 592.33,
+  "x": 755.58
+ },
+ {
+  "y": 1296.07,
+  "h": 21.07,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "w": 115.12,
+  "x": 757.67
+ },
+ {
+  "y": 1407.12,
+  "h": 33.59,
+  "confidence": 1,
+  "text": "XE CHỌN BẠN, HAY BẠN CHỌN",
+  "w": 560.93,
+  "x": 753.49
+ },
+ {
+  "y": 1434.63,
+  "h": 35.82,
+  "confidence": 1,
+  "text": "XE TỪ ĐẦU?",
+  "w": 228,
+  "x": 750
+ },
+ {
+  "y": 1482.5,
+  "h": 18.93,
+  "confidence": 1,
+  "text": "Ngày 22.8.2026",
+  "w": 123.49,
+  "x": 753.49
+ },
+ {
+  "y": 1518.12,
+  "h": 18.85,
+  "confidence": 1,
+  "text": "Bạn đang để chiếc xe nói lên bạn, hay bạn đang nói lên chiếc xe?",
+  "w": 529.53,
+  "x": 755.58
+ },
+ {
+  "y": 1520,
+  "h": 18.93,
+  "confidence": 1,
+  "text": "Bạn đang đề chiếc xe nói lên bạn, hay bạn đang nói lên chiếc xe?",
+  "w": 529.53,
+  "x": 755.58
+ },
+ {
+  "y": 1557.7,
+  "h": 16.75,
+  "confidence": 1,
+  "text": "Có một câu hỏi mình hay tự đặt ra mỗi lần ngồi vào xe của ai đó lần đầu.",
+  "w": 594.42,
+  "x": 755.58
+ },
+ {
+  "y": 1578.57,
+  "h": 16.82,
+  "confidence": 1,
+  "text": "Câu trả lời thường lộ ra rất nhanh. Chỉ cần nhìn cách một người dùng",
+  "w": 563.02,
+  "x": 755.58
+ },
+ {
+  "y": 1597.49,
+  "h": 18.89,
+  "confidence": 1,
+  "text": "chiếc xe của mình, kiểu nhạc họ bật, mùi nước hoa xe họ chọn, cách họ",
+  "w": 577.78,
+  "x": 755.53
+ },
+ {
+  "y": 1616.25,
+  "h": 23.22,
+  "confidence": 1,
+  "text": "sắp xếp mấy món đồ nhỏ trên taplo, là đủ để đoán ra khá nhiều về gu",
+  "w": 571.52,
+  "x": 751.34
+ },
+ {
+  "y": 1637,
+  "h": 21.5,
+  "confidence": 1,
+  "text": "sống của họ.",
+  "w": 106.85,
+  "x": 751.34
+ },
+ {
+  "y": 1677.07,
+  "h": 20.94,
+  "confidence": 1,
+  "text": "Nhưng chiều ngược lại mới ít ai để ý.",
+  "w": 297.21,
+  "x": 753.49
+ },
+ {
+  "y": 1716.79,
+  "h": 21.07,
+  "confidence": 1,
+  "text": "Xe rộng rãi, mình bỗng thích rủ bạn bè đi xa hơn. Nội thất mát nhờ lớp.",
+  "w": 575.58,
+  "x": 751.4
+ },
+ {
+  "y": 1737.74,
+  "h": 20.16,
+  "confidence": 1,
+  "text": "t tốt, mình ngồi lầu mà chăng ngại. Am thanh hay, mình.",
+  "w": 468.94,
+  "x": 874.85
+ },
+ {
+  "y": 1753.75,
+  "h": 22.55,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "w": 115.4,
+  "x": 757.53
+ },
+ {
+  "y": 1873.33,
+  "h": 51.08,
+  "confidence": 1,
+  "text": "ĐỔI MÀU, ĐỔI DIỆN MẠO. CÒN",
+  "w": 542.73,
+  "x": 753.17
+ },
+ {
+  "y": 1909.53,
+  "h": 41.9,
+  "confidence": 1,
+  "text": "ĐIỀU GÌ VẪN Ở ĐÖ?",
+  "w": 345.35,
+  "x": 753.49
+ },
+ {
+  "y": 1959.64,
+  "h": 19,
+  "confidence": 1,
+  "text": "Ngày 23.8.2026",
+  "w": 125.58,
+  "x": 751.4
+ },
+ {
+  "y": 1995.36,
+  "h": 18.93,
+  "confidence": 1,
+  "text": "TC Auto đang thay đổi.",
+  "w": 188.37,
+  "x": 753.49
+ },
+ {
+  "y": 2035.18,
+  "h": 16.75,
+  "confidence": 1,
+  "text": "Một diện mạo mới. Một cách kể mới. Những sản phẩm mới như DEGO",
+  "w": 569.3,
+  "x": 755.58
+ },
+ {
+  "y": 2056.07,
+  "h": 16.81,
+  "confidence": 1,
+  "text": "cũng dần trở thành một phần trong hành trình phía trước.",
+  "w": 475.12,
+  "x": 755.58
+ },
+ {
+  "y": 2092.09,
+  "h": 23.75,
+  "confidence": 1,
+  "text": "Nhìn bên ngoài, có thể sẽ có nhiều điều khác đi.",
+  "w": 389.53,
+  "x": 753.35
+ },
+ {
+  "y": 2135.71,
+  "h": 21.08,
+  "confidence": 1,
+  "text": "Nhưng có những thứ không cần phải thay đổi.",
+  "w": 378.84,
+  "x": 753.49
+ },
+ {
+  "y": 2175.36,
+  "h": 16.89,
+  "confidence": 1,
+  "text": "* Vẫn là cách TC Auto chọn sản phẩm kỹ càng trước khi đưa đến khách.",
+  "w": 583.95,
+  "x": 759.77
+ },
+ {
+  "y": 2219.83,
+  "h": 22.02,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "w": 115.58,
+  "x": 757.44
+ },
+ {
+  "y": 2354.6,
+  "h": 43.23,
+  "confidence": 1,
+  "text": "MỘT BẢN NHẠC QUEN, SAO",
+  "w": 500.56,
+  "x": 757.52
+ },
+ {
+  "y": 2395.18,
+  "h": 33.51,
+  "confidence": 1,
+  "text": "HÔM NAY NGHE KHÁC THÊ?",
+  "w": 512.79,
+  "x": 755.58
+ },
+ {
+  "y": 2433.8,
+  "h": 26.02,
+  "confidence": 1,
+  "text": "Ngày 23.8.2026",
+  "w": 124.7,
+  "x": 752.85
+ },
+ {
+  "y": 2474.64,
+  "h": 18.97,
+  "confidence": 1,
+  "text": "Có những bài hát mình đã nghe đến thuộc lòng.",
+  "w": 391.4,
+  "x": 755.58
+ },
+ {
+  "y": 2514.55,
+  "h": 19.02,
+  "confidence": 1,
+  "text": "Biết đoạn nào giọng ca lên cao, đoạn nào guitar bắt đầu vào, thậm chí",
+  "w": 579.77,
+  "x": 755.58
+ },
+ {
+  "y": 2535.36,
+  "h": 16.89,
+  "confidence": 1,
+  "text": "nhớ cả những khoảng lặng giữa hai câu hát.",
+  "w": 366.28,
+  "x": 755.58
+ },
+ {
+  "y": 2575.29,
+  "h": 19,
+  "confidence": 1,
+  "text": "Nhưng rồi một ngày, bật lại chính bài hát đó trên chiếc xe của mình, lại",
+  "w": 581.86,
+  "x": 753.49
+ },
+ {
+  "y": 2594.14,
+  "h": 20.94,
+  "confidence": 1,
+  "text": "nghe thấy những thứ trước giờ chưa từng để ý.",
+  "w": 385.12,
+  "x": 751.4
+ },
+ {
+  "y": 2636.02,
+  "h": 16.84,
+  "confidence": 1,
+  "text": "Một tiếng guitar rất khẽ ở phía sau. Một lớp vocal rõ hơn. Tiếng bass .",
+  "w": 550.47,
+  "x": 755.58
+ },
+ {
+  "y": 2654.24,
+  "h": 23.15,
+  "confidence": 1,
+  "text": "xuơng sâu hơn ở đoạn điệp khúc. Những chỉ tiết vốn vẫn ở đó, chỉ là trước",
+  "w": 600.84,
+  "x": 751.33
+ },
+ {
+  "y": 2675.71,
+  "h": 16.85,
+  "confidence": 1,
+  "text": "đây mình chưa thực sự nghe thấy.",
+  "w": 278.37,
+  "x": 755.58
+ },
+ {
+  "y": 2710.5,
+  "h": 20.67,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "w": 113.31,
+  "x": 759.62
+ },
+ {
+  "y": 2831.74,
+  "h": 45.75,
+  "confidence": 1,
+  "text": "GU NGHE NHẠC CỦA BẠN, XE",
+  "w": 530.01,
+  "x": 755.37
+ },
+ {
+  "y": 2870.04,
+  "h": 45.34,
+  "confidence": 1,
+  "text": "ĐÃ ĐÁP ỨNG ĐƯỢC CHƯA?",
+  "w": 490.5,
+  "x": 755.2
+ },
+ {
+  "y": 2914.67,
+  "h": 21.99,
+  "confidence": 1,
+  "text": "Ngày 28.8.2026",
+  "w": 124.34,
+  "x": 753.08
+ },
+ {
+  "y": 2954.29,
+  "h": 21.07,
+  "confidence": 1,
+  "text": "Có người thích một khoang xe tối giản.",
+  "w": 320.23,
+  "x": 753.49
+ },
+ {
+  "y": 2994.14,
+  "h": 20.94,
+  "confidence": 1,
+  "text": "Có người để ý từng đường chỉ trên ghế, từng chất liệu trên taplo.",
+  "w": 523.26,
+  "x": 753.49
+ },
+ {
+  "y": 3015,
+  "h": 21.07,
+  "confidence": 1,
+  "text": "Vì với họ, chiếc xe không chỉ là phương tiện. Nó là một phần của cách",
+  "w": 565.12,
+  "x": 753.49
+ },
+ {
+  "y": 3034.18,
+  "h": 20.83,
+  "confidence": 1,
+  "text": "mình thể hiện bản thân.",
+  "w": 201.25,
+  "x": 753.35
+ },
+ {
+  "y": 3040,
+  "h": 12.57,
+  "confidence": 1,
+  "text": "ninn the niẹn oan than.",
+  "w": 196.74,
+  "x": 757.67
+ },
+ {
+  "y": 3073.29,
+  "h": 21.91,
+  "confidence": 1,
+  "text": "Âm thanh cũng vậy.",
+  "w": 170.01,
+  "x": 751.17
+ },
+ {
+  "y": 3115.36,
+  "h": 16.79,
+  "confidence": 1,
+  "text": "Một người thích vocal có thể để ý đến độ trong của giọng hát. Người thích",
+  "w": 598.6,
+  "x": 755.58
+ },
+ {
+  "y": 3136.34,
+  "h": 16.88,
+  "confidence": 1,
+  "text": "jazz có thể quan tâm đến tiềng contrabass, tiếng cymbal rât khẽ phía sau.",
+  "w": 604.88,
+  "x": 753.49
+ },
+ {
+  "y": 3155.18,
+  "h": 16.75,
+  "confidence": 1,
+  "text": "Người mê hip-hop lại muốn phần bass có đủ độ sâu và lực.",
+  "w": 475.12,
+  "x": 755.58
+ },
+ {
+  "y": 3180.31,
+  "h": 21.11,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "w": 115.12,
+  "x": 757.67
+ },
+ {
+  "y": 3310.82,
+  "h": 45.25,
+  "confidence": 1,
+  "text": "CÓ NHỮNG BUỔI SÁNG",
+  "w": 425.32,
+  "x": 753.19
+ },
+ {
+  "y": 3345.32,
+  "h": 49.45,
+  "confidence": 1,
+  "text": "KHÔNG CẦN VỘI",
+  "w": 304.87,
+  "x": 754.98
+ },
+ {
+  "y": 3396.02,
+  "h": 18.98,
+  "confidence": 1,
+  "text": "Ngày 30.8.2026",
+  "w": 123.49,
+  "x": 753.49
+ },
+ {
+  "y": 3439.17,
+  "h": 23.44,
+  "confidence": 1,
+  "text": "Có người uống cà phê để tỉnh táo",
+  "w": 274.51,
+  "x": 753.33
+ },
+ {
+  "y": 3479.64,
+  "h": 21.09,
+  "confidence": 1,
+  "text": "Có người cần một góc yên để bắt đầu ngày mới",
+  "w": 391.4,
+  "x": 753.49
+ },
+ {
+  "y": 3521.68,
+  "h": 16.9,
+  "confidence": 1,
+  "text": "Cũng có những buối sáng, chỉ cần lái xe ra ngoài, tìm một quán quen, đậu",
+  "w": 602.79,
+  "x": 755.58
+ },
+ {
+  "y": 3540.36,
+  "h": 21.11,
+  "confidence": 1,
+  "text": "xe ở một góc vừa đủ đẹp, gọi một ly cà phê rồi ngồi nhìn phố xá trôi qua là",
+  "w": 604.88,
+  "x": 751.4
+ },
+ {
+  "y": 3561.43,
+  "h": 18.93,
+  "confidence": 1,
+  "text": "thấy ngày bắt đầu nhẹ hơn một chút.",
+  "w": 309.77,
+  "x": 753.49
+ },
+ {
+  "y": 3601.26,
+  "h": 16.75,
+  "confidence": 1,
+  "text": "Có lẽ vì ô tô đôi khi không chỉ đưa mình đi đầu đói",
+  "w": 399.77,
+  "x": 755.58
+ },
+ {
+  "y": 3641.05,
+  "h": 21.1,
+  "confidence": 1,
+  "text": "Nó cho mình một khoảng thời gian ở giữa những điểm đến. Một đoạn",
+  "w": 567.21,
+  "x": 755.58
+ },
+ {
+  "y": 3676.95,
+  "h": 20.04,
+  "confidence": 1,
+  "text": "> XEM THEM",
+  "w": 115.46,
+  "x": 757.5
+ },
+ {
+  "y": 3811.07,
+  "h": 24.04,
+  "confidence": 0.5,
+  "text": "{ (7",
+  "w": 59,
+  "x": 626.58
+ },
+ {
+  "y": 3816.97,
+  "h": 19.83,
+  "confidence": 1,
+  "text": "2 3 ...",
+  "w": 76.55,
+  "x": 711.05
+ },
+ {
+  "y": 3817.38,
+  "h": 20.14,
+  "confidence": 1,
+  "text": "2 3 ...",
+  "w": 68.92,
+  "x": 717.23
+ },
+ {
+  "y": 3989.16,
+  "h": 17.35,
+  "confidence": 1,
+  "text": "TC LUÔN SẴN SÀNG ĐỒNG HÀNH CÙNG BẠN",
+  "w": 281.1,
+  "x": 730.48
+ },
+ {
+  "y": 3990.97,
+  "h": 14.04,
+  "confidence": 1,
+  "text": "DRIVE • EXPERIENCE • ELEVATE",
+  "w": 257.09,
+  "x": 81.48
+ },
+ {
+  "y": 3990.97,
+  "h": 14.04,
+  "confidence": 1,
+  "text": "KẾT NỐI VỚI TC",
+  "w": 96.94,
+  "x": 1233.48
+ },
+ {
+  "y": 4012.03,
+  "h": 7.16,
+  "confidence": 1,
+  "text": "093 617 6996",
+  "w": 53.39,
+  "x": 1257.37
+ },
+ {
+  "y": 4021.69,
+  "h": 10,
+  "confidence": 1,
+  "text": "Họ và tên của bạn",
+  "w": 89.91,
+  "x": 750.2
+ },
+ {
+  "y": 4027.47,
+  "h": 8.43,
+  "confidence": 0.5,
+  "text": "infor@tcautosolutions.vn",
+  "w": 102.56,
+  "x": 1257.37
+ },
+ {
+  "y": 4030.26,
+  "h": 8.57,
+  "confidence": 1,
+  "text": "TC luôn săn sàng lăng nghe và tư vân giái giáp phù",
+  "w": 210.73,
+  "x": 81.48
+ },
+ {
+  "y": 4035.54,
+  "h": 23.38,
+  "confidence": 1,
+  "text": "TC AUTO",
+  "w": 100.25,
+  "x": 490.09
+ },
+ {
+  "y": 4036.95,
+  "h": 13.08,
+  "confidence": 1,
+  "text": "Nhu cầu, câu hỏi của bạn....",
+  "w": 132.36,
+  "x": 941.12
+ },
+ {
+  "y": 4040.11,
+  "h": 8.43,
+  "confidence": 1,
+  "text": "hợp nhất dành cho bạn.",
+  "w": 101.15,
+  "x": 81.48
+ },
+ {
+  "y": 4042.75,
+  "h": 8.59,
+  "confidence": 1,
+  "text": "Thứ 2 - 7 | 8:00 - 17:30",
+  "w": 87.1,
+  "x": 1257.37
+ },
+ {
+  "y": 4054.15,
+  "h": 9.83,
+  "confidence": 1,
+  "text": "Số điện thoại",
+  "w": 64.62,
+  "x": 750.2
+ },
+ {
+  "y": 4056.96,
+  "h": 9.83,
+  "confidence": 1,
+  "text": "SOLUTIONS",
+  "w": 92.72,
+  "x": 494.52
+ },
+ {
+  "y": 4080.83,
+  "h": 12.64,
+  "confidence": 1,
+  "text": "GỬI",
+  "w": 26.69,
+  "x": 1059.28
+ },
+ {
+  "y": 4083.64,
+  "h": 8.43,
+  "confidence": 1,
+  "text": "Zalo",
+  "w": 16.86,
+  "x": 1307.94
+ },
+ {
+  "y": 4092.02,
+  "h": 10,
+  "confidence": 1,
+  "text": "©2026 TC Auto Solutions. All rights reserved",
+  "w": 217.76,
+  "x": 82.89
+ }
+]

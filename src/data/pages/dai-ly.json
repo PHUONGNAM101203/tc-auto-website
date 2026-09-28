@@ -1,0 +1,573 @@
+{
+  "slug": "dai-ly",
+  "route": "/dai-ly",
+  "title": "Đại lý",
+  "canvasWidth": 1440,
+  "height": 4577.0,
+  "slices": [
+    {
+      "src": "/slices/dai-ly-0.webp?v=50d04ffd",
+      "y": 0.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 134746,
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-0.webp?v=50d04ffd",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-0@3x.webp?v=5a226d05",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 134746,
+        "3": 346930
+      }
+    },
+    {
+      "src": "/slices/dai-ly-1.webp?v=d930be4e",
+      "y": 900.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 67076,
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-1.webp?v=d930be4e",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-1@3x.webp?v=baf545c3",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 67076,
+        "3": 264548
+      }
+    },
+    {
+      "src": "/slices/dai-ly-2.webp?v=39bc40ca",
+      "y": 1800.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 76842,
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-2.webp?v=39bc40ca",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-2@3x.webp?v=29f433ec",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 76842,
+        "3": 278346
+      }
+    },
+    {
+      "src": "/slices/dai-ly-3.webp?v=90eb29e3",
+      "y": 2700.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 49758,
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-3.webp?v=90eb29e3",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-3@3x.webp?v=abea40d5",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 49758,
+        "3": 203446
+      }
+    },
+    {
+      "src": "/slices/dai-ly-4.webp?v=94fe9a81",
+      "y": 3600.0,
+      "displayHeight": 900.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 138212,
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-4.webp?v=94fe9a81",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-4@3x.webp?v=e0111d9c",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 138212,
+        "3": 357086
+      }
+    },
+    {
+      "src": "/slices/dai-ly-5.webp?v=01d877e5",
+      "y": 4500.0,
+      "displayHeight": 77.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 154,
+      "bytes": 8922,
+      "srcSet": [
+        {
+          "src": "/slices/dai-ly-5.webp?v=01d877e5",
+          "scale": 2
+        },
+        {
+          "src": "/slices/dai-ly-5@3x.webp?v=8d184df2",
+          "scale": 3
+        }
+      ],
+      "bytesByScale": {
+        "2": 8922,
+        "3": 19182
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": true
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "items": [
+    {
+      "id": "dai-ly-000",
+      "tag": "div",
+      "classes": [
+        "herot"
+      ],
+      "x": 82.0,
+      "y": 645.0,
+      "w": 500.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "THẾ GIỚI CỦA TC",
+      "text": "THẾ GIỚI CỦA TC"
+    },
+    {
+      "id": "dai-ly-001",
+      "tag": "div",
+      "classes": [
+        "slogan"
+      ],
+      "x": 82.0,
+      "y": 710.0,
+      "w": 470.0,
+      "h": null,
+      "css": {},
+      "href": null,
+      "html": "DRIVE · <span class=\"c-blue\">EXPERIENCE</span> · <span class=\"c-red\">ELEVATE</span>",
+      "text": "DRIVE · EXPERIENCE · ELEVATE"
+    },
+    {
+      "id": "dai-ly-002",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 86.0,
+      "y": 948.0,
+      "w": 340.0,
+      "h": 36.0,
+      "css": {
+        "line-height": "36px",
+        "font-size": "26px",
+        "padding-left": "48px",
+        "--tri": "9px"
+      },
+      "href": null,
+      "html": "MẠNG LƯỚI ĐẠI LÝ",
+      "text": "MẠNG LƯỚI ĐẠI LÝ"
+    },
+    {
+      "id": "dai-ly-003",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 83.0,
+      "y": 1116.0,
+      "w": 560.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "SẴN SÀNG ĐỒNG HÀNH.<br>CÙNG NHAU BỨT PHÁ.",
+      "text": "SẴN SÀNG ĐỒNG HÀNH.CÙNG NHAU BỨT PHÁ."
+    },
+    {
+      "id": "dai-ly-004",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 83.0,
+      "y": 1259.0,
+      "w": 532.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da4ac"
+      },
+      "href": null,
+      "html": "TCAUTO tìm kiếm những đối tác cùng tầm nhìn để xây dựng mạng lưới phân phối chuyên nghiệp và phát triển lâu dài. Gia nhập ngay hôm nay để cùng khai thác tiềm năng thị trường và tạo nên những bước tiến khác biệt.",
+      "text": "TCAUTO tìm kiếm những đối tác cùng tầm nhìn để xây dựng mạng lưới phân phối chuyên nghiệp và phát triển lâu dài. Gia nhập ngay hôm nay để cùng khai thác tiềm năng thị trường và tạo nên những bước tiến khác biệt."
+    },
+    {
+      "id": "dai-ly-005",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 83.0,
+      "y": 1417.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "dai-ly-006",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 864.0,
+      "y": 1597.0,
+      "w": 470.0,
+      "h": 38.0,
+      "css": {
+        "line-height": "38px",
+        "font-size": "26px",
+        "padding-left": "46px",
+        "--tri": "9px"
+      },
+      "href": null,
+      "html": "CÂU CHUYỆN ĐỒNG HÀNH",
+      "text": "CÂU CHUYỆN ĐỒNG HÀNH"
+    },
+    {
+      "id": "dai-ly-007",
+      "tag": "div",
+      "classes": [
+        "h",
+        "dark"
+      ],
+      "x": 864.0,
+      "y": 1728.0,
+      "w": 520.0,
+      "h": null,
+      "css": {
+        "font-size": "39px",
+        "line-height": "45px"
+      },
+      "href": null,
+      "html": "CÙNG NHAU ĐI XA.<br>CÙNG NHAU TẠO GIÁ TRỊ.",
+      "text": "CÙNG NHAU ĐI XA.CÙNG NHAU TẠO GIÁ TRỊ."
+    },
+    {
+      "id": "dai-ly-008",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 860.0,
+      "y": 1859.0,
+      "w": 500.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#585c5f"
+      },
+      "href": null,
+      "html": "Mỗi sự hợp tác là một hành trình được xây dựng từ niềm tin và những giá trị chung. Tại TCAUTO, chúng tôi trân trọng từng đối tác đồng hành, cùng đưa sản phẩm và giải pháp ô tô chất lượng đến gần hơn với khách hàng. Cùng nhau phát triển, nâng chuẩn dịch vụ và tạo nên những giá trị bền vững.",
+      "text": "Mỗi sự hợp tác là một hành trình được xây dựng từ niềm tin và những giá trị chung. Tại TCAUTO, chúng tôi trân trọng từng đối tác đồng hành, cùng đưa sản phẩm và giải pháp ô tô chất lượng đến gần hơn với khách hàng. Cùng nhau phát triển, nâng chuẩn dịch vụ và tạo nên những giá trị bền vững."
+    },
+    {
+      "id": "dai-ly-009",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 864.0,
+      "y": 2033.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "dai-ly-010",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 2158.0,
+      "w": 420.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "CHÂN DUNG ĐẠI LÝ",
+      "text": "CHÂN DUNG ĐẠI LÝ"
+    },
+    {
+      "id": "dai-ly-011",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 82.0,
+      "y": 2253.0,
+      "w": 470.0,
+      "h": null,
+      "css": {
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "NHỮNG CON NGƯỜI<br>TẠO NÊN KHÁC BIỆT.",
+      "text": "NHỮNG CON NGƯỜITẠO NÊN KHÁC BIỆT."
+    },
+    {
+      "id": "dai-ly-012",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 82.0,
+      "y": 2405.0,
+      "w": 500.0,
+      "h": null,
+      "css": {
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9ea5ac"
+      },
+      "href": null,
+      "html": "TCAUTO tìm kiếm những đối tác cùng tầm nhìn để xây dựng mạng lưới phân phối chuyên nghiệp và phát triển lâu dài. Gia nhập ngay hôm nay để cùng khai thác tiềm năng thị trường và tạo nên những bước tiến khác biệt.",
+      "text": "TCAUTO tìm kiếm những đối tác cùng tầm nhìn để xây dựng mạng lưới phân phối chuyên nghiệp và phát triển lâu dài. Gia nhập ngay hôm nay để cùng khai thác tiềm năng thị trường và tạo nên những bước tiến khác biệt."
+    },
+    {
+      "id": "dai-ly-013",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 83.0,
+      "y": 2556.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "dai-ly-014",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 2726.0,
+      "w": 380.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "HỖ TRỢ TIẾP THỊ",
+      "text": "HỖ TRỢ TIẾP THỊ"
+    },
+    {
+      "id": "dai-ly-015",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 370.0,
+      "y": 2803.0,
+      "w": 700.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "ĐỒNG HÀNH TRUYỀN THÔNG.<br>NÂNG TẦM THƯƠNG HIỆU.",
+      "text": "ĐỒNG HÀNH TRUYỀN THÔNG.NÂNG TẦM THƯƠNG HIỆU."
+    },
+    {
+      "id": "dai-ly-016",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 465.0,
+      "y": 2934.0,
+      "w": 510.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9da4ac"
+      },
+      "href": null,
+      "html": "TCAUTO cùng đại lý xây dựng hình ảnh chuyên nghiệp và gia tăng sức mạnh thương hiệu thông qua những giải pháp marketing đồng bộ, sáng tạo và phù hợp với từng thị trường.",
+      "text": "TCAUTO cùng đại lý xây dựng hình ảnh chuyên nghiệp và gia tăng sức mạnh thương hiệu thông qua những giải pháp marketing đồng bộ, sáng tạo và phù hợp với từng thị trường."
+    },
+    {
+      "id": "dai-ly-017",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 631.0,
+      "y": 3029.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    },
+    {
+      "id": "dai-ly-018",
+      "tag": "div",
+      "classes": [
+        "lbl"
+      ],
+      "x": 84.0,
+      "y": 3546.0,
+      "w": 680.0,
+      "h": 40.0,
+      "css": {
+        "line-height": "40px",
+        "font-size": "30px",
+        "padding-left": "48px",
+        "--tri": "11px"
+      },
+      "href": null,
+      "html": "BỘ SƯU TẬP THEO THƯƠNG HIỆU",
+      "text": "BỘ SƯU TẬP THEO THƯƠNG HIỆU"
+    },
+    {
+      "id": "dai-ly-019",
+      "tag": "div",
+      "classes": [
+        "h"
+      ],
+      "x": 360.0,
+      "y": 3613.0,
+      "w": 720.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "46px",
+        "line-height": "56px"
+      },
+      "href": null,
+      "html": "KHÁM PHÁ DẤU ẤN TỪ NHỮNG<br>THƯƠNG HIỆU HÀNG ĐẦU.",
+      "text": "KHÁM PHÁ DẤU ẤN TỪ NHỮNGTHƯƠNG HIỆU HÀNG ĐẦU."
+    },
+    {
+      "id": "dai-ly-020",
+      "tag": "div",
+      "classes": [
+        "pi"
+      ],
+      "x": 445.0,
+      "y": 3750.0,
+      "w": 550.0,
+      "h": null,
+      "css": {
+        "text-align": "center",
+        "font-size": "16px",
+        "line-height": "20px",
+        "color": "#9ea5ac"
+      },
+      "href": null,
+      "html": "Mỗi thương hiệu mang một tinh thần, một công nghệ và một dấu ấn riêng. Khám phá bộ sưu tập hình ảnh các sản phẩm và giải pháp nổi bật được TCAUTO tuyển chọn, nơi chất lượng, thiết kế và công nghệ cùng tạo nên trải nghiệm khác biệt.",
+      "text": "Mỗi thương hiệu mang một tinh thần, một công nghệ và một dấu ấn riêng. Khám phá bộ sưu tập hình ảnh các sản phẩm và giải pháp nổi bật được TCAUTO tuyển chọn, nơi chất lượng, thiết kế và công nghệ cùng tạo nên trải nghiệm khác biệt."
+    },
+    {
+      "id": "dai-ly-021",
+      "tag": "a",
+      "classes": [
+        "btn"
+      ],
+      "x": 631.0,
+      "y": 3855.0,
+      "w": 179.0,
+      "h": 34.0,
+      "css": {},
+      "href": null,
+      "html": "KHÁM PHÁ NGAY",
+      "text": "KHÁM PHÁ NGAY"
+    }
+  ],
+  "contactForm": {
+    "y": 4454.0
+  }
+}

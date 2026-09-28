@@ -1,0 +1,145 @@
+{
+  "slug": "cong-nghe/ung-dung",
+  "route": "/cong-nghe/ung-dung",
+  "title": "Ứng dụng",
+  "section": "cong-nghe",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 3247.0,
+  "slices": [
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung-0@2x.webp?v=b3750e36",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-0@2x.webp?v=b3750e36",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-0@3x.webp?v=226f230d",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 150288,
+      "bytesByScale": {
+        "2": 150288,
+        "3": 256492
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung-1@2x.webp?v=d1d6138e",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-1@2x.webp?v=d1d6138e",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-1@3x.webp?v=719cfedb",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 158782,
+      "bytesByScale": {
+        "2": 158782,
+        "3": 299068
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung-2@2x.webp?v=982c58b4",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-2@2x.webp?v=982c58b4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-2@3x.webp?v=90ca52e4",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 154758,
+      "bytesByScale": {
+        "2": 154758,
+        "3": 269802
+      }
+    },
+    {
+      "src": "/slices/sub/cong-nghe__ung-dung-3@2x.webp?v=e4e34438",
+      "srcSet": [
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-3@2x.webp?v=e4e34438",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/cong-nghe__ung-dung-3@3x.webp?v=80bd1acb",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 547.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1094,
+      "bytes": 88534,
+      "bytesByScale": {
+        "2": 88534,
+        "3": 149874
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": true
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": false
+    }
+  ],
+  "contactForm": {
+    "y": 3124.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Công nghệ",
+      "href": "/cong-nghe"
+    }
+  ],
+  "sourceFile": "3.1 ỨNG DỤNG.png"
+}

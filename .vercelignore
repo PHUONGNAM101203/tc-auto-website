@@ -1,0 +1,34 @@
+# Nhung thu KHONG can co tren Vercel. Thu muc nay chua phai kho git nen Vercel
+# CLI se day len tat ca nhung gi khong bi loai o day.
+
+# Phu thuoc va ban dung — Vercel tu cai va tu build.
+node_modules
+.next
+out
+build
+coverage
+*.tsbuildinfo
+
+# Cong cu dung anh tu ban thiet ke. Chi chay tren may, can Python + Pillow +
+# bo PNG goc 1,0 GB o ~/Downloads — ban deploy khong dung den.
+tools
+
+# Ket qua kiem thu.
+tests
+test-results
+playwright-report
+playwright.config.ts
+vitest.config.mts
+
+# Ho so du an, khong phuc vu request nao.
+DESIGN.md
+README.md
+AGENTS.md
+CLAUDE.md
+supabase
+
+# Bien moi truong dat tren Vercel Dashboard, khong bao gio day file len.
+.env
+.env.*
+
+.DS_Store

@@ -1,0 +1,145 @@
+{
+  "slug": "nhan-su/nhan-su-tc",
+  "route": "/nhan-su/nhan-su-tc",
+  "title": "Nhân sự TC",
+  "section": "nhan-su",
+  "isArticle": false,
+  "canvasWidth": 1440,
+  "height": 2889.0,
+  "slices": [
+    {
+      "src": "/slices/sub/nhan-su__nhan-su-tc-0@2x.webp?v=47eebcd1",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-0@2x.webp?v=47eebcd1",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-0@3x.webp?v=3b9fa8da",
+          "scale": 3
+        }
+      ],
+      "y": 0.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 249256,
+      "bytesByScale": {
+        "2": 249256,
+        "3": 418310
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__nhan-su-tc-1@2x.webp?v=59eb74e4",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-1@2x.webp?v=59eb74e4",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-1@3x.webp?v=696f7393",
+          "scale": 3
+        }
+      ],
+      "y": 900.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 191160,
+      "bytesByScale": {
+        "2": 191160,
+        "3": 306562
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__nhan-su-tc-2@2x.webp?v=cd278e82",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-2@2x.webp?v=cd278e82",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-2@3x.webp?v=7143d338",
+          "scale": 3
+        }
+      ],
+      "y": 1800.0,
+      "displayHeight": 900,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 1800,
+      "bytes": 114946,
+      "bytesByScale": {
+        "2": 114946,
+        "3": 189158
+      }
+    },
+    {
+      "src": "/slices/sub/nhan-su__nhan-su-tc-3@2x.webp?v=f72adb4c",
+      "srcSet": [
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-3@2x.webp?v=f72adb4c",
+          "scale": 2
+        },
+        {
+          "src": "/slices/sub/nhan-su__nhan-su-tc-3@3x.webp?v=a7b4f49b",
+          "scale": 3
+        }
+      ],
+      "y": 2700.0,
+      "displayHeight": 189.0,
+      "intrinsicWidth": 2880,
+      "intrinsicHeight": 378,
+      "bytes": 34702,
+      "bytesByScale": {
+        "2": 34702,
+        "3": 58770
+      }
+    }
+  ],
+  "nav": [
+    {
+      "label": "TRẢI NGHIỆM",
+      "href": "/trai-nghiem",
+      "x": 443.0,
+      "active": false
+    },
+    {
+      "label": "GIẢI PHÁP",
+      "href": "/giai-phap",
+      "x": 585.0,
+      "active": false
+    },
+    {
+      "label": "CÔNG NGHỆ",
+      "href": "/cong-nghe",
+      "x": 701.0,
+      "active": false
+    },
+    {
+      "label": "ĐẠI LÝ",
+      "href": "/dai-ly",
+      "x": 834.0,
+      "active": false
+    },
+    {
+      "label": "NHÂN SỰ",
+      "href": "/nhan-su",
+      "x": 921.0,
+      "active": true
+    }
+  ],
+  "contactForm": {
+    "y": 2766.0
+  },
+  "breadcrumb": [
+    {
+      "label": "Trang chủ",
+      "href": "/"
+    },
+    {
+      "label": "Nhân sự",
+      "href": "/nhan-su"
+    }
+  ],
+  "sourceFile": "3. NHÂN SỰ TC.png"
+}
