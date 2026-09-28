@@ -34,6 +34,16 @@ const PAGES = [
   { slug: "nhan-su", hash: "nhan-su", route: "/nhan-su" },
 ];
 
+/**
+ * Doi anh tai xong. 30s du cho localhost nhung KHONG du khi do mot ban da
+ * deploy that: hon 60 lat nen phai keo qua mang. Nen ngưỡng tu noi khi base
+ * URL khong phai may nha.
+ */
+const IS_REMOTE = !/^https?:\/\/(127\.0\.0\.1|localhost|\[::1\])[:/]?/.test(
+  BASE_URL,
+);
+const IMAGE_TIMEOUT = IS_REMOTE ? 180_000 : 30_000;
+
 const VIEWPORT = { width: 1440, height: 900 };
 /** Nguong lech mau cho 1 pixel (0..1). 0.12 bo qua nhieu nen JPEG/WebP. */
 const THRESHOLD = 0.12;
@@ -52,7 +62,10 @@ const FREEZE = `(() => {
 })()`;
 
 async function shoot(page, url, { hash } = {}) {
-  await page.goto(url, { waitUntil: "load", timeout: 60_000 });
+  await page.goto(url, {
+    waitUntil: "load",
+    timeout: IS_REMOTE ? 180_000 : 60_000,
+  });
   if (hash) {
     await page.evaluate((h) => {
       location.hash = `#${h}`;
@@ -79,17 +92,39 @@ async function shoot(page, url, { hash } = {}) {
   // Cho loader gan het nguon cho cac lat con lai (anh 1x1 placeholder khong tinh la da tai).
   await page.waitForFunction(
     () => document.querySelectorAll("img[data-src]").length === 0,
-    {
-      timeout: 30_000,
-    },
+    { timeout: IMAGE_TIMEOUT },
   );
   await page.waitForFunction(
     () =>
       [...document.querySelectorAll("img.sl")].every(
         (img) => img.complete && img.naturalWidth > 1,
       ),
-    { timeout: 30_000 },
+    { timeout: IMAGE_TIMEOUT },
   );
+
+  // `complete` chi noi la da TAI XONG DU LIEU — anh van co the chua GIAI MA
+  // xong. Tren localhost khoang tre do lot vao 400ms cho o cuoi ham nay, nhung
+  // do mot ban deploy that thi no lo ra: da co lan ca lat cuoi cua /cong-nghe
+  // chua kip ve, gate bao lech 41.461 px trong khi trang hoan toan binh thuong.
+  // `decode()` doi den luc anh THUC SU san sang de ve.
+  await page.evaluate(async () => {
+    // CHI cho anh cua canvas. Anh cua lop MOBILE bi `display:none` o be rong
+    // nay nen co y khong duoc tai — `decode()` cua chung khong bao gio xong,
+    // ma `page.evaluate` thi khong co han gio: cho ca lu la treo vinh vien.
+    const images = [...document.querySelectorAll("img")].filter(
+      (img) => !img.closest(".tc-m") && img.currentSrc && img.naturalWidth > 1,
+    );
+    // Van chan them mot han gio: `decode()` co the khong settle neu anh bi
+    // thay nguon giua chung.
+    await Promise.all(
+      images.map((img) =>
+        Promise.race([
+          img.decode().catch(() => undefined),
+          new Promise((done) => setTimeout(done, 3000)),
+        ]),
+      ),
+    );
+  });
 
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(async () => {

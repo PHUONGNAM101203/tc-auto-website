@@ -468,18 +468,27 @@ test.describe("mọi trang đều bấm tới được", () => {
     page,
   }) => {
     await page.goto("/giai-phap");
-    // Do la BAM TOI DUOC, khong phai "chi co dung mot duong vao": trang phim
-    // gio co 4 loi vao (nhan muc + ba the 3M/Nano Sun/5DO deu tro ve trang
-    // chung), va con them neu sau nay tach rieng tung hang phim.
+    // Do la BAM TOI DUOC NGAY, khong phai "chi co dung mot duong vao": trang
+    // phim gio co nhieu loi vao (nhan muc + ba the 3M/Nano Sun/5DO deu tro ve
+    // trang chung).
+    //
+    // Phai loc `:visible`. Header co menu xo xuong, ma moi lien ket trong do
+    // deu tro toi mot trang con va deu dung TRUOC noi dung trang trong DOM —
+    // khong loc thi `.first()` bat trung mot lien ket dang an, bam khong duoc.
+    // Loc `:visible` cung dung y hon: cai ta muon biet la nguoi dung NHIN THAY
+    // loi vao, chu khong phai trong ma nguon co the <a>.
     for (const target of ["/giai-phap/phim-dan-kinh", "/giai-phap/loa"]) {
-      const entries = page.locator(`a[href="${target}"]`);
+      const entries = page.locator(`a[href="${target}"]:visible`);
       expect(
         await entries.count(),
-        `${target} phai co loi vao`,
+        `${target} phai co loi vao nhin thay duoc`,
       ).toBeGreaterThan(0);
     }
 
-    await page.locator('a[href="/giai-phap/phim-dan-kinh"]').first().click();
+    await page
+      .locator('a[href="/giai-phap/phim-dan-kinh"]:visible')
+      .first()
+      .click();
     await expect(page).toHaveURL("/giai-phap/phim-dan-kinh");
   });
 });

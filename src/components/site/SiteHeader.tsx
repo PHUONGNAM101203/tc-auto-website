@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { NavSpec } from "@/lib/types";
+import { SiteNav } from "./SiteNav";
 import { SiteSearch } from "./SiteSearch";
 
 interface SiteHeaderProps {
@@ -18,23 +19,14 @@ export function SiteHeader({ nav }: SiteHeaderProps) {
           theo ca anh nen dau trang cua chung — vao trang chu la tai them 5 anh
           cua 5 trang khac. Cac trang deu la static nen bo prefetch van chuyen
           trang rat nhanh, ma lan tai dau nhe han han. */}
-      <Link className="logo" href="/" prefetch={false} aria-label="TC Auto Solutions - Trang chủ" />
+      <Link
+        className="logo"
+        href="/"
+        prefetch={false}
+        aria-label="TC Auto Solutions - Trang chủ"
+      />
 
-      <nav aria-label="Điều hướng chính">
-        {nav.map((entry) => (
-          <Link
-            key={entry.href}
-            className={entry.active ? "nv act" : "nv"}
-            style={{ left: `${entry.x}px` }}
-            href={entry.href}
-            prefetch={false}
-            aria-current={entry.active ? "page" : undefined}
-          >
-            {entry.label}
-            <i aria-hidden="true">›</i>
-          </Link>
-        ))}
-      </nav>
+      <SiteNav nav={nav} />
 
       <SiteSearch />
     </header>

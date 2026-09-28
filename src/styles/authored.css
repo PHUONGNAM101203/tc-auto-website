@@ -67,9 +67,12 @@
   color: #fff;
 }
 
+/* Chu than bai: khach chot CO DINH 16px (28/09/2026), khong co giãn theo khung
+   nhin nua. 16px cung la muc toi thieu de doc thoai mai tren dien thoai, nen bo
+   clamp o day khong lam hong ban mobile. */
 .tc-doc-block p {
   margin-top: 12px;
-  font: 400 clamp(14px, 2.2vw, 15.5px) / 1.8 "Montserrat", sans-serif;
+  font: 400 16px / 1.8 "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.76);
 }
 

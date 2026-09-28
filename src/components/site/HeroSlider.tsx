@@ -18,7 +18,11 @@ import {
  *
  * Khi chi co MOT slide, component khong ve gi ca — khong tao nut bam gia.
  */
-const AUTOPLAY_MS = 7000;
+/**
+ * Nhip tu chuyen slide. Ban dau la 7000ms; khach thay cham nen rut xuong 4500ms
+ * (28/09/2026). Duoi 4000ms thi chu trong slide chua kip doc het mot luot.
+ */
+const AUTOPLAY_MS = 4500;
 
 /** Anh 1x1 trong suot cho slide chua den luot tai. */
 const BLANK =

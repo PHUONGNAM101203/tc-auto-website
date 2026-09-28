@@ -117,7 +117,9 @@
   background: transparent;
   outline: none;
   /* Nhac nhe khi hover — dung ngon ngu voi .btn that o 6 trang chinh */
-  transition: box-shadow 0.25s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tc-hotspot:hover {
@@ -126,7 +128,9 @@
 }
 
 .tc-hotspot:focus-visible {
-  box-shadow: 0 0 0 3px var(--navy), 0 0 0 5px var(--red);
+  box-shadow:
+    0 0 0 3px var(--navy),
+    0 0 0 5px var(--red);
 }
 
 /* ---------- Lop van ban cho trinh doc man hinh + cong cu tim kiem ----------
@@ -161,11 +165,16 @@
   border-radius: 8px;
   background: transparent;
   color: transparent;
-  font: 400 15px/1 "Montserrat", sans-serif;
+  font:
+    400 15px/1 "Montserrat",
+    sans-serif;
   padding: 0 44px 0 30px;
   cursor: pointer;
   outline: none;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
 }
 
 .tc-field:hover {
@@ -191,10 +200,15 @@
   border-radius: 6px;
   background: transparent;
   color: transparent;
-  font: 700 15px/1 "Montserrat", sans-serif;
+  font:
+    700 15px/1 "Montserrat",
+    sans-serif;
   cursor: pointer;
   outline: none;
-  transition: background 0.2s, color 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.25s;
 }
 
@@ -213,12 +227,16 @@
   padding: 22px 26px 60px;
   border-radius: 14px;
   background: rgba(4, 22, 38, 0.96);
-  box-shadow: inset 0 0 0 1px rgba(166, 228, 255, 0.28), 0 24px 60px -20px rgba(0, 0, 0, 0.8);
+  box-shadow:
+    inset 0 0 0 1px rgba(166, 228, 255, 0.28),
+    0 24px 60px -20px rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(3px);
 }
 
 .tc-dealer-head {
-  font: 700 13px/1.4 "Unbounded", sans-serif;
+  font:
+    700 13px/1.4 "Unbounded",
+    sans-serif;
   color: var(--red-nav);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -232,7 +250,9 @@
 }
 
 .tc-dealer-panel li {
-  font: 400 14px/1.4 "Montserrat", sans-serif;
+  font:
+    400 14px/1.4 "Montserrat",
+    sans-serif;
   color: #fff;
   padding-left: 15px;
   position: relative;
@@ -281,7 +301,9 @@
 }
 
 .tc-dealer-empty {
-  font: 400 14px/1.6 "Montserrat", sans-serif;
+  font:
+    400 14px/1.6 "Montserrat",
+    sans-serif;
   color: rgba(255, 255, 255, 0.72);
 }
 
@@ -293,10 +315,14 @@
   border-radius: 6px;
   background: transparent;
   color: rgba(255, 255, 255, 0.75);
-  font: 600 11px/1 "Montserrat", sans-serif;
+  font:
+    600 11px/1 "Montserrat",
+    sans-serif;
   padding: 8px 14px;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
 }
 
 .tc-dealer-close:hover {
@@ -318,7 +344,9 @@
 }
 
 .tc-404-kicker {
-  font: 800 20px/24px "Unbounded", sans-serif;
+  font:
+    800 20px/24px "Unbounded",
+    sans-serif;
   color: var(--red);
   letter-spacing: 0.04em;
 }
@@ -340,7 +368,9 @@
 .tc-404-lead {
   margin-top: 20px;
   max-width: 44ch;
-  font: 400 16px/22px "Montserrat", sans-serif;
+  font:
+    400 16px/22px "Montserrat",
+    sans-serif;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -355,10 +385,14 @@
   border-radius: 6px;
   background: var(--red);
   color: #fff;
-  font: 700 15px/18px "Montserrat", sans-serif;
+  font:
+    700 15px/18px "Montserrat",
+    sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+  transition:
+    background 0.2s,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.25s;
 }
 
@@ -378,7 +412,9 @@
 }
 
 .tc-404-nav a {
-  font: 700 12.5px/1 "Unbounded", sans-serif;
+  font:
+    700 12.5px/1 "Unbounded",
+    sans-serif;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   text-transform: uppercase;
@@ -392,7 +428,9 @@
 /* Trang loi dung chung bo cuc voi trang 404 */
 .tc-404-digest {
   margin-top: 18px;
-  font: 400 12px/1.5 "Montserrat", sans-serif;
+  font:
+    400 12px/1.5 "Montserrat",
+    sans-serif;
   color: rgba(255, 255, 255, 0.35);
 }
 
@@ -411,7 +449,9 @@
 }
 
 .tc-404-ghost {
-  font: 600 13px/1 "Montserrat", sans-serif;
+  font:
+    600 13px/1 "Montserrat",
+    sans-serif;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   transition: color 0.2s;
@@ -457,7 +497,10 @@
   cursor: pointer;
   outline: none;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Kich thuoc do tu ban thiet ke: mui ten rong ~9px, cao ~28px. */
@@ -496,7 +539,9 @@
   /* Vung bam cao hon net ve de de bam — net van chi cao 2px. */
   box-shadow: 0 10px 0 -10px transparent;
   position: relative;
-  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s;
+  transition:
+    width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s;
 }
 
 .tc-hero-dot::after {
@@ -550,7 +595,9 @@
   cursor: pointer;
   outline: none;
   border-radius: 999px;
-  transition: color 0.2s, background 0.2s;
+  transition:
+    color 0.2s,
+    background 0.2s;
 }
 
 .tc-pager-arrow svg {
@@ -592,10 +639,15 @@
   border-radius: 50%;
   background: transparent;
   color: rgba(255, 255, 255, 0.6);
-  font: 400 15px/1 "Montserrat", sans-serif;
+  font:
+    400 15px/1 "Montserrat",
+    sans-serif;
   cursor: pointer;
   outline: none;
-  transition: color 0.25s, box-shadow 0.25s, background 0.25s;
+  transition:
+    color 0.25s,
+    box-shadow 0.25s,
+    background 0.25s;
 }
 
 .tc-pager-page:hover {
@@ -614,10 +666,11 @@
 
 .tc-pager-more {
   color: rgba(255, 255, 255, 0.4);
-  font: 400 15px/1 "Montserrat", sans-serif;
+  font:
+    400 15px/1 "Montserrat",
+    sans-serif;
   padding: 0 2px;
 }
-
 
 /* ---------- Nut "XEM THÊM" ----------
    Nut da ve san trong anh nen; day chi la vung bam trong suot dat dung cho. */
@@ -630,7 +683,9 @@
   cursor: pointer;
   outline: none;
   z-index: 6;
-  transition: background 0.2s, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    background 0.2s,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .tc-readmore:hover {
@@ -655,8 +710,14 @@
 }
 
 @keyframes tc-unfold {
-  from { opacity: 0.4; transform: translateY(-6px); }
-  to { opacity: 1; transform: none; }
+  from {
+    opacity: 0.4;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Kieu chu KHONG dat cung o day: co chu va khoang dong duoc dat noi tuyen
@@ -677,7 +738,9 @@
 
 .tc-readmore-note {
   margin-bottom: 12px;
-  font: 400 12.5px/1.6 "Montserrat", sans-serif;
+  font:
+    400 12.5px/1.6 "Montserrat",
+    sans-serif;
   color: var(--brand-soft, #f69293) !important;
 }
 
@@ -688,7 +751,9 @@
   background: none;
   padding: 0;
   cursor: pointer;
-  font: 600 11.5px/1 "Montserrat", sans-serif;
+  font:
+    600 11.5px/1 "Montserrat",
+    sans-serif;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--red-nav);
@@ -1014,6 +1079,16 @@
 .tc-photoslider {
   position: absolute;
   z-index: 5;
+  /* LOT NEN DAC — day la cho tung gay loi "slider chong cheo".
+     Slide 0 duoc cat tu chinh ban thiet ke nen DAC hoan toan, che kin khung.
+     Nhung cac slide sau lay tu bo tai nguyen roi va giu kenh trong suot quanh
+     vien the (22-35% so diem anh). Ma ngay BEN DUOI khung nay, anh nen da ve
+     CHET tam anh cua slide 0 vao roi. Hau qua: chuyen sang slide 2 thi nhin
+     xuyen qua phan trong suot, thay tam anh cu -> hai tam chong len nhau.
+     Mau lay tu chinh anh nen, do ngay ben ngoai bon goc khung cua ca ba slider
+     (trang chu, dai ly, nhan su) — deu ra rgb(3,17,28).
+     O trang thai ban dau lop lot nay KHONG he lo ra vi slide 0 phu kin. */
+  background: #03111c;
 }
 
 .tc-photoslide {
@@ -1270,7 +1345,9 @@
   background: none;
   padding: 0;
   color: #fff;
-  font: 700 13px/1 "Montserrat", sans-serif;
+  font:
+    700 13px/1 "Montserrat",
+    sans-serif;
   letter-spacing: 0.08em;
   cursor: pointer;
 }
@@ -1284,7 +1361,9 @@
   border: 1px solid rgb(255 255 255 / 0.55);
   font-style: normal;
   font-size: 17px;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .tc-quiz-next:hover:not(:disabled) i {
@@ -1302,7 +1381,9 @@
   right: 0;
   bottom: 6px;
   margin: 0;
-  font: 400 12px/1 "Montserrat", sans-serif;
+  font:
+    400 12px/1 "Montserrat",
+    sans-serif;
   letter-spacing: 0.08em;
   color: rgb(255 255 255 / 0.38);
 }
@@ -1316,7 +1397,9 @@
 
 .tc-quiz-result-label {
   margin: 0;
-  font: 700 11px/1 "Unbounded", sans-serif;
+  font:
+    700 11px/1 "Unbounded",
+    sans-serif;
   letter-spacing: 0.18em;
   color: var(--red-nav, #e2384a);
 }
@@ -1332,7 +1415,9 @@
 .tc-quiz-result-body {
   margin: 18px auto 0;
   max-width: 660px;
-  font: 400 italic 15px/1.75 "Montserrat", sans-serif;
+  font:
+    400 italic 15px/1.75 "Montserrat",
+    sans-serif;
   color: rgb(255 255 255 / 0.7);
 }
 
@@ -1351,7 +1436,9 @@
   background: var(--red, #c8102e);
   color: #fff;
   text-decoration: none;
-  font: 700 12px/1 "Montserrat", sans-serif;
+  font:
+    700 12px/1 "Montserrat",
+    sans-serif;
   letter-spacing: 0.08em;
 }
 
@@ -1361,10 +1448,118 @@
   background: none;
   padding: 13px 4px;
   color: rgb(255 255 255 / 0.6);
-  font: 400 italic 14px/1 "Montserrat", sans-serif;
+  font:
+    400 italic 14px/1 "Montserrat",
+    sans-serif;
   cursor: pointer;
 }
 
 .tc-quiz-result-actions button:hover {
   color: #fff;
+}
+
+/* ===========================================================================
+   Thanh dieu huong: menu con xo xuong + thanh truot danh dau muc dang xem
+   (src/components/site/SiteNav.tsx)
+
+   Dat o day chu khong o canvas.css vi `.nv` nam trong khoi PROTOTYPE khong
+   duoc sua. overlay.css nap SAU canvas.css nen ghi de duoc.
+   =========================================================================== */
+
+/* Nen sang cua muc dang xem da chuyen sang `.tc-navpill` de truot duoc.
+   VAN GIU padding 14px va margin-left -14px cua `.nv.act`: doi hai tri so do
+   la chu xe dich 2px so voi thiet ke. */
+.hdr .nv.act {
+  background: none;
+  box-shadow: none;
+}
+
+.tc-navpill {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+  /* Nam duoi chu nhung tren anh nen. */
+  z-index: -1;
+}
+
+/* Chi truot SAU lan dat dau tien. Khong co cho nay thi vao trang la thay no
+   bay tu goc trai man hinh sang. */
+.tc-navpill[data-ready] {
+  transition:
+    transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Bang xo xuong. `top: 74px` = day cua nhan (48 + 26) nen khong co khe ho,
+   con tro di thang tu nhan xuong bang ma menu khong tat. */
+.tc-submenu {
+  position: absolute;
+  top: 74px;
+  margin-left: -14px;
+  min-width: 168px;
+  padding: 12px 16px 14px;
+  border-radius: 10px;
+  background: rgba(3, 17, 28, 0.82);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 18px 38px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  z-index: 7;
+
+  /* Nhan roi: khong chiem cho, khong bam duoc, khong doc duoc bang trinh doc
+     man hinh. Dung `visibility` chu khong `display:none` de con hieu ung mo. */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.24s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.24s;
+}
+
+.tc-submenu[data-open] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity 0.22s ease,
+    transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s;
+}
+
+.tc-submenu-item {
+  font:
+    italic 400 12px / 1.2 "Montserrat",
+    sans-serif;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.74);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.18s ease;
+}
+
+.tc-submenu-item:hover,
+.tc-submenu-item:focus-visible {
+  color: #fff;
+}
+
+/* Nguoi dung da tat hieu ung thi bo truot va bo mo dan — hien/an dut khoat. */
+@media (prefers-reduced-motion: reduce) {
+  .tc-navpill[data-ready],
+  .tc-submenu,
+  .tc-submenu[data-open] {
+    transition: none;
+  }
+  .tc-submenu {
+    transform: none;
+  }
 }
