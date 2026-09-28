@@ -1,34 +1,39 @@
-# Nhung thu KHONG can co tren Vercel. Thu muc nay chua phai kho git nen Vercel
-# CLI se day len tat ca nhung gi khong bi loai o day.
+# Nhung thu KHONG can co tren Vercel.
+#
+# MOI MAU DEU PHAI CO DAU / DAN DAU de neo vao thu muc goc.
+# Mau khong co dau / se khop voi MOI cap thu muc — dung "supabase" tran da loai
+# nham ca `src/lib/supabase/`, lam ban deploy dau tien hong voi loi
+# "module not found" o admin, /api/leads va lib/admin/auth.
 
 # Phu thuoc va ban dung — Vercel tu cai va tu build.
-node_modules
-.next
-out
-build
-coverage
-*.tsbuildinfo
+/node_modules
+/.next
+/out
+/build
+/coverage
+/tsconfig.tsbuildinfo
 
 # Cong cu dung anh tu ban thiet ke. Chi chay tren may, can Python + Pillow +
 # bo PNG goc 1,0 GB o ~/Downloads — ban deploy khong dung den.
-tools
+/tools
 
-# Ket qua kiem thu.
-tests
-test-results
-playwright-report
-playwright.config.ts
-vitest.config.mts
+# Kiem thu.
+/tests
+/test-results
+/playwright-report
+/playwright.config.ts
+/vitest.config.mts
 
-# Ho so du an, khong phuc vu request nao.
-DESIGN.md
-README.md
-AGENTS.md
-CLAUDE.md
-supabase
+# Ho so du an va migration co so du lieu — khong phuc vu request nao.
+# (Chi thu muc `supabase` O GOC, khong dung toi src/lib/supabase.)
+/DESIGN.md
+/README.md
+/AGENTS.md
+/CLAUDE.md
+/supabase
 
 # Bien moi truong dat tren Vercel Dashboard, khong bao gio day file len.
-.env
-.env.*
+/.env
+/.env.*
 
 .DS_Store
