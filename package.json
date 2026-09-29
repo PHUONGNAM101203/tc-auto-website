@@ -15,7 +15,7 @@
     "verify:fidelity": "node tools/fidelity/compare.mjs",
     "parse:prototype": "python3 tools/parse-prototype.py && python3 tools/add-retina-main.py && python3 tools/patch-from-design.py && python3 tools/brand/extract-cards.py && python3 tools/brand/extract-solution-cards.py && python3 tools/brand/extract-lift-cards.py && python3 tools/brand/extract-photo-sliders.py && python3 tools/brand/extract-mobile-tiles.py && python3 tools/stamp-slices.py",
     "verify": "npm run typecheck && npm run lint && npm run test:coverage && npm run build && npm run test:e2e",
-    "parse:subpages": "python3 tools/build-subpages.py && python3 tools/detect-buttons.py --emit && python3 tools/detect-pagination.py && python3 tools/scrub-slices.py && python3 tools/brand/extract-ppf-cards.py && python3 tools/brand/extract-quiz.py && python3 tools/brand/extract-subpage-tiles.py && python3 tools/stamp-slices.py",
+    "parse:subpages": "python3 tools/build-subpages.py && npm run ocr:run && python3 tools/detect-buttons.py --emit && python3 tools/detect-pagination.py && python3 tools/scrub-slices.py && python3 tools/brand/extract-ppf-cards.py && python3 tools/brand/extract-quiz.py && python3 tools/brand/extract-subpage-tiles.py && python3 tools/stamp-slices.py",
     "ocr:build": "swiftc -O -o tools/ocr/ocrbin tools/ocr/OCR.swift",
     "ocr:run": "python3 tools/ocr/run-all.py && python3 tools/ocr/clean.py",
     "verify:buttons": "python3 tools/detect-buttons.py --validate",
@@ -41,7 +41,8 @@
     "cards:lift": "python3 tools/brand/extract-lift-cards.py",
     "patch:design": "python3 tools/patch-from-design.py && python3 tools/stamp-slices.py",
     "mobile:tiles": "python3 tools/brand/extract-mobile-tiles.py",
-    "stamp:assets": "python3 tools/stamp-assets.py"
+    "stamp:assets": "python3 tools/stamp-assets.py",
+    "_doc:ocr": "Lop van ban OCR PHAI chay lai moi khi bo khung thiet ke doi. Truoc day no nam ngoai chuoi parse:subpages nen doi thiet ke la toa do chu lac hau ma khong ai biet — lop nay vo hinh, chi trinh doc man hinh va cong cu tim kiem thay. Can ocr:build mot lan de co tools/ocr/ocrbin (macOS + swiftc)."
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
