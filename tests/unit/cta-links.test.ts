@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import spots from "@/data/cta-links.json";
-import { getCtaSpots, readMorePanel, type CtaSpot } from "@/lib/cta-links";
+import {
+  getCtaSpots,
+  hasSomethingToShow,
+  readMorePanel,
+  type CtaSpot,
+} from "@/lib/cta-links";
 
 /**
  * Khoi chu xo ra khi bam "XEM THÊM".
@@ -138,5 +143,41 @@ describe("khung mảng che của khối xổ ra", () => {
         );
       }
     }
+  });
+});
+
+/**
+ * Nut nao khong co gi de xo ra VA khong dan di dau thi khong duoc dat vung bam
+ * len. Bam vao ma khong xay ra gi con te hon la khong bam duoc: nguoi dung
+ * tuong trang hong.
+ *
+ * Hai nut tren /cong-nghe/ung-dung/cap-nhat-va-loi tung nhu vay — OCR chi doc
+ * duoc cai nhan "[VÁ LỖI]" phia tren, khong co than bai nao.
+ */
+describe("nút không có gì để mở", () => {
+  it("không có khối chữ, không có đích đến thì không dựng vùng bấm", () => {
+    expect(
+      hasSomethingToShow({ bodyBox: null } as unknown as CtaSpot),
+    ).toBe(false);
+  });
+
+  it("có đích đến thì vẫn bấm được dù không đọc được khối chữ", () => {
+    expect(
+      hasSomethingToShow({ bodyBox: null, href: "/x" } as unknown as CtaSpot),
+    ).toBe(true);
+  });
+
+  it("có khối chữ thì bấm được", () => {
+    expect(
+      hasSomethingToShow({ bodyBox: { paragraphs: [] } } as unknown as CtaSpot),
+    ).toBe(true);
+  });
+
+  it("đếm được bao nhiêu nút trên site đang rỗng", () => {
+    const empty = Object.keys(spots as Record<string, unknown>).flatMap((slug) =>
+      getCtaSpots(slug).filter((spot) => !hasSomethingToShow(spot)),
+    );
+    // Van con trong du lieu — chung chi khong duoc DUNG vung bam len nua.
+    expect(empty.length).toBeLessThanOrEqual(4);
   });
 });

@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import { Fragment, useState } from "react";
-import { readMorePanel, toParagraphs, type CtaSpot } from "@/lib/cta-links";
+import {
+  hasSomethingToShow,
+  readMorePanel,
+  toParagraphs,
+  type CtaSpot,
+} from "@/lib/cta-links";
 
 /**
  * Nut "XEM THÊM" ve san trong anh trang con.
@@ -92,6 +97,11 @@ export function ReadMore({
     <>
       {spots.map((spot) => {
         const post = postFor.get(key(spot));
+        // Khong co bai, khong co dich den, khong doc duoc khoi chu nao: dung
+        // dat vung bam len. Xem hasSomethingToShow.
+        if (!post && !hasSomethingToShow(spot)) {
+          return null;
+        }
         const isOpen = openKey === key(spot);
         return (
           <Fragment key={key(spot)}>

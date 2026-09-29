@@ -47,6 +47,9 @@ RED_BUTTON_PAD = 12
 # than bai la 17..20px va khoang giua hai doan la 20..35px, nen 90 la rong rai
 # ma van tach duoc hai khoi nam cach nhau ca tram pixel.
 MAX_PARAGRAPH_GAP = 90.0
+# Cac dong cua CUNG mot khoi van ban deu thang le trai. OCR lech vai pixel nen
+# cho 16px; rong hon nua la nhat ca chu cua khoi ben canh.
+LEFT_MARGIN_TOLERANCE = 16.0
 
 
 
@@ -265,6 +268,22 @@ def paragraphs_between(
     # Chi giu DAI LIEN MACH ngay tren nut. Di nguoc tu duoi len, gap mot khoang
     # trong rong hon MAX_PARAGRAPH_GAP la sang khoi khac — dung lai. Nho vay
     # mot khoi chu roi nam cung cot nhung cach xa han se khong bi gom vao.
+    # Chi giu cac dong THANG LE TRAI voi nhau.
+    #
+    # Rang buoc "cung cot" (SAME_COLUMN = 260) qua rong voi nhung khoi van ban
+    # be ngang lon. Tren /giai-phap/du-an, bai o x=753 nuot them hai nhan the
+    # cua cot trai o x=515 va x=523 — lech 235px, van lot. Ket qua la giua bai
+    # bong moc ra "Crystalline 20 lop TAI" va "Phim cach nhiet cao cap 3M".
+    #
+    # Lay le trai PHO BIEN NHAT lam chuan: dong nao khong thang hang thi la cua
+    # khoi khac.
+    if lines:
+        margins = Counter(round(b["x"] / LEFT_MARGIN_TOLERANCE) for b in lines)
+        home = margins.most_common(1)[0][0] * LEFT_MARGIN_TOLERANCE
+        aligned = [b for b in lines if abs(b["x"] - home) <= LEFT_MARGIN_TOLERANCE]
+        if aligned:
+            lines = aligned
+
     if lines:
         kept = [lines[-1]]
         for line in reversed(lines[:-1]):

@@ -20,8 +20,7 @@
     "an tâm trong từng hành trình.",
     "Không ngừng cập nhật những xu hướng và tiến bộ mới, TC AUTO kết nỗi công nghệ với kinh",
     "nghiệm thực tiên đề tạo ra những giải pháp phù hợp với từng nhu cầu và phong cách sử",
-    "dụng. Đó là cách chúng tôi biên những tiên bộ của công nghệ thành trái nghiệm hữu hình.",
-    "tinh te hơn, tiện nghi hơn và hiệu quá hơn trên mỗi chiếc xe,"
+    "dụng. Đó là cách chúng tôi biên những tiên bộ của công nghệ thành trái nghiệm hữu hình."
    ],
    "bodyBox": {
     "paragraphs": [
@@ -36,7 +35,7 @@
     "x": 613.3,
     "y": 1046.4,
     "width": 747.2,
-    "height": 327.1
+    "height": 306.3
    },
    "background": "#010513",
    "darkText": false
@@ -302,12 +301,11 @@
    "heading": "WINCA",
    "isPlaceholder": false,
    "body": [
-    "[CẬP NHẬT] ES File Explorer",
-    "File Manaaer"
+    "[CẬP NHẬT] ES File Explorer"
    ],
    "bodyBox": {
     "paragraphs": [
-     "[CẬP NHẬT] ES File Explorer File Manaaer"
+     "[CẬP NHẬT] ES File Explorer"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
@@ -315,7 +313,7 @@
     "x": 584.0,
     "y": 1348.5,
     "width": 272.1,
-    "height": 38.8
+    "height": 20.9
    },
    "coverBox": {
     "x": 640,
@@ -383,19 +381,19 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "IVÁ LỖI] Định vỊ"
+    "[CẬP NHẬT] ES File Explorer"
    ],
    "bodyBox": {
     "paragraphs": [
-     "IVÁ LỖI] Định vỊ"
+     "[CẬP NHẬT] ES File Explorer"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 644.5,
-    "y": 1794.0,
-    "width": 149.1,
-    "height": 26.2
+    "x": 584.0,
+    "y": 1348.5,
+    "width": 272.1,
+    "height": 20.9
    },
    "coverBox": {
     "x": 640,
@@ -403,7 +401,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#031d2b",
+   "background": "#011c2a",
    "darkText": false
   },
   {
@@ -432,19 +430,19 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "IVÁ LỖI] Zalo"
+    "[CẬP NHẬT] VietMap Live"
    ],
    "bodyBox": {
     "paragraphs": [
-     "IVÁ LỖI] Zalo"
+     "[CẬP NHẬT] VietMap Live"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 211.3,
-    "y": 2244.3,
-    "width": 125.7,
-    "height": 23.6
+    "x": 148.6,
+    "y": 1798.5,
+    "width": 251.2,
+    "height": 21.1
    },
    "coverBox": {
     "x": 196,
@@ -618,18 +616,18 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "IVÁ LỖI] Imedia"
+    "[CẬP NHẬT] VML XỬ LÍ GPS"
    ],
    "bodyBox": {
     "paragraphs": [
-     "IVÁ LỖI] Imedia"
+     "[CẬP NHẬT] VML XỬ LÍ GPS"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 198.8,
-    "y": 3144.6,
-    "width": 150.7,
+    "x": 142.3,
+    "y": 2696.8,
+    "width": 265.8,
     "height": 23.0
    },
    "coverBox": {
@@ -638,7 +636,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#031d2b",
+   "background": "#011c2a",
    "darkText": false
   },
   {
@@ -775,21 +773,19 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "WINGA TUEE",
-    "Winca Tube"
+    "WINGA TUEE"
    ],
    "bodyBox": {
     "paragraphs": [
-     "WINGA TUEE",
-     "Winca Tube"
+     "WINGA TUEE"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 72.0,
+    "paragraphGap": 12.0,
     "x": 1080.0,
     "y": 1258.4,
     "width": 165.3,
-    "height": 109.1
+    "height": 20.9
    },
    "coverBox": {
     "x": 1084,
@@ -808,19 +804,19 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "VietMap Live [MỚI NHẤT]"
+    "Winca Control"
    ],
    "bodyBox": {
     "paragraphs": [
-     "VietMap Live [MỚI NHẤT]"
+     "Winca Control"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 152.8,
-    "y": 1796.4,
-    "width": 247.0,
-    "height": 23.2
+    "x": 203.0,
+    "y": 1350.6,
+    "width": 146.5,
+    "height": 16.9
    },
    "coverBox": {
     "x": 196,
@@ -828,7 +824,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#021d2a",
+   "background": "#021c2b",
    "darkText": false
   },
   {
@@ -839,19 +835,19 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Định vị"
+    "ES File Explorer File Manager"
    ],
    "bodyBox": {
     "paragraphs": [
-     "Định vị"
+     "ES File Explorer File Manager"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 684.3,
-    "y": 1800.2,
-    "width": 71.4,
-    "height": 19.6
+    "x": 577.7,
+    "y": 1350.6,
+    "width": 284.6,
+    "height": 18.9
    },
    "coverBox": {
     "x": 640,
@@ -859,7 +855,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#021c2a",
+   "background": "#011c2a",
    "darkText": false
   },
   {
@@ -1087,19 +1083,19 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Imedia"
+    "VML XỬ LÍ GPS"
    ],
    "bodyBox": {
     "paragraphs": [
-     "Imedia"
+     "VML XỬ LÍ GPS"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 238.6,
-    "y": 3150.8,
-    "width": 71.2,
-    "height": 16.7
+    "x": 203.0,
+    "y": 2696.8,
+    "width": 144.4,
+    "height": 21.1
    },
    "coverBox": {
     "x": 196,
@@ -1545,8 +1541,7 @@
     "Hỗ trợ từ nền tảng thương hiệu",
     "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu.",
     "được chuân hóa, giúp đại lý duy trì hình ánh chuyên nghiệp và nhật quán",
-    "trên mọi điểm chạm. Từ hình ảnh sản phẩm, video, POSM đến các nội",
-    "ng trên nên tảng sô, đại lý có thê dễ dàng ứng dụng '"
+    "trên mọi điểm chạm. Từ hình ảnh sản phẩm, video, POSM đến các nội"
    ],
    "bodyBox": {
     "paragraphs": [
@@ -1561,7 +1556,7 @@
     "x": 79.5,
     "y": 1128.6,
     "width": 607.0,
-    "height": 282.9
+    "height": 263.9
    },
    "background": "#02111c",
    "darkText": false
@@ -1583,8 +1578,7 @@
     "Hỗ trợ từ nền tảng thương hiệu",
     "TC AUTO cung cấp hệ thông hình ánh, nội dung và nhận diện thương hiệu.",
     "được chuẩn hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán",
-    "trên mọi điểm chạm. Từ hình ảnh sản phầm, video, POSM đến các nội",
-    "ng tren hen tang so, đại lý có thệ dễ"
+    "trên mọi điểm chạm. Từ hình ảnh sản phầm, video, POSM đến các nội"
    ],
    "bodyBox": {
     "paragraphs": [
@@ -1599,7 +1593,7 @@
     "x": 81.1,
     "y": 1605.6,
     "width": 605.4,
-    "height": 290.7
+    "height": 268.3
    },
    "background": "#02111c",
    "darkText": false
@@ -1621,8 +1615,7 @@
     "Hỗ trợ từ nền tảng thương hiệu",
     "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu",
     "được chuần hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán",
-    "trên mọi điềm chạm. Từ hình ảnh sán phầm, video, POSM đến các nội",
-    "ng trên hên tăng sô, đại lý có thể de dăng ứng dụng vài"
+    "trên mọi điềm chạm. Từ hình ảnh sán phầm, video, POSM đến các nội"
    ],
    "bodyBox": {
     "paragraphs": [
@@ -1637,7 +1630,7 @@
     "x": 81.5,
     "y": 2089.6,
     "width": 605.0,
-    "height": 284.7
+    "height": 265.8
    },
    "background": "#02111c",
    "darkText": false
@@ -1659,15 +1652,14 @@
     "Hỗ trợ từ nền tảng thương hiệu",
     "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu",
     "được chuân hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán",
-    "trên mọi điêm chạm. Từ hình ánh sán phâm, video, POSM đên các nội",
-    "ng trên nền tảng số, đại lý có thể dề dàng ứng dụng và."
+    "trên mọi điêm chạm. Từ hình ánh sán phâm, video, POSM đên các nội"
    ],
    "bodyBox": {
     "paragraphs": [
      "Ngày 20.8.2026",
      "TC AUTO không chỉ cung cấp sản phẩm và giải pháp, mà còn đồng hành cùng đại lý trong việc xây dựng hình ảnh, gia tăng nhận diện và kết nối với khách hàng. Chúng tôi xây dựng hệ thống hỗ trợ truyền thông đồng bộ, giúp đại lý có thêm nguồn lực để chủ động triển khai marketing và phát triền thị trường.",
      "Hỗ trợ từ nền tảng thương hiệu",
-     "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu được chuân hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán trên mọi điêm chạm. Từ hình ánh sán phâm, video, POSM đên các nội ng trên nền tảng số, đại lý có thể dề dàng ứng dụng và."
+     "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu được chuân hóa, giúp đại lý duy trì hình ảnh chuyên nghiệp và nhất quán trên mọi điêm chạm."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
@@ -1675,7 +1667,7 @@
     "x": 79.5,
     "y": 2571.1,
     "width": 607.0,
-    "height": 282.9
+    "height": 263.9
    },
    "background": "#02111c",
    "darkText": false
@@ -1697,8 +1689,7 @@
     "Hỗ trợ từ nền tảng thương hiệu",
     "TC AUTO cung cấp hệ thống hình ảnh, nội dung và nhận diện thương hiệu.",
     "được chuân hóa, giúp đại lý duy trì hình ánh chuyên nghiệp và nhật quán",
-    "trên mọi điểm chạm. Từ hình ảnh sản phẩm, video, POSM đến các nội",
-    "ng trên nên tảng sô, đại lý có thê dễ dàng ứng dụng vài"
+    "trên mọi điểm chạm. Từ hình ảnh sản phẩm, video, POSM đến các nội"
    ],
    "bodyBox": {
     "paragraphs": [
@@ -1713,7 +1704,7 @@
     "x": 81.4,
     "y": 3050.3,
     "width": 605.1,
-    "height": 285.0
+    "height": 266.1
    },
    "background": "#02111c",
    "darkText": false
@@ -1809,8 +1800,7 @@
     "bán hàng trở nên chuyên nghiệp, rỗ ràng và hiệu quả hơn.",
     "Đầy đủ thông tin. Dễ dàng tư vấn.",
     "Đại lý được cung cấp hệ thống tài liệu sản phẩm với thông tin rõ ràng về",
-    "tính năng, công nghệ, ưu điềm và ứng dụng thực tế. Đây là nền tảng giúp",
-    "chủ động nắm bắt sản phẩm, giải đáp nhu cầu và đưa rai"
+    "tính năng, công nghệ, ưu điềm và ứng dụng thực tế. Đây là nền tảng giúp"
    ],
    "bodyBox": {
     "paragraphs": [
@@ -1825,7 +1815,7 @@
     "x": 81.4,
     "y": 1963.8,
     "width": 607.2,
-    "height": 257.7
+    "height": 239.1
    },
    "background": "#02111c",
    "darkText": false
@@ -1841,13 +1831,9 @@
    "isPlaceholder": false,
    "body": [
     "Ngày 20.8.2026",
-    "LỄ KÝ KẾT",
     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
     "thống phân phối của TC.",
-    "ĐẠI LÝ PHÂN PHỐI",
-    "3M AUTOFILM",
     "Sự kiện này đánh dấu bước phát triền quan trọng trong việc mở rộng hệ",
-    "TẠI MIÊN TRUNG",
     "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
     "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
     "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc .",
@@ -1856,19 +1842,20 @@
    "bodyBox": {
     "paragraphs": [
      "Ngày 20.8.2026",
-     "LỄ KÝ KẾT Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ thống phân phối của TC. ĐẠI LÝ PHÂN PHỐI 3M AUTOFILM Sự kiện này đánh dấu bước phát triền quan trọng trong việc mở rộng hệ TẠI MIÊN TRUNG thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ thống phân phối của TC.",
+     "Sự kiện này đánh dấu bước phát triền quan trọng trong việc mở rộng hệ thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
      "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc . lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghế và quy trình làm."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 20.0,
-    "x": 558.3,
+    "x": 751.4,
     "y": 1036.4,
-    "width": 785.4,
+    "width": 592.3,
     "height": 220.0
    },
-   "background": "#abc2d7",
-   "darkText": true
+   "background": "#02111c",
+   "darkText": false
   },
   {
    "x": 75.5,
@@ -1916,9 +1903,7 @@
    "body": [
     "Ngay 20.8.2026",
     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
-    "Crystalline 20 lớp TAI",
     "thống phân phối của TC.",
-    "Phim cách nhiệt cao cấp 3M",
     "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
     "thồng phân phồi sán phầm màn hình ô tô Winca, mang đến cho khách",
     "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
@@ -1928,19 +1913,19 @@
    "bodyBox": {
     "paragraphs": [
      "Ngay 20.8.2026",
-     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ Crystalline 20 lớp TAI thống phân phối của TC. Phim cách nhiệt cao cấp 3M",
+     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ thống phân phối của TC.",
      "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ thồng phân phồi sán phầm màn hình ô tô Winca, mang đến cho khách hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
      "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 16.0,
-    "x": 514.9,
+    "paragraphGap": 20.0,
+    "x": 751.4,
     "y": 2033.1,
-    "width": 828.8,
+    "width": 592.3,
     "height": 215.8
    },
-   "background": "#325272",
+   "background": "#02111c",
    "darkText": false
   },
   {
@@ -1989,10 +1974,7 @@
     "Ngày 20.8.2026",
     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ",
     "thống phân phối của TC.",
-    "LỄ KÝ KÊT",
-    "ĐẠI LÝ PHẦN PHỐI",
     "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ",
-    "3M AUTOFILM",
     "thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách",
     "hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
     "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc -",
@@ -2003,20 +1985,21 @@
    "bodyBox": {
     "paragraphs": [
      "Ngày 20.8.2026",
-     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ thống phân phối của TC. LỄ KÝ KÊT ĐẠI LÝ PHẦN PHỐI Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ 3M AUTOFILM thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
+     "Phạm Gia Auto chính thức trở thành đại lý Winca chính hãng thuộc hệ thống phân phối của TC.",
+     "Sự kiện này đánh dấu bước phát triển quan trọng trong việc mở rộng hệ thống phân phối sản phẩm màn hình ô tô Winca, mang đến cho khách hàng giải pháp giải trí và công nghệ hiện đại ngay tại địa phương.",
      "Phạm Gia Auto là đơn vị hoạt động trong lĩnh vực nâng cấp - chăm sóc - lắp đặt phụ kiện ô tô với đội ngũ kỹ thuật có tay nghề và quy trình làm việc chuyên nghiệp.",
      "Với định hướng phát triển bền vững, đặt chất lượng dịch vụ lên hàng đầu,"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 19.0,
-    "x": 548.4,
+    "paragraphGap": 20.0,
+    "x": 751.4,
     "y": 2981.4,
-    "width": 801.6,
+    "width": 598.6,
     "height": 280.1
    },
-   "background": "#84a1b9",
-   "darkText": true
+   "background": "#02111c",
+   "darkText": false
   }
  ],
  "giai-phap/loa": [
@@ -2883,31 +2866,26 @@
    "heading": "31 100 GLOSS SERIES",
    "isPlaceholder": false,
    "body": [
-    "• Gloss Series",
     "3M PPF - 100 Gloss Series",
-    "ss Series tại TC Auto bảo vệ",
     "3M PPF 100 Gloss Series tại TC Auto bảo vệ",
-    "ước, đá văng và tác động",
     "sơn khỏi đá văng, va quẹt và trây xước,",
-    "ông thời duy trì vẻ bóng đẹp",
     "đồng thời duy trì độ bóng và vẻ đẹp",
-    "t với chi phi hợp lý.",
     "nguyên bán của xe theo thơi gian."
    ],
    "bodyBox": {
     "paragraphs": [
-     "• Gloss Series 3M PPF - 100 Gloss Series",
-     "ss Series tại TC Auto bảo vệ 3M PPF 100 Gloss Series tại TC Auto bảo vệ ước, đá văng và tác động sơn khỏi đá văng, va quẹt và trây xước, ông thời duy trì vẻ bóng đẹp đồng thời duy trì độ bóng và vẻ đẹp t với chi phi hợp lý. nguyên bán của xe theo thơi gian."
+     "3M PPF - 100 Gloss Series",
+     "3M PPF 100 Gloss Series tại TC Auto bảo vệ sơn khỏi đá văng, va quẹt và trây xước, đồng thời duy trì độ bóng và vẻ đẹp nguyên bán của xe theo thơi gian."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 18.0,
-    "x": 6.3,
+    "paragraphGap": 20.0,
+    "x": 341.2,
     "y": 1346.4,
-    "width": 640.5,
+    "width": 305.6,
     "height": 106.8
    },
-   "background": "#022133",
+   "background": "#00273d",
    "darkText": false
   },
   {
@@ -2919,27 +2897,22 @@
    "isPlaceholder": false,
    "body": [
     "3M PPF - 100 Gloss Series",
-    "M PPF - 150 Gloss Series",
     "3M PPF 100 Gloss Series tại TC Auto bảo vệ",
-    "3M PPF 150 Gloss Series tại TC Auto bảo vệ",
     "sơn khỏi đá văng, va quẹt và trây xước,",
-    "sơn trước tác động và trầy xước, với khả",
     "đồng thời duy trì độ bóng và vẻ đẹp",
-    "năng tự phục hồi và duy trì độ bóng, giữ trọn",
-    "nguyên bán của xe theo thơi gian.",
-    "vẻ đẹp nguyên bản của xe theo thời gian."
+    "nguyên bán của xe theo thơi gian."
    ],
    "bodyBox": {
     "paragraphs": [
-     "3M PPF - 100 Gloss Series M PPF - 150 Gloss Series",
-     "3M PPF 100 Gloss Series tại TC Auto bảo vệ 3M PPF 150 Gloss Series tại TC Auto bảo vệ sơn khỏi đá văng, va quẹt và trây xước, sơn trước tác động và trầy xước, với khả đồng thời duy trì độ bóng và vẻ đẹp năng tự phục hồi và duy trì độ bóng, giữ trọn nguyên bán của xe theo thơi gian. vẻ đẹp nguyên bản của xe theo thời gian."
+     "3M PPF - 100 Gloss Series",
+     "3M PPF 100 Gloss Series tại TC Auto bảo vệ sơn khỏi đá văng, va quẹt và trây xước, đồng thời duy trì độ bóng và vẻ đẹp nguyên bán của xe theo thơi gian."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 20.0,
     "x": 341.2,
     "y": 1346.4,
-    "width": 757.7,
+    "width": 305.6,
     "height": 106.8
    },
    "coverBox": {
@@ -2960,26 +2933,22 @@
    "isPlaceholder": false,
    "body": [
     "M PPF - 150 Gloss Series",
-    "3M PPF - 200 Gloss Sei",
     "3M PPF 150 Gloss Series tại TC Auto bảo vệ",
-    "3M PPF 200 Gloss Series bảo về",
     "sơn trước tác động và trầy xước, với khả",
-    "lớp, hấp thụ tác động, tự phục",
     "năng tự phục hồi và duy trì độ bóng, giữ trọn",
-    "trì độ bóng nguyên ban.",
     "vẻ đẹp nguyên bản của xe theo thời gian."
    ],
    "bodyBox": {
     "paragraphs": [
-     "M PPF - 150 Gloss Series 3M PPF - 200 Gloss Sei",
-     "3M PPF 150 Gloss Series tại TC Auto bảo vệ 3M PPF 200 Gloss Series bảo về sơn trước tác động và trầy xước, với khả lớp, hấp thụ tác động, tự phục năng tự phục hồi và duy trì độ bóng, giữ trọn trì độ bóng nguyên ban. vẻ đẹp nguyên bản của xe theo thời gian."
+     "M PPF - 150 Gloss Series",
+     "3M PPF 150 Gloss Series tại TC Auto bảo vệ sơn trước tác động và trầy xước, với khả năng tự phục hồi và duy trì độ bóng, giữ trọn vẻ đẹp nguyên bản của xe theo thời gian."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 23.0,
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
     "x": 776.5,
     "y": 1346.4,
-    "width": 661.4,
+    "width": 322.4,
     "height": 106.8
    },
    "coverBox": {
@@ -2999,17 +2968,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Ánh Nắng",
-    "Trài Mưa",
-    "Trầy Xước Bong Tróc",
-    "Khói Bụi",
-    "Tràn xe",
-    "Gương xe",
-    "Năm cửa",
-    "Đen xe",
-    "sen sau",
-    "Nắp xăng",
-    "Đuổi xe",
     "Nano Eco Lite",
     "3M Ceramic Elite IR ứng dụng công nghệ",
     "gồm Nano, cản 99% tia UV và đến 74% tia",
@@ -3018,19 +2976,16 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "Ánh Nắng Trài Mưa Trầy Xước Bong Tróc Khói Bụi",
-     "Tràn xe Gương xe Năm cửa Đen xe sen sau",
-     "Nắp xăng Đuổi xe",
      "Nano Eco Lite",
      "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hỗng ngoại, mang lại không gian mát mé, tầm nhìn rõ nét và bảo vệ nội thất xe."
     ],
-    "fontSize": 16.0,
-    "lineHeight": 20.0,
-    "paragraphGap": 39.0,
+    "fontSize": 14.0,
+    "lineHeight": 17.0,
+    "paragraphGap": 23.0,
     "x": 98.3,
-    "y": 1830.0,
-    "width": 328.7,
-    "height": 320.4
+    "y": 2043.6,
+    "width": 297.4,
+    "height": 106.8
    },
    "coverBox": {
     "x": 248,
@@ -3038,7 +2993,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#007cc9",
+   "background": "#012538",
    "darkText": false
   },
   {
@@ -3049,16 +3004,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Ánh Nẵng",
-    "Trời Mưa",
-    "Trầy Xước Bong Tróc",
-    "Khỏi Bụi",
-    "Tràn xe",
-    "Nắm cửa Đèn sau",
-    "Den xe",
-    "Đuổi xe",
-    "Nặp xăn",
-    "ở Lườn xe",
     "Nano Protect",
     "3M Ceramic IR công nghệ gốm Nano, cản",
     "95% tia hồng ngoại và 99% tia UV, giữ xe",
@@ -3066,19 +3011,16 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "Ánh Nẵng Trời Mưa Trầy Xước Bong Tróc Khỏi Bụi",
-     "Tràn xe Nắm cửa Đèn sau Den xe",
-     "Đuổi xe Nặp xăn ở Lườn xe",
      "Nano Protect",
      "3M Ceramic IR công nghệ gốm Nano, cản 95% tia hồng ngoại và 99% tia UV, giữ xe mát mé và báo vệ nội thât."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 26.0,
+    "paragraphGap": 20.0,
     "x": 556.6,
-    "y": 1830.0,
-    "width": 329.6,
-    "height": 303.6
+    "y": 2043.4,
+    "width": 299.4,
+    "height": 90.2
    },
    "coverBox": {
     "x": 707,
@@ -3086,7 +3028,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#007cc9",
+   "background": "#002941",
    "darkText": false
   },
   {
@@ -3097,17 +3039,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Ánh Nắng",
-    "Trài Mưa",
-    "Trầy xước",
-    "Bong Tróc",
-    "Khỏi Bụi",
-    "Tràn xe",
-    "Guơng xe",
-    "Năm cửa",
-    "Nắp xăng",
-    "Đuỗi xe",
-    "Lườn xe",
     "Nano Premium",
     "3M Crystalline công nghệ Nano đa lớp, cản",
     "nhiệt và tia UV, bảo vệ nội thất và mang",
@@ -3115,20 +3046,16 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "Ánh Nắng Trài Mưa Trầy xước Bong Tróc Khỏi Bụi",
-     "Tràn xe Guơng xe Năm cửa",
-     "Nắp xăng Đuỗi xe",
-     "Lườn xe",
      "Nano Premium",
      "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoái mái trên mọi hành trình."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 26.0,
+    "paragraphGap": 20.0,
     "x": 1023.5,
-    "y": 1830.0,
-    "width": 327.4,
-    "height": 303.6
+    "y": 2043.6,
+    "width": 307.7,
+    "height": 90.0
    },
    "coverBox": {
     "x": 1177,
@@ -3136,7 +3063,7 @@
     "w": 159,
     "h": 32
    },
-   "background": "#007cc9",
+   "background": "#00273d",
    "darkText": false
   },
   {
@@ -3262,8 +3189,7 @@
     "MÔ TẢ CÔNG VIỆC",
     "• Hỗ trợ Đại lý dán phim cách nhiệt và lắp màn hình",
     "• Hương dân và đào tạo kỹ thuật dán phim và lắp đặt màn hình cho đại",
-    "YEU CÂU",
-    "Có kinh nghiệm dán phim hoặc lắp đặt màn hình, nếu có kinh nghiệm"
+    "YEU CÂU"
    ],
    "bodyBox": {
     "paragraphs": [
@@ -3271,7 +3197,7 @@
      "Số lượng: 02",
      "Thu nhập: 9 - 15 triệu/ tháng + Thưởng Tháng 13 + BHXH + 12 ngày nghỉ phép/ năm",
      "MÔ TẢ CÔNG VIỆC • Hỗ trợ Đại lý dán phim cách nhiệt và lắp màn hình • Hương dân và đào tạo kỹ thuật dán phim và lắp đặt màn hình cho đại",
-     "YEU CÂU Có kinh nghiệm dán phim hoặc lắp đặt màn hình, nếu có kinh nghiệm"
+     "YEU CÂU"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
@@ -3279,7 +3205,7 @@
     "x": 751.3,
     "y": 1003.9,
     "width": 602.9,
-    "height": 267.1
+    "height": 248.1
    },
    "href": "/nhan-su/tuyen-dung/vi-tri-dang-tuyen/ky-thuat-dan-phim-va-man-hinh",
    "background": "#02111c",
@@ -3566,15 +3492,14 @@
     "bạn sống và cách bạn di chuyễn, thay vì chỉ nhìn vào thông số hay xu",
     "hướng.",
     "TC AUTO gợi ý lựa chọn xe dựa trên những nhu cầu thực tê trong cuộc.",
-    "sống — từ tần suất sử dụng, số người đồng hành, loại hành trình đến",
-    "ai nghiem ma bạn mong muon."
+    "sống — từ tần suất sử dụng, số người đồng hành, loại hành trình đến"
    ],
    "bodyBox": {
     "paragraphs": [
      "Ngày 20.8.2026",
      "Không có chiếc xe tốt nhất cho tất cả. Chỉ có chiếc xe phù hợp nhất với hành trình của bạn.",
      "Mỗi người tìm đến một chiếc xe với một nhu cầu khác nhau. Có người cần một không gian rộng rãi cho gia đình, có người ưu tiên sự linh hoạt trong phố thị, cũng có người tìm kiếm cảm giác lái, tiện nghi và dấu ấn riêng trên mỗi cung đường. Vì vậy, lựa chọn một chiếc xe nên bắt đầu từ cách bạn sống và cách bạn di chuyễn, thay vì chỉ nhìn vào thông số hay xu hướng.",
-     "TC AUTO gợi ý lựa chọn xe dựa trên những nhu cầu thực tê trong cuộc. sống — từ tần suất sử dụng, số người đồng hành, loại hành trình đến ai nghiem ma bạn mong muon."
+     "TC AUTO gợi ý lựa chọn xe dựa trên những nhu cầu thực tê trong cuộc."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
@@ -3582,7 +3507,7 @@
     "x": 752.9,
     "y": 1499.3,
     "width": 601.3,
-    "height": 309.7
+    "height": 291.1
    },
    "background": "#02111c",
    "darkText": false
@@ -3685,8 +3610,7 @@
     "sắp xếp mấy món đồ nhỏ trên taplo, là đủ để đoán ra khá nhiều về gu",
     "sống của họ.",
     "Nhưng chiều ngược lại mới ít ai để ý.",
-    "Xe rộng rãi, mình bỗng thích rủ bạn bè đi xa hơn. Nội thất mát nhờ lớp.",
-    "t tốt, mình ngồi lầu mà chăng ngại. Am thanh hay, mình."
+    "Xe rộng rãi, mình bỗng thích rủ bạn bè đi xa hơn. Nội thất mát nhờ lớp."
    ],
    "bodyBox": {
     "paragraphs": [
@@ -3694,7 +3618,7 @@
      "Bạn đang để chiếc xe nói lên bạn, hay bạn đang nói lên chiếc xe? Bạn đang đề chiếc xe nói lên bạn, hay bạn đang nói lên chiếc xe?",
      "Có một câu hỏi mình hay tự đặt ra mỗi lần ngồi vào xe của ai đó lần đầu. Câu trả lời thường lộ ra rất nhanh. Chỉ cần nhìn cách một người dùng chiếc xe của mình, kiểu nhạc họ bật, mùi nước hoa xe họ chọn, cách họ sắp xếp mấy món đồ nhỏ trên taplo, là đủ để đoán ra khá nhiều về gu sống của họ.",
      "Nhưng chiều ngược lại mới ít ai để ý.",
-     "Xe rộng rãi, mình bỗng thích rủ bạn bè đi xa hơn. Nội thất mát nhờ lớp. t tốt, mình ngồi lầu mà chăng ngại. Am thanh hay, mình."
+     "Xe rộng rãi, mình bỗng thích rủ bạn bè đi xa hơn. Nội thất mát nhờ lớp."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
@@ -3702,7 +3626,7 @@
     "x": 751.3,
     "y": 1482.5,
     "width": 598.7,
-    "height": 275.4
+    "height": 255.4
    },
    "background": "#02111c",
    "darkText": false

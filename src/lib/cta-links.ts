@@ -188,3 +188,15 @@ export function readMorePanel(spot: CtaSpot): ReadMorePanel | null {
     minHeight: Math.ceil(bottom) + OVERSCAN - y0 + PANEL_PAD,
   };
 }
+
+/**
+ * Nut nay co gi de nguoi dung bam khong?
+ *
+ * Co hai duong: dan sang trang chi tiet (`href`), hoac xo khoi chu ra
+ * (`bodyBox`). Khong co duong nao thi dung dat vung bam trong suot len chu
+ * "XEM THÊM" ve san — bam ma khong xay ra gi con lam nguoi dung tuong trang
+ * hong hon la de no khong bam duoc.
+ */
+export function hasSomethingToShow(spot: CtaSpot): boolean {
+  return Boolean(spot.href) || spot.bodyBox !== null;
+}

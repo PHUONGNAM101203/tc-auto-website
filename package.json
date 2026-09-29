@@ -43,9 +43,10 @@
     "mobile:tiles": "python3 tools/brand/extract-mobile-tiles.py",
     "stamp:assets": "python3 tools/stamp-assets.py",
     "_doc:ocr": "Lop van ban OCR PHAI chay lai moi khi bo khung thiet ke doi. Truoc day no nam ngoai chuoi parse:subpages nen doi thiet ke la toa do chu lac hau ma khong ai biet — lop nay vo hinh, chi trinh doc man hinh va cong cu tim kiem thay. Can ocr:build mot lan de co tools/ocr/ocrbin (macOS + swiftc).",
-    "_doc:verify": "verify:fidelity, verify:fidelity:sub va verify:sharpness KHONG nam trong chuoi nay vi chung can mot server that dang chay o cong 3311 (npm run build && npx next start -p 3311). Chay tay sau moi thay doi CSS hoac component canvas — gate do thoat ma 1 khi vuot han muc trong tools/fidelity/compare.mjs. verify:retina thi khong can server nen da nam trong chuoi verify.",
+    "_doc:verify": "verify:fidelity, verify:fidelity:sub, verify:sharpness va verify:readmore KHONG nam trong chuoi nay vi chung can mot server that dang chay o cong 3311 (npm run build && npx next start -p 3311). Chay tay sau moi thay doi CSS hoac component canvas — gate do thoat ma 1 khi vuot han muc trong tools/fidelity/compare.mjs. verify:retina thi khong can server nen da nam trong chuoi verify.",
     "verify:retina": "python3 tools/fidelity/check-retina-parity.py",
-    "verify:sharpness": "node tools/fidelity/check-sharpness.mjs"
+    "verify:sharpness": "node tools/fidelity/check-sharpness.mjs",
+    "verify:readmore": "node tools/fidelity/check-readmore.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
