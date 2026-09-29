@@ -109,16 +109,25 @@ export function SiteNav({ nav }: SiteNavProps) {
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [open, setOpen] = useState<string | null>(null);
+  /**
+   * Muc dang duoc ro chuot. Thanh truot BAM THEO con tro; roi ra khoi thanh
+   * dieu huong thi no truot ve muc dang xem.
+   */
+  const [hovered, setHovered] = useState<string | null>(null);
   const [pill, setPill] = useState<PillBox | null>(null);
   /** Bat hieu ung truot. Lan dat DAU TIEN phai tat, khong thi no bay tu goc
       trai man hinh ra. */
   const [ready, setReady] = useState(false);
   const activeHref = nav.find((entry) => entry.active)?.href ?? null;
+  /** Cho thanh truot phai toi: dang ro chuot vao dau thi toi do. */
+  const pillHref = hovered ?? activeHref;
   /** Vi tri hien tai, de ghi lai LUC ROI TRANG. */
   const current = useRef<PillBox | null>(null);
+  /** Da qua lan dat dau tien cua LAN MOUNT nay chua. */
+  const placed = useRef(false);
 
   useMeasureEffect(() => {
-    if (!activeHref) {
+    if (!pillHref) {
       setPill(null);
       current.current = null;
       rememberPill(null);
@@ -131,8 +140,8 @@ export function SiteNav({ nav }: SiteNavProps) {
     // trang) thi ca hai lan deu doc ra cung mot diem xuat phat va cung truot
     // nhu nhau. Ghi luc mount thi lan mount thu hai doc phai chinh gia tri
     // vua ghi, va cu truot bien mat — da dinh dung bay do mot lan.
-    const from = recallPill();
-    let first = true;
+    const from = placed.current ? null : recallPill();
+    let first = !placed.current;
     /**
      * Dang chay cu truot thi KHONG cho phep do lai ghi de vi tri.
      *
@@ -145,7 +154,7 @@ export function SiteNav({ nav }: SiteNavProps) {
     let gliding = false;
 
     const measure = () => {
-      const el = linkRefs.current.get(activeHref);
+      const el = linkRefs.current.get(pillHref);
       const parent = el?.offsetParent;
       if (!el || !parent) {
         return;
@@ -173,6 +182,7 @@ export function SiteNav({ nav }: SiteNavProps) {
 
       const wasFirst = first;
       first = false;
+      placed.current = true;
 
       // Lan do sau (font tai xong, doi be rong cua so): chi cap nhat dich —
       // tru khi cu truot dang chay do, luc do de yen cho no chay het.
@@ -225,7 +235,7 @@ export function SiteNav({ nav }: SiteNavProps) {
       // GHI LUC ROI TRANG, khong ghi luc vao trang — xem chu thich tren.
       rememberPill(current.current);
     };
-  }, [activeHref]);
+  }, [pillHref]);
 
   useEffect(
     () => () => {
@@ -259,14 +269,26 @@ export function SiteNav({ nav }: SiteNavProps) {
     }
   }, []);
 
+  /**
+   * Dong menu VA tha thanh truot ve muc dang xem.
+   *
+   * Dung chung mot bo dem tre voi menu, khong tach ra: di tu nhan nay sang
+   * nhan ben canh thi `mouseleave` cua nhan cu chay TRUOC `mouseenter` cua
+   * nhan moi. Tha ngay la thanh truot giat ve muc dang xem roi moi quay lai —
+   * nhap nhay. Cho 180ms thi `mouseenter` kip huy cu tha do.
+   */
   const scheduleClose = useCallback(() => {
     cancelClose();
-    closeTimer.current = setTimeout(() => setOpen(null), CLOSE_DELAY_MS);
+    closeTimer.current = setTimeout(() => {
+      setOpen(null);
+      setHovered(null);
+    }, CLOSE_DELAY_MS);
   }, [cancelClose]);
 
   const openNow = useCallback(
     (href: string) => {
       cancelClose();
+      setHovered(href);
       setOpen(submenuFor(href).length > 0 ? href : null);
     },
     [cancelClose],
@@ -310,6 +332,13 @@ export function SiteNav({ nav }: SiteNavProps) {
               onMouseEnter={() => openNow(entry.href)}
               onFocus={() => openNow(entry.href)}
               onMouseLeave={scheduleClose}
+              onClick={() => {
+                // Bam la chot: tha con tro ra de thanh truot dung lai o tab
+                // moi thay vi con bam theo chuot.
+                cancelClose();
+                setHovered(null);
+                setOpen(null);
+              }}
             >
               {entry.label}
               {/* Thiet ke: luc thuong la mui ten phai "›", luc xo xuong doi
