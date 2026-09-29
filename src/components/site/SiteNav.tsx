@@ -38,6 +38,16 @@ import type { NavSpec } from "@/lib/types";
 
 interface SiteNavProps {
   readonly nav: readonly NavSpec[];
+  /**
+   * Co ve thanh truot danh dau muc dang xem khong.
+   *
+   * TRANG CHINH: co. Header o do dung tu prototype, nen sau khi ta bo nen cua
+   * `.nv.act` thi thanh truot la thu duy nhat danh dau.
+   *
+   * TRANG CON: KHONG. Header o do nam trong anh PNG thiet ke va o danh dau da
+   * duoc VE CHET vao anh roi — ve them thanh truot la ra HAI khung long nhau.
+   */
+  readonly pill?: boolean;
 }
 
 /** Khoang tre truoc khi dong menu — de con tro kip di tu nhan xuong bang. */
@@ -104,7 +114,7 @@ function recallPill(): PillBox | null {
 const useMeasureEffect =
   typeof window === "undefined" ? useEffect : useLayoutEffect;
 
-export function SiteNav({ nav }: SiteNavProps) {
+export function SiteNav({ nav, pill: showPill = true }: SiteNavProps) {
   const linkRefs = useRef(new Map<string, HTMLAnchorElement>());
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -120,7 +130,7 @@ export function SiteNav({ nav }: SiteNavProps) {
   const [ready, setReady] = useState(false);
   const activeHref = nav.find((entry) => entry.active)?.href ?? null;
   /** Cho thanh truot phai toi: dang ro chuot vao dau thi toi do. */
-  const pillHref = hovered ?? activeHref;
+  const pillHref = showPill ? (hovered ?? activeHref) : null;
   /** Vi tri hien tai, de ghi lai LUC ROI TRANG. */
   const current = useRef<PillBox | null>(null);
   /** Da qua lan dat dau tien cua LAN MOUNT nay chua. */

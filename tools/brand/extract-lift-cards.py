@@ -14,7 +14,7 @@ import json
 import sys
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageChops, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _backdrop import feathered, rebuild_background  # noqa: E402
@@ -102,6 +102,12 @@ GROUPS = [
         "slice_prefix": "dai-ly",
         # Muc nay nam tren nen TRANG THUAN -> chi can to trang, khong can noi suy.
         "rebuild": "white",
+        # Nen sau hai the nay trong thiet ke la DAI TRANG, nen khi cat ra thi
+        # bon goc cua anh giu lai mau trang do. Luc nghi khong ai thay vi the
+        # nam trung khit len cho cu; nhung ro chuot la the nhac len 14px va bon
+        # o trang lo ra tren nen toi. Bo goc de chung trong suot han.
+        # Ban kinh do truc tiep tu anh da cat: 75px o ti le 3x = 25px canvas.
+        "cornerRadius": 25,
         "cards": [
             {
                 "id": "hanh-trinh-hop-tac",
@@ -170,6 +176,29 @@ GROUPS = [
 ]
 
 
+def round_corners(art: Image.Image, radius: int, scale: float) -> Image.Image:
+    """
+    Lam trong suot bon goc theo dung ban kinh bo goc cua the.
+
+    Chi dung cho nhom nao co nen DAC o goc — vi du dai the trang Dai ly nam
+    tren dai trang trong thiet ke, cat ra la dinh theo bon o trang vuong.
+    Nhom nao goc da trong suot san thi truyen radius = 0 va ham nay khong lam gi.
+    """
+    if radius <= 0:
+        return art
+    r = round(radius * scale)
+    mask = Image.new("L", art.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle(
+        (0, 0, art.width - 1, art.height - 1), radius=r, fill=255
+    )
+    out = art.copy()
+    alpha = out.getchannel("A")
+    # Nhan vao alpha san co chu khong thay han: giu nguyen phan mo dan o mep
+    # do `feathered()` tao ra.
+    out.putalpha(ImageChops.multiply(alpha, mask))
+    return out
+
+
 def export_group(group: dict) -> list[dict]:
     OUT.mkdir(parents=True, exist_ok=True)
     page = Image.open(group["source"])
@@ -187,6 +216,7 @@ def export_group(group: dict) -> list[dict]:
         ).convert("RGB")
         feather = FEATHER_FLAT if group["rebuild"] in ("white", "fill") else FEATHER
         art = feathered(art, round(feather * scale)) if feather else art.convert("RGBA")
+        art = round_corners(art, group.get("cornerRadius", 0), scale)
 
         target = OUT / f"{group['slug']}-{card['id']}.webp"
         art.save(target, "WEBP", quality=88, method=6)

@@ -6,13 +6,15 @@ import { SiteSearch } from "./SiteSearch";
 interface SiteHeaderProps {
   /** Toa do nav lay tu page spec — moi trang Figma co vi tri x hoi khac nhau. */
   readonly nav: readonly NavSpec[];
+  /** Xem chu thich `pill` trong SiteNav. Trang con phai truyen `false`. */
+  readonly pill?: boolean;
 }
 
 /**
  * Header cua canvas. Logo la vung bam trong suot dat dung tren logo da ve san
  * trong anh nen (giong prototype), nen khong can asset logo rieng.
  */
-export function SiteHeader({ nav }: SiteHeaderProps) {
+export function SiteHeader({ nav, pill }: SiteHeaderProps) {
   return (
     <header className="hdr">
       {/* prefetch={false}: Next mac dinh tai truoc moi trang duoc lien ket, keo
@@ -26,7 +28,7 @@ export function SiteHeader({ nav }: SiteHeaderProps) {
         aria-label="TC Auto Solutions - Trang chủ"
       />
 
-      <SiteNav nav={nav} />
+      <SiteNav nav={nav} pill={pill} />
 
       <SiteSearch />
     </header>

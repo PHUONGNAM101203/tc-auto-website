@@ -1579,6 +1579,12 @@
 }
 
 .tc-submenu-item {
+  position: relative;
+  /* Co lai vua dung be ngang chu: bang xo la flex doc, khong co dong nay thi
+     muc con gian het be ngang bang va gach chan dai qua chu. */
+  align-self: flex-start;
+  /* Chua san khoang cho gach chan, de chu khong nhay khi ro chuot vao. */
+  padding-bottom: 5px;
   font:
     italic 400 12px / 1.2 "Montserrat",
     sans-serif;
@@ -1589,16 +1595,39 @@
   transition: color 0.18s ease;
 }
 
+/* Gach chan do. VE BANG PSEUDO-ELEMENT chu khong dung `text-decoration`:
+   gach chan cua trinh duyet khong dat mau rieng va khong chay hieu ung duoc,
+   con cai nay thi keo dai ra tu ben trai. */
+.tc-submenu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.5px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--red-nav);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .tc-submenu-item:hover,
 .tc-submenu-item:focus-visible {
   color: #fff;
+}
+
+.tc-submenu-item:hover::after,
+.tc-submenu-item:focus-visible::after {
+  transform: scaleX(1);
 }
 
 /* Nguoi dung da tat hieu ung thi bo truot va bo mo dan — hien/an dut khoat. */
 @media (prefers-reduced-motion: reduce) {
   .tc-navpill[data-ready],
   .tc-submenu,
-  .tc-submenu[data-open] {
+  .tc-submenu[data-open],
+  .tc-submenu-item::after {
     transition: none;
   }
   .tc-submenu {

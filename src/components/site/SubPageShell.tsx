@@ -36,95 +36,105 @@ interface SubPageShellProps {
  *   - tren : header / form / vung bam that o dang "ghost" (xem overlay.css)
  *   - an   : breadcrumb + lien ket trang con cho screen reader va SEO
  */
-export function SubPageShell({ page, hotspots = [], childPages = [], feature }: SubPageShellProps) {
+export function SubPageShell({
+  page,
+  hotspots = [],
+  childPages = [],
+  feature,
+}: SubPageShellProps) {
   return (
     <>
-    {/* Duoi 900px, canvas duoc an di va ban nay hien ra — chu trong anh khong
+      {/* Duoi 900px, canvas duoc an di va ban nay hien ra — chu trong anh khong
         the doc duoc khi thu xuong be rong dien thoai. */}
-    <MobileSubPage
-      page={page}
-      nav={page.nav}
-      blocks={getMobileBlocks(page)}
-      childPages={childPages}
-      contact={
-        page.contactForm ? (
-          <ContactForm y={0} sourcePage={page.route} layout="mobile" />
-        ) : null
-      }
-    />
-    <div className="tc-canvas tc-ghost">
-      <section
-        className="pg"
-        style={{ height: `${page.height}px` }}
-        aria-label={page.title}
-      >
-        <div className="bg">
-          {page.slices.map((slice, index) => (
-            <SliceImage
-              key={slice.src}
-              slice={slice}
-              index={index}
-              alt={index === 0 ? `${page.title} — TC Auto Solutions` : ""}
-            />
-          ))}
-        </div>
-
-        <SiteHeader nav={page.nav} />
-
-        {/* Duong dan phan cap — an voi mat thuong (thiet ke khong co breadcrumb)
-            nhung screen reader va cong cu tim kiem van doc duoc. */}
-        <nav className="tc-sr" aria-label="Đường dẫn">
-          <ol>
-            {page.breadcrumb.map((crumb) => (
-              <li key={crumb.href}>
-                <Link href={crumb.href}>{crumb.label}</Link>
-              </li>
+      <MobileSubPage
+        page={page}
+        nav={page.nav}
+        blocks={getMobileBlocks(page)}
+        childPages={childPages}
+        contact={
+          page.contactForm ? (
+            <ContactForm y={0} sourcePage={page.route} layout="mobile" />
+          ) : null
+        }
+      />
+      <div className="tc-canvas tc-ghost">
+        <section
+          className="pg"
+          style={{ height: `${page.height}px` }}
+          aria-label={page.title}
+        >
+          <div className="bg">
+            {page.slices.map((slice, index) => (
+              <SliceImage
+                key={slice.src}
+                slice={slice}
+                index={index}
+                alt={index === 0 ? `${page.title} — TC Auto Solutions` : ""}
+              />
             ))}
-            <li aria-current="page">{page.title}</li>
-          </ol>
-        </nav>
+          </div>
 
-        {hotspots.map((spot) => (
-          <Link
-            key={`${spot.x}-${spot.y}-${spot.href}`}
-            href={spot.href}
-            prefetch={false}
-            className="tc-hotspot rv"
-            data-rv="scale"
-            data-magnetic=""
-            aria-label={spot.label}
-            style={{
-              left: `${spot.x}px`,
-              top: `${spot.y}px`,
-              width: `${spot.w}px`,
-              height: `${spot.h}px`,
-            }}
-          />
-        ))}
+          {/* KHONG ve thanh truot o trang con: o danh dau muc dang xem da nam
+            san trong anh nen PNG, ve them la ra hai khung long nhau. */}
+          <SiteHeader nav={page.nav} pill={false} />
 
-        {/* Lop van ban cho trinh doc man hinh va cong cu tim kiem.
-            Trang la anh nen chu khong co trong DOM — thieu lop nay thi trang
-            "rong" voi Google. Trich bang OCR tu chinh frame thiet ke. */}
-        <ReadableText title={page.title} blocks={getPageText(page.slug).blocks} />
-
-        {childPages.length > 0 && (
-          <nav className="tc-sr" aria-label={`Trang con của ${page.title}`}>
-            <ul>
-              {childPages.map((child) => (
-                <li key={child.slug}>
-                  <Link href={child.route}>{child.title}</Link>
+          {/* Duong dan phan cap — an voi mat thuong (thiet ke khong co breadcrumb)
+            nhung screen reader va cong cu tim kiem van doc duoc. */}
+          <nav className="tc-sr" aria-label="Đường dẫn">
+            <ol>
+              {page.breadcrumb.map((crumb) => (
+                <li key={crumb.href}>
+                  <Link href={crumb.href}>{crumb.label}</Link>
                 </li>
               ))}
-            </ul>
+              <li aria-current="page">{page.title}</li>
+            </ol>
           </nav>
-        )}
 
-        {feature}
+          {hotspots.map((spot) => (
+            <Link
+              key={`${spot.x}-${spot.y}-${spot.href}`}
+              href={spot.href}
+              prefetch={false}
+              className="tc-hotspot rv"
+              data-rv="scale"
+              data-magnetic=""
+              aria-label={spot.label}
+              style={{
+                left: `${spot.x}px`,
+                top: `${spot.y}px`,
+                width: `${spot.w}px`,
+                height: `${spot.h}px`,
+              }}
+            />
+          ))}
 
-        <ContactForm y={page.contactForm.y} sourcePage={page.route} />
-        <FooterSocial pageHeight={page.height} />
-      </section>
-    </div>
+          {/* Lop van ban cho trinh doc man hinh va cong cu tim kiem.
+            Trang la anh nen chu khong co trong DOM — thieu lop nay thi trang
+            "rong" voi Google. Trich bang OCR tu chinh frame thiet ke. */}
+          <ReadableText
+            title={page.title}
+            blocks={getPageText(page.slug).blocks}
+          />
+
+          {childPages.length > 0 && (
+            <nav className="tc-sr" aria-label={`Trang con của ${page.title}`}>
+              <ul>
+                {childPages.map((child) => (
+                  <li key={child.slug}>
+                    <Link href={child.route}>{child.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          {feature}
+
+          <ContactForm y={page.contactForm.y} sourcePage={page.route} />
+          <FooterSocial pageHeight={page.height} />
+        </section>
+      </div>
     </>
   );
 }
