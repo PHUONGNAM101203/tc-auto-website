@@ -270,6 +270,29 @@ còn lại nằm **bên trong thân ảnh** — là nhiễu nén WebP, không ph
 - Số liệu nghiệp vụ cho hai trang tự soạn: `cong-nghe/bao-hanh` và
   `cong-nghe/khong-gian-trai-nghiem` (xem `src/data/authored-pages.json`).
 
+Bổ sung sau buổi duyệt 28/09/2026:
+
+- **Bản export prototype HTML mới.** Bộ khung `~/Downloads/Website_TC` đổi
+  thiết kế 6 trang, trong đó **Home** và **Công nghệ** là *trang chính* — chữ
+  và nút ở đó là phần tử thật sinh từ `TC-Auto-Website-Prototype.html` (bản
+  21/09), nên sửa tay `src/data/pages/*.json` sẽ bị ghi đè ngay lần chạy
+  `parse:prototype` kế tiếp. Thay đổi đã xác định trên trang Công nghệ: bỏ
+  tiêu đề phụ *NGHIÊN CỨU & PHÁT TRIỂN* cùng một nút *TÌM HIỂU THÊM* thừa ở
+  cột trái, dồn chữ lên dưới tiêu đề chính. Bốn trang con còn lại đã dựng lại
+  xong.
+- **Ảnh từng thẻ của dải "CÁC BÀI VIẾT KHÁC"**, cỡ ~1200px chiều cao. Trong
+  thiết kế dải này là một hàng tràn ngang, hai thẻ ngoài cùng bị cắt ở mép
+  canvas; muốn cho nó tự cuộn ngang liền mạch thì phải có ảnh thẻ nguyên vẹn,
+  không thể lấy dải đã cắt rồi nối vòng vì lộ mối nối. Bản trong bộ tài nguyên
+  mới chỉ cao 512px, phóng lên màn retina sẽ soft.
+- **Xác nhận về logo.** `Logo.png` trong bộ mới là một lockup KHÁC: chỉ có
+  mark + "TC AUTO", **bỏ dòng "SOLUTIONS"** mà site đang dùng. Đây là thay đổi
+  nhận diện nên chưa áp dụng.
+- **Bộ tài nguyên xuất theo chiều rộng**, đừng ép chiều cao. Bộ
+  `Tài nguyên Web 2` có 402/412 tệp bị ép đúng 512px cao, khiến 126 tệp *nhỏ
+  đi* so với bộ cũ. `tools/brand/asset_source.py` đang chữa cháy bằng cách tìm
+  khắp ba bộ rồi chọn bản nhiều điểm ảnh nhất, nhưng gốc rễ nằm ở cách xuất.
+
 ---
 
 ## 9b. Ba khối tương tác tách khỏi ảnh nền
@@ -337,6 +360,62 @@ Ba lỗi phải tránh cùng lúc:
    lộ ra ngoài rồi. Đường dẫn `/admin/preview/[id]` nằm trong vùng middleware
    bảo vệ, đọc bằng quyền quản trị, và **dùng chung** `PostArticle` với trang
    thật nên không thể lệch nhau.
+
+---
+
+## 9d. Bốn hiệu ứng thêm sau buổi duyệt 28/09
+
+### Menu con xổ xuống khi rê chuột
+
+Các thẻ `.nv` **vẫn là con trực tiếp** của header và không đổi một thuộc tính
+nào. Lý do: `.nv` nằm trong khối PROTOTYPE của `canvas.css` — khối không được
+sửa — và đang định vị tuyệt đối theo `.hdr`. Bọc thêm một lớp wrapper là đổi
+gốc toạ độ, đổi luôn cách `padding` và `margin-left` âm ăn vào bố cục, và chữ
+xê dịch vài pixel so với thiết kế.
+
+Bảng xổ là thẻ **anh em**, đặt cùng toạ độ x, `top: 74px` = đúng đáy nhãn
+(48 + 26) nên không có khe hở — con trỏ đi thẳng từ nhãn xuống bảng mà menu
+không tắt. Thứ tự mục lấy theo **cách nhà thiết kế đánh số thư mục**, không
+theo chữ cái: theo chữ cái thì *Các dự án* nhảy lên đầu mục Giải pháp trong
+khi thiết kế xếp nó cuối. `tests/unit/nav-menu.test.ts` đối chiếu mọi liên kết
+với trang có thật, nên đổi tên trang mà quên sửa menu là test bắt được.
+
+Escape bắt ở cấp **tài liệu** chứ không trên thẻ `<nav>`: menu mở bằng rê chuột
+thì tiêu điểm vẫn nằm ngoài nav, phím bấm không bao giờ chạy tới đó.
+
+### Thanh trượt đánh dấu mục đang xem
+
+Nền sáng của mục đang xem tách khỏi `.nv.act` thành phần tử riêng để trượt
+được — nền thì không trượt, đổi mục là nó nhảy cái rồi sang chỗ khác.
+`.nv.act` **giữ nguyên** padding 14px và margin âm của nó; đổi hai trị số đó
+là chữ xê dịch 2px.
+
+Đo bằng `getBoundingClientRect()` chia cho hệ số zoom của canvas, **không**
+dùng `offsetLeft`/`offsetWidth`: hai số đó làm tròn về nguyên mà bề ngang chữ
+thì lẻ, thanh trượt hụt 0,28px và viền phải lộ ra một sợi tóc.
+
+### Băng chuyền chồng thẻ
+
+Bấm mũi tên thì tấm trên cùng trượt sang phải, nhỏ lại, nghiêng nhẹ rồi mờ đi;
+hết nhịp mới được xếp ra sau chồng, tấm kế tiếp lên sau một nhịp. Các tấm chưa
+tới lượt nằm lùi về sau (`scale(0.965)`) nên nhìn ra là một *chồng* chứ không
+phải một ô ảnh đổi nội dung.
+
+Bấm nhanh hơn thời gian trượt thì cú bấm được **nhớ lại** và làm ngay sau đó.
+Hàm chuyển thẻ phải gọi qua `ref`, không gọi thẳng chính nó: gọi thẳng là dùng
+lại bản cũ của hàm, bản đó còn giữ chỉ số của nhịp trước nên nhảy sai một thẻ.
+
+### Lót nền cho slider
+
+Slide đầu cắt từ chính bản thiết kế nên **đặc**, che kín khung. Nhưng các slide
+sau lấy từ bộ tài nguyên rời và giữ kênh trong suốt quanh viền thẻ — 22% đến
+35% số điểm ảnh. Mà ngay **bên dưới** khung đó, ảnh nền đã vẽ chết tấm ảnh của
+slide đầu vào rồi. Hậu quả: chuyển sang slide 2 là nhìn xuyên qua phần trong
+suốt, thấy tấm cũ — hai tấm chồng lên nhau.
+
+Chữa bằng một lớp lót đặc `#03111c`, màu đo từ chính ảnh nền ngay bên ngoài bốn
+góc khung của cả ba slider. Ở trạng thái ban đầu lớp lót không hề lộ ra vì
+slide đầu phủ kín, nên gate pixel vẫn 0.
 
 ---
 
