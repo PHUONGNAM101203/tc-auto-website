@@ -1,0 +1,42 @@
+{
+  "_doc": "Dai the 'CAC BAI VIET KHAC' o cuoi trang bai viet. Trong thiet ke day la mot HANG TRAN NGANG: hai the ngoai cung bi cat o mep canvas va tieu de cua chung cung bi cat mat chu. Anh lay tu bo tai nguyen (1. Page_Trai nghiem/Trang bai viet). Xem src/components/site/RelatedStrip.tsx.",
+  "_doc_title": "Chi the giua co tieu de doc duoc tron ven trong thiet ke. Hai the kia bi cat o mep — de TRONG thay vi doan bua; component tu bo phan chu khi title rong. Dien vao khi khach xac nhan.",
+  "box": {
+    "x": 0,
+    "y": 2780,
+    "width": 1440,
+    "height": 510
+  },
+  "card": {
+    "width": 597,
+    "height": 401,
+    "gap": 46
+  },
+  "background": "#03111c",
+  "cards": [
+    {
+      "id": "khong-gian-rieng-tu",
+      "src": "/related/khong-gian-rieng-tu.webp",
+      "title": "",
+      "href": null
+    },
+    {
+      "id": "xe-chon-ban",
+      "src": "/related/xe-chon-ban.webp",
+      "title": "Xe chọn bạn, hay bạn chọn xe từ đầu?",
+      "href": null
+    },
+    {
+      "id": "gu-nghe-nhac",
+      "src": "/related/gu-nghe-nhac.webp",
+      "title": "",
+      "href": null
+    }
+  ],
+  "pages": [
+    "trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao"
+  ],
+  "_doc_align": "Trong thiet ke anh the bat dau o y=2791 va tieu de o y=3220. Dai phu tu y=2780 nen phai chua 11px o tren, va tieu de cach day anh 28px — de dai moi nam dung cho dai cu.",
+  "padTop": 11,
+  "titleGap": 28
+}

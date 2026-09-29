@@ -1634,3 +1634,117 @@
     transform: none;
   }
 }
+
+/* ===========================================================================
+   O tim kiem DA VE SAN trong anh nen (hien chi trang Cong nghe)
+
+   Prototype export ra mot mang toi dac o cho o tim kiem cua trang Cong nghe,
+   nen vung do duoc va lai bang pixel cua ban thiet ke — ma pixel do gom ca
+   khung, kinh lup va dong chu "Nhập để tìm kiếm...". O that ve de len thanh ra
+   chu bi nhan doi. Xem src/lib/search-baked.ts.
+
+   Chua giong lop ghost cua 31 trang con: o that trong suot luc nghi, hien ra
+   khi bam vao de go.
+   =========================================================================== */
+.tc-search-baked .search {
+  border-color: transparent;
+  background: transparent;
+}
+
+.tc-search-baked .search svg {
+  stroke: transparent;
+}
+
+.tc-search-baked .search input,
+.tc-search-baked .search input::placeholder {
+  color: transparent;
+}
+
+.tc-search-baked .search:focus-within {
+  border-color: #fff;
+  background: #0a2539;
+}
+
+.tc-search-baked .search:focus-within svg {
+  stroke: #fff;
+}
+
+.tc-search-baked .search:focus-within input {
+  color: #fff;
+}
+
+.tc-search-baked .search:focus-within input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ===========================================================================
+   Dai the "CÁC BÀI VIẾT KHÁC" tu cuon ngang
+   (src/components/site/RelatedStrip.tsx)
+   =========================================================================== */
+.tc-related {
+  position: absolute;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.tc-related-track {
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+  will-change: transform;
+  animation-name: tc-related-run;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Dich trai DUNG MOT CHU KY roi nhay ve 0. Danh sach da duoc lap nguyen chu ky
+   nen khung hinh truoc va sau cu nhay giong het nhau — mat nguoi khong thay. */
+@keyframes tc-related-run {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(var(--tc-related-lap) * -1), 0, 0);
+  }
+}
+
+/* Ro chuot vao thi dung lai de con doc va bam duoc. */
+.tc-related:hover .tc-related-track,
+.tc-related:focus-within .tc-related-track {
+  animation-play-state: paused;
+}
+
+.tc-related-card {
+  flex: 0 0 auto;
+}
+
+.tc-related-link {
+  display: block;
+  text-decoration: none;
+}
+
+.tc-related-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
+  user-select: none;
+}
+
+.tc-related-title {
+  display: block;
+  margin-top: var(--tc-related-title-gap, 28px);
+  text-align: center;
+  font:
+    700 19px/1.3 "Montserrat",
+    sans-serif;
+  color: #fff;
+}
+
+/* Nguoi dung da tat hieu ung: dung han, khong cuon. */
+@media (prefers-reduced-motion: reduce) {
+  .tc-related-track {
+    animation: none;
+  }
+}

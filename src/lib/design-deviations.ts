@@ -200,6 +200,20 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "hai khoi, nen vung nay CHAC CHAN lech. Go muc nay ngay khi co ban " +
       "export prototype moi.",
   },
+  {
+    page: "trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao",
+    // Ca dai the "CÁC BÀI VIẾT KHÁC": x 0..1440, y 2780..3290.
+    box: { x: 0, y: 2780, width: 1440, height: 510 },
+    reason:
+      "Thiet ke ve dai nay nhu mot HANG TRAN NGANG: the giua nam tron ven, hai " +
+      "the hai ben bi cat o mep canvas — y la con nua, keo di. Khach muon no tu " +
+      "cuon ngang, nen dai duoc dung lai bang phan tu that " +
+      "(src/components/site/RelatedStrip.tsx) voi anh NGUYEN VEN lay tu bo tai " +
+      "nguyen, chay vong khong het. Dai PHU LEN anh nen bang mot lop mau nen dac " +
+      "chu KHONG xoa gi khoi anh — bo trang khoi `pages` trong related-strip.json " +
+      "la moi thu ve nhu cu. Hai the ngoai cung trong thiet ke bi cat mat chu nen " +
+      "tieu de cua chung dang de TRONG, cho khach xac nhan.",
+  },
   // Ap cho 10 trang danh sach — hop cu the doc tu src/data/detected-pagination.json.
   {
     page: "*listing*",

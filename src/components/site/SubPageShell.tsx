@@ -3,7 +3,9 @@ import { MobileSubPage } from "@/components/mobile/MobileSubPage";
 import { SliceImage } from "@/components/canvas/SliceImage";
 import { ContactForm } from "@/components/site/ContactForm";
 import { FooterSocial } from "@/components/site/FooterSocial";
+import { RelatedStrip } from "@/components/site/RelatedStrip";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
 import { getMobileBlocks } from "@/lib/mobile-subpage";
 import { getPageText, type TextBlock } from "@/lib/subpage-text";
@@ -77,6 +79,8 @@ export function SubPageShell({
           {/* KHONG ve thanh truot o trang con: o danh dau muc dang xem da nam
             san trong anh nen PNG, ve them la ra hai khung long nhau. */}
           <SiteHeader nav={page.nav} pill={false} />
+
+          {hasRelatedStrip(page.slug) ? <RelatedStrip /> : null}
 
           {/* Duong dan phan cap — an voi mat thuong (thiet ke khong co breadcrumb)
             nhung screen reader va cong cu tim kiem van doc duoc. */}

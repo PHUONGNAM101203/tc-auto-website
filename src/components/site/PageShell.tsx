@@ -13,6 +13,7 @@ import { getPhotoSliders } from "@/lib/photo-sliders";
 import { getLiftCards } from "@/lib/lift-cards";
 import { getMobileHero, getMobileSections } from "@/lib/mobile-sections";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { isSearchBaked } from "@/lib/search-baked";
 import type { PageSpec } from "@/lib/types";
 
 interface PageShellProps {
@@ -31,52 +32,52 @@ interface PageShellProps {
 export function PageShell({ page }: PageShellProps) {
   return (
     <>
-    <MobilePage
-      nav={page.nav}
-      hero={getMobileHero(page.slug)}
-      sections={getMobileSections(page.slug)}
-      contact={
-        page.contactForm ? (
-          <ContactForm y={0} sourcePage={page.route} layout="mobile" />
-        ) : null
-      }
-    />
-    <div className="tc-canvas">
-      <section
-        className="pg"
-        style={{ height: `${page.height}px` }}
-        aria-label={page.title}
-      >
-        <CanvasSlices slices={page.slices} pageTitle={page.title} />
+      <MobilePage
+        nav={page.nav}
+        hero={getMobileHero(page.slug)}
+        sections={getMobileSections(page.slug)}
+        contact={
+          page.contactForm ? (
+            <ContactForm y={0} sourcePage={page.route} layout="mobile" />
+          ) : null
+        }
+      />
+      <div className="tc-canvas">
+        <section
+          className="pg"
+          style={{ height: `${page.height}px` }}
+          aria-label={page.title}
+        >
+          <CanvasSlices slices={page.slices} pageTitle={page.title} />
 
-        {/* Bang hero — chi trang chu co, va chi ve khi da du tu 2 anh tro len. */}
-        {page.slug === "home" && <HeroSlider />}
+          {/* Bang hero — chi trang chu co, va chi ve khi da du tu 2 anh tro len. */}
+          {page.slug === "home" && <HeroSlider />}
 
-        {/* Dai the "Giải pháp" — truot ngang bang mui ten ve san trong thiet ke. */}
-        {page.slug === "home" && <SolutionCarousel />}
+          {/* Dai the "Giải pháp" — truot ngang bang mui ten ve san trong thiet ke. */}
+          {page.slug === "home" && <SolutionCarousel />}
 
-        <SiteHeader nav={page.nav} />
+          <SiteHeader nav={page.nav} searchBaked={isSearchBaked(page.slug)} />
 
-        {page.items.map((item) => (
-          <CanvasItem key={item.id} item={item} />
-        ))}
+          {page.items.map((item) => (
+            <CanvasItem key={item.id} item={item} />
+          ))}
 
-        <AppCards cards={getAppCards(page.slug)} />
+          <AppCards cards={getAppCards(page.slug)} />
 
-        {/* The anh tach khoi nen — ro chuot vao the nao thi the do noi len. */}
-        <LiftCards cards={getLiftCards(page.slug)} />
+          {/* The anh tach khoi nen — ro chuot vao the nao thi the do noi len. */}
+          <LiftCards cards={getLiftCards(page.slug)} />
 
-        {/* Slider anh ve chet trong thiet ke — mui ten "›" bam duoc. */}
-        <PhotoSliders sliders={getPhotoSliders(page.slug)} />
+          {/* Slider anh ve chet trong thiet ke — mui ten "›" bam duoc. */}
+          <PhotoSliders sliders={getPhotoSliders(page.slug)} />
 
-        {page.contactForm ? (
-          <ContactForm y={page.contactForm.y} sourcePage={page.route} />
-        ) : null}
+          {page.contactForm ? (
+            <ContactForm y={page.contactForm.y} sourcePage={page.route} />
+          ) : null}
 
-        {/* Ba bieu tuong mang xa hoi ve san trong chan trang — o bam trong suot. */}
-        <FooterSocial pageHeight={page.height} />
-      </section>
-    </div>
+          {/* Ba bieu tuong mang xa hoi ve san trong chan trang — o bam trong suot. */}
+          <FooterSocial pageHeight={page.height} />
+        </section>
+      </div>
     </>
   );
 }
