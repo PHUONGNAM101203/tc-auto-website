@@ -1618,8 +1618,15 @@
 }
 
 .tc-submenu-item:hover::after,
-.tc-submenu-item:focus-visible::after {
+.tc-submenu-item:focus-visible::after,
+/* Trang DANG XEM giu gach chan san, khong can ro chuot — de nguoi dung biet
+   minh dang o muc con nao. */
+.tc-submenu-item[data-here]::after {
   transform: scaleX(1);
+}
+
+.tc-submenu-item[data-here] {
+  color: #fff;
 }
 
 /* Nguoi dung da tat hieu ung thi bo truot va bo mo dan — hien/an dut khoat. */

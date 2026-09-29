@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   useCallback,
   useEffect,
@@ -115,6 +116,14 @@ const useMeasureEffect =
   typeof window === "undefined" ? useEffect : useLayoutEffect;
 
 export function SiteNav({ nav, pill: showPill = true }: SiteNavProps) {
+  /**
+   * Duong dan dang xem — de danh dau muc con TUONG UNG trong bang xo xuong.
+   *
+   * Dang o mot trang con thi nguoi dung chi thay muc CHA duoc danh dau; mo
+   * bang xo ra thi khong biet minh dang o trang con nao. Gach chan san o muc
+   * do tra loi dung cau hoi "toi dang o dau".
+   */
+  const pathname = usePathname();
   const linkRefs = useRef(new Map<string, HTMLAnchorElement>());
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -364,19 +373,28 @@ export function SiteNav({ nav, pill: showPill = true }: SiteNavProps) {
                 onMouseEnter={cancelClose}
                 onMouseLeave={scheduleClose}
               >
-                {submenu.map((child) => (
-                  <Link
-                    key={child.href}
-                    className="tc-submenu-item"
-                    href={child.href}
-                    prefetch={false}
-                    tabIndex={isOpen ? undefined : -1}
-                    onBlur={scheduleClose}
-                    onFocus={cancelClose}
-                  >
-                    {child.label}
-                  </Link>
-                ))}
+                {submenu.map((child) => {
+                  // Khop ca trang con LAN cac trang sau nua cua no: dang doc
+                  // mot bai trong muc do thi van phai sang dung muc do.
+                  const here =
+                    pathname === child.href ||
+                    pathname.startsWith(`${child.href}/`);
+                  return (
+                    <Link
+                      key={child.href}
+                      className="tc-submenu-item"
+                      href={child.href}
+                      prefetch={false}
+                      tabIndex={isOpen ? undefined : -1}
+                      aria-current={here ? "page" : undefined}
+                      data-here={here || undefined}
+                      onBlur={scheduleClose}
+                      onFocus={cancelClose}
+                    >
+                      {child.label}
+                    </Link>
+                  );
+                })}
               </div>
             ) : null}
           </div>

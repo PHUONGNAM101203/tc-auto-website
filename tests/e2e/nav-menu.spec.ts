@@ -132,4 +132,33 @@ test.describe("menu điều hướng", () => {
     expect(await track("/nhan-su"), "lần 2").toBeGreaterThan(5);
     expect(await track("/trai-nghiem"), "lần 3").toBeGreaterThan(5);
   });
+
+  test("đang ở trang con nào thì mục đó có gạch chân sẵn", async ({ page }) => {
+    await page.goto("/nhan-su/van-hoa-tc");
+    await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
+
+    const here = page.locator(".tc-submenu-item[data-here]");
+    await expect(here).toHaveCount(1);
+    await expect(here).toHaveText("VĂN HOÁ TC");
+    await expect(here).toHaveAttribute("aria-current", "page");
+  });
+
+  test("đang đọc bài trong mục con thì mục con đó vẫn sáng", async ({
+    page,
+  }) => {
+    // Trang sau nua cua muc con — nguoi dung van dang "trong" muc do.
+    await page.goto("/nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep");
+    await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
+    await expect(page.locator(".tc-submenu-item[data-here]")).toHaveText(
+      "VĂN HOÁ TC",
+    );
+  });
+
+  test("ở TRANG CHÍNH thì không mục con nào được đánh dấu", async ({
+    page,
+  }) => {
+    await page.goto("/nhan-su");
+    await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
+    await expect(page.locator(".tc-submenu-item[data-here]")).toHaveCount(0);
+  });
 });
