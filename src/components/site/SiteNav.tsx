@@ -44,6 +44,58 @@ interface SiteNavProps {
 const CLOSE_DELAY_MS = 180;
 
 /**
+ * Cho nho vi tri thanh truot GIUA HAI LAN CHUYEN TRANG.
+ *
+ * Doi tab la ca cay component dung lai tu dau — the `.tc-navpill` cu bi vut di,
+ * the moi sinh ra o vi tri moi. Hieu ung CSS chi chay khi mot the DOI gia tri,
+ * the vua sinh ra thi khong co gi de doi, nen nguoi dung thay no "tat roi hien
+ * lai cho khac" chu khong thay no truot.
+ *
+ * Chua vi tri cu o `sessionStorage` thi the moi biet minh phai xuat phat tu
+ * dau: dat o cho CU truoc (khong hieu ung), roi khung hinh sau moi doi sang
+ * cho MOI (co hieu ung) — luc do moi thanh mot cu truot that.
+ *
+ * Dung sessionStorage chu khong dung bien module: tai lai trang that (bam
+ * giua chuot, go dia chi) thi bien module cung mat.
+ */
+const PILL_MEMORY_KEY = "tc-navpill";
+
+interface PillBox {
+  readonly left: number;
+  readonly width: number;
+}
+
+function rememberPill(box: PillBox | null): void {
+  try {
+    if (box) {
+      sessionStorage.setItem(PILL_MEMORY_KEY, JSON.stringify(box));
+    } else {
+      // Trang chu khong sang muc nao. Xoa di, neu khong thi tu trang chu bam
+      // sang trang khac se thay thanh truot bay ra tu mot cho vo nghia.
+      sessionStorage.removeItem(PILL_MEMORY_KEY);
+    }
+  } catch {
+    // Trinh duyet chan storage (che do rieng tu chang han) — bo hieu ung,
+    // khong de no lam hong dieu huong.
+  }
+}
+
+function recallPill(): PillBox | null {
+  try {
+    const raw = sessionStorage.getItem(PILL_MEMORY_KEY);
+    if (!raw) {
+      return null;
+    }
+    const parsed = JSON.parse(raw) as Partial<PillBox>;
+    return typeof parsed.left === "number" && typeof parsed.width === "number"
+      ? { left: parsed.left, width: parsed.width }
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * `useLayoutEffect` canh bao khi chay o phia may chu. Component nay co "use
  * client" nhung Next VAN dung san HTML cua no tren may chu, nen phai doi sang
  * `useEffect` o do. Do dung phep do truoc khi trinh duyet ve, neu dung
@@ -57,19 +109,41 @@ export function SiteNav({ nav }: SiteNavProps) {
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const [open, setOpen] = useState<string | null>(null);
-  const [pill, setPill] = useState<{ left: number; width: number } | null>(
-    null,
-  );
-  /** Lan dat dau tien phai dung yen, khong truot tu goc trai man hinh ra. */
+  const [pill, setPill] = useState<PillBox | null>(null);
+  /** Bat hieu ung truot. Lan dat DAU TIEN phai tat, khong thi no bay tu goc
+      trai man hinh ra. */
   const [ready, setReady] = useState(false);
-
   const activeHref = nav.find((entry) => entry.active)?.href ?? null;
+  /** Vi tri hien tai, de ghi lai LUC ROI TRANG. */
+  const current = useRef<PillBox | null>(null);
 
   useMeasureEffect(() => {
     if (!activeHref) {
       setPill(null);
+      current.current = null;
+      rememberPill(null);
       return;
     }
+
+    // Doc cho cu NGAY LUC MOUNT, truoc moi phep do. Gia tri nay do lan roi
+    // trang truoc ghi lai, va no KHONG bi ghi de trong suot thoi gian o trang
+    // nay — nho vay component co mount hai lan (Next hay lam vay khi doi
+    // trang) thi ca hai lan deu doc ra cung mot diem xuat phat va cung truot
+    // nhu nhau. Ghi luc mount thi lan mount thu hai doc phai chinh gia tri
+    // vua ghi, va cu truot bien mat — da dinh dung bay do mot lan.
+    const from = recallPill();
+    let first = true;
+    /**
+     * Dang chay cu truot thi KHONG cho phep do lai ghi de vi tri.
+     *
+     * `document.fonts.ready` thuong xong NGAY lap tuc vi font da nam trong bo
+     * nho dem, nen `measure()` chay lan hai truoc khi cu truot kip bat dau va
+     * nem thanh truot thang toi dich — mat hieu ung. Lan chuyen tab DAU TIEN
+     * sau khi tai trang thi thoat, vi luc do font chua san sang; day la ly do
+     * loi chi lo ra tu lan chuyen thu hai tro di.
+     */
+    let gliding = false;
+
     const measure = () => {
       const el = linkRefs.current.get(activeHref);
       const parent = el?.offsetParent;
@@ -78,8 +152,7 @@ export function SiteNav({ nav }: SiteNavProps) {
       }
       // CO Y khong dung offsetLeft/offsetWidth: hai tri so do LAM TRON ve so
       // nguyen, ma be ngang chu thi le (vi du 92,78px). Thanh truot hut 0,28px
-      // la vien phai cua no lo ra mot soi toc so voi thiet ke — du de gate
-      // pixel cua trang con nhich tu 0,003% len 0,012%.
+      // la vien phai cua no lo ra mot soi toc so voi thiet ke.
       //
       // getBoundingClientRect() tra ve so thuc nhung DA NHAN voi ti le zoom
       // cua canvas, con `left`/`width` ta ghi ra lai la don vi canvas goc —
@@ -92,25 +165,67 @@ export function SiteNav({ nav }: SiteNavProps) {
         ) || 1;
       const rect = el.getBoundingClientRect();
       const base = parent.getBoundingClientRect();
-      setPill({
+      const target: PillBox = {
         left: (rect.left - base.left) / zoom,
         width: rect.width / zoom,
+      };
+      current.current = target;
+
+      const wasFirst = first;
+      first = false;
+
+      // Lan do sau (font tai xong, doi be rong cua so): chi cap nhat dich —
+      // tru khi cu truot dang chay do, luc do de yen cho no chay het.
+      if (!wasFirst) {
+        if (!gliding) {
+          setPill(target);
+        }
+        return;
+      }
+
+      if (!from || Math.abs(from.left - target.left) < 1) {
+        // Vao thang trang nay lan dau, hoac van dung muc cu — dat thang,
+        // khong ve mot cu truot khong co that.
+        setPill(target);
+        setReady(true);
+        return;
+      }
+
+      // Vua doi tab: xuat phat tu cho CU roi truot sang cho moi.
+      //
+      // BA NHIP, khong duoc gop:
+      //   1. dat o cho CU, hieu ung TAT   -> trinh duyet ve xong o cho cu
+      //   2. BAT hieu ung, gia tri KHONG doi -> transition duoc "vu trang"
+      //   3. doi sang cho MOI             -> luc nay moi co cai de truot
+      //
+      // Gop nhip 2 va 3 lam mot la hong: trinh duyet chi chay transition khi
+      // thuoc tinh do DA CO SAN truoc luc gia tri doi. Them `transition` cung
+      // luc voi gia tri moi thi no nhay thang toi noi. Day chinh la cho da lam
+      // thanh truot "tat roi hien lai" thay vi truot.
+      gliding = true;
+      setPill(from);
+      setReady(false);
+      requestAnimationFrame(() => {
+        setReady(true);
+        requestAnimationFrame(() => {
+          // Lay dich MOI NHAT: font co the da tai xong giua chung va doi be
+          // ngang chu.
+          setPill(current.current ?? target);
+          gliding = false;
+        });
       });
     };
+
     measure();
     // Font tai xong thi be ngang chu doi -> phai do lai.
     document.fonts?.ready.then(measure).catch(() => undefined);
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    return () => {
+      window.removeEventListener("resize", measure);
+      // GHI LUC ROI TRANG, khong ghi luc vao trang — xem chu thich tren.
+      rememberPill(current.current);
+    };
   }, [activeHref]);
-
-  useEffect(() => {
-    if (!pill || ready) {
-      return;
-    }
-    const frame = requestAnimationFrame(() => setReady(true));
-    return () => cancelAnimationFrame(frame);
-  }, [pill, ready]);
 
   useEffect(
     () => () => {

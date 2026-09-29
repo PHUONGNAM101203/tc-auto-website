@@ -5,7 +5,9 @@ import { expect, test } from "@playwright/test";
  * Xem src/components/site/SiteNav.tsx.
  */
 test.describe("menu điều hướng", () => {
-  test("rê chuột vào mục cha thì xổ menu con, rời ra thì đóng", async ({ page }) => {
+  test("rê chuột vào mục cha thì xổ menu con, rời ra thì đóng", async ({
+    page,
+  }) => {
     await page.goto("/");
 
     const parent = page.locator('.hdr a.nv[href="/trai-nghiem"]');
@@ -82,10 +84,52 @@ test.describe("menu điều hướng", () => {
     expect(Math.abs(pillBox!.width - linkBox!.width)).toBeLessThanOrEqual(1);
   });
 
-  test("trang chủ không sáng mục nào nên không có thanh trượt", async ({ page }) => {
+  test("trang chủ không sáng mục nào nên không có thanh trượt", async ({
+    page,
+  }) => {
     // Frame goc danh dau nham "TRẢI NGHIỆM" o trang chu — da ghi trong
     // src/lib/design-deviations.ts la CO Y bo danh dau.
     await page.goto("/");
     await expect(page.locator(".tc-navpill")).toHaveCount(0);
+  });
+
+  test("chuyển tab thì thanh trượt LƯỚT sang, không nhảy cóc", async ({
+    page,
+  }) => {
+    await page.goto("/giai-phap");
+    await expect(page.locator(".tc-navpill")).toHaveCount(1);
+
+    // Ghi lai vi tri thanh truot theo TUNG KHUNG HINH. Truot that thi phai di
+    // qua nhieu vi tri trung gian; nhay coc thi chi co diem dau va diem cuoi.
+    const track = async (to: string) => {
+      await page.evaluate(() => {
+        const w = window as unknown as { __pillTrack: number[] };
+        w.__pillTrack = [];
+        const tick = () => {
+          const el = document.querySelector(".tc-navpill");
+          if (el) {
+            w.__pillTrack.push(Math.round(el.getBoundingClientRect().x));
+          }
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+      await page.locator(`.hdr a.nv[href="${to}"]`).click();
+      await expect(page).toHaveURL(to);
+      await page.waitForTimeout(900);
+      const seen = await page.evaluate(
+        () => (window as unknown as { __pillTrack: number[] }).__pillTrack,
+      );
+      return new Set(seen).size;
+    };
+
+    // Kiem NHIEU lan chuyen lien tiep, khong chi mot.
+    //
+    // Loi cu chi lo ra tu lan chuyen THU HAI tro di: lan dau thoat vi font
+    // chua tai xong, cac lan sau `document.fonts.ready` xong ngay va nem thanh
+    // truot thang toi dich truoc khi cu truot kip chay.
+    expect(await track("/cong-nghe"), "lần 1").toBeGreaterThan(5);
+    expect(await track("/nhan-su"), "lần 2").toBeGreaterThan(5);
+    expect(await track("/trai-nghiem"), "lần 3").toBeGreaterThan(5);
   });
 });
