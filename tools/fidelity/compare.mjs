@@ -25,6 +25,30 @@ const BASE_URL = process.argv[2] ?? "http://127.0.0.1:3311";
 const PROTOTYPE =
   process.argv[3] ?? resolve(HERE, "../../../TC-Auto-Website-Prototype.html");
 
+/**
+ * Han muc pixel duoc phep lech cho tung trang.
+ *
+ * Truoc day gate nay LUON thoat ma 0 — tuc la chi bao cao chu khong chan duoc
+ * gi, ma bao cao thi phai co nguoi doc moi co tac dung. Gio no that su that bai
+ * khi vuot han muc.
+ *
+ * Bon trang o muc 0: khong duoc lech mot pixel nao.
+ *
+ * Hai trang con lai khong phai loi bo cuc ma la SAI SO MA HOA WEBP o mep tuong
+ * phan cao — lech khoang 35/255 tren tung diem anh don le, vua qua nguong 0,12
+ * cua pixelmatch. Mat thuong khong thay. Muon ve 0 thi phai nang chat luong
+ * WebP, doi lai anh nang them — khong dang. Han muc dat sat tren so do luong
+ * duoc (135 va 2) de mot sai lech THAT van bi chan.
+ */
+const BUDGET = {
+  home: 0,
+  "trai-nghiem": 0,
+  "giai-phap": 0,
+  "cong-nghe": 0,
+  "dai-ly": 20,
+  "nhan-su": 200,
+};
+
 const PAGES = [
   { slug: "home", hash: "home", route: "/" },
   { slug: "trai-nghiem", hash: "trai-nghiem", route: "/trai-nghiem" },
@@ -245,22 +269,43 @@ async function main() {
   }
 
   console.log(
-    "\n  trang          proto        next         lech px      % lech   o bo qua",
+    "\n  trang          proto        next         lech px      % lech   o bo qua   han muc",
   );
-  console.log("  " + "-".repeat(74));
+  console.log("  " + "-".repeat(86));
   let worst = 0;
+  const over = [];
   for (const row of rows) {
     worst = Math.max(worst, row.ratio);
-    const flag = row.sizeMatch ? " " : "!";
+    const budget = BUDGET[row.slug] ?? 0;
+    const bad = row.mismatch > budget;
+    if (bad) {
+      over.push({ slug: row.slug, mismatch: row.mismatch, budget });
+    }
+    const flag = !row.sizeMatch || bad ? "!" : " ";
     console.log(
       `${flag} ${row.slug.padEnd(14)} ${row.protoSize.padEnd(12)} ${row.nextSize.padEnd(12)} ` +
         `${String(row.mismatch).padStart(9)}  ${(row.ratio * 100).toFixed(3).padStart(8)}%` +
-        `  ${String(row.masked).padStart(8)}`,
+        `  ${String(row.masked).padStart(8)}  ${String(budget).padStart(8)}`,
     );
   }
   console.log(
     `\n  Lech lon nhat: ${(worst * 100).toFixed(3)}%   (anh diff trong ${OUT})`,
   );
+
+  if (over.length > 0) {
+    console.error("\n  VUOT HAN MUC:");
+    for (const row of over) {
+      console.error(
+        `    ${row.slug}: ${row.mismatch} px, cho phep ${row.budget}`,
+      );
+    }
+    console.error(
+      "\n  Xem anh *-diff.png trong thu muc tren. Neu day la thay doi CO Y thi\n" +
+        "  them mot muc vao src/lib/design-deviations.ts kem ly do — dung nang\n" +
+        "  han muc de lam im tieng bao dong.",
+    );
+    process.exitCode = 1;
+  }
   return worst;
 }
 

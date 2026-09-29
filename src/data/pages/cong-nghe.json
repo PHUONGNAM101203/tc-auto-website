@@ -206,7 +206,7 @@
         "h"
       ],
       "x": 96.0,
-      "y": 1010.0,
+      "y": 1112.0,
       "w": 520.0,
       "h": null,
       "css": {
@@ -218,43 +218,13 @@
       "text": "TIÊN PHONG CÔNG NGHỆ.TRẢI NGHIỆM NÂNG TẦM."
     },
     {
-      "id": "cong-nghe-004",
-      "tag": "a",
-      "classes": [
-        "btn"
-      ],
-      "x": 82.0,
-      "y": 1143.0,
-      "w": 179.0,
-      "h": 34.0,
-      "css": {},
-      "href": null,
-      "html": "TÌM HIỂU THÊM",
-      "text": "TÌM HIỂU THÊM"
-    },
-    {
-      "id": "cong-nghe-005",
-      "tag": "div",
-      "classes": [
-        "raw"
-      ],
-      "x": 65.0,
-      "y": 1265.0,
-      "w": 330.0,
-      "h": null,
-      "css": {},
-      "href": null,
-      "html": "<div class=\"ub800\" style=\"font-size:20px;line-height:26px;color:#fff;white-space:nowrap\">NGHIÊN CỨU &amp; PHÁT TRIỂN</div>",
-      "text": "NGHIÊN CỨU & PHÁT TRIỂN"
-    },
-    {
       "id": "cong-nghe-006",
       "tag": "div",
       "classes": [
         "pi"
       ],
       "x": 68.0,
-      "y": 1322.0,
+      "y": 1373.0,
       "w": 530.0,
       "h": null,
       "css": {
@@ -273,7 +243,7 @@
         "btn"
       ],
       "x": 82.0,
-      "y": 1452.0,
+      "y": 1503.0,
       "w": 179.0,
       "h": 34.0,
       "css": {},

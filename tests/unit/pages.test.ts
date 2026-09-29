@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { getAllPageSpecs, getPageIndex, getPageSpec, isPageSlug, slugFromRoute } from "@/lib/pages";
+import {
+  getAllPageSpecs,
+  getPageIndex,
+  getPageSpec,
+  isPageSlug,
+  slugFromRoute,
+} from "@/lib/pages";
 import { PAGE_SLUGS } from "@/lib/types";
 
 describe("page spec registry", () => {
@@ -23,7 +29,10 @@ describe("page spec registry", () => {
 
   it("tổng chiều cao các lát nền khớp chiều cao trang (sai số dưới 1px)", () => {
     for (const page of getAllPageSpecs()) {
-      const stacked = page.slices.reduce((sum, slice) => sum + slice.displayHeight, 0);
+      const stacked = page.slices.reduce(
+        (sum, slice) => sum + slice.displayHeight,
+        0,
+      );
       expect(Math.abs(stacked - page.height)).toBeLessThan(1);
     }
   });
@@ -43,7 +52,9 @@ describe("page spec registry", () => {
       for (const slice of page.slices) {
         expect(slice.intrinsicWidth).toBe(2880);
         // Chieu cao goc = 2x chieu cao hien thi
-        expect(Math.abs(slice.intrinsicHeight - slice.displayHeight * 2)).toBeLessThanOrEqual(2);
+        expect(
+          Math.abs(slice.intrinsicHeight - slice.displayHeight * 2),
+        ).toBeLessThanOrEqual(2);
       }
     }
   });
@@ -90,7 +101,9 @@ describe("page spec registry", () => {
   it("trang chủ KHÔNG có mục nav nào sáng", () => {
     // Frame Home.png goc danh dau "TRẢI NGHIỆM" — day la loi cua ban thiet ke
     // (header bi copy tu frame khac). Da co y bo, ghi trong design-deviations.ts.
-    expect(getPageSpec("home").nav.filter((entry) => entry.active)).toHaveLength(0);
+    expect(
+      getPageSpec("home").nav.filter((entry) => entry.active),
+    ).toHaveLength(0);
   });
 
   it("5 trang còn lại mỗi trang có đúng một mục nav sáng, khớp chính trang đó", () => {
@@ -130,8 +143,19 @@ describe("page spec registry", () => {
       expect(entry.items).toBeGreaterThan(0);
       expect(entry.slices).toBeGreaterThan(0);
     }
-    // Tong 120 phan tu, 30 lat nen
-    expect(index.reduce((sum, entry) => sum + entry.items, 0)).toBe(120);
-    expect(index.reduce((sum, entry) => sum + entry.slices, 0)).toBe(30);
+    // CO Y khong ghim cung tong so phan tu. Con so do doi moi khi thiet ke
+    // doi — ban 28/09 bo mot tieu de phu va mot nut o trang Cong nghe la tut
+    // tu 120 xuong 118 — ma cai dang kiem o day la "gop lai co khop tung
+    // trang khong", chu khong phai "co dung 120 phan tu khong".
+    const specs = getAllPageSpecs();
+    const itemTotal = specs.reduce((sum, spec) => sum + spec.items.length, 0);
+    const sliceTotal = specs.reduce((sum, spec) => sum + spec.slices.length, 0);
+    expect(index.reduce((sum, entry) => sum + entry.items, 0)).toBe(itemTotal);
+    expect(index.reduce((sum, entry) => sum + entry.slices, 0)).toBe(
+      sliceTotal,
+    );
+    // Van chan nguong duoi de khong bao gio im lang khi du lieu rong.
+    expect(itemTotal).toBeGreaterThan(100);
+    expect(sliceTotal).toBe(30);
   });
 });

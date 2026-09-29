@@ -27,8 +27,10 @@ export const CTA_LINK_MAP: Readonly<Record<string, string>> = {
   "giai-phap-004": "/giai-phap/phim-dan-kinh", // nhãn PHIM CÁCH NHIỆT
   "giai-phap-011": "/giai-phap/loa", // nhãn LOA NỘI THẤT
 
-  // Công nghệ — hai nút "TÌM HIỂU THÊM" cùng thuộc mục Tiên phong công nghệ
-  "cong-nghe-004": "/cong-nghe/tien-phong-cong-nghe",
+  // Công nghệ — mục Tiên phong công nghệ.
+  // Trước đây có HAI nút "TÌM HIỂU THÊM" cùng trỏ về đây; bản thiết kế 28/09
+  // bỏ nút thứ nhất (`cong-nghe-004`) đi, xem tools/patch-page-items.py. Lối
+  // vào vẫn còn nguyên qua nút còn lại.
   "cong-nghe-007": "/cong-nghe/tien-phong-cong-nghe",
   "cong-nghe-011": "/cong-nghe/ung-dung",
   // Hai muc duoi day khong co frame thiet ke; trang duoc TU SOAN — xem

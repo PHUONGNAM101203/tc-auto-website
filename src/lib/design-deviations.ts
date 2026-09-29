@@ -187,6 +187,19 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "ca chu — nen luc khong tro chuot thi trung khop; chi con lech o vien la sai so " +
       "nen WebP.",
   },
+  {
+    page: "cong-nghe",
+    // Ca khoi trai cua muc "Tien phong cong nghe": x 60..700, y 1000..1540.
+    box: { x: 55, y: 995, width: 655, height: 550 },
+    reason:
+      "Ban THIET KE 28/09 gop hai khoi lam mot: bo tieu de phu 'NGHIEN CUU & " +
+      "PHAT TRIEN' cung mot nut 'TIM HIEU THEM' thua o cot trai, roi don chu " +
+      "len duoi tieu de chinh (tieu de xuong +102px, doan chu va nut xuong " +
+      "+51px). Site da lam theo thiet ke moi — xem tools/patch-page-items.py. " +
+      "Nhung PROTOTYPE ma gate nay doi chieu van la ban 21/09, con nguyen ca " +
+      "hai khoi, nen vung nay CHAC CHAN lech. Go muc nay ngay khi co ban " +
+      "export prototype moi.",
+  },
   // Ap cho 10 trang danh sach — hop cu the doc tu src/data/detected-pagination.json.
   {
     page: "*listing*",

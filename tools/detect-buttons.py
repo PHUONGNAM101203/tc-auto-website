@@ -123,17 +123,25 @@ def detect(path: Path) -> list[dict[str, int]]:
 def validate() -> int:
     """Doi chieu ket qua do voi toa do that cua 6 trang chinh."""
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    # Trang chinh phai doi chieu voi bo khung CUNG DOI voi prototype dang dung,
-    # khong phai bo moi nhat — xem tools/manifest_source.py. Lay nham bo la ham
-    # nay bao sai: thiet ke moi cua trang Cong nghe bo bot mot nut, doi chieu
-    # voi no thi site bi bao "thua 1 nut" trong khi site dang dung dung
-    # prototype cua no.
-    source_root = Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
+    main_root = Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
+    new_root = Path(manifest["sourceRoot"])
     mains = {e["slug"]: e for e in manifest["pages"] if e.get("main")}
+
+    # Trang nao co PHAN TU da duoc va theo thiet ke moi thi phai doi chieu voi
+    # thiet ke MOI — xem tools/patch-page-items.py. Cac trang con lai van doi
+    # chieu voi bo khung cung doi voi prototype dang dung.
+    #
+    # Lay nham bo la ham nay bao sai theo ca hai chieu: doi chieu trang Cong
+    # nghe (da bo mot nut) voi thiet ke cu thi bao "thua 1 nut", con doi chieu
+    # nam trang kia voi thiet ke moi thi bao lech vi tri.
+    #
+    # BO SLUG KHOI DAY khi da co ban export prototype moi.
+    PATCHED_TO_NEW_DESIGN = {"cong-nghe"}
 
     total_expected = total_matched = total_extra = 0
 
     for slug, entry in mains.items():
+        source_root = new_root if slug in PATCHED_TO_NEW_DESIGN else main_root
         spec = json.loads((ROOT / "src" / "data" / "pages" / f"{slug}.json").read_text("utf-8"))
         expected = [
             {"x": round(i["x"]), "y": round(i["y"]), "w": round(i["w"]), "h": round(i["h"])}
