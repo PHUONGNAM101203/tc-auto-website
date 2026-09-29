@@ -41,22 +41,9 @@ SCRUB = (310, 1424, 830, 572)
 ANCHOR = 10
 
 
-def main() -> int:
-    spec = json.loads(SPEC.read_text(encoding="utf-8"))
-    x, y, w, h = SCRUB
-
-    # Khoi trac nghiem VAT NGANG ranh giua hai lat nen. Khong the xu ly tung
-    # lat rieng: moc noi suy cua nua duoi nam trong lat kia. Ghep cac lat lien
-    # quan lai thanh mot buc, dung lai nen tren do, roi cat tra ve tung lat.
-    parts = [
-        (index, s)
-        for index, s in enumerate(spec["slices"])
-        if not (y + h <= s["y"] or y >= s["y"] + s["displayHeight"])
-    ]
-    if not parts:
-        raise SystemExit("Khong lat nen nao chua khoi trac nghiem")
-
-    paths = [SLICE_DIR / f"trai-nghiem__ban-sac-rieng-{i}@2x.webp" for i, _ in parts]
+def scrub_at(parts, retina: int, x: int, y: int, w: int, h: int) -> int:
+    """Xoa khoi trac nghiem khoi cac lat nen o MOT ti le."""
+    paths = [SLICE_DIR / f"trai-nghiem__ban-sac-rieng-{i}@{retina}x.webp" for i, _ in parts]
     for path in paths:
         if not path.is_file():
             raise SystemExit(f"Thieu lat nen: {path}")
@@ -84,10 +71,34 @@ def main() -> int:
 
     offset = 0
     for path, image in zip(paths, images):
-        piece = stitched.crop((0, offset, image.width, offset + image.height))
-        piece.save(path, "WEBP", quality=82, method=6)
+        stitched.crop((0, offset, image.width, offset + image.height)).save(
+            path, "WEBP", quality=82, method=6
+        )
         offset += image.height
-    touched = len(paths)
+    return len(paths)
+
+
+def main() -> int:
+    spec = json.loads(SPEC.read_text(encoding="utf-8"))
+    x, y, w, h = SCRUB
+
+    # Khoi trac nghiem VAT NGANG ranh giua hai lat nen. Khong the xu ly tung
+    # lat rieng: moc noi suy cua nua duoi nam trong lat kia. Ghep cac lat lien
+    # quan lai thanh mot buc, dung lai nen tren do, roi cat tra ve tung lat.
+    parts = [
+        (index, s)
+        for index, s in enumerate(spec["slices"])
+        if not (y + h <= s["y"] or y >= s["y"] + s["displayHeight"])
+    ]
+    if not parts:
+        raise SystemExit("Khong lat nen nao chua khoi trac nghiem")
+
+    # Phai xoa o CA HAI ti le. Quen ban @3x thi tren man thuong khong sao, nhung
+    # man retina rong lai lay ban @3x (xem src/lib/slice-srcset.ts) va se hien
+    # bo cau hoi nuong san NAM DUOI khoi trac nghiem that ve de len.
+    touched = 0
+    for retina in (2, 3):
+        touched += scrub_at(parts, retina, x, y, w, h)
 
     DATA.write_text(
         json.dumps(

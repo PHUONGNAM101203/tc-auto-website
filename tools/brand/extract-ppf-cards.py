@@ -132,6 +132,9 @@ CARDS = [
 # Anh minh hoa cao 470 @2x = 235 tren canvas; phan con lai la than the.
 ART_HEIGHT = 235
 
+#: Do phan giai xuat the, tinh theo he toa do canvas. Bang voi lat nen.
+RETINA = 3
+
 
 def build_cut_card(shell: Image.Image, art_name: str, scale: int) -> Image.Image:
     """Dung lai mot the bi cat: nen the rong + anh minh hoa dan len dau."""
@@ -170,15 +173,18 @@ def export_cards() -> None:
         else:
             art = build_cut_card(shell, card["art"], scale)
 
-        # Ha ve @2x — dung do phan giai cac lat nen dang dung.
-        art = art.resize((CARD_WIDTH * 2, CARD_HEIGHT * 2), Image.LANCZOS)
+        # Xuat o @3x — bang do phan giai cac lat nen. Truoc day day la @2x, cho
+        # khop voi lat nen thoi con dung mo ta `x`. Tu khi doi sang mo ta `w`
+        # (src/lib/slice-srcset.ts) lat nen len den @3x tren man retina rong,
+        # nen the o @2x se la thu duy nhat con mo tren dai nay.
+        art = art.resize((CARD_WIDTH * RETINA, CARD_HEIGHT * RETINA), Image.LANCZOS)
         target = OUT / f"{card['id']}.webp"
         art.save(target, "WEBP", quality=88, method=6)
 
         # Ban cho MOBILE: chi lay phan ANH MINH HOA o dau the. Ban mobile ve
         # lai tieu de va mo ta bang chu that; giu ca the thi chu hien hai lan —
         # mot lan trong anh, mot lan duoi anh.
-        art.crop((0, 0, CARD_WIDTH * 2, ART_HEIGHT * 2)).save(
+        art.crop((0, 0, CARD_WIDTH * RETINA, ART_HEIGHT * RETINA)).save(
             OUT / f"{card['id']}-art.webp", "WEBP", quality=88, method=6
         )
         manifest.append(
@@ -232,21 +238,25 @@ def scrub_strip() -> int:
         if y + h <= top or y >= bottom:
             continue
 
-        path = SLICE_DIR / f"giai-phap__ppf-{index}@2x.webp"
-        if not path.is_file():
-            raise SystemExit(f"Thieu lat nen: {path}")
+        # Phai xoa o CA HAI ti le. Quen ban @3x thi tren man thuong khong sao,
+        # nhung man retina rong lai lay ban @3x (xem src/lib/slice-srcset.ts) va
+        # se hien dai the nuong san NAM DUOI dai the that ve de len.
+        for retina in (2, 3):
+            path = SLICE_DIR / f"giai-phap__ppf-{index}@{retina}x.webp"
+            if not path.is_file():
+                raise SystemExit(f"Thieu lat nen: {path}")
 
-        image = Image.open(path).convert("RGB")
-        scale = image.width / CANVAS_WIDTH
-        box = (
-            round(x * scale),
-            round((y - top) * scale),
-            round((x + w) * scale),
-            round((y + h - top) * scale),
-        )
-        image.paste(rebuild_background(image, box, smooth=SCRUB_SMOOTH), (box[0], box[1]))
-        image.save(path, "WEBP", quality=82, method=6)
-        touched += 1
+            image = Image.open(path).convert("RGB")
+            scale = image.width / CANVAS_WIDTH
+            box = (
+                round(x * scale),
+                round((y - top) * scale),
+                round((x + w) * scale),
+                round((y + h - top) * scale),
+            )
+            image.paste(rebuild_background(image, box, smooth=SCRUB_SMOOTH), (box[0], box[1]))
+            image.save(path, "WEBP", quality=82, method=6)
+            touched += 1
 
     return touched
 

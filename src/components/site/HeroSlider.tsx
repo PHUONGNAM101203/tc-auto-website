@@ -7,6 +7,7 @@ import {
   HERO_REGION,
   heroSliderEnabled,
 } from "@/lib/hero-slides";
+import { sliceSizes, sliceSrcSet } from "@/lib/slice-srcset";
 
 /**
  * Bang hero tren trang chu.
@@ -42,7 +43,11 @@ interface State {
 function advance(state: State, target: number, count: number): State {
   const index = ((target % count) + count) % count;
   const after = (index + 1) % count;
-  if (state.index === index && state.armed.has(index) && state.armed.has(after)) {
+  if (
+    state.index === index &&
+    state.armed.has(index) &&
+    state.armed.has(after)
+  ) {
     return state;
   }
   const armed =
@@ -110,11 +115,12 @@ export function HeroSlider() {
           key={slide.id}
           className={`tc-hero-slide${i === index ? " is-on" : ""}`}
           src={armed.has(i) ? slide.src : BLANK}
-          srcSet={
-            armed.has(i)
-              ? slide.srcSet.map((v) => `${v.src} ${v.scale}x`).join(", ")
-              : undefined
-          }
+          /* Mo ta `w` chu khong phai `x`: anh hero rong dung bang canvas, ma
+             canvas duoc phong to theo be rong cua so. Voi `x` thi man retina
+             rong hon 1440px se lay ban thieu do phan giai roi keo gian ra —
+             xem src/lib/slice-srcset.ts. */
+          srcSet={armed.has(i) ? sliceSrcSet(slide.srcSet) : undefined}
+          sizes={sliceSizes()}
           alt={i === index ? slide.alt : ""}
           width={HERO_REGION.width}
           height={HERO_REGION.height}
@@ -129,7 +135,12 @@ export function HeroSlider() {
       <button
         type="button"
         className="tc-hero-arrow"
-        style={{ left: prev.x, top: prev.y, width: prev.width, height: prev.height }}
+        style={{
+          left: prev.x,
+          top: prev.y,
+          width: prev.width,
+          height: prev.height,
+        }}
         onClick={() => go(index - 1)}
         aria-label="Ảnh trước"
       >
@@ -138,7 +149,12 @@ export function HeroSlider() {
       <button
         type="button"
         className="tc-hero-arrow"
-        style={{ left: next.x, top: next.y, width: next.width, height: next.height }}
+        style={{
+          left: next.x,
+          top: next.y,
+          width: next.width,
+          height: next.height,
+        }}
         onClick={() => go(index + 1)}
         aria-label="Ảnh tiếp theo"
       >
@@ -159,7 +175,9 @@ export function HeroSlider() {
             aria-selected={i === index}
             aria-label={`Ảnh ${i + 1} trên ${count}`}
             className={`tc-hero-dot${i === index ? " is-on" : ""}`}
-            style={{ width: i === index ? indicator.activeWidth : indicator.dashWidth }}
+            style={{
+              width: i === index ? indicator.activeWidth : indicator.dashWidth,
+            }}
             onClick={() => go(i)}
           />
         ))}

@@ -31,7 +31,9 @@ describe("dải thẻ bài viết khác", () => {
     expect(RELATED_CARDS.length).toBeGreaterThanOrEqual(2);
     const ids = new Set<string>();
     for (const card of RELATED_CARDS) {
-      expect(card.src).toMatch(/^\/related\/.+\.webp$/);
+      // Duoi duong dan co the mang dau phien ban do tools/stamp-slices.py
+      // dong vao, de anh duoc nho vinh vien trong bo dem.
+      expect(card.src).toMatch(/^\/related\/.+\.webp(\?v=[a-z0-9]+)?$/);
       expect(ids.has(card.id), `trùng mã ${card.id}`).toBe(false);
       ids.add(card.id);
     }

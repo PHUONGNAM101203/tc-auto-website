@@ -1,16 +1,11 @@
 import type { CSSProperties } from "react";
 import { assetUrl } from "@/lib/asset-url";
+import { sliceSizes, sliceSrcSet } from "@/lib/slice-srcset";
 import type { SliceSpec } from "@/lib/types";
 
 /** Anh 1x1 trong suot — giu cho the <img> khong hien bieu tuong anh hong. */
 const BLANK =
   "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
-
-function toSrcSet(slice: SliceSpec): string {
-  return slice.srcSet
-    .map((variant) => `${assetUrl(variant.src)} ${variant.scale}x`)
-    .join(", ");
-}
 
 interface SliceImageProps {
   readonly slice: SliceSpec;
@@ -26,12 +21,16 @@ interface SliceImageProps {
  * vi `loading="lazy"` cua trinh duyet co nguong rat rong: Chromium van tai truoc
  * 6-7 lat ngay khi vao trang, dung y "luot toi dau tai toi do".
  *
- * `srcSet` cho man thuong tai ban @2x, man retina tai ban @3x — dung do phan giai
- * goc cua thiet ke.
+ * `srcSet` khai bang MO TA `w` chu khong phai `x`. Canvas 1440px duoc phong to
+ * theo be rong cua so, ma mo ta `x` thi trinh duyet chi nhin mat do diem anh
+ * cua man hinh, khong biet gi ve phan phong to do — man retina rong hon 1440px
+ * se lay ban thieu do phan giai roi keo gian, lam moi thu ve chet trong anh
+ * nen bi mo. Xem src/lib/slice-srcset.ts.
  */
 export function SliceImage({ slice, index, alt }: SliceImageProps) {
   const eager = index === 0;
-  const srcSet = toSrcSet(slice);
+  const srcSet = sliceSrcSet(slice.srcSet);
+  const sizes = sliceSizes();
   const src = assetUrl(slice.src);
 
   return (
@@ -46,6 +45,7 @@ export function SliceImage({ slice, index, alt }: SliceImageProps) {
         className="sl"
         src={eager ? src : BLANK}
         srcSet={eager ? srcSet : undefined}
+        sizes={sizes}
         data-src={eager ? undefined : src}
         data-srcset={eager ? undefined : srcSet}
         alt={alt}
@@ -60,7 +60,7 @@ export function SliceImage({ slice, index, alt }: SliceImageProps) {
       {!eager && (
         <noscript>
           {/* eslint-disable-next-line @next/next/no-img-element -- ly do nhu tren */}
-          <img className="sl is-in is-settled" src={src} srcSet={srcSet} alt={alt} width={1440} height={slice.displayHeight} />
+          <img className="sl is-in is-settled" src={src} srcSet={srcSet} sizes={sizes} alt={alt} width={1440} height={slice.displayHeight} />
         </noscript>
       )}
     </div>
