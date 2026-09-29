@@ -41,6 +41,18 @@ export interface CtaSpot {
     /** Khoang cach THEM giua hai doan, ngoai khoang dong. */
     readonly paragraphGap: number;
   } | null;
+  /**
+   * Nut DO ve san bao quanh chu "XEM THÊM", do bang tools/detect-buttons.py.
+   * Mang che phai phu kin ca cai nay, khong thi mep do con tho ra ben canh nut
+   * "Thu gọn" cua ta. Nut nao khong nam trong khung do nao thi khong co truong
+   * nay.
+   */
+  readonly coverBox?: {
+    readonly x: number;
+    readonly y: number;
+    readonly w: number;
+    readonly h: number;
+  };
   /** Mau nen lay tu chinh ban thiet ke tai cho do, de khoi xo ra hoa dung nen. */
   readonly background?: string;
   /** Nen sang thi chu phai toi. */
@@ -111,5 +123,68 @@ export function getCtaStats(): CtaStats {
     linked,
     placeholder,
     pending: all.length - linked - placeholder,
+  };
+}
+
+/** Khoang ho ra duoi cung cua mang che, de vien duoi khong sat chu. */
+const PANEL_PAD = 6;
+
+/**
+ * Noi them ra HAI BEN va PHIA DUOI.
+ *
+ * Nut do ve san ket thuc dung o mep mang che, nhung anh nen la ban @2x thu nho
+ * nen mep do bi khu rang cua — con lai nua diem anh mau do ngay ben ngoai.
+ * Noi them 2px la het. Khong noi len TREN: mep tren phai trung voi dong chu
+ * dau tien, xe dich la thay ngay.
+ *
+ * An toan vi mang che to dung MAU NEN lay tu chinh cho do trong ban thiet ke,
+ * nen 2px them chi to lai dung mau von co o day.
+ */
+const OVERSCAN = 2;
+
+export interface ReadMorePanel {
+  readonly left: number;
+  readonly top: number;
+  readonly width: number;
+  readonly minHeight: number;
+}
+
+/**
+ * Khung cua mang che khi bam "XEM THÊM".
+ *
+ * Mang nay khong phai lop phu: no dung DUNG CHO khoi chu trong thiet ke va dai
+ * xuong de len phan ben duoi. Nen no phai bao tron HAI thu:
+ *   - khoi chu (de phan xo ra noi tiep lien mach voi phan dang hien), va
+ *   - nut "XEM THÊM" ve chet trong anh nen — khong che kin thi nguoi dung thay
+ *     ca nut ve san lan nut "Thu gọn" cua ta cung luc.
+ *
+ * Nut do trong thiet ke rong 159px trong khi khoi chu chi rong 306px va le
+ * trai lech nhau, nen lay rieng khoi chu lam khung se ho mot mau do o mep phai.
+ */
+export function readMorePanel(spot: CtaSpot): ReadMorePanel | null {
+  const box = spot.bodyBox;
+  if (!box) {
+    return null;
+  }
+  // Vung bam luon phai duoc che; nut do (neu do duoc) con rong hon vung bam.
+  const cover = spot.coverBox ?? { x: spot.x, y: spot.y, w: spot.w, h: spot.h };
+  const left = Math.min(box.x, cover.x, spot.x);
+  const top = Math.min(box.y, cover.y, spot.y);
+  const right = Math.max(box.x + box.width, cover.x + cover.w, spot.x + spot.w);
+  const bottom = Math.max(
+    box.y + box.height,
+    cover.y + cover.h,
+    spot.y + spot.h,
+  );
+  // Lam tron RA NGOAI. Toa do do tu OCR le den mot chu so thap phan, va thieu
+  // 0,02px cung du de mot soi do cua nut ve san lo ra o mep — trinh duyet khu
+  // rang cua se to no thanh mot duong mo nhin thay ro.
+  const x0 = Math.floor(left) - OVERSCAN;
+  const y0 = Math.floor(top);
+  return {
+    left: x0,
+    top: y0,
+    width: Math.ceil(right) + OVERSCAN - x0,
+    minHeight: Math.ceil(bottom) + OVERSCAN - y0 + PANEL_PAD,
   };
 }

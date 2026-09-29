@@ -285,6 +285,12 @@
     "width": 226.1,
     "height": 25.1
    },
+   "coverBox": {
+    "x": 196,
+    "y": 1383,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021d2a",
    "darkText": false
   },
@@ -311,6 +317,12 @@
     "width": 272.1,
     "height": 38.8
    },
+   "coverBox": {
+    "x": 640,
+    "y": 1383,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011c2a",
    "darkText": false
   },
@@ -324,7 +336,13 @@
    "body": [
     "Winca Tube"
    ],
-   "bodyBox": null
+   "bodyBox": null,
+   "coverBox": {
+    "x": 1084,
+    "y": 1383,
+    "w": 159,
+    "h": 32
+   }
   },
   {
    "x": 241.1,
@@ -348,6 +366,12 @@
     "width": 251.2,
     "height": 21.1
    },
+   "coverBox": {
+    "x": 196,
+    "y": 1833,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021c2a",
    "darkText": false
   },
@@ -359,24 +383,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "[CẬP NHẬT] ES File Explorer",
-    "File Manaaer",
     "IVÁ LỖI] Định vỊ"
    ],
    "bodyBox": {
     "paragraphs": [
-     "[CẬP NHẬT] ES File Explorer File Manaaer",
      "IVÁ LỖI] Định vỊ"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 584.0,
-    "y": 1348.5,
-    "width": 272.1,
-    "height": 471.7
+    "x": 644.5,
+    "y": 1794.0,
+    "width": 149.1,
+    "height": 26.2
    },
-   "background": "#011c2a",
+   "coverBox": {
+    "x": 640,
+    "y": 1833,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#031d2b",
    "darkText": false
   },
   {
@@ -389,7 +416,13 @@
    "body": [
     "Google Maps"
    ],
-   "bodyBox": null
+   "bodyBox": null,
+   "coverBox": {
+    "x": 1084,
+    "y": 1833,
+    "w": 159,
+    "h": 32
+   }
   },
   {
    "x": 241.1,
@@ -399,31 +432,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "IVÁ LỖII Winca Control",
-    "TẢI VỀ",
-    "data",
-    "[CẬP NHẬT] VietMap Live",
-    "TẢI VỀ",
     "IVÁ LỖI] Zalo"
    ],
    "bodyBox": {
     "paragraphs": [
-     "IVÁ LỖII Winca Control",
-     "TẢI VỀ",
-     "data",
-     "[CẬP NHẬT] VietMap Live",
-     "TẢI VỀ",
      "IVÁ LỖI] Zalo"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 26.0,
-    "x": 148.6,
-    "y": 1344.3,
-    "width": 251.2,
-    "height": 923.6
+    "paragraphGap": 12.0,
+    "x": 211.3,
+    "y": 2244.3,
+    "width": 125.7,
+    "height": 23.6
    },
-   "background": "#011c2a",
+   "coverBox": {
+    "x": 196,
+    "y": 2283,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#021c2a",
    "darkText": false
   },
   {
@@ -447,6 +476,12 @@
     "y": 2248.8,
     "width": 305.6,
     "height": 20.9
+   },
+   "coverBox": {
+    "x": 640,
+    "y": 2283,
+    "w": 159,
+    "h": 32
    },
    "background": "#011b29",
    "darkText": false
@@ -473,6 +508,12 @@
     "width": 263.7,
     "height": 20.9
    },
+   "coverBox": {
+    "x": 1084,
+    "y": 2283,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021c2a",
    "darkText": false
   },
@@ -498,6 +539,12 @@
     "width": 265.8,
     "height": 23.0
    },
+   "coverBox": {
+    "x": 196,
+    "y": 2733,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011c2a",
    "darkText": false
   },
@@ -509,28 +556,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "[CẬP NHẬT] ES File Explorer",
-    "File Manaaer",
-    "IVÁ LỖI] Định vỊ",
-    "[CẬP NHẬT] Cam Hành Trình X7",
     "IVÁ LỖI] Google Play Services"
    ],
    "bodyBox": {
     "paragraphs": [
-     "[CẬP NHẬT] ES File Explorer File Manaaer",
-     "IVÁ LỖI] Định vỊ",
-     "[CẬP NHẬT] Cam Hành Trình X7",
      "IVÁ LỖI] Google Play Services"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 565.1,
-    "y": 1348.5,
-    "width": 305.6,
-    "height": 1374.2
+    "x": 575.3,
+    "y": 2693.6,
+    "width": 287.3,
+    "height": 29.1
    },
-   "background": "#011b29",
+   "coverBox": {
+    "x": 640,
+    "y": 2733,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011c2a",
    "darkText": false
   },
   {
@@ -555,6 +601,12 @@
     "width": 282.6,
     "height": 23.0
    },
+   "coverBox": {
+    "x": 1084,
+    "y": 2733,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011c29",
    "darkText": false
   },
@@ -566,39 +618,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "IVÁ LỖII Winca Control",
-    "TẢI VỀ",
-    "data",
-    "[CẬP NHẬT] VietMap Live",
-    "TẢI VỀ",
-    "IVÁ LỖI] Zalo",
-    "TẢI VỀ",
-    "[CẬP NHẬT] VML XỬ LÍ GPS",
-    "TẢI VỀ",
     "IVÁ LỖI] Imedia"
    ],
    "bodyBox": {
     "paragraphs": [
-     "IVÁ LỖII Winca Control",
-     "TẢI VỀ",
-     "data",
-     "[CẬP NHẬT] VietMap Live",
-     "TẢI VỀ",
-     "IVÁ LỖI] Zalo",
-     "TẢI VỀ",
-     "[CẬP NHẬT] VML XỬ LÍ GPS",
-     "TẢI VỀ",
      "IVÁ LỖI] Imedia"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 26.0,
-    "x": 142.3,
-    "y": 1344.3,
-    "width": 265.8,
-    "height": 1823.3
+    "paragraphGap": 12.0,
+    "x": 198.8,
+    "y": 3144.6,
+    "width": 150.7,
+    "height": 23.0
    },
-   "background": "#011c29",
+   "coverBox": {
+    "x": 196,
+    "y": 3183,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#031d2b",
    "darkText": false
   },
   {
@@ -609,28 +649,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "[CẬP NHẬT] ES File Explorer",
-    "File Manaaer",
-    "IVÁ LỖI] Định vỊ",
-    "[CẬP NHẬT] Cam Hành Trình X7",
     "IVÁ LỖI] Google Play Services"
    ],
    "bodyBox": {
     "paragraphs": [
-     "[CẬP NHẬT] ES File Explorer File Manaaer",
-     "IVÁ LỖI] Định vỊ",
-     "[CẬP NHẬT] Cam Hành Trình X7",
      "IVÁ LỖI] Google Play Services"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 565.1,
-    "y": 1348.5,
-    "width": 305.6,
-    "height": 1374.2
+    "x": 575.3,
+    "y": 2693.6,
+    "width": 287.3,
+    "height": 29.1
    },
-   "background": "#011b29",
+   "coverBox": {
+    "x": 640,
+    "y": 3183,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011c2a",
    "darkText": false
   },
   {
@@ -654,6 +693,12 @@
     "y": 3146.7,
     "width": 265.8,
     "height": 23.0
+   },
+   "coverBox": {
+    "x": 1084,
+    "y": 3183,
+    "w": 159,
+    "h": 32
    },
    "background": "#011c2a",
    "darkText": false
@@ -682,6 +727,12 @@
     "width": 146.5,
     "height": 16.9
    },
+   "coverBox": {
+    "x": 196,
+    "y": 1383,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021c2b",
    "darkText": false
   },
@@ -707,6 +758,12 @@
     "width": 284.6,
     "height": 18.9
    },
+   "coverBox": {
+    "x": 640,
+    "y": 1383,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011c2a",
    "darkText": false
   },
@@ -718,36 +775,29 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trải nghiệm trọn vẹn",
     "WINGA TUEE",
     "Winca Tube"
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trải nghiệm trọn vẹn",
      "WINGA TUEE",
      "Winca Tube"
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 37.0,
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 72.0,
     "x": 1080.0,
-    "y": 500.4,
-    "width": 280.4,
-    "height": 867.1
+    "y": 1258.4,
+    "width": 165.3,
+    "height": 109.1
    },
-   "background": "#0c1010",
+   "coverBox": {
+    "x": 1084,
+    "y": 1383,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#0e70af",
    "darkText": false
   },
   {
@@ -758,23 +808,25 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Winca Control",
-    "TẢI VỀ",
     "VietMap Live [MỚI NHẤT]"
    ],
    "bodyBox": {
     "paragraphs": [
-     "Winca Control",
-     "TẢI VỀ",
      "VietMap Live [MỚI NHẤT]"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 20.0,
+    "paragraphGap": 12.0,
     "x": 152.8,
-    "y": 1350.6,
+    "y": 1796.4,
     "width": 247.0,
-    "height": 469.0
+    "height": 23.2
+   },
+   "coverBox": {
+    "x": 196,
+    "y": 1833,
+    "w": 159,
+    "h": 32
    },
    "background": "#021d2a",
    "darkText": false
@@ -787,23 +839,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "ES File Explorer File Manager",
     "Định vị"
    ],
    "bodyBox": {
     "paragraphs": [
-     "ES File Explorer File Manager",
      "Định vị"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 577.7,
-    "y": 1350.6,
-    "width": 284.6,
-    "height": 469.2
+    "x": 684.3,
+    "y": 1800.2,
+    "width": 71.4,
+    "height": 19.6
    },
-   "background": "#011c2a",
+   "coverBox": {
+    "x": 640,
+    "y": 1833,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#021c2a",
    "darkText": false
   },
   {
@@ -814,40 +870,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trải nghiệm trọn vẹn",
-    "WINGA TUEE",
-    "Winca Tube",
-    "TẢI VỀ",
     "Google Maps"
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trải nghiệm trọn vẹn",
-     "WINGA TUEE",
-     "Winca Tube",
-     "TẢI VỀ",
      "Google Maps"
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 35.0,
-    "x": 1080.0,
-    "y": 500.4,
-    "width": 280.4,
-    "height": 1319.2
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 12.0,
+    "x": 1098.8,
+    "y": 1800.6,
+    "width": 131.9,
+    "height": 19.0
    },
-   "background": "#0c1010",
+   "coverBox": {
+    "x": 1084,
+    "y": 1833,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#021d2a",
    "darkText": false
   },
   {
@@ -871,6 +914,12 @@
     "y": 2250.9,
     "width": 46.0,
     "height": 18.9
+   },
+   "coverBox": {
+    "x": 196,
+    "y": 2283,
+    "w": 159,
+    "h": 32
    },
    "background": "#031d2b",
    "darkText": false
@@ -897,6 +946,12 @@
     "width": 186.3,
     "height": 16.9
    },
+   "coverBox": {
+    "x": 640,
+    "y": 2283,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021c2a",
    "darkText": false
   },
@@ -921,6 +976,12 @@
     "y": 2250.7,
     "width": 144.4,
     "height": 19.0
+   },
+   "coverBox": {
+    "x": 1084,
+    "y": 2283,
+    "w": 159,
+    "h": 32
    },
    "background": "#031d2b",
    "darkText": false
@@ -947,6 +1008,12 @@
     "width": 144.4,
     "height": 21.1
    },
+   "coverBox": {
+    "x": 196,
+    "y": 2733,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021c2a",
    "darkText": false
   },
@@ -958,27 +1025,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "ES File Explorer File Manager",
-    "Định vị",
-    "Cam Hành Trình X7",
     "Google Play Services"
    ],
    "bodyBox": {
     "paragraphs": [
-     "ES File Explorer File Manager",
-     "Định vị",
-     "Cam Hành Trình X7",
      "Google Play Services"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 12.0,
-    "x": 577.7,
-    "y": 1350.6,
-    "width": 284.6,
-    "height": 1369.1
+    "x": 615.4,
+    "y": 2698.8,
+    "width": 207.2,
+    "height": 20.9
    },
-   "background": "#011c2a",
+   "coverBox": {
+    "x": 640,
+    "y": 2733,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#021c2a",
    "darkText": false
   },
   {
@@ -1003,6 +1070,12 @@
     "width": 163.8,
     "height": 23.8
    },
+   "coverBox": {
+    "x": 1084,
+    "y": 2733,
+    "w": 159,
+    "h": 32
+   },
    "background": "#021c2b",
    "darkText": false
   },
@@ -1014,38 +1087,27 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "Winca Control",
-    "TẢI VỀ",
-    "VietMap Live [MỚI NHẤT]",
-    "TẢI VỀ",
-    "Zalo",
-    "TẢI VỀ",
-    "VML XỬ LÍ GPS",
-    "TẢI VÊ",
     "Imedia"
    ],
    "bodyBox": {
     "paragraphs": [
-     "Winca Control",
-     "TẢI VỀ",
-     "VietMap Live [MỚI NHẤT]",
-     "TẢI VỀ",
-     "Zalo",
-     "Zalo",
-     "TẢI VỀ",
-     "VML XỬ LÍ GPS",
-     "TẢI VÊ",
      "Imedia"
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 23.0,
-    "x": 152.8,
-    "y": 1350.6,
-    "width": 247.0,
-    "height": 1816.9
+    "paragraphGap": 12.0,
+    "x": 238.6,
+    "y": 3150.8,
+    "width": 71.2,
+    "height": 16.7
    },
-   "background": "#021d2a",
+   "coverBox": {
+    "x": 196,
+    "y": 3183,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#021c2a",
    "darkText": false
   },
   {
@@ -1069,6 +1131,12 @@
     "y": 3150.2,
     "width": 75.6,
     "height": 17.9
+   },
+   "coverBox": {
+    "x": 640,
+    "y": 3183,
+    "w": 159,
+    "h": 32
    },
    "background": "#021c2a",
    "darkText": false
@@ -1094,6 +1162,12 @@
     "y": 3148.7,
     "width": 146.5,
     "height": 18.8
+   },
+   "coverBox": {
+    "x": 1084,
+    "y": 3183,
+    "w": 159,
+    "h": 32
    },
    "background": "#021c2a",
    "darkText": false
@@ -1954,7 +2028,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "DEGO",
     "DEGO ST6.20",
     "3M Ceramic Elite IR ứng dụng công nghệ",
     "gồm Nano, cản 99% tia UV và đến 74% tia",
@@ -1963,19 +2036,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "DEGO",
      "DEGO ST6.20",
      "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hồng ngoại, mang lại không gian mát mé, tâm nhìn rõ nét và báo vệ nội thất xe."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 20.0,
-    "x": 83.6,
-    "y": 713.8,
-    "width": 312.1,
-    "height": 752.0
+    "x": 98.2,
+    "y": 1361.0,
+    "width": 297.5,
+    "height": 104.8
    },
-   "background": "#021219",
+   "coverBox": {
+    "x": 248,
+    "y": 1493,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#012538",
    "darkText": false
   },
   {
@@ -1986,7 +2064,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "TCAUTO",
     "Lod ...",
     "3M Ceramic IR công nghệ gốm Nano, cản",
     "95% tia hồng ngoại và 99% tia UV, giữ xe",
@@ -1994,7 +2071,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "TCAUTO",
      "Lod ...",
      "3M Ceramic IR công nghệ gốm Nano, cản 95% tia hồng ngoại và 99% tia UV, giữ xe mát mẻ và bảo vệ nội thất."
     ],
@@ -2002,11 +2078,17 @@
     "lineHeight": 17.0,
     "paragraphGap": 24.0,
     "x": 555.5,
-    "y": 531.9,
-    "width": 434.5,
-    "height": 917.1
+    "y": 1359.4,
+    "width": 300.5,
+    "height": 89.6
    },
-   "background": "#7f7363",
+   "coverBox": {
+    "x": 707,
+    "y": 1493,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#002840",
    "darkText": false
   },
   {
@@ -2017,15 +2099,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trái nghiệm trọn vẹn",
     "Loa ...",
     "3M Crystalline công nghệ Nano đa lớp, cản",
     "nhiệt và tia UV, bảo vệ nội thất và mang",
@@ -2033,22 +2106,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trái nghiệm trọn vẹn",
      "Loa ...",
      "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoải mái trên mọi hành trình."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
     "x": 1024.7,
-    "y": 502.3,
-    "width": 337.8,
-    "height": 946.7
+    "y": 1360.5,
+    "width": 306.5,
+    "height": 88.5
    },
-   "background": "#5f707b",
+   "coverBox": {
+    "x": 1177,
+    "y": 1493,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#00273d",
    "darkText": false
   },
   {
@@ -2059,13 +2134,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "DEGO",
-    "DEGO ST6.20",
-    "3M Ceramic Elite IR ứng dụng công nghệ",
-    "gồm Nano, cản 99% tia UV và đến 74% tia",
-    "hồng ngoại, mang lại không gian mát",
-    "mé, tâm nhìn rõ nét và báo vệ nội thất xe.",
-    "XEM THEM",
     "Loa ...",
     "3M Ceramic Elite IR ứng dụng công nghệ",
     "gốm Nano, cản 99% tia UV và đến 74% tia",
@@ -2074,22 +2142,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "DEGO",
-     "DEGO ST6.20",
-     "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hồng ngoại, mang lại không gian mát mé, tâm nhìn rõ nét và báo vệ nội thất xe.",
-     "XEM THEM",
      "Loa ...",
      "3M Ceramic Elite IR ứng dụng công nghệ gốm Nano, cản 99% tia UV và đến 74% tia hồng ngoại, mang lại không gian mát mẻ, tầm nhìn rõ nét và bảo vệ nội thất xe."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 20.0,
-    "x": 83.6,
-    "y": 713.8,
-    "width": 312.1,
-    "height": 1275.5
+    "x": 96.3,
+    "y": 1883.8,
+    "width": 299.4,
+    "height": 105.5
    },
-   "background": "#021219",
+   "coverBox": {
+    "x": 248,
+    "y": 2016,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a28",
    "darkText": false
   },
   {
@@ -2100,11 +2170,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "TCAUTO",
-    "Lod ...",
-    "3M Ceramic IR công nghệ gốm Nano, cản",
-    "95% tia hồng ngoại và 99% tia UV, giữ xe",
-    "mát mẻ và bảo vệ nội thất.",
     "Loa ...",
     "3M Ceramic IR công nghệ gốm Nano, cản",
     "95% tia hồng ngoại và 99% tia UV, giữ xe",
@@ -2112,21 +2177,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "TCAUTO",
-     "Lod ...",
-     "3M Ceramic IR công nghệ gốm Nano, cản 95% tia hồng ngoại và 99% tia UV, giữ xe mát mẻ và bảo vệ nội thất.",
      "Loa ...",
      "3M Ceramic IR công nghệ gốm Nano, cản 95% tia hồng ngoại và 99% tia UV, giữ xe mát mẻ và bảo vệ nội thất."
     ],
     "fontSize": 14.0,
     "lineHeight": 17.0,
-    "paragraphGap": 24.0,
-    "x": 555.5,
-    "y": 531.9,
-    "width": 434.5,
-    "height": 1440.6
+    "paragraphGap": 23.0,
+    "x": 556.1,
+    "y": 1883.7,
+    "width": 299.9,
+    "height": 88.8
    },
-   "background": "#7f7363",
+   "coverBox": {
+    "x": 707,
+    "y": 2016,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a28",
    "darkText": false
   },
   {
@@ -2137,20 +2205,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trái nghiệm trọn vẹn",
-    "Loa ...",
-    "3M Crystalline công nghệ Nano đa lớp, cản",
-    "nhiệt và tia UV, bảo vệ nội thất và mang",
-    "lại sự thoải mái trên mọi hành trình.",
-    "XEM THÊM",
     "Loa ...",
     "3M Crystalline công nghệ Nano đa lớp, cản",
     "nhiệt và tia UV, bảo vệ nội thất và mang",
@@ -2158,25 +2212,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trái nghiệm trọn vẹn",
-     "Loa ...",
-     "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoải mái trên mọi hành trình.",
-     "XEM THÊM",
      "Loa ...",
      "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoải mái trên mọi hành trình."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 18.0,
     "x": 1023.4,
-    "y": 502.3,
-    "width": 339.1,
-    "height": 1474.3
+    "y": 1883.8,
+    "width": 307.8,
+    "height": 92.8
    },
-   "background": "#5d707b",
+   "coverBox": {
+    "x": 1177,
+    "y": 2016,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a28",
    "darkText": false
   }
  ],
@@ -2189,19 +2242,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trải nghiệm trọn vẹn",
-    "BRAVO",
-    "S200+ 13 INCH 2K",
-    "19:00 | 2524",
-    "(80 2))",
     "S200+ 13 INCH 2K PRO 360",
     "Winca S200+ màn hình 13 inch 2K, hiển thị",
     "rộng, sắc nét và sống động, tối ưu trải",
@@ -2209,25 +2249,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trải nghiệm trọn vẹn",
-     "BRAVO",
-     "S200+ 13 INCH 2K",
-     "19:00 | 2524 (80 2))",
      "S200+ 13 INCH 2K PRO 360",
      "Winca S200+ màn hình 13 inch 2K, hiển thị rộng, sắc nét và sống động, tối ưu trải nghiệm giải trí và quan sát."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
-    "x": 1008.8,
-    "y": 502.5,
-    "width": 351.6,
-    "height": 952.8
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
+    "x": 1019.3,
+    "y": 1365.2,
+    "width": 305.6,
+    "height": 90.1
    },
-   "background": "#657884",
+   "coverBox": {
+    "x": 1175,
+    "y": 1498,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a28",
    "darkText": false
   },
   {
@@ -2238,7 +2277,6 @@
    "heading": "S170+ QLED 2K",
    "isPlaceholder": false,
    "body": [
-    "19:00 | 2024",
     "S170+ QLED 2K PRO 360",
     "S170+ QLED 2K PRO 360 sở hữu màn hình",
     "2K sắc nét, hiển thị rõ bản đồ, camera và",
@@ -2247,7 +2285,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "19:00 | 2024",
      "S170+ QLED 2K PRO 360",
      "S170+ QLED 2K PRO 360 sở hữu màn hình 2K sắc nét, hiển thị rõ bản đồ, camera và nội dung giải trí. Kích thước 9-10 inch vừa vặn, giao diện hiện đại, dề sử dụng."
     ],
@@ -2255,12 +2292,18 @@
     "lineHeight": 17.0,
     "paragraphGap": 23.0,
     "x": 98.4,
-    "y": 1207.5,
+    "y": 1365.2,
     "width": 297.2,
-    "height": 264.7
+    "height": 107.0
    },
-   "background": "#faf9fe",
-   "darkText": true
+   "coverBox": {
+    "x": 249,
+    "y": 1498,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011b29",
+   "darkText": false
   },
   {
    "x": 737.1,
@@ -2289,6 +2332,12 @@
     "width": 280.6,
     "height": 107.0
    },
+   "coverBox": {
+    "x": 710,
+    "y": 1498,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011a27",
    "darkText": false
   },
@@ -2300,7 +2349,6 @@
    "heading": "S150+ QLED",
    "isPlaceholder": false,
    "body": [
-    "19:00 | 2524",
     "S150+ QLED",
     "Tích hợp 3 nền tảng bản đồ, dẫn đường",
     "thông minh và cảnh báo giao thông, hồ",
@@ -2308,7 +2356,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "19:00 | 2524",
      "S150+ QLED",
      "Tích hợp 3 nền tảng bản đồ, dẫn đường thông minh và cảnh báo giao thông, hồ trợ lái xe an toàn."
     ],
@@ -2316,12 +2363,18 @@
     "lineHeight": 20.0,
     "paragraphGap": 20.0,
     "x": 98.4,
-    "y": 1742.0,
+    "y": 1894.9,
     "width": 286.7,
-    "height": 243.0
+    "height": 90.1
    },
-   "background": "#faf9fe",
-   "darkText": true
+   "coverBox": {
+    "x": 249,
+    "y": 2028,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a28",
+   "darkText": false
   },
   {
    "x": 737.1,
@@ -2349,6 +2402,12 @@
     "width": 295.4,
     "height": 92.5
    },
+   "coverBox": {
+    "x": 710,
+    "y": 2028,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011a28",
    "darkText": false
   },
@@ -2360,7 +2419,6 @@
    "heading": "S170+ QLED 2K",
    "isPlaceholder": false,
    "body": [
-    "19:00 | 2524",
     "S170+ QLED 2K",
     "Winca S170+ QLED 2K tích hợp Vietmap",
     "Live, Google Maps và Navitel, hỗ trợ dẫn",
@@ -2369,7 +2427,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "19:00 | 2524",
      "S170+ QLED 2K",
      "Winca S170+ QLED 2K tích hợp Vietmap Live, Google Maps và Navitel, hỗ trợ dẫn đường thông minh, cảnh báo giao thông và tối ưu hành trình an toàn."
     ],
@@ -2377,12 +2434,18 @@
     "lineHeight": 20.0,
     "paragraphGap": 19.0,
     "x": 1019.3,
-    "y": 1742.0,
+    "y": 1894.9,
     "width": 295.1,
-    "height": 259.8
+    "height": 106.9
    },
-   "background": "#f9f8fd",
-   "darkText": true
+   "coverBox": {
+    "x": 1175,
+    "y": 2028,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a27",
+   "darkText": false
   },
   {
    "x": 276.6,
@@ -2392,7 +2455,6 @@
    "heading": "S200+ QLED 2K",
    "isPlaceholder": false,
    "body": [
-    "19:00 | 2024",
     "S200+ QLED 2K",
     "Winca S200+ QLED 2K tích hợp Vietmap",
     "Live, Google Maps và Navitel, hỗ trợ dần",
@@ -2401,7 +2463,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "19:00 | 2024",
      "S200+ QLED 2K",
      "Winca S200+ QLED 2K tích hợp Vietmap Live, Google Maps và Navitel, hỗ trợ dần đường thông minh, cảnh báo giao thông và tối ưu hành trình an toàn."
     ],
@@ -2409,12 +2470,18 @@
     "lineHeight": 20.0,
     "paragraphGap": 20.0,
     "x": 98.2,
-    "y": 2269.6,
+    "y": 2424.4,
     "width": 293.2,
-    "height": 261.7
+    "height": 106.9
    },
-   "background": "#faf9fe",
-   "darkText": true
+   "coverBox": {
+    "x": 249,
+    "y": 2558,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a28",
+   "darkText": false
   },
   {
    "x": 737.1,
@@ -2440,6 +2507,12 @@
     "width": 314.0,
     "height": 50.3
    },
+   "coverBox": {
+    "x": 710,
+    "y": 2558,
+    "w": 159,
+    "h": 32
+   },
    "background": "#011a28",
    "darkText": false
   },
@@ -2451,33 +2524,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trải nghiệm trọn vẹn",
-    "BRAVO",
-    "S200+ 13 INCH 2K",
-    "19:00 | 2524",
-    "(80 2))",
-    "S200+ 13 INCH 2K PRO 360",
-    "Winca S200+ màn hình 13 inch 2K, hiển thị",
-    "rộng, sắc nét và sống động, tối ưu trải",
-    "nghiệm giải trí và quan sát.",
-    "XEM THÊM",
-    "19:00 | 2524",
-    "S170+ QLED 2K",
-    "Winca S170+ QLED 2K tích hợp Vietmap",
-    "Live, Google Maps và Navitel, hỗ trợ dẫn",
-    "đường thông minh, cảnh báo giao thông",
-    "và tối ưu hành trình an toàn.",
-    "XEM THÊM",
-    "WINCA 5300+ PRO QLED 2K DTS",
-    "ĐỈNH CAO CÔNG NGHỆ ÂM THANH",
     "S300+ QLED 2K DTS",
     "Màn hình Android Winca S300+ QLED 2K",
     "tích hợp tiện ích thông minh, kho giải trí",
@@ -2486,34 +2532,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trải nghiệm trọn vẹn",
-     "BRAVO",
-     "S200+ 13 INCH 2K",
-     "19:00 | 2524 (80 2))",
-     "S200+ 13 INCH 2K PRO 360",
-     "Winca S200+ màn hình 13 inch 2K, hiển thị rộng, sắc nét và sống động, tối ưu trải nghiệm giải trí và quan sát.",
-     "XEM THÊM",
-     "19:00 | 2524",
-     "S170+ QLED 2K",
-     "Winca S170+ QLED 2K tích hợp Vietmap Live, Google Maps và Navitel, hỗ trợ dẫn đường thông minh, cảnh báo giao thông và tối ưu hành trình an toàn.",
-     "XEM THÊM",
-     "WINCA 5300+ PRO QLED 2K DTS",
-     "ĐỈNH CAO CÔNG NGHỆ ÂM THANH",
      "S300+ QLED 2K DTS",
      "Màn hình Android Winca S300+ QLED 2K tích hợp tiện ích thông minh, kho giải trí đa dạng cùng trải nghiệm âm thanh sống động, nâng tầm khoang lái."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
-    "x": 1004.6,
-    "y": 502.5,
-    "width": 355.8,
-    "height": 2030.8
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 22.0,
+    "x": 1019.3,
+    "y": 2424.4,
+    "width": 305.7,
+    "height": 108.9
    },
-   "background": "#627783",
+   "coverBox": {
+    "x": 1175,
+    "y": 2558,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#011a27",
    "darkText": false
   }
  ],
@@ -2526,8 +2562,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "3M • NANO SUN • 5DO",
-    "Autor ibm",
     "ЗМ Ceramic Elite М",
     "3M Ceramic Elite IR ứng dụng công nghệ",
     "gồm Nano, cản 99% tia UV và đến 74% tia",
@@ -2536,20 +2570,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "3M • NANO SUN • 5DO",
-     "Autor ibm",
      "ЗМ Ceramic Elite М",
      "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hồng ngoại, mang lại không gian mát mẻ, tầm nhìn rỗ nét và bảo vệ nội thất xe."
     ],
     "fontSize": 14.0,
     "lineHeight": 17.0,
     "paragraphGap": 23.0,
-    "x": 79.5,
-    "y": 714.1,
-    "width": 313.9,
-    "height": 747.5
+    "x": 94.2,
+    "y": 1356.8,
+    "width": 297.2,
+    "height": 104.8
    },
-   "background": "#000f17",
+   "coverBox": {
+    "x": 245,
+    "y": 1488,
+    "w": 158,
+    "h": 32
+   },
+   "background": "#002438",
    "darkText": false
   },
   {
@@ -2578,6 +2616,12 @@
     "width": 299.5,
     "height": 94.1
    },
+   "coverBox": {
+    "x": 704,
+    "y": 1488,
+    "w": 158,
+    "h": 32
+   },
    "background": "#012a41",
    "darkText": false
   },
@@ -2589,15 +2633,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trái nghiệm trọn vẹn",
     "3М Ceramic Crystalline",
     "3M Crystalline công nghệ Nano đa lớp, cán",
     "nhiệt và tia UV, bảo vệ nội thất và mang",
@@ -2605,22 +2640,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trái nghiệm trọn vẹn",
      "3М Ceramic Crystalline",
      "3M Crystalline công nghệ Nano đa lớp, cán nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoải mái trên mọi hành trình."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
     "x": 1019.3,
-    "y": 502.3,
-    "width": 343.2,
-    "height": 942.5
+    "y": 1356.8,
+    "width": 307.7,
+    "height": 88.0
    },
-   "background": "#5e717b",
+   "coverBox": {
+    "x": 1174,
+    "y": 1488,
+    "w": 158,
+    "h": 32
+   },
+   "background": "#01283d",
    "darkText": false
   },
   {
@@ -2631,14 +2668,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "3M • NANO SUN • 5DO",
-    "Autor ibm",
-    "ЗМ Ceramic Elite М",
-    "3M Ceramic Elite IR ứng dụng công nghệ",
-    "gồm Nano, cản 99% tia UV và đến 74% tia",
-    "hồng ngoại, mang lại không gian mát",
-    "mẻ, tầm nhìn rỗ nét và bảo vệ nội thất xe.",
-    "XEM THẼM",
     "Nano Sun Blue",
     "Nano Sun Blue cản 99% tia UV, giảm nhiệt",
     "hiệu quả với công nghệ Nano, mang đến",
@@ -2647,23 +2676,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "3M • NANO SUN • 5DO",
-     "Autor ibm",
-     "ЗМ Ceramic Elite М",
-     "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hồng ngoại, mang lại không gian mát mẻ, tầm nhìn rỗ nét và bảo vệ nội thất xe.",
-     "XEM THẼM",
      "Nano Sun Blue",
      "Nano Sun Blue cản 99% tia UV, giảm nhiệt hiệu quả với công nghệ Nano, mang đến giải pháp cách nhiệt chất lư_Yng với chi phí hợp lý."
     ],
     "fontSize": 14.0,
     "lineHeight": 17.0,
     "paragraphGap": 23.0,
-    "x": 79.5,
-    "y": 714.1,
-    "width": 326.6,
-    "height": 1438.4
+    "x": 96.3,
+    "y": 2043.6,
+    "width": 309.8,
+    "height": 108.9
    },
-   "background": "#000f17",
+   "coverBox": {
+    "x": 248,
+    "y": 2175,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#012438",
    "darkText": false
   },
   {
@@ -2674,11 +2704,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "TCAUTO",
-    "3M Ceramic Hồng Ngoại",
-    "3M Ceramic IR công nghệ gồm Nano, cán",
-    "95% tia hồng ngoại và 99% tia UV, giữ xe",
-    "mát mẻ và bảo vệ nội thất.",
     "Nano Sun Blue Light",
     "Nano Sun Blue Light cản 99% tia UV, giảm",
     "nhiệt từ tia IR, mang lại không gian xe mat",
@@ -2686,21 +2711,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "TCAUTO",
-     "3M Ceramic Hồng Ngoại",
-     "3M Ceramic IR công nghệ gồm Nano, cán 95% tia hồng ngoại và 99% tia UV, giữ xe mát mẻ và bảo vệ nội thất.",
      "Nano Sun Blue Light",
      "Nano Sun Blue Light cản 99% tia UV, giảm nhiệt từ tia IR, mang lại không gian xe mat mẻ và dễ chịu hơn."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 29.0,
-    "x": 552.3,
-    "y": 531.9,
-    "width": 437.7,
-    "height": 1599.6
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
+    "x": 554.6,
+    "y": 2043.6,
+    "width": 312.1,
+    "height": 87.9
    },
-   "background": "#887d68",
+   "coverBox": {
+    "x": 707,
+    "y": 2175,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#002940",
    "darkText": false
   },
   {
@@ -2729,6 +2757,12 @@
     "y": 2043.6,
     "width": 297.4,
     "height": 107.8
+   },
+   "coverBox": {
+    "x": 1177,
+    "y": 2175,
+    "w": 159,
+    "h": 32
    },
    "background": "#00273d",
    "darkText": false
@@ -2760,6 +2794,12 @@
     "width": 297.4,
     "height": 104.8
    },
+   "coverBox": {
+    "x": 248,
+    "y": 2856,
+    "w": 159,
+    "h": 32
+   },
    "background": "#002438",
    "darkText": false
   },
@@ -2789,6 +2829,12 @@
     "width": 301.4,
     "height": 88.0
    },
+   "coverBox": {
+    "x": 707,
+    "y": 2856,
+    "w": 159,
+    "h": 32
+   },
    "background": "#002940",
    "darkText": false
   },
@@ -2800,26 +2846,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trái nghiệm trọn vẹn",
-    "3М Ceramic Crystalline",
-    "3M Crystalline công nghệ Nano đa lớp, cán",
-    "nhiệt và tia UV, bảo vệ nội thất và mang",
-    "lại sự thoải mái trên mọi hành trình.",
-    "XEM THÊM",
-    "Nano Sun Premium",
-    "Nano Sun Premium ứng dụng công nghệ",
-    "Nano đa lớp, cản tới 100% tia UV và TSER",
-    "lên đến 92%, mang lại không gian xe mát",
-    "mẻ, an toàn và riêng tư hơn.",
-    "XEM THEM",
     "5DO ...",
     "3M Crystalline công nghệ Nano đa lớp, cản",
     "nhiệt và tia UV, bảo vệ nội thất và mang",
@@ -2827,28 +2853,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trái nghiệm trọn vẹn",
-     "3М Ceramic Crystalline",
-     "3M Crystalline công nghệ Nano đa lớp, cán nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoải mái trên mọi hành trình.",
-     "XEM THÊM",
-     "Nano Sun Premium",
-     "Nano Sun Premium ứng dụng công nghệ Nano đa lớp, cản tới 100% tia UV và TSER lên đến 92%, mang lại không gian xe mát mẻ, an toàn và riêng tư hơn.",
-     "XEM THEM",
      "5DO ...",
      "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoái mái trên mọi hành trình."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
-    "x": 1019.3,
-    "y": 502.3,
-    "width": 343.2,
-    "height": 2311.8
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
+    "x": 1023.4,
+    "y": 2723.9,
+    "width": 307.8,
+    "height": 90.2
    },
-   "background": "#5e717b",
+   "coverBox": {
+    "x": 1177,
+    "y": 2856,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#00273d",
    "darkText": false
   }
  ],
@@ -2861,8 +2883,6 @@
    "heading": "31 100 GLOSS SERIES",
    "isPlaceholder": false,
    "body": [
-    "F 50 GLOSS",
-    "Id - Bảo Vệ Vô Hình Cho Mọi Xế Yêu",
     "• Gloss Series",
     "3M PPF - 100 Gloss Series",
     "ss Series tại TC Auto bảo vệ",
@@ -2876,19 +2896,18 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "F 50 GLOSS Id - Bảo Vệ Vô Hình Cho Mọi Xế Yêu",
      "• Gloss Series 3M PPF - 100 Gloss Series",
      "ss Series tại TC Auto bảo vệ 3M PPF 100 Gloss Series tại TC Auto bảo vệ ước, đá văng và tác động sơn khỏi đá văng, va quẹt và trây xước, ông thời duy trì vẻ bóng đẹp đồng thời duy trì độ bóng và vẻ đẹp t với chi phi hợp lý. nguyên bán của xe theo thơi gian."
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 18.0,
-    "x": 0.0,
-    "y": 1136.8,
-    "width": 646.8,
-    "height": 316.4
+    "x": 6.3,
+    "y": 1346.4,
+    "width": 640.5,
+    "height": 106.8
    },
-   "background": "#02101a",
+   "background": "#022133",
    "darkText": false
   },
   {
@@ -2923,6 +2942,12 @@
     "width": 757.7,
     "height": 106.8
    },
+   "coverBox": {
+    "x": 493,
+    "y": 1478,
+    "w": 159,
+    "h": 32
+   },
    "background": "#00273d",
    "darkText": false
   },
@@ -2934,7 +2959,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "TCAUTO",
     "M PPF - 150 Gloss Series",
     "3M PPF - 200 Gloss Sei",
     "3M PPF 150 Gloss Series tại TC Auto bảo vệ",
@@ -2947,7 +2971,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "TCAUTO",
      "M PPF - 150 Gloss Series 3M PPF - 200 Gloss Sei",
      "3M PPF 150 Gloss Series tại TC Auto bảo vệ 3M PPF 200 Gloss Series bảo về sơn trước tác động và trầy xước, với khả lớp, hấp thụ tác động, tự phục năng tự phục hồi và duy trì độ bóng, giữ trọn trì độ bóng nguyên ban. vẻ đẹp nguyên bản của xe theo thời gian."
     ],
@@ -2955,11 +2978,17 @@
     "lineHeight": 17.0,
     "paragraphGap": 23.0,
     "x": 776.5,
-    "y": 531.9,
+    "y": 1346.4,
     "width": 661.4,
-    "height": 921.3
+    "height": 106.8
    },
-   "background": "#79888a",
+   "coverBox": {
+    "x": 931,
+    "y": 1478,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#002a41",
    "darkText": false
   },
   {
@@ -2970,13 +2999,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "3M • NANO SUN • 5DO",
-    "3M PPF - 100 Gloss Series",
-    "3M PPF 100 Gloss Series tại TC Auto bảo vệ",
-    "sơn khỏi đá văng, va quẹt và trây xước,",
-    "đồng thời duy trì độ bóng và vẻ đẹp",
-    "nguyên bán của xe theo thơi gian.",
-    "XEM THÊM",
     "Ánh Nắng",
     "Trài Mưa",
     "Trầy Xước Bong Tróc",
@@ -2996,10 +3018,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "3M • NANO SUN • 5DO",
-     "3M PPF - 100 Gloss Series",
-     "3M PPF 100 Gloss Series tại TC Auto bảo vệ sơn khỏi đá văng, va quẹt và trây xước, đồng thời duy trì độ bóng và vẻ đẹp nguyên bán của xe theo thơi gian.",
-     "XEM THÊM XEM THẼM",
      "Ánh Nắng Trài Mưa Trầy Xước Bong Tróc Khói Bụi",
      "Tràn xe Gương xe Năm cửa Đen xe sen sau",
      "Nắp xăng Đuổi xe",
@@ -3008,13 +3026,19 @@
     ],
     "fontSize": 16.0,
     "lineHeight": 20.0,
-    "paragraphGap": 28.0,
-    "x": 79.5,
-    "y": 714.1,
-    "width": 567.3,
-    "height": 1436.3
+    "paragraphGap": 39.0,
+    "x": 98.3,
+    "y": 1830.0,
+    "width": 328.7,
+    "height": 320.4
    },
-   "background": "#000f17",
+   "coverBox": {
+    "x": 248,
+    "y": 2176,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#007cc9",
    "darkText": false
   },
   {
@@ -3025,13 +3049,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "TCAUTO",
-    "M PPF - 150 Gloss Series",
-    "3M PPF 150 Gloss Series tại TC Auto bảo vệ",
-    "sơn trước tác động và trầy xước, với khả",
-    "năng tự phục hồi và duy trì độ bóng, giữ trọn",
-    "vẻ đẹp nguyên bản của xe theo thời gian.",
-    "XEM THẼM",
     "Ánh Nẵng",
     "Trời Mưa",
     "Trầy Xước Bong Tróc",
@@ -3049,10 +3066,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "TCAUTO",
-     "M PPF - 150 Gloss Series",
-     "3M PPF 150 Gloss Series tại TC Auto bảo vệ sơn trước tác động và trầy xước, với khả năng tự phục hồi và duy trì độ bóng, giữ trọn vẻ đẹp nguyên bản của xe theo thời gian.",
-     "XEM THẼM XEM THÊM",
      "Ánh Nẵng Trời Mưa Trầy Xước Bong Tróc Khỏi Bụi",
      "Tràn xe Nắm cửa Đèn sau Den xe",
      "Đuổi xe Nặp xăn ở Lườn xe",
@@ -3062,12 +3075,18 @@
     "fontSize": 16.0,
     "lineHeight": 20.0,
     "paragraphGap": 26.0,
-    "x": 529.5,
-    "y": 531.9,
-    "width": 569.4,
-    "height": 1601.7
+    "x": 556.6,
+    "y": 1830.0,
+    "width": 329.6,
+    "height": 303.6
    },
-   "background": "#7c7263",
+   "coverBox": {
+    "x": 707,
+    "y": 2176,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#007cc9",
    "darkText": false
   },
   {
@@ -3078,20 +3097,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trái nghiệm trọn vẹn",
-    "3M PPF - 200 Gloss Sei",
-    "3M PPF 200 Gloss Series bảo về",
-    "lớp, hấp thụ tác động, tự phục",
-    "trì độ bóng nguyên ban.",
-    "XEM THÊM",
     "Ánh Nắng",
     "Trài Mưa",
     "Trầy xước",
@@ -3110,13 +3115,6 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trái nghiệm trọn vẹn",
-     "3M PPF - 200 Gloss Sei",
-     "3M PPF 200 Gloss Series bảo về lớp, hấp thụ tác động, tự phục trì độ bóng nguyên ban.",
-     "XEM THÊM",
      "Ánh Nắng Trài Mưa Trầy xước Bong Tróc Khỏi Bụi",
      "Tràn xe Guơng xe Năm cửa",
      "Nắp xăng Đuỗi xe",
@@ -3124,15 +3122,21 @@
      "Nano Premium",
      "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoái mái trên mọi hành trình."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
-    "x": 967.0,
-    "y": 502.3,
-    "width": 470.9,
-    "height": 1631.3
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 26.0,
+    "x": 1023.5,
+    "y": 1830.0,
+    "width": 327.4,
+    "height": 303.6
    },
-   "background": "#546975",
+   "coverBox": {
+    "x": 1177,
+    "y": 2176,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#007cc9",
    "darkText": false
   },
   {
@@ -3143,31 +3147,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "3M • NANO SUN • 5DO",
-    "3M PPF - 100 Gloss Series",
-    "3M PPF 100 Gloss Series tại TC Auto bảo vệ",
-    "sơn khỏi đá văng, va quẹt và trây xước,",
-    "đồng thời duy trì độ bóng và vẻ đẹp",
-    "nguyên bán của xe theo thơi gian.",
-    "XEM THÊM",
-    "Ánh Nắng",
-    "Trài Mưa",
-    "Trầy Xước Bong Tróc",
-    "Khói Bụi",
-    "Tràn xe",
-    "Gương xe",
-    "Năm cửa",
-    "Đen xe",
-    "sen sau",
-    "Nắp xăng",
-    "Đuổi xe",
-    "Nano Eco Lite",
-    "3M Ceramic Elite IR ứng dụng công nghệ",
-    "gồm Nano, cản 99% tia UV và đến 74% tia",
-    "hỗng ngoại, mang lại không gian mát",
-    "mé, tầm nhìn rõ nét và bảo vệ nội thất xe.",
-    "XEM THEM",
-    "'Autof ibe",
     "5DO ...",
     "3M Ceramic Elite IR ứng dụng công nghệ",
     "gồm Nano, cản 99% tia UV và đến 74% tia",
@@ -3176,29 +3155,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "3M • NANO SUN • 5DO",
-     "3M PPF - 100 Gloss Series",
-     "3M PPF 100 Gloss Series tại TC Auto bảo vệ sơn khỏi đá văng, va quẹt và trây xước, đồng thời duy trì độ bóng và vẻ đẹp nguyên bán của xe theo thơi gian.",
-     "XEM THÊM XEM THẼM",
-     "Ánh Nắng Trài Mưa Trầy Xước Bong Tróc Khói Bụi",
-     "Tràn xe Gương xe Năm cửa Đen xe sen sau",
-     "Nắp xăng Đuổi xe",
-     "Nano Eco Lite",
-     "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hỗng ngoại, mang lại không gian mát mé, tầm nhìn rõ nét và bảo vệ nội thất xe.",
-     "XEM THEM",
-     "'Autof ibe",
      "5DO ...",
      "3M Ceramic Elite IR ứng dụng công nghệ gồm Nano, cản 99% tia UV và đến 74% tia hồng ngoại, mang lại không gian mát mẻ, tầm nhìn rỗ nét và bảo vệ nội thất xe."
     ],
     "fontSize": 14.0,
     "lineHeight": 17.0,
-    "paragraphGap": 31.0,
-    "x": 79.5,
-    "y": 714.1,
-    "width": 567.3,
-    "height": 2116.7
+    "paragraphGap": 25.0,
+    "x": 98.4,
+    "y": 2723.9,
+    "width": 297.2,
+    "height": 106.9
    },
-   "background": "#000f17",
+   "coverBox": {
+    "x": 248,
+    "y": 2857,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#002438",
    "darkText": false
   },
   {
@@ -3227,6 +3201,12 @@
     "width": 301.4,
     "height": 88.0
    },
+   "coverBox": {
+    "x": 707,
+    "y": 2857,
+    "w": 159,
+    "h": 32
+   },
    "background": "#002941",
    "darkText": false
   },
@@ -3238,36 +3218,6 @@
    "heading": "",
    "isPlaceholder": false,
    "body": [
-    "CLARITY",
-    "Tầm nhìn sắc nét",
-    "PROTECTION",
-    "Bảo vệ tối ưu",
-    "COMFORT",
-    "Thoải mái trên mọi",
-    "hành trình",
-    "CONFIDENCE",
-    "Trái nghiệm trọn vẹn",
-    "3M PPF - 200 Gloss Sei",
-    "3M PPF 200 Gloss Series bảo về",
-    "lớp, hấp thụ tác động, tự phục",
-    "trì độ bóng nguyên ban.",
-    "XEM THÊM",
-    "Ánh Nắng",
-    "Trài Mưa",
-    "Trầy xước",
-    "Bong Tróc",
-    "Khỏi Bụi",
-    "Tràn xe",
-    "Guơng xe",
-    "Năm cửa",
-    "Nắp xăng",
-    "Đuỗi xe",
-    "Lườn xe",
-    "Nano Premium",
-    "3M Crystalline công nghệ Nano đa lớp, cản",
-    "nhiệt và tia UV, bảo vệ nội thất và mang",
-    "lại sự thoái mái trên mọi hành trình.",
-    "XEM THEM",
     "5DO ...",
     "3M Crystalline công nghệ Nano đa lớp, cản",
     "nhiệt và tia UV, bảo vệ nội thất và mang",
@@ -3275,32 +3225,24 @@
    ],
    "bodyBox": {
     "paragraphs": [
-     "CLARITY Tầm nhìn sắc nét",
-     "PROTECTION Bảo vệ tối ưu",
-     "COMFORT Thoải mái trên mọi hành trình",
-     "CONFIDENCE Trái nghiệm trọn vẹn",
-     "3M PPF - 200 Gloss Sei",
-     "3M PPF 200 Gloss Series bảo về lớp, hấp thụ tác động, tự phục trì độ bóng nguyên ban.",
-     "XEM THÊM",
-     "Ánh Nắng Trài Mưa Trầy xước Bong Tróc Khỏi Bụi",
-     "Tràn xe Guơng xe Năm cửa",
-     "Nắp xăng Đuỗi xe",
-     "Lườn xe",
-     "Nano Premium",
-     "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoái mái trên mọi hành trình.",
-     "XEM THEM",
      "5DO ...",
      "3M Crystalline công nghệ Nano đa lớp, cản nhiệt và tia UV, bảo vệ nội thất và mang lại sự thoải mái trên mọi hành trình."
     ],
-    "fontSize": 14.0,
-    "lineHeight": 17.0,
-    "paragraphGap": 33.0,
-    "x": 967.0,
-    "y": 502.3,
-    "width": 470.9,
-    "height": 2311.8
+    "fontSize": 16.0,
+    "lineHeight": 20.0,
+    "paragraphGap": 20.0,
+    "x": 1023.4,
+    "y": 2723.9,
+    "width": 307.8,
+    "height": 90.2
    },
-   "background": "#546975",
+   "coverBox": {
+    "x": 1177,
+    "y": 2857,
+    "w": 159,
+    "h": 32
+   },
+   "background": "#00273d",
    "darkText": false
   }
  ],

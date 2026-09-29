@@ -20,10 +20,11 @@ import { sliceSizes, sliceSrcSet } from "@/lib/slice-srcset";
  * Khi chi co MOT slide, component khong ve gi ca — khong tao nut bam gia.
  */
 /**
- * Nhip tu chuyen slide. Ban dau la 7000ms; khach thay cham nen rut xuong 4500ms
- * (28/09/2026). Duoi 4000ms thi chu trong slide chua kip doc het mot luot.
+ * Nhip tu chuyen slide. 7000ms -> 4500ms (28/09/2026) -> 3500ms (29/09/2026),
+ * khach yeu cau "kieu 3-4s luot mot lan". Dung chung mot nhip voi PhotoSlider
+ * de ca trang co cung mot mach.
  */
-const AUTOPLAY_MS = 4500;
+export const AUTOPLAY_MS = 3500;
 
 /** Anh 1x1 trong suot cho slide chua den luot tai. */
 const BLANK =

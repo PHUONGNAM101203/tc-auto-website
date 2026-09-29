@@ -116,7 +116,35 @@ test.describe("menu điều hướng", () => {
       });
       await page.locator(`.hdr a.nv[href="${to}"]`).click();
       await expect(page).toHaveURL(to);
-      await page.waitForTimeout(900);
+      // Cho thanh truot xuat hien lai roi DUNG HAN, thay vi cho cung mot khoang.
+      // Cho cung 900ms thi khi may dang tai nang, ca khoang do troi qua trong
+      // luc trang con dang chuyen — bo ghi khong bat duoc khung hinh nao va bai
+      // kiem do oan.
+      await expect(page.locator(".tc-navpill")).toHaveCount(1);
+      // Dung khi thanh truot DA DI CHUYEN va sau do dung yen 12 khung hinh.
+      //
+      // Chi doi "dung yen" thoi thi chua du: sau khi doi trang, thanh truot
+      // nam yen mot lat o cho cu truoc khi bat dau lươt, va 12 khung hinh dau
+      // tien deu giong nhau — bai kiem se thoat som roi bao "nhay coc" oan.
+      //
+      // Het gio ma van chua nhuc nhich thi cu de chay tiep: loi se do dung
+      // cho — o cau expect ben duoi, kem con so dem duoc.
+      await page
+        .waitForFunction(
+          () => {
+            const seen = (window as unknown as { __pillTrack: number[] })
+              .__pillTrack;
+            const tail = seen.slice(-12);
+            return (
+              new Set(seen).size > 1 &&
+              tail.length === 12 &&
+              new Set(tail).size === 1
+            );
+          },
+          undefined,
+          { timeout: 5000 },
+        )
+        .catch(() => undefined);
       const seen = await page.evaluate(
         () => (window as unknown as { __pillTrack: number[] }).__pillTrack,
       );

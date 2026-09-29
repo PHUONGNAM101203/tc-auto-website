@@ -43,6 +43,10 @@ TITLE_LINE_GAP = 70.0
 TITLE_SIMILARITY = 0.70
 # Nut chu nam TRONG mot nut do da do duoc thi bo qua — da co vung bam roi.
 RED_BUTTON_PAD = 12
+# Hai dong chu cach nhau xa hon muc nay thi khong con cung mot khoi. Nhip dong
+# than bai la 17..20px va khoang giua hai doan la 20..35px, nen 90 la rong rai
+# ma van tach duoc hai khoi nam cach nhau ca tram pixel.
+MAX_PARAGRAPH_GAP = 90.0
 
 
 
@@ -81,6 +85,24 @@ def key_of(value: str) -> str:
     plain = strip_accents(value).upper()
     plain = re.sub(r"[^A-Z0-9 ]+", " ", plain)
     return re.sub(r"\s+", " ", plain).strip()
+
+
+def red_button_of(block: dict, rects: list[dict]) -> dict | None:
+    """Khung nut DO bao quanh chu nay, neu co.
+
+    Mang che khi xo noi dung ra phai phu kin ca nut do — nut do rong hon chu
+    nen chi che phan chu thi mep do van tho ra. Xem readMorePanel trong
+    src/lib/cta-links.ts.
+    """
+    bx0, by0 = block["x"], block["y"]
+    bx1, by1 = bx0 + block["w"], by0 + block["h"]
+    for rect in rects:
+        rx0, ry0 = rect["x"] - RED_BUTTON_PAD, rect["y"] - RED_BUTTON_PAD
+        rx1 = rect["x"] + rect["w"] + RED_BUTTON_PAD
+        ry1 = rect["y"] + rect["h"] + RED_BUTTON_PAD
+        if bx0 >= rx0 and bx1 <= rx1 and by0 >= ry0 and by1 <= ry1:
+            return rect
+    return None
 
 
 def overlaps_red_button(block: dict, rects: list[dict]) -> bool:
@@ -220,6 +242,13 @@ def paragraphs_between(
     Tra ve ca HOP BAO cua khoi chu: giao dien can biet khoi nay nam dau de xo
     phan con lai ra DUNG CHO do, khong phai mo mot lop phu.
     """
+    # Chan tren CUNG: khong tim thay tieu de thi `top` bang 0, va khi do khoi
+    # se vet tron moi dong chu trong cot tu DINH TRANG xuong. Tren
+    # /giai-phap/man-hinh no nuot ca danh sach CLARITY/PROTECTION o y=502 roi
+    # do ra mot mang cao hon 1000px phu kin the san pham. Nut nao cung chi co
+    # the lay chu trong tam voi cua no.
+    top = max(top, bottom - HEADING_LOOKBACK)
+
     lines = [
         b
         for b in blocks
@@ -232,6 +261,18 @@ def paragraphs_between(
         and abs(b["x"] - button_x) <= SAME_COLUMN
     ]
     lines.sort(key=lambda b: (round(b["y"] / 10), b["x"]))
+
+    # Chi giu DAI LIEN MACH ngay tren nut. Di nguoc tu duoi len, gap mot khoang
+    # trong rong hon MAX_PARAGRAPH_GAP la sang khoi khac — dung lai. Nho vay
+    # mot khoi chu roi nam cung cot nhung cach xa han se khong bi gom vao.
+    if lines:
+        kept = [lines[-1]]
+        for line in reversed(lines[:-1]):
+            above = line["y"] + line["h"]
+            if kept[0]["y"] - above > MAX_PARAGRAPH_GAP:
+                break
+            kept.insert(0, line)
+        lines = kept
 
     out: list[str] = []
     for line in lines:
@@ -374,6 +415,14 @@ def main() -> int:
                 # Hop bao cua khoi chu — de xo noi dung ra dung cho do.
                 "bodyBox": body_box,
             }
+            red_rect = red_button_of(block, rects)
+            if red_rect:
+                entry["coverBox"] = {
+                    "x": round(red_rect["x"], 1),
+                    "y": round(red_rect["y"], 1),
+                    "w": round(red_rect["w"], 1),
+                    "h": round(red_rect["h"], 1),
+                }
             if href:
                 matched += 1
                 entry["href"] = href

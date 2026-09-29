@@ -28,10 +28,7 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-SUB_DIR = ROOT / "public" / "slices" / "sub"
-MAIN_DIR = ROOT / "public" / "slices"
-SUB_SPECS = ROOT / "src" / "data" / "subpages"
-MAIN_SPECS = ROOT / "src" / "data" / "pages"
+PUBLIC = ROOT / "public"
 
 #: Canh o vuong, do o ti le @2x.
 BLOCK = 128
@@ -56,43 +53,51 @@ def worst_block(a: Image.Image, b: Image.Image) -> tuple[float, int]:
     return worst, at
 
 
-def pairs(spec_dir: Path, slice_dir: Path):
-    for spec_path in sorted(spec_dir.glob("*.json")):
-        spec = json.loads(spec_path.read_text(encoding="utf-8"))
-        if not isinstance(spec, dict) or "slices" not in spec:
-            continue
-        stem = spec_path.stem
-        for index, slice_spec in enumerate(spec["slices"]):
-            two = slice_dir / f"{stem}-{index}@2x.webp"
-            three = slice_dir / f"{stem}-{index}@3x.webp"
-            if not two.is_file():
-                # Trang chinh dat ban 1x khong co hau to.
-                two = slice_dir / f"{stem}-{index}.webp"
-            if two.is_file() and three.is_file():
-                yield stem, index, slice_spec.get("y", 0), two, three
+def pairs():
+    """
+    MOI cap @2x/@3x o bat cu dau duoi public/.
+
+    Quet theo TEP chu khong theo page spec. Ban dau bo nay chi doc
+    src/data/pages va src/data/subpages, va da bo sot public/hero/ — anh hero
+    trang chu cung co cap @2x/@3x rieng, va ban @3x cua no nuong san ca thanh
+    menu lan doan chu gioi thieu. Ket qua: chu hien hai lan ngay tren man hinh
+    dau tien cua trang chu.
+
+    Hai cach dat ten:
+      X@2x.webp  <-> X@3x.webp          (anh hero, lat trang con)
+      X.webp     <-> X@3x.webp          (lat trang chinh: ban goc la @2x nhung
+                                         khong mang hau to)
+    """
+    seen: set[Path] = set()
+    for three in sorted(PUBLIC.rglob("*@3x.webp")):
+        stem = three.name[: -len("@3x.webp")]
+        for candidate in (three.parent / f"{stem}@2x.webp", three.parent / f"{stem}.webp"):
+            if candidate.is_file() and candidate not in seen:
+                seen.add(candidate)
+                yield candidate.relative_to(PUBLIC), candidate, three
+                break
 
 
 def main() -> int:
     bad = []
     total = 0
-    for spec_dir, slice_dir in ((SUB_SPECS, SUB_DIR), (MAIN_SPECS, MAIN_DIR)):
-        for stem, index, y, two, three in pairs(spec_dir, slice_dir):
-            total += 1
-            a = Image.open(two).convert("RGB")
-            b = Image.open(three).convert("RGB")
-            score, at = worst_block(a, b)
-            if score > LIMIT:
-                bad.append((score, stem, index, round(y + at / 2)))
+    for name, two, three in pairs():
+        total += 1
+        score, at = worst_block(
+            Image.open(two).convert("RGB"), Image.open(three).convert("RGB")
+        )
+        if score > LIMIT:
+            bad.append((score, str(name), at))
 
-    print(f"  Da so {total} cap lat @2x/@3x.")
+    print(f"  Da so {total} cap anh @2x/@3x duoi public/.")
     if not bad:
-        print("  Hai ti le khop nhau o moi trang.")
+        print("  Hai ti le khop nhau o moi anh.")
         return 0
 
-    print(f"\n  {len(bad)} lat co ban @3x KHAC ban @2x — nhieu kha nang bo xoa")
-    print("  nen chi dong toi @2x ma quen @3x:\n")
-    for score, stem, index, y in sorted(bad, reverse=True):
-        print(f"    lech {score:5.1f}  {stem}  lat {index}  quanh y={y}")
+    print(f"\n  {len(bad)} anh co ban @3x KHAC ban @2x — nhieu kha nang bo xoa")
+    print("  hoac bo va chi dong toi @2x ma quen @3x:\n")
+    for score, name, at in sorted(bad, reverse=True):
+        print(f"    lech {score:5.1f}  {name}  quanh hang {at} (@2x)")
     return 1
 
 

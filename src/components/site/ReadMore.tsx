@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Fragment, useState } from "react";
-import { toParagraphs, type CtaSpot } from "@/lib/cta-links";
+import { readMorePanel, toParagraphs, type CtaSpot } from "@/lib/cta-links";
 
 /**
  * Nut "XEM THÊM" ve san trong anh trang con.
@@ -26,19 +26,18 @@ function Expanded({ spot, onClose }: { spot: CtaSpot; onClose: () => void }) {
   // Ban thiet ke da noi ro cho nao xuong doan qua khoang cach giua cac dong;
   // chi doan theo do dai cau khi thieu du lieu do.
   const paragraphs = box.paragraphs.length > 0 ? box.paragraphs : toParagraphs(spot.body);
-  // Phu xuong qua ca chu "XEM THÊM" ve san trong anh, neu khong se hien hai cai
-  // cung luc: chu ve san va nut "Thu gọn" cua ta.
-  const cover = spot.y + spot.h - box.y + 6;
+  // Khung phai bao ca khoi chu LAN nut do ve san — xem readMorePanel.
+  const panel = readMorePanel(spot)!;
 
   return (
     <div
       className="tc-readmore-panel"
       data-dark-text={spot.darkText || undefined}
       style={{
-        left: box.x,
-        top: box.y,
-        width: box.width,
-        minHeight: Math.max(box.height, cover),
+        left: panel.left,
+        top: panel.top,
+        width: panel.width,
+        minHeight: panel.minHeight,
         background: spot.background ?? "var(--navy)",
         // Co chu / khoang dong lay dung tu ban thiet ke: phan xo ra phai noi
         // tiep lien mach voi phan dang hien, khong duoc doi kieu chu.

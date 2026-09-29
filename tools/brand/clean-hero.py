@@ -10,6 +10,12 @@ vach sang that (theo slide dang xem).
 Cach xoa: cac vung nay rat nho va nam tren nen troi/co muot, nen chi can chep
 mot dai pixel ngay ben canh de len la khong con dau vet.
 
+PHAI chay SAU tools/patch-retina-main.py: anh hero duoc dan xuat tu chinh lat
+nen home-0, ma ban @3x cua lat do luc moi cat ra con NUONG SAN chu (thanh menu,
+o tim kiem, doan gioi thieu) — bo va kia moi la cho don di. Chay truoc thi anh
+hero mang theo chu nuong san, va chu se hien hai lan tren man retina rong.
+Chuoi `npm run parse:prototype` da xep dung thu tu nay.
+
 Chay: python3 tools/brand/clean-hero.py
 Ket qua: public/hero/home-hero@2x.webp va @3x.webp
 """
