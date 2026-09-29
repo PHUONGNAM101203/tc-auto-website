@@ -16,13 +16,6 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
           ...document.querySelectorAll<HTMLImageElement>(".tc-lift-card img"),
         ].every((img) => img.complete && img.naturalWidth > 1),
     );
-    // Cung ly do voi app-cards: ep hieu ung xuat hien ve trang thai cuoi roi
-    // moi do, khong thi moc do bi lay giua chung.
-    await page.evaluate(() => {
-      for (const el of document.querySelectorAll(".rv, .sl, .tc-lift-card")) {
-        el.classList.add("is-in", "is-settled");
-      }
-    });
     await page.waitForTimeout(250);
   });
 
@@ -39,36 +32,52 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
    */
 
   /**
-   * Do do cao cua tung o SO VOI khung chua, khong phai so voi man hinh:
-   * `hover()` tu cuon trang vao tam nhin nen moi toa do tuyet doi deu doi.
+   * Do bang CHINH GIA TRI DICH CHUYEN cua o, khong do vi tri tren trang.
+   *
+   * Cach cu do `getBoundingClientRect().top` so voi khung chua. No dung, nhung
+   * phu thuoc vao viec trang da nam yen chua: luc cac lat nen phia duoi con
+   * dang tai thi trang con dan xuong, o truot ra khoi duoi con tro, trinh
+   * duyet coi nhu het ro chuot va o ha xuong — phep so cho ket qua sai. Doc
+   * thang `transform` thi trang co xe dich bao nhieu lan cung khong anh huong.
    */
-  const tops = (page: import("@playwright/test").Page) =>
-    page.$$eval(".tc-lift-card", (els) => {
-      const base = els[0].parentElement!.getBoundingClientRect().top;
-      return els.map((el) => el.getBoundingClientRect().top - base);
-    });
+  const shift = (page: import("@playwright/test").Page) =>
+    page.$$eval(".tc-lift-card", (els) =>
+      els.map(
+        (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
+      ),
+    );
 
   test("rê chuột vào ô nào thì đúng ô đó nổi lên", async ({ page }) => {
     const boxes = page.locator(".tc-lift-card");
     await expect(boxes).toHaveCount(4);
 
-    const before = await tops(page);
-    // Bon o von nam cung mot hang.
-    expect(new Set(before.map((t) => Math.round(t))).size).toBe(1);
+    // Luc nghi bon o deu nam yen tren cung mot hang.
+    expect(await shift(page), "lúc nghỉ không ô nào nổi").toEqual([0, 0, 0, 0]);
 
-    await boxes.nth(2).hover();
+    // RO LAI o moi vong tham do — xem chu thich trong app-cards.spec.ts: neu
+    // trang xe dich ngay sau khi `hover()` tinh xong toa do thi con tro nam
+    // hut ra ngoai o va khong bao gio tu sua.
+    const target = boxes.nth(2);
     await expect
-      .poll(async () => (await tops(page))[2], { message: "ô 2 phải nổi lên" })
-      .toBeLessThan(before[2] - 6);
-    const after = await tops(page);
+      .poll(
+        async () => {
+          await target.hover();
+          return (await shift(page))[2];
+        },
+        { message: "ô 2 phải nổi lên" },
+      )
+      .toBeLessThan(-6);
 
-    // Dung o duoc tro vao di len; ba o kia khong di len.
-    expect(after[2]).toBeLessThan(before[2] - 6);
+    // Dung o duoc tro vao di LEN. Ba o kia thi thiet ke cho LUN XUONG +2px cho
+    // o dang tro noi bat — nen dieu phai kiem la chung KHONG NOI LEN, chu
+    // khong phai chung dung yen.
+    const after = await shift(page);
+    expect(after[2], "ô 2 phải nổi").toBeLessThan(-6);
     for (const index of [0, 1, 3]) {
       expect(
         after[index],
         `ô ${index} không được nổi lên`,
-      ).toBeGreaterThanOrEqual(before[index] - 1);
+      ).toBeGreaterThanOrEqual(0);
     }
   });
 
@@ -126,27 +135,34 @@ test.describe("hai thẻ Câu chuyện đồng hành", () => {
     const cards = page.locator(".tc-lift-card");
     await expect(cards).toHaveCount(2);
 
+    // Cung ly do voi hai test tren: doc `transform` chu khong doc vi tri tren
+    // trang, de trang co xe dich thi phep do van dung.
     const read = () =>
-      page.$$eval(".tc-lift-card", (els) => {
-        const base = els[0].parentElement!.getBoundingClientRect().top;
-        return els.map((el) => ({
-          top: el.getBoundingClientRect().top - base,
+      page.$$eval(".tc-lift-card", (els) =>
+        els.map((el) => ({
+          shift: new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
           opacity: Number(getComputedStyle(el).opacity),
-        }));
-      });
+        })),
+      );
 
-    const before = await read();
-    expect(before[0].top).toBeCloseTo(before[1].top, 0);
+    expect((await read()).map((r) => r.shift)).toEqual([0, 0]);
 
-    await cards.first().hover();
+    const first = cards.first();
     await expect
-      .poll(async () => (await read())[0].top, {
-        message: "thẻ 0 phải nổi lên",
-      })
-      .toBeLessThan(before[0].top - 6);
+      .poll(
+        async () => {
+          await first.hover();
+          return (await read())[0].shift;
+        },
+        { message: "thẻ 0 phải nổi lên" },
+      )
+      .toBeLessThan(-6);
     const after = await read();
 
-    expect(after[0].top).toBeLessThan(before[0].top - 6);
+    expect(after[0].shift, "thẻ 0 phải nổi").toBeLessThan(-6);
+    expect(after[1].shift, "thẻ 1 không được nổi lên").toBeGreaterThanOrEqual(
+      0,
+    );
     expect(after[0].opacity).toBe(1);
     expect(after[1].opacity).toBeLessThan(1);
   });

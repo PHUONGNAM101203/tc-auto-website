@@ -14,16 +14,6 @@ test.describe("ba thẻ Ứng dụng", () => {
         (img) => img.complete && img.naturalWidth > 1,
       ),
     );
-    // Ep hieu ung XUAT HIEN ve trang thai cuoi truoc khi do. Khong lam vay thi
-    // moc do co the bi lay giua luc the con dang truot len, va phep so "the nao
-    // nhich len" mat nghia — day la cho test nay tung chap chon khi chay ca bo.
-    await page.evaluate(() => {
-      for (const el of document.querySelectorAll(
-        ".rv, .sl, .tc-card, .tc-card-lift",
-      )) {
-        el.classList.add("is-in", "is-settled");
-      }
-    });
     await page.waitForTimeout(250);
   });
 
@@ -31,29 +21,46 @@ test.describe("ba thẻ Ứng dụng", () => {
     const lifts = page.locator(".tc-card-lift");
     await expect(lifts).toHaveCount(3);
 
-    const tops = () =>
+    // Do bang CHINH GIA TRI DICH CHUYEN cua the, khong do vi tri tren trang.
+    //
+    // Cach cu lay `getBoundingClientRect().top` so voi khung chua. No dung,
+    // nhung phu thuoc vao viec trang da nam yen chua: luc cac lat nen phia
+    // duoi con dang tai thi trang con dan xuong, phan tu truot ra khoi duoi
+    // con tro, trinh duyet coi nhu het ro chuot va the ha xuong — phep so cho
+    // ket qua sai. Doc thang `transform` thi bao nhieu lan trang xe dich cung
+    // khong anh huong.
+    const shift = () =>
       page.$$eval(".tc-card-lift", (els) =>
         els.map(
-          (el) =>
-            el.getBoundingClientRect().top -
-            el.closest(".tc-cards")!.getBoundingClientRect().top,
+          (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
         ),
       );
 
-    const before = await tops();
-    await page.locator(".tc-card").first().hover();
-    // Doi DUNG TRANG THAI CAN CO thay vi doi mot khoang co dinh — khoang co
-    // dinh hut khi may ban vi chay nhieu luong song song.
-    await expect
-      .poll(async () => (await tops())[0], {
-        message: "ruột thẻ 0 phải nhấc lên",
-      })
-      .toBeLessThan(before[0] - 4);
-    const after = await tops();
+    expect(await shift(), "lúc nghỉ không thẻ nào nhấc").toEqual([0, 0, 0]);
 
-    expect(after[0]).toBeLessThan(before[0] - 4);
-    expect(after[1]).toBeCloseTo(before[1], 0);
-    expect(after[2]).toBeCloseTo(before[2], 0);
+    // RO LAI o moi vong tham do, khong ro mot lan roi thoi.
+    //
+    // `hover()` tinh toa do tam the RO̲I moi dua chuot toi. Neu ngay sau do
+    // trang xe dich (lat nen phia duoi vua tai xong) thi con tro nam hut ra
+    // ngoai the, ma chuot khong di chuyen nua nen khong bao gio tu sua —
+    // transform dung yen o 0 cho den het gio. Ro lai moi vong thi mot lan xe
+    // dich khong lam hong ca phep do.
+    const card = page.locator(".tc-card").first();
+    await expect
+      .poll(
+        async () => {
+          await card.hover();
+          return (await shift())[0];
+        },
+        { message: "ruột thẻ 0 phải nhấc lên" },
+      )
+      .toBeLessThan(-4);
+
+    // Dung the duoc tro vao nhac len; hai the kia dung yen.
+    const after = await shift();
+    expect(after[0], "thẻ 0 phải nhấc").toBeLessThan(-4);
+    expect(after[1], "thẻ 1 không được nhấc").toBe(0);
+    expect(after[2], "thẻ 2 không được nhấc").toBe(0);
   });
 
   test("khung thẻ không xê dịch khi rê chuột", async ({ page }) => {
