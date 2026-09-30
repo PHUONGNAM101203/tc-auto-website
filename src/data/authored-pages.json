@@ -223,6 +223,59 @@
         ],
         "source": "Tên dòng và thông số ở trên lấy từ trang chính hãng Winca Việt Nam (wincavn.com). Cần TC Auto xác nhận lại trước khi coi là số liệu bán hàng."
       }
+    },
+    {
+      "slug": "nhan-su/nhan-su-tieu-bieu",
+      "section": "nhan-su",
+      "parent": "/nhan-su/nhan-su-tc",
+      "parentLabel": "Nhân sự TC",
+      "label": "NHÂN SỰ TIÊU BIỂU THÁNG",
+      "title": "Nhân sự tiêu biểu tháng",
+      "heading": "Mỗi nỗ lực đều xứng đáng được ghi nhận.",
+      "lead": "Mỗi tháng, TC AUTO dành một khoảng thời gian để nhìn lại những đóng góp nổi bật của từng thành viên. Không chỉ là một danh hiệu, đây là sự ghi nhận cho tinh thần chủ động, những nỗ lực bền bỉ và giá trị mà mỗi cá nhân đã tạo nên trong hành trình chung của tập thể.",
+      "blocks": [
+        {
+          "heading": "Ghi nhận điều gì",
+          "paragraphs": [
+            "Danh hiệu không dành riêng cho người có con số đẹp nhất trong tháng. Một kỹ thuật viên nhận phần việc khó mà không ai muốn làm, một bạn tư vấn ở lại muộn để khách kịp nhận xe trước chuyến đi xa, một người chủ động viết lại quy trình cho cả nhóm cùng dùng — đều là những đóng góp được tính đến.",
+            "Điểm chung của họ là làm điều đúng khi không ai yêu cầu, và kết quả để lại có ích cho người đến sau."
+          ]
+        },
+        {
+          "heading": "Chọn như thế nào",
+          "paragraphs": [
+            "Đề cử đến từ chính đồng nghiệp trong bộ phận, vì họ là người thấy rõ nhất công việc hằng ngày của nhau. Trưởng bộ phận tổng hợp lại kèm dẫn chứng cụ thể: việc gì, vào lúc nào, thay đổi ra sao sau đó.",
+            "Ban điều hành xem xét các đề cử vào cuối tháng và chọn ra người được vinh danh. Danh sách đề cử được công bố nội bộ đầy đủ, không chỉ riêng người thắng — bởi phần lớn giá trị nằm ở việc mọi người nhìn thấy nhau."
+          ]
+        },
+        {
+          "heading": "Gương mặt tháng này",
+          "paragraphs": [
+            "Trần Thanh Hoàng — Trưởng nhóm Thiết kế đồ hoạ.",
+            "Bộ nhận diện của TC AUTO xuất hiện ở rất nhiều nơi cùng lúc: hồ sơ năng lực, bao bì sản phẩm, biển hiệu đại lý trải khắp ba miền, và toàn bộ hình ảnh trên các kênh trực tuyến. Giữ cho ngần ấy điểm chạm nói cùng một giọng là phần việc ít khi được nhìn thấy, nhưng thiếu nó thì thương hiệu rời rạc ngay."
+          ]
+        },
+        {
+          "heading": "Sau khi được vinh danh",
+          "paragraphs": [
+            "Người được vinh danh nhận phần thưởng của tháng, và câu chuyện của họ được kể lại trên kênh nội bộ cùng trang này. Điều quan trọng hơn phần thưởng là cách làm việc đó được nêu thành ví dụ cụ thể để cả công ty tham chiếu.",
+            "TC AUTO xem đây là một phần của văn hoá chứ không phải một hoạt động phong trào — nên nó diễn ra đều đặn mỗi tháng, kể cả những tháng bận nhất."
+          ]
+        }
+      ],
+      "pending": {
+        "heading": "Phần cần TC Auto bổ sung",
+        "items": [
+          "Tiêu chí chấm và thang điểm chính thức của chương trình, nếu đã ban hành thành văn bản.",
+          "Phần thưởng cụ thể kèm theo danh hiệu.",
+          "Danh sách người được vinh danh các tháng trước, kèm ảnh và mô tả đóng góp.",
+          "Ảnh chân dung độ phân giải cao của Trần Thanh Hoàng và trích dẫn phát biểu, nếu muốn đăng."
+        ]
+      },
+      "cta": {
+        "label": "Tìm hiểu văn hoá TC",
+        "href": "/nhan-su/van-hoa-tc"
+      }
     }
   ]
 }

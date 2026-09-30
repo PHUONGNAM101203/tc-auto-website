@@ -50,6 +50,12 @@ const HOTSPOT_TARGETS: Readonly<Record<string, string>> = {
 
   // Tuyển dụng -> vị trí đang tuyển
   "nhan-su/tuyen-dung#0": "/nhan-su/tuyen-dung/vi-tri-dang-tuyen",
+
+  // Nhân sự TC: hai nút "KHÁM PHÁ NGAY"
+  //   #0 duoi "TỔNG QUAN NHÂN SỰ" -> van hoa cua tap the
+  //   #1 duoi "NHÂN SỰ TIÊU BIỂU THÁNG" -> trang ta soan (thiet ke khong ve)
+  "nhan-su/nhan-su-tc#0": "/nhan-su/van-hoa-tc",
+  "nhan-su/nhan-su-tc#1": "/nhan-su/nhan-su-tieu-bieu",
 };
 
 /**
