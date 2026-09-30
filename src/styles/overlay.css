@@ -1528,9 +1528,28 @@
   transition: opacity 0.28s ease;
 }
 
-/* Khong re chuot: an han khung di, chi giu vi tri. */
+/* Khong re chuot: BO KHUNG, chi con mot gach chan do duoi muc dang xem.
+   Khach chot qua ba lan trao doi (30/09/2026):
+     - khung bao kin muc dang xem thi khong muon — no "de len" chu;
+     - nhung van phai biet minh dang o muc nao;
+     - va khung mo thi giu, de no luot theo chuot.
+   Nen: nghi = gach chan, re chuot = khung luot. Khung van giu dung vi tri o
+   muc dang xem nen lan re chuot sau no luot ra tu dung cho do. */
 .tc-navpill[data-resting] {
-  opacity: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.tc-navpill[data-resting]::after {
+  content: "";
+  position: absolute;
+  /* Le 14px moi ben = padding cua `.nv`, nen gach nam khit duoi chu. */
+  left: 14px;
+  right: 14px;
+  bottom: 1px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--red-nav);
 }
 
 .tc-navpill[data-ready] {

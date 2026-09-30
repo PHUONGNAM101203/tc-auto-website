@@ -93,17 +93,27 @@ test.describe("menu điều hướng", () => {
     await expect(page.locator(".tc-navpill")).toHaveCount(0);
   });
 
-  test("đứng yên thì KHÔNG có khung nào bao quanh mục đang xem", async ({
+  test("đứng yên thì chỉ GẠCH CHÂN đỏ, không có khung bao quanh", async ({
     page,
   }) => {
-    // Khach yeu cau bo khung mac dinh (30/09/2026): khung chi hien khi dang re
-    // chuot. No van GIU dung vi tri o muc dang xem de lan re chuot sau luot ra
-    // tu dung cho do.
+    // Khach chot qua ba lan trao doi (30/09/2026): khung bao kin muc dang xem
+    // thi khong muon, nhung van phai biet minh dang o muc nao — nen nghi la
+    // gach chan, re chuot moi hien khung.
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
     await expect(pill, "chỉ được có một khung").toHaveCount(1);
     await expect(pill).toHaveAttribute("data-resting", "true");
-    await expect(pill).toHaveCSS("opacity", "0");
+
+    const look = await pill.evaluate((el) => {
+      const cs = getComputedStyle(el);
+      const line = getComputedStyle(el, "::after");
+      return { bg: cs.backgroundColor, ring: cs.boxShadow, lineH: line.height };
+    });
+    expect(look.bg, "đứng yên thì không có khung").toMatch(
+      /rgba\(0, 0, 0, 0\)|transparent/,
+    );
+    expect(look.ring, "và không có viền").toBe("none");
+    expect(parseFloat(look.lineH), "phải có gạch chân").toBeGreaterThan(0);
 
     const [pillBox, itemBox] = await Promise.all([
       pill.boundingBox(),
@@ -113,7 +123,7 @@ test.describe("menu điều hướng", () => {
       toBeLessThan(2);
   });
 
-  test("rê chuột thì khung HIỆN RA và chạy theo, bỏ tay thì mờ đi", async ({
+  test("rê chuột thì khung HIỆN RA và chạy theo, bỏ tay thì về gạch chân", async ({
     page,
   }) => {
     await page.goto("/trai-nghiem");
@@ -123,13 +133,14 @@ test.describe("menu điều hướng", () => {
     await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
     await page.waitForTimeout(700);
     await expect(pill, "vẫn chỉ một khung").toHaveCount(1);
-    await expect(pill).toHaveCSS("opacity", "1");
+    const hovered = await pill.evaluate((el) => getComputedStyle(el).backgroundColor);
+    expect(hovered, "rê chuột thì phải hiện khung").not.toMatch(/rgba\(0, 0, 0, 0\)/);
     const away = await pill.evaluate((el) => el.getBoundingClientRect().x);
     expect(away, "khung phải chạy theo chuột").toBeGreaterThan(home);
 
     await page.mouse.move(20, 700);
     await page.waitForTimeout(900);
-    await expect(pill).toHaveCSS("opacity", "0");
+    await expect(pill).toHaveAttribute("data-resting", "true");
     const back = await pill.evaluate((el) => el.getBoundingClientRect().x);
     expect(Math.round(back), "và quay về mục đang xem").toBe(Math.round(home));
   });
