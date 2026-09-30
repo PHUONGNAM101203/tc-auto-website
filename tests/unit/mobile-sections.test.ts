@@ -48,7 +48,14 @@ describe("dữ liệu bản mobile", () => {
     //
     // giai-phap-004 = nhan "PHIM CÁCH NHIỆT": trong thiet ke cho nay chi co
     // chu tren nen, khong co anh minh hoa rieng.
-    const KNOWN_WITHOUT_IMAGE = new Set(["giai-phap-004"]);
+    //
+    // home-019 = "CÂU CHUYỆN KHỞI NGHIỆP": cho nay la mot CHONG ANH. Truoc
+    // day bo tach anh cat mot tam tu chong da ve san trong nen; tu 30/09/2026
+    // chong do bi xoa khoi nen (tools/brand/scrub-decks.py) va ca ba tam la
+    // anh that. Ban dien thoai lay thang ba tam do lam bang anh cuon
+    // (photoBlocks trong src/lib/mobile-blocks.ts) — mot tam cat rieng o day
+    // se thanh thua, hien hai lan cung mot anh.
+    const KNOWN_WITHOUT_IMAGE = new Set(["giai-phap-004", "home-019"]);
     const missing: string[] = [];
     for (const slug of slugs) {
       for (const section of getMobileSections(slug)) {
