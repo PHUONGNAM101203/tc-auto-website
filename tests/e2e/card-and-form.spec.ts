@@ -84,6 +84,11 @@ test.describe("form liên hệ trên điện thoại", () => {
       // Khoi PROTOTYPE dat chieu cao CUNG (nut 25px, o nhap 28px) cho bo cuc
       // canvas; o ban dien thoai chung phai tu co dan theo padding.
       expect(row.h, `${row.tag} bị cắt`).toBeGreaterThanOrEqual(40);
+      if (row.tag === "BUTTON") {
+        // Chu Viet HOA co dau o tren (Ử co ca rau lan dau hoi) va dau o duoi;
+        // khit qua thi chung cham mep, nhin nhu bi cat.
+        expect(row.h, "nút GỬI phải rộng rãi cho dấu tiếng Việt").toBeGreaterThanOrEqual(50);
+      }
       expect(
         row.sh - row.h,
         `${row.tag} có nội dung tràn ra ngoài`,

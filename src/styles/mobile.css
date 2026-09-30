@@ -286,9 +286,13 @@
 }
 
 .tc-m-form.ff button {
-  padding: 14px;
+  /* `line-height: 1` la vua khit chieu cao chu HOA — ma chu Viet con dau o
+     TREN dau (Ử co ca rau lan dau hoi) va dau o DUOI (Ậ, Ộ). Khit qua thi
+     chung cham mep, nhin nhu bi cat. 1.5 cho chung tho thoai mai. */
+  min-height: 52px;
+  padding: 15px 18px;
   border-radius: 8px;
-  font: 700 13px/1 "Montserrat", sans-serif;
+  font: 700 13px/1.5 "Montserrat", sans-serif;
   letter-spacing: 0.08em;
 }
 
