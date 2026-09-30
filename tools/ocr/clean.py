@@ -57,6 +57,45 @@ def kind_of(height: float) -> str:
     return "p"
 
 
+#: Hai dong coi la MOT khi le trai va be ngang gan nhu trung nhau...
+GHOST_X = 4.0
+GHOST_W = 8.0
+#: ...va hop cua chung phu len nhau tu muc nay tro len.
+GHOST_OVERLAP = 0.5
+
+
+def drop_ghosts(blocks: list[dict]) -> list[dict]:
+    """Bo cac dong bi doc HAI LAN o cung mot cho.
+
+    Ban thiet ke lam mo dan chu o cuoi vai khoi. Cho do OCR thuong doc ra hai
+    dong chong khit nhau: mot ban sac net va mot ban nhoe thanh vo nghia —
+    "conten credtor - vaeo zaror - szo content - vuan r nnn aoann" la ban nhoe
+    cua "Content Creator - Video Editor - SEO Content - Quản trị kinh doanh".
+    Ca hai deu duoc OCR cham diem tin cay 1, nen chi co HINH HOC phan biet
+    duoc: cung le trai, cung be ngang, hop chong len nhau.
+
+    Ban sac net luon CAO hon (net chu day hon nen hop cao hon), nen giu ban cao
+    hon va bo ban kia.
+    """
+    out: list[dict] = []
+    for block in sorted(blocks, key=lambda b: -float(b["h"])):
+        ghost = False
+        for keep in out:
+            if abs(block["x"] - keep["x"]) > GHOST_X:
+                continue
+            if abs(block["w"] - keep["w"]) > GHOST_W:
+                continue
+            top = max(block["y"], keep["y"])
+            bottom = min(block["y"] + block["h"], keep["y"] + keep["h"])
+            share = (bottom - top) / min(block["h"], keep["h"])
+            if share >= GHOST_OVERLAP:
+                ghost = True
+                break
+        if not ghost:
+            out.append(block)
+    return out
+
+
 def clean_page(blocks: list[dict], page_height: float) -> dict:
     kept: list[dict] = []
     for block in blocks:
@@ -82,6 +121,8 @@ def clean_page(blocks: list[dict], page_height: float) -> dict:
                 "h": round(float(block["h"]), 1),
             }
         )
+
+    kept = drop_ghosts(kept)
 
     # Thu tu doc: theo hang (gom cac khoi lech nhau < 12px vao cung hang), roi trai->phai.
     kept.sort(key=lambda b: (round(b["y"] / 12), b["x"]))
