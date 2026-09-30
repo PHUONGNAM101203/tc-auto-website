@@ -22,7 +22,7 @@
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
     "nhan-su": {
-      "image": "/mobile/nhan-su-hero.webp?v=f24ddf86",
+      "image": "/mobile/nhan-su-hero.webp?v=19ab3426",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
@@ -111,7 +111,7 @@
           "label": "KHÁM PHÁ NGAY",
           "itemId": "dai-ly-013"
         },
-        "image": "/mobile/dai-ly-2.webp?v=d498fa24"
+        "image": "/mobile/dai-ly-2.webp?v=1fd45a80"
       },
       {
         "id": "dai-ly-014",
@@ -229,7 +229,7 @@
           "label": "KHÁM PHÁ HỆ THỐNG ĐẠI LÝ",
           "itemId": "home-018"
         },
-        "image": "/mobile/home-3.webp?v=dda486ba"
+        "image": "/mobile/home-3.webp?v=3c489322"
       },
       {
         "id": "home-019",
@@ -239,8 +239,7 @@
         "cta": {
           "label": "KHÁM PHÁ CON NGƯỜI TC",
           "itemId": "home-022"
-        },
-        "image": "/mobile/home-4.webp?v=495fe16c"
+        }
       }
     ],
     "nhan-su": [

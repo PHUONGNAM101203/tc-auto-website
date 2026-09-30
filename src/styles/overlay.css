@@ -1063,84 +1063,70 @@
   }
 }
 
-/* ---------- Slider anh ve chet trong ban thiet ke ---------- */
-/* Thiet ke ve mot tam anh kem mui ten "›". Slide dau la anh CAT TU chinh ban
-   thiet ke, dat dung cho anh goc, nen trang thai ban dau khong doi mot pixel.
-   Xem tools/brand/extract-photo-sliders.py. */
+/* ---------- Chong anh xoe ---------- */
+/* Ban thiet ke ve mot chong 3-4 tam anh xoe len phia tren ben phai. Truoc day
+   chi tam TREN CUNG la phan tu that, may tam phia sau nam trong anh nen — tuc
+   la dung yen mai mai va khong lien quan gi den anh dang xem (khach goi dung
+   ten: "ảnh bịa", 30/09/2026). Nay ca chong deu la anh that.
+   Xem src/components/site/PhotoSlider.tsx. */
 
-.tc-photoslider {
+/* Thoi gian mot the bay tu tang nay sang tang khac.
+   PHAI khop voi SLIDE_MS trong PhotoSlider.tsx. */
+:root {
+  --tc-deck-ms: 520ms;
+}
+
+.tc-deck {
   position: absolute;
   z-index: 5;
-  /* LOT NEN DAC — day la cho tung gay loi "slider chong cheo".
-     Slide 0 duoc cat tu chinh ban thiet ke nen DAC hoan toan, che kin khung.
-     Nhung cac slide sau lay tu bo tai nguyen roi va giu kenh trong suot quanh
-     vien the (22-35% so diem anh). Ma ngay BEN DUOI khung nay, anh nen da ve
-     CHET tam anh cua slide 0 vao roi. Hau qua: chuyen sang slide 2 thi nhin
-     xuyen qua phan trong suot, thay tam anh cu -> hai tam chong len nhau.
-     Mau lay tu chinh anh nen, do ngay ben ngoai bon goc khung cua ca ba slider
-     (trang chu, dai ly, nhan su) — deu ra rgb(3,17,28).
-     O trang thai ban dau lop lot nay KHONG he lo ra vi slide 0 phu kin. */
-  background: #03111c;
 }
 
-/* Thoi gian mot the truot di. PHAI khop voi SLIDE_MS trong PhotoSlider.tsx —
-   het thoi gian nay component moi xep the vua truot ra sau chong. */
-:root {
-  --tc-stack-ms: 520ms;
-}
-
-.tc-photoslide {
+.tc-deck-card {
   position: absolute;
   inset: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  /* Goc tren BEN TRAI la tam khong doi cua quat: cac tang lui ve deu dich
+     sang phai va len tren tu goc do. */
+  transform-origin: 0 100%;
+  transition:
+    transform var(--tc-deck-ms) cubic-bezier(0.16, 1, 0.3, 1),
+    opacity var(--tc-deck-ms) ease,
+    /* z-index khong noi suy duoc — cho no doi mot nhat o GIUA duong bay, luc
+       hai the da di qua nhau, thi mat khong bat duoc cu nhay. */
+    z-index 0s linear calc(var(--tc-deck-ms) / 2);
+}
+
+.tc-deck-card img {
+  display: block;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  /* Cac the chua toi luot nam LUI VE SAU mot chut, dung sau the tren cung —
-     dung y thiet ke: mot chong anh chu khong phai mot o anh doi cho. */
-  transform: translateX(0) scale(0.965);
-  transition:
-    opacity 0.26s ease-out,
-    transform 0.26s ease-out;
-  pointer-events: none;
   user-select: none;
 }
 
-.tc-photoslide[data-on] {
-  opacity: 1;
-  transform: none;
-  z-index: 2;
-  /* Cho the cu truot di gan xong roi the moi len — de hai the khong de len nhau
-     giua chung. */
-  transition:
-    opacity 0.28s ease-in calc(var(--tc-stack-ms) * 0.45),
-    transform 0.34s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--tc-stack-ms) * 0.4);
+/* Tam tren cung dac hoan toan; may tam sau mo dan VA toi di, dung nhu ban
+   thiet ke ve — khong thi chong anh trong bet nhu mot dong giay. */
+.tc-deck-card:not([data-front]) img {
+  filter: brightness(0.62);
 }
 
-/* The dang ra khoi chong: luot sang PHAI (hoac trai neu bam lui), nho lai roi
-   mo di — het luot thi component xep no ra sau. */
-.tc-photoslide[data-leaving] {
-  opacity: 0;
-  z-index: 3;
-  transition:
-    opacity var(--tc-stack-ms) ease-in,
-    transform var(--tc-stack-ms) cubic-bezier(0.32, 0, 0.67, 0);
+/* Ro chuot vao mot tam phia sau: no sang len mot chut de nguoi dung biet bam
+   duoc. Tam tren cung khong can — no da sang san. */
+.tc-deck-card:not([data-front]):hover img,
+.tc-deck-card:not([data-front]):focus-visible img {
+  filter: brightness(0.86);
 }
 
-.tc-photoslide[data-leaving="1"] {
-  transform: translateX(46%) scale(0.9) rotate(1.4deg);
+.tc-deck-card:focus-visible {
+  outline: 2px solid var(--red-nav);
+  outline-offset: 4px;
 }
 
-.tc-photoslide[data-leaving="-1"] {
-  transform: translateX(-46%) scale(0.9) rotate(-1.4deg);
-}
-
-/* Tat hieu ung: doi anh dut khoat, khong truot. */
 @media (prefers-reduced-motion: reduce) {
-  .tc-photoslide,
-  .tc-photoslide[data-on],
-  .tc-photoslide[data-leaving] {
+  .tc-deck-card {
     transition: none;
-    transform: none;
   }
 }
 

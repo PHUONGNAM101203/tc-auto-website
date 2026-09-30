@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/dai-ly-2.webp?v=39bc40ca",
+      "src": "/slices/dai-ly-2.webp?v=f6e766c5",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 76842,
       "srcSet": [
         {
-          "src": "/slices/dai-ly-2.webp?v=39bc40ca",
+          "src": "/slices/dai-ly-2.webp?v=f6e766c5",
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-2@3x.webp?v=fbcc815b",
+          "src": "/slices/dai-ly-2@3x.webp?v=c2830c05",
           "scale": 3
         }
       ],

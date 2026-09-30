@@ -18,6 +18,22 @@ export interface Box {
   readonly height: number;
 }
 
+/** Do xoe cua chong anh: moi tang lui lai thi dich bao nhieu, mo di bao nhieu. */
+export interface DeckStep {
+  readonly x: number;
+  readonly y: number;
+  readonly fade: number;
+}
+
+/**
+ * Bac thang mac dinh cua chong anh, do tu chinh ban thiet ke.
+ *
+ * Tren trang chu: the truoc co mep phai o x = 1334, ca chong lan toi x = 1374,
+ * mep tren tu 2976 len 2936 — hai tang, moi tang 20px sang phai va 20px len
+ * tren. Hai chong con lai cung mot kieu xoe.
+ */
+export const DECK_STEP: DeckStep = { x: 20, y: -20, fade: 0.42 };
+
 export interface PhotoSlider {
   readonly id: string;
   readonly label: string;
@@ -27,6 +43,8 @@ export interface PhotoSlider {
   /** Mui ten LUI, neu thiet ke co ve (vi du muc "Con người TC"). */
   readonly prev?: Box;
   readonly slides: readonly string[];
+  /** Rieng chong nay xoe khac mac dinh thi khai o day. */
+  readonly deck?: DeckStep;
 }
 
 const PAGES = (data as unknown as { pages: Record<string, readonly PhotoSlider[]> }).pages;

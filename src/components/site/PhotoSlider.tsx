@@ -2,47 +2,44 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAutoplay } from "./useAutoplay";
-import {
-  nextSlide,
-  prevSlide,
-  type PhotoSlider as Slider,
-} from "@/lib/photo-sliders";
+import { DECK_STEP, type PhotoSlider as Slider } from "@/lib/photo-sliders";
 
 /**
- * Thoi gian mot the truot di. Phai KHOP voi `--tc-stack-ms` trong overlay.css:
- * het thoi gian nay thi the vua truot moi duoc xep ra sau chong.
+ * Thoi gian mot the bay tu tang nay sang tang khac. Phai KHOP voi
+ * `--tc-deck-ms` trong overlay.css.
  */
 const SLIDE_MS = 520;
 
 /**
- * Nhip tu luot va khoang lang sau khi bam tay — dung chung voi cac bang khac,
- * xem src/lib/slider-timing.ts.
- */
-
-/**
- * Mot tam anh trong ban thiet ke co ve san mui ten "›" — day la lop lam cho mui
- * ten do bam duoc.
+ * Chong anh xoe ra phia sau, giong ban thiet ke.
  *
- * Slide dau la anh CAT TU chinh ban thiet ke, dat dung cho anh goc, nen o trang
- * thai ban dau man hinh khong doi mot pixel nao. Cac slide sau lay tu bo tai
- * nguyen roi va GIU kenh trong suot, nho vay cac lop anh phia sau (van nam
- * trong anh nen) khong bi che. Bam mui ten thi chuyen anh, chay vong khong het.
+ * ── Truoc day sai o dau ────────────────────────────────────────────────────
+ * Ban thiet ke ve mot chong ba (hoac bon) tam anh xoe len phia tren ben phai.
+ * Chi co tam TREN CUNG la phan tu that; may tam phia sau nam trong anh nen —
+ * tuc la chung dung yen mai mai, va noi dung cua chung khong lien quan gi den
+ * anh dang xem. Khach goi dung ten: "ảnh bịa". Nay ca chong deu la anh that.
+ *
+ * ── Cach chuyen ────────────────────────────────────────────────────────────
+ * `order[d]` = tam nao dang nam o tang thu `d`, tang 0 la tren cung. Bam mui
+ * ten thi tam tren cung xuong day chong; bam thang vao mot tam thi tam do len
+ * dau. Huong di co san trong hinh hoc: cac tang phia sau nam o BEN PHAI va
+ * CAO HON, nen "ra sau" tu no la truot sang phai, "len dau" la truot sang
+ * trai — dung nhu khach mo ta, ma khong can viet rieng hieu ung nao.
+ *
+ * `z-index` khong noi suy duoc nen no doi mot nhat giua duong bay (do tre
+ * trong `transition`), luc hai the da di qua nhau.
  */
-function Slide({ slider }: { slider: Slider }) {
-  const [index, setIndex] = useState(0);
-  /**
-   * The dang TRUOT DI, kem huong. Thiet ke yeu cau: bam mui ten thi tam tren
-   * cung luot sang phai roi moi chuyen ra sau chong — chu khong phai mo cheo
-   * tai cho nhu truoc.
-   */
-  const [leaving, setLeaving] = useState<{ slide: number; dir: 1 | -1 } | null>(
-    null,
+function Deck({ slider }: { slider: Slider }) {
+  const count = slider.slides.length;
+  const [order, setOrder] = useState<readonly number[]>(() =>
+    slider.slides.map((_, i) => i),
   );
+  /** Dang co the bay: chan cu bam moi de hai cu khong chong len nhau. */
+  const busy = useRef(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  /** Cu bam trong luc dang truot — nho lai de lam ngay sau, dung bo. */
-  const queued = useRef<(1 | -1) | null>(null);
-  /** Ban MOI NHAT cua `go`, de cu bam duoc nho lai khong chay ban cu. */
-  const goRef = useRef<((dir: 1 | -1) => void) | null>(null);
+  /** Cu bam trong luc dang bay — nho lai, lam ngay sau. */
+  const queued = useRef<number | null>(null);
+  const bringRef = useRef<((depth: number) => void) | null>(null);
 
   useEffect(
     () => () => {
@@ -53,75 +50,79 @@ function Slide({ slider }: { slider: Slider }) {
     [],
   );
 
-  const go = useCallback(
-    (dir: 1 | -1) => {
-      const count = slider.slides.length;
+  /**
+   * Dua tam o tang `depth` len tren cung.
+   *
+   * `depth = 0` mang y nghia rieng: tam tren cung KHONG the len dau them nua,
+   * nen cu do duoc hieu la "cho no xuong day" — chinh la nut mui ten.
+   */
+  const bring = useCallback(
+    (depth: number) => {
       if (count < 2) {
         return;
       }
-      if (timer.current) {
-        // Dang truot: ghi nho cu bam nay roi lam ngay khi truot xong. Bo qua
-        // thi nguoi dung bam nhanh se thay nut "chet".
-        queued.current = dir;
+      if (busy.current) {
+        queued.current = depth;
         return;
       }
+
+      setOrder((current) => {
+        if (depth === 0) {
+          const [front, ...rest] = current;
+          return [...rest, front];
+        }
+        const picked = current[depth];
+        return [picked, ...current.filter((_, i) => i !== depth)];
+      });
+
       const reduce =
         typeof matchMedia === "function" &&
         matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      const advance = () =>
-        setIndex((current) =>
-          dir === 1 ? nextSlide(current, count) : prevSlide(current, count),
-        );
-
       if (reduce) {
-        advance();
         return;
       }
 
-      setLeaving({ slide: index, dir });
-      advance();
+      busy.current = true;
       timer.current = setTimeout(() => {
         timer.current = null;
-        setLeaving(null);
+        busy.current = false;
         const next = queued.current;
         queued.current = null;
-        if (next) {
-          // Goi qua ref chu khong goi thang `go`: goi thang la dung lai BAN CU
-          // cua ham, ban do con giu `index` cua nhip truoc nen cu bam duoc nho
-          // lai se nhay sai mot the.
-          goRef.current?.(next);
+        if (next !== null) {
+          // Goi qua ref: goi thang `bring` la dung lai ban cu cua ham, ban do
+          // con giu `order` cua nhip truoc nen cu bam duoc nho lai nhay sai.
+          bringRef.current?.(next);
         }
       }, SLIDE_MS);
     },
-    [index, slider.slides.length],
+    [count],
   );
 
-  // Gan trong effect chu khong gan luc render: ghi vao ref giua render la tac
-  // dung phu, React co the render lai ma khong dung ket qua do.
   useEffect(() => {
-    goRef.current = go;
-  }, [go]);
+    bringRef.current = bring;
+  }, [bring]);
 
   // Tu chay 5 giay mot nhip; dung khi re chuot, khi ngoai khung nhin, va mot
   // lat sau moi cu bam tay. Xem src/components/site/useAutoplay.ts.
   const { attach, hoverProps, nudge, playing } = useAutoplay<HTMLDivElement>(
-    () => goRef.current?.(1),
-    slider.slides.length > 1,
+    () => bringRef.current?.(0),
+    count > 1,
   );
 
-  /** Bam mui ten: chuyen anh ngay VA bat dau khoang lang. */
-  const goByHand = (dir: 1 | -1) => {
+  const byHand = (depth: number) => {
     nudge();
-    go(dir);
+    bring(depth);
   };
+
+  /** Tang cua tung tam, tra cuu nguoc tu `order`. */
+  const depthOf = (slide: number) => order.indexOf(slide);
 
   return (
     <>
       <div
         ref={attach}
         {...hoverProps}
-        className="tc-photoslider"
+        className="tc-deck"
         data-playing={playing || undefined}
         style={{
           left: slider.box.x,
@@ -133,26 +134,45 @@ function Slide({ slider }: { slider: Slider }) {
         aria-roledescription="băng chuyền"
         aria-label={slider.label}
       >
-        {slider.slides.map((src, slideIndex) => (
-          /* eslint-disable-next-line @next/next/no-img-element -- anh cat san tu
-             ban thiet ke o ti le goc, khong qua image optimizer */
-          <img
-            key={src}
-            src={src}
-            alt={slideIndex === index ? slider.label : ""}
-            aria-hidden={slideIndex === index ? undefined : true}
-            className="tc-photoslide"
-            data-on={slideIndex === index || undefined}
-            data-leaving={
-              leaving?.slide === slideIndex ? leaving.dir : undefined
-            }
-            width={slider.box.width}
-            height={slider.box.height}
-            loading="lazy"
-            decoding="async"
-            draggable={false}
-          />
-        ))}
+        {slider.slides.map((src, slide) => {
+          const depth = depthOf(slide);
+          const front = depth === 0;
+          const step = slider.deck ?? DECK_STEP;
+          return (
+            <button
+              key={src}
+              type="button"
+              className="tc-deck-card"
+              data-front={front || undefined}
+              style={{
+                transform: `translate(${step.x * depth}px, ${step.y * depth}px)`,
+                zIndex: count - depth,
+                opacity: front ? 1 : Math.max(0.18, 1 - step.fade * depth),
+              }}
+              // Tam tren cung bam vao thi xuong day; tam phia sau bam vao thi
+              // len dau. Chinh la hai cu khach mo ta.
+              onClick={() => byHand(depth)}
+              aria-label={
+                front
+                  ? `${slider.label} — xem ảnh tiếp theo`
+                  : `${slider.label} — xem ảnh thứ ${slide + 1}`
+              }
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element -- anh cat
+                  san tu ban thiet ke o ti le goc, khong qua image optimizer */}
+              <img
+                src={src}
+                alt={front ? slider.label : ""}
+                aria-hidden={front ? undefined : true}
+                width={slider.box.width}
+                height={slider.box.height}
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+              />
+            </button>
+          );
+        })}
       </div>
 
       {/* Mui ten dat theo toa do CANVAS chu khong long trong khung anh: trong
@@ -162,7 +182,7 @@ function Slide({ slider }: { slider: Slider }) {
           type="button"
           className="tc-photoslider-arrow"
           data-dir="prev"
-          onClick={() => goByHand(-1)}
+          onClick={() => byHand(count - 1)}
           {...hoverProps}
           style={{
             left: slider.prev.x,
@@ -177,7 +197,7 @@ function Slide({ slider }: { slider: Slider }) {
       <button
         type="button"
         className="tc-photoslider-arrow"
-        onClick={() => goByHand(1)}
+        onClick={() => byHand(0)}
         {...hoverProps}
         style={{
           left: slider.arrow.x,
@@ -198,7 +218,7 @@ export function PhotoSliders({ sliders }: { sliders: readonly Slider[] }) {
   return (
     <>
       {sliders.map((slider) => (
-        <Slide key={slider.id} slider={slider} />
+        <Deck key={slider.id} slider={slider} />
       ))}
     </>
   );

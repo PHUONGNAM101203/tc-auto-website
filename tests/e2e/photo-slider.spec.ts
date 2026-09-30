@@ -7,9 +7,9 @@ import { expect, test } from "@playwright/test";
 test.describe("slider ảnh Câu chuyện khởi nghiệp", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
-    await page.locator(".tc-photoslider").scrollIntoViewIfNeeded();
+    await page.locator(".tc-deck").scrollIntoViewIfNeeded();
     await page.waitForFunction(() =>
-      [...document.querySelectorAll<HTMLImageElement>(".tc-photoslide")].every(
+      [...document.querySelectorAll<HTMLImageElement>(".tc-deck img")].every(
         (img) => img.complete && img.naturalWidth > 1,
       ),
     );
@@ -17,8 +17,10 @@ test.describe("slider ảnh Câu chuyện khởi nghiệp", () => {
   });
 
   const shown = (page: import("@playwright/test").Page) =>
-    page.$$eval(".tc-photoslide[data-on]", (els) =>
-      els.map((el) => el.getAttribute("src")!.split("/").pop()),
+    page.$$eval(".tc-deck-card[data-front]", (els) =>
+      els.map((el) =>
+        el.querySelector("img")!.getAttribute("src")!.split("/").pop(),
+      ),
     );
 
   test("bấm mũi tên thì đổi sang ảnh khác", async ({ page }) => {
@@ -35,7 +37,7 @@ test.describe("slider ảnh Câu chuyện khởi nghiệp", () => {
 
   test("chạy vòng: qua hết ảnh thì quay lại ảnh đầu", async ({ page }) => {
     const first = (await shown(page))[0];
-    const count = await page.locator(".tc-photoslide").count();
+    const count = await page.locator(".tc-deck .tc-deck-card").count();
     expect(count).toBeGreaterThanOrEqual(2);
 
     const seen = new Set<string>([first!]);
@@ -53,7 +55,7 @@ test.describe("slider ảnh Câu chuyện khởi nghiệp", () => {
   });
 
   test("ảnh đầu phủ đúng chỗ tấm ảnh trong thiết kế", async ({ page }) => {
-    const box = await page.locator(".tc-photoslider").evaluate((el) => {
+    const box = await page.locator(".tc-deck").evaluate((el) => {
       const rect = el.getBoundingClientRect();
       const canvas = document.querySelector(".tc-canvas")!.getBoundingClientRect();
       const zoom = canvas.width / 1440;
@@ -73,20 +75,22 @@ test.describe("slider ảnh Câu chuyện khởi nghiệp", () => {
 test.describe("slider ảnh Chân dung đại lý", () => {
   test("bấm mũi tên thì đổi ảnh, chạy vòng không hết", async ({ page }) => {
     await page.goto("/dai-ly");
-    await page.locator(".tc-photoslider").scrollIntoViewIfNeeded();
+    await page.locator(".tc-deck").scrollIntoViewIfNeeded();
     await page.waitForFunction(() =>
-      [...document.querySelectorAll<HTMLImageElement>(".tc-photoslide")].every(
+      [...document.querySelectorAll<HTMLImageElement>(".tc-deck img")].every(
         (img) => img.complete && img.naturalWidth > 1,
       ),
     );
     await page.waitForTimeout(300);
 
     const shown = () =>
-      page.$$eval(".tc-photoslide[data-on]", (els) =>
-        els.map((el) => el.getAttribute("src")!.split("/").pop()),
+      page.$$eval(".tc-deck-card[data-front]", (els) =>
+        els.map((el) =>
+          el.querySelector("img")!.getAttribute("src")!.split("/").pop(),
+        ),
       );
 
-    const count = await page.locator(".tc-photoslide").count();
+    const count = await page.locator(".tc-deck .tc-deck-card").count();
     expect(count).toBeGreaterThanOrEqual(2);
 
     const first = (await shown())[0];
@@ -108,9 +112,9 @@ test.describe("slider ảnh Chân dung đại lý", () => {
 test.describe("slider ảnh Con người TC", () => {
   test("bấm lùi và bấm tiến đều đổi ảnh, chạy vòng hai chiều", async ({ page }) => {
     await page.goto("/nhan-su");
-    await page.locator(".tc-photoslider").scrollIntoViewIfNeeded();
+    await page.locator(".tc-deck").scrollIntoViewIfNeeded();
     await page.waitForFunction(() =>
-      [...document.querySelectorAll<HTMLImageElement>(".tc-photoslide")].every(
+      [...document.querySelectorAll<HTMLImageElement>(".tc-deck img")].every(
         (img) => img.complete && img.naturalWidth > 1,
       ),
     );
@@ -118,8 +122,10 @@ test.describe("slider ảnh Con người TC", () => {
 
     await expect(page.locator(".tc-photoslider-arrow")).toHaveCount(2);
     const shown = () =>
-      page.$$eval(".tc-photoslide[data-on]", (els) =>
-        els.map((el) => el.getAttribute("src")!.split("/").pop()),
+      page.$$eval(".tc-deck-card[data-front]", (els) =>
+        els.map((el) =>
+          el.querySelector("img")!.getAttribute("src")!.split("/").pop(),
+        ),
       );
 
     const first = (await shown())[0];

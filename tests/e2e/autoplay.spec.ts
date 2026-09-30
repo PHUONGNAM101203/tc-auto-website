@@ -65,8 +65,10 @@ const heroShown = (page: Page) =>
 
 const photoShown = (page: Page) =>
   page
-    .$$eval(".tc-photoslide[data-on]", (els) =>
-      els.map((el) => el.getAttribute("src")!.split("/").pop()),
+    .$$eval(".tc-deck-card[data-front]", (els) =>
+      els.map((el) =>
+        el.querySelector("img")!.getAttribute("src")!.split("/").pop(),
+      ),
     )
     .then((all) => all[0]);
 
@@ -113,9 +115,9 @@ test.describe("các băng phía dưới — 5 giây", () => {
   for (const route of ["/", "/dai-ly", "/nhan-su"]) {
     test(`băng ảnh ${route} — nhịp vào khoảng 5 giây`, async ({ page }) => {
       await page.goto(route);
-      await settle(page, ".tc-photoslider");
+      await settle(page, ".tc-deck");
       await page.waitForFunction(() =>
-        [...document.querySelectorAll<HTMLImageElement>(".tc-photoslide")].every(
+        [...document.querySelectorAll<HTMLImageElement>(".tc-deck img")].every(
           (img) => img.complete && img.naturalWidth > 1,
         ),
       );
@@ -148,7 +150,7 @@ test.describe("các băng phía dưới — 5 giây", () => {
   });
 
   for (const [what, box] of [
-    ["băng ảnh", ".tc-photoslider"],
+    ["băng ảnh", ".tc-deck"],
     ["dải thẻ Giải pháp", ".tc-solutions"],
   ] as const) {
     test(`${what} — rê chuột vào thì dừng`, async ({ page }) => {
@@ -174,7 +176,7 @@ test.describe("các băng phía dưới — 5 giây", () => {
     page,
   }) => {
     await page.goto("/");
-    await settle(page, ".tc-photoslider");
+    await settle(page, ".tc-deck");
     await page.locator(".tc-photoslider-arrow").first().click();
     await page.waitForTimeout(900);
     await page.mouse.move(5, 5);
@@ -195,11 +197,11 @@ test.describe("các băng phía dưới — 5 giây", () => {
     await page.goto("/");
     await page.evaluate(() => scrollTo(0, 0));
     await page.waitForTimeout(500);
-    expect(await page.locator(".tc-photoslider[data-playing]").count()).toBe(0);
+    expect(await page.locator(".tc-deck[data-playing]").count()).toBe(0);
 
-    await settle(page, ".tc-photoslider");
+    await settle(page, ".tc-deck");
     expect(
-      await page.locator(".tc-photoslider[data-playing]").count(),
+      await page.locator(".tc-deck[data-playing]").count(),
       "cuộn tới thì phải bắt đầu chạy",
     ).toBeGreaterThan(0);
   });

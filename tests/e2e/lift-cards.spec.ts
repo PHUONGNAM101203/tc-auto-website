@@ -102,9 +102,19 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
       );
 
     expect(await opacity()).toEqual([1, 1, 1, 1]);
-    await page.locator(`${TECH} .tc-lift-card`).first().hover();
+    // Re chuot LAI moi vong doi: anh tai theo luot cuon co the lam bo cuc xe
+    // dich vai pixel sau cu hover dau, the la con tro tuot ra ngoai o va trang
+    // thai hover mat — cho mai khong thay. Xem cung kieu o cac spec khac.
+    const hover = () => page.locator(`${TECH} .tc-lift-card`).first().hover();
+    await hover();
     await expect
-      .poll(async () => (await opacity())[1], { message: "ô 1 phải mờ đi" })
+      .poll(
+        async () => {
+          await hover();
+          return (await opacity())[1];
+        },
+        { message: "ô 1 phải mờ đi" },
+      )
       .toBeLessThan(1);
 
     const after = await opacity();

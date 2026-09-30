@@ -14,6 +14,38 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Chong anh xoe: ca chong deu la anh THAT ──────────────────────────────
+  // Ban thiet ke ve mot chong 3-4 tam xoe len phia tren ben phai, nhung chi
+  // tam TREN CUNG la phan tu that — may tam phia sau nam trong anh nen. Tuc la
+  // chung dung yen mai mai va noi dung khong lien quan gi den anh dang xem.
+  // Khach goi dung ten: "ảnh bịa" (30/09/2026), va yeu cau bam vao tam nao thi
+  // tam do nhay len dau.
+  // Nay chong ve san da bi xoa khoi anh (tools/brand/scrub-decks.py) va ca
+  // chong do component ve bang anh that. Hinh hoc giu dung ban thiet ke: moi
+  // tang lui lai dich 20px sang phai va 20px len tren — do tu chinh frame goc
+  // (mep phai the truoc 1334, ca chong lan toi 1374).
+  // Xem src/components/site/PhotoSlider.tsx.
+  {
+    page: "home",
+    box: { x: 448, y: 2926, width: 936, height: 436 },
+    reason:
+      "Chong anh 'Câu chuyện khởi nghiệp': hai tam phia sau vốn vẽ chết trong " +
+      "ảnh, nay là ảnh thật và bấm vào thì nhảy lên đầu.",
+  },
+  {
+    page: "dai-ly",
+    box: { x: 640, y: 2117, width: 757, height: 476 },
+    reason:
+      "Chong anh 'Chân dung đại lý': hai tấm phía sau vốn vẽ chết trong ảnh, " +
+      "nay là ảnh thật và bấm vào thì nhảy lên đầu.",
+  },
+  {
+    page: "nhan-su",
+    box: { x: 300, y: 1242, width: 891, height: 527 },
+    reason:
+      "Chong anh 'Con người TC': ba tấm phía sau vốn vẽ chết trong ảnh, nay " +
+      "là ảnh thật và bấm vào thì nhảy lên đầu.",
+  },
   // ── Dai anh "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" dung lai thanh bang chuyen ─────────
   // Thiet ke ve chet nam tam anh nghieng dan ra hai ben — y la mot bang
   // chuyen. Khach yeu cau bam vao tam nao thi tam do chay vao giua
@@ -45,63 +77,50 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "Bo phan chu nuong san trong anh hero — chu do phan tu that ve, khong " +
       "de hai ban chong len nhau nua.",
   },
-  // ── Anh hero trang chu: bo phan chu nuong san trong anh ──────────────────
-  // Ban thiet ke nuong "DRIVE · EXPERIENCE · ELEVATE" va ba dong gioi thieu
-  // vao chinh tam anh hero, trong khi chinh nhung dong do cung la phan tu that
-  // de doc va chon duoc. Hai ban chong khit nen binh thuong khong ai thay;
-  // nhung luc phong web chua tai xong, ban that ve bang phong du phong co be
-  // ngang khac — the la chu hien BONG DOI. Khach bao ba lan (29-30/09/2026).
-  // Nay anh hero duoc dung tu TAM ANH GOC sach chu ("Rectangle 1.png"), chi
-  // dan lai logo va cot bieu tuong; chu do phan tu that ve, mot lan duy nhat.
-  // Xem tools/brand/clean-hero.py.
-  {
-    page: "home",
-    box: { x: 270, y: 260, width: 420, height: 195 },
-    reason:
-      "Bo phan chu nuong san trong anh hero — chu do phan tu that ve, khong " +
-      "de hai ban chong len nhau nua.",
-  },
-  // ── Danh dau muc menu dang xem: GACH CHAN thay cho KHOI NEN ──────────────
-  // Ban thiet ke ve mot khoi nen mo bao quanh muc menu dang xem. Khach da BA
-  // LAN bao khoi do "de len" muc menu va yeu cau bo (29-30/09/2026), nen muc
-  // dang xem gio duoc danh dau bang gach chan do — cung ngon ngu voi menu con,
-  // ma menu con thi chinh khach chon kieu do.
-  // Vung khai bao la dung o viên pill tren tung trang, noi ra 4px moi ben cho
-  // phan khu rang cua. Trang chu khong co muc nao sang nen khong co o day.
+  // ── Khung quanh muc menu dang xem: xoa khoi ANH, ve lai bang phan tu that ─
+  // Ban thiet ke ve mot khung bo tron quanh muc menu dang xem, NGAY TRONG anh
+  // nen. Chu tren nav thi la phan tu that, rieng cai khung nam lai trong anh —
+  // ma khung trong anh thi khong nhuc nhich duoc, trong khi khung truot that
+  // dau dung len tren no. Thanh hai lop chong nhau, khach bao nam lan
+  // (29-30/09/2026) truoc khi tim ra thu pham.
+  // Nay khung ve san da bi xoa khoi anh (tools/scrub-nav.py) va khung truot
+  // that la dau duy nhat: dau o muc dang xem, luot khi re chuot sang muc khac.
+  // Vung khai bao noi ra 4px moi ben cho phan khu rang cua. Trang chu khong co
+  // muc nao dang xem nen khong co o day.
   {
     page: "trai-nghiem",
     box: { x: 425, y: 44, width: 149, height: 34 },
     reason:
-      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
-      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+      "Khung ve san trong anh da bi xoa; khung truot that dau o muc dang xem " +
+      "va luot theo chuot. Xem .tc-navpill trong src/styles/overlay.css.",
   },
   {
     page: "giai-phap",
     box: { x: 567, y: 44, width: 123, height: 34 },
     reason:
-      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
-      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+      "Khung ve san trong anh da bi xoa; khung truot that dau o muc dang xem " +
+      "va luot theo chuot. Xem .tc-navpill trong src/styles/overlay.css.",
   },
   {
     page: "cong-nghe",
     box: { x: 683, y: 44, width: 140, height: 34 },
     reason:
-      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
-      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+      "Khung ve san trong anh da bi xoa; khung truot that dau o muc dang xem " +
+      "va luot theo chuot. Xem .tc-navpill trong src/styles/overlay.css.",
   },
   {
     page: "dai-ly",
     box: { x: 816, y: 44, width: 94, height: 34 },
     reason:
-      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
-      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+      "Khung ve san trong anh da bi xoa; khung truot that dau o muc dang xem " +
+      "va luot theo chuot. Xem .tc-navpill trong src/styles/overlay.css.",
   },
   {
     page: "nhan-su",
     box: { x: 903, y: 44, width: 117, height: 34 },
     reason:
-      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
-      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+      "Khung ve san trong anh da bi xoa; khung truot that dau o muc dang xem " +
+      "va luot theo chuot. Xem .tc-navpill trong src/styles/overlay.css.",
   },
   // ── Bon khoi chu bi designer DAN LAI CHINH NO 2-4 lan ────────────────────
   // Cung mot cau, khong sai mot dau phay. Tren khung co dinh cua Figma phan
