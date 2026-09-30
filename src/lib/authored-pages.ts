@@ -18,6 +18,23 @@ export interface AuthoredBlock {
   readonly paragraphs: readonly string[];
 }
 
+/** Mot dong san pham va cac thong so cong bo duoc. */
+export interface AuthoredProduct {
+  readonly name: string;
+  readonly tagline: string;
+  readonly specs: readonly { readonly label: string; readonly value: string }[];
+  /** Noi thang khi hang chua cong bo thong so — dung doan. */
+  readonly note?: string;
+}
+
+export interface AuthoredProducts {
+  readonly heading: string;
+  readonly intro: string;
+  readonly items: readonly AuthoredProduct[];
+  /** Noi ro so lieu lay tu dau, de nguoi doc va TC Auto cung kiem duoc. */
+  readonly source: string;
+}
+
 export interface AuthoredPage {
   readonly slug: string;
   readonly section: PageSlug;
@@ -29,6 +46,8 @@ export interface AuthoredPage {
   readonly heading: string;
   readonly lead: string;
   readonly blocks: readonly AuthoredBlock[];
+  /** Chi mot so trang co: danh sach dong san pham kem thong so. */
+  readonly products?: AuthoredProducts;
   /** Nhung gi con cho TC Auto cung cap — noi thang thay vi bia ra. */
   readonly pending: { readonly heading: string; readonly items: readonly string[] };
   readonly cta: { readonly label: string; readonly href: string };

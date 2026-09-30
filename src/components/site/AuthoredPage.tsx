@@ -31,6 +31,35 @@ export function AuthoredPage({ page }: { page: Page }) {
         </section>
       ))}
 
+      {page.products ? (
+        <section className="tc-doc-products" aria-labelledby="tc-doc-products-title">
+          <h2 id="tc-doc-products-title">{page.products.heading}</h2>
+          <p className="tc-doc-products-intro">{page.products.intro}</p>
+
+          <ul>
+            {page.products.items.map((product) => (
+              <li key={product.name}>
+                <h3>{product.name}</h3>
+                <p>{product.tagline}</p>
+                {product.specs.length > 0 ? (
+                  <dl>
+                    {product.specs.map((spec) => (
+                      <div key={spec.label}>
+                        <dt>{spec.label}</dt>
+                        <dd>{spec.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : null}
+                {product.note ? <p className="tc-doc-products-note">{product.note}</p> : null}
+              </li>
+            ))}
+          </ul>
+
+          <p className="tc-doc-source">{page.products.source}</p>
+        </section>
+      ) : null}
+
       <aside className="tc-doc-pending">
         <h2>{page.pending.heading}</h2>
         <ul>

@@ -131,15 +131,98 @@
       "pending": {
         "heading": "Đang cập nhật",
         "items": [
-          "Danh sách đầy đủ các bản Bravo kèm thông số kỹ thuật và hình ảnh sản phẩm",
-          "Bảng giá trọn gói theo từng dòng xe"
+          "Thông số đầy đủ của Bravo B100 PRO",
+          "Giá bán và chính sách bảo hành của từng dòng Bravo",
+          "Danh sách dòng xe lắp vừa cho từng bản",
+          "Ảnh thực tế sau khi lắp trên xe"
         ]
       },
       "cta": {
         "label": "LIÊN HỆ TƯ VẤN",
         "href": "/giai-phap/man-hinh"
       },
-      "parentLabel": "Màn hình ô tô"
+      "parentLabel": "Màn hình ô tô",
+      "products": {
+        "heading": "Ba dòng Bravo",
+        "intro": "Bravo là dòng màn hình do chính Winca làm ra, hướng tới mức chi phí dễ chịu hơn mà vẫn giữ nguyên cách lắp và cách bảo hành. Trang chủ Winca Việt Nam hiện niêm yết ba dòng.",
+        "items": [
+          {
+            "name": "Bravo B10 LITE",
+            "tagline": "Bản tiết kiệm nhất, giữ nguyên cách dùng",
+            "specs": [
+              {
+                "label": "Màn hình",
+                "value": "9–10 inch, chống chói"
+              },
+              {
+                "label": "Độ phân giải",
+                "value": "1280 × 720"
+              },
+              {
+                "label": "Vi xử lý",
+                "value": "8581, 8 nhân 1.6GHz"
+              },
+              {
+                "label": "RAM / Bộ nhớ",
+                "value": "2GB / 32GB"
+              },
+              {
+                "label": "Âm thanh",
+                "value": "IC Radio 8035, có DSP chỉnh âm"
+              },
+              {
+                "label": "Dẫn đường",
+                "value": "Vietmap Live trọn đời, Google Maps, Navitel"
+              },
+              {
+                "label": "Camera",
+                "value": "Hành trình và lùi"
+              },
+              {
+                "label": "Khác",
+                "value": "Ra lệnh giọng nói ba giọng vùng miền, cảm biến áp suất lốp"
+              }
+            ]
+          },
+          {
+            "name": "Bravo B100",
+            "tagline": "Nhiều RAM hơn cho người hay mở nhiều ứng dụng",
+            "specs": [
+              {
+                "label": "Màn hình",
+                "value": "9–10 inch, chống chói"
+              },
+              {
+                "label": "Độ phân giải",
+                "value": "1280 × 720"
+              },
+              {
+                "label": "Hệ điều hành",
+                "value": "Android 10"
+              },
+              {
+                "label": "Vi xử lý",
+                "value": "8581, 8 nhân 1.6GHz"
+              },
+              {
+                "label": "RAM / Bộ nhớ",
+                "value": "4GB / 32GB"
+              },
+              {
+                "label": "Âm thanh",
+                "value": "Có DSP chỉnh âm"
+              }
+            ]
+          },
+          {
+            "name": "Bravo B100 PRO",
+            "tagline": "Bản cao nhất của dòng Bravo",
+            "specs": [],
+            "note": "Winca có niêm yết dòng này nhưng chưa công bố thông số chi tiết."
+          }
+        ],
+        "source": "Tên dòng và thông số ở trên lấy từ trang chính hãng Winca Việt Nam (wincavn.com). Cần TC Auto xác nhận lại trước khi coi là số liệu bán hàng."
+      }
     }
   ]
 }
