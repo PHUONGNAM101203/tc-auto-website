@@ -503,26 +503,17 @@ test.describe("mọi trang đều bấm tới được", () => {
 });
 
 test.describe("ba thẻ Ứng dụng trên trang Công nghệ", () => {
-  test("bấm thẻ nào là vào thẳng trang của mục đó", async ({ page }) => {
+  test("thẻ ở giữa dẫn thẳng sang trang của mục đó", async ({ page }) => {
+    // Ba the nay xep kieu bang chuyen: bam the ben canh thi no chay vao giua,
+    // chi the DANG O GIUA moi dan sang trang. Xem AppCards.tsx.
     await page.goto("/cong-nghe");
-    const cards = page.locator("a.tc-card");
-    await expect(cards).toHaveCount(3);
-    // Cach lam cu (vung bam trong suot + bang gioi thieu) da bi bo hoan toan.
-    await expect(page.locator(".tc-card-link")).toHaveCount(0);
-
-    const hrefs = await cards.evaluateAll((els) =>
-      els.map((el) => el.getAttribute("href")),
-    );
-    expect(hrefs).toEqual([
-      "/cong-nghe/ung-dung",
-      "/cong-nghe/ung-dung/kho-ung-dung",
-      "/cong-nghe/ung-dung/cap-nhat-va-loi",
-    ]);
-
     await page.locator(".tc-cards").scrollIntoViewIfNeeded();
-    await cards.first().click();
-    await expect(page).toHaveURL("/cong-nghe/ung-dung");
-    // Khong mo bang gioi thieu nao.
-    await expect(page.locator(".tc-readmore-card")).toHaveCount(0);
+    await page.waitForTimeout(400);
+    const middle = page.locator(".tc-card[data-on]");
+    await expect(middle).toHaveCount(1);
+    const href = await middle.getAttribute("href");
+    expect(href).toMatch(/^\/cong-nghe\//);
+    await middle.click();
+    await expect(page).toHaveURL(href!);
   });
 });

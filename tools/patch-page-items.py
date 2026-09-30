@@ -27,23 +27,14 @@ PAGES = ROOT / "src" / "data" / "pages"
 
 #: Moi muc phai co `why` — khong co ly do thi khong biet bao gio duoc go.
 PATCHES: list[dict] = [
-    {
-        "slug": "cong-nghe",
-        "why": (
-            "Ban thiet ke 28/09 gop hai khoi lam mot o muc 'Tien phong cong "
-            "nghe': bo tieu de phu 'NGHIEN CUU & PHAT TRIEN' cung mot nut "
-            "'TIM HIEU THEM' thua o cot trai, roi don chu len duoi tieu de "
-            "chinh. Prototype van la ban 21/09 nen con ca hai khoi. Toa do moi "
-            "do truc tiep tu '4.Page_Công nghệ /1. Công Nghệ.png' cua bo khung "
-            "moi: tieu de xuong +102px, doan chu va nut xuong +51px."
-        ),
-        "remove": ["cong-nghe-004", "cong-nghe-005"],
-        "move": {
-            "cong-nghe-003": 102.0,
-            "cong-nghe-006": 51.0,
-            "cong-nghe-007": 51.0,
-        },
-    },
+    # Truoc day o day co mot muc bo tieu de phu "NGHIEN CUU & PHAT TRIEN" cung
+    # mot nut "TIM HIEU THEM" o muc "Tien phong cong nghe" trang Cong nghe, vi
+    # ban thiet ke 28/09 da gop hai khoi lam mot.
+    #
+    # Khach yeu cau GIU tieu de do (30/09/2026): ho lam viec theo ban thiet ke
+    # co tieu de. Bo muc va di thi ca ba ben cung khop nhau — prototype ma gate
+    # doi chieu cung la ban con tieu de — nen muc ngoai le trong
+    # design-deviations.ts cung khong can nua.
 ]
 
 

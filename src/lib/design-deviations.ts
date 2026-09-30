@@ -14,6 +14,21 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Dai anh "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" dung lai thanh bang chuyen ─────────
+  // Thiet ke ve chet nam tam anh nghieng dan ra hai ben — y la mot bang
+  // chuyen. Khach yeu cau bam vao tam nao thi tam do chay vao giua
+  // (30/09/2026), nen dai phai la phan tu that.
+  // Cac tam o day KHONG nghieng: anh goc trong bo tai nguyen la anh phang, ma
+  // lam nghieng bang CSS 3D thi chu tren bang hieu trong anh bi meo. Chung chi
+  // nho dan va mo dan ra hai ben.
+  // Xem tools/brand/extract-projects.py va ProjectCoverflow.tsx.
+  {
+    page: "giai-phap",
+    box: { x: 0, y: 5416, width: 1440, height: 296 },
+    reason:
+      "Dai anh du an duoc dung lai thanh bang chuyen bam duoc; cac tam khong " +
+      "lam nghieng vi anh goc la anh phang.",
+  },
   // ── Anh hero trang chu: bo phan chu nuong san trong anh ──────────────────
   // Ban thiet ke nuong "DRIVE · EXPERIENCE · ELEVATE" va ba dong gioi thieu
   // vao chinh tam anh hero, trong khi chinh nhung dong do cung la phan tu that
@@ -260,19 +275,6 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "trang chu va trang dai ly. Anh cua tung the giu nguyen 100% tu ban thiet ke — ke " +
       "ca chu — nen luc khong tro chuot thi trung khop; chi con lech o vien la sai so " +
       "nen WebP.",
-  },
-  {
-    page: "cong-nghe",
-    // Ca khoi trai cua muc "Tien phong cong nghe": x 60..700, y 1000..1540.
-    box: { x: 55, y: 995, width: 655, height: 550 },
-    reason:
-      "Ban THIET KE 28/09 gop hai khoi lam mot: bo tieu de phu 'NGHIEN CUU & " +
-      "PHAT TRIEN' cung mot nut 'TIM HIEU THEM' thua o cot trai, roi don chu " +
-      "len duoi tieu de chinh (tieu de xuong +102px, doan chu va nut xuong " +
-      "+51px). Site da lam theo thiet ke moi — xem tools/patch-page-items.py. " +
-      "Nhung PROTOTYPE ma gate nay doi chieu van la ban 21/09, con nguyen ca " +
-      "hai khoi, nen vung nay CHAC CHAN lech. Go muc nay ngay khi co ban " +
-      "export prototype moi.",
   },
   {
     page: "trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao",

@@ -795,14 +795,24 @@
   cursor: pointer;
   pointer-events: auto;
   outline: none;
-  /* Vi tri do JS dat bang `transform`, nen goc bien doi phai la goc tren-trai
-     thi phep tinh trong placement() moi dung. */
   transform-origin: 0 0;
   border-radius: 26px;
+  /* Bam the ben canh thi ruot cua no chay vao khung giua: ca VI TRI lan KICH
+     THUOC cung doi, nen phai cho ca bon thuoc tinh do chuyen dan. `transform`
+     de danh cho viec nhac the len khi ro chuot (xem .tc-card-lift), hai
+     chuyen dong khong tranh nhau. */
   transition:
-    transform 0.56s cubic-bezier(0.22, 0.8, 0.2, 1),
+    left 0.56s cubic-bezier(0.22, 0.8, 0.2, 1),
+    top 0.56s cubic-bezier(0.22, 0.8, 0.2, 1),
+    width 0.56s cubic-bezier(0.22, 0.8, 0.2, 1),
+    height 0.56s cubic-bezier(0.22, 0.8, 0.2, 1),
     filter 0.35s ease,
     box-shadow 0.35s ease;
+}
+
+/* The dang o giua: bam vao la sang trang, nen khong can goi y "bam de xem". */
+.tc-card[data-on] {
+  cursor: pointer;
 }
 
 .tc-card img {
@@ -1784,5 +1794,59 @@
 @media (prefers-reduced-motion: reduce) {
   .tc-related-track {
     animation: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Dai anh "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" (xem ProjectCoverflow.tsx).
+
+   Cac tam dat CHONG LEN nhau o cung mot cho, roi moi tam tu le sang theo so
+   bac cua no. Nho vay khi doi tam giua thi tat ca cung truot mot luot — khong
+   phai tinh lai vi tri tung cai.
+   --------------------------------------------------------------------------- */
+.tc-proj {
+  position: absolute;
+  /* Cac tam xa giua tho ra ngoai canvas — cat di cho gon. */
+  overflow: hidden;
+}
+
+.tc-proj-card {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(2, 17, 28, 0.28);
+  transition:
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.55s ease;
+}
+
+.tc-proj-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tc-proj-card[data-on] {
+  cursor: default;
+}
+
+.tc-proj-card:not([data-on]):hover {
+  opacity: 1 !important;
+}
+
+.tc-proj-card:focus-visible {
+  outline: 2px solid var(--red-nav);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-proj-card {
+    transition: none;
   }
 }

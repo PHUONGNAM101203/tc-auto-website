@@ -47,6 +47,12 @@ const SOURCE_LIMITED = new Set([
   "con-nguoi-tc-2.webp",           // Rectangle 186.png — chi co 1444px
   "con-nguoi-tc-3.webp",           // Rectangle 187.png
   "con-nguoi-tc-4.webp",           // Rectangle 188.png
+  // Bon tam trong dai "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" — ban to nhat trong bo tai
+  // nguyen chi rong 1154px (Rectangle 128/183/185/188 o muc 2.5).
+  "le-ky-ket-thanh-tien-auto.webp",
+  "le-ky-ket-toyota-phu-tai-duc.webp",
+  "le-ky-ket-otua-thanh-nien.webp",
+  "le-ky-ket-tan-nat.webp",
 ]);
 
 function routes() {

@@ -8,9 +8,11 @@ import { HeroSlider } from "@/components/site/HeroSlider";
 import { PhotoSliders } from "@/components/site/PhotoSlider";
 import { SolutionCarousel } from "@/components/site/SolutionCarousel";
 import { LiftCards } from "@/components/site/LiftCards";
+import { ProjectCoverflow } from "@/components/site/ProjectCoverflow";
 import { getAppCards } from "@/lib/app-cards";
 import { getPhotoSliders } from "@/lib/photo-sliders";
 import { getLiftCards } from "@/lib/lift-cards";
+import { getProjectPhotos } from "@/lib/projects";
 import {
   getMobileHero,
   getMobileHeroSlides,
@@ -62,6 +64,9 @@ export function PageShell({ page }: PageShellProps) {
 
           {/* Dai the "Giải pháp" — truot ngang bang mui ten ve san trong thiet ke. */}
           {page.slug === "home" && <SolutionCarousel />}
+
+          {/* Dai anh "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" — bam tam nao thi tam do vao giua. */}
+          <ProjectCoverflow photos={getProjectPhotos(page.slug)} />
 
           <SiteHeader nav={page.nav} searchBaked={isSearchBaked(page.slug)} />
 
