@@ -1,4 +1,5 @@
 import detected from "@/data/detected-buttons.json";
+import downloads from "@/data/app-downloads.json";
 import { getSubPage } from "./subpages";
 
 export interface Hotspot {
@@ -8,6 +9,8 @@ export interface Hotspot {
   readonly h: number;
   readonly href: string;
   readonly label: string;
+  /** Dan ra NGOAI site — mo tab moi, va khong di qua router cua Next. */
+  readonly external?: boolean;
 }
 
 interface DetectedRect {
@@ -18,6 +21,9 @@ interface DetectedRect {
 }
 
 const DETECTED = detected as Readonly<Record<string, readonly DetectedRect[]>>;
+const DOWNLOADS = (downloads as unknown as {
+  pages: Readonly<Record<string, readonly Hotspot[]>>;
+}).pages;
 
 /**
  * Dich den cho tung nut CTA ve san trong anh trang con.
@@ -131,8 +137,22 @@ export function getHotspots(slug: string): readonly Hotspot[] {
   });
 
   spots.push(...(EXTRA_HOTSPOTS[slug] ?? []));
+  spots.push(...appDownloads(slug));
 
   return spots;
+}
+
+/**
+ * Nut "TẢI VỀ" tren hai trang kho ung dung.
+ *
+ * Duong tai la tep that tren wincavn.com — khach gui trang cua hang va yeu
+ * cau "bấm vào là tải thôi" (30/09/2026). Vi tri nut do
+ * tools/brand/link-app-downloads.py sinh ra tu lop chu OCR cua chinh trang,
+ * nen thiet ke co xe dich thi chay lai bo do la vung bam tu bam theo.
+ */
+function appDownloads(slug: string): readonly Hotspot[] {
+  const spots = DOWNLOADS[slug] ?? [];
+  return spots.map((spot) => ({ ...spot, external: true }));
 }
 
 /** Dung cho test: so nut do duoc tren tung trang. */

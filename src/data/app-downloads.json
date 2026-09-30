@@ -1,0 +1,241 @@
+{
+  "_doc": "Duong tai that cho nut 'TẢI VỀ' tren hai trang kho ung dung. Chep tu https://wincavn.com/file-download; vi tri nut doc tu lop chu OCR. Xem tools/brand/link-app-downloads.py.",
+  "pages": {
+    "cong-nghe/ung-dung/kho-ung-dung": [
+      {
+        "x": 1085.8,
+        "y": 1383.8,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/1789974055_winca-tube-v0297.apk",
+        "label": "Tải về Winca Tube"
+      },
+      {
+        "x": 197.3,
+        "y": 1383.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/1788494093_winca-control-car-040926.apk",
+        "label": "Tải về Winca Control"
+      },
+      {
+        "x": 642.0,
+        "y": 1383.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/ES+File+Explorer+File+Manager_4.4.0.2.1_APKPure.apk",
+        "label": "Tải về ES File Explorer File Manager"
+      },
+      {
+        "x": 1085.8,
+        "y": 1833.8,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/11. Google Maps.apk",
+        "label": "Tải về Google Maps"
+      },
+      {
+        "x": 198.4,
+        "y": 1833.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/vml_3.3.5.apk",
+        "label": "Tải về VietMap Live"
+      },
+      {
+        "x": 642.0,
+        "y": 1833.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/1789975489_winca-tracking-v103.apk",
+        "label": "Tải về Định vị"
+      },
+      {
+        "x": 198.3,
+        "y": 2283.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/7. Zalo.apk",
+        "label": "Tải về Zalo"
+      },
+      {
+        "x": 1086.8,
+        "y": 2283.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/8. Winca Widget.apk",
+        "label": "Tải về Winca Widget"
+      },
+      {
+        "x": 642.1,
+        "y": 2284.2,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/12. CamhanhtrinhX7.apk",
+        "label": "Tải về Cam Hành Trình X7"
+      },
+      {
+        "x": 198.4,
+        "y": 2734.1,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/VIETMAP_LIVE_2.6.0+170684399.apk",
+        "label": "Tải về VML xử lí GPS"
+      },
+      {
+        "x": 641.0,
+        "y": 2734.2,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/15. Google Play services.apk",
+        "label": "Tải về Google Play Services"
+      },
+      {
+        "x": 1085.8,
+        "y": 2734.2,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/16. GiongnoiWinca.apk",
+        "label": "Tải về Giọng nói Winca"
+      },
+      {
+        "x": 1085.8,
+        "y": 3183.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/Radio Vietnam Online_1.8.8_APKPure.xapk",
+        "label": "Tải về Radio Vietnam"
+      },
+      {
+        "x": 197.2,
+        "y": 3184.0,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/17. Imedia.apk",
+        "label": "Tải về Imedia"
+      },
+      {
+        "x": 642.1,
+        "y": 3184.0,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/21. VTV Go.apk",
+        "label": "Tải về VTV Go"
+      }
+    ],
+    "cong-nghe/ung-dung/cap-nhat-va-loi": [
+      {
+        "x": 197.2,
+        "y": 1383.8,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/1788494093_winca-control-car-040926.apk",
+        "label": "Tải về Winca Control"
+      },
+      {
+        "x": 1085.8,
+        "y": 1383.8,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/1789974055_winca-tube-v0297.apk",
+        "label": "Tải về Winca Tube"
+      },
+      {
+        "x": 642.1,
+        "y": 1833.8,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/1789975489_winca-tracking-v103.apk",
+        "label": "Tải về Định vị"
+      },
+      {
+        "x": 1085.8,
+        "y": 1833.8,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/11. Google Maps.apk",
+        "label": "Tải về Google Maps"
+      },
+      {
+        "x": 197.3,
+        "y": 1833.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/vml_3.3.5.apk",
+        "label": "Tải về VietMap Live"
+      },
+      {
+        "x": 197.3,
+        "y": 2283.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/7. Zalo.apk",
+        "label": "Tải về Zalo"
+      },
+      {
+        "x": 642.0,
+        "y": 2283.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/12. CamhanhtrinhX7.apk",
+        "label": "Tải về Cam Hành Trình X7"
+      },
+      {
+        "x": 1086.8,
+        "y": 2283.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/8. Winca Widget.apk",
+        "label": "Tải về Winca Widget"
+      },
+      {
+        "x": 642.1,
+        "y": 2734.1,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/15. Google Play services.apk",
+        "label": "Tải về Google Play Services"
+      },
+      {
+        "x": 197.2,
+        "y": 2734.2,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/VIETMAP_LIVE_2.6.0+170684399.apk",
+        "label": "Tải về VML xử lí GPS"
+      },
+      {
+        "x": 1085.8,
+        "y": 2734.2,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/16. GiongnoiWinca.apk",
+        "label": "Tải về Giọng nói Winca"
+      },
+      {
+        "x": 1085.8,
+        "y": 3183.9,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/Radio Vietnam Online_1.8.8_APKPure.xapk",
+        "label": "Tải về Radio Vietnam"
+      },
+      {
+        "x": 198.3,
+        "y": 3184.0,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/17. Imedia.apk",
+        "label": "Tải về Imedia"
+      },
+      {
+        "x": 642.0,
+        "y": 3184.0,
+        "w": 158,
+        "h": 32,
+        "href": "https://wincavn.com/storage/files/21. VTV Go.apk",
+        "label": "Tải về VTV Go"
+      }
+    ]
+  }
+}

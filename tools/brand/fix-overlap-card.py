@@ -50,7 +50,10 @@ CARD = {
     # Khung ve lai: giua the, de tieu de tu can giua.
     "footer": {"x": 556, "y": 1340, "width": 328},
     "title": "[CẬP NHẬT] ES File Explorer File Manager",
+    # Duong tai lay tu bang cua tools/brand/link-app-downloads.py — the nay
+    # bi ve lai nen no khong con nam trong lop vung bam chung nua.
     "button": {"label": "TẢI VỀ", "width": 158, "height": 32},
+    "app": "es file explorer file manager",
 }
 ANCHOR = 10
 FEATHER = 8
@@ -87,8 +90,44 @@ def scrub(card: dict) -> int:
     return touched
 
 
+def download_href(app: str, page: str) -> str | None:
+    """Duong tai cua app nay, lay tu bang do link-app-downloads.py sinh ra."""
+    path = ROOT / "src" / "data" / "app-downloads.json"
+    if not path.is_file():
+        return None
+    pages = json.loads(path.read_text(encoding="utf-8"))["pages"]
+    for spot in pages.get(page, []):
+        if app in spot["label"].lower():
+            return spot["href"]
+    return None
+
+
+def drop_download_spot(app: str, page: str) -> bool:
+    """
+    Go vung bam cu cua nut nay khoi bang app-downloads.json.
+
+    Nut goc da bi xoa khoi anh va ve lai o cho THAP hon, nen vung bam sinh
+    theo vi tri cu gio nam tren nen trong — mot o bam duoc ma khong co gi de
+    bam. Nut moi tu mang duong tai cua no (xem OverlapCard.tsx).
+    """
+    path = ROOT / "src" / "data" / "app-downloads.json"
+    if not path.is_file():
+        return False
+    data = json.loads(path.read_text(encoding="utf-8"))
+    spots = data["pages"].get(page, [])
+    kept = [s for s in spots if app not in s["label"].lower()]
+    if len(kept) == len(spots):
+        return False
+    data["pages"][page] = kept
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return True
+
+
 def main() -> int:
     n = scrub(CARD)
+    href = download_href(CARD["app"], CARD["page"])
+    if not href:
+        print("  CANH BAO: khong tim thay duong tai — nut se khong bam duoc.")
     DATA.write_text(
         json.dumps(
             {
@@ -102,7 +141,10 @@ def main() -> int:
                         "page": CARD["page"],
                         "footer": CARD["footer"],
                         "title": CARD["title"],
-                        "button": CARD["button"],
+                        "button": {
+                            k: v for k, v in CARD["button"].items()
+                        }
+                        | ({"href": href} if href else {}),
                     }
                 ],
             },
@@ -112,6 +154,8 @@ def main() -> int:
         + "\n",
         encoding="utf-8",
     )
+    if drop_download_spot(CARD["app"], CARD["page"]):
+        print("  Da go vung bam cu cua nut nay (no da doi cho).")
     print(f"  Da xoa cum tieu de + nut khoi {n} lat nen cua /{CARD['page']}.")
     print(f"  {DATA.relative_to(ROOT)}")
     return 0

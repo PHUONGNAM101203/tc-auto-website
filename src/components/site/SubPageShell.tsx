@@ -27,6 +27,7 @@ export interface Hotspot {
   readonly h: number;
   readonly href: string;
   readonly label: string;
+  readonly external?: boolean;
 }
 
 interface SubPageShellProps {
@@ -107,23 +108,46 @@ export function SubPageShell({
             </ol>
           </nav>
 
-          {hotspots.map((spot) => (
-            <Link
-              key={`${spot.x}-${spot.y}-${spot.href}`}
-              href={spot.href}
-              prefetch={false}
-              className="tc-hotspot rv"
-              data-rv="scale"
-              data-magnetic=""
-              aria-label={spot.label}
-              style={{
-                left: `${spot.x}px`,
-                top: `${spot.y}px`,
-                width: `${spot.w}px`,
-                height: `${spot.h}px`,
-              }}
-            />
-          ))}
+          {hotspots.map((spot) =>
+            spot.external ? (
+              /* Tep tai nam tren wincavn.com — dung the <a> thuong chu khong
+                 qua router cua Next, va mo tab moi de nguoi dung khong mat
+                 trang dang xem. `rel` bat buoc di kem `target="_blank"`. */
+              // eslint-disable-next-line @next/next/no-html-link-for-pages
+              <a
+                key={`${spot.x}-${spot.y}-${spot.href}`}
+                href={spot.href}
+                className="tc-hotspot rv"
+                data-rv="scale"
+                data-magnetic=""
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={spot.label}
+                style={{
+                  left: `${spot.x}px`,
+                  top: `${spot.y}px`,
+                  width: `${spot.w}px`,
+                  height: `${spot.h}px`,
+                }}
+              />
+            ) : (
+              <Link
+                key={`${spot.x}-${spot.y}-${spot.href}`}
+                href={spot.href}
+                prefetch={false}
+                className="tc-hotspot rv"
+                data-rv="scale"
+                data-magnetic=""
+                aria-label={spot.label}
+                style={{
+                  left: `${spot.x}px`,
+                  top: `${spot.y}px`,
+                  width: `${spot.w}px`,
+                  height: `${spot.h}px`,
+                }}
+              />
+            ),
+          )}
 
           {/* Lop van ban cho trinh doc man hinh va cong cu tim kiem.
             Trang la anh nen chu khong co trong DOM — thieu lop nay thi trang

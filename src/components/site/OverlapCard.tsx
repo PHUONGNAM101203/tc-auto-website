@@ -16,7 +16,13 @@ interface Card {
   readonly page: string;
   readonly footer: { readonly x: number; readonly y: number; readonly width: number };
   readonly title: string;
-  readonly button: { readonly label: string; readonly width: number; readonly height: number };
+  readonly button: {
+    readonly label: string;
+    readonly width: number;
+    readonly height: number;
+    /** Tep tai that tren wincavn.com, neu co. */
+    readonly href?: string;
+  };
 }
 
 const CARDS = (overlap as unknown as { cards: readonly Card[] }).cards;
@@ -40,12 +46,25 @@ export function OverlapCards({ slug }: { slug: string }) {
           }}
         >
           <p className="tc-appfoot-title">{card.title}</p>
-          <span
-            className="tc-appfoot-btn"
-            style={{ width: card.button.width, height: card.button.height }}
-          >
-            {card.button.label}
-          </span>
+          {card.button.href ? (
+            /* Tep tai nam tren wincavn.com — the <a> thuong, mo tab moi. */
+            <a
+              className="tc-appfoot-btn"
+              href={card.button.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ width: card.button.width, height: card.button.height }}
+            >
+              {card.button.label}
+            </a>
+          ) : (
+            <span
+              className="tc-appfoot-btn"
+              style={{ width: card.button.width, height: card.button.height }}
+            >
+              {card.button.label}
+            </span>
+          )}
         </div>
       ))}
     </>

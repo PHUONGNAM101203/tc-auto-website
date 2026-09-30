@@ -1811,6 +1811,8 @@
   align-items: center;
   gap: 10px;
   text-align: center;
+  /* Khoi bao khong nhan chuot — nguoi dung van bam duoc vao ca the o duoi;
+     rieng cai nut thi nhan. */
   pointer-events: none;
 }
 
@@ -1818,6 +1820,20 @@
   margin: 0;
   font: 600 17px/22px "Montserrat", sans-serif;
   color: #fff;
+}
+
+a.tc-appfoot-btn {
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+a.tc-appfoot-btn:hover {
+  background: var(--red-h);
+}
+
+a.tc-appfoot-btn:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 3px;
 }
 
 .tc-appfoot-btn {
