@@ -46,6 +46,16 @@ MAIN_SLICE_DIR = ROOT / "public" / "slices"
 #: hien ra, va ca 37 trang cung mot kieu o tim kiem.
 MAIN_SEARCH_BAKED = ("cong-nghe",)
 
+#: Sau trang chinh deu co KHUNG BO TRON ve san quanh muc nav dang xem, ngay
+#: trong anh nen (tools/patch-from-design.py va lai vung nav bang pixel cua ban
+#: thiet ke). Chu thi la phan tu that, chi con moi cai khung nam lai trong anh.
+#:
+#: Khach bao (30/09/2026, anh 66): "bo cai khung mac dinh khi ma bam vao cai
+#: nav item do di" — khung ve san khong nhuc nhich duoc, ma khung truot that
+#: lai dau ngay len tren no, thanh hai lop chong nhau. Xoa khung ve san thi
+#: khung truot la dau duy nhat: no dau o muc dang xem va luot khi re chuot.
+MAIN_PAGES = ("home", "trai-nghiem", "giai-phap", "cong-nghe", "dai-ly", "nhan-su")
+
 CANVAS_WIDTH = 1440
 #: Hai vung phai xoa. Do tren trang da dung:
 #:   cac muc nav nam o x 431..1014, y 48..74
@@ -104,33 +114,38 @@ def scrub_page(stem: str) -> int:
     return touched
 
 
-def scrub_main(slug: str) -> int:
-    """Xoa O TIM KIEM ve chet khoi lat nen cua mot trang chinh."""
+def scrub_main(slug: str, areas) -> int:
+    """Xoa cac vung ve chet khoi lat nen cua mot trang chinh."""
     spec = json.loads((MAIN_SPEC_DIR / f"{slug}.json").read_text(encoding="utf-8"))
-    area = SCRUB[1]
     touched = 0
     for suffix in ("", "@3x"):
         for index, slice_spec in enumerate(spec["slices"]):
             top = slice_spec["y"]
             bottom = top + slice_spec["displayHeight"]
-            if area["y"] + area["height"] <= top or area["y"] >= bottom:
+            hit = [
+                a
+                for a in areas
+                if a["y"] < bottom and a["y"] + a["height"] > top
+            ]
+            if not hit:
                 continue
             path = MAIN_SLICE_DIR / f"{slug}-{index}{suffix}.webp"
             if not path.is_file():
                 raise SystemExit(f"Thieu lat nen: {path}")
             image = Image.open(path).convert("RGB")
             scale = image.width / CANVAS_WIDTH
-            box = (
-                round(area["x"] * scale),
-                round((area["y"] - top) * scale),
-                round((area["x"] + area["width"]) * scale),
-                round((area["y"] + area["height"] - top) * scale),
-            )
-            patch = feathered(
-                rebuild_background(image, box, anchor=round(ANCHOR * scale)),
-                round(FEATHER * scale),
-            )
-            image.paste(patch, (box[0], box[1]), patch)
+            for area in hit:
+                box = (
+                    round(area["x"] * scale),
+                    round((area["y"] - top) * scale),
+                    round((area["x"] + area["width"]) * scale),
+                    round((area["y"] + area["height"] - top) * scale),
+                )
+                patch = feathered(
+                    rebuild_background(image, box, anchor=round(ANCHOR * scale)),
+                    round(FEATHER * scale),
+                )
+                image.paste(patch, (box[0], box[1]), patch)
             image.save(path, "WEBP", quality=82, method=6)
             touched += 1
     return touched
@@ -140,8 +155,10 @@ def main() -> int:
     # `--main` chi xoa o tim kiem cua trang chinh; chuoi parse:prototype goi voi
     # co nay, con parse:subpages goi khong co co.
     if "--main" in sys.argv:
-        for slug in MAIN_SEARCH_BAKED:
-            print(f"  Da xoa o tim kiem ve san khoi {scrub_main(slug)} lat nen cua /{slug}.")
+        for slug in MAIN_PAGES:
+            areas = [SCRUB[0]] + ([SCRUB[1]] if slug in MAIN_SEARCH_BAKED else [])
+            n = scrub_main(slug, areas)
+            print(f"  Da xoa khung nav ve san khoi {n} lat nen cua /{slug}.")
         return 0
 
     stems = sorted(p.stem for p in SPEC_DIR.glob("*.json") if p.stem != "index")
@@ -150,9 +167,10 @@ def main() -> int:
         total += scrub_page(stem)
     print(f"  Da xoa thanh nav khoi {total} lat nen cua {len(stems)} trang con.")
 
-    for slug in MAIN_SEARCH_BAKED:
-        n = scrub_main(slug)
-        print(f"  Da xoa o tim kiem ve san khoi {n} lat nen cua /{slug}.")
+    for slug in MAIN_PAGES:
+        areas = [SCRUB[0]] + ([SCRUB[1]] if slug in MAIN_SEARCH_BAKED else [])
+        n = scrub_main(slug, areas)
+        print(f"  Da xoa khung nav ve san khoi {n} lat nen cua /{slug}.")
     return 0
 
 

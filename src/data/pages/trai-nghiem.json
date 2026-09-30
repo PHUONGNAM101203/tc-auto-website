@@ -6,7 +6,7 @@
   "height": 3464.0,
   "slices": [
     {
-      "src": "/slices/trai-nghiem-0.webp?v=cb82d6c6",
+      "src": "/slices/trai-nghiem-0.webp?v=4dfdbd8a",
       "y": 0.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -14,11 +14,11 @@
       "bytes": 66324,
       "srcSet": [
         {
-          "src": "/slices/trai-nghiem-0.webp?v=cb82d6c6",
+          "src": "/slices/trai-nghiem-0.webp?v=4dfdbd8a",
           "scale": 2
         },
         {
-          "src": "/slices/trai-nghiem-0@3x.webp?v=92e76ba6",
+          "src": "/slices/trai-nghiem-0@3x.webp?v=ec6fe6f5",
           "scale": 3
         }
       ],

@@ -6,7 +6,7 @@
   "height": 3566.0,
   "slices": [
     {
-      "src": "/slices/home-0.webp?v=42cb85ca",
+      "src": "/slices/home-0.webp?v=1e8b6906",
       "y": 0.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -14,11 +14,11 @@
       "bytes": 146186,
       "srcSet": [
         {
-          "src": "/slices/home-0.webp?v=42cb85ca",
+          "src": "/slices/home-0.webp?v=1e8b6906",
           "scale": 2
         },
         {
-          "src": "/slices/home-0@3x.webp?v=ab19d31e",
+          "src": "/slices/home-0@3x.webp?v=3c450b63",
           "scale": 3
         }
       ],

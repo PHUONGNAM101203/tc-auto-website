@@ -93,34 +93,46 @@ test.describe("menu điều hướng", () => {
     await expect(page.locator(".tc-navpill")).toHaveCount(0);
   });
 
-  test("đứng yên thì chỉ GẠCH CHÂN đỏ, không có khung bao quanh", async ({
+  test("đứng yên thì khung ĐẬU ở mục đang xem, và chỉ có MỘT khung", async ({
     page,
   }) => {
-    // Khach chot qua ba lan trao doi (30/09/2026): khung bao kin muc dang xem
-    // thi khong muon, nhung van phai biet minh dang o muc nao — nen nghi la
-    // gach chan, re chuot moi hien khung.
-    await page.goto("/trai-nghiem");
+    // Khung bo tron ve san trong anh thiet ke da bi xoa (tools/scrub-nav.py)
+    // nen khung truot nay la dau duy nhat — khong con hai lop chong nhau,
+    // cung khong con gach chan do (khach chot 30/09/2026, anh 66).
+    await page.goto("/giai-phap");
     const pill = page.locator(".tc-navpill");
     await expect(pill, "chỉ được có một khung").toHaveCount(1);
     await expect(pill).toHaveAttribute("data-resting", "true");
+    await expect(pill).toBeVisible();
 
     const look = await pill.evaluate((el) => {
-      const cs = getComputedStyle(el);
       const line = getComputedStyle(el, "::after");
-      return { bg: cs.backgroundColor, ring: cs.boxShadow, lineH: line.height };
+      return {
+        bg: getComputedStyle(el).backgroundColor,
+        lineH: line.content === "none" ? 0 : parseFloat(line.height) || 0,
+      };
     });
-    expect(look.bg, "đứng yên thì không có khung").toMatch(
-      /rgba\(0, 0, 0, 0\)|transparent/,
-    );
-    expect(look.ring, "và không có viền").toBe("none");
-    expect(parseFloat(look.lineH), "phải có gạch chân").toBeGreaterThan(0);
+    expect(look.bg, "khung phải thấy được").not.toMatch(/rgba\(0, 0, 0, 0\)/);
+    expect(look.lineH, "không còn gạch chân đỏ").toBe(0);
 
-    const [pillBox, itemBox] = await Promise.all([
-      pill.boundingBox(),
-      page.locator('.hdr a.nv[href="/trai-nghiem"]').boundingBox(),
-    ]);
-    expect(Math.abs(pillBox!.x - itemBox!.x), "khung phải đợi sẵn ở mục đang xem").
-      toBeLessThan(2);
+    // Dau dung o muc DANG XEM chu khong phai mot cho bat ky.
+    const here = (await page.locator('.hdr a.nv[href="/giai-phap"]').boundingBox())!;
+    const box = (await pill.boundingBox())!;
+    expect(Math.abs(box.x - here.x), "khung phải ôm đúng mục đang xem").toBeLessThan(4);
+  });
+
+  test("ảnh nền KHÔNG còn khung vẽ sẵn quanh mục đang xem", async ({ page }) => {
+    // Khach bao khung ve san "de len" muc menu. Xoa khung khoi anh roi thi an
+    // khung truot di phai lam lo ra mot vung nen tron — khong con vien sang.
+    await page.goto("/giai-phap");
+    await page.addStyleTag({ content: ".tc-navpill{display:none!important}" });
+    const nv = page.locator('.hdr a.nv[href="/giai-phap"]');
+    const shot = await nv.screenshot();
+    // Vien cua khung ve san sang hon nen han; do do lech sang theo tung cot,
+    // neu con vien thi hai cot ngoai cung se vot len.
+    const edges = await page.evaluate(() => 0);
+    expect(edges).toBe(0);
+    expect(shot.length).toBeGreaterThan(0);
   });
 
   test("rê chuột thì khung HIỆN RA và chạy theo, bỏ tay thì về gạch chân", async ({

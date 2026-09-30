@@ -35,14 +35,14 @@
     {
       "id": "hero-1",
       "alt": "TC Auto Solutions — trải nghiệm trên mọi hành trình",
-      "src": "/hero/hero-1@2x.webp?v=1ccd865d",
+      "src": "/hero/hero-1@2x.webp?v=75a791eb",
       "srcSet": [
         {
-          "src": "/hero/hero-1@2x.webp?v=1ccd865d",
+          "src": "/hero/hero-1@2x.webp?v=75a791eb",
           "scale": 2
         },
         {
-          "src": "/hero/hero-1@3x.webp?v=58c7934a",
+          "src": "/hero/hero-1@3x.webp?v=c7ba1274",
           "scale": 3
         }
       ]
@@ -50,14 +50,14 @@
     {
       "id": "hero-2",
       "alt": "Cung đường ven biển lúc hoàng hôn — TC Auto Solutions",
-      "src": "/hero/hero-2@2x.webp?v=bc4b9028",
+      "src": "/hero/hero-2@2x.webp?v=5d2b0cdb",
       "srcSet": [
         {
-          "src": "/hero/hero-2@2x.webp?v=bc4b9028",
+          "src": "/hero/hero-2@2x.webp?v=5d2b0cdb",
           "scale": 2
         },
         {
-          "src": "/hero/hero-2@3x.webp?v=a84089b1",
+          "src": "/hero/hero-2@3x.webp?v=9d7e7ee2",
           "scale": 3
         }
       ]
@@ -65,14 +65,14 @@
     {
       "id": "hero-3",
       "alt": "Xe trên cung đường đèo ven biển — TC Auto Solutions",
-      "src": "/hero/hero-3@2x.webp?v=e7e3314a",
+      "src": "/hero/hero-3@2x.webp?v=e4f1d5e9",
       "srcSet": [
         {
-          "src": "/hero/hero-3@2x.webp?v=e7e3314a",
+          "src": "/hero/hero-3@2x.webp?v=e4f1d5e9",
           "scale": 2
         },
         {
-          "src": "/hero/hero-3@3x.webp?v=a8191aad",
+          "src": "/hero/hero-3@3x.webp?v=8737ed19",
           "scale": 3
         }
       ]
@@ -80,14 +80,14 @@
     {
       "id": "hero-4",
       "alt": "Đêm trên cung đường ven núi — TC Auto Solutions",
-      "src": "/hero/hero-4@2x.webp?v=d17a03b0",
+      "src": "/hero/hero-4@2x.webp?v=c66e03af",
       "srcSet": [
         {
-          "src": "/hero/hero-4@2x.webp?v=d17a03b0",
+          "src": "/hero/hero-4@2x.webp?v=c66e03af",
           "scale": 2
         },
         {
-          "src": "/hero/hero-4@3x.webp?v=6a60eec6",
+          "src": "/hero/hero-4@3x.webp?v=9ec0a7b2",
           "scale": 3
         }
       ]
@@ -95,14 +95,14 @@
     {
       "id": "hero-5",
       "alt": "Hai xe dừng bên vịnh biển — TC Auto Solutions",
-      "src": "/hero/hero-5@2x.webp?v=5842a31c",
+      "src": "/hero/hero-5@2x.webp?v=f2a039cf",
       "srcSet": [
         {
-          "src": "/hero/hero-5@2x.webp?v=5842a31c",
+          "src": "/hero/hero-5@2x.webp?v=f2a039cf",
           "scale": 2
         },
         {
-          "src": "/hero/hero-5@3x.webp?v=cd0d0389",
+          "src": "/hero/hero-5@3x.webp?v=e8e68184",
           "scale": 3
         }
       ]

@@ -19,6 +19,7 @@ import {
   getMobileSections,
 } from "@/lib/mobile-sections";
 import { getMobileBlocks } from "@/lib/mobile-blocks";
+import { BackToTop } from "@/components/site/BackToTop";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { isSearchBaked } from "@/lib/search-baked";
 import type { PageSpec } from "@/lib/types";
@@ -90,6 +91,9 @@ export function PageShell({ page }: PageShellProps) {
           <FooterSocial pageHeight={page.height} />
         </section>
       </div>
+
+      {/* Ngoai `.tc-canvas` — trong do co `zoom`, nut se bi keo lech vi tri. */}
+      <BackToTop />
     </>
   );
 }

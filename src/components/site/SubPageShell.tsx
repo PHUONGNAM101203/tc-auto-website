@@ -6,6 +6,7 @@ import { SliceImage } from "@/components/canvas/SliceImage";
 import { ContactForm } from "@/components/site/ContactForm";
 import { FooterSocial } from "@/components/site/FooterSocial";
 import { RelatedStrip } from "@/components/site/RelatedStrip";
+import { BackToTop } from "@/components/site/BackToTop";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
@@ -143,6 +144,9 @@ export function SubPageShell({
           <FooterSocial pageHeight={page.height} />
         </section>
       </div>
+
+      {/* Ngoai `.tc-canvas` — trong do co `zoom`, nut se bi keo lech vi tri. */}
+      <BackToTop />
     </>
   );
 }

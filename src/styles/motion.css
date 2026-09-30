@@ -472,3 +472,61 @@
     filter: none;
   }
 }
+
+/* ---------- 14. Nut "len dau trang" ---------- */
+/* Khach khong muon header dinh (se lech pixel so voi ban thiet ke), nen doc
+   den cuoi trang thi co nut nay de quay len chon muc khac.
+   Dat o goc duoi PHAI: goc duoi giua da co `.toast`. */
+.tc-totop {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 55;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.75);
+  animation: tc-totop-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+/* `hidden` tren <button> bi `display: grid` o tren de mat — phai noi lai. */
+.tc-totop[hidden] {
+  display: none;
+}
+
+.tc-totop svg {
+  width: 22px;
+  height: 22px;
+}
+
+.tc-totop:hover {
+  background: var(--red-h);
+  transform: translateY(-2px);
+}
+
+.tc-totop:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 3px;
+}
+
+@keyframes tc-totop-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-totop {
+    animation: none;
+    transition: none;
+  }
+}

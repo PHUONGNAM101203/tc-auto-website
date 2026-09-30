@@ -6,7 +6,7 @@
   "height": 4577.0,
   "slices": [
     {
-      "src": "/slices/dai-ly-0.webp?v=50d04ffd",
+      "src": "/slices/dai-ly-0.webp?v=249bb2b1",
       "y": 0.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -14,11 +14,11 @@
       "bytes": 134746,
       "srcSet": [
         {
-          "src": "/slices/dai-ly-0.webp?v=50d04ffd",
+          "src": "/slices/dai-ly-0.webp?v=249bb2b1",
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-0@3x.webp?v=51b2869f",
+          "src": "/slices/dai-ly-0@3x.webp?v=523e3a93",
           "scale": 3
         }
       ],

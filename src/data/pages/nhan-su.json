@@ -6,7 +6,7 @@
   "height": 3374.0,
   "slices": [
     {
-      "src": "/slices/nhan-su-0.webp?v=5f409115",
+      "src": "/slices/nhan-su-0.webp?v=bbb3b6fb",
       "y": 0.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -14,11 +14,11 @@
       "bytes": 181290,
       "srcSet": [
         {
-          "src": "/slices/nhan-su-0.webp?v=5f409115",
+          "src": "/slices/nhan-su-0.webp?v=bbb3b6fb",
           "scale": 2
         },
         {
-          "src": "/slices/nhan-su-0@3x.webp?v=497aee0b",
+          "src": "/slices/nhan-su-0@3x.webp?v=409d6114",
           "scale": 3
         }
       ],

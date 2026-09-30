@@ -2,32 +2,32 @@
   "_doc": "Noi dung tung muc cua 6 trang chinh, dung cho ban MOBILE. Chu lay tu page spec; anh cat tu lat nen o cot doi dien voi cot chu (tools/brand/extract-mobile-tiles.py).",
   "heroes": {
     "cong-nghe": {
-      "image": "/mobile/cong-nghe-hero.webp?v=0db64b07",
+      "image": "/mobile/cong-nghe-hero.webp?v=4512895b",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
     "dai-ly": {
-      "image": "/mobile/dai-ly-hero.webp?v=e5f1b16f",
+      "image": "/mobile/dai-ly-hero.webp?v=f3bd296f",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
     "giai-phap": {
-      "image": "/mobile/giai-phap-hero.webp?v=7c996552",
+      "image": "/mobile/giai-phap-hero.webp?v=07ff0046",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
     "home": {
-      "image": "/mobile/home-hero.webp?v=9b612d85",
+      "image": "/mobile/home-hero.webp?v=87a9da23",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
     "nhan-su": {
-      "image": "/mobile/nhan-su-hero.webp?v=b83f7f32",
+      "image": "/mobile/nhan-su-hero.webp?v=f24ddf86",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },
     "trai-nghiem": {
-      "image": "/mobile/trai-nghiem-hero.webp?v=c372354b",
+      "image": "/mobile/trai-nghiem-hero.webp?v=da5ce585",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     }
