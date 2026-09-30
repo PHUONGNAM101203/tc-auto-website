@@ -54,6 +54,25 @@ GROW = 3
 #: Lam mem mep mat na de khong thay duong ranh (diem anh cua ban day du).
 FEATHER = 4.0
 
+#: Be ngang he toa do canvas cua ban thiet ke.
+CANVAS_WIDTH = 1440
+#: Dai HEADER: luon lay tu @2x, khong hoi mat na.
+#:
+#: Mat na suy tu chenh lech co mot lo: o tim kiem cua ban thiet ke la mot khung
+#: vien sang 1px cong dong chu xam nhat, nam tren dai chuyen mau rat muot. Thu
+#: nho 4 lan roi lam mo di thi chenh lech tut xuong duoi nguong 18, nen mat na
+#: bo qua — ban @3x giu lai o tim kiem ve san, va tren man retina rong chu
+#: "Nhập để tìm kiếm..." hien HAI LAN (khach bao 30/09/2026, anh 63).
+#:
+#: Khong chua nguong xuong: ha nguong la mat na an ca vao vung anh that, mat
+#: do net @3x o nhung cho dang ra phai giu. Thay vao do noi thang: tren 6 trang
+#: chinh, CA DAI HEADER deu la phan tu that ve de len, nen nen o do BAT BUOC
+#: phai trong. Vung nay von la nen phang/chuyen mau nen lay tu @2x phong to
+#: khong mat chi tiet gi.
+#:
+#: Chua logo (x 78..314) — logo duoc ve chet o ca hai ban va giong het nhau.
+HEADER_BAND = {"x": 400, "y": 18, "width": 980, "height": 78}
+
 
 def build_mask(up: Image.Image, three: Image.Image) -> Image.Image | None:
     """
@@ -78,6 +97,40 @@ def build_mask(up: Image.Image, three: Image.Image) -> Image.Image | None:
     return mask.resize(up.size, Image.BILINEAR).filter(
         ImageFilter.GaussianBlur(FEATHER)
     )
+
+
+def header_forced(name: Path, size: tuple[int, int]) -> Image.Image | None:
+    """
+    Mat na ep buoc cho dai header, hoac None neu anh nay khong chua header.
+
+    Chi ap cho anh nam o DAU trang: lat dau tien cua 6 trang chinh va cac anh
+    hero (deu bat dau tu y = 0 cua he toa do canvas).
+
+    `name` la duong dan cua ban @2x (xem `pairs()`), nen lat dau tien co ten
+    `slices/<slug>-0.webp` chu khong phai `...-0@3x.webp`. Lan dau viet ham nay
+    toi doi hau to `@3x` o day va dieu kien khong bao gio dung — o tim kiem ve
+    san van nam nguyen trong anh.
+    """
+    parts = name.parts
+    stem = name.stem.removesuffix("@2x")
+    at_top = (parts[0] == "slices" and stem.endswith("-0")) or parts[0] == "hero"
+    if not at_top:
+        return None
+
+    scale = size[0] / CANVAS_WIDTH
+    box = (
+        round(HEADER_BAND["x"] * scale),
+        round(HEADER_BAND["y"] * scale),
+        round((HEADER_BAND["x"] + HEADER_BAND["width"]) * scale),
+        round((HEADER_BAND["y"] + HEADER_BAND["height"]) * scale),
+    )
+    if box[1] >= size[1]:
+        return None
+
+    mask = Image.new("L", size, 0)
+    mask.paste(255, box)
+    # Mo mep de khong lo ranh gioi giua vung lay tu @2x va vung giu @3x.
+    return mask.filter(ImageFilter.GaussianBlur(FEATHER))
 
 
 def pairs():
@@ -107,6 +160,18 @@ def main() -> int:
         base = Image.open(three).convert("RGB")
         up = Image.open(two).convert("RGB").resize(base.size, Image.LANCZOS)
         mask = build_mask(up, base)
+        forced = header_forced(name, base.size)
+        if forced is not None:
+            mask = (
+                forced
+                if mask is None
+                else Image.fromarray(
+                    np.maximum(
+                        np.asarray(mask, dtype=np.uint8),
+                        np.asarray(forced, dtype=np.uint8),
+                    )
+                )
+            )
         share = 0.0 if mask is None else float(np.asarray(mask, dtype=np.float32).mean()) / 255
         if mask is None or share <= 0.0005:
             skipped += 1
