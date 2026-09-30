@@ -7,6 +7,12 @@ import { ContactForm } from "@/components/site/ContactForm";
 import { FooterSocial } from "@/components/site/FooterSocial";
 import { RelatedStrip } from "@/components/site/RelatedStrip";
 import { BackToTop } from "@/components/site/BackToTop";
+import { Coverflow } from "@/components/site/Coverflow";
+import {
+  GALLERY_CENTRE,
+  GALLERY_STEP,
+  getGalleryPhotos,
+} from "@/lib/gallery";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
@@ -137,6 +143,14 @@ export function SubPageShell({
               </ul>
             </nav>
           )}
+
+          {/* Dai "BỘ SƯU TẬP": tu chay, bam tam nao tam do chay vao giua. */}
+          <Coverflow
+            photos={getGalleryPhotos(page.slug)}
+            centre={GALLERY_CENTRE}
+            step={GALLERY_STEP}
+            label="Bộ sưu tập"
+          />
 
           {feature}
 

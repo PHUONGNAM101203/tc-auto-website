@@ -1,4 +1,5 @@
 import data from "@/data/projects.json";
+import type { Box, CoverPhoto } from "./coverflow";
 
 /**
  * Dai anh "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" o cuoi trang Giai phap.
@@ -12,20 +13,7 @@ import data from "@/data/projects.json";
  * xem tools/brand/extract-projects.py.
  */
 
-export interface ProjectPhoto {
-  readonly id: string;
-  readonly alt: string;
-  readonly src: string;
-  readonly width: number;
-  readonly height: number;
-}
-
-export interface Box {
-  readonly x: number;
-  readonly y: number;
-  readonly width: number;
-  readonly height: number;
-}
+export type ProjectPhoto = CoverPhoto;
 
 const RAW = data as unknown as {
   readonly page: string;
@@ -40,16 +28,4 @@ export function getProjectPhotos(slug: string): readonly ProjectPhoto[] {
   return slug === RAW.page ? RAW.photos : [];
 }
 
-/**
- * Do lech cua mot tam so voi cho giua, tinh theo so bac.
- *
- * Chay VONG: voi bon tam thi tam thu 3 nam ben trai gan hon la ben phai. Nho
- * vay bam tam nao cung chi truot mot buoc ngan nhat.
- */
-export function offsetFrom(index: number, centre: number, count: number): number {
-  const raw = ((index - centre) % count + count) % count;
-  // `>=` chu khong phai `>`: voi so tam CHAN, tam nam dung doi dien duoc day
-  // sang TRAI. Nho vay bon tam luon rai thanh -2, -1, 0, +1 — hai ben giua
-  // deu hon la 0, +1, +2, -1.
-  return raw >= count / 2 ? raw - count : raw;
-}
+export { offsetFrom } from "./coverflow";

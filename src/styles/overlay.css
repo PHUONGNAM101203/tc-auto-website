@@ -1752,13 +1752,13 @@
    bac cua no. Nho vay khi doi tam giua thi tat ca cung truot mot luot — khong
    phai tinh lai vi tri tung cai.
    --------------------------------------------------------------------------- */
-.tc-proj {
+.tc-cover {
   position: absolute;
   /* Cac tam xa giua tho ra ngoai canvas — cat di cho gon. */
   overflow: hidden;
 }
 
-.tc-proj-card {
+.tc-cover-card {
   position: absolute;
   top: 0;
   padding: 0;
@@ -1773,28 +1773,28 @@
     opacity 0.55s ease;
 }
 
-.tc-proj-card img {
+.tc-cover-card img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.tc-proj-card[data-on] {
+.tc-cover-card[data-on] {
   cursor: default;
 }
 
-.tc-proj-card:not([data-on]):hover {
+.tc-cover-card:not([data-on]):hover {
   opacity: 1 !important;
 }
 
-.tc-proj-card:focus-visible {
+.tc-cover-card:focus-visible {
   outline: 2px solid var(--red-nav);
   outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tc-proj-card {
+  .tc-cover-card {
     transition: none;
   }
 }

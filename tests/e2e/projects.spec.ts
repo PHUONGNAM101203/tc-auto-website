@@ -9,9 +9,9 @@ import { expect, test } from "@playwright/test";
 test.describe("dải ảnh dự án", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/giai-phap");
-    await page.locator(".tc-proj").scrollIntoViewIfNeeded();
+    await page.locator(".tc-cover").scrollIntoViewIfNeeded();
     await page.waitForFunction(() =>
-      [...document.querySelectorAll<HTMLImageElement>(".tc-proj img")].every(
+      [...document.querySelectorAll<HTMLImageElement>(".tc-cover img")].every(
         (img) => img.complete && img.naturalWidth > 1,
       ),
     );
@@ -19,17 +19,17 @@ test.describe("dải ảnh dự án", () => {
   });
 
   test("có bốn tấm, một tấm nằm giữa", async ({ page }) => {
-    await expect(page.locator(".tc-proj-card")).toHaveCount(4);
-    await expect(page.locator(".tc-proj-card[data-on]")).toHaveCount(1);
+    await expect(page.locator(".tc-cover-card")).toHaveCount(4);
+    await expect(page.locator(".tc-cover-card[data-on]")).toHaveCount(1);
   });
 
   test("bấm tấm bên cạnh thì chính tấm đó chạy vào giữa", async ({ page }) => {
-    const side = page.locator(".tc-proj-card:not([data-on])").first();
+    const side = page.locator(".tc-cover-card:not([data-on])").first();
     const label = await side.getAttribute("aria-label");
     await side.click();
     await page.waitForTimeout(900);
 
-    const middle = page.locator(".tc-proj-card[data-on]");
+    const middle = page.locator(".tc-cover-card[data-on]");
     await expect(middle).toHaveCount(1);
     const now = await middle.getAttribute("aria-label");
     // Nhan doi khi vao giua: bo phan "— bấm để xem ở giữa".
@@ -38,7 +38,7 @@ test.describe("dải ảnh dự án", () => {
 
   test("tấm giữa TO NHẤT và rõ nhất", async ({ page }) => {
     const read = () =>
-      page.$$eval(".tc-proj-card", (els) =>
+      page.$$eval(".tc-cover-card", (els) =>
         els.map((el) => {
           const cs = getComputedStyle(el);
           return {
@@ -61,7 +61,7 @@ test.describe("dải ảnh dự án", () => {
   }) => {
     // Nen quanh dai la TRANG THUAN; neu chua xoa thi phia sau con nam tam anh.
     const strip = await page.evaluate(() => {
-      const box = document.querySelector(".tc-proj")!.getBoundingClientRect();
+      const box = document.querySelector(".tc-cover")!.getBoundingClientRect();
       return { top: Math.round(box.top), height: Math.round(box.height) };
     });
     expect(strip.height).toBeGreaterThan(100);
@@ -69,14 +69,14 @@ test.describe("dải ảnh dự án", () => {
 
   test("tự chạy, và dừng khi rê chuột", async ({ page }) => {
     const at = () =>
-      page.$eval(".tc-proj-card[data-on]", (el) =>
+      page.$eval(".tc-cover-card[data-on]", (el) =>
         el.getAttribute("aria-label"),
       );
     const before = await at();
     await page.waitForTimeout(6000);
     expect(await at(), "dải phải tự chạy").not.toBe(before);
 
-    const strip = page.locator(".tc-proj");
+    const strip = page.locator(".tc-cover");
     let stopped = false;
     for (let round = 0; round < 25 && !stopped; round += 1) {
       await strip.hover().catch(() => undefined);

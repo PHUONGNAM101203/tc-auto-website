@@ -14,6 +14,21 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Dai "BỘ SƯU TẬP" dung lai thanh bang chuyen ──────────────────────────
+  // Thiet ke ve chet ba tam anh le ra hai ben kem mui ten "‹ ›" — y la mot
+  // bang chuyen, nhung ca dai nam trong anh nen nen dung yen. Khach yeu cau no
+  // tu chay va bam vao tam nao thi tam do chay vao giua (30/09/2026).
+  // Dai ve chet da duoc xoa (tools/brand/extract-gallery.py) va dung lai bang
+  // ba tam anh GOC. Hinh hoc giu dung thiet ke: the giua 875x585 tai (282,1761)
+  // — dung ti le anh goc, khong cat — moi bac cach 905px.
+  // Cac tam ngoai KHONG lam nghieng, cung ly do voi dai du an.
+  {
+    page: "trai-nghiem/khoanh-khac",
+    box: { x: 0, y: 1743, width: 1440, height: 615 },
+    reason:
+      "Dai 'BỘ SƯU TẬP' duoc dung lai thanh bang chuyen tu chay va bam duoc; " +
+      "cac tam khong lam nghieng vi anh goc la anh phang.",
+  },
   // ── Chong anh xoe: ca chong deu la anh THAT ──────────────────────────────
   // Ban thiet ke ve mot chong 3-4 tam xoe len phia tren ben phai, nhung chi
   // tam TREN CUNG la phan tu that — may tam phia sau nam trong anh nen. Tuc la
