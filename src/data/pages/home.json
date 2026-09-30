@@ -18,7 +18,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/home-0@3x.webp?v=1aa26afa",
+          "src": "/slices/home-0@3x.webp?v=ab19d31e",
           "scale": 3
         }
       ],
@@ -40,7 +40,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/home-1@3x.webp?v=725206ad",
+          "src": "/slices/home-1@3x.webp?v=2d6d6626",
           "scale": 3
         }
       ],
@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/home-2.webp?v=0cfc79c3",
+      "src": "/slices/home-2.webp?v=d10c0290",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 107808,
       "srcSet": [
         {
-          "src": "/slices/home-2.webp?v=0cfc79c3",
+          "src": "/slices/home-2.webp?v=d10c0290",
           "scale": 2
         },
         {
-          "src": "/slices/home-2@3x.webp?v=b16bba45",
+          "src": "/slices/home-2@3x.webp?v=b1618994",
           "scale": 3
         }
       ],
@@ -84,7 +84,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/home-3@3x.webp?v=5d6660de",
+          "src": "/slices/home-3@3x.webp?v=1f7e56b8",
           "scale": 3
         }
       ],

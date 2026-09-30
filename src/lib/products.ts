@@ -94,3 +94,8 @@ export function otherProducts(slug: string, limit = 4): readonly Product[] {
   const rest = [...family.slice(here + 1), ...family.slice(0, here)];
   return rest.slice(0, limit);
 }
+
+/** Cac san pham cua mot trang danh muc, dung thu tu tren trang. */
+export function productsIn(category: string): readonly Product[] {
+  return PRODUCTS.filter((product) => product.category === category);
+}

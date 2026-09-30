@@ -563,3 +563,91 @@
   width: 40px;
   background: var(--red-nav);
 }
+
+/* ---------- Luoi the (dai the Giai phap, cac the noi) ---------- */
+/* Ban desktop cho cac the truot ngang hoac noi len khi ro chuot. Tren dien
+   thoai khong co chuot, va vuot ngang de nham voi cuon trang — nen o day
+   chung xep thanh luoi, bam thang vao la di. */
+.tc-m-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tc-m-tiles a {
+  display: block;
+  text-decoration: none;
+}
+
+.tc-m-tiles img {
+  display: block;
+  width: 100%;
+  /* Cac the trong mot luoi phai cao bang nhau: anh goc moi cai mot ti le, de
+     `height: auto` thi luoi so le. `cover` cat bot chu khong bop meo. */
+  aspect-ratio: var(--tc-m-tile, 3 / 4);
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.tc-m-tiles strong {
+  display: block;
+  margin-top: 10px;
+  font: 800 12px/1.35 "Unbounded", sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.tc-m-tiles em {
+  display: block;
+  margin-top: 4px;
+  font: italic 400 12.5px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 380px) {
+  .tc-m-tiles {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Luoi san pham tren trang danh muc ---------- */
+/* Ban desktop hien san pham thanh the tren canvas; ban mobile xep doc mot cot
+   de doc duoc ca mo ta. */
+.tc-m-prods {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tc-m-prods a {
+  display: block;
+  text-decoration: none;
+}
+
+.tc-m-prods img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.tc-m-prods strong {
+  display: block;
+  margin-top: 10px;
+  font: 800 13px/1.35 "Unbounded", sans-serif;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.tc-m-prods em {
+  display: block;
+  margin-top: 6px;
+  font: italic 400 13.5px/1.65 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.66);
+}

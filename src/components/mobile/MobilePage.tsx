@@ -135,13 +135,16 @@ function renderBlock(block: MobileBlock) {
 
   return (
     <section key={block.id} className="tc-m-sec">
-      <ul className="tc-m-tiles">
+      <ul
+        className="tc-m-tiles"
+        style={{ ["--tc-m-tile" as string]: block.ratio }}
+      >
         {block.tiles.map((tile) => (
           <li key={tile.href + tile.title}>
             <Link href={tile.href} prefetch={false}>
               {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san */}
               <img src={tile.src} alt="" loading="lazy" decoding="async" />
-              <strong>{tile.title}</strong>
+              {tile.title ? <strong>{tile.title}</strong> : null}
               {tile.subtitle ? <em>{tile.subtitle}</em> : null}
             </Link>
           </li>

@@ -32,6 +32,13 @@ export interface LiftCard {
    * dai). Phong to thi the luon phu kin dung cho cu.
    */
   readonly grow?: boolean;
+  /**
+   * Tieu de da nam SAN TRONG anh the.
+   *
+   * Ban mobile xep the thanh luoi va in tieu de duoi anh; the nao da co chu
+   * trong anh thi phai bo qua, neu khong nguoi doc thay hai lan.
+   */
+  readonly captionInImage?: boolean;
 }
 
 const PAGES = (data as unknown as { pages: Record<string, readonly LiftCard[]> }).pages;

@@ -77,6 +77,9 @@ GROUPS = [
         # Mep khong lam mo: cac tam giap nhau, lam mo la thay duong noi.
         "feather": 0,
         "grow": True,
+        # Tieu de nam TRONG anh the (khong phai ngoai nhu bon o muc Cong nghe).
+        # Ban mobile nho do ma khong in lai chu, neu khong se doc thay hai lan.
+        "captionInImage": True,
         "cards": [
             {
                 "id": "hanh-trinh",
@@ -355,6 +358,8 @@ def export_group(group: dict) -> list[dict]:
         if group.get("grow"):
             # Phong to thay vi nhac len — xem ghi chu o nhom.
             entry["grow"] = True
+        if group.get("captionInImage"):
+            entry["captionInImage"] = True
         # Cac the CUNG MOT NHOM mo di khi ro chuot vao mot the trong nhom; cac
         # nhom khac tren cung trang thi khong lien quan.
         entry["group"] = group["slug"]

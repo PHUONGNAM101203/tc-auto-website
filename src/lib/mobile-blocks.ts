@@ -1,6 +1,6 @@
 import { getLiftCards } from "./lift-cards";
 import { getPhotoSliders } from "./photo-sliders";
-import { SOLUTION_CARDS } from "./solution-cards";
+import { SOLUTION_CARD, SOLUTION_CARDS } from "./solution-cards";
 import type { PageSlug } from "./types";
 
 /**
@@ -21,6 +21,7 @@ import type { PageSlug } from "./types";
 export interface MobileTile {
   readonly href: string;
   readonly src: string;
+  /** De trong khi tieu de da nam san trong anh — tranh doc thay hai lan. */
   readonly title: string;
   readonly subtitle: string;
 }
@@ -40,6 +41,8 @@ export type MobileBlock =
       readonly id: string;
       readonly y: number;
       readonly label: string;
+      /** Ti le khung cho MOI the trong luoi, de chung cao bang nhau. */
+      readonly ratio: string;
       readonly tiles: readonly MobileTile[];
     };
 
@@ -69,11 +72,14 @@ function solutionBlock(slug: PageSlug): MobileBlock[] {
       // Dai the "Giải pháp" tren trang chu, do tu chinh ban thiet ke.
       y: 1458,
       label: "Giải pháp",
+      ratio: `${SOLUTION_CARD.width} / ${SOLUTION_CARD.height}`,
+      // `labelInCss` = the nay KHONG co chu trong anh nen phai tu ve; the con
+      // lai thi chu da nam san trong anh, in lai la doc thay hai lan.
       tiles: SOLUTION_CARDS.map((card) => ({
         href: card.href,
         src: card.src,
-        title: card.title,
-        subtitle: card.subtitle,
+        title: card.labelInCss ? card.title : "",
+        subtitle: card.labelInCss ? card.subtitle : "",
       })),
     },
   ];
@@ -85,16 +91,26 @@ function liftBlocks(slug: PageSlug): MobileBlock[] {
   for (const card of getLiftCards(slug)) {
     groups.set(card.group, [
       ...(groups.get(card.group) ?? []),
-      { href: card.href, src: card.src, title: card.title, subtitle: card.subtitle },
+      {
+        href: card.href,
+        src: card.src,
+        title: card.captionInImage ? "" : card.title,
+        subtitle: card.captionInImage ? "" : card.subtitle,
+      },
     ]);
     tops.set(card.group, Math.min(tops.get(card.group) ?? card.y, card.y));
+  }
+  const shape = new Map<string, string>();
+  for (const card of getLiftCards(slug)) {
+    shape.set(card.group, `${card.width} / ${card.height}`);
   }
   return [...groups].map(([name, tiles]) => ({
     kind: "tiles" as const,
     id: name,
     y: tops.get(name) ?? 0,
+    ratio: shape.get(name) ?? "3 / 4",
     // Nhan lay tu chinh cac the: chung cung mot cum thi cung mot chu de.
-    label: tiles.length > 0 ? tiles[0].subtitle : name,
+    label: "",
     tiles,
   }));
 }

@@ -16,6 +16,7 @@ import {
   getMobileHeroSlides,
   getMobileSections,
 } from "@/lib/mobile-sections";
+import { getMobileBlocks } from "@/lib/mobile-blocks";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { isSearchBaked } from "@/lib/search-baked";
 import type { PageSpec } from "@/lib/types";
@@ -41,6 +42,7 @@ export function PageShell({ page }: PageShellProps) {
         hero={getMobileHero(page.slug)}
         heroSlides={getMobileHeroSlides(page.slug)}
         sections={getMobileSections(page.slug)}
+        blocks={getMobileBlocks(page.slug)}
         contact={
           page.contactForm ? (
             <ContactForm y={0} sourcePage={page.route} layout="mobile" />

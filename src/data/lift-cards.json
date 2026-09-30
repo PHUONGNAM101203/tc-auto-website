@@ -11,8 +11,9 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=9ab548f1",
+        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=2191e728",
         "grow": true,
+        "captionInImage": true,
         "group": "home-trai-nghiem"
       },
       {
@@ -24,8 +25,9 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=396b7991",
+        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=42265e75",
         "grow": true,
+        "captionInImage": true,
         "group": "home-trai-nghiem"
       },
       {
@@ -37,8 +39,9 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=580fabd8",
+        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=8b767073",
         "grow": true,
+        "captionInImage": true,
         "group": "home-trai-nghiem"
       },
       {
@@ -50,8 +53,9 @@
         "y": 927,
         "width": 258,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=30fc55ca",
+        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=2489f2ad",
         "grow": true,
+        "captionInImage": true,
         "group": "home-trai-nghiem"
       },
       {

@@ -18,7 +18,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-0@3x.webp?v=39192104",
+          "src": "/slices/giai-phap-0@3x.webp?v=33efd34f",
           "scale": 3
         }
       ],
@@ -40,7 +40,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-1@3x.webp?v=8d0655ee",
+          "src": "/slices/giai-phap-1@3x.webp?v=a5a6fbf7",
           "scale": 3
         }
       ],
@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-2.webp?v=e7393cbe",
+      "src": "/slices/giai-phap-2.webp?v=4ca3a265",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 144408,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-2.webp?v=e7393cbe",
+          "src": "/slices/giai-phap-2.webp?v=4ca3a265",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-2@3x.webp?v=069034a2",
+          "src": "/slices/giai-phap-2@3x.webp?v=850d376a",
           "scale": 3
         }
       ],
@@ -72,7 +72,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-3.webp?v=260ee063",
+      "src": "/slices/giai-phap-3.webp?v=f3204c00",
       "y": 2700.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -80,11 +80,11 @@
       "bytes": 98872,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-3.webp?v=260ee063",
+          "src": "/slices/giai-phap-3.webp?v=f3204c00",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-3@3x.webp?v=548b5841",
+          "src": "/slices/giai-phap-3@3x.webp?v=9b8aea81",
           "scale": 3
         }
       ],
@@ -106,7 +106,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-4@3x.webp?v=e81b7924",
+          "src": "/slices/giai-phap-4@3x.webp?v=c7f6bf4c",
           "scale": 3
         }
       ],
@@ -128,7 +128,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-5@3x.webp?v=e5fbce5b",
+          "src": "/slices/giai-phap-5@3x.webp?v=fc3cbc85",
           "scale": 3
         }
       ],
@@ -150,7 +150,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-6@3x.webp?v=e5ac145c",
+          "src": "/slices/giai-phap-6@3x.webp?v=7bd43749",
           "scale": 3
         }
       ],

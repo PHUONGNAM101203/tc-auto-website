@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { MobileSubPage } from "@/components/mobile/MobileSubPage";
+import { productsIn } from "@/lib/products";
+import { PPF_CARDS } from "@/lib/ppf-cards";
 import { SliceImage } from "@/components/canvas/SliceImage";
 import { ContactForm } from "@/components/site/ContactForm";
 import { FooterSocial } from "@/components/site/FooterSocial";
@@ -49,6 +51,8 @@ export function SubPageShell({
       {/* Duoi 900px, canvas duoc an di va ban nay hien ra — chu trong anh khong
         the doc duoc khi thu xuong be rong dien thoai. */}
       <MobileSubPage
+        products={productsIn(page.slug)}
+        cards={page.slug === "giai-phap/ppf" ? PPF_CARDS : []}
         page={page}
         nav={page.nav}
         blocks={getMobileBlocks(page)}

@@ -18,7 +18,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-0@3x.webp?v=f41654ed",
+          "src": "/slices/dai-ly-0@3x.webp?v=51b2869f",
           "scale": 3
         }
       ],
@@ -28,7 +28,7 @@
       }
     },
     {
-      "src": "/slices/dai-ly-1.webp?v=c1693d69",
+      "src": "/slices/dai-ly-1.webp?v=d930be4e",
       "y": 900.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -36,11 +36,11 @@
       "bytes": 67076,
       "srcSet": [
         {
-          "src": "/slices/dai-ly-1.webp?v=c1693d69",
+          "src": "/slices/dai-ly-1.webp?v=d930be4e",
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-1@3x.webp?v=e3924d6f",
+          "src": "/slices/dai-ly-1@3x.webp?v=0c4c4016",
           "scale": 3
         }
       ],
@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/dai-ly-2.webp?v=4c2ee56a",
+      "src": "/slices/dai-ly-2.webp?v=39bc40ca",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 76842,
       "srcSet": [
         {
-          "src": "/slices/dai-ly-2.webp?v=4c2ee56a",
+          "src": "/slices/dai-ly-2.webp?v=39bc40ca",
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-2@3x.webp?v=3f48411d",
+          "src": "/slices/dai-ly-2@3x.webp?v=fbcc815b",
           "scale": 3
         }
       ],
@@ -84,7 +84,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-3@3x.webp?v=3768f358",
+          "src": "/slices/dai-ly-3@3x.webp?v=466c7ecc",
           "scale": 3
         }
       ],
@@ -106,7 +106,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-4@3x.webp?v=6aa5080c",
+          "src": "/slices/dai-ly-4@3x.webp?v=44bf8c40",
           "scale": 3
         }
       ],
@@ -128,7 +128,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-5@3x.webp?v=4119b361",
+          "src": "/slices/dai-ly-5@3x.webp?v=cdb5fba4",
           "scale": 3
         }
       ],

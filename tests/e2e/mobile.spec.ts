@@ -85,19 +85,24 @@ test.describe("bản mobile", () => {
  * ngon tay, nen no dung mot dai cuon ngang that voi `scroll-snap` chu khong
  * phai `transform` nhu ban desktop.
  */
+/** Trang chu co HAI bang anh: bang hero o dau va bang giua trang. */
+const HERO_TRACK = ".tc-m-hero .tc-m-car-track";
+const HERO_SLIDES = `${HERO_TRACK} > li`;
+const HERO_DOTS = ".tc-m-hero .tc-m-car-dots button";
+
 test.describe("băng hero bản mobile", () => {
   test("có đủ số tấm như bản desktop và có chấm chỉ mục", async ({ page }) => {
     await page.goto("/");
-    const slides = page.locator(".tc-m-car-track > li");
+    const slides = page.locator(HERO_SLIDES);
     await expect(slides).toHaveCount(5);
-    await expect(page.locator(".tc-m-car-dots button")).toHaveCount(5);
+    await expect(page.locator(HERO_DOTS)).toHaveCount(5);
   });
 
   test("tự chạy, không cần chạm", async ({ page }) => {
     await page.goto("/");
     await page.waitForTimeout(600);
     const at = () =>
-      page.$eval(".tc-m-car-track", (el) => Math.round(el.scrollLeft));
+      page.$eval(HERO_TRACK, (el) => Math.round(el.scrollLeft));
     const before = await at();
     await page.waitForTimeout(4200);
     expect(await at(), "băng hero mobile phải tự chạy").toBeGreaterThan(before);
@@ -107,7 +112,7 @@ test.describe("băng hero bản mobile", () => {
     page,
   }) => {
     await page.goto("/");
-    const how = await page.$eval(".tc-m-car-track", (el) => {
+    const how = await page.$eval(HERO_TRACK, (el) => {
       const cs = getComputedStyle(el);
       return { x: cs.overflowX, snap: cs.scrollSnapType };
     });
@@ -120,13 +125,103 @@ test.describe("băng hero bản mobile", () => {
     await page.waitForTimeout(400);
     // Cham vao dai truoc de dung tu chay: vach chi muc co hoat anh doi be
     // ngang, dang chay thi phep bam phai cho no dung yen.
-    await page.locator(".tc-m-car-track").hover();
+    await page.locator(HERO_TRACK).hover();
     await page.waitForTimeout(400);
-    await page.locator(".tc-m-car-dots button").nth(3).click();
+    await page.locator(HERO_DOTS).nth(3).click();
     await page.waitForTimeout(900);
-    const at = await page.$eval(".tc-m-car-track", (el) =>
+    const at = await page.$eval(HERO_TRACK, (el) =>
       Math.round(el.scrollLeft / (el.scrollWidth / 5)),
     );
     expect(at).toBe(3);
+  });
+});
+
+/**
+ * Cac KHOI cua ban desktop duoc dua xuong ban mobile.
+ *
+ * Truoc day ban mobile chi co chu va mot vai o anh; bang anh, dai the, cac the
+ * noi va danh sach san pham deu chi co tren desktop — khach bao thieu
+ * (30/09/2026).
+ */
+test.describe("mobile có đủ các khối của desktop", () => {
+  test("trang chủ: có băng ảnh giữa trang và các lưới thẻ", async ({ page }) => {
+    await page.goto("/");
+    // Mot bang hero + mot bang anh "Câu chuyện khởi nghiệp".
+    await expect(page.locator(".tc-m-car")).toHaveCount(2);
+    // Dai the Giai phap + hai cum the noi.
+    await expect(page.locator(".tc-m-tiles")).toHaveCount(3);
+    await expect(page.locator(".tc-m-tiles a")).toHaveCount(12);
+  });
+
+  for (const [route, cars] of [
+    ["/dai-ly", 1],
+    ["/nhan-su", 1],
+  ] as const) {
+    test(`${route}: băng ảnh giữa trang có mặt`, async ({ page }) => {
+      await page.goto(route);
+      await expect(page.locator(".tc-m-car")).toHaveCount(cars);
+    });
+  }
+
+  test("thẻ nào đã có chữ trong ảnh thì KHÔNG in lại bên dưới", async ({
+    page,
+  }) => {
+    // Anh cua bon tam "Trai nghiem" da chua san tieu de; in lai la doc hai lan.
+    await page.goto("/");
+    const texts = await page.$$eval(".tc-m-tiles a", (els) =>
+      els.map((el) => (el.textContent ?? "").trim()),
+    );
+    const withCaption = texts.filter((t) => t.length > 0);
+    // Chi cac the KHONG co chu trong anh moi duoc in chu: LOA la mot trong so do.
+    expect(withCaption.length).toBeGreaterThan(0);
+    expect(withCaption.length).toBeLessThan(texts.length);
+  });
+
+  test("các khối xếp đúng thứ tự dọc như bản desktop", async ({ page }) => {
+    await page.goto("/");
+    const tops = await page.$$eval(
+      ".tc-m-sec, .tc-m-car, .tc-m-tiles",
+      (els) => els.map((el) => Math.round(el.getBoundingClientRect().top + scrollY)),
+    );
+    const sorted = [...tops].sort((a, b) => a - b);
+    expect(tops).toEqual(sorted);
+  });
+
+  for (const [route, count] of [
+    ["/giai-phap/man-hinh", 9],
+    ["/giai-phap/phim-dan-kinh", 5],
+  ] as const) {
+    test(`${route}: có đủ sản phẩm và bấm sang được`, async ({ page }) => {
+      await page.goto(route);
+      const items = page.locator(".tc-m-prods li");
+      await expect(items).toHaveCount(count);
+
+      // Anh tai theo luot cuon, nen phai cuon het danh sach roi moi do.
+      await page.evaluate(async () => {
+        const step = innerHeight / 2;
+        for (let y = 0; y < document.documentElement.scrollHeight; y += step) {
+          scrollTo(0, y);
+          await new Promise((done) => setTimeout(done, 90));
+        }
+      });
+      await page.waitForFunction(
+        () =>
+          [...document.querySelectorAll<HTMLImageElement>(".tc-m-prods img")].every(
+            (img) => img.complete && img.naturalWidth > 1,
+          ),
+        null,
+        { timeout: 15_000 },
+      );
+
+      await page.locator(".tc-m-prods a").first().click();
+      await expect(page.locator(".tc-prod-name")).toBeVisible();
+    });
+  }
+
+  test("/giai-phap/ppf: có cả bốn thẻ 3M PPF lẫn ba dòng Nano", async ({
+    page,
+  }) => {
+    await page.goto("/giai-phap/ppf");
+    await expect(page.locator(".tc-m-prods li")).toHaveCount(7);
   });
 });

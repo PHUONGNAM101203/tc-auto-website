@@ -32,9 +32,13 @@ PUBLIC = ROOT / "public"
 
 #: Canh o vuong, do o ti le @2x.
 BLOCK = 128
-#: Nen WebP o hai ti le khac nhau thi lech chung 1..3. Nguong 8 con xa muc do
-#: nhieu do ma van bat duoc vung chua xoa (do thuc te: 28 o PPF, 20 o quiz).
-LIMIT = 8.0
+#: Nen WebP o hai ti le khac nhau thi lech chung 1..3. Rieng nhung o co hoa
+#: tiet day dac — vi du luoi day 3D tren trang Cong nghe — thi phep thu nho
+#: ban @3x ve @2x sinh ra sai so lon hon: do duoc 8,04 o do, va do la CUNG MOT
+#: noi dung chu khong phai vung chua xoa.
+#: Nguong 12 van con xa cac loi that (do thuc te: 28 o PPF, 20 o quiz, 42 o
+#: anh hero khi mat na do duc tinh rieng tung ti le).
+LIMIT = 12.0
 
 
 def worst_block(a: Image.Image, b: Image.Image) -> tuple[float, int]:
