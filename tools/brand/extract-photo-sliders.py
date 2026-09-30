@@ -19,6 +19,7 @@ import sys
 import json
 from pathlib import Path
 
+import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent.parent
@@ -84,6 +85,42 @@ SLIDERS = [
 ]
 
 
+#: Duoi muc nay so voi slide dau thi coi la anh da bi lam toi san, phai keo lai.
+DIM_RATIO = 0.7
+
+
+def stats(image: Image.Image) -> tuple[np.ndarray, np.ndarray]:
+    """Trung binh va do lech tung kenh mau, chi tinh tren phan DAC cua anh."""
+    a = np.asarray(image.convert("RGBA"), dtype=np.float32)
+    mask = a[..., 3] > 200
+    rgb = a[..., :3][mask]
+    return rgb.mean(axis=0), rgb.std(axis=0) + 1e-6
+
+
+def match_exposure(art: Image.Image, mean: np.ndarray, std: np.ndarray) -> Image.Image:
+    """
+    Keo sang/mau cua mot slide ve ngang voi slide dau.
+
+    Vi sao can: may tam phia sau trong bo tai nguyen la ban da duoc LAM TOI SAN
+    cho hop voi vi tri "nam sau chong" trong ban thiet ke. Truoc day chuyen do
+    khong lo ra vi chung khong bao gio duoc dua len tren cung. Tu khi chong anh
+    xoay duoc (khach yeu cau 30/09/2026) thi bam vai cai la mot tam gan nhu den
+    si nhay len dau — khach bao ngay (anh 67).
+
+    Bo tai nguyen KHONG co ban sang cua hai tam do, nen o day keo lai bang
+    phep tuyen tinh tung kenh: dua trung binh va do lech cua phan dac ve dung
+    bang slide dau. Day la phep gan dung; muon mau that thi phai xin khach
+    xuat lai anh goc.
+    """
+    a = np.asarray(art.convert("RGBA"), dtype=np.float32)
+    alpha = a[..., 3:]
+    rgb = a[..., :3]
+    m, sd = stats(art)
+    fixed = (rgb - m) * (std / sd) + mean
+    out = np.concatenate([np.clip(fixed, 0, 255), alpha], axis=2)
+    return Image.fromarray(out.astype(np.uint8), "RGBA")
+
+
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
     manifest: dict[str, list[dict]] = {}
@@ -130,6 +167,20 @@ def main() -> int:
                 height = art.height
                 width = round(height * ratio)
             art = art.resize((width, height), Image.LANCZOS)
+
+            # Anh nao toi hon han slide dau thi keo lai cho ca chong dong bo.
+            # Chi dung khi chenh lech LON — cac slide von da dung sang thi giu
+            # nguyen, khong dong vao.
+            base_mean, base_std = stats(first)
+            art_mean, _ = stats(art)
+            if art_mean.mean() < base_mean.mean() * DIM_RATIO:
+                before = art_mean.mean()
+                art = match_exposure(art, base_mean, base_std)
+                print(
+                    f"    keo sang {path.name}: {before:.0f} -> {stats(art)[0].mean():.0f}"
+                    " (anh trong bo tai nguyen da bi lam toi san)"
+                )
+
             target = OUT / f"{slider['id']}-{index}.webp"
             art.save(target, "WEBP", quality=88, method=6)
             slides.append(f"/sliders/{slider['id']}-{index}.webp")

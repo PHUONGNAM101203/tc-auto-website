@@ -28,6 +28,26 @@ BUTTONS = ROOT / "src" / "data" / "detected-buttons.json"
 PRODUCTS = ROOT / "src" / "data" / "products.json"
 TARGET = ROOT / "src" / "data" / "cta-links.json"
 
+#: Dich den DO TAY cho nhung nut ma phep so khop theo ten khong the tim ra.
+#:
+#: Phep so khop tu dong doi tieu de cua muc phai gan giong ten mot trang. Hai
+#: muc "CÔNG NGHỆ MỚI" va "NGHIÊN CỨU & PHÁT TRIỂN" thi khong: trang chua ca
+#: hai bai la "Bài viết" — khong co tu nao chung. Ket qua la hai nut do chi xo
+#: them chu ra tai cho, trong khi khach da noi ro "chỗ nào có bài viết khác
+#: thì nhấn vào nó phải ra bài viết liên quan" (30/09/2026).
+#:
+#: Khoa: (slug cua trang, tieu de cua muc). Ghi de len ket qua tu dong.
+MANUAL_TARGETS: dict[tuple[str, str], str] = {
+    (
+        "cong-nghe/tien-phong-cong-nghe",
+        "CÔNG NGHỆ MỚI",
+    ): "/cong-nghe/tien-phong-cong-nghe/bai-viet",
+    (
+        "cong-nghe/tien-phong-cong-nghe",
+        "NGHIÊN CỨU & PHÁT TRIỂN",
+    ): "/cong-nghe/tien-phong-cong-nghe/bai-viet",
+}
+
 CTA_PATTERN = re.compile(
     r"^>?\s*(XEM\s*TH[EÊẼ]M|XEM\s*CHI\s*TI[EÊ]T|T[IÌ]M\s*HI[EÊỀ]U\s*TH[EÊ]M|T[AẢ]I\s*V[EÊ])\s*$"
 )
@@ -439,6 +459,10 @@ def main() -> int:
             # Khong tu tro ve chinh no.
             if href == f"/{slug}":
                 href = None
+            # Ghi de do tay — xem MANUAL_TARGETS.
+            manual = MANUAL_TARGETS.get((slug, (title or "").strip()))
+            if manual:
+                href, score = manual, 1.0
 
             body, body_box = paragraphs_between(blocks, title_bottom, block["y"], block["x"])
             title, overflow = split_runon_title(title or "")

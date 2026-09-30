@@ -18,9 +18,9 @@
           "height": 33
         },
         "slides": [
-          "/sliders/cau-chuyen-khoi-nghiep-1.webp?v=83de361b",
-          "/sliders/cau-chuyen-khoi-nghiep-2.webp?v=298b2a1e",
-          "/sliders/cau-chuyen-khoi-nghiep-3.webp?v=25eef3c0"
+          "/sliders/cau-chuyen-khoi-nghiep-1.webp",
+          "/sliders/cau-chuyen-khoi-nghiep-2.webp",
+          "/sliders/cau-chuyen-khoi-nghiep-3.webp"
         ]
       }
     ],
@@ -41,9 +41,9 @@
           "height": 30
         },
         "slides": [
-          "/sliders/chan-dung-dai-ly-1.webp?v=9f1e7be5",
-          "/sliders/chan-dung-dai-ly-2.webp?v=974d05e7",
-          "/sliders/chan-dung-dai-ly-3.webp?v=6a5dde70"
+          "/sliders/chan-dung-dai-ly-1.webp",
+          "/sliders/chan-dung-dai-ly-2.webp",
+          "/sliders/chan-dung-dai-ly-3.webp"
         ]
       }
     ],
@@ -64,10 +64,10 @@
           "height": 33
         },
         "slides": [
-          "/sliders/con-nguoi-tc-1.webp?v=2847f6a2",
-          "/sliders/con-nguoi-tc-2.webp?v=3c4a0ef6",
-          "/sliders/con-nguoi-tc-3.webp?v=b0b4b8dd",
-          "/sliders/con-nguoi-tc-4.webp?v=4c7efa25"
+          "/sliders/con-nguoi-tc-1.webp",
+          "/sliders/con-nguoi-tc-2.webp",
+          "/sliders/con-nguoi-tc-3.webp",
+          "/sliders/con-nguoi-tc-4.webp"
         ],
         "prev": {
           "x": 210,
