@@ -1798,3 +1798,34 @@
     transition: none;
   }
 }
+
+/* ---------- Chan the tai ung dung ve lai bang chu that ---------- */
+/* Xem src/components/site/OverlapCard.tsx: the nao co tieu de dai bi nut
+   "TẢI VỀ" de len thi ca cum duoc xoa khoi anh va ve lai o day. Co chu, mau
+   va khoang cach lay dung tu cac the ben canh trong chinh ban thiet ke. */
+.tc-appfoot {
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.tc-appfoot-title {
+  margin: 0;
+  font: 600 17px/22px "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.tc-appfoot-btn {
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #d0181e;
+  font: 700 13px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+  color: #fff;
+}

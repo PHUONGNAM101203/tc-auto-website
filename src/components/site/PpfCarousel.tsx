@@ -31,6 +31,16 @@ interface State {
   readonly animate: boolean;
 }
 
+/**
+ * Dai THE thi KHONG tu chay.
+ *
+ * Khach chot 30/09/2026: "mấy chỗ như này thì ko cần auto đâu nhé". Bang anh
+ * thi tu chay cho song dong, nhung dai the san pham la de DOC — ten, mo ta va
+ * mot nut bam. Chu troi di giua chung la nguoi dung mat cho, va bam trung nut
+ * cua the khac. Mui ten trai/phai van con, va van chay vong khong het.
+ */
+const AUTOPLAY = false;
+
 export function PpfCarousel() {
   const [state, setState] = useState<State>({ step: 0, animate: true });
 
@@ -83,7 +93,7 @@ export function PpfCarousel() {
   // Tu chay 5 giay mot nhip; dung khi re chuot, khi ngoai khung nhin, va mot
   // lat sau moi cu bam tay. Xem src/components/site/useAutoplay.ts.
   const { attach, hoverProps, nudge, playing } =
-    useAutoplay<HTMLDivElement>(() => move(1));
+    useAutoplay<HTMLDivElement>(() => move(1), AUTOPLAY);
 
   /** Bam tay: truot ngay VA bat dau khoang lang. */
   const moveByHand = (delta: number) => {

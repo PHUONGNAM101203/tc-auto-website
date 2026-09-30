@@ -1,0 +1,19 @@
+{
+  "_doc": "The bi nut de len chu tren trang Cap nhat & va loi. Ca cum da duoc xoa khoi anh nen va ve lai bang phan tu that. Xem tools/brand/fix-overlap-card.py va OverlapCard.tsx.",
+  "cards": [
+    {
+      "page": "cong-nghe/ung-dung/cap-nhat-va-loi",
+      "footer": {
+        "x": 556,
+        "y": 1340,
+        "width": 328
+      },
+      "title": "[CẬP NHẬT] ES File Explorer File Manager",
+      "button": {
+        "label": "TẢI VỀ",
+        "width": 158,
+        "height": 32
+      }
+    }
+  ]
+}

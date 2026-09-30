@@ -263,6 +263,13 @@
   width: 100%;
   left: auto;
   top: auto;
+  /* Khoi PROTOTYPE dat CHIEU CAO CUNG cho ca ba (nut 25px, o nhap 28px) vi
+     tren canvas moi o duoc dat tuyet doi. O day chung xep doc va tu co dan,
+     ma quen mo khoa chieu cao thi chu bi cat mat nua duoi — do duoc: nut cao
+     28px trong khi chu 13px cong padding 14px moi be can toi 41px, va
+     `overflow: hidden` cat gon phan thua (khach bao 30/09/2026). */
+  height: auto;
+  overflow: visible;
 }
 
 .tc-m-form.ff input,

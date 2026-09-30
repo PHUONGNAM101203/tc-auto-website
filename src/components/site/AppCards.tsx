@@ -22,6 +22,13 @@ import type { AppCard } from "@/lib/app-cards";
  * do mo ra lai thay tieu de "KHO ỨNG DỤNG", nen nguoi dung tuong bam nham
  * (khach bao 30/09/2026).
  */
+/**
+ * Dai THE thi KHONG tu chay — xem chu thich cung ten trong PpfCarousel.tsx.
+ * Cac the o day co tieu de dai va mot nut "TẢI VỀ"; troi di giua chung la
+ * nguoi doc mat cho va bam trung nut cua the khac.
+ */
+const AUTOPLAY = false;
+
 export function AppCards({ cards }: { cards: readonly AppCard[] }) {
   // `order[i]` = the nao dang nam o khung thu i. Khung giua la khung to nhat.
   const [order, setOrder] = useState(() => cards.map((_, index) => index));
@@ -40,7 +47,7 @@ export function AppCards({ cards }: { cards: readonly AppCard[] }) {
         [next[middle], next[from]] = [next[from], next[middle]];
         return next;
       }),
-    cards.length > 1,
+    cards.length > 1 && AUTOPLAY,
   );
 
   if (cards.length === 0) {

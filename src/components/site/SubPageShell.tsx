@@ -13,6 +13,7 @@ import {
   GALLERY_STEP,
   getGalleryPhotos,
 } from "@/lib/gallery";
+import { OverlapCards } from "@/components/site/OverlapCard";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
@@ -151,6 +152,9 @@ export function SubPageShell({
             step={GALLERY_STEP}
             label="Bộ sưu tập"
           />
+
+          {/* The nao bi nut "TẢI VỀ" de len chu thi chan the duoc ve lai. */}
+          <OverlapCards slug={page.slug} />
 
           {feature}
 

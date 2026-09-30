@@ -14,6 +14,21 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── The tai ung dung bi nut de len chu ──────────────────────────────────
+  // Trang "Cập nhật & vá lỗi" xep the theo luoi 3 cot x 5 hang; nut "TẢI VỀ"
+  // nam o mot do cao CO DINH. Mot the co tieu de dai hon han — "[CẬP NHẬT] ES
+  // File Explorer File Manager" — nen xuong hai dong, va ban thiet ke ve nut
+  // DE LEN dong thu hai (khach bao 30/09/2026: "chỗ này đừng để nút đè chữ").
+  // Khong the chi keo nut xuong: phan chu bi che da mat khoi anh. Nen ca cum
+  // duoc xoa (tools/brand/fix-overlap-card.py) va ve lai bang phan tu that,
+  // nut nam han duoi tieu de. 29 the con lai giu nguyen tung diem anh.
+  {
+    page: "cong-nghe/ung-dung/cap-nhat-va-loi",
+    box: { x: 556, y: 1338, width: 328, height: 86 },
+    reason:
+      "Nut TẢI VỀ trong thiet ke ve de len dong thu hai cua tieu de; ca cum " +
+      "duoc ve lai bang phan tu that de nut nam han ben duoi.",
+  },
   // ── Dai "BỘ SƯU TẬP" dung lai thanh bang chuyen ──────────────────────────
   // Thiet ke ve chet ba tam anh le ra hai ben kem mui ten "‹ ›" — y la mot
   // bang chuyen, nhung ca dai nam trong anh nen nen dung yen. Khach yeu cau no

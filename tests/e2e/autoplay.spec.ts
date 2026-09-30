@@ -129,29 +129,36 @@ test.describe("các băng phía dưới — 5 giây", () => {
     });
   }
 
-  test("dải thẻ Giải pháp — nhịp vào khoảng 5 giây", async ({ page }) => {
-    await page.goto("/");
-    await settle(page, ".tc-solutions");
-    expectPace(
-      await pace(page, () => stripOffset(page, ".tc-solutions-strip"), BELOW_MS),
-      BELOW_MS,
-      "dải thẻ Giải pháp",
-    );
-  });
+  // Ba dai THE (Giai phap, PPF, Kho ung dung) KHONG tu chay — khach chot
+  // 30/09/2026: "mấy chỗ như này thì ko cần auto đâu nhé". Chung la de doc,
+  // co ten - mo ta - nut bam; chu troi di giua chung thi mat cho.
+  for (const [what, page_, box, track] of [
+    ["dải thẻ Giải pháp", "/", ".tc-solutions", ".tc-solutions-strip"],
+    ["dải thẻ PPF", "/giai-phap/ppf", ".tc-ppf", ".tc-ppf-strip"],
+  ] as const) {
+    test(`${what} — KHÔNG tự chạy, chỉ đổi khi bấm`, async ({ page }) => {
+      await page.goto(page_);
+      await settle(page, box);
+      const before = await stripOffset(page, track);
+      await page.waitForTimeout(BELOW_MS + SLACK_MS);
+      expect(
+        await stripOffset(page, track),
+        `${what} phải đứng yên`,
+      ).toBe(before);
+    });
+  }
 
-  test("dải thẻ PPF — nhịp vào khoảng 5 giây", async ({ page }) => {
+  test("dải thẻ PPF — bấm mũi tên thì trượt", async ({ page }) => {
     await page.goto("/giai-phap/ppf");
     await settle(page, ".tc-ppf");
-    expectPace(
-      await pace(page, () => stripOffset(page, ".tc-ppf-strip"), BELOW_MS),
-      BELOW_MS,
-      "dải thẻ PPF",
-    );
+    const before = await stripOffset(page, ".tc-ppf-strip");
+    await page.locator(".tc-ppf-arrow").last().click();
+    await page.waitForTimeout(900);
+    expect(await stripOffset(page, ".tc-ppf-strip")).not.toBe(before);
   });
 
   for (const [what, box] of [
     ["băng ảnh", ".tc-deck"],
-    ["dải thẻ Giải pháp", ".tc-solutions"],
   ] as const) {
     test(`${what} — rê chuột vào thì dừng`, async ({ page }) => {
       await page.goto("/");
