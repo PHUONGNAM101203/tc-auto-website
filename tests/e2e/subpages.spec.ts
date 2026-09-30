@@ -73,13 +73,57 @@ test.describe("31 trang con", () => {
     await expect(input).toHaveCSS("background-color", "rgb(10, 37, 57)");
   });
 
-  test("ô tìm kiếm ghost hiện ra khi focus", async ({ page }) => {
-    await page.goto("/nhan-su/tuyen-dung");
-    const search = page.locator(".search");
-    await expect(search).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
+  test("ô tìm kiếm trang con GIỐNG HỆT trang chính", async ({ page }) => {
+    // Truoc day o tim kiem cua trang con NUONG trong anh nen, con o tren chi
+    // la mot o trong suot chi hien khi focus — moi trang mot kieu. Khach yeu
+    // cau dong bo (30/09/2026), nen nay ca hai deu ve that.
+    const look = async (route: string) => {
+      await page.goto(route);
+      await page.waitForTimeout(400);
+      return page.$eval(".search", (el) => {
+        const cs = getComputedStyle(el);
+        const r = el.getBoundingClientRect();
+        return {
+          bg: cs.backgroundColor,
+          radius: cs.borderRadius,
+          shadow: cs.boxShadow,
+          x: Math.round(r.x),
+          w: Math.round(r.width),
+        };
+      });
+    };
+    const main = await look("/cong-nghe");
+    const sub = await look("/nhan-su/tuyen-dung");
+    expect(sub).toEqual(main);
+    // Va phai NHIN THAY duoc ngay, khong cho den luc focus moi hien.
+    expect(sub.bg).not.toBe("rgba(0, 0, 0, 0)");
+  });
 
-    await page.locator(".search input").focus();
-    await expect(search).toHaveCSS("background-color", "rgb(10, 37, 57)");
+  test("chữ trên nav trang con là chữ THẬT, đọc và chọn được", async ({
+    page,
+  }) => {
+    // Truoc day chu nav nuong trong anh; lop tren trong suot nen may tim kiem
+    // va trinh doc man hinh khong thay gi.
+    await page.goto("/nhan-su/tuyen-dung");
+    const colours = await page.$$eval(".hdr a.nv", (els) =>
+      els.map((el) => getComputedStyle(el).color),
+    );
+    expect(colours.length).toBeGreaterThan(3);
+    for (const colour of colours) {
+      expect(colour).not.toBe("rgba(0, 0, 0, 0)");
+    }
+  });
+
+  test("khung đánh dấu trên nav LƯỚT được ở trang con", async ({ page }) => {
+    await page.goto("/nhan-su/tuyen-dung");
+    const pill = page.locator(".tc-navpill");
+    await expect(pill).toHaveCount(1);
+    const before = await pill.evaluate((el) => el.getBoundingClientRect().x);
+
+    await page.locator('.hdr a.nv[href="/trai-nghiem"]').hover();
+    await page.waitForTimeout(700);
+    const after = await pill.evaluate((el) => el.getBoundingClientRect().x);
+    expect(after, "khung phải chạy theo chuột").toBeLessThan(before);
   });
 
   test("có lớp văn bản cho trình đọc màn hình và SEO", async ({ page }) => {

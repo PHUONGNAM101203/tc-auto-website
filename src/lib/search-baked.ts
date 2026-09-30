@@ -17,7 +17,15 @@
  * BO SLUG KHOI DAY khi prototype duoc export lai dung — luc do anh nen se
  * khong con o tim kiem ve san nua.
  */
-export const SEARCH_BAKED_PAGES: ReadonlySet<string> = new Set(["cong-nghe"]);
+/**
+ * DA RONG tu 30/09/2026: o tim kiem ve san tren trang Cong nghe da duoc xoa
+ * khoi lat nen (tools/scrub-nav.py), nen ca 37 trang deu ve o that va trong
+ * giong het nhau — dung yeu cau cua khach.
+ *
+ * Giu lai co nay de neu ban export prototype sau lai nuong o tim kiem vao anh
+ * o trang khac thi chi can them slug vao day.
+ */
+export const SEARCH_BAKED_PAGES: ReadonlySet<string> = new Set<string>();
 
 export function isSearchBaked(slug: string): boolean {
   return SEARCH_BAKED_PAGES.has(slug);

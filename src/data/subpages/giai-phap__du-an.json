@@ -8,14 +8,14 @@
   "height": 3690.0,
   "slices": [
     {
-      "src": "/slices/sub/giai-phap__du-an-0@2x.webp?v=f1cb4e67",
+      "src": "/slices/sub/giai-phap__du-an-0@2x.webp?v=97e7a1ee",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__du-an-0@2x.webp?v=f1cb4e67",
+          "src": "/slices/sub/giai-phap__du-an-0@2x.webp?v=97e7a1ee",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an-0@3x.webp?v=2bcefe81",
+          "src": "/slices/sub/giai-phap__du-an-0@3x.webp?v=9f87b3c7",
           "scale": 3
         }
       ],

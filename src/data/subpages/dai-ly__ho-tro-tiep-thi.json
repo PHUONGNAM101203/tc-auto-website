@@ -8,14 +8,14 @@
   "height": 2557.0,
   "slices": [
     {
-      "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@2x.webp?v=c7cefa28",
+      "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@2x.webp?v=3a50274c",
       "srcSet": [
         {
-          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@2x.webp?v=c7cefa28",
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@2x.webp?v=3a50274c",
           "scale": 2
         },
         {
-          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@3x.webp?v=30935e7c",
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-0@3x.webp?v=e7b3757c",
           "scale": 3
         }
       ],
@@ -37,7 +37,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-1@3x.webp?v=b7f7750f",
+          "src": "/slices/sub/dai-ly__ho-tro-tiep-thi-1@3x.webp?v=0dfe154e",
           "scale": 3
         }
       ],

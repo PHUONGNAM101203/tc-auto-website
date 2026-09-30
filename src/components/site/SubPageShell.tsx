@@ -82,7 +82,7 @@ export function SubPageShell({
 
           {/* KHONG ve thanh truot o trang con: o danh dau muc dang xem da nam
             san trong anh nen PNG, ve them la ra hai khung long nhau. */}
-          <SiteHeader nav={page.nav} pill={false} />
+          <SiteHeader nav={page.nav} />
 
           {hasRelatedStrip(page.slug) ? <RelatedStrip /> : null}
 

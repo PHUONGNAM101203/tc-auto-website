@@ -8,14 +8,14 @@
   "height": 2480.0,
   "slices": [
     {
-      "src": "/slices/sub/nhan-su__tuyen-dung-0@2x.webp?v=c68bf032",
+      "src": "/slices/sub/nhan-su__tuyen-dung-0@2x.webp?v=0c8efaea",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung-0@2x.webp?v=c68bf032",
+          "src": "/slices/sub/nhan-su__tuyen-dung-0@2x.webp?v=0c8efaea",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__tuyen-dung-0@3x.webp?v=f50edae0",
+          "src": "/slices/sub/nhan-su__tuyen-dung-0@3x.webp?v=3edabc43",
           "scale": 3
         }
       ],

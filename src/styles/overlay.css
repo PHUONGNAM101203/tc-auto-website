@@ -10,60 +10,16 @@
    hover / focus / go chu thi chung moi hien ra de dung duoc that.
 --------------------------------------------------------------------------- */
 
-/* ---------- Header: nav la vung bam trong suot ---------- */
-.tc-ghost .hdr .nv,
-.tc-ghost .hdr .nv i {
-  color: transparent;
-}
+/* ---------- Header tren trang con ----------
+   Truoc day ca thanh nav lan o tim kiem deu NUONG trong anh nen cua 31 trang
+   con, con o tren chi la mot lop lien ket trong suot. He qua: khung danh dau
+   muc dang xem khong nhuc nhich duoc, va o tim kiem moi trang mot kieu.
 
-/* Vien va nen cua muc dang chon da nam trong anh — khong ve lai. */
-.tc-ghost .hdr .nv.act {
-  background: none;
-  box-shadow: none;
-}
+   Nay thanh nav va o tim kiem da duoc XOA khoi anh (tools/scrub-nav.py) va ve
+   that nhu tren 6 trang chinh. Nho vay khung luot duoc, o tim kiem dong bo, va
+   chu tren nav doc duoc / chon duoc / may tim kiem doc duoc.
 
-/* Gach chan do van la tin hieu hover duy nhat, khong de len chu co san. */
-.tc-ghost .hdr .nv:hover,
-.tc-ghost .hdr .nv:focus-visible {
-  color: transparent;
-}
-
-.tc-ghost .hdr .nv:focus-visible {
-  outline: 2px solid var(--red-nav);
-  outline-offset: 2px;
-}
-
-/* ---------- O tim kiem ---------- */
-.tc-ghost .search {
-  border-color: transparent;
-  background: transparent;
-}
-
-.tc-ghost .search svg {
-  stroke: transparent;
-}
-
-.tc-ghost .search input,
-.tc-ghost .search input::placeholder {
-  color: transparent;
-}
-
-.tc-ghost .search:focus-within {
-  border-color: #fff;
-  background: #0a2539;
-}
-
-.tc-ghost .search:focus-within svg {
-  stroke: #fff;
-}
-
-.tc-ghost .search:focus-within input {
-  color: #fff;
-}
-
-.tc-ghost .search:focus-within input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
+   `.tc-ghost` van con cho FORM LIEN HE o cuoi trang — cho do van ve chet. */
 
 /* ---------- Form lien he ---------- */
 .tc-ghost .ff input,
@@ -1626,8 +1582,9 @@
   align-self: flex-start;
   /* Chua san khoang cho gach chan, de chu khong nhay khi ro chuot vao. */
   padding-bottom: 5px;
+  /* Chu THANG, khong in nghieng — khach chot 30/09/2026. */
   font:
-    italic 400 12px / 1.2 "Montserrat",
+    400 12px / 1.2 "Montserrat",
     sans-serif;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.74);

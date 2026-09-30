@@ -8,14 +8,14 @@
   "height": 3630.0,
   "slices": [
     {
-      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@2x.webp?v=3820e488",
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@2x.webp?v=322b7568",
       "srcSet": [
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@2x.webp?v=3820e488",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@2x.webp?v=322b7568",
           "scale": 2
         },
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@3x.webp?v=f895abb7",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-0@3x.webp?v=f410f8f7",
           "scale": 3
         }
       ],

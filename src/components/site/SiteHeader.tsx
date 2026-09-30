@@ -6,7 +6,7 @@ import { SiteSearch } from "./SiteSearch";
 interface SiteHeaderProps {
   /** Toa do nav lay tu page spec — moi trang Figma co vi tri x hoi khac nhau. */
   readonly nav: readonly NavSpec[];
-  /** Xem chu thich `pill` trong SiteNav. Trang con phai truyen `false`. */
+  /** Xem chu thich `pill` trong SiteNav. Nay ca trang con cung bat. */
   readonly pill?: boolean;
   /**
    * O tim kiem da duoc VE SAN trong anh nen cua trang nay chua.

@@ -8,14 +8,14 @@
   "height": 3857.0,
   "slices": [
     {
-      "src": "/slices/sub/dai-ly__gallery-by-brand-0@2x.webp?v=817f20de",
+      "src": "/slices/sub/dai-ly__gallery-by-brand-0@2x.webp?v=c17ce71d",
       "srcSet": [
         {
-          "src": "/slices/sub/dai-ly__gallery-by-brand-0@2x.webp?v=817f20de",
+          "src": "/slices/sub/dai-ly__gallery-by-brand-0@2x.webp?v=c17ce71d",
           "scale": 2
         },
         {
-          "src": "/slices/sub/dai-ly__gallery-by-brand-0@3x.webp?v=5202ef81",
+          "src": "/slices/sub/dai-ly__gallery-by-brand-0@3x.webp?v=e553da2c",
           "scale": 3
         }
       ],
@@ -37,7 +37,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/dai-ly__gallery-by-brand-1@3x.webp?v=de3360de",
+          "src": "/slices/sub/dai-ly__gallery-by-brand-1@3x.webp?v=a89227fe",
           "scale": 3
         }
       ],
@@ -81,7 +81,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/dai-ly__gallery-by-brand-3@3x.webp?v=b69cbc03",
+          "src": "/slices/sub/dai-ly__gallery-by-brand-3@3x.webp?v=8e257fe4",
           "scale": 3
         }
       ],

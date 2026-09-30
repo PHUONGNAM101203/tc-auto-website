@@ -8,14 +8,14 @@
   "height": 2786.0,
   "slices": [
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc-0@2x.webp?v=063a7743",
+      "src": "/slices/sub/nhan-su__van-hoa-tc-0@2x.webp?v=aa3e30a3",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc-0@2x.webp?v=063a7743",
+          "src": "/slices/sub/nhan-su__van-hoa-tc-0@2x.webp?v=aa3e30a3",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc-0@3x.webp?v=a21e501d",
+          "src": "/slices/sub/nhan-su__van-hoa-tc-0@3x.webp?v=caf14459",
           "scale": 3
         }
       ],

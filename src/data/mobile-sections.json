@@ -2,7 +2,7 @@
   "_doc": "Noi dung tung muc cua 6 trang chinh, dung cho ban MOBILE. Chu lay tu page spec; anh cat tu lat nen o cot doi dien voi cot chu (tools/brand/extract-mobile-tiles.py).",
   "heroes": {
     "cong-nghe": {
-      "image": "/mobile/cong-nghe-hero.webp?v=481f8e0f",
+      "image": "/mobile/cong-nghe-hero.webp?v=ee27cb3c",
       "title": "THẾ GIỚI CỦA TC",
       "slogan": "DRIVE · EXPERIENCE · ELEVATE"
     },

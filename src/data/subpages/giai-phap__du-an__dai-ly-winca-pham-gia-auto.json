@@ -8,14 +8,14 @@
   "height": 4739.0,
   "slices": [
     {
-      "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0@2x.webp?v=5a9fddeb",
+      "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0@2x.webp?v=15cbce94",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0@2x.webp?v=5a9fddeb",
+          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0@2x.webp?v=15cbce94",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0@3x.webp?v=77344635",
+          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-0@3x.webp?v=71d618ca",
           "scale": 3
         }
       ],
@@ -37,7 +37,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-1@3x.webp?v=19bd85cb",
+          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-1@3x.webp?v=7ef41d73",
           "scale": 3
         }
       ],
@@ -59,7 +59,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-2@3x.webp?v=c8318bac",
+          "src": "/slices/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-2@3x.webp?v=c53fc94b",
           "scale": 3
         }
       ],

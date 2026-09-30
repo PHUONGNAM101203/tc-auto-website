@@ -8,14 +8,14 @@
   "height": 2033.0,
   "slices": [
     {
-      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@2x.webp?v=75f14969",
+      "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@2x.webp?v=842b54f0",
       "srcSet": [
         {
-          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@2x.webp?v=75f14969",
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@2x.webp?v=842b54f0",
           "scale": 2
         },
         {
-          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@3x.webp?v=7eb7b007",
+          "src": "/slices/sub/dai-ly__mang-luoi-dai-ly-0@3x.webp?v=2cb11fa3",
           "scale": 3
         }
       ],
