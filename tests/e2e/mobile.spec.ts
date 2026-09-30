@@ -76,3 +76,57 @@ test.describe("bản mobile", () => {
     expect(size).toBeGreaterThanOrEqual(16);
   });
 });
+
+/**
+ * Bang hero tren ban MOBILE.
+ *
+ * Ban desktop co bang anh tu chay; ban mobile truoc day chi hien MOT tam tinh
+ * — khach bao thieu (30/09/2026). Tren dien thoai thi bang phai VUOT duoc bang
+ * ngon tay, nen no dung mot dai cuon ngang that voi `scroll-snap` chu khong
+ * phai `transform` nhu ban desktop.
+ */
+test.describe("băng hero bản mobile", () => {
+  test("có đủ số tấm như bản desktop và có chấm chỉ mục", async ({ page }) => {
+    await page.goto("/");
+    const slides = page.locator(".tc-m-car-track > li");
+    await expect(slides).toHaveCount(5);
+    await expect(page.locator(".tc-m-car-dots button")).toHaveCount(5);
+  });
+
+  test("tự chạy, không cần chạm", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForTimeout(600);
+    const at = () =>
+      page.$eval(".tc-m-car-track", (el) => Math.round(el.scrollLeft));
+    const before = await at();
+    await page.waitForTimeout(4200);
+    expect(await at(), "băng hero mobile phải tự chạy").toBeGreaterThan(before);
+  });
+
+  test("vuốt được bằng ngón tay: dải là một khung cuộn ngang thật", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const how = await page.$eval(".tc-m-car-track", (el) => {
+      const cs = getComputedStyle(el);
+      return { x: cs.overflowX, snap: cs.scrollSnapType };
+    });
+    expect(how.x).toMatch(/auto|scroll/);
+    expect(how.snap).toContain("x");
+  });
+
+  test("bấm chấm nào thì nhảy tới tấm đó", async ({ page }) => {
+    await page.goto("/");
+    await page.waitForTimeout(400);
+    // Cham vao dai truoc de dung tu chay: vach chi muc co hoat anh doi be
+    // ngang, dang chay thi phep bam phai cho no dung yen.
+    await page.locator(".tc-m-car-track").hover();
+    await page.waitForTimeout(400);
+    await page.locator(".tc-m-car-dots button").nth(3).click();
+    await page.waitForTimeout(900);
+    const at = await page.$eval(".tc-m-car-track", (el) =>
+      Math.round(el.scrollLeft / (el.scrollWidth / 5)),
+    );
+    expect(at).toBe(3);
+  });
+});

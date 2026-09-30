@@ -1,5 +1,6 @@
 import { MobileFooter } from "@/components/mobile/MobileFooter";
 import Link from "next/link";
+import { MobileCarousel, type MobileSlide } from "@/components/mobile/MobileCarousel";
 import { MobileNav } from "@/components/mobile/MobileNav";
 import { headingLines, type MobileHero, type MobileSection } from "@/lib/mobile-sections";
 import type { NavSpec } from "@/lib/types";
@@ -14,11 +15,17 @@ import type { NavSpec } from "@/lib/types";
 export function MobilePage({
   nav,
   hero,
+  heroSlides = [],
   sections,
   contact,
 }: {
   nav: readonly NavSpec[];
   hero: MobileHero | null;
+  /**
+   * Cac tam cua bang hero. Ban desktop co bang anh tu chay; ban mobile truoc
+   * day chi hien MOT tam tinh — khach bao thieu (30/09/2026).
+   */
+  heroSlides?: readonly MobileSlide[];
   sections: readonly MobileSection[];
   contact?: React.ReactNode;
 }) {
@@ -28,7 +35,14 @@ export function MobilePage({
 
       {hero ? (
         <section className="tc-m-hero">
-          {hero.image ? (
+          {heroSlides.length > 1 ? (
+            <MobileCarousel
+              slides={heroSlides}
+              label="Ảnh giới thiệu TC Auto"
+              everyMs={3000}
+              ratio="680 / 907"
+            />
+          ) : hero.image ? (
             // eslint-disable-next-line @next/next/no-img-element -- anh cat san
             <img src={hero.image} alt="" width={680} height={907} fetchPriority="high" />
           ) : null}

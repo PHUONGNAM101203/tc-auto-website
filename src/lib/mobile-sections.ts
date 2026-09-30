@@ -1,6 +1,7 @@
 import data from "@/data/mobile-sections.json";
 import { CTA_LINK_MAP } from "./link-map";
 import { getPageSpec } from "./pages";
+import { getHeroSlides } from "./hero-slides";
 import type { PageSlug } from "./types";
 
 /**
@@ -75,4 +76,22 @@ export function headingLines(heading: string): readonly string[] {
     .split(/<br\s*\/?>/i)
     .map((line) => line.trim())
     .filter(Boolean);
+}
+
+/**
+ * Cac tam cua bang hero, doi sang dang ban mobile dung.
+ *
+ * Ban desktop co bang anh tu chay; ban mobile truoc day chi hien MOT tam tinh
+ * — khach bao thieu (30/09/2026). Dung chung mot nguon du lieu
+ * (src/data/hero-slides.json) nen hai ban khong bao gio lech noi dung.
+ */
+export function getMobileHeroSlides(slug: PageSlug) {
+  if (slug !== "home") {
+    return [];
+  }
+  return getHeroSlides().map((slide) => ({
+    key: slide.id,
+    src: slide.src,
+    alt: slide.alt,
+  }));
 }

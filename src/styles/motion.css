@@ -140,30 +140,14 @@
   box-shadow: none;
 }
 
-/* ---------- 5. Nav: gach chan chay tu giua (chi khi hover/focus) ---------- */
+/* ---------- 5. Nav: KHONG con gach chan rieng ----------
+   Truoc day moi muc nav co mot gach chan tu ve: do khi ro chuot, trang o muc
+   dang xem. Nay viec danh dau do MOT MINH `.tc-navpill` lo (xem overlay.css):
+   khung mo luot theo chuot, va gach chan do khi dung yen.
+   Giu ca hai thi duoi muc dang xem hien HAI gach cung luc — khach bao
+   (30/09/2026). Bo han o day thay vi de roi ghi de nhau. */
 .nv::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 3px;
-  height: 1.5px;
-  background: var(--red-nav);
-  transform: scaleX(0);
-  transform-origin: 50% 50%;
-  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.nv:hover::after,
-.nv:focus-visible::after {
-  transform: scaleX(1);
-}
-
-/* Muc dang active: gach chan chi hien khi hover, giu dung thiet ke tinh. */
-.nv.act::after {
-  left: 14px;
-  right: 14px;
-  background: rgba(255, 255, 255, 0.55);
+  content: none;
 }
 
 .nv i {

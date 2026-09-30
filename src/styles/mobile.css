@@ -160,6 +160,9 @@
   inset: auto 0 0;
   padding: 0 20px 26px;
   background: linear-gradient(to top, rgba(2, 17, 28, 0.92), rgba(2, 17, 28, 0));
+  /* Lop nay chi co chu, khong co gi de bam — ma no nam de len vach chi muc cua
+     bang anh, khien khong cham duoc vao vach. Cho chuot/ngon tay di xuyen qua. */
+  pointer-events: none;
 }
 
 .tc-m-hero-text h1 {
@@ -477,4 +480,86 @@
   text-decoration: none;
   font: 600 12px/1 "Montserrat", sans-serif;
   letter-spacing: 0.04em;
+}
+
+/* ---------- Bang anh cuon ngang ---------- */
+/* Vuot bang ngon tay la viec cua trinh duyet (`scroll-snap`), khong phai cua
+   JavaScript — nho vay co quan tinh va cam giac dung nhu he dieu hanh. */
+.tc-m-car {
+  margin-top: 14px;
+}
+
+.tc-m-car-track {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* An thanh cuon: da co cham chi muc roi. */
+  scrollbar-width: none;
+}
+
+.tc-m-car-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tc-m-car-track > li {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+
+.tc-m-car-track img {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--tc-m-ratio, 16 / 10);
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.tc-m-car-track span {
+  display: block;
+  margin-top: 8px;
+  font: 600 13px/1.45 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.tc-m-car-dots {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-top: 6px;
+}
+
+/* Vach chi muc nhin thi mong, nhung VUNG CHAM phai du lon — ngon tay khong
+   cham trung mot vach cao 3px. Nut cao 24px va trong suot, vach that do
+   `::after` ve o giua. */
+.tc-m-car-dots button {
+  width: 30px;
+  height: 24px;
+  border: 0;
+  padding: 0;
+  background: none;
+  display: grid;
+  place-items: center;
+}
+
+.tc-m-car-dots button::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.22);
+  transition: background 0.25s, width 0.25s;
+}
+
+.tc-m-car-dots button[data-on] {
+  width: 48px;
+}
+
+.tc-m-car-dots button[data-on]::after {
+  width: 40px;
+  background: var(--red-nav);
 }

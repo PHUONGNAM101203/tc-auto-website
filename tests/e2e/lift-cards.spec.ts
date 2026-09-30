@@ -196,7 +196,7 @@ test.describe("bốn tấm Trải nghiệm — hover thì nổi lên", () => {
     page,
   }) => {
     await page.goto("/");
-    const cards = page.locator(".tc-lift-card[data-grow]");
+    const cards = page.locator(`${LIFE} .tc-lift-card`);
     await expect(cards).toHaveCount(4);
     const hrefs = await cards.evaluateAll((els) =>
       els.map((el) => el.getAttribute("href")),
@@ -211,7 +211,7 @@ test.describe("bốn tấm Trải nghiệm — hover thì nổi lên", () => {
 
   test("rê chuột thì tấm đó TO RA, không cần bấm", async ({ page }) => {
     await page.goto("/");
-    const card = page.locator(".tc-lift-card[data-grow]").nth(1);
+    const card = page.locator(`${LIFE} .tc-lift-card`).nth(1);
     await card.scrollIntoViewIfNeeded();
     await page.waitForTimeout(300);
 
@@ -247,7 +247,7 @@ test.describe("bốn tấm Trải nghiệm — hover thì nổi lên", () => {
     page,
   }) => {
     await page.goto("/");
-    const group = page.locator(".tc-lift-card[data-grow]");
+    const group = page.locator(`${LIFE} .tc-lift-card`);
     await group.first().scrollIntoViewIfNeeded();
     await page.waitForTimeout(300);
     await group.nth(1).hover();

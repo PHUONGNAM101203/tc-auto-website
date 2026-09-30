@@ -1542,12 +1542,9 @@
   box-shadow: none;
 }
 
-/* Muc dang xem / dang re chuot duoc danh dau bang GACH CHAN DO, khong phai
-   khoi nen.
-   Ban thiet ke ve mot khoi nen mo bao quanh muc dang xem, va truoc day ta chep
-   lai dung nhu vay. Khach da ba lan bao khoi do "de len" muc menu (29-30/09/2026)
-   nen bo han, doi sang gach chan — cung ngon ngu voi menu con. Day la mot muc
-   trong src/lib/design-deviations.ts.
+/* Danh dau muc menu: KHUNG MO khi dang re chuot, GACH CHAN DO khi dung yen.
+   Khach chot (30/09/2026): khung mo luot theo chuot thi dep, giu lai; chi bo
+   cai khung nam DE PHIA SAU muc dang xem khi khong re chuot nua.
    Van la mot phan tu roi chu khong phai vien cua `.nv`: nho vay no LUOT duoc
    tu muc nay sang muc kia.
    Le 14px moi ben la dung bang padding cua `.nv`, nen gach nam khit duoi chu. */
@@ -1556,12 +1553,25 @@
   top: 48px;
   left: 0;
   height: 26px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
   pointer-events: none;
   /* Nam duoi chu nhung tren anh nen. */
   z-index: -1;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.tc-navpill::after {
+/* Dung yen (dang chi muc DANG XEM, khong re chuot): bo khung, chi con gach
+   chan — cung ngon ngu voi menu con. */
+.tc-navpill[data-resting] {
+  background: none;
+  box-shadow: none;
+}
+
+.tc-navpill[data-resting]::after {
   content: "";
   position: absolute;
   left: 14px;

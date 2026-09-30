@@ -93,34 +93,29 @@ test.describe("menu điều hướng", () => {
     await expect(page.locator(".tc-navpill")).toHaveCount(0);
   });
 
-  test("mục đang xem chỉ GẠCH CHÂN đỏ, không có khối nền", async ({ page }) => {
-    // Khach da BA LAN bao khoi nen nay "de len" muc menu. Nay bo han, chi con
-    // gach chan — cung ngon ngu voi menu con. Da khai trong design-deviations.
+  test("đứng yên thì mục đang xem chỉ GẠCH CHÂN đỏ, không có khung đè sau", async ({
+    page,
+  }) => {
+    // Khach muon GIU khung mo luc luot theo chuot, chi bo cai khung nam de
+    // phia sau muc dang xem khi khong re chuot (30/09/2026).
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
     await expect(pill).toHaveCount(1);
+    await expect(pill).toHaveAttribute("data-resting", "true");
 
     const look = await pill.evaluate((el) => {
       const cs = getComputedStyle(el);
       const line = getComputedStyle(el, "::after");
-      return {
-        bg: cs.backgroundColor,
-        ring: cs.boxShadow,
-        lineH: line.height,
-        lineBg: line.backgroundColor,
-      };
+      return { bg: cs.backgroundColor, ring: cs.boxShadow, lineH: line.height };
     });
-    expect(look.bg, "không được có khối nền").toMatch(
+    expect(look.bg, "đứng yên thì không có khung").toMatch(
       /rgba\(0, 0, 0, 0\)|transparent/,
     );
-    expect(look.ring, "không được có viền").toBe("none");
+    expect(look.ring, "đứng yên thì không có viền").toBe("none");
     expect(parseFloat(look.lineH), "phải có gạch chân").toBeGreaterThan(0);
-    expect(look.lineBg, "gạch chân phải màu đỏ").toMatch(/^rgb/);
   });
 
-  test("rê chuột thì gạch chân LƯỚT sang mục đang trỏ, vẫn không có khối nền", async ({
-    page,
-  }) => {
+  test("rê chuột thì KHUNG MỜ hiện lại và lướt theo", async ({ page }) => {
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
     const before = await pill.evaluate((el) => el.getBoundingClientRect().x);
@@ -129,13 +124,17 @@ test.describe("menu điều hướng", () => {
     await page.waitForTimeout(700);
 
     const after = await pill.evaluate((el) => el.getBoundingClientRect().x);
-    expect(after, "gạch chân phải chạy theo chuột").toBeGreaterThan(before);
+    expect(after, "khung phải chạy theo chuột").toBeGreaterThan(before);
     await expect(pill).not.toHaveAttribute("data-resting", "true");
 
-    const bg = await pill.evaluate((el) => getComputedStyle(el).backgroundColor);
-    expect(bg, "rê chuột cũng không được hiện khối nền").toMatch(
-      /rgba\(0, 0, 0, 0\)|transparent/,
+    const look = await pill.evaluate((el) => {
+      const cs = getComputedStyle(el);
+      return { bg: cs.backgroundColor, ring: cs.boxShadow };
+    });
+    expect(look.bg, "rê chuột thì phải có khung mờ").not.toMatch(
+      /rgba\(0, 0, 0, 0\)/,
     );
+    expect(look.ring, "và có viền mảnh").not.toBe("none");
   });
 
   test("chuyển tab thì thanh trượt LƯỚT sang, không nhảy cóc", async ({

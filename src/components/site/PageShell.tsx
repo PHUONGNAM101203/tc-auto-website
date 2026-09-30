@@ -11,7 +11,11 @@ import { LiftCards } from "@/components/site/LiftCards";
 import { getAppCards } from "@/lib/app-cards";
 import { getPhotoSliders } from "@/lib/photo-sliders";
 import { getLiftCards } from "@/lib/lift-cards";
-import { getMobileHero, getMobileSections } from "@/lib/mobile-sections";
+import {
+  getMobileHero,
+  getMobileHeroSlides,
+  getMobileSections,
+} from "@/lib/mobile-sections";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { isSearchBaked } from "@/lib/search-baked";
 import type { PageSpec } from "@/lib/types";
@@ -35,6 +39,7 @@ export function PageShell({ page }: PageShellProps) {
       <MobilePage
         nav={page.nav}
         hero={getMobileHero(page.slug)}
+        heroSlides={getMobileHeroSlides(page.slug)}
         sections={getMobileSections(page.slug)}
         contact={
           page.contactForm ? (
