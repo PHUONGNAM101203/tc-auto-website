@@ -8,14 +8,14 @@
   "height": 2425.0,
   "slices": [
     {
-      "src": "/slices/sub/giai-phap__loa-0@2x.webp?v=d2d5db2c",
+      "src": "/slices/sub/giai-phap__loa-0@2x.webp?v=b344f387",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__loa-0@2x.webp?v=d2d5db2c",
+          "src": "/slices/sub/giai-phap__loa-0@2x.webp?v=b344f387",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__loa-0@3x.webp?v=17377857",
+          "src": "/slices/sub/giai-phap__loa-0@3x.webp?v=2e591e5e",
           "scale": 3
         }
       ],

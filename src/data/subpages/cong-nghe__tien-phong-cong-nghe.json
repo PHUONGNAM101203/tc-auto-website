@@ -8,14 +8,14 @@
   "height": 2566.0,
   "slices": [
     {
-      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@2x.webp?v=2e82d11d",
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@2x.webp?v=205e1500",
       "srcSet": [
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@2x.webp?v=2e82d11d",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@2x.webp?v=205e1500",
           "scale": 2
         },
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@3x.webp?v=bcb7c8a5",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@3x.webp?v=1b093970",
           "scale": 3
         }
       ],

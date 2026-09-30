@@ -8,14 +8,14 @@
   "height": 2140.0,
   "slices": [
     {
-      "src": "/slices/sub/trai-nghiem__hanh-trinh-0@2x.webp?v=1de1f648",
+      "src": "/slices/sub/trai-nghiem__hanh-trinh-0@2x.webp?v=516512c9",
       "srcSet": [
         {
-          "src": "/slices/sub/trai-nghiem__hanh-trinh-0@2x.webp?v=1de1f648",
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-0@2x.webp?v=516512c9",
           "scale": 2
         },
         {
-          "src": "/slices/sub/trai-nghiem__hanh-trinh-0@3x.webp?v=c08a0c78",
+          "src": "/slices/sub/trai-nghiem__hanh-trinh-0@3x.webp?v=56b8f7c7",
           "scale": 3
         }
       ],

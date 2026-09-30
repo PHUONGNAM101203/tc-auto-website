@@ -8,14 +8,14 @@
   "height": 2889.0,
   "slices": [
     {
-      "src": "/slices/sub/nhan-su__nhan-su-tc-0@2x.webp?v=a9cd7847",
+      "src": "/slices/sub/nhan-su__nhan-su-tc-0@2x.webp?v=406dfd49",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-0@2x.webp?v=a9cd7847",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-0@2x.webp?v=406dfd49",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-0@3x.webp?v=127ecd9c",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-0@3x.webp?v=8a47d21a",
           "scale": 3
         }
       ],

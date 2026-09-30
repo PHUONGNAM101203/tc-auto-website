@@ -93,58 +93,45 @@ test.describe("menu điều hướng", () => {
     await expect(page.locator(".tc-navpill")).toHaveCount(0);
   });
 
-  test("chỉ MỘT khung, và nó dừng ở mục đang xem", async ({ page }) => {
-    // Khach chot: dung mot lop thoi — chinh cai luot theo chuot cung la cai
-    // dung lai o muc dang xem (30/09/2026).
+  test("đứng yên thì KHÔNG có khung nào bao quanh mục đang xem", async ({
+    page,
+  }) => {
+    // Khach yeu cau bo khung mac dinh (30/09/2026): khung chi hien khi dang re
+    // chuot. No van GIU dung vi tri o muc dang xem de lan re chuot sau luot ra
+    // tu dung cho do.
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
     await expect(pill, "chỉ được có một khung").toHaveCount(1);
     await expect(pill).toHaveAttribute("data-resting", "true");
+    await expect(pill).toHaveCSS("opacity", "0");
 
-    // Khung phai nam dung tren muc dang xem.
     const [pillBox, itemBox] = await Promise.all([
       pill.boundingBox(),
       page.locator('.hdr a.nv[href="/trai-nghiem"]').boundingBox(),
     ]);
-    expect(Math.abs(pillBox!.x - itemBox!.x), "khung lệch khỏi mục đang xem").
+    expect(Math.abs(pillBox!.x - itemBox!.x), "khung phải đợi sẵn ở mục đang xem").
       toBeLessThan(2);
-
-    const look = await pill.evaluate((el) => {
-      const cs = getComputedStyle(el);
-      return { bg: cs.backgroundColor, ring: cs.boxShadow };
-    });
-    expect(look.bg, "đứng yên vẫn phải thấy khung").not.toMatch(/rgba\(0, 0, 0, 0\)/);
-    expect(look.ring).not.toBe("none");
   });
 
-  test("rê chuột thì CHÍNH khung đó chạy theo, không mọc thêm cái nào", async ({
+  test("rê chuột thì khung HIỆN RA và chạy theo, bỏ tay thì mờ đi", async ({
     page,
   }) => {
-    await page.goto("/trai-nghiem");
-    const pill = page.locator(".tc-navpill");
-    const before = await pill.evaluate((el) => el.getBoundingClientRect().x);
-
-    await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
-    await page.waitForTimeout(700);
-
-    await expect(pill, "vẫn chỉ một khung").toHaveCount(1);
-    const after = await pill.evaluate((el) => el.getBoundingClientRect().x);
-    expect(after, "khung phải chạy theo chuột").toBeGreaterThan(before);
-    await expect(pill).not.toHaveAttribute("data-resting", "true");
-  });
-
-  test("bỏ chuột ra thì khung quay về mục đang xem", async ({ page }) => {
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
     const home = await pill.evaluate((el) => el.getBoundingClientRect().x);
 
     await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
     await page.waitForTimeout(700);
+    await expect(pill, "vẫn chỉ một khung").toHaveCount(1);
+    await expect(pill).toHaveCSS("opacity", "1");
+    const away = await pill.evaluate((el) => el.getBoundingClientRect().x);
+    expect(away, "khung phải chạy theo chuột").toBeGreaterThan(home);
+
     await page.mouse.move(20, 700);
     await page.waitForTimeout(900);
-
+    await expect(pill).toHaveCSS("opacity", "0");
     const back = await pill.evaluate((el) => el.getBoundingClientRect().x);
-    expect(Math.round(back)).toBe(Math.round(home));
+    expect(Math.round(back), "và quay về mục đang xem").toBe(Math.round(home));
   });
 
   test("chuyển tab thì thanh trượt LƯỚT sang, không nhảy cóc", async ({

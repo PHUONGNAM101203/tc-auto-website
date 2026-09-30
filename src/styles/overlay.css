@@ -1508,13 +1508,12 @@
   box-shadow: none;
 }
 
-/* Danh dau muc menu: MOT khung mo duy nhat.
-   Khach chot (30/09/2026): dung mot lop thoi — chinh cai lop luot theo chuot
-   cung la cai dung lai o muc dang xem. Ro chuot thi no chay theo; bo tay ra
-   thi no ve dau muc dang xem va nam yen o do.
-   Van la mot phan tu roi chu khong phai vien cua `.nv`: nho vay no LUOT duoc.
-   `data-resting` giu lai de bai kiem va ma nguon biet no dang o trang thai nao,
-   nhung KHONG doi hinh thuc — hai trang thai nhin y het nhau. */
+/* Danh dau muc menu: MOT khung mo duy nhat, va chi hien khi dang re chuot.
+   Khach chot (30/09/2026): dung mot lop thoi, va BO cai khung mac dinh bao
+   quanh muc dang xem. Ro chuot thi khung chay theo; bo tay ra thi no ve dau
+   muc dang xem roi mo di — nen lan re chuot sau no luot ra tu dung cho do chu
+   khong nhay tu dau trang.
+   Van la mot phan tu roi chu khong phai vien cua `.nv`: nho vay no LUOT duoc. */
 .tc-navpill {
   position: absolute;
   top: 48px;
@@ -1526,12 +1525,19 @@
   pointer-events: none;
   /* Nam duoi chu nhung tren anh nen. */
   z-index: -1;
+  transition: opacity 0.28s ease;
+}
+
+/* Khong re chuot: an han khung di, chi giu vi tri. */
+.tc-navpill[data-resting] {
+  opacity: 0;
 }
 
 .tc-navpill[data-ready] {
   transition:
     transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
-    width 0.42s cubic-bezier(0.16, 1, 0.3, 1);
+    width 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.28s ease;
 }
 
 /* Bang xo xuong. `top: 74px` = day cua nhan (48 + 26) nen khong co khe ho,

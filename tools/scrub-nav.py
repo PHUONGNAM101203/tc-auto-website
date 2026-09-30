@@ -32,7 +32,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools" / "brand"))
-from _backdrop import rebuild_background  # noqa: E402
+from _backdrop import feathered, rebuild_background  # noqa: E402
 
 SPEC_DIR = ROOT / "src" / "data" / "subpages"
 SLICE_DIR = ROOT / "public" / "slices" / "sub"
@@ -60,6 +60,11 @@ SCRUB = (
 )
 #: Be day dai moc lay o tren va duoi vung xoa.
 ANCHOR = 14
+#: Be day vien MO DAN cua mieng va, tinh theo he toa do canvas.
+#: Nen o day la mot dai chuyen mau. Noi suy doc dung lai duoc dung mau nhung
+#: mat het van, nen neu dat mieng va voi mep cung thi lo ra mot o chu nhat hoi
+#: khac tong — khach nhin thay ngay. Mo dan 10px thi mep tan vao nen.
+FEATHER = 10
 
 
 def scrub_page(stem: str) -> int:
@@ -89,10 +94,11 @@ def scrub_page(stem: str) -> int:
                     round((area["x"] + area["width"]) * scale),
                     round((area["y"] + area["height"] - top) * scale),
                 )
-                image.paste(
+                patch = feathered(
                     rebuild_background(image, box, anchor=round(ANCHOR * scale)),
-                    (box[0], box[1]),
+                    round(FEATHER * scale),
                 )
+                image.paste(patch, (box[0], box[1]), patch)
             image.save(path, "WEBP", quality=82, method=6)
             touched += 1
     return touched
@@ -120,10 +126,11 @@ def scrub_main(slug: str) -> int:
                 round((area["x"] + area["width"]) * scale),
                 round((area["y"] + area["height"] - top) * scale),
             )
-            image.paste(
+            patch = feathered(
                 rebuild_background(image, box, anchor=round(ANCHOR * scale)),
-                (box[0], box[1]),
+                round(FEATHER * scale),
             )
+            image.paste(patch, (box[0], box[1]), patch)
             image.save(path, "WEBP", quality=82, method=6)
             touched += 1
     return touched

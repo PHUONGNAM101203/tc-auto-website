@@ -8,14 +8,14 @@
   "height": 3278.0,
   "slices": [
     {
-      "src": "/slices/sub/giai-phap__phim-dan-kinh-0@2x.webp?v=bb252d4a",
+      "src": "/slices/sub/giai-phap__phim-dan-kinh-0@2x.webp?v=1305edf4",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh-0@2x.webp?v=bb252d4a",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-0@2x.webp?v=1305edf4",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__phim-dan-kinh-0@3x.webp?v=dc3673f1",
+          "src": "/slices/sub/giai-phap__phim-dan-kinh-0@3x.webp?v=3c7181c9",
           "scale": 3
         }
       ],

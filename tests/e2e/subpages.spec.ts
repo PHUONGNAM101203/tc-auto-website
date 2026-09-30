@@ -122,6 +122,7 @@ test.describe("31 trang con", () => {
 
     await page.locator('.hdr a.nv[href="/trai-nghiem"]').hover();
     await page.waitForTimeout(700);
+    await expect(pill).toHaveCSS("opacity", "1");
     const after = await pill.evaluate((el) => el.getBoundingClientRect().x);
     expect(after, "khung phải chạy theo chuột").toBeLessThan(before);
   });

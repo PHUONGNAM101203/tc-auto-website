@@ -2,7 +2,7 @@
   "_doc": "Anh minh hoa ban MOBILE cua cac trang con. Cat o khoang ho giua hai dai chu OCR — do chinh la cho designer dat anh. Xem tools/brand/extract-subpage-tiles.py.",
   "pages": {
     "cong-nghe/tien-phong-cong-nghe": {
-      "hero": "/mobile/sub/cong-nghe__tien-phong-cong-nghe-hero.webp?v=10912c2b",
+      "hero": "/mobile/sub/cong-nghe__tien-phong-cong-nghe-hero.webp?v=3e3b6313",
       "tiles": [
         {
           "after": 1766.6,
@@ -11,11 +11,11 @@
       ]
     },
     "cong-nghe/tien-phong-cong-nghe/bai-viet": {
-      "hero": "/mobile/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-hero.webp?v=63c49ef7",
+      "hero": "/mobile/sub/cong-nghe__tien-phong-cong-nghe__bai-viet-hero.webp?v=c7a01d02",
       "tiles": []
     },
     "cong-nghe/ung-dung": {
-      "hero": "/mobile/sub/cong-nghe__ung-dung-hero.webp?v=e5104dc2",
+      "hero": "/mobile/sub/cong-nghe__ung-dung-hero.webp?v=bed48f42",
       "tiles": [
         {
           "after": 1200.4,
@@ -28,15 +28,15 @@
       ]
     },
     "cong-nghe/ung-dung/cap-nhat-va-loi": {
-      "hero": "/mobile/sub/cong-nghe__ung-dung__cap-nhat-va-loi-hero.webp?v=06208c2f",
+      "hero": "/mobile/sub/cong-nghe__ung-dung__cap-nhat-va-loi-hero.webp?v=5c33e903",
       "tiles": []
     },
     "cong-nghe/ung-dung/kho-ung-dung": {
-      "hero": "/mobile/sub/cong-nghe__ung-dung__kho-ung-dung-hero.webp?v=46b833e2",
+      "hero": "/mobile/sub/cong-nghe__ung-dung__kho-ung-dung-hero.webp?v=d8b95f1e",
       "tiles": []
     },
     "dai-ly/chan-dung-dai-ly": {
-      "hero": "/mobile/sub/dai-ly__chan-dung-dai-ly-hero.webp?v=531acaf5",
+      "hero": "/mobile/sub/dai-ly__chan-dung-dai-ly-hero.webp?v=f6f5240d",
       "tiles": []
     },
     "dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto": {
@@ -49,27 +49,27 @@
       ]
     },
     "dai-ly/ho-tro-tiep-thi": {
-      "hero": "/mobile/sub/dai-ly__ho-tro-tiep-thi-hero.webp?v=0c103f71",
+      "hero": "/mobile/sub/dai-ly__ho-tro-tiep-thi-hero.webp?v=29839c79",
       "tiles": []
     },
     "dai-ly/mang-luoi-dai-ly": {
-      "hero": "/mobile/sub/dai-ly__mang-luoi-dai-ly-hero.webp?v=39e03fec",
+      "hero": "/mobile/sub/dai-ly__mang-luoi-dai-ly-hero.webp?v=d0a5c60c",
       "tiles": []
     },
     "dai-ly/mang-luoi-dai-ly/mien-nam": {
-      "hero": "/mobile/sub/dai-ly__mang-luoi-dai-ly__mien-nam-hero.webp?v=cb495e34",
+      "hero": "/mobile/sub/dai-ly__mang-luoi-dai-ly__mien-nam-hero.webp?v=4cd6d307",
       "tiles": []
     },
     "dai-ly/mang-luoi-dai-ly/mien-trung": {
-      "hero": "/mobile/sub/dai-ly__mang-luoi-dai-ly__mien-trung-hero.webp?v=cc77a083",
+      "hero": "/mobile/sub/dai-ly__mang-luoi-dai-ly__mien-trung-hero.webp?v=e15b391a",
       "tiles": []
     },
     "giai-phap/du-an": {
-      "hero": "/mobile/sub/giai-phap__du-an-hero.webp?v=22159312",
+      "hero": "/mobile/sub/giai-phap__du-an-hero.webp?v=e8563cfb",
       "tiles": []
     },
     "giai-phap/du-an/dai-ly-winca-pham-gia-auto": {
-      "hero": "/mobile/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-hero.webp?v=f2a8f505",
+      "hero": "/mobile/sub/giai-phap__du-an__dai-ly-winca-pham-gia-auto-hero.webp?v=9bcb9041",
       "tiles": [
         {
           "after": 1515.7,
@@ -78,7 +78,7 @@
       ]
     },
     "giai-phap/loa": {
-      "hero": "/mobile/sub/giai-phap__loa-hero.webp?v=b3f59c5c",
+      "hero": "/mobile/sub/giai-phap__loa-hero.webp?v=51733ad7",
       "tiles": [
         {
           "after": 992.6,
@@ -91,23 +91,23 @@
       ]
     },
     "giai-phap/man-hinh": {
-      "hero": "/mobile/sub/giai-phap__man-hinh-hero.webp?v=d4615a7c",
+      "hero": "/mobile/sub/giai-phap__man-hinh-hero.webp?v=dac53988",
       "tiles": []
     },
     "giai-phap/phim-dan-kinh": {
-      "hero": "/mobile/sub/giai-phap__phim-dan-kinh-hero.webp?v=a07ba669",
+      "hero": "/mobile/sub/giai-phap__phim-dan-kinh-hero.webp?v=0358fcac",
       "tiles": []
     },
     "giai-phap/phim-dan-kinh/3m-ceramic-elite-im": {
-      "hero": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-hero.webp?v=bab50770",
+      "hero": "/mobile/sub/giai-phap__phim-dan-kinh__3m-ceramic-elite-im-hero.webp?v=9513da1a",
       "tiles": []
     },
     "giai-phap/ppf": {
-      "hero": "/mobile/sub/giai-phap__ppf-hero.webp?v=3a2fe139",
+      "hero": "/mobile/sub/giai-phap__ppf-hero.webp?v=6de121e6",
       "tiles": []
     },
     "nhan-su/nhan-su-tc": {
-      "hero": "/mobile/sub/nhan-su__nhan-su-tc-hero.webp?v=7a43fa5d",
+      "hero": "/mobile/sub/nhan-su__nhan-su-tc-hero.webp?v=3fd80427",
       "tiles": [
         {
           "after": 1111.8,
@@ -120,7 +120,7 @@
       ]
     },
     "nhan-su/tuyen-dung": {
-      "hero": "/mobile/sub/nhan-su__tuyen-dung-hero.webp?v=965b1a8d",
+      "hero": "/mobile/sub/nhan-su__tuyen-dung-hero.webp?v=1eaecdbb",
       "tiles": [
         {
           "after": 1082.5,
@@ -129,15 +129,15 @@
       ]
     },
     "nhan-su/tuyen-dung/vi-tri-dang-tuyen": {
-      "hero": "/mobile/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-hero.webp?v=b6a544af",
+      "hero": "/mobile/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen-hero.webp?v=eaa697b8",
       "tiles": []
     },
     "nhan-su/tuyen-dung/vi-tri-dang-tuyen/ky-thuat-dan-phim-va-man-hinh": {
-      "hero": "/mobile/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-hero.webp?v=cc5bdbed",
+      "hero": "/mobile/sub/nhan-su__tuyen-dung__vi-tri-dang-tuyen__ky-thuat-dan-phim-va-man-hinh-hero.webp?v=73eb3c45",
       "tiles": []
     },
     "nhan-su/van-hoa-tc": {
-      "hero": "/mobile/sub/nhan-su__van-hoa-tc-hero.webp?v=5e777cdb",
+      "hero": "/mobile/sub/nhan-su__van-hoa-tc-hero.webp?v=e0505487",
       "tiles": [
         {
           "after": 739.3,
@@ -150,7 +150,7 @@
       ]
     },
     "nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep": {
-      "hero": "/mobile/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-hero.webp?v=dfb23737",
+      "hero": "/mobile/sub/nhan-su__van-hoa-tc__cau-chuyen-khoi-nghiep-hero.webp?v=fbd52fb4",
       "tiles": [
         {
           "after": 1271.1000000000001,
@@ -159,7 +159,7 @@
       ]
     },
     "trai-nghiem/ban-sac-rieng": {
-      "hero": "/mobile/sub/trai-nghiem__ban-sac-rieng-hero.webp?v=f6bdf529",
+      "hero": "/mobile/sub/trai-nghiem__ban-sac-rieng-hero.webp?v=dfe407af",
       "tiles": [
         {
           "after": 739.3,
@@ -168,7 +168,7 @@
       ]
     },
     "trai-nghiem/hanh-trinh": {
-      "hero": "/mobile/sub/trai-nghiem__hanh-trinh-hero.webp?v=32dcdd84",
+      "hero": "/mobile/sub/trai-nghiem__hanh-trinh-hero.webp?v=766ad5fc",
       "tiles": [
         {
           "after": 739.3,
@@ -177,7 +177,7 @@
       ]
     },
     "trai-nghiem/khoanh-khac": {
-      "hero": "/mobile/sub/trai-nghiem__khoanh-khac-hero.webp?v=b1a31827",
+      "hero": "/mobile/sub/trai-nghiem__khoanh-khac-hero.webp?v=53c0af63",
       "tiles": [
         {
           "after": 739.3,
@@ -190,7 +190,7 @@
       ]
     },
     "trai-nghiem/phong-cach-song": {
-      "hero": "/mobile/sub/trai-nghiem__phong-cach-song-hero.webp?v=75ffc4db",
+      "hero": "/mobile/sub/trai-nghiem__phong-cach-song-hero.webp?v=58b2af93",
       "tiles": [
         {
           "after": 739.3,
@@ -203,7 +203,7 @@
       ]
     },
     "trai-nghiem/phong-cach-song/doi-mau-doi-dien-mao": {
-      "hero": "/mobile/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-hero.webp?v=ce7868dc",
+      "hero": "/mobile/sub/trai-nghiem__phong-cach-song__doi-mau-doi-dien-mao-hero.webp?v=eea40bcd",
       "tiles": [
         {
           "after": 1949.3,
