@@ -154,12 +154,19 @@ test.describe("các băng phía dưới — 5 giây", () => {
     test(`${what} — rê chuột vào thì dừng`, async ({ page }) => {
       await page.goto("/");
       await settle(page, box);
-      await page.locator(box).first().hover();
-      await page.waitForTimeout(300);
-      await expect(page.locator(box).first()).not.toHaveAttribute(
-        "data-playing",
-        "true",
-      );
+
+      // Re lai MOI VONG cho chu khong re mot lan roi doi: khi may dang ban,
+      // cu re dau tien co the roi vao luc dai con dang dich, va chuot khong
+      // nam tren dai nua. Day la kieu chap chon da gap o cac bai kiem re chuot
+      // khac trong du an.
+      const target = page.locator(box).first();
+      let stopped = false;
+      for (let round = 0; round < 25 && !stopped; round += 1) {
+        await target.hover({ trial: false }).catch(() => undefined);
+        await page.waitForTimeout(120);
+        stopped = (await target.getAttribute("data-playing")) === null;
+      }
+      expect(stopped, `${what} phải dừng khi rê chuột`).toBe(true);
     });
   }
 

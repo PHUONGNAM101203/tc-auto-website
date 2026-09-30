@@ -93,29 +93,33 @@ test.describe("menu điều hướng", () => {
     await expect(page.locator(".tc-navpill")).toHaveCount(0);
   });
 
-  test("đứng yên thì mục đang xem chỉ GẠCH CHÂN đỏ, không có khung đè sau", async ({
-    page,
-  }) => {
-    // Khach muon GIU khung mo luc luot theo chuot, chi bo cai khung nam de
-    // phia sau muc dang xem khi khong re chuot (30/09/2026).
+  test("chỉ MỘT khung, và nó dừng ở mục đang xem", async ({ page }) => {
+    // Khach chot: dung mot lop thoi — chinh cai luot theo chuot cung la cai
+    // dung lai o muc dang xem (30/09/2026).
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
-    await expect(pill).toHaveCount(1);
+    await expect(pill, "chỉ được có một khung").toHaveCount(1);
     await expect(pill).toHaveAttribute("data-resting", "true");
+
+    // Khung phai nam dung tren muc dang xem.
+    const [pillBox, itemBox] = await Promise.all([
+      pill.boundingBox(),
+      page.locator('.hdr a.nv[href="/trai-nghiem"]').boundingBox(),
+    ]);
+    expect(Math.abs(pillBox!.x - itemBox!.x), "khung lệch khỏi mục đang xem").
+      toBeLessThan(2);
 
     const look = await pill.evaluate((el) => {
       const cs = getComputedStyle(el);
-      const line = getComputedStyle(el, "::after");
-      return { bg: cs.backgroundColor, ring: cs.boxShadow, lineH: line.height };
+      return { bg: cs.backgroundColor, ring: cs.boxShadow };
     });
-    expect(look.bg, "đứng yên thì không có khung").toMatch(
-      /rgba\(0, 0, 0, 0\)|transparent/,
-    );
-    expect(look.ring, "đứng yên thì không có viền").toBe("none");
-    expect(parseFloat(look.lineH), "phải có gạch chân").toBeGreaterThan(0);
+    expect(look.bg, "đứng yên vẫn phải thấy khung").not.toMatch(/rgba\(0, 0, 0, 0\)/);
+    expect(look.ring).not.toBe("none");
   });
 
-  test("rê chuột thì KHUNG MỜ hiện lại và lướt theo", async ({ page }) => {
+  test("rê chuột thì CHÍNH khung đó chạy theo, không mọc thêm cái nào", async ({
+    page,
+  }) => {
     await page.goto("/trai-nghiem");
     const pill = page.locator(".tc-navpill");
     const before = await pill.evaluate((el) => el.getBoundingClientRect().x);
@@ -123,18 +127,24 @@ test.describe("menu điều hướng", () => {
     await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
     await page.waitForTimeout(700);
 
+    await expect(pill, "vẫn chỉ một khung").toHaveCount(1);
     const after = await pill.evaluate((el) => el.getBoundingClientRect().x);
     expect(after, "khung phải chạy theo chuột").toBeGreaterThan(before);
     await expect(pill).not.toHaveAttribute("data-resting", "true");
+  });
 
-    const look = await pill.evaluate((el) => {
-      const cs = getComputedStyle(el);
-      return { bg: cs.backgroundColor, ring: cs.boxShadow };
-    });
-    expect(look.bg, "rê chuột thì phải có khung mờ").not.toMatch(
-      /rgba\(0, 0, 0, 0\)/,
-    );
-    expect(look.ring, "và có viền mảnh").not.toBe("none");
+  test("bỏ chuột ra thì khung quay về mục đang xem", async ({ page }) => {
+    await page.goto("/trai-nghiem");
+    const pill = page.locator(".tc-navpill");
+    const home = await pill.evaluate((el) => el.getBoundingClientRect().x);
+
+    await page.locator('.hdr a.nv[href="/nhan-su"]').hover();
+    await page.waitForTimeout(700);
+    await page.mouse.move(20, 700);
+    await page.waitForTimeout(900);
+
+    const back = await pill.evaluate((el) => el.getBoundingClientRect().x);
+    expect(Math.round(back)).toBe(Math.round(home));
   });
 
   test("chuyển tab thì thanh trượt LƯỚT sang, không nhảy cóc", async ({

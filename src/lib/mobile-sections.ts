@@ -18,6 +18,14 @@ import type { PageSlug } from "./types";
 
 export interface MobileSection {
   readonly id: string;
+  /**
+   * Do cao cua muc nay tren canvas desktop.
+   *
+   * Dung de tron cac muc chu voi cac KHOI (bang anh, dai the, the noi) roi xep
+   * lai theo thu tu doc — nho vay ban mobile doc theo dung mach cua ban
+   * desktop. Xem src/lib/mobile-blocks.ts.
+   */
+  readonly y: number;
   readonly label: string;
   /** Co the chua <br> cua thiet ke — hien bang cach tach dong, khong dung HTML. */
   readonly heading: string;
@@ -61,6 +69,7 @@ export function getMobileSections(slug: PageSlug): readonly MobileSection[] {
     const href = section.cta ? ctaHref(slug, section.cta.itemId) : null;
     return {
       id: section.id,
+      y: getPageSpec(slug)?.items.find((i) => i.id === section.id)?.y ?? 0,
       label: section.label,
       heading: section.heading,
       body: section.body,

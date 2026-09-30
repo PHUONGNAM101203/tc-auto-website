@@ -1542,12 +1542,13 @@
   box-shadow: none;
 }
 
-/* Danh dau muc menu: KHUNG MO khi dang re chuot, GACH CHAN DO khi dung yen.
-   Khach chot (30/09/2026): khung mo luot theo chuot thi dep, giu lai; chi bo
-   cai khung nam DE PHIA SAU muc dang xem khi khong re chuot nua.
-   Van la mot phan tu roi chu khong phai vien cua `.nv`: nho vay no LUOT duoc
-   tu muc nay sang muc kia.
-   Le 14px moi ben la dung bang padding cua `.nv`, nen gach nam khit duoi chu. */
+/* Danh dau muc menu: MOT khung mo duy nhat.
+   Khach chot (30/09/2026): dung mot lop thoi — chinh cai lop luot theo chuot
+   cung la cai dung lai o muc dang xem. Ro chuot thi no chay theo; bo tay ra
+   thi no ve dau muc dang xem va nam yen o do.
+   Van la mot phan tu roi chu khong phai vien cua `.nv`: nho vay no LUOT duoc.
+   `data-resting` giu lai de bai kiem va ma nguon biet no dang o trang thai nao,
+   nhung KHONG doi hinh thuc — hai trang thai nhin y het nhau. */
 .tc-navpill {
   position: absolute;
   top: 48px;
@@ -1559,27 +1560,6 @@
   pointer-events: none;
   /* Nam duoi chu nhung tren anh nen. */
   z-index: -1;
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* Dung yen (dang chi muc DANG XEM, khong re chuot): bo khung, chi con gach
-   chan — cung ngon ngu voi menu con. */
-.tc-navpill[data-resting] {
-  background: none;
-  box-shadow: none;
-}
-
-.tc-navpill[data-resting]::after {
-  content: "";
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 1px;
-  height: 2px;
-  border-radius: 1px;
-  background: var(--red-nav);
 }
 
 .tc-navpill[data-ready] {

@@ -42,9 +42,12 @@ describe("băng hero trang chủ", () => {
     expect(indicator.width).toBe(160);
   });
 
-  it("slide 1 dùng ảnh đã xoá điều khiển vẽ sẵn", () => {
-    // Neu dung anh goc thi vach va mui ten bi ve doi — xem clean-hero.py.
-    expect(getHeroSlides()[0].src).toContain("/hero/home-hero");
+  it("mọi slide đều dùng ảnh đã xoá điều khiển vẽ sẵn", () => {
+    // Neu dung thang anh goc thi vach chi muc va mui ten bi ve doi — xem
+    // tools/brand/clean-hero.py.
+    for (const slide of getHeroSlides()) {
+      expect(slide.src).toMatch(/^\/hero\/hero-\d+@2x\.webp/);
+    }
   });
 
   it("có đúng 5 slide, khớp 5 vạch chỉ mục trong thiết kế", () => {
@@ -54,12 +57,19 @@ describe("băng hero trang chủ", () => {
     expect(heroSliderEnabled()).toBe(true);
   });
 
-  it("đánh dấu rõ slide nào là ảnh tạm", () => {
-    const slides = getHeroSlides();
-    // Slide 1 la anh hero that cua trang chu; 4 slide sau muon anh hero cua
-    // cac trang khac de gui khach review — phai danh dau de khong quen thay.
-    expect(slides[0].placeholder ?? false).toBe(false);
-    expect(slides.slice(1).every((s) => s.placeholder === true)).toBe(true);
+  it("KHÔNG còn slide nào là ảnh tạm", () => {
+    // Truoc day slide 2-5 muon thang LAT NEN cua bon trang kia, nen chung mang
+    // theo ca chu, logo va ca khung danh dau muc menu cua trang do — nguoi
+    // dung thay hai khung cung luc tren thanh menu. Nay moi slide dung tam anh
+    // hero rieng cua tung trang, sach hoan toan.
+    for (const slide of getHeroSlides()) {
+      expect(slide.placeholder ?? false, slide.id).toBe(false);
+    }
+  });
+
+  it("mỗi slide một ảnh khác nhau", () => {
+    const srcs = getHeroSlides().map((s) => s.src);
+    expect(new Set(srcs).size).toBe(srcs.length);
   });
 
   it("mọi slide đều có đủ ảnh, alt và các bản độ phân giải", () => {

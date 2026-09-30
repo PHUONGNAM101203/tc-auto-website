@@ -30,6 +30,22 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "Bo phan chu nuong san trong anh hero — chu do phan tu that ve, khong " +
       "de hai ban chong len nhau nua.",
   },
+  // ── Anh hero trang chu: bo phan chu nuong san trong anh ──────────────────
+  // Ban thiet ke nuong "DRIVE · EXPERIENCE · ELEVATE" va ba dong gioi thieu
+  // vao chinh tam anh hero, trong khi chinh nhung dong do cung la phan tu that
+  // de doc va chon duoc. Hai ban chong khit nen binh thuong khong ai thay;
+  // nhung luc phong web chua tai xong, ban that ve bang phong du phong co be
+  // ngang khac — the la chu hien BONG DOI. Khach bao ba lan (29-30/09/2026).
+  // Nay anh hero duoc dung tu TAM ANH GOC sach chu ("Rectangle 1.png"), chi
+  // dan lai logo va cot bieu tuong; chu do phan tu that ve, mot lan duy nhat.
+  // Xem tools/brand/clean-hero.py.
+  {
+    page: "home",
+    box: { x: 270, y: 260, width: 420, height: 195 },
+    reason:
+      "Bo phan chu nuong san trong anh hero — chu do phan tu that ve, khong " +
+      "de hai ban chong len nhau nua.",
+  },
   // ── Danh dau muc menu dang xem: GACH CHAN thay cho KHOI NEN ──────────────
   // Ban thiet ke ve mot khoi nen mo bao quanh muc menu dang xem. Khach da BA
   // LAN bao khoi do "de len" muc menu va yeu cau bo (29-30/09/2026), nen muc
