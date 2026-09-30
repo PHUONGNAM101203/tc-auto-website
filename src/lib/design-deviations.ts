@@ -14,6 +14,64 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Anh hero trang chu: bo phan chu nuong san trong anh ──────────────────
+  // Ban thiet ke nuong "DRIVE · EXPERIENCE · ELEVATE" va ba dong gioi thieu
+  // vao chinh tam anh hero, trong khi chinh nhung dong do cung la phan tu that
+  // de doc va chon duoc. Hai ban chong khit nen binh thuong khong ai thay;
+  // nhung luc phong web chua tai xong, ban that ve bang phong du phong co be
+  // ngang khac — the la chu hien BONG DOI. Khach bao ba lan (29-30/09/2026).
+  // Nay anh hero duoc dung tu TAM ANH GOC sach chu ("Rectangle 1.png"), chi
+  // dan lai logo va cot bieu tuong; chu do phan tu that ve, mot lan duy nhat.
+  // Xem tools/brand/clean-hero.py.
+  {
+    page: "home",
+    box: { x: 270, y: 260, width: 420, height: 195 },
+    reason:
+      "Bo phan chu nuong san trong anh hero — chu do phan tu that ve, khong " +
+      "de hai ban chong len nhau nua.",
+  },
+  // ── Danh dau muc menu dang xem: GACH CHAN thay cho KHOI NEN ──────────────
+  // Ban thiet ke ve mot khoi nen mo bao quanh muc menu dang xem. Khach da BA
+  // LAN bao khoi do "de len" muc menu va yeu cau bo (29-30/09/2026), nen muc
+  // dang xem gio duoc danh dau bang gach chan do — cung ngon ngu voi menu con,
+  // ma menu con thi chinh khach chon kieu do.
+  // Vung khai bao la dung o viên pill tren tung trang, noi ra 4px moi ben cho
+  // phan khu rang cua. Trang chu khong co muc nao sang nen khong co o day.
+  {
+    page: "trai-nghiem",
+    box: { x: 425, y: 44, width: 149, height: 34 },
+    reason:
+      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
+      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+  },
+  {
+    page: "giai-phap",
+    box: { x: 567, y: 44, width: 123, height: 34 },
+    reason:
+      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
+      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+  },
+  {
+    page: "cong-nghe",
+    box: { x: 683, y: 44, width: 140, height: 34 },
+    reason:
+      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
+      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+  },
+  {
+    page: "dai-ly",
+    box: { x: 816, y: 44, width: 94, height: 34 },
+    reason:
+      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
+      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+  },
+  {
+    page: "nhan-su",
+    box: { x: 903, y: 44, width: 117, height: 34 },
+    reason:
+      "Khach yeu cau bo khoi nen bao quanh muc menu dang xem, thay bang gach " +
+      "chan do. Xem .tc-navpill trong src/styles/overlay.css.",
+  },
   // ── Bon khoi chu bi designer DAN LAI CHINH NO 2-4 lan ────────────────────
   // Cung mot cau, khong sai mot dau phay. Tren khung co dinh cua Figma phan
   // thua bi cat nen khong lo ra, nhung o day chu chay tu do thi hien het ca

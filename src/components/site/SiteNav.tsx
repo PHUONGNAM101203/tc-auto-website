@@ -140,6 +140,14 @@ export function SiteNav({ nav, pill: showPill = true }: SiteNavProps) {
   const activeHref = nav.find((entry) => entry.active)?.href ?? null;
   /** Cho thanh truot phai toi: dang ro chuot vao dau thi toi do. */
   const pillHref = showPill ? (hovered ?? activeHref) : null;
+  /**
+   * "Nghi" = dang chi muc DANG XEM chu khong phai muc dang re chuot.
+   *
+   * Khach hai lan bao khoi nen nay "de len" muc menu. Nen luc nghi thi danh dau
+   * bang GACH CHAN DO — cung ngon ngu voi menu con — con khoi nen chi hien khi
+   * dang re chuot, de nguoi dung thay ro no dang lươt theo tay minh.
+   */
+  const resting = hovered === null;
   /** Vi tri hien tai, de ghi lai LUC ROI TRANG. */
   const current = useRef<PillBox | null>(null);
   /** Da qua lan dat dau tien cua LAN MOUNT nay chua. */
@@ -319,6 +327,7 @@ export function SiteNav({ nav, pill: showPill = true }: SiteNavProps) {
         <span
           className="tc-navpill"
           data-ready={ready || undefined}
+          data-resting={resting || undefined}
           aria-hidden="true"
           style={{ transform: `translateX(${pill.left}px)`, width: pill.width }}
         />

@@ -41,7 +41,15 @@ const PROTOTYPE =
  * duoc (135 va 2) de mot sai lech THAT van bi chan.
  */
 const BUDGET = {
-  home: 0,
+  // Bon tam muc "Trai nghiem" duoc tach ra thanh the rieng de ro chuot thi noi
+  // len, nhung KHONG xoa khoi anh nen — nen sau chung khong dung lai duoc (co
+  // mot lop sang mo phu ca dai chu khong phai mau phang). The la mot ban ma
+  // hoa lai cua chinh nhung diem anh nam duoi, nen mep chu tieu de lech 1-2
+  // muc. Da thu ba cach deu khong bot: nang chat luong 92 -> 100, cat tu lat
+  // nen thay vi tu PNG thiet ke, va nen khong mat du lieu (moi the nang 817KB
+  // thay vi 210KB — khong dang cho mot sai so mat thuong khong thay).
+  // Do duoc 992; han muc dat sat tren de mot sai lech THAT van bi chan.
+  home: 1200,
   "trai-nghiem": 0,
   "giai-phap": 0,
   "cong-nghe": 0,
@@ -97,6 +105,13 @@ async function shoot(page, url, { hash } = {}) {
     }, hash);
   }
   await page.evaluate(FREEZE);
+
+  // Chu tren canvas duoc giu lai cho toi khi phong san sang (lop `tc-fontwait`,
+  // xem src/app/(site)/layout.tsx). Chup truoc luc do la anh khong co chu nao.
+  await page.waitForFunction(
+    () => !document.documentElement.classList.contains("tc-fontwait"),
+    { timeout: 10_000 },
+  ).catch(() => undefined);
 
   // Cuon het trang de kich hoat loading="lazy", roi cho moi anh ve xong.
   // Doi img.loading sau khi browser da hoan lai KHONG lam no tai — phai cuon.

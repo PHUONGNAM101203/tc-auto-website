@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useAutoplay } from "./useAutoplay";
 import {
   nextSlide,
   prevSlide,
@@ -14,17 +15,9 @@ import {
 const SLIDE_MS = 520;
 
 /**
- * Nhip tu luot, khop voi bang hero (xem AUTOPLAY_MS trong HeroSlider).
- * Khach yeu cau "kieu 3-4s luot mot lan".
+ * Nhip tu luot va khoang lang sau khi bam tay — dung chung voi cac bang khac,
+ * xem src/lib/slider-timing.ts.
  */
-const AUTOPLAY_MS = 3500;
-
-/**
- * Bam mui ten xong thi ngung tu luot bay lau. Khong co khoang lang nay thi
- * nguoi dung vua bam sang anh minh muon xem, mot chut sau bang anh da tu keo
- * di mat — vua kho chiu vua lam cac bai kiem bam tay chap chon.
- */
-const MANUAL_LULL_MS = 6000;
 
 /**
  * Mot tam anh trong ban thiet ke co ve san mui ten "›" — day la lop lam cho mui
@@ -50,13 +43,6 @@ function Slide({ slider }: { slider: Slider }) {
   const queued = useRef<(1 | -1) | null>(null);
   /** Ban MOI NHAT cua `go`, de cu bam duoc nho lai khong chay ban cu. */
   const goRef = useRef<((dir: 1 | -1) => void) | null>(null);
-  const box = useRef<HTMLDivElement | null>(null);
-  /** Re chuot vao thi dung — dang xem hoac sap bam ma anh tu doi la hong y. */
-  const [paused, setPaused] = useState(false);
-  /** Chi chay khi bang anh co trong khung nhin: do pin va du lieu. */
-  const [visible, setVisible] = useState(false);
-  /** Tang len moi lan nguoi dung bam, de bat lai khoang lang. */
-  const [nudge, setNudge] = useState(0);
 
   useEffect(
     () => () => {
@@ -117,56 +103,26 @@ function Slide({ slider }: { slider: Slider }) {
     goRef.current = go;
   }, [go]);
 
-  // Bang anh nam sau trong trang. Chay khi nguoi dung chua cuon toi la tai anh
-  // va ve lai vo ich — nen chi bat dau khi no that su lot vao khung nhin.
-  useEffect(() => {
-    const node = box.current;
-    if (!node) {
-      return;
-    }
-    const watcher = new IntersectionObserver(
-      ([entry]) => setVisible(entry.isIntersecting),
-      { rootMargin: "0px" },
-    );
-    watcher.observe(node);
-    return () => watcher.disconnect();
-  }, []);
+  // Tu chay 5 giay mot nhip; dung khi re chuot, khi ngoai khung nhin, va mot
+  // lat sau moi cu bam tay. Xem src/components/site/useAutoplay.ts.
+  const { attach, hoverProps, nudge, playing } = useAutoplay<HTMLDivElement>(
+    () => goRef.current?.(1),
+    slider.slides.length > 1,
+  );
 
-  // Moi lan `nudge` doi la hen lai gio tat khoang lang; bam lien tuc thi
-  // khoang lang cu duoc keo dai them.
-  useEffect(() => {
-    if (nudge === 0) {
-      return;
-    }
-    const until = setTimeout(() => setNudge(0), MANUAL_LULL_MS);
-    return () => clearTimeout(until);
-  }, [nudge]);
-
-  const playing =
-    visible && !paused && nudge === 0 && slider.slides.length > 1;
-
-  useEffect(() => {
-    if (!playing) {
-      return;
-    }
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-    // Goi qua ref chu khong goi thang `go`: `go` doi sau moi lan chuyen anh, ma
-    // dat no vao danh sach phu thuoc thi nhip bi dat lai moi vong va anh se
-    // luot khong deu.
-    const beat = setInterval(() => goRef.current?.(1), AUTOPLAY_MS);
-    return () => clearInterval(beat);
-  }, [playing]);
+  /** Bam mui ten: chuyen anh ngay VA bat dau khoang lang. */
+  const goByHand = (dir: 1 | -1) => {
+    nudge();
+    go(dir);
+  };
 
   return (
     <>
       <div
-        ref={box}
+        ref={attach}
+        {...hoverProps}
         className="tc-photoslider"
         data-playing={playing || undefined}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
         style={{
           left: slider.box.x,
           top: slider.box.y,
@@ -206,12 +162,8 @@ function Slide({ slider }: { slider: Slider }) {
           type="button"
           className="tc-photoslider-arrow"
           data-dir="prev"
-          onClick={() => {
-            setNudge((count) => count + 1);
-            go(-1);
-          }}
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
+          onClick={() => goByHand(-1)}
+          {...hoverProps}
           style={{
             left: slider.prev.x,
             top: slider.prev.y,
@@ -225,12 +177,8 @@ function Slide({ slider }: { slider: Slider }) {
       <button
         type="button"
         className="tc-photoslider-arrow"
-        onClick={() => {
-          setNudge((count) => count + 1);
-          go(1);
-        }}
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
+        onClick={() => goByHand(1)}
+        {...hoverProps}
         style={{
           left: slider.arrow.x,
           top: slider.arrow.y,

@@ -14,6 +14,7 @@ import {
   stripWidth,
   visibleCount,
 } from "@/lib/solution-cards";
+import { getProducts } from "@/lib/products";
 import { getCtaSpots, getCtaStats } from "@/lib/cta-links";
 import { DESIGN_DEVIATIONS, deviationsFor } from "@/lib/design-deviations";
 import { buildPageList, getPagination, hasPagination, MAX_VISIBLE } from "@/lib/pagination";
@@ -101,7 +102,13 @@ describe("nút xem thêm", () => {
   });
 
   it("nút có dịch đến thì trỏ tới trang có thật", () => {
-    const routes = new Set(getAllSubPages().map((p) => p.route));
+    // Gom CA trang chi tiet san pham: bo thiet ke khong ve trang cho san pham
+    // nao nen chung do ta dung, nhung nut "XEM THÊM" tren /giai-phap/man-hinh
+    // van tro thang toi do. Xem src/lib/products.ts.
+    const routes = new Set([
+      ...getAllSubPages().map((p) => p.route),
+      ...getProducts().map((p) => p.route),
+    ]);
     for (const page of getAllSubPages()) {
       for (const spot of getCtaSpots(page.slug)) {
         if (spot.href) {
@@ -330,7 +337,10 @@ describe("dải Giải pháp — mờ dần khi thu về trái", () => {
 });
 
 describe("bốn ô Công nghệ trên trang chủ", () => {
-  const boxes = getLiftCards("home");
+  // Trang chu co HAI cum the noi len: bon tam muc "Trai nghiem" (cum
+  // "home-trai-nghiem") va bon o muc "Cong nghe" (cum "home"). Khoi nay chi
+  // noi ve cum thu hai.
+  const boxes = getLiftCards("home").filter((card) => card.group === "home");
 
   it("trang chủ có đúng bốn ô", () => {
     expect(boxes).toHaveLength(4);
@@ -450,5 +460,41 @@ describe("hai thẻ Câu chuyện đồng hành (trang Đại lý)", () => {
       expect(card.x + card.width).toBeLessThanOrEqual(1440);
       expect(routes.has(card.href), `${card.title} -> ${card.href}`).toBe(true);
     }
+  });
+});
+
+describe("bốn tấm Trải nghiệm trên trang chủ", () => {
+  // Cum nay nam SAT NHAU va chay het mep canvas, nen no PHONG TO khi ro chuot
+  // thay vi nhac len — xem `grow` trong src/lib/lift-cards.ts.
+  const panels = getLiftCards("home").filter(
+    (card) => card.group === "home-trai-nghiem",
+  );
+
+  it("có đúng bốn tấm, tấm nào cũng dựng theo kiểu phóng to", () => {
+    expect(panels).toHaveLength(4);
+    for (const panel of panels) {
+      expect(panel.grow, panel.id).toBe(true);
+    }
+  });
+
+  it("xếp liền nhau, tấm cuối chạy hết mép canvas", () => {
+    const byX = [...panels].sort((a, b) => a.x - b.x);
+    for (let i = 1; i < byX.length; i += 1) {
+      // Lien ke: mep phai tam truoc trung mep trai tam sau (sai so lam tron 1px).
+      const gap = byX[i].x - (byX[i - 1].x + byX[i - 1].width);
+      expect(Math.abs(gap), `khe giữa tấm ${i} và ${i + 1}`).toBeLessThanOrEqual(1);
+    }
+    const last = byX[byX.length - 1];
+    expect(last.x + last.width).toBeGreaterThan(1435);
+    expect(last.x + last.width).toBeLessThanOrEqual(1440);
+  });
+
+  it("mỗi tấm dẫn tới đúng mục con của Trải nghiệm", () => {
+    expect(panels.map((p) => p.href)).toEqual([
+      "/trai-nghiem/hanh-trinh",
+      "/trai-nghiem/ban-sac-rieng",
+      "/trai-nghiem/khoanh-khac",
+      "/trai-nghiem/phong-cach-song",
+    ]);
   });
 });

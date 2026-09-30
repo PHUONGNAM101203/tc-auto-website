@@ -339,3 +339,26 @@
   background: var(--red-h);
 }
 /* ========================== END PROTOTYPE =============================== */
+
+/* ---------------------------------------------------------------------------
+   Cho phong tai xong roi hay ve chu tren canvas.
+
+   Ban thiet ke nuong san mot so doan chu vao anh nen, ma chinh doan do cung la
+   phan tu that. Hai ban chong khit nhau nen binh thuong khong ai thay. Luc
+   phong chua ve, ban that duoc ve bang phong du phong co be ngang khac — thanh
+   ra chu hien BONG DOI. Trong luc cho thi de anh nen lo, dung ve chu that.
+
+   Chi an MAU CHU, khong an ca phan tu: giu nguyen nut, vien, o nhap — nhung thu
+   do khong bi nhan doi va an di la thay trang nhay.
+
+   Lop `tc-fontwait` do script noi tuyen trong src/app/(site)/layout.tsx them
+   vao va tu go ra; tat JavaScript thi khong bao gio co lop nay.
+   --------------------------------------------------------------------------- */
+html.tc-fontwait .tc-canvas,
+html.tc-fontwait .tc-canvas * {
+  color: transparent !important;
+}
+
+html.tc-fontwait .tc-canvas ::placeholder {
+  color: transparent !important;
+}

@@ -20,11 +20,12 @@ import { sliceSizes, sliceSrcSet } from "@/lib/slice-srcset";
  * Khi chi co MOT slide, component khong ve gi ca — khong tao nut bam gia.
  */
 /**
- * Nhip tu chuyen slide. 7000ms -> 4500ms (28/09/2026) -> 3500ms (29/09/2026),
- * khach yeu cau "kieu 3-4s luot mot lan". Dung chung mot nhip voi PhotoSlider
- * de ca trang co cung mot mach.
+ * Nhip tu chuyen slide cua BANG HERO.
+ * 7000 -> 4500 (28/09/2026) -> 3500 -> 3000 (30/09/2026).
+ * Khach chot: rieng bang hero 3 giay, cac bang phia duoi 5 giay
+ * (xem SLIDER_AUTOPLAY_MS trong src/lib/slider-timing.ts).
  */
-export const AUTOPLAY_MS = 3500;
+export const AUTOPLAY_MS = 3000;
 
 /** Anh 1x1 trong suot cho slide chua den luot tai. */
 const BLANK =

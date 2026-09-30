@@ -1,0 +1,125 @@
+/* ===========================================================================
+   Trang chi tiet san pham (xem src/components/site/ProductPage.tsx).
+
+   Di theo mach cua trang chi tiet mau trong bo thiet ke — "3M Ceramic Elite IM":
+   ten san pham mau do co gach ngang hai ben, roi anh lon, roi noi dung.
+
+   Dung chung nen `tc-doc` voi hai trang tu soan san co, nen o day chi khai bao
+   nhung gi RIENG cua trang san pham.
+   =========================================================================== */
+
+.tc-prod {
+  /* Anh san pham rong hon cot chu cua trang tai lieu thuong. */
+  max-width: 880px;
+}
+
+/* Ten san pham: do, giua, gach ngang keo dai hai ben — dung nhu trang mau. */
+.tc-prod-name {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 26px);
+  margin-top: 16px;
+  font: 800 clamp(19px, 3.4vw, 27px) / 1.25 "Unbounded", sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--red-nav);
+}
+
+.tc-prod-name::before,
+.tc-prod-name::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.tc-prod-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--doc-gap);
+  border-radius: 16px;
+}
+
+.tc-prod-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.tc-prod-contact a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tc-prod-contact a:hover {
+  color: var(--red-nav);
+  border-color: var(--red-nav);
+}
+
+.tc-prod-contact span[aria-hidden] {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+/* Dai "Sản phẩm khác" — dung cho dai "CÁC BÀI VIẾT KHÁC" o trang mau. */
+.tc-prod-more {
+  margin-top: calc(var(--doc-gap) * 1.4);
+}
+
+.tc-prod-more h2 {
+  font: 800 clamp(15px, 2.6vw, 19px) / 1.3 "Unbounded", sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.tc-prod-more ul {
+  display: grid;
+  /* Bon the vua khit be ngang trang (880px tru le): (800 - 3x22) / 4 = 183px.
+     Nguong 170px de ca bon nam mot hang, roi tu xuong 2 cot va 1 cot khi man
+     hep lai — khong can diem ngat thu cong. */
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: clamp(14px, 2.6vw, 22px);
+  margin-top: 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.tc-prod-more a {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tc-prod-more img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.tc-prod-more span {
+  display: block;
+  margin-top: 10px;
+  font: 600 13px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.tc-prod-more a:hover {
+  transform: translateY(-3px);
+}
+
+.tc-prod-more a:hover span {
+  color: var(--red-nav);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-prod-more a:hover {
+    transform: none;
+  }
+}

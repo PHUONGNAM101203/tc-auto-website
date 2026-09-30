@@ -8,6 +8,9 @@
 @import "../styles/motion.css";
 @import "../styles/overlay.css";
 @import "../styles/authored.css";
+/* products.css nam SAU authored.css: trang san pham dung lai nen `tc-doc`
+   roi ghi de vai cho rieng cua no. */
+@import "../styles/products.css";
 @import "../styles/mobile.css";
 @import "../styles/admin.css";
 

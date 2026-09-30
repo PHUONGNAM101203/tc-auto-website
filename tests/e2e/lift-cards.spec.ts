@@ -1,20 +1,34 @@
 import { expect, test } from "@playwright/test";
 
 /**
+ * Trang chu co HAI cum the noi len: bon tam muc "Trai nghiem" o tren va bon o
+ * muc "Cong nghe" o duoi. Moi cum mot khoi bao rieng de ro chuot vao cum nay
+ * khong lam mo cum kia.
+ */
+const TECH = '.tc-lift[data-group="home"]';
+const LIFE = '.tc-lift[data-group="home-trai-nghiem"]';
+const DEALER = '.tc-lift[data-group="dai-ly"]';
+
+/**
  * Bon o muc "Công nghệ" tren trang chu: ro chuot vao o nao thi o do noi len.
  */
 test.describe("bốn ô Công nghệ trên trang chủ", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/");
-    await page.locator(".tc-lift").scrollIntoViewIfNeeded();
+    await page.locator(TECH).scrollIntoViewIfNeeded();
     // Cho anh bon o tai xong han roi moi do: do som thi kich thuoc con dang
     // thay doi va phep so sanh "o nao nhich len" khong con nghia.
+    // Selector phai TRUYEN VAO: ham nay chay trong trinh duyet, hang so cua
+    // tep test khong ton tai o do.
     await page.waitForFunction(
-      () =>
-        document.querySelectorAll(".tc-lift-card img").length > 0 &&
+      (group) =>
+        document.querySelectorAll(`${group} .tc-lift-card img`).length > 0 &&
         [
-          ...document.querySelectorAll<HTMLImageElement>(".tc-lift-card img"),
+          ...document.querySelectorAll<HTMLImageElement>(
+            `${group} .tc-lift-card img`,
+          ),
         ].every((img) => img.complete && img.naturalWidth > 1),
+      TECH,
     );
     await page.waitForTimeout(250);
   });
@@ -41,14 +55,14 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
    * thang `transform` thi trang co xe dich bao nhieu lan cung khong anh huong.
    */
   const shift = (page: import("@playwright/test").Page) =>
-    page.$$eval(".tc-lift-card", (els) =>
+    page.$$eval(`${TECH} .tc-lift-card`, (els) =>
       els.map(
         (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
       ),
     );
 
   test("rê chuột vào ô nào thì đúng ô đó nổi lên", async ({ page }) => {
-    const boxes = page.locator(".tc-lift-card");
+    const boxes = page.locator(`${TECH} .tc-lift-card`);
     await expect(boxes).toHaveCount(4);
 
     // Luc nghi bon o deu nam yen tren cung mot hang.
@@ -83,12 +97,12 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
 
   test("ba ô còn lại mờ đi để ô đang trỏ nổi bật", async ({ page }) => {
     const opacity = () =>
-      page.$$eval(".tc-lift-card", (els) =>
+      page.$$eval(`${TECH} .tc-lift-card`, (els) =>
         els.map((el) => Number(getComputedStyle(el).opacity)),
       );
 
     expect(await opacity()).toEqual([1, 1, 1, 1]);
-    await page.locator(".tc-lift-card").first().hover();
+    await page.locator(`${TECH} .tc-lift-card`).first().hover();
     await expect
       .poll(async () => (await opacity())[1], { message: "ô 1 phải mờ đi" })
       .toBeLessThan(1);
@@ -101,7 +115,7 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
   });
 
   test("mỗi ô bấm được và dẫn tới trang công nghệ", async ({ page }) => {
-    const hrefs = await page.$$eval(".tc-lift-card", (els) =>
+    const hrefs = await page.$$eval(`${TECH} .tc-lift-card`, (els) =>
       els.map((el) => el.getAttribute("href")),
     );
     expect(hrefs).toEqual([
@@ -111,7 +125,7 @@ test.describe("bốn ô Công nghệ trên trang chủ", () => {
       "/cong-nghe",
     ]);
 
-    await page.locator(".tc-lift-card").first().click();
+    await page.locator(`${TECH} .tc-lift-card`).first().click();
     await expect(page).toHaveURL("/cong-nghe/tien-phong-cong-nghe");
   });
 });
@@ -124,21 +138,25 @@ test.describe("hai thẻ Câu chuyện đồng hành", () => {
     page,
   }) => {
     await page.goto("/dai-ly");
-    await page.locator(".tc-lift").scrollIntoViewIfNeeded();
-    await page.waitForFunction(() =>
-      [
-        ...document.querySelectorAll<HTMLImageElement>(".tc-lift-card img"),
-      ].every((img) => img.complete && img.naturalWidth > 1),
+    await page.locator(DEALER).scrollIntoViewIfNeeded();
+    await page.waitForFunction(
+      (group) =>
+        [
+          ...document.querySelectorAll<HTMLImageElement>(
+            `${group} .tc-lift-card img`,
+          ),
+        ].every((img) => img.complete && img.naturalWidth > 1),
+      DEALER,
     );
     await page.waitForTimeout(300);
 
-    const cards = page.locator(".tc-lift-card");
+    const cards = page.locator(`${DEALER} .tc-lift-card`);
     await expect(cards).toHaveCount(2);
 
     // Cung ly do voi hai test tren: doc `transform` chu khong doc vi tri tren
     // trang, de trang co xe dich thi phep do van dung.
     const read = () =>
-      page.$$eval(".tc-lift-card", (els) =>
+      page.$$eval(`${DEALER} .tc-lift-card`, (els) =>
         els.map((el) => ({
           shift: new DOMMatrixReadOnly(getComputedStyle(el).transform).m42,
           opacity: Number(getComputedStyle(el).opacity),
@@ -165,5 +183,84 @@ test.describe("hai thẻ Câu chuyện đồng hành", () => {
     );
     expect(after[0].opacity).toBe(1);
     expect(after[1].opacity).toBeLessThan(1);
+  });
+});
+
+/**
+ * Bon tam muc "Trai nghiem" tren trang chu nam SAT NHAU va chay het mep canvas.
+ * Ro chuot thi chung PHONG TO tu tam chu khong nhac len — nhac len se ho ra nen
+ * phia sau, ma nen do khong dung lai duoc (co mot lop sang mo phu ca dai).
+ */
+test.describe("bốn tấm Trải nghiệm — hover thì nổi lên", () => {
+  test("có đủ bốn tấm và tấm nào cũng bấm sang được trang của nó", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const cards = page.locator(".tc-lift-card[data-grow]");
+    await expect(cards).toHaveCount(4);
+    const hrefs = await cards.evaluateAll((els) =>
+      els.map((el) => el.getAttribute("href")),
+    );
+    expect(hrefs).toEqual([
+      "/trai-nghiem/hanh-trinh",
+      "/trai-nghiem/ban-sac-rieng",
+      "/trai-nghiem/khoanh-khac",
+      "/trai-nghiem/phong-cach-song",
+    ]);
+  });
+
+  test("rê chuột thì tấm đó TO RA, không cần bấm", async ({ page }) => {
+    await page.goto("/");
+    const card = page.locator(".tc-lift-card[data-grow]").nth(1);
+    await card.scrollIntoViewIfNeeded();
+    await page.waitForTimeout(300);
+
+    // Doc `transform` chu khong doc vi tri tren trang: ro chuot co the lam
+    // trang cuon mot chut, va luc do vi tri tren khung nhin doi theo — phep so
+    // sanh se sai trong khi the chang he xe dich.
+    const read = () =>
+      card.evaluate((el) => {
+        const cs = getComputedStyle(el);
+        const m = new DOMMatrixReadOnly(cs.transform);
+        return { scale: m.a, origin: cs.transformOrigin };
+      });
+
+    const before = await read();
+    expect(before.scale, "lúc nghỉ thì đúng cỡ gốc").toBeCloseTo(1, 2);
+
+    await card.hover();
+    await page.waitForTimeout(700);
+    const after = await read();
+    expect(after.scale, "rê chuột thì phải to ra").toBeGreaterThan(1.02);
+
+    // Nen no LEN TREN: ngay duoi tam la chu ve chet trong nen, no xuong la de
+    // len chu. Goc phong to phai nam o day tam.
+    // `transform-origin` doc ra theo he toa do RIENG cua the (chua nhan ti le,
+    // chua nhan zoom cua canvas), nen so voi `offsetHeight` chu khong so voi
+    // kich thuoc do tren khung nhin.
+    const own = await card.evaluate((el) => (el as HTMLElement).offsetHeight);
+    const originY = Number(after.origin.split(" ")[1].replace("px", ""));
+    expect(originY, "gốc phóng to phải ở đáy tấm").toBeCloseTo(own, 0);
+  });
+
+  test("các tấm cùng cụm mờ đi, cụm khác trên trang không đụng tới", async ({
+    page,
+  }) => {
+    await page.goto("/");
+    const group = page.locator(".tc-lift-card[data-grow]");
+    await group.first().scrollIntoViewIfNeeded();
+    await page.waitForTimeout(300);
+    await group.nth(1).hover();
+    await page.waitForTimeout(600);
+
+    const dimmed = await group.nth(0).evaluate((el) => getComputedStyle(el).opacity);
+    expect(Number(dimmed), "tấm cùng cụm phải mờ đi").toBeLessThan(0.9);
+
+    // Cum bon o muc "Cong nghe" nam xa phia duoi — khong duoc mo theo.
+    const other = page.locator(".tc-lift-card:not([data-grow])").first();
+    const otherOpacity = await other.evaluate(
+      (el) => getComputedStyle(el).opacity,
+    );
+    expect(Number(otherOpacity), "cụm khác phải giữ nguyên").toBe(1);
   });
 });

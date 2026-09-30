@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState, type TransitionEvent } from "react";
+import { useAutoplay } from "./useAutoplay";
 import {
   PPF_ARROWS,
   PPF_CARD,
@@ -79,8 +80,22 @@ export function PpfCarousel() {
     });
   };
 
+  // Tu chay 5 giay mot nhip; dung khi re chuot, khi ngoai khung nhin, va mot
+  // lat sau moi cu bam tay. Xem src/components/site/useAutoplay.ts.
+  const { attach, hoverProps, nudge, playing } =
+    useAutoplay<HTMLDivElement>(() => move(1));
+
+  /** Bam tay: truot ngay VA bat dau khoang lang. */
+  const moveByHand = (delta: number) => {
+    nudge();
+    move(delta);
+  };
+
   return (
     <div
+      ref={attach}
+      {...hoverProps}
+      data-playing={playing || undefined}
       className="tc-ppf"
       style={{
         left: `${PPF_VIEW.x}px`,
@@ -155,7 +170,7 @@ export function PpfCarousel() {
         type="button"
         className="tc-ppf-arrow"
         aria-label="Thẻ trước"
-        onClick={() => move(-1)}
+        onClick={() => moveByHand(-1)}
         style={{
           left: `${PPF_ARROWS.prev.x - PPF_VIEW.x - 12}px`,
           top: `${PPF_ARROWS.prev.y - PPF_VIEW.y - 12}px`,
@@ -167,7 +182,7 @@ export function PpfCarousel() {
         type="button"
         className="tc-ppf-arrow"
         aria-label="Thẻ tiếp theo"
-        onClick={() => move(1)}
+        onClick={() => moveByHand(1)}
         style={{
           left: `${PPF_ARROWS.next.x - PPF_VIEW.x - 12}px`,
           top: `${PPF_ARROWS.next.y - PPF_VIEW.y - 12}px`,

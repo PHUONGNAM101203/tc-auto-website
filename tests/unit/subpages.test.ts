@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { countDetected, getHotspots } from "@/lib/hotspots";
 import { getAuthoredSlugs } from "@/lib/authored-pages";
+import { getProducts } from "@/lib/products";
 import { CTA_INTENTIONALLY_UNLINKED, CTA_LINK_MAP } from "@/lib/link-map";
 import { getAllPageSpecs, getPageSpec } from "@/lib/pages";
 import { getPageText, getAllPageText } from "@/lib/subpage-text";
@@ -227,11 +228,13 @@ describe("vùng bấm dò từ ảnh", () => {
   });
 
   it("mọi hotspot trỏ tới trang có thật", () => {
-    // Đích có thể là một trang con dựng từ frame thiết kế, HOẶC một trang do
-    // chúng ta tự soạn cho chỗ thiết kế không vẽ (ví dụ tab BRAVO).
+    // Đích có thể là một trang con dựng từ frame thiết kế, một trang do chúng
+    // ta tự soạn cho chỗ thiết kế không vẽ (ví dụ tab BRAVO), hoặc một trang
+    // chi tiết sản phẩm (xem src/lib/products.ts).
     const routes = new Set([
       ...getAllSubPages().map((p) => p.route),
       ...getAuthoredSlugs().map((slug) => `/${slug}`),
+      ...getProducts().map((p) => p.route),
     ]);
     for (const page of getAllSubPages()) {
       for (const spot of getHotspots(page.slug)) {
@@ -246,9 +249,11 @@ describe("vùng bấm dò từ ảnh", () => {
         expect(spot.w).toBeGreaterThanOrEqual(60);
         expect(spot.h).toBeGreaterThanOrEqual(28);
         // Phần lớn hotspot là NÚT (cao ~28–42). Nhưng có cả điều khiển khác
-        // được vẽ chết vào ảnh và đo tay — thanh tab WINCA | BRAVO cao 88.
-        // Chặn trên nới ra tới đó, vẫn đủ để bắt hộp đo sai thành cả màn hình.
-        expect(spot.h).toBeLessThanOrEqual(96);
+        // được vẽ chết vào ảnh và đo tay: thanh tab WINCA | BRAVO cao 88, và
+        // hai THẺ trong dải "CÁC BÀI VIẾT KHÁC" ở cuối trang 3M Ceramic Elite
+        // IM cao 459 (cả ảnh lẫn tiêu đề — bấm vào đâu cũng đi được).
+        // Chặn trên vẫn đủ để bắt hộp đo sai thành cả trang (cao hàng nghìn).
+        expect(spot.h).toBeLessThanOrEqual(500);
       }
     }
   });

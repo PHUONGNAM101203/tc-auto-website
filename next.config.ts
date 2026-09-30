@@ -82,6 +82,7 @@ const ASSET_DIRS = [
   "lift",
   "mobile",
   "ppf",
+  "products",
   "related",
   "sliders",
   "solutions",

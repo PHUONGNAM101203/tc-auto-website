@@ -60,6 +60,12 @@ async function renderPage(page, route) {
     waitUntil: "load",
     timeout: 90_000,
   });
+  // Chu tren canvas duoc giu lai cho toi khi phong san sang (lop `tc-fontwait`,
+  // xem src/app/(site)/layout.tsx). Chup truoc luc do la anh khong co chu nao.
+  await page.waitForFunction(
+    () => !document.documentElement.classList.contains("tc-fontwait"),
+    { timeout: 10_000 },
+  ).catch(() => undefined);
   await page.evaluate(FREEZE);
   await page.evaluate(async () => {
     const step = Math.floor(innerHeight * 0.8);

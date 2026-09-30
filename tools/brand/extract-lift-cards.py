@@ -39,7 +39,87 @@ FEATHER_FLAT = 0
 TECH_RULES = ((136, 394), (440, 698), (744, 1002), (1048, 1304))
 TECH_TOP, TECH_HEIGHT, TECH_PAD = 2066, 330, 2
 
+# Bon tam muc "Trai nghiem" tren trang chu. Cac tam dung SAT NHAU, ngan bang
+# mot vach doc sang hon hai ben — do bang cach lay trung binh cot trong dai
+# y 1000..1300 va tim cac cot troi len: x = 410,8 / 667,8 / 924,8 / 1181,8,
+# cach deu 257. Tam cuoi chay het mep canvas (1181,8 + 257 = 1438,8).
+# Be cao: vach ngan sang tu y 927; chu cuoi cung ("Hành trình của bạn"...) het
+# o y 1379, roi 1380..1424 la nen troi, va muc trang tiep theo bat dau o 1425.
+# Lay den 1382 de trum tron chan chu — dung o 1376 la cat mat chan cua dong
+# phu de, va luc the phong to thi ban cat do nam lech tren ban ve chet ben
+# duoi, nhin nhu chu bi gach ngang.
+# Tieu de nam TRONG the (khong phai ngoai nhu bon o muc Cong nghe): ca cum
+# anh + chu cung phong to mot the.
+# Lam tron ve SO NGUYEN: cat anh thi lam tron, con CSS dat the theo so le —
+# lech nua pixel la mep the khong trung anh nen, va gate pixel bat duoc ngay
+# (do thuc te: 8127 diem lech truoc khi lam tron).
+# Tam cuoi rong hon 1px de chay sat mep canvas 1440.
+LIFE_RULES = (411, 668, 925, 1182)
+LIFE_TOP, LIFE_HEIGHT, LIFE_WIDTH = 927, 455, 257
+LIFE_LAST_WIDTH = 1440 - LIFE_RULES[3]
+
 GROUPS = [
+    {
+        "page": "home",
+        "slug": "home-trai-nghiem",
+        "source": DESIGN / "1. Page_Home" / "Home.png",
+        "spec": ROOT / "src" / "data" / "pages" / "home.json",
+        "slice_prefix": "home",
+        # KHONG xoa nen. Bon tam nam SAT NHAU va chay het mep canvas, ma nen
+        # sau chung khong phang (co mot lop sang mo phu ca dai) nen dung lai se
+        # lo ra. Thay vi nhac len, the nay PHONG TO tu tam — phong to thi no
+        # luon phu kin dung cho cu, khong he ho nen ra. Xem `grow` ben duoi.
+        "rebuild": "none",
+        # The nam de len chinh anh nen cu (khong xoa), nen phai cat ra TU
+        # CHINH LAT NEN chu khong tu PNG thiet ke — xem from_slices().
+        "from": "slices",
+        "quality": 92,
+        # Mep khong lam mo: cac tam giap nhau, lam mo la thay duong noi.
+        "feather": 0,
+        "grow": True,
+        "cards": [
+            {
+                "id": "hanh-trinh",
+                "title": "HÀNH TRÌNH",
+                "subtitle": "Hành trình của bạn",
+                "href": "/trai-nghiem/hanh-trinh",
+                "x": LIFE_RULES[0],
+                "y": LIFE_TOP,
+                "width": LIFE_WIDTH,
+                "height": LIFE_HEIGHT,
+            },
+            {
+                "id": "ban-sac-rieng",
+                "title": "BẢN SẮC RIÊNG",
+                "subtitle": "Định hình phong cách",
+                "href": "/trai-nghiem/ban-sac-rieng",
+                "x": LIFE_RULES[1],
+                "y": LIFE_TOP,
+                "width": LIFE_WIDTH,
+                "height": LIFE_HEIGHT,
+            },
+            {
+                "id": "khoanh-khac",
+                "title": "KHOẢNH KHẮC",
+                "subtitle": "Khoảnh khắc đáng nhớ",
+                "href": "/trai-nghiem/khoanh-khac",
+                "x": LIFE_RULES[2],
+                "y": LIFE_TOP,
+                "width": LIFE_WIDTH,
+                "height": LIFE_HEIGHT,
+            },
+            {
+                "id": "phong-cach-song",
+                "title": "PHONG CÁCH SỐNG",
+                "subtitle": "Hành trình đầy cảm hứng",
+                "href": "/trai-nghiem/phong-cach-song",
+                "x": LIFE_RULES[3],
+                "y": LIFE_TOP,
+                "width": LIFE_LAST_WIDTH,
+                "height": LIFE_HEIGHT,
+            },
+        ],
+    },
     {
         "page": "home",
         "slug": "home",
@@ -199,6 +279,41 @@ def round_corners(art: Image.Image, radius: int, scale: float) -> Image.Image:
     return out
 
 
+
+def from_slices(group: dict, box: tuple[float, float, float, float], scale: int) -> Image.Image:
+    """Cat mot o (theo he toa do canvas) ra tu chinh CAC LAT NEN dang hien thi.
+
+    Dung cho nhom KHONG xoa nen: the nam de len anh nen cu nen hai ban phai
+    trung nhau tung diem. Cat tu PNG thiet ke thi khong trung — lat nen cua 6
+    trang chinh duoc tach tu ban export prototype, la mot ban RENDER KHAC voi
+    PNG thiet ke; hai ban lech nhau du de gate pixel bat duoc (do thuc te:
+    2088 diem, va nen o chat luong 100 cung khong bot).
+    """
+    spec = json.loads(Path(group["spec"]).read_text(encoding="utf-8"))
+    x0, y0, x1, y1 = box
+    out = Image.new("RGB", (round((x1 - x0) * scale), round((y1 - y0) * scale)))
+    suffix = "" if scale == 2 else f"@{scale}x"
+    for index, slice_spec in enumerate(spec["slices"]):
+        top = slice_spec["y"]
+        bottom = top + slice_spec["displayHeight"]
+        if bottom <= y0 or top >= y1:
+            continue
+        path = SLICE_DIR / f"{group['slice_prefix']}-{index}{suffix}.webp"
+        if not path.is_file():
+            raise SystemExit(f"Thieu lat nen: {path}")
+        image = Image.open(path).convert("RGB")
+        piece = image.crop(
+            (
+                round(x0 * scale),
+                round((max(y0, top) - top) * scale),
+                round(x1 * scale),
+                round((min(y1, bottom) - top) * scale),
+            )
+        )
+        out.paste(piece, (0, round((max(y0, top) - y0) * scale)))
+    return out
+
+
 def export_group(group: dict) -> list[dict]:
     OUT.mkdir(parents=True, exist_ok=True)
     page = Image.open(group["source"])
@@ -206,21 +321,44 @@ def export_group(group: dict) -> list[dict]:
     manifest = []
 
     for card in group["cards"]:
-        art = page.crop(
-            (
-                round(card["x"] * scale),
-                round(card["y"] * scale),
-                round((card["x"] + card["width"]) * scale),
-                round((card["y"] + card["height"]) * scale),
-            )
-        ).convert("RGB")
-        feather = FEATHER_FLAT if group["rebuild"] in ("white", "fill") else FEATHER
+        box = (
+            card["x"],
+            card["y"],
+            card["x"] + card["width"],
+            card["y"] + card["height"],
+        )
+        if group.get("from") == "slices":
+            art = from_slices(group, box, 3)
+        else:
+            art = page.crop(
+                (
+                    round(box[0] * scale),
+                    round(box[1] * scale),
+                    round(box[2] * scale),
+                    round(box[3] * scale),
+                )
+            ).convert("RGB")
+        feather = group.get(
+            "feather",
+            FEATHER_FLAT if group["rebuild"] in ("white", "fill") else FEATHER,
+        )
         art = feathered(art, round(feather * scale)) if feather else art.convert("RGBA")
         art = round_corners(art, group.get("cornerRadius", 0), scale)
 
         target = OUT / f"{group['slug']}-{card['id']}.webp"
-        art.save(target, "WEBP", quality=88, method=6)
-        manifest.append({**card, "src": f"/lift/{group['slug']}-{card['id']}.webp"})
+        # Nhom nao KHONG xoa nen thi the nam de len chinh anh nen cu: hai ban
+        # phai trung nhau tung diem, nen nen o chat luong cao hon de sai so ma
+        # hoa khong lo ra o gate pixel.
+        quality = group.get("quality", 88)
+        art.save(target, "WEBP", quality=quality, method=6)
+        entry = {**card, "src": f"/lift/{group['slug']}-{card['id']}.webp"}
+        if group.get("grow"):
+            # Phong to thay vi nhac len — xem ghi chu o nhom.
+            entry["grow"] = True
+        # Cac the CUNG MOT NHOM mo di khi ro chuot vao mot the trong nhom; cac
+        # nhom khac tren cung trang thi khong lien quan.
+        entry["group"] = group["slug"]
+        manifest.append(entry)
         print(f"  {target.relative_to(ROOT)}  {art.width}x{art.height}  "
               f"{target.stat().st_size / 1e3:.0f} KB")
 
@@ -247,6 +385,8 @@ def scrub_group(group: dict) -> int:
     ]
     if not holders:
         raise SystemExit(f"[{group['slug']}] khong tim thay lat nao chua cum the.")
+    if group["rebuild"] == "none":
+        return 0
     if group["rebuild"] == "interpolate" and len(holders) > 1:
         raise SystemExit(
             f"[{group['slug']}] cum the vat qua ranh giua hai lat — kieu noi suy "

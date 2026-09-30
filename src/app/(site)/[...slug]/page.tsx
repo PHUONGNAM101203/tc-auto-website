@@ -6,6 +6,7 @@ import { DealerSearch } from "@/components/site/DealerSearch";
 import { Pagination } from "@/components/site/Pagination";
 import { ReadMore } from "@/components/site/ReadMore";
 import { AuthoredPage } from "@/components/site/AuthoredPage";
+import { ProductPage } from "@/components/site/ProductPage";
 import { SubPageShell } from "@/components/site/SubPageShell";
 import { getHotspots } from "@/lib/hotspots";
 import { getCtaSpots } from "@/lib/cta-links";
@@ -13,6 +14,7 @@ import { getPagination } from "@/lib/pagination";
 import { listPublishedPosts } from "@/lib/posts";
 import { SITE } from "@/lib/site-config";
 import { getAuthoredPage, getAuthoredSlugs } from "@/lib/authored-pages";
+import { categoryOf, getProduct, getProductSlugs } from "@/lib/products";
 import { getChildren, getSubPage, getSubPageSlugs } from "@/lib/subpages";
 
 export const revalidate = 300;
@@ -21,10 +23,12 @@ export const dynamicParams = false;
 
 export function generateStaticParams(): { slug: string[] }[] {
   // 31 trang cat tu thiet ke + cac trang do ta tu soan (muc co nut CTA nhung
-  // thiet ke khong ve trang con).
-  return [...getSubPageSlugs(), ...getAuthoredSlugs()].map((slug) => ({
-    slug: slug.split("/"),
-  }));
+  // thiet ke khong ve trang con) + trang chi tiet tung san pham man hinh.
+  return [
+    ...getSubPageSlugs(),
+    ...getAuthoredSlugs(),
+    ...getProductSlugs(),
+  ].map((slug) => ({ slug: slug.split("/") }));
 }
 
 async function readSlug(params: Promise<{ slug: string[] }>): Promise<string> {
@@ -40,6 +44,31 @@ export async function generateMetadata({
   const slug = await readSlug(params);
   const page = getSubPage(slug);
   if (!page) {
+    const product = getProduct(slug);
+    if (product) {
+      const text = `${product.name} — ${categoryOf(product).title} tại ${SITE.name}. ${product.description}`;
+      return {
+        title: `${product.name} | ${SITE.name}`,
+        description: text,
+        alternates: { canonical: product.route },
+        openGraph: {
+          title: product.name,
+          description: text,
+          url: product.route,
+          siteName: SITE.name,
+          locale: SITE.locale,
+          type: "website",
+          images: [
+            {
+              url: product.image,
+              width: product.imageWidth,
+              height: product.imageHeight,
+            },
+          ],
+        },
+        twitter: { card: "summary_large_image", title: product.name, description: text },
+      };
+    }
     const authored = getAuthoredPage(slug);
     if (!authored) {
       return {};
@@ -88,6 +117,10 @@ export default async function SubPage({
   const page = getSubPage(slug);
 
   if (!page) {
+    const product = getProduct(slug);
+    if (product) {
+      return <ProductPage product={product} />;
+    }
     const authored = getAuthoredPage(slug);
     if (!authored) {
       notFound();

@@ -63,6 +63,30 @@ const EXTRA_HOTSPOTS: Readonly<Record<string, readonly (DetectedRect & { href: s
   // Thiet ke chi dung noi dung cho tab WINCA — chinh trang nay. Tab BRAVO dan
   // sang trang rieng (src/data/authored-pages.json) thay vi doi noi dung tai
   // cho, vi khong co frame nao de doi cho dung.
+  // Dai "CÁC BÀI VIẾT KHÁC" o cuoi trang 3M Ceramic Elite IM duoc VE CHET vao
+  // anh nen nen hai the trong do khong bam duoc. Hai the la hai san pham that,
+  // nay da co trang rieng (xem src/lib/products.ts).
+  // Do bang cach quet vung khac mau nen: the cao 6726..7104, tieu de ngay duoi;
+  // vung bam phu ca anh lan tieu de cho de bam.
+  "giai-phap/phim-dan-kinh/3m-ceramic-elite-im": [
+    {
+      x: 83,
+      y: 6726,
+      w: 592,
+      h: 459,
+      href: "/giai-phap/phim-dan-kinh/3m-ceramic-hong-ngoai",
+      label: "3M Ceramic Hồng Ngoại",
+    },
+    {
+      x: 767,
+      y: 6726,
+      w: 592,
+      h: 459,
+      href: "/giai-phap/phim-dan-kinh/3m-ceramic-crystalline",
+      label: "3M Ceramic Crystalline",
+    },
+  ],
+
   "giai-phap/man-hinh": [
     { x: 0, y: 878, w: 720, h: 88, href: "/giai-phap/man-hinh", label: "Màn hình Winca" },
     {

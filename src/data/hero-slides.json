@@ -35,14 +35,14 @@
     {
       "id": "hero-1",
       "alt": "TC Auto Solutions — trải nghiệm trên mọi hành trình",
-      "src": "/hero/home-hero@2x.webp?v=85592e62",
+      "src": "/hero/home-hero@2x.webp?v=1ccd865d",
       "srcSet": [
         {
-          "src": "/hero/home-hero@2x.webp?v=85592e62",
+          "src": "/hero/home-hero@2x.webp?v=1ccd865d",
           "scale": 2
         },
         {
-          "src": "/hero/home-hero@3x.webp?v=4bbd1983",
+          "src": "/hero/home-hero@3x.webp?v=29d52cb9",
           "scale": 3
         }
       ]

@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type TransitionEvent } from "react";
+import { useAutoplay } from "./useAutoplay";
 import {
   LOOP_STEP,
   SOLUTION_ARROW,
@@ -91,8 +92,22 @@ export function SolutionCarousel() {
     });
   };
 
+  // Tu chay 5 giay mot nhip; dung khi re chuot, khi ngoai khung nhin, va mot
+  // lat sau moi cu bam tay. Xem src/components/site/useAutoplay.ts.
+  const { attach, hoverProps, nudge, playing } =
+    useAutoplay<HTMLDivElement>(advance);
+
+  /** Bam tay: truot ngay VA bat dau khoang lang. */
+  const advanceByHand = () => {
+    nudge();
+    advance();
+  };
+
   return (
     <div
+      ref={attach}
+      {...hoverProps}
+      data-playing={playing || undefined}
       className="tc-solutions"
       style={{
         left: SOLUTION_VIEW.x,
@@ -121,7 +136,7 @@ export function SolutionCarousel() {
               height: SOLUTION_CARD.height,
               opacity: cardOpacity(index, offset),
             }}
-            onClick={advance}
+            onClick={advanceByHand}
             aria-label={`${card.title} — ${card.subtitle}. Bấm để xem giải pháp tiếp theo`}
           >
             {/* eslint-disable-next-line @next/next/no-img-element -- anh the cat san
@@ -149,7 +164,7 @@ export function SolutionCarousel() {
         type="button"
         className="tc-solution-arrow"
         data-dir="next"
-        onClick={advance}
+        onClick={advanceByHand}
         style={{
           left: SOLUTION_ARROW.x - SOLUTION_VIEW.x,
           top: SOLUTION_ARROW.y - SOLUTION_VIEW.y,

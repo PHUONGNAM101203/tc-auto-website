@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TEXT = ROOT / "src" / "data" / "subpage-text.json"
 INDEX = ROOT / "src" / "data" / "subpages" / "index.json"
 BUTTONS = ROOT / "src" / "data" / "detected-buttons.json"
+PRODUCTS = ROOT / "src" / "data" / "products.json"
 TARGET = ROOT / "src" / "data" / "cta-links.json"
 
 CTA_PATTERN = re.compile(
@@ -389,6 +390,20 @@ def main() -> int:
     for row in index:
         by_title[key_of(row["title"])] = row["route"]
 
+    # Trang chi tiet SAN PHAM khong so khop theo TEN ma theo VI TRI NUT.
+    #
+    # Nhieu may ten gan giong nhau — "S170+ QLED 2K" va "S170+ QLED 2K PRO 360",
+    # "S200+ QLED 2K" va "S200+ 360 QLED 2K". So theo do giong chu thi ban ngan
+    # hon luon thang, va bon nut tro nham trang. Trong khi do moi san pham deu
+    # duoc tach ra TU CHINH the mang nut do, nen vi tri nut la khoa chinh xac
+    # tuyet doi. Xem tools/brand/extract-products.py.
+    product_at: dict[tuple[str, int, int], str] = {}
+    if PRODUCTS.is_file():
+        catalogue = json.loads(PRODUCTS.read_text(encoding="utf-8"))
+        for product in catalogue["products"]:
+            cta = product["cta"]
+            product_at[(product["category"], round(cta["x"]), round(cta["y"]))] = product["route"]
+
     out: dict[str, list[dict]] = {}
     matched = unmatched = skipped = 0
     misses: list[tuple[str, float, str]] = []
@@ -412,6 +427,15 @@ def main() -> int:
 
             title, title_bottom = nearest_title(blocks, block["y"], block["x"])
             href, score = best_page(title, by_title) if title else (None, 0.0)
+            # Nut nam trong nut do cua mot san pham thi tro thang toi san pham
+            # do, khong hoi den phep so khop theo ten nua.
+            product_rect = red_button_of(block, rects)
+            if product_rect is not None:
+                exact = product_at.get(
+                    (slug, round(product_rect["x"]), round(product_rect["y"]))
+                )
+                if exact:
+                    href, score = exact, 1.0
             # Khong tu tro ve chinh no.
             if href == f"/{slug}":
                 href = None

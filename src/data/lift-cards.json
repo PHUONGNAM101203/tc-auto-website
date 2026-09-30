@@ -3,6 +3,58 @@
   "pages": {
     "home": [
       {
+        "id": "hanh-trinh",
+        "title": "HÀNH TRÌNH",
+        "subtitle": "Hành trình của bạn",
+        "href": "/trai-nghiem/hanh-trinh",
+        "x": 411,
+        "y": 927,
+        "width": 257,
+        "height": 455,
+        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=9ab548f1",
+        "grow": true,
+        "group": "home-trai-nghiem"
+      },
+      {
+        "id": "ban-sac-rieng",
+        "title": "BẢN SẮC RIÊNG",
+        "subtitle": "Định hình phong cách",
+        "href": "/trai-nghiem/ban-sac-rieng",
+        "x": 668,
+        "y": 927,
+        "width": 257,
+        "height": 455,
+        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=396b7991",
+        "grow": true,
+        "group": "home-trai-nghiem"
+      },
+      {
+        "id": "khoanh-khac",
+        "title": "KHOẢNH KHẮC",
+        "subtitle": "Khoảnh khắc đáng nhớ",
+        "href": "/trai-nghiem/khoanh-khac",
+        "x": 925,
+        "y": 927,
+        "width": 257,
+        "height": 455,
+        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=580fabd8",
+        "grow": true,
+        "group": "home-trai-nghiem"
+      },
+      {
+        "id": "phong-cach-song",
+        "title": "PHONG CÁCH SỐNG",
+        "subtitle": "Hành trình đầy cảm hứng",
+        "href": "/trai-nghiem/phong-cach-song",
+        "x": 1182,
+        "y": 927,
+        "width": 258,
+        "height": 455,
+        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=30fc55ca",
+        "grow": true,
+        "group": "home-trai-nghiem"
+      },
+      {
         "id": "innovation",
         "title": "INNOVATION",
         "subtitle": "Tiên phong công nghệ",
@@ -11,7 +63,8 @@
         "y": 2066,
         "width": 262,
         "height": 330,
-        "src": "/lift/home-innovation.webp?v=0fb4d3ba"
+        "src": "/lift/home-innovation.webp?v=0fb4d3ba",
+        "group": "home"
       },
       {
         "id": "applications",
@@ -22,7 +75,8 @@
         "y": 2066,
         "width": 262,
         "height": 330,
-        "src": "/lift/home-applications.webp?v=68c4e08e"
+        "src": "/lift/home-applications.webp?v=68c4e08e",
+        "group": "home"
       },
       {
         "id": "warranty",
@@ -33,7 +87,8 @@
         "y": 2066,
         "width": 262,
         "height": 330,
-        "src": "/lift/home-warranty.webp?v=d94b7ecf"
+        "src": "/lift/home-warranty.webp?v=d94b7ecf",
+        "group": "home"
       },
       {
         "id": "experience-lab",
@@ -44,7 +99,8 @@
         "y": 2066,
         "width": 260,
         "height": 330,
-        "src": "/lift/home-experience-lab.webp?v=4b0574b3"
+        "src": "/lift/home-experience-lab.webp?v=4b0574b3",
+        "group": "home"
       }
     ],
     "dai-ly": [
@@ -57,7 +113,8 @@
         "y": 1574,
         "width": 358,
         "height": 495,
-        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=543818cc"
+        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=543818cc",
+        "group": "dai-ly"
       },
       {
         "id": "gia-tri-cung-dat-duoc",
@@ -68,7 +125,8 @@
         "y": 1574,
         "width": 358,
         "height": 495,
-        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=4bf12546"
+        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=4bf12546",
+        "group": "dai-ly"
       }
     ],
     "giai-phap": [
@@ -81,7 +139,8 @@
         "y": 2205,
         "width": 429,
         "height": 697,
-        "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea"
+        "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea",
+        "group": "giai-phap"
       },
       {
         "id": "phim-nano-sun",
@@ -92,7 +151,8 @@
         "y": 2205,
         "width": 429,
         "height": 697,
-        "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739"
+        "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739",
+        "group": "giai-phap"
       },
       {
         "id": "phim-5do",
@@ -103,7 +163,8 @@
         "y": 2205,
         "width": 429,
         "height": 697,
-        "src": "/lift/giai-phap-phim-5do.webp?v=390d453c"
+        "src": "/lift/giai-phap-phim-5do.webp?v=390d453c",
+        "group": "giai-phap"
       }
     ]
   }

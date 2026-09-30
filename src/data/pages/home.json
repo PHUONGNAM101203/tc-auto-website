@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/home-2.webp?v=d10c0290",
+      "src": "/slices/home-2.webp?v=0cfc79c3",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 107808,
       "srcSet": [
         {
-          "src": "/slices/home-2.webp?v=d10c0290",
+          "src": "/slices/home-2.webp?v=0cfc79c3",
           "scale": 2
         },
         {
-          "src": "/slices/home-2@3x.webp?v=fe1b77af",
+          "src": "/slices/home-2@3x.webp?v=b16bba45",
           "scale": 3
         }
       ],

@@ -20,7 +20,7 @@
     "ocr:run": "python3 tools/ocr/run-all.py && python3 tools/ocr/clean.py",
     "verify:buttons": "python3 tools/detect-buttons.py --validate",
     "verify:fidelity:sub": "node tools/fidelity/compare-subpages.mjs",
-    "parse:cta": "python3 tools/match-cta.py --emit && python3 tools/sample-cta-background.py",
+    "parse:cta": "python3 tools/brand/extract-products.py && python3 tools/match-cta.py --emit && python3 tools/sample-cta-background.py",
     "brand:logos": "python3 tools/brand/make-logos.py && python3 tools/brand/make-icons.py && python3 tools/stamp-assets.py",
     "verify:lazy": "node tools/fidelity/check-lazy.mjs",
     "assets:upload": "node tools/upload-assets.mjs",

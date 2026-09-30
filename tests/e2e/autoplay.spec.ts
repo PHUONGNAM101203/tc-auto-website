@@ -1,24 +1,26 @@
 import { expect, test, type Page } from "@playwright/test";
 
 /**
- * Khach yeu cau moi bang anh phai TU LUOT, "kieu 3-4s mot lan":
- * bang hero tren trang chu, va cac bang anh tren cac trang khac.
+ * Moi bang anh tren site phai TU CHAY.
  *
- * Nguoi dung re chuot vao thi phai dung lai — dang xem hoac sap bam ma anh tu
- * doi la hong y.
+ * Khach chot nhip (30/09/2026): bang hero o dau trang 3 giay, moi bang phia
+ * duoi 5 giay. Bang duoi vua co chu vua co nut nen can lau hon de doc va bam
+ * kip.
+ *
+ * Re chuot vao thi phai dung lai — dang xem hoac sap bam ma anh tu doi la hong
+ * y. Vua bam tay xong cung phai ngung mot lat, khong giat anh khoi tay nguoi
+ * dang xem.
  *
  * ── Do NHIP chu khong do "co doi khong" ─────────────────────────────────────
  * Bai kiem dau tien o day chi cho mot khoang roi xem anh co khac di khong. No
- * xanh ca khi nhip van la 4500ms, vi thoi gian tai trang cong vao la du. Muon
+ * xanh ca khi nhip van la nhip cu, vi thoi gian tai trang cong vao la du. Muon
  * rang buoc that thi phai do KHOANG CACH GIUA HAI LAN DOI: bat dau bam gio tu
  * lan doi thu nhat, dung khi den lan thu hai.
  */
-const STEP_MS = 3500;
-/**
- * Do sai lech cho phep. Phai NHO HON hieu so voi nhip cu (4500 - 3500 = 1000),
- * khong thi bai kiem van xanh ca khi nhip chua duoc rut xuong.
- */
-const SLACK_MS = 800;
+const HERO_MS = 3000;
+const BELOW_MS = 5000;
+/** Do sai lech cho phep: may cham, khung hinh tre, tai anh. */
+const SLACK_MS = 900;
 
 /** Doc gia tri hien tai; lap den khi no khac di; tra ve so mili giay da cho. */
 async function msUntilChange(
@@ -37,12 +39,21 @@ async function msUntilChange(
   return Number.POSITIVE_INFINITY;
 }
 
-/** Mot nhip phai nam trong khoang mong doi — khong nhanh qua, khong cham qua. */
-function expectPace(ms: number, what: string) {
-  expect(ms, `${what} phải tự lướt`).toBeLessThan(STEP_MS + SLACK_MS);
+function expectPace(ms: number, want: number, what: string) {
+  expect(ms, `${what} phải tự lướt`).toBeLessThan(want + SLACK_MS);
   expect(ms, `${what} lướt quá nhanh, không kịp xem`).toBeGreaterThan(
-    STEP_MS - SLACK_MS,
+    want - SLACK_MS,
   );
+}
+
+/** Bo qua lan doi dau — no co the roi vao giua mot nhip dang chay. */
+async function pace(
+  page: Page,
+  read: () => Promise<string | undefined>,
+  want: number,
+) {
+  await msUntilChange(page, read, want * 2);
+  return msUntilChange(page, read, want * 2);
 }
 
 const heroShown = (page: Page) =>
@@ -59,26 +70,29 @@ const photoShown = (page: Page) =>
     )
     .then((all) => all[0]);
 
-async function settlePhotos(page: Page) {
-  await page.locator(".tc-photoslider").first().scrollIntoViewIfNeeded();
-  await page.waitForFunction(() =>
-    [...document.querySelectorAll<HTMLImageElement>(".tc-photoslide")].every(
-      (img) => img.complete && img.naturalWidth > 1,
-    ),
-  );
-  await page.waitForTimeout(300);
+/**
+ * Doc vi tri DICH cua dai, lay tu style noi tuyen chu khong phai
+ * `getComputedStyle`.
+ *
+ * Trong luc dai dang truot, gia tri tinh toan doi TUNG KHUNG HINH — do kieu do
+ * thi "lan doi thu hai" chi cach lan dau mot phan mười giay, va bai kiem se bao
+ * nham la "luot qua nhanh". Style noi tuyen thi nhay thang toi dich.
+ */
+const stripOffset = (page: Page, selector: string) =>
+  page
+    .$eval(selector, (el) => (el as HTMLElement).style.transform)
+    .catch(() => undefined);
+
+async function settle(page: Page, selector: string) {
+  await page.locator(selector).first().scrollIntoViewIfNeeded();
+  await page.waitForTimeout(400);
 }
 
-test.describe("băng hero trang chủ tự lướt", () => {
-  test("nhịp giữa hai lần đổi vào khoảng 3,5 giây", async ({ page }) => {
+test.describe("băng hero trang chủ — 3 giây", () => {
+  test("nhịp giữa hai lần đổi vào khoảng 3 giây", async ({ page }) => {
     await page.goto("/");
     await page.waitForTimeout(300);
-    // Bo qua lan doi dau — no co the roi vao giua nhip dang chay.
-    await msUntilChange(page, () => heroShown(page), STEP_MS * 2);
-    expectPace(
-      await msUntilChange(page, () => heroShown(page), STEP_MS * 2),
-      "băng hero",
-    );
+    expectPace(await pace(page, () => heroShown(page), HERO_MS), HERO_MS, "băng hero");
   });
 
   test("rê chuột vào thì dừng lại để còn đọc và bấm được", async ({ page }) => {
@@ -88,49 +102,72 @@ test.describe("băng hero trang chủ tự lướt", () => {
     const waited = await msUntilChange(
       page,
       () => heroShown(page),
-      STEP_MS + SLACK_MS,
+      HERO_MS + SLACK_MS,
     );
-    expect(waited, "rê chuột thì phải đứng yên").toBe(
-      Number.POSITIVE_INFINITY,
-    );
+    expect(waited, "rê chuột thì phải đứng yên").toBe(Number.POSITIVE_INFINITY);
   });
 });
 
-test.describe("băng ảnh các trang khác tự lướt", () => {
+test.describe("các băng phía dưới — 5 giây", () => {
   // Ba trang co bang anh: trang chu, Dai ly va Nhan su.
   for (const route of ["/", "/dai-ly", "/nhan-su"]) {
-    test(`${route} — nhịp vào khoảng 3,5 giây`, async ({ page }) => {
+    test(`băng ảnh ${route} — nhịp vào khoảng 5 giây`, async ({ page }) => {
       await page.goto(route);
-      await settlePhotos(page);
-      await msUntilChange(page, () => photoShown(page), STEP_MS * 2);
+      await settle(page, ".tc-photoslider");
+      await page.waitForFunction(() =>
+        [...document.querySelectorAll<HTMLImageElement>(".tc-photoslide")].every(
+          (img) => img.complete && img.naturalWidth > 1,
+        ),
+      );
       expectPace(
-        await msUntilChange(page, () => photoShown(page), STEP_MS * 2),
+        await pace(page, () => photoShown(page), BELOW_MS),
+        BELOW_MS,
         `băng ảnh ${route}`,
       );
     });
   }
 
-  test("rê chuột vào thì dừng lại", async ({ page }) => {
+  test("dải thẻ Giải pháp — nhịp vào khoảng 5 giây", async ({ page }) => {
     await page.goto("/");
-    await settlePhotos(page);
-    await page.locator(".tc-photoslider").first().hover();
-    const waited = await msUntilChange(
-      page,
-      () => photoShown(page),
-      STEP_MS + SLACK_MS,
-    );
-    expect(waited, "rê chuột thì phải đứng yên").toBe(
-      Number.POSITIVE_INFINITY,
+    await settle(page, ".tc-solutions");
+    expectPace(
+      await pace(page, () => stripOffset(page, ".tc-solutions-strip"), BELOW_MS),
+      BELOW_MS,
+      "dải thẻ Giải pháp",
     );
   });
+
+  test("dải thẻ PPF — nhịp vào khoảng 5 giây", async ({ page }) => {
+    await page.goto("/giai-phap/ppf");
+    await settle(page, ".tc-ppf");
+    expectPace(
+      await pace(page, () => stripOffset(page, ".tc-ppf-strip"), BELOW_MS),
+      BELOW_MS,
+      "dải thẻ PPF",
+    );
+  });
+
+  for (const [what, box] of [
+    ["băng ảnh", ".tc-photoslider"],
+    ["dải thẻ Giải pháp", ".tc-solutions"],
+  ] as const) {
+    test(`${what} — rê chuột vào thì dừng`, async ({ page }) => {
+      await page.goto("/");
+      await settle(page, box);
+      await page.locator(box).first().hover();
+      await page.waitForTimeout(300);
+      await expect(page.locator(box).first()).not.toHaveAttribute(
+        "data-playing",
+        "true",
+      );
+    });
+  }
 
   test("bấm mũi tên thì tạm ngưng tự lướt, không giật ảnh khỏi tay người xem", async ({
     page,
   }) => {
     await page.goto("/");
-    await settlePhotos(page);
-    // Bam roi dua chuot ra cho khac: khong con re chuot nua, nhung vua bam thi
-    // bang anh phai dung yen mot lat cho nguoi ta con xem.
+    await settle(page, ".tc-photoslider");
     await page.locator(".tc-photoslider-arrow").first().click();
     await page.waitForTimeout(900);
     await page.mouse.move(5, 5);
@@ -138,7 +175,7 @@ test.describe("băng ảnh các trang khác tự lướt", () => {
     const waited = await msUntilChange(
       page,
       () => photoShown(page),
-      STEP_MS + SLACK_MS,
+      BELOW_MS + SLACK_MS,
     );
     expect(waited, "vừa bấm thì phải tạm ngưng tự lướt").toBe(
       Number.POSITIVE_INFINITY,
@@ -151,12 +188,9 @@ test.describe("băng ảnh các trang khác tự lướt", () => {
     await page.goto("/");
     await page.evaluate(() => scrollTo(0, 0));
     await page.waitForTimeout(500);
-    // Bang anh nam duoi sau trong trang; o dau trang no chua tung xuat hien.
-    expect(
-      await page.locator(".tc-photoslider[data-playing]").count(),
-    ).toBe(0);
+    expect(await page.locator(".tc-photoslider[data-playing]").count()).toBe(0);
 
-    await settlePhotos(page);
+    await settle(page, ".tc-photoslider");
     expect(
       await page.locator(".tc-photoslider[data-playing]").count(),
       "cuộn tới thì phải bắt đầu chạy",
