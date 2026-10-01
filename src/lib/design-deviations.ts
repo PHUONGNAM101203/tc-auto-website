@@ -14,6 +14,19 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Nut "Xem tat ca cac mau man hinh" ───────────────────────────────────
+  // Thiet ke khong ve nut nao dan sang danh muc day du — vi ban thiet ke cung
+  // khong co trang danh muc. Khach chot dat nut ngay tren trang Man hinh o to
+  // (01/10/2026) thay vi chi de o trang san pham.
+  // Cho dat la khoang TRONG giua thanh phan trang (ket thuc y 2744) va chan
+  // trang (bat dau y 2843), nen khong de len bat cu gi cua thiet ke.
+  {
+    page: "giai-phap/man-hinh",
+    box: { x: 554, y: 2752, width: 332, height: 58 },
+    reason:
+      "Nut dan sang danh muc day du — thiet ke khong co trang danh muc nen " +
+      "cung khong ve nut nay.",
+  },
   // ── Ba dai nen TRANG doi sang tong toi ──────────────────────────────────
   // Ban thiet ke xen vai dai nen trang giua cac dai navy: trang chu 437px
   // (12% chieu cao), Giai phap 585px (10%), Dai ly 571px (12%). Khach bao

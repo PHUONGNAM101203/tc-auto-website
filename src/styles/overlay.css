@@ -1958,3 +1958,44 @@ a.tc-appfoot-btn:focus-visible {
 }
 
 
+
+/* ---------- Nut "Xem tat ca cac mau man hinh" ---------- */
+/* Khach chot dat ngay tren trang Man hinh o to (01/10/2026). Cho dat la
+   khoang trong giua thanh phan trang va chan trang — xem SubPageShell.
+   Kieu VIEN chu khong nen dac: tren trang da co chin nut "XEM THÊM" nen do;
+   them mot nut do nua thi khong con thu tu uu tien. */
+.tc-allmodels {
+  position: absolute;
+  left: 560px;
+  top: 2758px;
+  width: 320px;
+  height: 46px;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+  font: 700 13px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.22s ease, background 0.22s ease, transform 0.22s ease;
+}
+
+.tc-allmodels:hover {
+  border-color: var(--red-nav);
+  background: rgba(255, 57, 61, 0.12);
+  transform: translateY(-2px);
+}
+
+.tc-allmodels:focus-visible {
+  outline: 2px solid var(--red-nav);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-allmodels:hover {
+    transform: none;
+  }
+}

@@ -94,8 +94,29 @@ test.describe("danh mục màn hình", () => {
     await expect(page).toHaveURL(new RegExp(`${href}$`));
   });
 
-  test("có lối vào từ trang Màn hình ô tô", async ({ page }) => {
+  test("có nút THẤY ĐƯỢC trên trang Màn hình ô tô", async ({ page }) => {
     await page.goto("/giai-phap/man-hinh");
-    await expect(page.locator(`a[href="${PAGE}"]`).first()).toHaveCount(1);
+    const btn = page.locator(".tc-allmodels");
+    await expect(btn).toHaveCount(1);
+    await btn.scrollIntoViewIfNeeded();
+    await expect(btn).toBeVisible();
+    // Nhan phai doc so mau TU DU LIEU — go tay la co ngay noi sai so.
+    const models = await page.evaluate(async () => {
+      const res = await fetch("/giai-phap/man-hinh/tat-ca");
+      const html = await res.text();
+      return (html.match(/tc-cat-item/g) ?? []).length;
+    });
+    await expect(btn).toContainText(String(models));
+
+    // Nut phai nam trong khoang TRONG giua thanh phan trang va chan trang,
+    // khong de len bat cu gi cua thiet ke.
+    const pager = await page.locator(".tc-pager").boundingBox();
+    const box = (await btn.boundingBox())!;
+    expect(box.y, "phải nằm dưới thanh phân trang").toBeGreaterThan(
+      pager!.y + pager!.height,
+    );
+
+    await btn.click();
+    await expect(page).toHaveURL(new RegExp(`${PAGE}$`));
   });
 });

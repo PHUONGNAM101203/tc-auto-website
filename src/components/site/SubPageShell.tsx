@@ -21,6 +21,7 @@ import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
 import { getMobileBlocks } from "@/lib/mobile-subpage";
 import { getMobileLinks } from "@/lib/mobile-links";
+import { getScreenModels } from "@/lib/screen-catalogue";
 import { getPageText, type TextBlock } from "@/lib/subpage-text";
 
 export interface Hotspot {
@@ -52,6 +53,9 @@ interface SubPageShellProps {
  *   - tren : header / form / vung bam that o dang "ghost" (xem overlay.css)
  *   - an   : breadcrumb + lien ket trang con cho screen reader va SEO
  */
+/** So mau trong danh muc — doc tu du lieu de nhan khong bao gio noi sai so. */
+const MODEL_COUNT = getScreenModels().length;
+
 export function SubPageShell({
   page,
   hotspots = [],
@@ -112,15 +116,20 @@ export function SubPageShell({
               { name: page.title, url: page.route },
             ])}
           />
-          {/* Loi vao danh muc man hinh. De trong lop chu AN: trang con khoa
-              lech 0 pixel so voi thiet ke nen khong them duoc phan tu nhin
-              thay. Ban dien thoai co nut hien ro — xem MobileSubPage. */}
+          {/* Loi vao danh muc man hinh.
+              Khach chot dat nut NGAY TREN trang nay (01/10/2026). Cho dat:
+              ngay duoi thanh phan trang (ket thuc o y 2744) va tren chan trang
+              (bat dau o y 2843) — khoang trong 2755..2805 khong de len gi.
+              Day la mot ngoai le CO Y so voi thiet ke, da khai trong
+              src/lib/design-deviations.ts. */}
           {page.slug === "giai-phap/man-hinh" ? (
-            <p className="tc-sr">
-              <Link href="/giai-phap/man-hinh/tat-ca">
-                Xem tất cả các mẫu màn hình, lọc theo hãng và kích thước
-              </Link>
-            </p>
+            <Link
+              className="tc-allmodels"
+              href="/giai-phap/man-hinh/tat-ca"
+              prefetch={false}
+            >
+              Xem tất cả {MODEL_COUNT} mẫu màn hình
+            </Link>
           ) : null}
 
           <nav className="tc-sr" aria-label="Đường dẫn">
