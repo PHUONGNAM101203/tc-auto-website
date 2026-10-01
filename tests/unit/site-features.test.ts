@@ -15,6 +15,7 @@ import {
   visibleCount,
 } from "@/lib/solution-cards";
 import { getProducts } from "@/lib/products";
+import { getSpotArticles } from "@/lib/spot-articles";
 import { getCtaSpots, getCtaStats } from "@/lib/cta-links";
 import { DESIGN_DEVIATIONS, deviationsFor } from "@/lib/design-deviations";
 import { buildPageList, getPagination, hasPagination, MAX_VISIBLE } from "@/lib/pagination";
@@ -105,9 +106,14 @@ describe("nút xem thêm", () => {
     // Gom CA trang chi tiet san pham: bo thiet ke khong ve trang cho san pham
     // nao nen chung do ta dung, nhung nut "XEM THÊM" tren /giai-phap/man-hinh
     // van tro thang toi do. Xem src/lib/products.ts.
+    //
+    // Va ca trang bai viet mo ra tu chinh nut "XEM THÊM" — khach chot
+    // 01/10/2026 rang nut do phai dan sang trang rieng chu khong xo chu tai
+    // cho. Xem src/lib/spot-articles.ts.
     const routes = new Set([
       ...getAllSubPages().map((p) => p.route),
       ...getProducts().map((p) => p.route),
+      ...getSpotArticles().map((a) => a.route),
     ]);
     for (const page of getAllSubPages()) {
       for (const spot of getCtaSpots(page.slug)) {

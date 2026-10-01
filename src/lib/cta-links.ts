@@ -1,4 +1,5 @@
 import raw from "@/data/cta-links.json";
+import { spotArticleHref } from "./spot-articles";
 
 /**
  * Cac nut chu "XEM THÊM" / "TÌM HIỂU THÊM" ve san trong anh trang con.
@@ -103,8 +104,24 @@ export function toParagraphs(lines: readonly string[]): readonly string[] {
   return paragraphs;
 }
 
+/**
+ * Cac nut "XEM THÊM" cua mot trang, DA gan dich den.
+ *
+ * Khach chot (01/10/2026): bam "XEM THÊM" phai RA TRANG BAI VIET chu khong
+ * phai xo khoi chu dai ra tai cho. Nut nao co noi dung that thi
+ * tools/brand/build-spot-articles.py da dung san mot trang rieng; o day chi
+ * viec gan duong dan do vao, va ReadMore tu khac ve the <a> thay vi <button>.
+ *
+ * Doi chieu bang TOA DO chu khong bang tieu de — xem spotArticleHref.
+ */
 export function getCtaSpots(slug: string): readonly CtaSpot[] {
-  return SPOTS[slug] ?? [];
+  return (SPOTS[slug] ?? []).map((spot) => {
+    if (spot.href) {
+      return spot;
+    }
+    const href = spotArticleHref(slug, spot.x, spot.y);
+    return href ? { ...spot, href } : spot;
+  });
 }
 
 export interface CtaStats {

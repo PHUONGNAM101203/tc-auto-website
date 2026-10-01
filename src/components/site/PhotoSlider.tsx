@@ -191,7 +191,9 @@ function Deck({ slider }: { slider: Slider }) {
             height: slider.prev.height,
           }}
           aria-label={`${slider.label} — xem ảnh trước`}
-        />
+        >
+          <Chevron direction="left" />
+        </button>
       ) : null}
 
       <button
@@ -206,8 +208,34 @@ function Deck({ slider }: { slider: Slider }) {
           height: slider.arrow.height,
         }}
         aria-label={`${slider.label} — xem ảnh tiếp theo`}
-      />
+      >
+        <Chevron direction="right" />
+      </button>
     </>
+  );
+}
+
+/**
+ * Mui ten "‹" / "›" ve that.
+ *
+ * Truoc day hinh mui ten co san trong anh nen nen nut chi la mot vung bam
+ * trong suot. Nhung chong anh ve san DA BI XOA khoi nen (tools/brand/scrub-decks.py)
+ * — va mui ten nam trong do nen mat theo. Khach bao ngay (01/10/2026): "phải
+ * cho có các cái arrows như trước thì họ mới biết cần hành động gì".
+ * Ti le va do day net lay dung tu ban thiet ke: 12 x 33, net 1,5.
+ */
+function Chevron({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg viewBox="0 0 12 34" aria-hidden="true" focusable="false">
+      <path
+        d={direction === "left" ? "M10 2 L2 17 L10 32" : "M2 2 L10 17 L2 32"}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 

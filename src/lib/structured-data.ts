@@ -162,6 +162,40 @@ function brandOf(name: string): string {
   return SITE.name;
 }
 
+/**
+ * Mot dong san pham khai tren TRANG TU SOAN (vi du ba dong Bravo).
+ *
+ * Khac `productLd`: o day khong co trang rieng cho tung dong, nen `url` tro
+ * ve trang chua no kem neo. Thong so van vao `additionalProperty` de may tim
+ * kiem va may tra loi AI doc duoc.
+ */
+export function authoredProductLd(
+  item: {
+    readonly name: string;
+    readonly tagline: string;
+    readonly specs: readonly { readonly label: string; readonly value: string }[];
+  },
+  pageUrl: string,
+): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: item.name,
+    description: item.tagline,
+    url: abs(pageUrl),
+    brand: { "@type": "Brand", name: brandOf(item.name) },
+    ...(item.specs.length > 0
+      ? {
+          additionalProperty: item.specs.map((spec) => ({
+            "@type": "PropertyValue",
+            name: spec.label,
+            value: spec.value,
+          })),
+        }
+      : {}),
+  };
+}
+
 export interface ArticleSeed {
   readonly title: string;
   readonly excerpt: string | null;

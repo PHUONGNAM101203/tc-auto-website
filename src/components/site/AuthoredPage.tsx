@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MobileNav } from "@/components/mobile/MobileNav";
 import { BackToTop } from "@/components/site/BackToTop";
 import { JsonLd } from "@/components/site/JsonLd";
-import { breadcrumbLd } from "@/lib/structured-data";
+import { authoredProductLd, breadcrumbLd } from "@/lib/structured-data";
 import type { AuthoredPage as Page } from "@/lib/authored-pages";
 import { getPageSpec } from "@/lib/pages";
 
@@ -34,6 +34,15 @@ export function AuthoredPage({ page }: { page: Page }) {
             { name: page.title, url: `/${page.slug}` },
           ])}
         />
+
+        {/* Moi dong san pham khai rieng mot mau — nho vay may tim kiem va may
+            tra loi AI nhan ra day la ba dong may chu khong phai mot bai viet. */}
+        {page.products?.items.map((item) => (
+          <JsonLd
+            key={item.name}
+            data={authoredProductLd(item, `/${page.slug}`)}
+          />
+        ))}
 
         <nav className="tc-doc-crumbs" aria-label="Đường dẫn">
           <Link href="/">Trang chủ</Link>

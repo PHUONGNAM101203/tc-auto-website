@@ -3,6 +3,7 @@ import { getAuthoredPages } from "@/lib/authored-pages";
 import { getAllPageSpecs } from "@/lib/pages";
 import { listPublishedPosts } from "@/lib/posts";
 import { getProducts } from "@/lib/products";
+import { getSpotArticles } from "@/lib/spot-articles";
 import { SITE } from "@/lib/site-config";
 import { getAllSubPages } from "@/lib/subpages";
 
@@ -47,6 +48,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  // Bai viet mo ra tu nut "XEM THÊM" — moi bai mot duong dan rieng.
+  const spotArticles = getSpotArticles().map((article) => ({
+    url: `${base}${article.route}`,
+    lastModified: article.date ? new Date(article.date) : now,
+    changeFrequency: "yearly" as const,
+    priority: 0.5,
+  }));
+
   // Bai viet den tu CSDL. Chua cau hinh Supabase thi `listPublishedPosts` tra
   // mang rong chu khong nem — sitemap van sinh duoc nhu thuong.
   const posts = (await listPublishedPosts()).map((post) => ({
@@ -56,5 +65,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...mains, ...subs, ...products, ...authored, ...posts];
+  return [...mains, ...subs, ...products, ...authored, ...spotArticles, ...posts];
 }

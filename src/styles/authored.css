@@ -16,19 +16,30 @@
   background: var(--navy);
 }
 
+/* 12px -> 15px va sang len. Khach bao duong dan nay "hơi nhỏ", nhin kho ra
+   (01/10/2026). No vua la cach quay lui, vua la cach nguoi doc biet minh dang
+   dung o dau trong site — de mo qua thi chang ai de y. */
 .tc-doc-crumbs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  font: 400 12px/1.5 "Montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.4);
+  gap: 10px;
+  font: 500 15px/1.6 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.56);
 }
 
 .tc-doc-crumbs a {
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
-  transition: color 0.2s;
+  /* Gach chan mo san: o day khong co mau rieng cho lien ket nen neu khong
+     gach thi khong phan biet duoc cho nao bam duoc. */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tc-doc-crumbs a:hover {
+  border-bottom-color: var(--red-nav);
 }
 
 .tc-doc-crumbs a:hover {

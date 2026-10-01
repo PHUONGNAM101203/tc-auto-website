@@ -14,6 +14,41 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Mui ten cua chong anh duoc VE THAT ──────────────────────────────────
+  // Hinh mui ten "‹ ›" von nam trong chong anh ve san, va chong do da bi xoa
+  // khoi anh nen de thay bang anh that — mui ten mat theo. Khach bao ngay
+  // (01/10/2026): "phải cho có các cái arrows như trước thì họ mới biết cần
+  // hành động gì". Nay mui ten do component ve, dung vi tri va do day net cua
+  // ban thiet ke (12x33, net 1,5). Vung khai noi ra moi be cho quang sang va
+  // bong do khi ro chuot.
+  // Xem <Chevron /> trong src/components/site/PhotoSlider.tsx.
+  {
+    page: "home",
+    box: { x: 1323, y: 3096, width: 36, height: 57 },
+    reason:
+      "Mui ten chuyen anh duoc ve that vi hinh ve san da bi xoa cung voi " +
+      "chong anh.",
+  },
+  {
+    page: "dai-ly",
+    box: { x: 1374, y: 2358, width: 36, height: 54 },
+    reason:
+      "Mui ten chuyen anh duoc ve that vi hinh ve san da bi xoa cung voi " +
+      "chong anh.",
+  },
+  {
+    page: "nhan-su",
+    box: { x: 1206, y: 1485, width: 36, height: 57 },
+    reason:
+      "Mui ten TIEN duoc ve that vi hinh ve san da bi xoa cung voi chong anh.",
+  },
+  {
+    page: "nhan-su",
+    box: { x: 198, y: 1485, width: 36, height: 57 },
+    reason:
+      "Mui ten LUI duoc ve that — muc nay la muc duy nhat thiet ke ve ca hai " +
+      "mui ten.",
+  },
   // ── The tai ung dung bi nut de len chu ──────────────────────────────────
   // Trang "Cập nhật & vá lỗi" xep the theo luoi 3 cot x 5 hang; nut "TẢI VỀ"
   // nam o mot do cao CO DINH. Mot the co tieu de dai hon han — "[CẬP NHẬT] ES

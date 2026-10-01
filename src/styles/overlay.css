@@ -1147,8 +1147,41 @@
   inset: -18px -22px;
 }
 
-/* Khong ve lai mui ten: hinh da co san trong anh nen. Chi sang len khi ro chuot
-   de nguoi dung biet bam duoc. */
+/* Mui ten duoc VE THAT.
+   Truoc day hinh mui ten nam san trong anh nen nen nut chi la vung bam trong
+   suot. Nhung chong anh ve san da bi xoa khoi nen — mui ten nam trong do nen
+   mat theo, va nguoi dung khong con biet cho do bam duoc.
+   Xem <Chevron /> trong src/components/site/PhotoSlider.tsx. */
+.tc-photoslider-arrow {
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.82);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.tc-photoslider-arrow svg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /* Net mui ten mong, tren anh sang thi chim — do bong cho no bam vao nen. */
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.75));
+}
+
+.tc-photoslider-arrow:hover,
+.tc-photoslider-arrow:focus-visible {
+  color: #fff;
+}
+
+.tc-photoslider-arrow[data-dir="prev"]:hover {
+  transform: translateX(-2px);
+}
+
+.tc-photoslider-arrow:not([data-dir="prev"]):hover {
+  transform: translateX(2px);
+}
+
+/* Quang sang mo phia sau mui ten khi ro chuot. */
 .tc-photoslider-arrow::after {
   content: "";
   position: absolute;

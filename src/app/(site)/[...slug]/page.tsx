@@ -14,6 +14,8 @@ import { getPagination } from "@/lib/pagination";
 import { listPublishedPosts } from "@/lib/posts";
 import { SITE } from "@/lib/site-config";
 import { getAuthoredPage, getAuthoredSlugs } from "@/lib/authored-pages";
+import { getSpotArticle, getSpotArticles } from "@/lib/spot-articles";
+import { SpotArticle } from "@/components/site/SpotArticle";
 import { categoryOf, getProduct, getProductSlugs } from "@/lib/products";
 import { getChildren, getSubPage, getSubPageSlugs } from "@/lib/subpages";
 
@@ -28,6 +30,9 @@ export function generateStaticParams(): { slug: string[] }[] {
     ...getSubPageSlugs(),
     ...getAuthoredSlugs(),
     ...getProductSlugs(),
+    // Bai viet mo ra tu nut "XEM THÊM" — khach yeu cau nut do dan sang trang
+    // rieng chu khong xo chu tai cho (01/10/2026).
+    ...getSpotArticles().map((article) => article.slug),
   ].map((slug) => ({ slug: slug.split("/") }));
 }
 
@@ -67,6 +72,24 @@ export async function generateMetadata({
           ],
         },
         twitter: { card: "summary_large_image", title: product.name, description: text },
+      };
+    }
+    const article = getSpotArticle(slug);
+    if (article) {
+      const text = article.paragraphs[0] ?? `${article.title} — ${SITE.name}`;
+      return {
+        title: `${article.title} | ${SITE.name}`,
+        description: text,
+        alternates: { canonical: article.route },
+        openGraph: {
+          title: article.title,
+          description: text,
+          url: article.route,
+          siteName: SITE.name,
+          locale: SITE.locale,
+          type: "article",
+          ...(article.date ? { publishedTime: article.date } : {}),
+        },
       };
     }
     const authored = getAuthoredPage(slug);
@@ -122,10 +145,14 @@ export default async function SubPage({
       return <ProductPage product={product} />;
     }
     const authored = getAuthoredPage(slug);
-    if (!authored) {
+    if (authored) {
+      return <AuthoredPage page={authored} />;
+    }
+    const article = getSpotArticle(slug);
+    if (!article) {
       notFound();
     }
-    return <AuthoredPage page={authored} />;
+    return <SpotArticle article={article} />;
   }
 
   // Trang mang luoi dai ly: hai o chon va nut "TÌM KIẾM" da duoc ve san trong
