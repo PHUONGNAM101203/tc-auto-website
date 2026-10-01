@@ -274,3 +274,74 @@ test.describe("bốn tấm Trải nghiệm — hover thì nổi lên", () => {
     expect(Number(otherOpacity), "cụm khác phải giữ nguyên").toBe(1);
   });
 });
+
+/**
+ * Hai nhom the moi tren trang Giai phap, khach yeu cau 01/10/2026:
+ *   - hai the "MÀN HÌNH WINCA" / "MÀN HÌNH BRAVO": ro chuot thi noi len, bam
+ *     WINCA sang thang trang man hinh, bam BRAVO sang tab Bravo;
+ *   - ba the PPF xep doc: ro chuot thi noi len.
+ */
+test.describe("thẻ mới trên trang Giải pháp", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/giai-phap");
+    // Anh the tai theo luot cuon, ma hai nhom nay nam sau (y 2964 va 4665) —
+    // khong cuon qua thi cho mai khong thay chung tai xong.
+    await page.evaluate(async () => {
+      for (let y = 0; y < 6200; y += 600) {
+        window.scrollTo(0, y);
+        await new Promise((r) => setTimeout(r, 80));
+      }
+    });
+    await page.waitForFunction(() =>
+      [...document.querySelectorAll<HTMLImageElement>(".tc-lift-card img")].every(
+        (img) => img.complete && img.naturalWidth > 1,
+      ),
+    );
+  });
+
+  test("hai thẻ màn hình dẫn đúng chỗ", async ({ page }) => {
+    const winca = page.locator('.tc-lift-card[href="/giai-phap/man-hinh"]');
+    const bravo = page.locator('.tc-lift-card[href="/giai-phap/man-hinh/bravo"]');
+    await expect(winca).toHaveCount(1);
+    await expect(bravo).toHaveCount(1);
+
+    await bravo.click();
+    await expect(page).toHaveURL(/\/giai-phap\/man-hinh\/bravo$/);
+  });
+
+  test("ba thẻ PPF đều dẫn sang trang PPF", async ({ page }) => {
+    const ppf = page.locator('.tc-lift-card[href="/giai-phap/ppf"]');
+    await expect(ppf).toHaveCount(3);
+  });
+
+  for (const [what, href] of [
+    ["màn hình", "/giai-phap/man-hinh/bravo"],
+    ["PPF", "/giai-phap/ppf"],
+  ] as const) {
+    test(`rê chuột vào thẻ ${what} thì nó nổi lên, thẻ cùng nhóm mờ đi`, async ({
+      page,
+    }) => {
+      const card = page.locator(`.tc-lift-card[href="${href}"]`).first();
+      await card.scrollIntoViewIfNeeded();
+
+      // Cum the nay PHONG TO tu tam chu khong nhac len: chung ve de len chinh
+      // cho cu trong anh nen, nhac len la ho nen ra. Nen do `scale` chu khong
+      // do `translateY`.
+      const scaleOf = () =>
+        card.evaluate(
+          (el) => new DOMMatrixReadOnly(getComputedStyle(el).transform).m11,
+        );
+      expect(await scaleOf()).toBe(1);
+
+      await expect
+        .poll(
+          async () => {
+            await card.hover();
+            return scaleOf();
+          },
+          { message: "thẻ phải nổi lên" },
+        )
+        .toBeGreaterThan(1.01);
+    });
+  }
+});

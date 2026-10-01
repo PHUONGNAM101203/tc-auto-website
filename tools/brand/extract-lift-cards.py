@@ -256,6 +256,101 @@ GROUPS = [
             },
         ],
     },
+    {
+        # Hai the "MÀN HÌNH WINCA" / "MÀN HÌNH BRAVO" tren trang Giai phap.
+        # Khach yeu cau (01/10/2026): ro chuot vao thi the noi len, bam WINCA
+        # thi sang thang trang man hinh, bam BRAVO thi sang tab Bravo.
+        #
+        # Do tu lat nen: hai the cao 487, rong 375, cach nhau 33px, bat dau o
+        # y 4665 — tieu de va mo ta deu nam TRONG anh the.
+        "page": "giai-phap",
+        "slug": "giai-phap-man-hinh",
+        "lossless": True,
+        "sliceScale": 2,
+        "source": DESIGN / "3.Page_Giải pháp" / "1.Giải pháp.png",
+        "spec": ROOT / "src" / "data" / "pages" / "giai-phap.json",
+        "slice_prefix": "giai-phap",
+        # Nen sau hai the la mot dai chuyen mau chu khong phang, nen KHONG
+        # dung lai nen; the phong to tu tam de luon phu kin cho cu.
+        "rebuild": "none",
+        "from": "slices",
+        "quality": 92,
+        "feather": 0,
+        "grow": True,
+        "captionInImage": True,
+        "cards": [
+            {
+                "id": "winca",
+                "title": "MÀN HÌNH WINCA",
+                "subtitle": "Màn hình Android Winca – hiển thị QLED 2K sắc nét",
+                "href": "/giai-phap/man-hinh",
+                "x": 576,
+                "y": 4665,
+                "width": 375,
+                "height": 487,
+            },
+            {
+                "id": "bravo",
+                "title": "MÀN HÌNH BRAVO",
+                "subtitle": "Màn hình Android Bravo – cấu hình ổn định",
+                "href": "/giai-phap/man-hinh/bravo",
+                "x": 984,
+                "y": 4665,
+                "width": 375,
+                "height": 487,
+            },
+        ],
+    },
+    {
+        # Ba the PPF xep doc tren trang Giai phap. Khach yeu cau ro chuot vao
+        # thi noi len (01/10/2026).
+        # Do tu lat nen: rong 672, cao 204, bat dau x 80, cac y cach nhau 229.
+        "page": "giai-phap",
+        "slug": "giai-phap-ppf",
+        "lossless": True,
+        "sliceScale": 2,
+        "source": DESIGN / "3.Page_Giải pháp" / "1.Giải pháp.png",
+        "spec": ROOT / "src" / "data" / "pages" / "giai-phap.json",
+        "slice_prefix": "giai-phap",
+        "rebuild": "none",
+        "from": "slices",
+        "quality": 92,
+        "feather": 0,
+        "grow": True,
+        "captionInImage": True,
+        "cards": [
+            {
+                "id": "3m",
+                "title": "3M PPF",
+                "subtitle": "Phim bảo vệ sơn 3M",
+                "href": "/giai-phap/ppf",
+                "x": 80,
+                "y": 2964,
+                "width": 672,
+                "height": 204,
+            },
+            {
+                "id": "nano-sun",
+                "title": "NANO SUN PPF",
+                "subtitle": "Phim bảo vệ sơn Nano Sun",
+                "href": "/giai-phap/ppf",
+                "x": 80,
+                "y": 3193,
+                "width": 672,
+                "height": 204,
+            },
+            {
+                "id": "5do",
+                "title": "5DO PPF",
+                "subtitle": "Phim bảo vệ sơn 5DO",
+                "href": "/giai-phap/ppf",
+                "x": 80,
+                "y": 3422,
+                "width": 672,
+                "height": 199,
+            },
+        ],
+    },
 ]
 
 
@@ -331,7 +426,15 @@ def export_group(group: dict) -> list[dict]:
             card["y"] + card["height"],
         )
         if group.get("from") == "slices":
-            art = from_slices(group, box, 3)
+            # Cat o CUNG TI LE voi ban ma trinh duyet se dung cho anh nen.
+            #
+            # Gate so pixel chup o ti le 1, va o do trinh duyet chon ban @2x
+            # cho lat nen (mo ta `w`, xem src/lib/slice-srcset.ts). Neu the
+            # duoc cat tu @3x thi hai duong di khac nhau — nen @2x thu nho
+            # 2->1, the @3x thu nho 3->1 — va sai so lay mau khien the hoi
+            # khac nen du noi dung y het. Do duoc: 1614 diem tren trang Giai
+            # phap. Cat tu @2x thi hai ban di chung mot duong.
+            art = from_slices(group, box, group.get("sliceScale", 3))
         else:
             art = page.crop(
                 (
@@ -353,7 +456,14 @@ def export_group(group: dict) -> list[dict]:
         # phai trung nhau tung diem, nen nen o chat luong cao hon de sai so ma
         # hoa khong lo ra o gate pixel.
         quality = group.get("quality", 88)
-        art.save(target, "WEBP", quality=quality, method=6)
+        # `lossless`: the nao ve DE LEN dung cho cu cua no (rebuild "none")
+        # thi moi diem anh phai trung khit. Nen co mat du mot chut la gate so
+        # pixel bao dong — ma do khong phai thay doi giao dien, chi la nhieu
+        # nen. Cac nhom khac da xoa nen cu di nen khong can.
+        if group.get("lossless"):
+            art.save(target, "WEBP", lossless=True, method=6)
+        else:
+            art.save(target, "WEBP", quality=quality, method=6)
         entry = {**card, "src": f"/lift/{group['slug']}-{card['id']}.webp"}
         if group.get("grow"):
             # Phong to thay vi nhac len — xem ghi chu o nhom.

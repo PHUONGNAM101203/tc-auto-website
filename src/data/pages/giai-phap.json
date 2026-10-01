@@ -138,7 +138,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-6.webp?v=2cdc1f79",
+      "src": "/slices/giai-phap-6.webp?v=7cfc11ac",
       "y": 5400.0,
       "displayHeight": 577.0,
       "intrinsicWidth": 2880,
@@ -146,11 +146,11 @@
       "bytes": 180912,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-6.webp?v=2cdc1f79",
+          "src": "/slices/giai-phap-6.webp?v=7cfc11ac",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-6@3x.webp?v=7bd43749",
+          "src": "/slices/giai-phap-6@3x.webp?v=6eb782a4",
           "scale": 3
         }
       ],
