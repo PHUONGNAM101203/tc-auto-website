@@ -30,10 +30,10 @@ test.describe("trang tự soạn", () => {
   test("nút KHÁM PHÁ NGAY trên Nhân sự TC dẫn đi đúng chỗ", async ({ page }) => {
     await page.goto("/nhan-su/nhan-su-tc");
 
-    const overview = page.locator('a[href="/nhan-su/van-hoa-tc"]').last();
+    const overview = page.locator('.tc-canvas a[href="/nhan-su/van-hoa-tc"]').last();
     await expect(overview, "nút dưới TỔNG QUAN NHÂN SỰ").toHaveCount(1);
 
-    const featured = page.locator('a[href="/nhan-su/nhan-su-tieu-bieu"]');
+    const featured = page.locator('.tc-canvas a[href="/nhan-su/nhan-su-tieu-bieu"]');
     await expect(featured, "nút dưới NHÂN SỰ TIÊU BIỂU THÁNG").toHaveCount(1);
     await featured.click();
     await expect(page).toHaveURL(/\/nhan-su\/nhan-su-tieu-bieu$/);

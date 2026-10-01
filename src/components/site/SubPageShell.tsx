@@ -20,6 +20,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
 import { getMobileBlocks } from "@/lib/mobile-subpage";
+import { getMobileLinks } from "@/lib/mobile-links";
 import { getPageText, type TextBlock } from "@/lib/subpage-text";
 
 export interface Hotspot {
@@ -68,6 +69,7 @@ export function SubPageShell({
         nav={page.nav}
         blocks={getMobileBlocks(page)}
         childPages={childPages}
+        links={getMobileLinks(page.slug)}
         contact={
           page.contactForm ? (
             <ContactForm y={0} sourcePage={page.route} layout="mobile" />

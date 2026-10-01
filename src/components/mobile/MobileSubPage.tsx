@@ -20,6 +20,7 @@ export function MobileSubPage({
   nav,
   blocks,
   childPages,
+  links = [],
   products = [],
   cards = [],
   contact,
@@ -28,6 +29,8 @@ export function MobileSubPage({
   nav: readonly NavSpec[];
   blocks: readonly MobileBlock[];
   childPages: readonly SubPageSpec[];
+  /** Lien ket trong long trang — xem src/lib/mobile-links.ts. */
+  links?: readonly { href: string; label: string; external: boolean }[];
   /**
    * San pham cua trang danh muc nay.
    *
@@ -131,6 +134,36 @@ export function MobileSubPage({
             Xem tất cả các mẫu
           </Link>
         </p>
+      ) : null}
+
+      {/* Moi lien ket trong long trang — tren desktop chung la vung bam trong
+          suot dat theo toa do canvas, ma canvas thi bi an duoi 900px. Khong co
+          khoi nay thi tren dien thoai trang "Kho ứng dụng" co 15 tep tai ma
+          khong bam duoc cai nao. Xem src/lib/mobile-links.ts. */}
+      {links.length > 0 ? (
+        <nav className="tc-m-links" aria-label="Liên kết trong trang">
+          <h2>Trong trang này</h2>
+          {links.map((link) =>
+            link.external ? (
+              <a
+                key={`${link.href}-${link.label}`}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={`${link.href}-${link.label}`}
+                href={link.href}
+                prefetch={false}
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
+        </nav>
       ) : null}
 
       {childPages.length > 0 ? (

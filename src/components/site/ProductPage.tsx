@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { MobileNav } from "@/components/mobile/MobileNav";
+import { BackToTop } from "@/components/site/BackToTop";
+import { getPageSpec } from "@/lib/pages";
+import type { PageSlug } from "@/lib/types";
 import { assetUrl } from "@/lib/asset-url";
 import { SITE_CONTACT } from "@/lib/site-contact";
 import { categoryOf, otherProducts, type Product } from "@/lib/products";
@@ -45,7 +49,15 @@ export function ProductPage({ product }: { product: Product }) {
   const tech = getProductSpecs(product.slug);
 
   return (
-    <main className="tc-doc tc-prod">
+    <>
+      {/* Thanh dieu huong co dan. 17 trang san pham truoc day khong co thanh
+          nao — tren dien thoai vao roi la cut duong, giong het loi da sua cho
+          ba trang tu soan. */}
+      <MobileNav
+        nav={getPageSpec(category.parent.replace("/", "") as PageSlug).nav}
+      />
+
+      <main className="tc-doc tc-prod">
       {/* Thong so di kem vao `additionalProperty` cua mau San pham — do cung
           la cho may tra loi bang AI doc. Khong khai gia vi khong co bang gia.
           Duong dan phan cap khai khop tung muc voi <nav> ngay duoi. */}
@@ -165,6 +177,9 @@ export function ProductPage({ product }: { product: Product }) {
       <p className="tc-doc-cta">
         <Link href={`/${category.slug}`}>{`Xem tất cả ${category.title.toLowerCase()}`}</Link>
       </p>
-    </main>
+      </main>
+
+      <BackToTop />
+    </>
   );
 }

@@ -17,7 +17,12 @@ for (const path of PAGES) {
   test.describe(`nút tải về — ${path}`, () => {
     test("đủ 15 nút, nút nào cũng có tệp tải thật", async ({ page }) => {
       await page.goto(path);
-      const links = page.locator('a[target="_blank"][href*="wincavn.com"]');
+      // Khoanh trong `.tc-canvas`: ban dien thoai cung co danh sach lien ket
+      // (xem src/lib/mobile-links.ts) va no VAN nam trong DOM o moi be ngang,
+      // chi bi CSS an di — dem ca hai lop thi ra gap doi.
+      const links = page.locator(
+        '.tc-canvas a[target="_blank"][href*="wincavn.com"]',
+      );
       await expect(links).toHaveCount(15);
 
       const rows = await links.evaluateAll((els) =>
@@ -43,7 +48,7 @@ for (const path of PAGES) {
     test("nút nằm đúng trên hình nút vẽ trong ảnh", async ({ page }) => {
       await page.goto(path);
       const boxes = await page
-        .locator('a[target="_blank"][href*="wincavn.com"]')
+        .locator('.tc-canvas a[target="_blank"][href*="wincavn.com"]')
         .evaluateAll((els) =>
           els.map((el) => {
             const r = el.getBoundingClientRect();

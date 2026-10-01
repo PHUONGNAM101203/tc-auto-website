@@ -96,7 +96,9 @@ test.describe("dải bài viết khác trên trang 3M Ceramic Elite IM", () => {
   for (const href of TARGETS) {
     test(`bấm được và dẫn tới ${href}`, async ({ page }) => {
       await page.goto(PAGE);
-      const link = page.locator(`a[href="${href}"]`).first();
+      // Khoanh trong `.tc-canvas`: ban dien thoai cung liet ke chinh cac
+      // lien ket nay (src/lib/mobile-links.ts) va chung van nam trong DOM.
+      const link = page.locator(`.tc-canvas a[href="${href}"]`).first();
       await expect(link).toHaveCount(1);
       await link.scrollIntoViewIfNeeded();
       await link.click();
@@ -108,7 +110,7 @@ test.describe("dải bài viết khác trên trang 3M Ceramic Elite IM", () => {
   test("vùng bấm phủ đúng tấm ảnh, không đè lên nhau", async ({ page }) => {
     await page.goto(PAGE);
     const boxes = await page.$$eval(
-      TARGETS.map((href) => `a[href="${href}"]`).join(", "),
+      TARGETS.map((href) => `.tc-canvas a[href="${href}"]`).join(", "),
       (els) =>
         els.map((el) => {
           const r = el.getBoundingClientRect();

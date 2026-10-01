@@ -668,3 +668,39 @@
   font: italic 400 13.5px/1.65 "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.66);
 }
+
+/* ---------- Lien ket trong long trang ---------- */
+/* Tren desktop chung la vung bam trong suot tren canvas; canvas bi an duoi
+   900px nen phai ve lai thanh danh sach. Xem src/lib/mobile-links.ts. */
+.tc-m-links {
+  display: grid;
+  gap: 1px;
+  margin: 26px 18px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tc-m-links h2 {
+  margin: 0;
+  padding: 14px 16px;
+  background: #061726;
+  font: 700 12px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.tc-m-links a {
+  display: block;
+  padding: 15px 16px;
+  background: #061726;
+  font: 500 15px/1.45 "Montserrat", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tc-m-links a:active {
+  background: #0a2135;
+}
