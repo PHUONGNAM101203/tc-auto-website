@@ -464,3 +464,16 @@
     margin: 10px 0 0;
   }
 }
+
+/* Doan than bai tren trang bai viet mo ra tu nut "XEM THÊM".
+   Khong co khoang cach thi cac doan dinh lien nhau, doc nhu mot khoi chu dai
+   chu khong ra dang bai viet. */
+.tc-doc-para {
+  margin: 0 0 18px;
+  font: 400 clamp(15px, 2.1vw, 17px) / 1.75 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.tc-doc-para:last-of-type {
+  margin-bottom: 0;
+}

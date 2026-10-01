@@ -23,6 +23,15 @@ export interface SpotArticle {
   readonly paragraphs: readonly string[];
   /** Toa do nut tren trang cha — de noi lai dung vung bam. */
   readonly spot: { readonly x: number; readonly y: number };
+  /**
+   * Anh minh hoa, cat tu chinh the bai viet trong ban thiet ke.
+   *
+   * Vai the khong co anh ma chi co logo tren nen trang — nhung the do khong
+   * co truong nay. Xem tools/brand/extract-article-shots.py.
+   */
+  readonly image?: string;
+  readonly imageWidth?: number;
+  readonly imageHeight?: number;
 }
 
 const ARTICLES = (data as unknown as { articles: readonly SpotArticle[] })

@@ -50,7 +50,10 @@
       "spot": {
         "x": 749.5,
         "y": 1284.1
-      }
+      },
+      "image": "/articles/giai-phap__du-an__hop-tac-voi-toyota-phu-tai-duc-ha-tinh.webp",
+      "imageWidth": 1349,
+      "imageHeight": 559
     },
     {
       "slug": "giai-phap/du-an/tc-auto-hop-tac-voi-thanh-tien-auto",
@@ -68,7 +71,10 @@
       "spot": {
         "x": 749.7,
         "y": 2274.1
-      }
+      },
+      "image": "/articles/giai-phap__du-an__tc-auto-hop-tac-voi-thanh-tien-auto.webp",
+      "imageWidth": 1349,
+      "imageHeight": 550
     },
     {
       "slug": "giai-phap/du-an/tan-binh-auto-dai-ly-chinh-hang-cua-tc-auto-tai-da-nang",
@@ -84,7 +90,10 @@
       "spot": {
         "x": 77.8,
         "y": 2747.3
-      }
+      },
+      "image": "/articles/giai-phap__du-an__tan-binh-auto-dai-ly-chinh-hang-cua-tc-auto-tai-da-nang.webp",
+      "imageWidth": 1367,
+      "imageHeight": 559
     },
     {
       "slug": "nhan-su/tuyen-dung/vi-tri-dang-tuyen/cong-ty-tnhh-tc-auto-tuyen-dung-thuc-tap-sinh-tiem-nang-2025",
@@ -101,7 +110,10 @@
       "spot": {
         "x": 749.7,
         "y": 1731.9
-      }
+      },
+      "image": "/articles/nhan-su__tuyen-dung__vi-tri-dang-tuyen__cong-ty-tnhh-tc-auto-tuyen-dung-thuc-tap-sinh-tiem-nang-2025.webp",
+      "imageWidth": 1153,
+      "imageHeight": 567
     },
     {
       "slug": "nhan-su/tuyen-dung/vi-tri-dang-tuyen/cong-ty-tnhh-tc-auto-tuyen-dung",
@@ -120,7 +132,10 @@
       "spot": {
         "x": 749.6,
         "y": 2221.8
-      }
+      },
+      "image": "/articles/nhan-su__tuyen-dung__vi-tri-dang-tuyen__cong-ty-tnhh-tc-auto-tuyen-dung.webp",
+      "imageWidth": 1153,
+      "imageHeight": 664
     },
     {
       "slug": "trai-nghiem/ban-sac-rieng/cac-phong-cach",
@@ -138,7 +153,10 @@
       "spot": {
         "x": 749.5,
         "y": 1281.9
-      }
+      },
+      "image": "/articles/trai-nghiem__ban-sac-rieng__cac-phong-cach.webp",
+      "imageWidth": 1153,
+      "imageHeight": 637
     },
     {
       "slug": "trai-nghiem/hanh-trinh/hanh-trinh-so-huu-xe",
@@ -155,7 +173,10 @@
       "spot": {
         "x": 749.6,
         "y": 1281.3
-      }
+      },
+      "image": "/articles/trai-nghiem__hanh-trinh__hanh-trinh-so-huu-xe.webp",
+      "imageWidth": 1153,
+      "imageHeight": 664
     },
     {
       "slug": "trai-nghiem/hanh-trinh/goi-y-theo-nhu-cau",
@@ -172,7 +193,10 @@
       "spot": {
         "x": 751.8,
         "y": 1798.8
-      }
+      },
+      "image": "/articles/trai-nghiem__hanh-trinh__goi-y-theo-nhu-cau.webp",
+      "imageWidth": 1153,
+      "imageHeight": 609
     },
     {
       "slug": "trai-nghiem/khoanh-khac/cac-khoanh-khac",
@@ -190,7 +214,10 @@
       "spot": {
         "x": 77.8,
         "y": 1321.6
-      }
+      },
+      "image": "/articles/trai-nghiem__khoanh-khac__cac-khoanh-khac.webp",
+      "imageWidth": 1140,
+      "imageHeight": 631
     },
     {
       "slug": "trai-nghiem/phong-cach-song/co-nhung-khoang-rieng-tu-khong-can-noi-ra",
@@ -210,7 +237,10 @@
       "spot": {
         "x": 749.7,
         "y": 1288.1
-      }
+      },
+      "image": "/articles/trai-nghiem__phong-cach-song__co-nhung-khoang-rieng-tu-khong-can-noi-ra.webp",
+      "imageWidth": 1259,
+      "imageHeight": 530
     },
     {
       "slug": "trai-nghiem/phong-cach-song/xe-chon-ban-hay-ban-chon-xe-tu-dau",
@@ -246,7 +276,10 @@
       "spot": {
         "x": 751.6,
         "y": 2702.5
-      }
+      },
+      "image": "/articles/trai-nghiem__phong-cach-song__mot-ban-nhac-quen-sao-hom-nay-nghe-khac-the.webp",
+      "imageWidth": 984,
+      "imageHeight": 499
     },
     {
       "slug": "trai-nghiem/phong-cach-song/gu-nghe-nhac-cua-ban-xe-da-dap-ung-duoc-chua",
@@ -264,7 +297,10 @@
       "spot": {
         "x": 749.7,
         "y": 3172.3
-      }
+      },
+      "image": "/articles/trai-nghiem__phong-cach-song__gu-nghe-nhac-cua-ban-xe-da-dap-ung-duoc-chua.webp",
+      "imageWidth": 1261,
+      "imageHeight": 555
     },
     {
       "slug": "trai-nghiem/phong-cach-song/co-nhung-buoi-sang-khong-can-voi",
@@ -283,7 +319,10 @@
       "spot": {
         "x": 749.5,
         "y": 3668.9
-      }
+      },
+      "image": "/articles/trai-nghiem__phong-cach-song__co-nhung-buoi-sang-khong-can-voi.webp",
+      "imageWidth": 1088,
+      "imageHeight": 368
     }
   ]
 }

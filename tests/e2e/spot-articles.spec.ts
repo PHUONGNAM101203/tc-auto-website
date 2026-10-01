@@ -44,6 +44,27 @@ test.describe("bài viết mở ra từ XEM THÊM", () => {
     expect(paras.join(" ")).toContain("Chỉ là cảm giác được ở một mình");
   });
 
+  test("bài viết có ảnh minh hoạ và các đoạn tách rời nhau", async ({ page }) => {
+    await page.goto(
+      "/trai-nghiem/phong-cach-song/co-nhung-khoang-rieng-tu-khong-can-noi-ra",
+    );
+    const cover = page.locator(".tc-doc-cover");
+    await expect(cover).toHaveCount(1);
+    await expect(cover).toBeVisible();
+    expect(
+      await cover.evaluate((el) => (el as HTMLImageElement).naturalWidth),
+      "ảnh phải tải được",
+    ).toBeGreaterThan(100);
+
+    // Cac doan phai CACH NHAU — khong co khoang thi chung dinh lien, doc nhu
+    // mot khoi chu dai chu khong ra dang bai viet.
+    const gap = await page
+      .locator(".tc-doc-para")
+      .first()
+      .evaluate((el) => parseFloat(getComputedStyle(el).marginBottom));
+    expect(gap).toBeGreaterThanOrEqual(12);
+  });
+
   test("trang bài viết có đường dẫn phân cấp, thanh điều hướng và nút lên đầu", async ({
     page,
   }) => {

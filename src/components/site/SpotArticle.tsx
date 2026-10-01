@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetUrl } from "@/lib/asset-url";
 import { MobileNav } from "@/components/mobile/MobileNav";
 import { BackToTop } from "@/components/site/BackToTop";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -63,6 +64,19 @@ export function SpotArticle({ article }: { article: Article }) {
 
         {date ? <p className="tc-doc-label">{date}</p> : null}
         <h1 className="tc-doc-title">{article.title}</h1>
+
+        {article.image ? (
+          /* eslint-disable-next-line @next/next/no-img-element -- anh cat san
+             tu frame thiet ke o ti le goc, khong qua image optimizer */
+          <img
+            className="tc-doc-cover"
+            src={assetUrl(article.image)}
+            alt=""
+            width={article.imageWidth}
+            height={article.imageHeight}
+            decoding="async"
+          />
+        ) : null}
 
         {article.paragraphs.map((text, index) => (
           <p key={`${index}-${text.slice(0, 16)}`} className="tc-doc-para">
