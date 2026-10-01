@@ -11,7 +11,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=2191e728",
+        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=cafee64c",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -25,7 +25,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=42265e75",
+        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=00308670",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -39,7 +39,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=8b767073",
+        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=b591ff3b",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -53,7 +53,7 @@
         "y": 927,
         "width": 258,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=2489f2ad",
+        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=19f71e48",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -179,7 +179,17 @@
         "y": 4665,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-winca.webp?v=5c8dcf2d",
+        "src": "/lift/giai-phap-man-hinh-winca.webp?v=9b0d9b90",
+        "srcSet": [
+          {
+            "src": "/lift/giai-phap-man-hinh-winca.webp?v=9b0d9b90",
+            "width": 750
+          },
+          {
+            "src": "/lift/giai-phap-man-hinh-winca@3x.webp?v=25a06e41",
+            "width": 1125
+          }
+        ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-man-hinh"
@@ -193,7 +203,17 @@
         "y": 4665,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=b2b78725",
+        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=ea6594a5",
+        "srcSet": [
+          {
+            "src": "/lift/giai-phap-man-hinh-bravo.webp?v=ea6594a5",
+            "width": 750
+          },
+          {
+            "src": "/lift/giai-phap-man-hinh-bravo@3x.webp?v=80d35ce3",
+            "width": 1125
+          }
+        ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-man-hinh"
@@ -207,7 +227,17 @@
         "y": 2964,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-3m.webp?v=fd392db9",
+        "src": "/lift/giai-phap-ppf-3m.webp?v=1c8e1be3",
+        "srcSet": [
+          {
+            "src": "/lift/giai-phap-ppf-3m.webp?v=1c8e1be3",
+            "width": 1344
+          },
+          {
+            "src": "/lift/giai-phap-ppf-3m@3x.webp?v=adb054c1",
+            "width": 2016
+          }
+        ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf"
@@ -221,7 +251,17 @@
         "y": 3193,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=98d8bff1",
+        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=05a03e36",
+        "srcSet": [
+          {
+            "src": "/lift/giai-phap-ppf-nano-sun.webp?v=05a03e36",
+            "width": 1344
+          },
+          {
+            "src": "/lift/giai-phap-ppf-nano-sun@3x.webp?v=4155cb70",
+            "width": 2016
+          }
+        ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf"
@@ -235,7 +275,17 @@
         "y": 3422,
         "width": 672,
         "height": 199,
-        "src": "/lift/giai-phap-ppf-5do.webp?v=7a55fd89",
+        "src": "/lift/giai-phap-ppf-5do.webp?v=1e50a25e",
+        "srcSet": [
+          {
+            "src": "/lift/giai-phap-ppf-5do.webp?v=1e50a25e",
+            "width": 1344
+          },
+          {
+            "src": "/lift/giai-phap-ppf-5do@3x.webp?v=740775c8",
+            "width": 2016
+          }
+        ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf"

@@ -267,6 +267,13 @@ GROUPS = [
         "slug": "giai-phap-man-hinh",
         "lossless": True,
         "sliceScale": 2,
+        # Them ban @3x BEN CANH ban @2x, khong thay the no. Man retina rong
+        # 2560 can 1333px cho moi the; @2x chi cho 750 (ti le 0,56, duoi tran
+        # 0,84 cua ban thiet ke). Nhung doi han sang @3x thi gate pixel bao
+        # lech 1667 diem — nen @2x thu nho 2->1 con the @3x thu nho 3->1, sai
+        # so lay mau khac nhau. Giu ca hai thi ti le 1 van di duong @2x (lech
+        # 0) ma man retina duoc ban net.
+        "retina": True,
         "source": DESIGN / "3.Page_Giải pháp" / "1.Giải pháp.png",
         "spec": ROOT / "src" / "data" / "pages" / "giai-phap.json",
         "slice_prefix": "giai-phap",
@@ -309,6 +316,8 @@ GROUPS = [
         "slug": "giai-phap-ppf",
         "lossless": True,
         "sliceScale": 2,
+        #: Nhu tren: them ban @3x 2016px ben canh ban @2x 1344px.
+        "retina": True,
         "source": DESIGN / "3.Page_Giải pháp" / "1.Giải pháp.png",
         "spec": ROOT / "src" / "data" / "pages" / "giai-phap.json",
         "slice_prefix": "giai-phap",
@@ -412,6 +421,46 @@ def from_slices(group: dict, box: tuple[float, float, float, float], scale: int)
     return out
 
 
+def build_art(
+    group: dict,
+    page: Image.Image,
+    box: tuple[float, float, float, float],
+    scale: float,
+    slice_scale: int,
+) -> Image.Image:
+    """Cat mot the ra khoi anh nguon, lam mem mep va bo goc.
+
+    `slice_scale` tach rieng khoi `scale` de con sinh duoc ban @3x di kem —
+    xem `retina` o phan khai bao nhom.
+    """
+    if group.get("from") == "slices":
+        # Ban CHINH phai cat o CUNG TI LE voi ban ma trinh duyet dung cho anh
+        # nen.
+        #
+        # Gate so pixel chup o ti le 1, va o do trinh duyet chon ban @2x cho
+        # lat nen (mo ta `w`, xem src/lib/slice-srcset.ts). Neu the duoc cat tu
+        # @3x thi hai duong di khac nhau — nen @2x thu nho 2->1, the @3x thu
+        # nho 3->1 — va sai so lay mau khien the hoi khac nen du noi dung y
+        # het. Do duoc: 1614 diem tren trang Giai phap, va 1667 diem khi thu
+        # lai ngay 01/10. Cat tu @2x thi hai ban di chung mot duong.
+        art = from_slices(group, box, slice_scale)
+    else:
+        art = page.crop(
+            (
+                round(box[0] * scale),
+                round(box[1] * scale),
+                round(box[2] * scale),
+                round(box[3] * scale),
+            )
+        ).convert("RGB")
+    feather = group.get(
+        "feather",
+        FEATHER_FLAT if group["rebuild"] in ("white", "fill") else FEATHER,
+    )
+    art = feathered(art, round(feather * scale)) if feather else art.convert("RGBA")
+    return round_corners(art, group.get("cornerRadius", 0), scale)
+
+
 def export_group(group: dict) -> list[dict]:
     OUT.mkdir(parents=True, exist_ok=True)
     page = Image.open(group["source"])
@@ -425,31 +474,7 @@ def export_group(group: dict) -> list[dict]:
             card["x"] + card["width"],
             card["y"] + card["height"],
         )
-        if group.get("from") == "slices":
-            # Cat o CUNG TI LE voi ban ma trinh duyet se dung cho anh nen.
-            #
-            # Gate so pixel chup o ti le 1, va o do trinh duyet chon ban @2x
-            # cho lat nen (mo ta `w`, xem src/lib/slice-srcset.ts). Neu the
-            # duoc cat tu @3x thi hai duong di khac nhau — nen @2x thu nho
-            # 2->1, the @3x thu nho 3->1 — va sai so lay mau khien the hoi
-            # khac nen du noi dung y het. Do duoc: 1614 diem tren trang Giai
-            # phap. Cat tu @2x thi hai ban di chung mot duong.
-            art = from_slices(group, box, group.get("sliceScale", 3))
-        else:
-            art = page.crop(
-                (
-                    round(box[0] * scale),
-                    round(box[1] * scale),
-                    round(box[2] * scale),
-                    round(box[3] * scale),
-                )
-            ).convert("RGB")
-        feather = group.get(
-            "feather",
-            FEATHER_FLAT if group["rebuild"] in ("white", "fill") else FEATHER,
-        )
-        art = feathered(art, round(feather * scale)) if feather else art.convert("RGBA")
-        art = round_corners(art, group.get("cornerRadius", 0), scale)
+        art = build_art(group, page, box, scale, group.get("sliceScale", 3))
 
         target = OUT / f"{group['slug']}-{card['id']}.webp"
         # Nhom nao KHONG xoa nen thi the nam de len chinh anh nen cu: hai ban
@@ -465,6 +490,23 @@ def export_group(group: dict) -> list[dict]:
         else:
             art.save(target, "WEBP", quality=quality, method=6)
         entry = {**card, "src": f"/lift/{group['slug']}-{card['id']}.webp"}
+
+        # Ban @3x di KEM, khong thay the. Mo ta `w` chu khong `x` (xem
+        # src/lib/slice-srcset.ts): the duoc phong theo be rong cua so nen chi
+        # co `w` moi chon dung ban.
+        if group.get("retina"):
+            big = build_art(group, page, box, scale, 3)
+            big_target = OUT / f"{group['slug']}-{card['id']}@3x.webp"
+            if group.get("lossless"):
+                big.save(big_target, "WEBP", lossless=True, method=6)
+            else:
+                big.save(big_target, "WEBP", quality=quality, method=6)
+            entry["srcSet"] = [
+                {"src": entry["src"], "width": art.width},
+                {"src": f"/lift/{group['slug']}-{card['id']}@3x.webp", "width": big.width},
+            ]
+            print(f"  {big_target.relative_to(ROOT)}  {big.width}x{big.height}  "
+                  f"{big_target.stat().st_size / 1e3:.0f} KB")
         if group.get("grow"):
             # Phong to thay vi nhac len — xem ghi chu o nhom.
             entry["grow"] = True

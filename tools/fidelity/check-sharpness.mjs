@@ -53,6 +53,14 @@ const SOURCE_LIMITED = new Set([
   "le-ky-ket-toyota-phu-tai-duc.webp",
   "le-ky-ket-otua-thanh-nien.webp",
   "le-ky-ket-tan-nat.webp",
+  // Ba tam cua bang "BỘ SƯU TẬP" tren /trai-nghiem/khoanh-khac. Khac cac the
+  // tren trang Giai phap (chung cat tu lat nen nen con nang len @3x duoc —
+  // xem `retina` trong extract-lift-cards.py), ba tam nay lay THANG tu bo tai
+  // nguyen cua khach va do da la ban to nhat trong do: da quet ca hai bo,
+  // Rectangle 196/197/198 chi co dung mot ban moi tam.
+  "song-tron-bien.webp",      // Rectangle 196.png — 1750px
+  "song-tron-noi-that.webp",  // Rectangle 197.png — 1748px
+  "song-tron-xe-co.webp",     // Rectangle 198.png — 1754px
 ]);
 
 function routes() {

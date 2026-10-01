@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-2.webp?v=4ca3a265",
+      "src": "/slices/giai-phap-2.webp?v=441c373e",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 144408,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-2.webp?v=4ca3a265",
+          "src": "/slices/giai-phap-2.webp?v=441c373e",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-2@3x.webp?v=850d376a",
+          "src": "/slices/giai-phap-2@3x.webp?v=53a88d79",
           "scale": 3
         }
       ],
@@ -72,7 +72,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-3.webp?v=f3204c00",
+      "src": "/slices/giai-phap-3.webp?v=45afb10b",
       "y": 2700.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -80,11 +80,11 @@
       "bytes": 98872,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-3.webp?v=f3204c00",
+          "src": "/slices/giai-phap-3.webp?v=45afb10b",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-3@3x.webp?v=9b8aea81",
+          "src": "/slices/giai-phap-3@3x.webp?v=e28a8bd5",
           "scale": 3
         }
       ],

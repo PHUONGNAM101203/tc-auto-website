@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { LiftCard } from "@/lib/lift-cards";
+import { liftSizes, liftSrcSet, type LiftCard } from "@/lib/lift-cards";
 
 /**
  * Cac the anh duoc tach khoi anh nen: ro chuot vao the nao thi the do noi len
@@ -45,6 +45,8 @@ export function LiftCards({ cards }: { cards: readonly LiftCard[] }) {
                   cat san tu ban thiet ke o ti le @3x, khong qua image optimizer */}
               <img
                 src={card.src}
+                srcSet={liftSrcSet(card)}
+                sizes={card.srcSet ? liftSizes(card) : undefined}
                 alt=""
                 width={card.width}
                 height={card.height}

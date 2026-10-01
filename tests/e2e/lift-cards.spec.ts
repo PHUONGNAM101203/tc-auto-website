@@ -345,3 +345,61 @@ test.describe("thẻ mới trên trang Giải pháp", () => {
     });
   }
 });
+
+/**
+ * Hai cum the tren trang Giai phap co ban @3x di KEM ban @2x.
+ *
+ * Phai la "di kem" chu khong phai "thay the": doi han sang @3x thi gate pixel
+ * bao lech 1667 diem, vi nen @2x thu nho 2->1 con the @3x thu nho 3->1 va sai
+ * so lay mau khac nhau. Giu ca hai thi ti le 1 van di duong @2x (lech 0) ma
+ * man retina rong duoc ban net — do do net tu 0,56 len 0,84, dung tran cua
+ * ban thiet ke.
+ */
+test.describe("thẻ nổi trang Giải pháp — hai độ phân giải", () => {
+  const RETINA = [
+    "giai-phap-man-hinh-winca",
+    "giai-phap-man-hinh-bravo",
+    "giai-phap-ppf-3m",
+    "giai-phap-ppf-nano-sun",
+    "giai-phap-ppf-5do",
+  ];
+
+  test("màn thường tỉ lệ 1 lấy bản @2x — đúng bản mà gate pixel nhìn thấy", async ({
+    browser,
+  }) => {
+    const page = await browser.newPage({
+      viewport: { width: 1440, height: 900 },
+      deviceScaleFactor: 1,
+    });
+    await page.goto("/giai-phap");
+    await page.evaluate(() => window.scrollTo(0, 4400));
+    const used = await page.$$eval(".tc-lift-card img", (els) =>
+      els.map((e) => (e as HTMLImageElement).currentSrc.split("/").pop()!.split("?")[0]),
+    );
+    for (const name of RETINA) {
+      expect(used, `${name} phải dùng bản @2x`).toContain(`${name}.webp`);
+    }
+    await page.close();
+  });
+
+  test("màn retina rộng lấy bản @3x", async ({ browser }) => {
+    const page = await browser.newPage({
+      viewport: { width: 2560, height: 1000 },
+      deviceScaleFactor: 2,
+    });
+    await page.goto("/giai-phap");
+    await page.evaluate(() => window.scrollTo(0, 7000));
+    await expect
+      .poll(
+        async () =>
+          page.$$eval(".tc-lift-card img", (els) =>
+            els.filter((e) =>
+              (e as HTMLImageElement).currentSrc.includes("@3x.webp"),
+            ).length,
+          ),
+        { message: "màn retina rộng phải lấy bản @3x" },
+      )
+      .toBe(RETINA.length);
+    await page.close();
+  });
+});
