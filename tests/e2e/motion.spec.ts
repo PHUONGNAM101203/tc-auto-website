@@ -22,7 +22,10 @@ test.describe("lớp hiệu ứng", () => {
       await page.goto(route);
       await scrollThrough(page);
 
-      const state = await page.evaluate(() => {
+      // DOI cho moi hieu ung chay xong thay vi cho mot khoang co dinh.
+      // Khoang co dinh 1400ms du khi may ranh, nhung chay ca bo thi may ban
+      // va vai phan tu chua kip ket thuc — test do that thuong vi the.
+      const read = () => page.evaluate(() => {
         const all = [
           ...document.querySelectorAll<HTMLElement>("[data-rv]"),
           ...document.querySelectorAll<HTMLElement>(".sl"),
@@ -42,6 +45,22 @@ test.describe("lớp hiệu ứng", () => {
           }).length,
         };
       });
+
+      let state = await read();
+      await expect
+        .poll(
+          async () => {
+            state = await read();
+            return (
+              state.notRevealed +
+              state.transparent +
+              state.shifted +
+              state.clipped
+            );
+          },
+          { timeout: 15_000, message: "hiệu ứng phải kết thúc hẳn" },
+        )
+        .toBe(0);
 
       expect(state.total).toBeGreaterThan(0);
       // Day la bat bien quan trong nhat: hieu ung KHONG duoc lam mat noi dung.

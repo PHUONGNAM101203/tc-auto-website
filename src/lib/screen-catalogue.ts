@@ -30,6 +30,15 @@ export interface ScreenModel {
   readonly route?: string;
   /** Noi ro cho nao hang chua cong bo. */
   readonly note?: string;
+  /**
+   * Anh gioi thieu.
+   *
+   * Mau co trang rieng thi dung anh cat tu thiet ke; mau chi co o trang hang
+   * thi chep anh ve (tools/brand/fetch-catalogue-images.py).
+   */
+  readonly image?: string;
+  readonly imageWidth?: number;
+  readonly imageHeight?: number;
 }
 
 const MODELS = (data as unknown as { models: readonly ScreenModel[] }).models;

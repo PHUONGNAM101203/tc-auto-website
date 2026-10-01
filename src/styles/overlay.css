@@ -1931,3 +1931,30 @@ a.tc-appfoot-btn:focus-visible {
     background: #061726;
   }
 }
+
+/* ---------- Chu tren cac DAI DA DOI SANG TONG TOI ---------- */
+/* Ban thiet ke xen vai dai nen TRANG giua cac dai navy. Khach bao nhin "bị
+   lệch màu rối mắt" va muon dong bo mot tong (01/10/2026), nen nen cua ba dai
+   do da duoc to lai thanh navy (tools/brand/darken-light-bands.py).
+
+   Chu tren ba dai do von la mau TOI vi no duoc ve cho nen trang — doi nen ma
+   khong doi chu thi chu bien mat. Nhung muc duoi day la toan bo phan tu nam
+   trong ba dai co mau toi; nhan do mau do va nut nen do giu nguyen vi chung
+   van noi ro tren nen navy.
+
+   CHI nhung phan tu lay mau tu LOP (class `.hi.dark`) moi sua duoc o day.
+   Phan tu nao mang mau ngay tren thuoc tinh `style` thi inline thang moi luat
+   CSS — chung duoc doi trong dac ta trang, xem `repaint_items` trong
+   tools/brand/darken-light-bands.py.
+
+   Do bang cach doc mau that cua tung phan tu tren trang dang chay, khong doan
+   theo ten. */
+#home-008,
+#home-009,
+#giai-phap-019,
+#dai-ly-007 {
+  /* Von la rgb(2,17,28) — chinh la mau navy cua nen moi. */
+  color: #fff;
+}
+
+

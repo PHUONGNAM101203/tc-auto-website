@@ -176,6 +176,15 @@ export function ProductPage({ product }: { product: Product }) {
 
       <p className="tc-doc-cta">
         <Link href={`/${category.slug}`}>{`Xem tất cả ${category.title.toLowerCase()}`}</Link>
+        {/* Loi vao THAY DUOC cua danh muc co bo loc. Trang danh muc muc
+            (/giai-phap/man-hinh) khoa lech 0 pixel so voi thiet ke nen khong
+            them duoc phan tu nhin thay o do; cac trang san pham thi khong bi
+            khoa, nen dat loi vao o day. */}
+        {category.slug === "giai-phap/man-hinh" ? (
+          <Link className="tc-doc-cta-alt" href="/giai-phap/man-hinh/tat-ca">
+            So sánh toàn bộ các mẫu
+          </Link>
+        ) : null}
       </p>
       </main>
 

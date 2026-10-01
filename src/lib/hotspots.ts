@@ -43,6 +43,9 @@ const HOTSPOT_TARGETS: Readonly<Record<string, string>> = {
   // Ứng dụng -> hai trang con
   "cong-nghe/ung-dung#0": "/cong-nghe/ung-dung/kho-ung-dung",
   "cong-nghe/ung-dung#1": "/cong-nghe/ung-dung/cap-nhat-va-loi",
+  // "XEM HIỆU SUẤT THỰC TẾ" — thiet ke khong ve trang con cho muc nay nen
+  // trang duoc soan (src/data/authored-pages.json).
+  "cong-nghe/ung-dung#2": "/cong-nghe/ung-dung/hieu-suat",
 
   // Mạng lưới đại lý -> các trang tiếp theo
   "dai-ly/mang-luoi-dai-ly#0": "/dai-ly/mang-luoi-dai-ly/mien-trung",

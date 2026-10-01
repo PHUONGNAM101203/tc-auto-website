@@ -15,7 +15,10 @@
       "audio": "DSP",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-android-s150-qled",
-      "route": "/giai-phap/man-hinh/s150-plus-qled"
+      "route": "/giai-phap/man-hinh/s150-plus-qled",
+      "image": "/products/s150-plus-qled.webp",
+      "imageWidth": 1062,
+      "imageHeight": 627
     },
     {
       "slug": "s170-plus-qled",
@@ -31,7 +34,10 @@
       "audio": "DSP",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s170",
-      "route": "/giai-phap/man-hinh/s170-plus-qled"
+      "route": "/giai-phap/man-hinh/s170-plus-qled",
+      "image": "/products/s170-plus-qled.webp",
+      "imageWidth": 1062,
+      "imageHeight": 627
     },
     {
       "slug": "s170-plus-pro-qled-360",
@@ -46,7 +52,10 @@
       "rom": "32 GB",
       "audio": "DSP",
       "camera": "360 — 4 mắt SONY",
-      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s170-pro-360"
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s170-pro-360",
+      "image": "/catalogue/s170-plus-pro-qled-360.webp",
+      "imageWidth": 2000,
+      "imageHeight": 2000
     },
     {
       "slug": "s170-plus-qled-2k",
@@ -62,7 +71,10 @@
       "audio": "DSP",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-android-s170-qled-2k",
-      "route": "/giai-phap/man-hinh/s170-plus-qled-2k"
+      "route": "/giai-phap/man-hinh/s170-plus-qled-2k",
+      "image": "/products/s170-plus-qled-2k.webp",
+      "imageWidth": 1062,
+      "imageHeight": 627
     },
     {
       "slug": "s170-plus-qled-2k-pro-360",
@@ -78,7 +90,10 @@
       "audio": "DSP",
       "camera": "360 — 4 mắt SONY AHD 720",
       "source": "https://wincavn.com/man-hinh-android-s170-pro-qled-2k",
-      "route": "/giai-phap/man-hinh/s170-plus-qled-2k-pro-360"
+      "route": "/giai-phap/man-hinh/s170-plus-qled-2k-pro-360",
+      "image": "/products/s170-plus-qled-2k-pro-360.webp",
+      "imageWidth": 1062,
+      "imageHeight": 621
     },
     {
       "slug": "s200-plus-qled-2k",
@@ -94,7 +109,10 @@
       "audio": "DSP",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-qled-2k",
-      "route": "/giai-phap/man-hinh/s200-plus-qled-2k"
+      "route": "/giai-phap/man-hinh/s200-plus-qled-2k",
+      "image": "/products/s200-plus-qled-2k.webp",
+      "imageWidth": 1062,
+      "imageHeight": 621
     },
     {
       "slug": "s200-plus-360-qled-2k",
@@ -110,7 +128,10 @@
       "audio": "DSP",
       "camera": "360 — 4 mắt AHD Sony",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-pro-qled-2k-360",
-      "route": "/giai-phap/man-hinh/s200-plus-360-qled-2k"
+      "route": "/giai-phap/man-hinh/s200-plus-360-qled-2k",
+      "image": "/products/s200-plus-360-qled-2k.webp",
+      "imageWidth": 1062,
+      "imageHeight": 621
     },
     {
       "slug": "s200-plus-13-inch-2k",
@@ -126,7 +147,10 @@
       "audio": "DSP",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-13-inch",
-      "route": "/giai-phap/man-hinh/s200-plus-13-inch-2k"
+      "route": "/giai-phap/man-hinh/s200-plus-13-inch-2k",
+      "image": "/products/s200-plus-13-inch-2k.webp",
+      "imageWidth": 1062,
+      "imageHeight": 621
     },
     {
       "slug": "s200-plus-13-inch-2k-pro-360",
@@ -142,7 +166,10 @@
       "audio": "DSP",
       "camera": "360 — 4 mắt Sony 1080p",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-13-inch-pro-360",
-      "route": "/giai-phap/man-hinh/s200-plus-13-inch-2k-pro-360"
+      "route": "/giai-phap/man-hinh/s200-plus-13-inch-2k-pro-360",
+      "image": "/products/s200-plus-13-inch-2k-pro-360.webp",
+      "imageWidth": 1062,
+      "imageHeight": 621
     },
     {
       "slug": "s300-plus-qled-2k-dts",
@@ -158,7 +185,10 @@
       "audio": "AKM7738, DSP 36 kênh, vòm 5.1",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-android-s300-qled-2k-dts",
-      "route": "/giai-phap/man-hinh/s300-plus-qled-2k-dts"
+      "route": "/giai-phap/man-hinh/s300-plus-qled-2k-dts",
+      "image": "/products/s300-plus-qled-2k-dts.webp",
+      "imageWidth": 1062,
+      "imageHeight": 621
     },
     {
       "slug": "s300-plus-pro-qled-2k-dts",
@@ -173,7 +203,10 @@
       "rom": "64 GB",
       "audio": "AKM7738, DSP 36 kênh",
       "camera": "360 — 4 mắt Sony AHD 1080",
-      "source": "https://wincavn.com/man-hinh-android-s300-pro-360-qled-2k-dts"
+      "source": "https://wincavn.com/man-hinh-android-s300-pro-360-qled-2k-dts",
+      "image": "/catalogue/s300-plus-pro-qled-2k-dts.webp",
+      "imageWidth": 731,
+      "imageHeight": 850
     },
     {
       "slug": "s300-plus-12-3-inch-2k",
@@ -188,7 +221,10 @@
       "rom": "64 GB",
       "audio": "DSP",
       "camera": "Hành trình + lùi",
-      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s300-12-3-inch-thong-dung"
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s300-12-3-inch-thong-dung",
+      "image": "/catalogue/s300-plus-12-3-inch-2k.webp",
+      "imageWidth": 812,
+      "imageHeight": 848
     },
     {
       "slug": "s300-plus-13-inch-2k-dts",
@@ -203,7 +239,10 @@
       "rom": "64 GB",
       "audio": "DSP",
       "camera": "Hành trình + lùi",
-      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s300-13-inch-dts"
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s300-13-inch-dts",
+      "image": "/catalogue/s300-plus-13-inch-2k-dts.webp",
+      "imageWidth": 731,
+      "imageHeight": 848
     },
     {
       "slug": "s400-plus-qled-2k-dts",
@@ -218,7 +257,10 @@
       "rom": "128 GB",
       "audio": "AKM7738, DSP 36 kênh",
       "camera": "Hành trình + lùi",
-      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s400-qled-2k-dts-am-thanh"
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s400-qled-2k-dts-am-thanh",
+      "image": "/catalogue/s400-plus-qled-2k-dts.webp",
+      "imageWidth": 731,
+      "imageHeight": 848
     },
     {
       "slug": "s400-plus-pro-qled-2k-dts",
@@ -233,7 +275,10 @@
       "rom": "128 GB",
       "audio": "AKM7738, DSP 36 kênh",
       "camera": "360 — 4 mắt Sony AHD 1080",
-      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s400-qled-2k-dts-pro-360-am-thanh"
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s400-qled-2k-dts-pro-360-am-thanh",
+      "image": "/catalogue/s400-plus-pro-qled-2k-dts.webp",
+      "imageWidth": 731,
+      "imageHeight": 848
     },
     {
       "slug": "s400-plus-12-3-inch-2k",
@@ -248,7 +293,10 @@
       "rom": "128 GB",
       "audio": "DSP",
       "camera": "Hành trình + lùi",
-      "source": "https://wincavn.com/man-hinh-android-winca-s400-2k-123-inch-thong-dung"
+      "source": "https://wincavn.com/man-hinh-android-winca-s400-2k-123-inch-thong-dung",
+      "image": "/catalogue/s400-plus-12-3-inch-2k.webp",
+      "imageWidth": 788,
+      "imageHeight": 852
     },
     {
       "slug": "bravo-b10-lite",
@@ -265,7 +313,10 @@
       "camera": "Hãng chưa công bố",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-bravo-lite",
       "route": "/giai-phap/man-hinh/bravo",
-      "note": "Trang hãng không nêu phiên bản Android, thông số âm thanh hay camera cho dòng này."
+      "note": "Trang hãng không nêu phiên bản Android, thông số âm thanh hay camera cho dòng này.",
+      "image": "/products/bravo-b10-lite.webp?v=b4adfc72",
+      "imageWidth": 731,
+      "imageHeight": 826
     },
     {
       "slug": "bravo-b100",
@@ -281,7 +332,10 @@
       "audio": "DSP",
       "camera": "Hành trình + lùi",
       "source": "https://wincavn.com/man-hinh-dvd-android-o-to-bravo-b100-plus",
-      "route": "/giai-phap/man-hinh/bravo"
+      "route": "/giai-phap/man-hinh/bravo",
+      "image": "/products/bravo-b100.webp?v=3478be7c",
+      "imageWidth": 855,
+      "imageHeight": 826
     },
     {
       "slug": "bravo-b100-pro",
@@ -298,7 +352,10 @@
       "camera": "360 — 4 mắt SONY",
       "source": "https://wincavn.com/man-hinh-android-bravo-b100-pro",
       "route": "/giai-phap/man-hinh/bravo",
-      "note": "Trang hãng chưa công bố vi xử lý, RAM, bộ nhớ và phiên bản Android."
+      "note": "Trang hãng chưa công bố vi xử lý, RAM, bộ nhớ và phiên bản Android.",
+      "image": "/products/bravo-b100-pro.webp?v=e2fcd46f",
+      "imageWidth": 817,
+      "imageHeight": 825
     }
   ]
 }

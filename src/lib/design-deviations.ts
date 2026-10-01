@@ -14,6 +14,34 @@ export interface Deviation {
 }
 
 export const DESIGN_DEVIATIONS: readonly Deviation[] = [
+  // ── Ba dai nen TRANG doi sang tong toi ──────────────────────────────────
+  // Ban thiet ke xen vai dai nen trang giua cac dai navy: trang chu 437px
+  // (12% chieu cao), Giai phap 585px (10%), Dai ly 571px (12%). Khach bao
+  // nhin "bị lệch màu rối mắt" va yeu cau dong bo mot tong (01/10/2026).
+  //
+  // Da kiem truoc khi doi: ba dai nay TRANG TRON trong anh nen — moi chu va
+  // moi tam the deu la phan tu that ve de len. Nen chi can to lai nen
+  // (tools/brand/darken-light-bands.py) roi doi mau nhung phan tu chu mau toi
+  // sang trang (xem cuoi src/styles/overlay.css). Nhan mau do va nut nen do
+  // giu nguyen vi chung van noi ro tren nen navy.
+  {
+    page: "home",
+    box: { x: 0, y: 1419, width: 1440, height: 449 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau.",
+  },
+  {
+    page: "giai-phap",
+    box: { x: 0, y: 5147, width: 1440, height: 597 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau.",
+  },
+  {
+    page: "dai-ly",
+    box: { x: 0, y: 1531, width: 1440, height: 583 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau.",
+  },
   // ── Mui ten cua chong anh duoc VE THAT ──────────────────────────────────
   // Hinh mui ten "‹ ›" von nam trong chong anh ve san, va chong do da bi xoa
   // khoi anh nen de thay bang anh that — mui ten mat theo. Khach bao ngay

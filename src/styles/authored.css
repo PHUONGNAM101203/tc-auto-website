@@ -187,12 +187,17 @@
   color: rgba(255, 255, 255, 0.76);
 }
 
+/* Xep thanh LUOI THE chu khong phai mot cot dai.
+   Khach bam tab BRAVO va bao "khong thay san pham nao": mot cot gom tieu de
+   va bang thong so doc nhu mot bai viet, khong doc ra la danh sach san pham.
+   Luoi the kem anh thi nhan ra ngay. */
 .tc-doc-products ul {
   margin-top: 22px;
   padding: 0;
   list-style: none;
   display: grid;
-  gap: 14px;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 }
 
 .tc-doc-products li {
@@ -427,5 +432,35 @@
   .tc-cat-item dl > div {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+}
+
+/* Anh gioi thieu tren the danh muc.
+   Nen TRANG: anh cua hang chup tren nen trang, dat len nen navy ma khong lot
+   nen thi lo ra mot o vuong trang gat o bon goc. */
+.tc-cat-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: -4px 0 14px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Nut phu ben canh nut chinh: vien thay vi nen dac, de khong canh tranh. */
+.tc-doc-cta-alt {
+  margin-left: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: none !important;
+  color: #fff !important;
+}
+
+.tc-doc-cta-alt:hover {
+  border-color: var(--red-nav);
+}
+
+@media (max-width: 560px) {
+  .tc-doc-cta-alt {
+    margin: 10px 0 0;
   }
 }

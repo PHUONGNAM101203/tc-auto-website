@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { assetUrl } from "@/lib/asset-url";
 import { useMemo, useState } from "react";
 import {
   filterOptions,
@@ -168,6 +169,20 @@ function Card({ model }: { model: ScreenModel }) {
 
   return (
     <li className="tc-cat-item">
+      {model.image ? (
+        /* eslint-disable-next-line @next/next/no-img-element -- anh o ti le
+           goc, khong qua image optimizer */
+        <img
+          className="tc-cat-shot"
+          src={assetUrl(model.image)}
+          alt={`Màn hình ${model.name}`}
+          width={model.imageWidth}
+          height={model.imageHeight}
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
+
       <h3>
         {model.route ? (
           <Link href={model.route}>{model.name}</Link>

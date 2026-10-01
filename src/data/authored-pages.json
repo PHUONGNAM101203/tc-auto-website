@@ -535,6 +535,55 @@
         "label": "Liên hệ đội ngũ TC Auto",
         "href": "/giai-phap#lien-he"
       }
+    },
+    {
+      "slug": "cong-nghe/ung-dung/hieu-suat",
+      "section": "cong-nghe",
+      "parent": "/cong-nghe/ung-dung",
+      "parentLabel": "Ứng dụng",
+      "label": "HIỆU SUẤT",
+      "title": "Hiệu suất ứng dụng",
+      "heading": "Chạy nhanh hay chạy chậm, phần lớn đã quyết từ lúc chọn máy.",
+      "lead": "TC AUTO tối ưu hiệu suất từng ứng dụng để mang đến trải nghiệm vận hành nhanh, mượt mà và ổn định trên màn hình ô tô. Từ thời gian khởi chạy, khả năng phản hồi đến mức sử dụng tài nguyên, mọi yếu tố đều được kiểm soát nhằm hạn chế giật lag và duy trì trải nghiệm liền mạch trong suốt hành trình.",
+      "blocks": [
+        {
+          "heading": "Ba thứ quyết định độ mượt",
+          "paragraphs": [
+            "RAM quyết định bạn mở được bao nhiêu ứng dụng cùng lúc mà không cái nào bị đóng ngầm. Bản đồ dẫn đường, nhạc và camera lùi chạy song song là ba thứ gần như lúc nào cũng mở — máy 2 GB đủ cho ba thứ đó, nhưng thêm ứng dụng thứ tư là bắt đầu phải đánh đổi.",
+            "Vi xử lý quyết định độ nhạy khi chạm: thời gian từ lúc bạn chạm đến lúc màn hình phản hồi. Chênh lệch giữa chip 1.6 GHz và 2.7 GHz thể hiện rõ nhất lúc mở ứng dụng và lúc cuộn bản đồ.",
+            "Bộ nhớ trong quyết định bạn cài được bao nhiêu và còn chỗ cho bản đồ ngoại tuyến hay không. Bản đồ Việt Nam tải sẵn chiếm vài GB, nên máy 32 GB đã dùng được nhưng không còn nhiều chỗ để thêm."
+          ]
+        },
+        {
+          "heading": "Cấu hình theo từng dòng máy",
+          "paragraphs": [
+            "Dòng S150 và Bravo B10 LITE: 2 GB RAM, chip 8581 1.6 GHz. Đủ cho dẫn đường, nghe nhạc và camera — là mức vào.",
+            "Dòng S170 và Bravo B100: 4 GB RAM, cùng chip 8581. Thêm RAM nên mở nhiều ứng dụng cùng lúc thoải mái hơn hẳn mức vào.",
+            "Dòng S200: 4 GB RAM, chip 7862S 2.0 GHz. Bước nhảy về độ nhạy khi chạm so với hai dòng trên.",
+            "Dòng S300: 4 GB RAM, chip 7870 2.7 GHz, bộ nhớ 64 GB. Nhanh nhất trong nhóm 4 GB, và là dòng đầu tiên có chip âm thanh AKM7738 với DSP 36 kênh.",
+            "Dòng S400: 6 GB RAM, bộ nhớ 128 GB, cùng chip 7870 2.7 GHz. Cấu hình cao nhất hãng công bố."
+          ]
+        },
+        {
+          "heading": "Phần TC AUTO làm thêm",
+          "paragraphs": [
+            "Máy về đến xưởng được cài sẵn bộ ứng dụng đã kiểm, thay vì để người dùng tự tìm bản cài trôi nổi. Danh sách và tệp cài nằm ở mục Kho ứng dụng; bản vá và bản cập nhật nằm ở mục Cập nhật & vá lỗi.",
+            "Khi hãng phát hành bản vá cho một lỗi cụ thể — đen camera, lỗi cảm ứng, lỗi canbus theo dòng xe — TC AUTO cập nhật tệp đó lên để đại lý và chủ xe tải thẳng về, không phải chờ đợt bảo hành."
+          ]
+        }
+      ],
+      "pending": {
+        "heading": "Phần cần TC Auto bổ sung",
+        "items": [
+          "Số đo thực tế nếu TC Auto có bấm giờ: thời gian khởi động máy, thời gian mở bản đồ, mức RAM còn trống khi chạy ba ứng dụng.",
+          "Danh sách ứng dụng được cài sẵn theo từng dòng máy.",
+          "Khuyến nghị cấu hình tối thiểu cho từng nhu cầu sử dụng."
+        ]
+      },
+      "cta": {
+        "label": "Xem tất cả các mẫu màn hình",
+        "href": "/giai-phap/man-hinh/tat-ca"
+      }
     }
   ]
 }
