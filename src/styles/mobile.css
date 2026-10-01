@@ -165,7 +165,13 @@
   pointer-events: none;
 }
 
-.tc-m-hero-text h1 {
+.tc-m-hero-text h1,
+.tc-m-hero-title {
+  margin: 0;
+}
+
+.tc-m-hero-text h1,
+.tc-m-hero-title {
   font-family: "Cormorant Infant", serif;
   font-weight: 700;
   font-size: clamp(30px, 9vw, 42px);

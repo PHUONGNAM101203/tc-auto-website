@@ -19,6 +19,30 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: SITE.locale,
     type: "website",
+    /**
+     * Anh chia se MAC DINH cho moi trang.
+     *
+     * Cac trang tu soan, trang bai viet va trang san pham khong tu khai anh —
+     * khi do Facebook, Zalo hay cong cu tra loi AI khong co gi de hien, link
+     * chia se ra thanh mot dong chu tran. Khai o layout goc thi moi trang
+     * chua tu khai deu thua ke anh nay; trang nao co anh rieng van ghi de.
+     *
+     * Dung anh hero trang chu: do la tam duy nhat mang du ca logo lan tinh
+     * than thuong hieu, va no da duoc toi uu san.
+     */
+    images: [
+      {
+        url: "/slices/home-0.webp",
+        width: 2880,
+        height: 1800,
+        alt: SITE.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.name,
+    description: SITE.description,
   },
 };
 

@@ -59,7 +59,11 @@ export function MobileSubPage({
           <img src={hero} alt="" width={1440} height={1080} fetchPriority="high" />
         ) : null}
         <div className="tc-m-hero-text">
-          <h1>{page.title}</h1>
+          {/* `p` chu khong phai `h1`: lop chu an `.tc-sr` phia duoi da co mot
+              `h1` cho chinh trang nay, ma hai the h1 trung noi dung tren cung
+              mot trang la mot loi chuan hoa — ca hai deu nam trong DOM du chi
+              mot cai hien ra. Kieu chu khong doi. */}
+          <p className="tc-m-hero-title">{page.title}</p>
         </div>
       </section>
 

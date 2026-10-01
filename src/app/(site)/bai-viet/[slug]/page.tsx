@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/site/JsonLd";
 import { PostArticle } from "@/components/site/PostArticle";
 import { articleLd, breadcrumbLd } from "@/lib/structured-data";
 import { getPublishedPost } from "@/lib/posts";
+import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 import { SITE } from "@/lib/site-config";
 
 /** Bai viet den tu co so du lieu nen khong the sinh tinh truoc. */
@@ -33,7 +34,8 @@ export async function generateMetadata({
       locale: SITE.locale,
       type: "article",
       publishedTime: post.publishedAt ?? undefined,
-      images: post.coverUrl ? [{ url: post.coverUrl }] : undefined,
+      // Bai chua co anh bia thi dung anh chia se mac dinh, dung de trang.
+      images: post.coverUrl ? [{ url: post.coverUrl }] : [DEFAULT_OG_IMAGE],
     },
   };
 }

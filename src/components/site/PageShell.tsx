@@ -60,6 +60,15 @@ export function PageShell({ page }: PageShellProps) {
           style={{ height: `${page.height}px` }}
           aria-label={page.title}
         >
+          {/* Tieu de cap mot cua trang.
+              Sau trang chinh dung tu canvas: chu la phan tu that nhung dat theo
+              toa do, khong co cap tieu de nao. Truoc day the `h1` duy nhat nam
+              trong bang hero cua BAN DIEN THOAI — ma ban do lai trung noi dung
+              voi lop chu an, thanh hai `h1` tren mot trang. Nay ban dien thoai
+              dung `p`, con `h1` that nam o day: mot cai, cho moi be rong man
+              hinh, va may tim kiem luon doc duoc. */}
+          <h1 className="tc-sr">{page.title}</h1>
+
           <CanvasSlices slices={page.slices} pageTitle={page.title} />
 
           {/* Bang hero — chi trang chu co, va chi ve khi da du tu 2 anh tro len. */}

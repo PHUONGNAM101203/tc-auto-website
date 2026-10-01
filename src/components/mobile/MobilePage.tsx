@@ -56,7 +56,8 @@ export function MobilePage({
             <img src={hero.image} alt="" width={680} height={907} fetchPriority="high" />
           ) : null}
           <div className="tc-m-hero-text">
-            <h1>{hero.title}</h1>
+            {/* `p` chu khong phai `h1` — xem chu thich cung ten o MobileSubPage. */}
+            <p className="tc-m-hero-title">{hero.title}</p>
             {hero.slogan ? <p>{hero.slogan}</p> : null}
           </div>
         </section>

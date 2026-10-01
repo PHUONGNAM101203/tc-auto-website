@@ -55,6 +55,27 @@ const SECURITY_HEADERS = [
     // Chi co tac dung tren HTTPS; tren localhost trinh duyet bo qua.
     value: "max-age=63072000; includeSubDomains; preload",
   },
+  {
+    // Cat dut moi tham chieu `window.opener` giua ta va trang khac. Khong co
+    // no, mot trang ta mo bang target="_blank" (vi du tep tai tren wincavn.com)
+    // van co the doc va dieu khien `window.opener` trong vai tinh huong.
+    // `rel="noopener"` da chan o tung the <a>; day la lop chan o cap trang,
+    // phong khi sau nay co the <a> nao quen `rel`.
+    key: "Cross-Origin-Opener-Policy",
+    value: "same-origin",
+  },
+  {
+    // Site khac khong duoc nhung tai nguyen cua ta vao trang cua ho roi doc
+    // noi dung qua kenh phu. `same-site` chu khong phai `same-origin`: anh va
+    // phong con duoc phuc vu qua CDN cua Vercel o ten mien con.
+    key: "Cross-Origin-Resource-Policy",
+    value: "same-site",
+  },
+  {
+    // Khong de trinh duyet doan kieu tep tu noi dung khi tai xuong.
+    key: "X-Download-Options",
+    value: "noopen",
+  },
 ];
 
 /**

@@ -13,6 +13,7 @@ import { getCtaSpots } from "@/lib/cta-links";
 import { getPagination } from "@/lib/pagination";
 import { listPublishedPosts } from "@/lib/posts";
 import { SITE } from "@/lib/site-config";
+import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 import { getAuthoredPage, getAuthoredSlugs } from "@/lib/authored-pages";
 import { getSpotArticle, getSpotArticles } from "@/lib/spot-articles";
 import { SpotArticle } from "@/components/site/SpotArticle";
@@ -88,6 +89,7 @@ export async function generateMetadata({
           siteName: SITE.name,
           locale: SITE.locale,
           type: "article",
+          images: [DEFAULT_OG_IMAGE],
           ...(article.date ? { publishedTime: article.date } : {}),
         },
       };
@@ -108,6 +110,7 @@ export async function generateMetadata({
         siteName: SITE.name,
         locale: SITE.locale,
         type: "article",
+        images: [DEFAULT_OG_IMAGE],
       },
     };
   }
