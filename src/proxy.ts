@@ -6,8 +6,14 @@ import { NextResponse, type NextRequest } from "next/server";
  *
  * Server Component khong duoc phep ghi cookie, nen viec refresh token PHAI
  * xay ra o day — neu khong, session het han se lam admin bi dang xuat ngau nhien.
+ *
+ * Tep nay truoc day ten `middleware.ts`. Next 16 doi ten quy uoc thanh `proxy`
+ * (ten cu bi loai bo dan): cung mot co che, chi doi ten TEP va ten HAM, con
+ * `config.matcher` giu nguyen. Doi ten vi "middleware" hay bi hieu nham sang
+ * middleware cua Express — xem node_modules/next/dist/docs/01-app/
+ * 03-api-reference/03-file-conventions/proxy.md.
  */
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL?.trim();

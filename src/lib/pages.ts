@@ -58,7 +58,7 @@ export function getPageIndex(): readonly PageIndexEntry[] {
   }));
 }
 
-/** Route -> slug, dung cho middleware / breadcrumb. */
+/** Route -> slug, dung cho proxy / breadcrumb. */
 export function slugFromRoute(route: string): PageSlug | null {
   const normalised = route === "/" ? "/" : route.replace(/\/+$/, "");
   return getAllPageSpecs().find((page) => page.route === normalised)?.slug ?? null;

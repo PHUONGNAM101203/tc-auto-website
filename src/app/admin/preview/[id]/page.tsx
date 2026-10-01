@@ -7,7 +7,7 @@ import { getPost } from "@/lib/admin/posts";
  *
  * Trang cong khai chi tra ve bai da dang, nen truoc day admin phai dang bai
  * len roi moi xem duoc no ra sao — tuc la da lo ra ngoai roi. Duong dan nay
- * nam trong /admin nen middleware chan nguoi la, va no doc thang bang du lieu
+ * nam trong /admin nen proxy chan nguoi la, va no doc thang bang du lieu
  * bang quyen quan tri.
  *
  * Dung CHUNG mot component voi trang that, nen khong the lech nhau.

@@ -11,7 +11,7 @@ import { PAGE_SLUGS, type PageSlug } from "@/lib/types";
  *
  * Trang nay nam trong layout co kiem tra dang nhap. Dung san tinh thi luc build
  * layout chay khi CHUA co nguoi dung, va lenh chuyen ve trang dang nhap bi nuong
- * luon vao ban tinh — vao la bi da ra dang nhap, roi middleware thay da dang
+ * luon vao ban tinh — vao la bi da ra dang nhap, roi proxy thay da dang
  * nhap nen day tiep ve /admin. Ket qua: muc "Trang con" khong bao gio mo duoc.
  */
 export const dynamic = "force-dynamic";

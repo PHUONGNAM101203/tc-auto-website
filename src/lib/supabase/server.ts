@@ -37,7 +37,7 @@ export async function createSupabaseServerClient(): Promise<SupabaseClient> {
             cookieStore.set(name, value, options);
           }
         } catch {
-          // Server Component khong duoc phep ghi cookie — middleware se lo viec refresh.
+          // Server Component khong duoc phep ghi cookie — proxy se lo viec refresh.
         }
       },
     },
