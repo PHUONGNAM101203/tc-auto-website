@@ -1999,3 +1999,12 @@ a.tc-appfoot-btn:focus-visible {
     transform: none;
   }
 }
+
+/* Lien ket nguon trong dong "Thông số do hãng công bố tại …".
+   Chu nho nen vung cham chi cao 15px — noi len 44px bang padding am, bo cuc
+   khong doi mot pixel nao. */
+.tc-doc-source a {
+  display: inline-block;
+  padding: 14px 0;
+  margin: -14px 0;
+}

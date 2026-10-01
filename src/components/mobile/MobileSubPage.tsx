@@ -126,14 +126,18 @@ export function MobileSubPage({
         </section>
       ) : null}
 
-      {/* Loi vao danh muc co bo loc. Ban desktop khong them duoc phan tu nhin
-          thay (trang con khoa lech 0 pixel), nen o ban dien thoai thi hien ro. */}
+      {/* Loi vao danh muc co bo loc.
+          Lop `tc-m-cta` phai nam tren CHINH the <a>: dat o the boc ngoai thi
+          cai duoc to nhu mot cai nut la the <p>, con vung bam that chi cao
+          15px. */}
       {page.slug === "giai-phap/man-hinh" ? (
-        <p className="tc-m-cta">
-          <Link href="/giai-phap/man-hinh/tat-ca" prefetch={false}>
-            Xem tất cả các mẫu
-          </Link>
-        </p>
+        <Link
+          className="tc-m-cta"
+          href="/giai-phap/man-hinh/tat-ca"
+          prefetch={false}
+        >
+          Xem tất cả các mẫu
+        </Link>
       ) : null}
 
       {/* Moi lien ket trong long trang — tren desktop chung la vung bam trong

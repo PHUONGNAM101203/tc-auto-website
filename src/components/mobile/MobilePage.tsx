@@ -142,7 +142,13 @@ function renderBlock(block: MobileBlock) {
       >
         {block.tiles.map((tile) => (
           <li key={tile.href + tile.title}>
-            <Link href={tile.href} prefetch={false}>
+            {/* `aria-label` luon co: chu cua the nam trong anh nen neu khong
+                khai thi day la mot lien ket KHONG CO TEN. */}
+            <Link
+              href={tile.href}
+              prefetch={false}
+              aria-label={tile.label || undefined}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san */}
               <img src={tile.src} alt="" loading="lazy" decoding="async" />
               {tile.title ? <strong>{tile.title}</strong> : null}

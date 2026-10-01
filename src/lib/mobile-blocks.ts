@@ -24,6 +24,14 @@ export interface MobileTile {
   /** De trong khi tieu de da nam san trong anh — tranh doc thay hai lan. */
   readonly title: string;
   readonly subtitle: string;
+  /**
+   * Ten de doc cho trinh doc man hinh. LUON co, ke ca khi `title` de trong.
+   *
+   * Khong co no thi the anh thanh mot lien ket KHONG CO TEN: chu nam trong
+   * anh nen may doc chi doc duoc "link", nguoi dung khong biet bam vao se di
+   * dau. Do duoc 7 lien ket nhu vay tren trang chu ban dien thoai.
+   */
+  readonly label: string;
 }
 
 export type MobileBlock =
@@ -80,6 +88,7 @@ function solutionBlock(slug: PageSlug): MobileBlock[] {
         src: card.src,
         title: card.labelInCss ? card.title : "",
         subtitle: card.labelInCss ? card.subtitle : "",
+        label: [card.title, card.subtitle].filter(Boolean).join(" — "),
       })),
     },
   ];
@@ -96,6 +105,7 @@ function liftBlocks(slug: PageSlug): MobileBlock[] {
         src: card.src,
         title: card.captionInImage ? "" : card.title,
         subtitle: card.captionInImage ? "" : card.subtitle,
+        label: [card.title, card.subtitle].filter(Boolean).join(" — "),
       },
     ]);
     tops.set(card.group, Math.min(tops.get(card.group) ?? card.y, card.y));
