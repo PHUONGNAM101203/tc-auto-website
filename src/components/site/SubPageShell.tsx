@@ -110,6 +110,17 @@ export function SubPageShell({
               { name: page.title, url: page.route },
             ])}
           />
+          {/* Loi vao danh muc man hinh. De trong lop chu AN: trang con khoa
+              lech 0 pixel so voi thiet ke nen khong them duoc phan tu nhin
+              thay. Ban dien thoai co nut hien ro — xem MobileSubPage. */}
+          {page.slug === "giai-phap/man-hinh" ? (
+            <p className="tc-sr">
+              <Link href="/giai-phap/man-hinh/tat-ca">
+                Xem tất cả các mẫu màn hình, lọc theo hãng và kích thước
+              </Link>
+            </p>
+          ) : null}
+
           <nav className="tc-sr" aria-label="Đường dẫn">
             <ol>
               {page.breadcrumb.map((crumb) => (

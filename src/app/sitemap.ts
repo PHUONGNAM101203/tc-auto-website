@@ -4,6 +4,7 @@ import { getAllPageSpecs } from "@/lib/pages";
 import { listPublishedPosts } from "@/lib/posts";
 import { getProducts } from "@/lib/products";
 import { getSpotArticles } from "@/lib/spot-articles";
+import { CATALOGUE_ROUTE } from "@/components/site/CataloguePage";
 import { SITE } from "@/lib/site-config";
 import { getAllSubPages } from "@/lib/subpages";
 
@@ -48,6 +49,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const catalogue = [
+    {
+      url: `${base}${CATALOGUE_ROUTE}`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+  ];
+
   // Bai viet mo ra tu nut "XEM THÊM" — moi bai mot duong dan rieng.
   const spotArticles = getSpotArticles().map((article) => ({
     url: `${base}${article.route}`,
@@ -65,5 +75,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }));
 
-  return [...mains, ...subs, ...products, ...authored, ...spotArticles, ...posts];
+  return [
+    ...mains,
+    ...subs,
+    ...products,
+    ...authored,
+    ...catalogue,
+    ...spotArticles,
+    ...posts,
+  ];
 }

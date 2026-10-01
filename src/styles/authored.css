@@ -263,3 +263,169 @@
   border-radius: 10px;
   background: #fff;
 }
+
+/* ---------- Danh muc man hinh co bo loc ---------- */
+/* Xem src/components/site/ScreenCatalogue.tsx. */
+.tc-cat {
+  margin: 40px 0 0;
+}
+
+.tc-cat-filters {
+  display: grid;
+  gap: 18px;
+  margin: 22px 0 0;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.tc-cat-label {
+  display: block;
+  margin-bottom: 9px;
+  font: 600 12px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tc-cat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tc-cat-chip {
+  padding: 9px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: none;
+  font: 500 14px/1 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.82);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.tc-cat-chip:hover {
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.tc-cat-chip[data-on] {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+.tc-cat-chip:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 2px;
+}
+
+.tc-cat-count {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 18px 0 0;
+  font: 500 14px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.tc-cat-clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: 500 14px/1.5 "Montserrat", sans-serif;
+  color: var(--red-nav);
+  cursor: pointer;
+}
+
+.tc-cat-empty {
+  margin: 18px 0 0;
+  font: 400 15px/1.6 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tc-cat-list {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+}
+
+.tc-cat-item {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: #061726;
+}
+
+.tc-cat-item h3 {
+  margin: 0;
+  font: 700 18px/1.3 "Unbounded", "Montserrat", sans-serif;
+  color: var(--red-nav);
+}
+
+.tc-cat-item h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tc-cat-item h3 a:hover {
+  color: #fff;
+}
+
+.tc-cat-brand {
+  margin: 6px 0 0;
+  font: 400 13px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tc-cat-item dl {
+  display: grid;
+  gap: 7px;
+  margin: 14px 0 0;
+}
+
+.tc-cat-item dl > div {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 10px;
+}
+
+.tc-cat-item dt,
+.tc-cat-item dd {
+  margin: 0;
+  font: 400 13px/1.5 "Montserrat", sans-serif;
+}
+
+.tc-cat-item dt {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tc-cat-item dd {
+  color: #fff;
+}
+
+.tc-cat-note {
+  margin: 12px 0 0;
+  font: italic 400 13px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tc-cat-links {
+  margin: 14px 0 0;
+  font: 400 13px/1.5 "Montserrat", sans-serif;
+}
+
+.tc-cat-links a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 560px) {
+  .tc-cat-item dl > div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

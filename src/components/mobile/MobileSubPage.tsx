@@ -123,6 +123,16 @@ export function MobileSubPage({
         </section>
       ) : null}
 
+      {/* Loi vao danh muc co bo loc. Ban desktop khong them duoc phan tu nhin
+          thay (trang con khoa lech 0 pixel), nen o ban dien thoai thi hien ro. */}
+      {page.slug === "giai-phap/man-hinh" ? (
+        <p className="tc-m-cta">
+          <Link href="/giai-phap/man-hinh/tat-ca" prefetch={false}>
+            Xem tất cả các mẫu
+          </Link>
+        </p>
+      ) : null}
+
       {childPages.length > 0 ? (
         <nav className="tc-m-children" aria-label="Nội dung trong mục này">
           <h2>Xem thêm trong mục này</h2>

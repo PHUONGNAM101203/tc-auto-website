@@ -17,6 +17,7 @@ import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 import { getAuthoredPage, getAuthoredSlugs } from "@/lib/authored-pages";
 import { getSpotArticle, getSpotArticles } from "@/lib/spot-articles";
 import { SpotArticle } from "@/components/site/SpotArticle";
+import { CataloguePage, CATALOGUE_SLUG, CATALOGUE_ROUTE } from "@/components/site/CataloguePage";
 import { categoryOf, getProduct, getProductSlugs } from "@/lib/products";
 import { getChildren, getSubPage, getSubPageSlugs } from "@/lib/subpages";
 
@@ -34,6 +35,8 @@ export function generateStaticParams(): { slug: string[] }[] {
     // Bai viet mo ra tu nut "XEM THÊM" — khach yeu cau nut do dan sang trang
     // rieng chu khong xo chu tai cho (01/10/2026).
     ...getSpotArticles().map((article) => article.slug),
+    // Danh muc man hinh co bo loc.
+    CATALOGUE_SLUG,
   ].map((slug) => ({ slug: slug.split("/") }));
 }
 
@@ -49,6 +52,26 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const slug = await readSlug(params);
   const page = getSubPage(slug);
+  if (slug === CATALOGUE_SLUG) {
+    const text =
+      `Toàn bộ các mẫu màn hình Winca và Bravo do ${SITE.name} phân phối, ` +
+      "kèm thông số do chính hãng công bố. Lọc theo hãng, kích thước, độ phân " +
+      "giải và camera 360.";
+    return {
+      title: `Tất cả các mẫu màn hình ô tô | ${SITE.name}`,
+      description: text,
+      alternates: { canonical: CATALOGUE_ROUTE },
+      openGraph: {
+        title: "Tất cả các mẫu màn hình ô tô",
+        description: text,
+        url: CATALOGUE_ROUTE,
+        siteName: SITE.name,
+        locale: SITE.locale,
+        type: "website",
+        images: [DEFAULT_OG_IMAGE],
+      },
+    };
+  }
   if (!page) {
     const product = getProduct(slug);
     if (product) {
@@ -141,6 +164,10 @@ export default async function SubPage({
 }) {
   const slug = await readSlug(params);
   const page = getSubPage(slug);
+
+  if (slug === CATALOGUE_SLUG) {
+    return <CataloguePage />;
+  }
 
   if (!page) {
     const product = getProduct(slug);
