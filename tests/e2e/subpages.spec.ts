@@ -204,14 +204,21 @@ test.describe("31 trang con", () => {
     expect(response?.status()).toBe(404);
   });
 
-  test("sitemap liệt kê đủ 37 trang", async ({ request }) => {
+  test("sitemap liệt kê đủ 31 trang con, không sót trang nào", async ({
+    request,
+  }) => {
     const response = await request.get("/sitemap.xml");
     expect(response.status()).toBe(200);
     const body = await response.text();
-    expect((body.match(/<url>/g) ?? []).length).toBe(37);
     for (const row of INDEX) {
       expect(body, row.route).toContain(row.route);
     }
+    // Truoc day cho nay rang "dung 37" (6 trang chinh + 31 trang con). Con so
+    // do khoa cung sitemap lai dung luc no con BO SOT 17 trang san pham, 4
+    // trang tu soan va toan bo bai viet. Nay rang theo CAN DUOI de them trang
+    // moi khong lam do, nhung bot trang thi van bat duoc.
+    // So bai viet den tu CSDL nen khong co tran tren cham duoc.
+    expect((body.match(/<url>/g) ?? []).length).toBeGreaterThanOrEqual(58);
   });
 
   test("robots.txt chặn khu quản trị và trỏ sitemap", async ({ request }) => {

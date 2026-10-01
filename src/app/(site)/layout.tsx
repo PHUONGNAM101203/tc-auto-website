@@ -1,4 +1,6 @@
 import { CanvasZoom } from "@/components/canvas/CanvasZoom";
+import { JsonLd } from "@/components/site/JsonLd";
+import { organizationLd, websiteLd } from "@/lib/structured-data";
 import { MotionLayer } from "@/components/motion/MotionLayer";
 
 /**
@@ -40,6 +42,12 @@ setTimeout(done,2000);
 export default function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="tc-root">
+      {/* Phap nhan va trang web — khai MOT lan cho moi trang trong nhom. Cac
+          mau khac (duong dan phan cap, san pham, bai viet) tro ve day bang
+          `@id`. Xem src/lib/structured-data.ts. */}
+      <JsonLd data={organizationLd()} />
+      <JsonLd data={websiteLd()} />
+
       <script dangerouslySetInnerHTML={{ __html: ZOOM_BOOTSTRAP }} />
       <CanvasZoom />
 

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { MobileNav } from "@/components/mobile/MobileNav";
 import { BackToTop } from "@/components/site/BackToTop";
+import { JsonLd } from "@/components/site/JsonLd";
+import { breadcrumbLd } from "@/lib/structured-data";
 import type { AuthoredPage as Page } from "@/lib/authored-pages";
 import { getPageSpec } from "@/lib/pages";
 
@@ -24,6 +26,15 @@ export function AuthoredPage({ page }: { page: Page }) {
     <>
       <MobileNav nav={nav} />
       <main className="tc-doc">
+        {/* Khai khop tung muc voi <nav> ngay duoi. */}
+        <JsonLd
+          data={breadcrumbLd([
+            { name: "Trang chủ", url: "/" },
+            { name: page.parentLabel, url: page.parent },
+            { name: page.title, url: `/${page.slug}` },
+          ])}
+        />
+
         <nav className="tc-doc-crumbs" aria-label="Đường dẫn">
           <Link href="/">Trang chủ</Link>
           <span aria-hidden="true">›</span>

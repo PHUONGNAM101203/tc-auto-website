@@ -1,10 +1,20 @@
 import type { MetadataRoute } from "next";
+import { getAuthoredPages } from "@/lib/authored-pages";
 import { getAllPageSpecs } from "@/lib/pages";
+import { listPublishedPosts } from "@/lib/posts";
+import { getProducts } from "@/lib/products";
 import { SITE } from "@/lib/site-config";
 import { getAllSubPages } from "@/lib/subpages";
 
-/** Sitemap day du: 6 trang chinh + 31 trang con. */
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * Sitemap DAY DU.
+ *
+ * Truoc day chi liet ke 6 trang chinh va 31 trang con — bo sot 17 trang san
+ * pham, 4 trang tu soan va toan bo bai viet. Google van tim ra chung qua lien
+ * ket noi bo, nhung cham hon han, va trang nao it lien ket tro toi thi co khi
+ * khong bao gio duoc thu thap.
+ */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = SITE.url.replace(/\/$/, "");
   const now = new Date();
 
@@ -23,5 +33,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: Math.max(0.4, 0.8 - (page.slug.split("/").length - 2) * 0.15),
   }));
 
-  return [...mains, ...subs];
+  const products = getProducts().map((product) => ({
+    url: `${base}${product.route}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const authored = getAuthoredPages().map((page) => ({
+    url: `${base}/${page.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  // Bai viet den tu CSDL. Chua cau hinh Supabase thi `listPublishedPosts` tra
+  // mang rong chu khong nem — sitemap van sinh duoc nhu thuong.
+  const posts = (await listPublishedPosts()).map((post) => ({
+    url: `${base}/bai-viet/${post.slug}`,
+    lastModified: post.publishedAt ? new Date(post.publishedAt) : now,
+    changeFrequency: "yearly" as const,
+    priority: 0.5,
+  }));
+
+  return [...mains, ...subs, ...products, ...authored, ...posts];
 }

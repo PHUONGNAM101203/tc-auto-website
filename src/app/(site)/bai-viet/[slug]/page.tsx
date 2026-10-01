@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/site/JsonLd";
 import { PostArticle } from "@/components/site/PostArticle";
+import { articleLd, breadcrumbLd } from "@/lib/structured-data";
 import { getPublishedPost } from "@/lib/posts";
 import { SITE } from "@/lib/site-config";
 
@@ -50,5 +52,27 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
-  return <PostArticle post={post} />;
+  return (
+    <>
+      {/* Mau Article + duong dan phan cap dat o TUYEN chu khong trong
+          <PostArticle />: cai do dung chung voi khung xem truoc trong quan tri,
+          ma ban nhap thi khong duoc khai la bai da xuat ban. */}
+      <JsonLd
+        data={articleLd({
+          title: post.title,
+          excerpt: post.excerpt,
+          url: `/bai-viet/${post.slug}`,
+          image: post.coverUrl,
+          publishedAt: post.publishedAt,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Trang chủ", url: "/" },
+          { name: post.title, url: `/bai-viet/${post.slug}` },
+        ])}
+      />
+      <PostArticle post={post} />
+    </>
+  );
 }

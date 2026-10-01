@@ -13,6 +13,8 @@ import {
   GALLERY_STEP,
   getGalleryPhotos,
 } from "@/lib/gallery";
+import { JsonLd } from "@/components/site/JsonLd";
+import { breadcrumbLd } from "@/lib/structured-data";
 import { OverlapCards } from "@/components/site/OverlapCard";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { hasRelatedStrip } from "@/lib/related-strip";
@@ -96,7 +98,18 @@ export function SubPageShell({
           {hasRelatedStrip(page.slug) ? <RelatedStrip /> : null}
 
           {/* Duong dan phan cap — an voi mat thuong (thiet ke khong co breadcrumb)
-            nhung screen reader va cong cu tim kiem van doc duoc. */}
+            nhung screen reader va cong cu tim kiem van doc duoc.
+            Mau JSON-LD ngay duoi phai KHOP tung muc voi danh sach nay: Google
+            doi du lieu khai bao trung voi thu nguoi dung thay tren trang. */}
+          <JsonLd
+            data={breadcrumbLd([
+              ...page.breadcrumb.map((crumb) => ({
+                name: crumb.label,
+                url: crumb.href,
+              })),
+              { name: page.title, url: page.route },
+            ])}
+          />
           <nav className="tc-sr" aria-label="Đường dẫn">
             <ol>
               {page.breadcrumb.map((crumb) => (

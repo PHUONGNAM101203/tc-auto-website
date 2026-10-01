@@ -3,6 +3,8 @@ import { assetUrl } from "@/lib/asset-url";
 import { SITE_CONTACT } from "@/lib/site-contact";
 import { categoryOf, otherProducts, type Product } from "@/lib/products";
 import { getProductSpecs } from "@/lib/product-specs";
+import { JsonLd } from "@/components/site/JsonLd";
+import { breadcrumbLd, productLd } from "@/lib/structured-data";
 
 /**
  * Trang chi tiet mot san pham man hinh o to.
@@ -44,6 +46,19 @@ export function ProductPage({ product }: { product: Product }) {
 
   return (
     <main className="tc-doc tc-prod">
+      {/* Thong so di kem vao `additionalProperty` cua mau San pham — do cung
+          la cho may tra loi bang AI doc. Khong khai gia vi khong co bang gia.
+          Duong dan phan cap khai khop tung muc voi <nav> ngay duoi. */}
+      <JsonLd data={productLd(product)} />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Trang chủ", url: "/" },
+          { name: category.parentLabel, url: category.parent },
+          { name: category.title, url: `/${category.slug}` },
+          { name: product.name, url: product.route },
+        ])}
+      />
+
       <nav className="tc-doc-crumbs" aria-label="Đường dẫn">
         <Link href="/">Trang chủ</Link>
         <span aria-hidden="true">›</span>
