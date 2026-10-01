@@ -14,6 +14,7 @@ import {
   stripWidth,
   visibleCount,
 } from "@/lib/solution-cards";
+import { getAuthoredSlugs } from "@/lib/authored-pages";
 import { getProducts } from "@/lib/products";
 import { getSpotArticles } from "@/lib/spot-articles";
 import { getCtaSpots, getCtaStats } from "@/lib/cta-links";
@@ -114,6 +115,10 @@ describe("nút xem thêm", () => {
       ...getAllSubPages().map((p) => p.route),
       ...getProducts().map((p) => p.route),
       ...getSpotArticles().map((a) => a.route),
+      // Va cac trang do ta tu soan cho cho thiet ke khong ve — vi du trang
+      // "Loa DEGO": ban thiet ke de ten mau "Loa ..." cho nam the va dan nham
+      // ca sau doan mo ta sang chu cua phim 3M, nen sau nut deu tro ve day.
+      ...getAuthoredSlugs().map((slug) => `/${slug}`),
     ]);
     for (const page of getAllSubPages()) {
       for (const spot of getCtaSpots(page.slug)) {

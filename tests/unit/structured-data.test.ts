@@ -102,6 +102,15 @@ describe("dữ liệu có cấu trúc", () => {
       expect(brand("s300-plus-qled-2k-dts")).toBe("Winca");
       expect(brand("3m-ceramic-crystalline")).toBe("3M");
       expect(brand("nano-sun-blue")).toBe("Nano Sun");
+      // DEGO chi xuat hien tren trang tu soan, khong co trong products.json.
+      expect(
+        (
+          authoredProductLd(
+            { name: "DEGO ST6.2C", tagline: "", specs: [] },
+            "/giai-phap/loa/dego",
+          ).brand as { name: string }
+        ).name,
+      ).toBe("DEGO");
     });
 
     it("dòng trên trang tự soạn trỏ về chính trang đó", () => {

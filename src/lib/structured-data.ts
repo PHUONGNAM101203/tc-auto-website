@@ -156,6 +156,9 @@ function brandOf(name: string): string {
   if (upper.startsWith("BRAVO")) {
     return "Bravo";
   }
+  if (upper.startsWith("DEGO")) {
+    return "DEGO";
+  }
   if (/^S\d/.test(upper)) {
     return "Winca";
   }

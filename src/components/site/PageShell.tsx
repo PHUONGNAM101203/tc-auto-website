@@ -22,6 +22,8 @@ import { getMobileBlocks } from "@/lib/mobile-blocks";
 import { BackToTop } from "@/components/site/BackToTop";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { isSearchBaked } from "@/lib/search-baked";
+import { getMainHotspots } from "@/lib/main-hotspots";
+import Link from "next/link";
 import type { PageSpec } from "@/lib/types";
 
 interface PageShellProps {
@@ -86,6 +88,25 @@ export function PageShell({ page }: PageShellProps) {
           {page.contactForm ? (
             <ContactForm y={page.contactForm.y} sourcePage={page.route} />
           ) : null}
+
+          {/* Vai dong chu ve chet trong anh nen van phai bam duoc — vi du
+              "› XEM THÊM" duoi muc DEGO. Xem src/lib/main-hotspots.ts. */}
+          {getMainHotspots(page.slug).map((spot) => (
+            <Link
+              key={`${spot.x}-${spot.y}`}
+              href={spot.href}
+              prefetch={false}
+              className="tc-hotspot rv"
+              data-rv="scale"
+              aria-label={spot.label}
+              style={{
+                left: `${spot.x}px`,
+                top: `${spot.y}px`,
+                width: `${spot.w}px`,
+                height: `${spot.h}px`,
+              }}
+            />
+          ))}
 
           {/* Ba bieu tuong mang xa hoi ve san trong chan trang — o bam trong suot. */}
           <FooterSocial pageHeight={page.height} />

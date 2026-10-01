@@ -326,6 +326,215 @@
         "label": "Tìm hiểu văn hoá TC",
         "href": "/nhan-su/van-hoa-tc"
       }
+    },
+    {
+      "slug": "giai-phap/loa/dego",
+      "section": "giai-phap",
+      "parent": "/giai-phap/loa",
+      "parentLabel": "Loa nội thất",
+      "label": "LOA NỘI THẤT",
+      "title": "Loa DEGO",
+      "heading": "Âm thanh chuẩn mực. Trải nghiệm xứng tầm.",
+      "lead": "DEGO tại TC AUTO mang đến trải nghiệm âm thanh chuẩn Đức với khả năng tái tạo âm sắc tự nhiên, chi tiết và cân bằng. Từng hệ thống được lựa chọn và nâng cấp phù hợp với không gian xe, để mỗi giai điệu trở nên sống động hơn và mỗi hành trình trở thành một trải nghiệm đáng nhớ.",
+      "blocks": [
+        {
+          "heading": "DEGO đến từ đâu",
+          "paragraphs": [
+            "DEGO là thương hiệu loa xe hơi của Ehmann & Partner GmbH — một nhà sản xuất loa của Đức, đặt tại Gundelsheim-Höchstberg, bang Baden-Württemberg.",
+            "Hãng công bố hơn ba mươi năm thiết kế và sản xuất loa, và ngoài dòng mang tên mình còn làm loa theo đặt hàng cho các hãng xe Đức: bộ loa lắp theo xe, và cả micro đàm thoại rảnh tay."
+          ]
+        },
+        {
+          "heading": "Vì sao chọn một bộ loa thay vì nâng công suất",
+          "paragraphs": [
+            "Khoang xe là một phòng nghe rất khó: kính phản xạ, nhựa hấp thụ, chỗ ngồi lệch hẳn sang một bên so với hai loa. Tăng âm lượng không chữa được những điều đó — chỉ làm chỗ dở to lên.",
+            "Một bộ loa phân tần chia dải cho từng củ loa làm đúng việc của nó: loa tép lo dải cao, loa trung lo giọng hát, loa trầm lo phần nền. Nhờ vậy âm hình nằm đúng chỗ và giọng hát không bị lẫn vào tiếng nhạc nền."
+          ]
+        },
+        {
+          "heading": "Lắp ở TC AUTO",
+          "paragraphs": [
+            "TC AUTO lắp theo không gian thực tế của từng dòng xe chứ không theo một cấu hình chung: vị trí đặt loa tép, cách xử lý cánh cửa, và mức tinh chỉnh trên bộ xử lý tín hiệu đều khác nhau giữa các xe.",
+            "Hệ sinh thái DEGO đi từ loa tép, loa trung, loa trầm đến loa siêu trầm, ampli và bộ xử lý tín hiệu — nên có thể bắt đầu từ một bộ phân tần rồi nâng dần, không phải thay toàn bộ ngay từ đầu."
+          ]
+        }
+      ],
+      "products": {
+        "heading": "Các bộ loa DEGO",
+        "intro": "Thông số dưới đây do chính hãng công bố trên degoaudio.de. Trang này liệt kê các bộ loa phân tần (kits) — hãng còn có loa tép, loa trung, loa trầm, loa siêu trầm, ampli và bộ xử lý tín hiệu bán rời.",
+        "items": [
+          {
+            "name": "DEGO ST6.2C",
+            "tagline": "Bộ 2 đường tiếng 6,5 inch",
+            "specs": [
+              {
+                "label": "Kiểu bộ loa",
+                "value": "6,5 inch, 2 đường tiếng"
+              },
+              {
+                "label": "Công suất danh định",
+                "value": "50 W"
+              },
+              {
+                "label": "Trở kháng",
+                "value": "4 Ω"
+              },
+              {
+                "label": "Dải tần",
+                "value": "58 – 20.000 Hz"
+              },
+              {
+                "label": "Độ nhạy",
+                "value": "88 dB"
+              }
+            ]
+          },
+          {
+            "name": "DEGO ST6.3C",
+            "tagline": "Bộ 3 đường tiếng 6,5 inch",
+            "specs": [
+              {
+                "label": "Kiểu bộ loa",
+                "value": "6,5 inch, 3 đường tiếng"
+              },
+              {
+                "label": "Công suất danh định",
+                "value": "50 W"
+              },
+              {
+                "label": "Trở kháng",
+                "value": "4 Ω"
+              },
+              {
+                "label": "Dải tần",
+                "value": "58 – 20.000 Hz"
+              },
+              {
+                "label": "Độ nhạy",
+                "value": "88 dB"
+              }
+            ]
+          },
+          {
+            "name": "DEGO ST8.3C",
+            "tagline": "Bộ 3 đường tiếng 8 inch, dải trầm xuống sâu nhất",
+            "specs": [
+              {
+                "label": "Kiểu bộ loa",
+                "value": "8 inch, 3 đường tiếng"
+              },
+              {
+                "label": "Công suất danh định",
+                "value": "100 W"
+              },
+              {
+                "label": "Trở kháng",
+                "value": "4 Ω"
+              },
+              {
+                "label": "Dải tần",
+                "value": "40 – 20.000 Hz"
+              },
+              {
+                "label": "Độ nhạy",
+                "value": "86 dB"
+              }
+            ]
+          },
+          {
+            "name": "DEGO AS6.2C",
+            "tagline": "Bộ 2 đường tiếng 6,5 inch, công suất cao hơn dòng ST",
+            "specs": [
+              {
+                "label": "Kiểu bộ loa",
+                "value": "6,5 inch, 2 đường tiếng"
+              },
+              {
+                "label": "Công suất danh định",
+                "value": "60 W"
+              },
+              {
+                "label": "Trở kháng",
+                "value": "4 Ω"
+              },
+              {
+                "label": "Dải tần",
+                "value": "58 – 20.000 Hz"
+              },
+              {
+                "label": "Độ nhạy",
+                "value": "87 dB"
+              }
+            ]
+          },
+          {
+            "name": "DEGO AU6.2C",
+            "tagline": "Bộ 2 đường tiếng 6,5 inch",
+            "specs": [
+              {
+                "label": "Kiểu bộ loa",
+                "value": "6,5 inch, 2 đường tiếng"
+              },
+              {
+                "label": "Công suất danh định",
+                "value": "50 W"
+              },
+              {
+                "label": "Trở kháng",
+                "value": "4 Ω"
+              },
+              {
+                "label": "Dải tần",
+                "value": "68 – 20.000 Hz"
+              },
+              {
+                "label": "Độ nhạy",
+                "value": "87 dB"
+              }
+            ]
+          },
+          {
+            "name": "DEGO PO6.2C",
+            "tagline": "Bộ 2 đường tiếng 6,5 inch, dải trầm xuống sâu hơn",
+            "specs": [
+              {
+                "label": "Kiểu bộ loa",
+                "value": "6,5 inch, 2 đường tiếng"
+              },
+              {
+                "label": "Công suất danh định",
+                "value": "60 W"
+              },
+              {
+                "label": "Trở kháng",
+                "value": "4 Ω"
+              },
+              {
+                "label": "Dải tần",
+                "value": "55 – 20.000 Hz"
+              },
+              {
+                "label": "Độ nhạy",
+                "value": "88 dB"
+              }
+            ]
+          }
+        ],
+        "source": "Thông số lấy từ trang chính hãng DEGO Audio (degoaudio.de), mục Kits, đọc ngày 01/10/2026. Hãng không công bố công suất đỉnh, kích thước loa tép hay độ sâu lắp đặt, nên ở đây cũng không có những mục đó. Cần TC Auto xác nhận lại trước khi coi là số liệu bán hàng."
+      },
+      "pending": {
+        "heading": "Phần cần TC Auto bổ sung",
+        "items": [
+          "Giá bán và chính sách bảo hành của từng bộ.",
+          "Bộ nào TC Auto đang có sẵn hàng, bộ nào đặt theo yêu cầu.",
+          "Ảnh thực tế sau khi lắp trên xe, và ảnh sản phẩm của từng bộ.",
+          "Gợi ý cấu hình theo dòng xe, nếu muốn đưa lên trang."
+        ]
+      },
+      "cta": {
+        "label": "Liên hệ đội ngũ TC Auto",
+        "href": "/giai-phap#lien-he"
+      }
     }
   ]
 }

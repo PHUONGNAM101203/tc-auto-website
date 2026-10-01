@@ -37,6 +37,18 @@ TARGET = ROOT / "src" / "data" / "cta-links.json"
 #: thì nhấn vào nó phải ra bài viết liên quan" (30/09/2026).
 #:
 #: Khoa: (slug cua trang, tieu de cua muc). Ghi de len ket qua tu dong.
+#: Trang nao co dich den CHUNG cho moi nut chua khop duoc.
+#:
+#: Trang "Loa nội thất" xep sau the san pham, nhung ban thiet ke de ten mau
+#: ("Loa ...") cho nam the va dan nham ca sau doan mo ta — ca sau deu la chu
+#: cua phim 3M. OCR vi the doc ra toan manh vun, khong co gi de so khop. Ca
+#: sau nut deu tro ve trang "Loa DEGO" ta soan tu trang chinh hang
+#: (src/data/authored-pages.json), cho nao cung dung hon la xo mot doan chu
+#: ve phim cach nhiet ra giua trang loa.
+PAGE_FALLBACK: dict[str, str] = {
+    "giai-phap/loa": "/giai-phap/loa/dego",
+}
+
 MANUAL_TARGETS: dict[tuple[str, str], str] = {
     (
         "cong-nghe/tien-phong-cong-nghe",
@@ -463,6 +475,8 @@ def main() -> int:
             manual = MANUAL_TARGETS.get((slug, (title or "").strip()))
             if manual:
                 href, score = manual, 1.0
+            elif not href and slug in PAGE_FALLBACK:
+                href, score = PAGE_FALLBACK[slug], 1.0
 
             body, body_box = paragraphs_between(blocks, title_bottom, block["y"], block["x"])
             title, overflow = split_runon_title(title or "")
