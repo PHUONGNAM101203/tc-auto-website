@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PpfCarousel } from "@/components/site/PpfCarousel";
 import { StyleQuiz } from "@/components/site/StyleQuiz";
+import { ScreenTabs } from "@/components/site/ScreenTabs";
 import { DealerSearch } from "@/components/site/DealerSearch";
 import { Pagination } from "@/components/site/Pagination";
 import { ReadMore } from "@/components/site/ReadMore";
@@ -194,6 +195,8 @@ export default async function SubPage({
   // Trac nghiem "Phong cách chơi xe": thiet ke ve chet mot cau hoi vao anh kem
   // nut "câu tiếp theo" — khoi that thay the no o dung cho do.
   const isQuiz = slug === "trai-nghiem/ban-sac-rieng";
+  /** Trang co hai tab WINCA / BRAVO doi luoi san pham ngay tai cho. */
+  const isScreens = slug === "giai-phap/man-hinh";
   const pager = getPagination(slug);
   const hotspots = getHotspots(slug);
 
@@ -222,6 +225,7 @@ export default async function SubPage({
           {isDealerNetwork && <DealerSearch />}
           {isPpf && <PpfCarousel />}
           {isQuiz && <StyleQuiz />}
+          {isScreens && <ScreenTabs />}
           {pager && <Pagination model={pager} label={page.title} />}
           <ReadMore spots={getCtaSpots(slug).filter((spot) => !covered(spot))} posts={posts} />
         </>

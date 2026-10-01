@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MobileSubPage } from "@/components/mobile/MobileSubPage";
 import { productsIn } from "@/lib/products";
+import { getBravoCards } from "@/lib/screen-tabs";
 import { PPF_CARDS } from "@/lib/ppf-cards";
 import { SliceImage } from "@/components/canvas/SliceImage";
 import { ContactForm } from "@/components/site/ContactForm";
@@ -78,6 +79,7 @@ export function SubPageShell({
         the doc duoc khi thu xuong be rong dien thoai. */}
       <MobileSubPage
         products={productsIn(page.slug)}
+        screenTabs={screenTabsFor(page.slug)}
         cards={page.slug === "giai-phap/ppf" ? PPF_CARDS : []}
         page={page}
         nav={page.nav}
@@ -274,4 +276,30 @@ function ReadableText({
       })}
     </div>
   );
+}
+
+/**
+ * Hai danh sach cho tab WINCA / BRAVO tren ban dien thoai.
+ *
+ * Chi trang "Màn hình ô tô" co; cac trang khac tra `undefined` de ban mobile
+ * ve khoi san pham phang nhu cu.
+ */
+function screenTabsFor(slug: string) {
+  if (slug !== "giai-phap/man-hinh") {
+    return undefined;
+  }
+  return {
+    winca: productsIn(slug).map((product) => ({
+      id: product.slug,
+      name: product.name,
+      image: product.image,
+      href: product.route,
+    })),
+    bravo: getBravoCards().map((card) => ({
+      id: card.id,
+      name: card.name,
+      image: card.image,
+      href: card.href,
+    })),
+  };
 }

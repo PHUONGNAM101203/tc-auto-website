@@ -2,6 +2,10 @@ import { MobileFooter } from "@/components/mobile/MobileFooter";
 import Link from "next/link";
 import { MobileNav } from "@/components/mobile/MobileNav";
 import { MobileStrip } from "@/components/mobile/MobileStrip";
+import {
+  MobileScreenTabs,
+  type MobileScreenItem,
+} from "@/components/mobile/MobileScreenTabs";
 import { headingAlreadyShown } from "@/lib/mobile-heading";
 import { mergeByY } from "@/lib/mobile-order";
 import { MobileTree } from "@/components/mobile/MobileTree";
@@ -30,6 +34,7 @@ export function MobileSubPage({
   childPages,
   links = [],
   products = [],
+  screenTabs,
   cards = [],
   contact,
 }: {
@@ -61,6 +66,16 @@ export function MobileSubPage({
    * trang danh muc chang co san pham nao.
    */
   products?: readonly Product[];
+  /**
+   * Hai tab WINCA / BRAVO cua trang "Màn hình ô tô".
+   *
+   * Co no thi khoi san pham phang o duoi KHONG ve nua — neu khong thi cung
+   * mot danh sach hien hai lan.
+   */
+  screenTabs?: {
+    readonly winca: readonly MobileScreenItem[];
+    readonly bravo: readonly MobileScreenItem[];
+  };
   /**
    * Dai the 3M PPF. Ban desktop cho no truot ngang bang mui ten ve san trong
    * thiet ke; ban mobile khong co dai do nen phai xep lai, neu khong bon the
@@ -143,7 +158,11 @@ export function MobileSubPage({
         </section>
       ) : null}
 
-      {products.length > 0 ? (
+      {screenTabs ? (
+        <MobileScreenTabs winca={screenTabs.winca} bravo={screenTabs.bravo} />
+      ) : null}
+
+      {!screenTabs && products.length > 0 ? (
         <section className="tc-m-sec" aria-label="Sản phẩm">
           <ul className="tc-m-prods">
             {products.map((product) => (

@@ -957,3 +957,61 @@
   opacity: 0.7;
   align-self: center;
 }
+
+/* ---------- Hai tab WINCA / BRAVO, bản điện thoại ----------
+   Bản desktop vẽ hai tab lên thanh đã có sẵn trong ảnh nền; ở đây không có ảnh
+   nền nào nên phải tự vẽ. Xem MobileScreenTabs.tsx. */
+.tc-m-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tc-m-tab {
+  position: relative;
+  /* 44px là ngưỡng vùng chạm của cả Apple lẫn Google. */
+  min-height: 44px;
+  border: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.55);
+  font: 700 13px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.tc-m-tab[data-on] {
+  color: #fff;
+}
+
+.tc-m-tab[data-on]::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  bottom: -1px;
+  height: 2px;
+  background: var(--red-nav);
+}
+
+/* Lưới 2 cột theo yêu cầu của khách. Thẻ chỉ mang ảnh và tên — ở bề ngang
+   390px mỗi ô chỉ còn khoảng 170px, không đủ chỗ cho một đoạn mô tả. */
+.tc-m-prods-2 {
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 12px;
+}
+
+.tc-m-prods-2 strong {
+  margin-top: 8px;
+  font-size: 11.5px;
+  line-height: 1.4;
+}
+
+/* `contain` chứ không `cover`: ảnh hãng gói sẵn TÊN DÒNG ở mép trên, cắt theo
+   `cover` là mất chữ — đo được "S170+ QLED 2K" chỉ còn "S170+ QLED 2". */
+.tc-m-prods-2 img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #fff;
+}

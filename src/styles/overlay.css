@@ -2019,3 +2019,126 @@ a.tc-appfoot-btn:focus-visible {
   padding: 14px 0;
   margin: -14px 0;
 }
+
+/* ---------- Hai tab WINCA / BRAVO tren trang "Màn hình ô tô" ----------
+   Lưới Winca được VẼ CHẾT trong ảnh nền (chỉ 9 nút XEM THÊM là thật), nên tab
+   Bravo che kín vùng lưới rồi vẽ ba thẻ thật lên trên. Xem ScreenTabs.tsx. */
+.tc-screen-tab {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  /* Nét gạch dưới tab đang chọn đã vẽ sẵn dưới WINCA trong ảnh nền, nên tab
+     này KHÔNG tự vẽ thêm khung nào — đúng quy tắc khách đã chốt cho thanh
+     menu: một dấu hiệu duy nhất, không chồng hai lớp. */
+  outline: none;
+}
+
+.tc-screen-tab:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--red-nav);
+}
+
+/* Khi đang ở tab Bravo thì nét gạch dưới WINCA trong ảnh nền là sai — phủ một
+   vệt nền lên nó và vẽ lại dưới BRAVO. */
+:root[data-screen-tab="bravo"] .tc-screen-tab[data-on]::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  bottom: 0;
+  height: 2px;
+  background: var(--red-nav);
+  box-shadow: 0 0 12px 2px rgba(194, 35, 38, 0.55);
+}
+
+/* Nút XEM THÊM và phân trang là của lưới Winca — ở tab Bravo chúng trỏ sai chỗ. */
+:root[data-screen-tab="bravo"] .tc-readmore,
+:root[data-screen-tab="bravo"] .tc-pager {
+  display: none;
+}
+
+.tc-screen-swap {
+  position: absolute;
+  z-index: 3;
+}
+
+.tc-screen-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #03202f 0%, #0a3147 100%);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 18px 44px rgba(2, 17, 28, 0.45);
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease;
+}
+
+.tc-screen-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 56px rgba(2, 17, 28, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-screen-card {
+    transition: none;
+  }
+  .tc-screen-card:hover {
+    transform: none;
+  }
+}
+
+/* Ảnh hãng chụp trên nền trắng — giữ nguyên nền đó như các thẻ Winca.
+   `overflow: hidden` và `min-height: 0` là bắt buộc: ảnh hãng cao hơn khung
+   (chúng gói cả tên dòng lẫn dãy ô thông số), mà `place-items: center` cho
+   phép phần tử con TRÀN ra ngoài ô lưới — ảnh đổ xuống đè lên tên và mô tả
+   của thẻ. */
+/* KHONG dung `place-items: center` o day. No dat `align-items: center`, ma
+   voi align-items khac `stretch` thi o luoi duoc co theo NOI DUNG — nen
+   `height: 100%` cua anh thanh vong tron va roi ve chieu cao goc. Anh hang cao
+   hon khung nen tran xuong, bi `overflow: hidden` cat mat day o thong so:
+   nhin thi tuong dep, do ra moi biet anh cao 1020px trong mot khung 875px.
+   De `stretch` (mac dinh) thi o luoi dung bang khung, va `object-fit: contain`
+   lo viec can giua. */
+.tc-screen-art {
+  flex: none;
+  display: grid;
+  min-height: 0;
+  overflow: hidden;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tc-screen-art img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.tc-screen-card strong {
+  margin: 18px 22px 0;
+  font: 700 17px/1.3 "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.tc-screen-card em {
+  margin: 10px 22px 0;
+  font: italic 400 14px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.tc-screen-cta {
+  margin: auto 22px 22px;
+  align-self: flex-start;
+  padding: 9px 22px;
+  border-radius: 4px;
+  background: var(--red-nav);
+  font: 700 11.5px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.1em;
+}

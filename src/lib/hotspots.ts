@@ -102,17 +102,11 @@ const EXTRA_HOTSPOTS: Readonly<Record<string, readonly (DetectedRect & { href: s
     },
   ],
 
-  "giai-phap/man-hinh": [
-    { x: 0, y: 878, w: 720, h: 88, href: "/giai-phap/man-hinh", label: "Màn hình Winca" },
-    {
-      x: 720,
-      y: 878,
-      w: 720,
-      h: 88,
-      href: "/giai-phap/man-hinh/bravo",
-      label: "Màn hình Bravo",
-    },
-  ],
+  // Hai tab WINCA / BRAVO tren trang "Màn hình ô tô" KHONG con la lien ket.
+  // Khach yeu cau (01/10/2026) bam BRAVO thi luoi doi ngay tai cho nhu mot tab
+  // that, chu khong sang trang rieng. Xem src/components/site/ScreenTabs.tsx.
+  // Trang `/giai-phap/man-hinh/bravo` van giu — nut "XEM THÊM" cua tung the
+  // Bravo dan toi do de xem thong so day du.
 };
 
 /**
