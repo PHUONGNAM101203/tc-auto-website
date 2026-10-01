@@ -1,7 +1,18 @@
+import detected from "@/data/detected-buttons.json";
 import ppf from "@/data/ppf-cards.json";
 import tiles from "@/data/subpage-tiles.json";
 import { getPageText, type TextBlock } from "./subpage-text";
 import type { SubPageSpec } from "./subpage-schema";
+
+interface DetectedRect {
+  readonly x: number;
+  readonly y: number;
+  readonly w: number;
+  readonly h: number;
+}
+
+/** Toa do cac nut do tren anh thiet ke — xem tools/detect-buttons.py. */
+const DETECTED = detected as Readonly<Record<string, readonly DetectedRect[]>>;
 
 /**
  * Chuyen mot trang con (von la ANH) thanh noi dung doc duoc tren dien thoai.
@@ -58,6 +69,11 @@ function looksLikeHeading(text: string): boolean {
 /**
  * Chu tren cac NUT ve san trong anh. Chung da co nut that rieng, nen o phan
  * doc khong can lap lai — ma de nguyen thi OCR con dinh ca dau ">" phia truoc.
+ *
+ * Danh sach nay la luoi do PHU: cach bat chinh la theo VI TRI (xem
+ * `insideButton`). Go theo chu thi cu them mot nhan moi la lai sot — "XEM KHO
+ * ỨNG DỤNG" tung lot va hien ra thanh mot tieu de to giua bai (khach bao
+ * 01/10/2026).
  */
 const BUTTON_WORDS = [
   "TÌM HIỂU THÊM",
@@ -119,7 +135,26 @@ export function getMobileHero(slug: string): string | null {
   return TILES[slug]?.hero ?? null;
 }
 
-function usable(block: TextBlock, pageHeight: number): boolean {
+/**
+ * Khoi chu nay co nam TRONG mot nut da do duoc khong?
+ *
+ * Chac chan hon la do theo chu: `tools/detect-buttons.py` do toa do tung nut
+ * do tren anh thiet ke, nen khoi chu nao nam trong do deu la NHAN NUT — du
+ * nhan viet gi. Lay TAM cua khoi de so, vi OCR hay noi hop ra vai pixel.
+ */
+function insideButton(block: TextBlock, rects: readonly DetectedRect[]): boolean {
+  const cx = block.x + block.w / 2;
+  const cy = block.y + block.h / 2;
+  return rects.some(
+    (r) => cx >= r.x && cx <= r.x + r.w && cy >= r.y && cy <= r.y + r.h,
+  );
+}
+
+function usable(
+  block: TextBlock,
+  pageHeight: number,
+  buttons: readonly DetectedRect[],
+): boolean {
   if (block.y < HEADER_BOTTOM) {
     return false;
   }
@@ -127,6 +162,9 @@ function usable(block: TextBlock, pageHeight: number): boolean {
     return false;
   }
   if (block.x >= SIDE_COLUMN && block.y < HERO_BOTTOM) {
+    return false;
+  }
+  if (insideButton(block, buttons)) {
     return false;
   }
   const text = block.text.trim();
@@ -188,8 +226,9 @@ function toColumns(band: readonly TextBlock[]): TextBlock[][] {
  * thi moi dong thanh mot doan va doc rat roi.
  */
 export function getMobileBlocks(page: SubPageSpec): readonly MobileBlock[] {
+  const buttons = DETECTED[page.slug] ?? [];
   const usableBlocks = [...getPageText(page.slug).blocks]
-    .filter((block) => usable(block, page.height))
+    .filter((block) => usable(block, page.height, buttons))
     .sort((a, b) => a.y - b.y || a.x - b.x);
 
   const columns = toBands(usableBlocks).flatMap((band) => toColumns(band));

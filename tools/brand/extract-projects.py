@@ -42,8 +42,11 @@ SPEC = ROOT / "src" / "data" / "pages" / "giai-phap.json"
 SLICE_DIR = ROOT / "public" / "slices"
 
 CANVAS_WIDTH = 1440
-#: Dai da ve chet, can to trang de len. Noi rong vai pixel cho chac.
-SCRUB = (0, 5420, CANVAS_WIDTH, 288)
+#: Dai da ve chet, can to trang de len.
+#: Do do that cua dai ve chet: 5418..5709 (do bang do lech khoi mau nen navy,
+#: nguong 4/255 — nguong 10 la qua chat, con sot 2 vach mo o 5417 va 5708 ma
+#: khach da chi ra). Noi them 6px moi dau cho chac.
+SCRUB = (0, 5412, CANVAS_WIDTH, 304)
 #: Cho GIUA — cac cho khac do component tu suy ra tu day.
 CENTRE = {"x": 503, "y": 5424, "width": 416, "height": 280}
 

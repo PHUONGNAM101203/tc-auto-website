@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-2.webp?v=dc8ea7d3",
+      "src": "/slices/giai-phap-2.webp?v=4ca3a265",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 144408,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-2.webp?v=dc8ea7d3",
+          "src": "/slices/giai-phap-2.webp?v=4ca3a265",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-2@3x.webp?v=ed218b35",
+          "src": "/slices/giai-phap-2@3x.webp?v=850d376a",
           "scale": 3
         }
       ],
@@ -72,7 +72,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-3.webp?v=e01e2cf7",
+      "src": "/slices/giai-phap-3.webp?v=f3204c00",
       "y": 2700.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -80,11 +80,11 @@
       "bytes": 98872,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-3.webp?v=e01e2cf7",
+          "src": "/slices/giai-phap-3.webp?v=f3204c00",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-3@3x.webp?v=2ad98f71",
+          "src": "/slices/giai-phap-3@3x.webp?v=9b8aea81",
           "scale": 3
         }
       ],
@@ -116,7 +116,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-5.webp?v=8f3c41eb",
+      "src": "/slices/giai-phap-5.webp?v=24fcdf01",
       "y": 4500.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -124,11 +124,11 @@
       "bytes": 78754,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-5.webp?v=8f3c41eb",
+          "src": "/slices/giai-phap-5.webp?v=24fcdf01",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-5@3x.webp?v=03ba924e",
+          "src": "/slices/giai-phap-5@3x.webp?v=3eea91c6",
           "scale": 3
         }
       ],
@@ -138,7 +138,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-6.webp?v=712d7629",
+      "src": "/slices/giai-phap-6.webp?v=86d4cde7",
       "y": 5400.0,
       "displayHeight": 577.0,
       "intrinsicWidth": 2880,
@@ -146,11 +146,11 @@
       "bytes": 180912,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-6.webp?v=712d7629",
+          "src": "/slices/giai-phap-6.webp?v=86d4cde7",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-6@3x.webp?v=b9f6b730",
+          "src": "/slices/giai-phap-6@3x.webp?v=aa2bda93",
           "scale": 3
         }
       ],
