@@ -5,6 +5,7 @@ import { listPublishedPosts } from "@/lib/posts";
 import { getProducts } from "@/lib/products";
 import { getSpotArticles } from "@/lib/spot-articles";
 import { CATALOGUE_ROUTE } from "@/components/site/CataloguePage";
+import { FAQ_ROUTE } from "@/components/site/FaqPage";
 import { SITE } from "@/lib/site-config";
 import { getAllSubPages } from "@/lib/subpages";
 
@@ -55,6 +56,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "weekly" as const,
       priority: 0.8,
+    },
+    {
+      url: `${base}${FAQ_ROUTE}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     },
   ];
 

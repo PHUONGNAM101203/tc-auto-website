@@ -477,3 +477,29 @@
 .tc-doc-para:last-of-type {
   margin-bottom: 0;
 }
+
+/* ---------- Cau hoi thuong gap ---------- */
+.tc-faq {
+  display: grid;
+  gap: 14px;
+  margin: 34px 0 0;
+}
+
+.tc-faq-item {
+  padding: clamp(16px, 3.5vw, 22px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: #061726;
+}
+
+.tc-faq-item h2 {
+  margin: 0;
+  font: 700 clamp(15px, 2.4vw, 17px) / 1.45 "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.tc-faq-item p {
+  margin: 10px 0 0;
+  font: 400 clamp(14px, 2vw, 15px) / 1.75 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.76);
+}
