@@ -16,9 +16,14 @@ import { offsetFrom, type Box, type CoverPhoto } from "@/lib/coverflow";
  * Bac duoc tinh CHAY VONG (xem offsetFrom): bam tam nao cung chi truot mot
  * buoc ngan nhat, khong bao gio keo ca dai tu dau nay sang dau kia.
  *
- * Thiet ke ve cac tam ngoai bi NGHIENG di. Khong dung lai duoc dieu do: anh
- * goc trong bo tai nguyen la anh phang, ma lam nghieng bang CSS 3D thi chu
- * tren bang hieu trong anh bi meo. Nen o day chung chi nho dan va mo dan.
+ * Thiet ke ve cac tam ngoai NGHIENG di cho co chieu sau. Khach yeu cau giu
+ * dung kieu do: "vẫn theo phong cách chiều sâu như vậy nhé chứ không nằm hàng
+ * ngang" (01/10/2026). Nen cac tam ngoai duoc xoay quanh truc doc bang CSS 3D,
+ * cong voi nho dan va mo dan.
+ *
+ * Goc xoay giu O MUC VUA: 20 do du thay chieu sau ma chu tren bang hieu trong
+ * anh chua bi meo den muc kho doc. Day chinh la ly do truoc day khong xoay —
+ * nhung bo han chieu sau thi dai thanh mot hang phang, khong giong thiet ke.
  *
  * Dung chung cho hai cho: dai "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" (trang Giai phap) va
  * dai "BỘ SƯU TẬP" (trang Khoảnh khắc).
@@ -28,6 +33,10 @@ import { offsetFrom, type Box, type CoverPhoto } from "@/lib/coverflow";
 const SHRINK = 0.085;
 /** Va mo di bao nhieu. */
 const FADE = 0.28;
+/** Goc xoay quanh truc doc cho moi bac, tinh bang do. */
+const TILT = 20;
+/** Do sau cua phoi canh. Cang nho thi hieu ung cang manh. */
+const DEPTH = 1600;
 
 interface CoverflowProps {
   readonly photos: readonly CoverPhoto[];
@@ -60,7 +69,13 @@ export function Coverflow({ photos, centre, step, label }: CoverflowProps) {
       {...hoverProps}
       data-playing={playing || undefined}
       className="tc-cover"
-      style={{ left: 0, top: centre.y, width: 1440, height: centre.height }}
+      style={{
+        left: 0,
+        top: centre.y,
+        width: 1440,
+        height: centre.height,
+        perspective: `${DEPTH}px`,
+      }}
       role="group"
       aria-roledescription="băng chuyền"
       aria-label={label}
@@ -78,7 +93,10 @@ export function Coverflow({ photos, centre, step, label }: CoverflowProps) {
               left: centre.x,
               width: centre.width,
               height: centre.height,
-              transform: `translateX(${off * step}px) scale(${scale})`,
+              // Xoay quanh truc doc cho co chieu sau; tam o giua khong xoay.
+              // Thu tu phep bien doi co y nghia: tinh tien TRUOC roi moi xoay,
+              // nho vay tam quay nam o chinh giua tam anh chu khong o giua dai.
+              transform: `translateX(${off * step}px) rotateY(${-off * TILT}deg) scale(${scale})`,
               opacity: 1 - Math.abs(off) * FADE,
               // Tam o giua phai nam TREN cac tam khac.
               zIndex: photos.length - Math.abs(off),

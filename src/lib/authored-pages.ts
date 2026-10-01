@@ -25,6 +25,18 @@ export interface AuthoredProduct {
   readonly specs: readonly { readonly label: string; readonly value: string }[];
   /** Noi thang khi hang chua cong bo thong so — dung doan. */
   readonly note?: string;
+  /**
+   * Anh gioi thieu, chep tu trang chinh hang.
+   *
+   * Bo thiet ke khong co frame Bravo nao va hai bo tai nguyen cung khong co
+   * anh Bravo, nen ba dong nay truoc day chi co bang thong so. Khach yeu cau
+   * lay anh tu trang hang (01/10/2026) — xem tools/brand/fetch-bravo-images.py.
+   */
+  readonly image?: string;
+  readonly imageWidth?: number;
+  readonly imageHeight?: number;
+  /** Trang cua hang, de ghi nguon ngay duoi anh. */
+  readonly imageSource?: string;
 }
 
 export interface AuthoredProducts {

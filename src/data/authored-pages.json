@@ -175,7 +175,11 @@
                 "value": "Bluetooth"
               }
             ],
-            "note": "Bảng thông số của hãng cho dòng này không nêu phiên bản Android, thông số âm thanh hay camera — phần mô tả tính năng có nhắc tới nhưng không kèm số liệu."
+            "note": "Bảng thông số của hãng cho dòng này không nêu phiên bản Android, thông số âm thanh hay camera — phần mô tả tính năng có nhắc tới nhưng không kèm số liệu.",
+            "image": "/products/bravo-b10-lite.webp",
+            "imageWidth": 731,
+            "imageHeight": 826,
+            "imageSource": "https://wincavn.com/man-hinh-dvd-android-o-to-bravo-lite"
           },
           {
             "name": "Bravo B100",
@@ -221,7 +225,11 @@
                 "label": "Tiện ích khác",
                 "value": "Cảm biến áp suất lốp; điều khiển giọng nói; nút bấm trên vô lăng"
               }
-            ]
+            ],
+            "image": "/products/bravo-b100.webp",
+            "imageWidth": 855,
+            "imageHeight": 826,
+            "imageSource": "https://wincavn.com/man-hinh-dvd-android-o-to-bravo-b100-plus"
           },
           {
             "name": "Bravo B100 PRO",
@@ -256,7 +264,11 @@
                 "value": "Vietmap Live, Google Maps, Navitel"
               }
             ],
-            "note": "Trang của hãng chưa công bố vi xử lý, RAM, bộ nhớ trong và phiên bản Android cho dòng này."
+            "note": "Trang của hãng chưa công bố vi xử lý, RAM, bộ nhớ trong và phiên bản Android cho dòng này.",
+            "image": "/products/bravo-b100-pro.webp",
+            "imageWidth": 817,
+            "imageHeight": 825,
+            "imageSource": "https://wincavn.com/man-hinh-android-bravo-b100-pro"
           }
         ],
         "source": "Thông số lấy từ trang chính hãng Winca Việt Nam: wincavn.com/man-hinh-dvd-android-o-to-bravo-lite (B10 LITE), wincavn.com/man-hinh-dvd-android-o-to-bravo-b100-plus (B100) và wincavn.com/man-hinh-android-bravo-b100-pro (B100 PRO), đọc ngày 30/09/2026. Chỗ nào hãng không nêu thì ở đây cũng để trống chứ không suy từ dòng khác. Cần TC Auto xác nhận lại trước khi coi là số liệu bán hàng."

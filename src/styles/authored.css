@@ -28,18 +28,14 @@
   color: rgba(255, 255, 255, 0.56);
 }
 
+/* KHONG gach chan. Khach chot 01/10/2026: "không cần cái gạch chân này đâu
+   để đây là họ hiểu rồi họ sẽ biết nhấn vào đấy". Phan bam duoc van phan biet
+   duoc bang DO SANG — chu trang 0,82 so voi muc dang xem 0,56 — va doi sang
+   do khi re chuot. */
 .tc-doc-crumbs a {
   color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
-  /* Gach chan mo san: o day khong co mau rieng cho lien ket nen neu khong
-     gach thi khong phan biet duoc cho nao bam duoc. */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-  padding-bottom: 1px;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.tc-doc-crumbs a:hover {
-  border-bottom-color: var(--red-nav);
+  transition: color 0.2s;
 }
 
 .tc-doc-crumbs a:hover {
@@ -254,4 +250,16 @@
   .tc-doc-products dl > div {
     grid-template-columns: 1fr;
   }
+}
+
+/* Anh gioi thieu cua tung dong san pham tren trang tu soan.
+   Nen TRANG vi anh cua hang chup tren nen trang — dat len nen navy ma khong
+   lot nen thi vien anh hien ra mot o vuong trang gat. */
+.tc-doc-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 16px 0 4px;
+  border-radius: 10px;
+  background: #fff;
 }

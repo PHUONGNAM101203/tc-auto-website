@@ -16,6 +16,12 @@ Hinh hoc do tu chinh ban thiet ke: dai nam o y 5424..5704, nam cho lan luot o
 x 0..100 / 112..492 / 503..919 / 929..1310 / 1322..1440 — cho giua rong hon,
 hai cho ngoai cung bi canh canvas cat.
 
+Bo nay PHAI nam trong chuoi `npm run parse:prototype`. Truoc day no chi duoc
+chay tay mot lan: lan chay lai chuoi sau do sinh lai lat nen tu dau va dai ve
+chet quay tro lai, nam ngay duoi dai that — khach thay "các hình ảnh cứng ở
+phía sau" (01/10/2026). Gate so pixel khong bat duoc vi chinh vung do da duoc
+khai la ngoai le trong design-deviations.ts.
+
 Chay: python3 tools/brand/extract-projects.py
 """
 from __future__ import annotations

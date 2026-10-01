@@ -49,16 +49,17 @@
   gap: 10px;
 }
 
+/* KHONG gach chan — cung ly do voi duong dan phan cap, xem authored.css.
+   So dien thoai va dia chi thu von da nhin ra la bam duoc; phan khong bam
+   duoc (gio lam viec) thi mo hon han nen van phan biet duoc. */
 .tc-prod-contact a {
   color: #fff;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.2s;
 }
 
 .tc-prod-contact a:hover {
   color: var(--red-nav);
-  border-color: var(--red-nav);
 }
 
 .tc-prod-contact span[aria-hidden] {
