@@ -17,12 +17,15 @@ describe("bài viết mở ra từ XEM THÊM", () => {
   it("có bài, và bài nào cũng đủ tiêu đề lẫn thân bài", () => {
     expect(articles.length).toBeGreaterThanOrEqual(10);
     for (const article of articles) {
-      expect(article.title.trim().length, article.slug).toBeGreaterThan(8);
+      // "ĐÀO TẠO" (7 chu) van la mot tieu de that — xem MIN_TITLE trong
+      // tools/brand/build-spot-articles.py. Thuoc do that la SO KY TU cua
+      // than bai, kiem ngay duoi.
+      expect(article.title.trim().length, article.slug).toBeGreaterThanOrEqual(7);
       // Hai doan la du: co bai viet lien mach, 500 ky tu ma chi hai doan.
       // So KY TU moi la thuoc do that — xem MIN_CHARS trong bo sinh.
       expect(article.paragraphs.length, article.slug).toBeGreaterThanOrEqual(2);
       const chars = article.paragraphs.join(" ").length;
-      expect(chars, article.slug).toBeGreaterThanOrEqual(150);
+      expect(chars, article.slug).toBeGreaterThanOrEqual(300);
       for (const para of article.paragraphs) {
         expect(para.trim().length, article.slug).toBeGreaterThan(0);
       }

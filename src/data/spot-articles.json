@@ -19,6 +19,23 @@
       }
     },
     {
+      "slug": "dai-ly/ho-tro-tiep-thi/dao-tao",
+      "route": "/dai-ly/ho-tro-tiep-thi/dao-tao",
+      "parent": "/dai-ly/ho-tro-tiep-thi",
+      "parentPage": "dai-ly/ho-tro-tiep-thi",
+      "title": "ĐÀO TẠO",
+      "date": "2026-08-20",
+      "paragraphs": [
+        "ại TC AUTO, chúng tôi tin rằng một hệ thống đại lý vững mạnh bắt đầu từ một đội ngũ có chuyên môn, tư duy dịch vụ và khả năng thích ứng với thị trường. Vì vậy, đào tạo không chỉ là hoạt động hỗ trợ, mà là một phần trong hành trình đồng hành và phát triển cùng mỗi đại lý.",
+        "Nâng cao chuyên môn. Chuẩn hóa trải nghiệm.",
+        "TC AUTO xây dựng chương trình đào tạo toàn diện, giúp đội ngũ đại lý a hiểu sâu về sản phẩm, công nghệ và quy trình dịch vụ. Từ kiến thức sản phầm, kỹ thuật lắp đặt đền tư vần và chăm sóc khách hàng, môi nội dung đào tạo đều hương đên việc nãng cao năng lực thực tê và đám báo chát. lượng dịch vụ nhat quan tren toan hẹ thong."
+      ],
+      "spot": {
+        "x": 77.7,
+        "y": 1735.6
+      }
+    },
+    {
       "slug": "dai-ly/ho-tro-tiep-thi/cong-cu-ban-hang",
       "route": "/dai-ly/ho-tro-tiep-thi/cong-cu-ban-hang",
       "parent": "/dai-ly/ho-tro-tiep-thi",
@@ -136,6 +153,26 @@
       "image": "/articles/nhan-su__tuyen-dung__vi-tri-dang-tuyen__cong-ty-tnhh-tc-auto-tuyen-dung.webp",
       "imageWidth": 1153,
       "imageHeight": 664
+    },
+    {
+      "slug": "nhan-su/van-hoa-tc/van-hoa-tc",
+      "route": "/nhan-su/van-hoa-tc/van-hoa-tc",
+      "parent": "/nhan-su/van-hoa-tc",
+      "parentPage": "nhan-su/van-hoa-tc",
+      "title": "VĂN HOÁ TC",
+      "date": null,
+      "paragraphs": [
+        "Tại TC AUTO, chúng tôi tin rằng một thương hiệu có thể phát triển bền vững khi được xây dựng bởi những con người cùng chung giá trị và cùng nhìn về một hướng. Văn hóá TC AUTO bắt đầu từ sự chủ động, tinh thần trách nhiệm và khát vọng không ngừng tiến về phía trước.",
+        "Chúng tôi đề cao sự chủ động trong công việc, cởi mở trong tư duy và chân thành trong cách kết nối. Mỗi cá nhân được khuyến khích đưa ra ý tưởng, thử nghiệm những cách làm mới và không ngại bước ra khỏi vùng an toàn. Bởi chúng tôi tin rằng những thay đổi lớn thường bắt đầu từ một suy nghĩ khác biệt.",
+        "Ở TC AUTO, thành công không thuộc về riêng một cá nhân hay . một bộ phận. Đó là kết quả của sự phối hợp, chia sẻ và hô trợ lẫn nhau."
+      ],
+      "spot": {
+        "x": 833.2,
+        "y": 2398.6
+      },
+      "image": "/articles/nhan-su__van-hoa-tc__van-hoa-tc.webp",
+      "imageWidth": 1521,
+      "imageHeight": 720
     },
     {
       "slug": "trai-nghiem/ban-sac-rieng/cac-phong-cach",

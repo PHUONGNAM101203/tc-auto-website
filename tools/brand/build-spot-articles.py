@@ -40,9 +40,12 @@ OUT = ROOT / "src" / "data" / "spot-articles.json"
 #: Dem doan SAU khi da boc dong ngay thang ra: co bai gop lai chi con hai doan
 #: nhung van du 500 ky tu — do la bai that, chi la viet lien mach. So KY TU moi
 #: la thuoc do that; so doan chi de loai nhung manh vun mot dong cua OCR.
-MIN_TITLE = 12
+#: Tieu de ngan nhu "ĐÀO TẠO" (7 chu) hay "VĂN HOÁ TC" (10) van la tieu de
+#: that. Nguong 12 truoc day loai oan ca hai. Bu lai bang MIN_CHARS: manh vun
+#: OCR tren the san pham chi co 112-194 ky tu, con bai that thi 387-697.
+MIN_TITLE = 7
 MIN_LINES = 2
-MIN_CHARS = 150
+MIN_CHARS = 300
 
 #: Tieu de la manh vun OCR hoac chu mau — khong phai ten bai.
 JUNK = re.compile(r"^(bai viet|ten bai viet|winca|data|sam|sava|3m|autorilm|'autorilm|\d)", re.I)
