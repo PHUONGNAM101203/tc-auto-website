@@ -1,0 +1,446 @@
+{
+  "_doc": "Thong so ky thuat cua man hinh Winca, chep tu trang chinh hang wincavn.com (30/09/2026) theo yeu cau cua khach. Moi muc deu ghi kem duong dan nguon de kiem lai duoc. KHONG tu suy dien: cho nao trang hang khong noi thi khong co dong do. Vi du trang S200+ Pro ghi Android 10.0 trong khi ban khong Pro ghi 12.0 — chep dung nhu hang cong bo chu khong tu 'sua cho hop ly'.",
+  "products": {
+    "s150-plus-qled": {
+      "source": "https://wincavn.com/man-hinh-android-s150-qled",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "1280 × 720 pixels"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 10.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 8581, 8 nhân, 1.6 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "2 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth, CarPlay"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình và camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel"
+        },
+        {
+          "label": "Tiện ích khác",
+          "value": "Cảm biến áp suất lốp; điều khiển giọng nói; định vị xe 2 năm kể từ khi lắp đặt"
+        }
+      ]
+    },
+    "s170-plus-qled": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s170",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "1280 × 720 pixels"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 10.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 8581, 8 nhân, 1.6 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình và camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel"
+        },
+        {
+          "label": "Tiện ích khác",
+          "value": "Cảm biến áp suất lốp; điều khiển giọng nói qua nút vô lăng; định vị xe 2 năm kể từ khi lắp đặt"
+        }
+      ]
+    },
+    "s170-plus-qled-2k": {
+      "source": "https://wincavn.com/man-hinh-android-s170-qled-2k",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "2000 × 1200 pixels, QLED 2K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 10.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 8581, 8 nhân, 1.6 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth"
+        },
+        {
+          "label": "Điều khiển giọng nói",
+          "value": "Winca AI, nhận giọng ba miền"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình ghi hình kèm âm thanh; camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel (Vietmap Live cài sẵn)"
+        },
+        {
+          "label": "Tiện ích khác",
+          "value": "Cảm biến áp suất lốp; định vị xe 2 năm"
+        }
+      ]
+    },
+    "s170-plus-qled-2k-pro-360": {
+      "source": "https://wincavn.com/man-hinh-android-s170-pro-qled-2k",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "2000 × 1200 pixels, QLED 2K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 10.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 8581, 8 nhân, 1.6 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Camera 360",
+          "value": "4 mắt camera SONY AHD 720, có ghi hình"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth"
+        },
+        {
+          "label": "Điều khiển giọng nói",
+          "value": "Winca AI, nhận giọng ba miền"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel (Vietmap Live cài sẵn)"
+        },
+        {
+          "label": "Tiện ích khác",
+          "value": "Cảm biến áp suất lốp; định vị xe 2 năm; điều khiển qua nút vô lăng"
+        }
+      ]
+    },
+    "s200-plus-qled-2k": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-qled-2k",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "2000 × 1200 pixels, QLED 2K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 12.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 7862s, 8 nhân, 2.0 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth"
+        },
+        {
+          "label": "Điều khiển giọng nói",
+          "value": "Winca AI"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình và camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel"
+        }
+      ]
+    },
+    "s200-plus-360-qled-2k": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-pro-qled-2k-360",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "2000 × 1200 pixels, QLED 2K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 10.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 7862S, 8 nhân, 2.0 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Camera 360",
+          "value": "4 mắt camera AHD Sony, hiển thị toàn cảnh 360°"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel (Vietmap Live cài sẵn, cập nhật trọn đời)"
+        }
+      ]
+    },
+    "s200-plus-13-inch-2k": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-13-inch",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 13 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "1920 × 1200 pixels, hỗ trợ video 4K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 12"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "CPU 7862S, 8 nhân, 2.0 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "CarPlay, Bluetooth"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình và camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel (Vietmap Live cài sẵn)"
+        }
+      ]
+    },
+    "s200-plus-13-inch-2k-pro-360": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-winca-s200-13-inch-pro-360",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 13 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "1920 × 1200 pixels, hỗ trợ video 4K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 12"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "CPU 7862S, 8 nhân, 2.0 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "32 GB"
+        },
+        {
+          "label": "Camera 360",
+          "value": "4 mắt camera Sony 1080p"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "CarPlay, Bluetooth"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel (Vietmap Live cài sẵn)"
+        }
+      ]
+    },
+    "s300-plus-qled-2k-dts": {
+      "source": "https://wincavn.com/man-hinh-android-s300-qled-2k-dts",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "Cảm ứng 9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "2000 × 1200 pixels, QLED 2K"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 13"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "Chip 7870, 8 nhân, 2.7 GHz"
+        },
+        {
+          "label": "RAM",
+          "value": "4 GB"
+        },
+        {
+          "label": "Bộ nhớ trong",
+          "value": "64 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "Chip âm thanh AKM7738; DSP tới 36 kênh; âm thanh vòm 5.1 Stereo"
+        },
+        {
+          "label": "Kết nối",
+          "value": "GPS, Bluetooth"
+        },
+        {
+          "label": "Điều khiển giọng nói",
+          "value": "Tích hợp AI"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình và camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel"
+        },
+        {
+          "label": "Tiện ích khác",
+          "value": "Cảm biến áp suất lốp; định vị xe"
+        }
+      ]
+    }
+  }
+}

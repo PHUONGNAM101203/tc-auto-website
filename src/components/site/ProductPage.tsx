@@ -2,6 +2,7 @@ import Link from "next/link";
 import { assetUrl } from "@/lib/asset-url";
 import { SITE_CONTACT } from "@/lib/site-contact";
 import { categoryOf, otherProducts, type Product } from "@/lib/products";
+import { getProductSpecs } from "@/lib/product-specs";
 
 /**
  * Trang chi tiet mot san pham man hinh o to.
@@ -19,21 +20,27 @@ import { categoryOf, otherProducts, type Product } from "@/lib/products";
  *
  * ── Cho nao con thieu thi noi thang ────────────────────────────────────────
  * Thiet ke khong co thong so ky thuat, gia hay chinh sach bao hanh cua tung
- * may. Khoi `tc-doc-pending` noi ro dieu do thay vi bia so — giong het cach hai
- * trang tu soan kia dang lam.
+ * may. Thong so nay da lay duoc tu trang chinh hang (xem src/lib/product-specs.ts);
+ * phan con lai thi khoi `tc-doc-pending` noi ro thay vi bia so.
  */
 
 /** Nhung gi chi TC Auto moi cung cap duoc. Khong tu dien. */
 const PENDING = [
-  "Thông số kỹ thuật: vi xử lý, RAM, bộ nhớ trong, hệ điều hành",
-  "Kích thước màn hình và danh sách dòng xe lắp vừa",
   "Giá bán và chính sách bảo hành của từng dòng máy",
+  "Danh sách dòng xe lắp vừa",
   "Ảnh thực tế sau khi lắp trên xe",
+];
+
+/** Khi chua co thong so cua may nay thi van phai noi ro la con thieu. */
+const PENDING_NO_SPECS = [
+  "Thông số kỹ thuật: vi xử lý, RAM, bộ nhớ trong, hệ điều hành",
+  ...PENDING,
 ];
 
 export function ProductPage({ product }: { product: Product }) {
   const category = categoryOf(product);
   const others = otherProducts(product.slug);
+  const tech = getProductSpecs(product.slug);
 
   return (
     <main className="tc-doc tc-prod">
@@ -65,10 +72,32 @@ export function ProductPage({ product }: { product: Product }) {
 
       <p className="tc-doc-lead">{product.description}</p>
 
+      {tech ? (
+        <section className="tc-prod-specs" aria-labelledby="tc-prod-specs-title">
+          <h2 id="tc-prod-specs-title">Thông số kỹ thuật</h2>
+          <dl>
+            {tech.specs.map((spec) => (
+              <div key={spec.label}>
+                <dt>{spec.label}</dt>
+                <dd>{spec.value}</dd>
+              </div>
+            ))}
+          </dl>
+          {/* Noi ro so lieu lay tu dau, de nguoi doc va TC Auto cung kiem duoc. */}
+          <p className="tc-doc-source">
+            Thông số do hãng công bố tại{" "}
+            <a href={tech.source} target="_blank" rel="noopener noreferrer">
+              wincavn.com
+            </a>
+            . Chỗ nào trang hãng không nêu thì ở đây cũng không có.
+          </p>
+        </section>
+      ) : null}
+
       <aside className="tc-doc-pending">
         <h2>Đang chờ TC Auto cung cấp</h2>
         <ul>
-          {PENDING.map((item) => (
+          {(tech ? PENDING : PENDING_NO_SPECS).map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>

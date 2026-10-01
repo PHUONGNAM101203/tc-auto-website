@@ -152,7 +152,7 @@
             "specs": [
               {
                 "label": "Màn hình",
-                "value": "9–10 inch, chống chói"
+                "value": "9 – 10 inch, chống chói"
               },
               {
                 "label": "Độ phân giải",
@@ -160,29 +160,22 @@
               },
               {
                 "label": "Vi xử lý",
-                "value": "8581, 8 nhân 1.6GHz"
+                "value": "CPU 8581, 8 nhân, 1.6 GHz"
               },
               {
-                "label": "RAM / Bộ nhớ",
-                "value": "2GB / 32GB"
+                "label": "RAM / Bộ nhớ trong",
+                "value": "2 GB / 32 GB"
               },
               {
-                "label": "Âm thanh",
-                "value": "IC Radio 8035, có DSP chỉnh âm"
+                "label": "IC radio",
+                "value": "8035"
               },
               {
-                "label": "Dẫn đường",
-                "value": "Vietmap Live trọn đời, Google Maps, Navitel"
-              },
-              {
-                "label": "Camera",
-                "value": "Hành trình và lùi"
-              },
-              {
-                "label": "Khác",
-                "value": "Ra lệnh giọng nói ba giọng vùng miền, cảm biến áp suất lốp"
+                "label": "Kết nối",
+                "value": "Bluetooth"
               }
-            ]
+            ],
+            "note": "Bảng thông số của hãng cho dòng này không nêu phiên bản Android, thông số âm thanh hay camera — phần mô tả tính năng có nhắc tới nhưng không kèm số liệu."
           },
           {
             "name": "Bravo B100",
@@ -190,7 +183,7 @@
             "specs": [
               {
                 "label": "Màn hình",
-                "value": "9–10 inch, chống chói"
+                "value": "9 – 10 inch, chống chói"
               },
               {
                 "label": "Độ phân giải",
@@ -198,30 +191,75 @@
               },
               {
                 "label": "Hệ điều hành",
-                "value": "Android 10"
+                "value": "Android 10.0"
               },
               {
                 "label": "Vi xử lý",
-                "value": "8581, 8 nhân 1.6GHz"
+                "value": "CPU 8581, 8 nhân, 1.6 GHz"
               },
               {
-                "label": "RAM / Bộ nhớ",
-                "value": "4GB / 32GB"
+                "label": "RAM / Bộ nhớ trong",
+                "value": "4 GB / 32 GB"
               },
               {
                 "label": "Âm thanh",
-                "value": "Có DSP chỉnh âm"
+                "value": "DSP điều chỉnh âm thanh"
+              },
+              {
+                "label": "Kết nối",
+                "value": "Bluetooth"
+              },
+              {
+                "label": "Camera",
+                "value": "Camera hành trình và camera lùi góc rộng"
+              },
+              {
+                "label": "Bản đồ",
+                "value": "Vietmap Live cài sẵn, Google Maps, Navitel"
+              },
+              {
+                "label": "Tiện ích khác",
+                "value": "Cảm biến áp suất lốp; điều khiển giọng nói; nút bấm trên vô lăng"
               }
             ]
           },
           {
             "name": "Bravo B100 PRO",
             "tagline": "Bản cao nhất của dòng Bravo",
-            "specs": [],
-            "note": "Winca có niêm yết dòng này nhưng chưa công bố thông số chi tiết."
+            "specs": [
+              {
+                "label": "Màn hình",
+                "value": "9 – 10 inch"
+              },
+              {
+                "label": "Camera 360",
+                "value": "4 mắt camera SONY, hiển thị toàn cảnh 360°"
+              },
+              {
+                "label": "Camera hành trình",
+                "value": "Ghi hình lịch trình di chuyển kèm âm thanh"
+              },
+              {
+                "label": "Âm thanh",
+                "value": "DSP điều chỉnh âm thanh"
+              },
+              {
+                "label": "Kết nối",
+                "value": "Bluetooth"
+              },
+              {
+                "label": "Điều khiển giọng nói",
+                "value": "Nhận giọng ba miền"
+              },
+              {
+                "label": "Bản đồ",
+                "value": "Vietmap Live, Google Maps, Navitel"
+              }
+            ],
+            "note": "Trang của hãng chưa công bố vi xử lý, RAM, bộ nhớ trong và phiên bản Android cho dòng này."
           }
         ],
-        "source": "Tên dòng và thông số ở trên lấy từ trang chính hãng Winca Việt Nam (wincavn.com). Cần TC Auto xác nhận lại trước khi coi là số liệu bán hàng."
+        "source": "Thông số lấy từ trang chính hãng Winca Việt Nam: wincavn.com/man-hinh-dvd-android-o-to-bravo-lite (B10 LITE), wincavn.com/man-hinh-dvd-android-o-to-bravo-b100-plus (B100) và wincavn.com/man-hinh-android-bravo-b100-pro (B100 PRO), đọc ngày 30/09/2026. Chỗ nào hãng không nêu thì ở đây cũng để trống chứ không suy từ dòng khác. Cần TC Auto xác nhận lại trước khi coi là số liệu bán hàng."
       }
     },
     {

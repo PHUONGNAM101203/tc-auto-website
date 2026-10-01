@@ -1845,3 +1845,56 @@ a.tc-appfoot-btn:focus-visible {
   letter-spacing: 0.02em;
   color: #fff;
 }
+
+/* ---------- Bang thong so ky thuat tren trang san pham ---------- */
+/* Thiet ke khong co bang nay; so lieu lay tu trang chinh hang theo yeu cau
+   cua khach (xem src/lib/product-specs.ts). Kieu chu va mau theo lop
+   `.tc-doc` chung voi cac trang tu soan. */
+.tc-prod-specs {
+  margin: 44px 0 0;
+}
+
+.tc-prod-specs dl {
+  margin: 18px 0 0;
+  display: grid;
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tc-prod-specs dl > div {
+  display: grid;
+  grid-template-columns: minmax(150px, 34%) 1fr;
+  gap: 1px;
+}
+
+.tc-prod-specs dt,
+.tc-prod-specs dd {
+  margin: 0;
+  padding: 13px 16px;
+  background: #061726;
+}
+
+.tc-prod-specs dt {
+  font: 600 14px/1.5 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.tc-prod-specs dd {
+  font: 400 15px/1.55 "Montserrat", sans-serif;
+  color: #fff;
+}
+
+/* Man hep: xep doc, nhan nam tren gia tri. */
+@media (max-width: 560px) {
+  .tc-prod-specs dl > div {
+    grid-template-columns: 1fr;
+  }
+
+  .tc-prod-specs dt {
+    padding-bottom: 0;
+    background: #061726;
+  }
+}

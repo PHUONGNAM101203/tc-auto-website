@@ -227,7 +227,7 @@ describe("vùng bấm dò từ ảnh", () => {
     }
   });
 
-  it("mọi hotspot trỏ tới trang có thật", () => {
+  it("mọi hotspot TRONG SITE trỏ tới trang có thật", () => {
     // Đích có thể là một trang con dựng từ frame thiết kế, một trang do chúng
     // ta tự soạn cho chỗ thiết kế không vẽ (ví dụ tab BRAVO), hoặc một trang
     // chi tiết sản phẩm (xem src/lib/products.ts).
@@ -238,9 +238,32 @@ describe("vùng bấm dò từ ảnh", () => {
     ]);
     for (const page of getAllSubPages()) {
       for (const spot of getHotspots(page.slug)) {
+        if (spot.external) {
+          continue;
+        }
         expect(routes.has(spot.href), `${page.slug} -> ${spot.href}`).toBe(true);
       }
     }
+  });
+
+  it("hotspot dẫn RA NGOÀI phải là tệp tải thật của hãng", () => {
+    // 30 nút "TẢI VỀ" trên hai trang kho ứng dụng dẫn thẳng tới tệp trên
+    // wincavn.com — khách gửi trang hãng và yêu cầu "bấm vào là tải thôi"
+    // (30/09/2026). Chúng là ngoại lệ DUY NHẤT của phép kiểm trên, nên phải
+    // ràng riêng chứ không chỉ bỏ qua.
+    let count = 0;
+    for (const page of getAllSubPages()) {
+      for (const spot of getHotspots(page.slug)) {
+        if (!spot.external) {
+          continue;
+        }
+        count += 1;
+        expect(spot.href, `${page.slug}`).toMatch(
+          /^https:\/\/wincavn\.com\/storage\/files\/.+\.(apk|xapk|bin|zip|rar|iap)$/i,
+        );
+      }
+    }
+    expect(count, "phải có đủ nút tải trên cả hai trang").toBe(29);
   });
 
   it("hotspot có kích thước hợp lý", () => {

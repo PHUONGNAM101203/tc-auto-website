@@ -46,21 +46,29 @@ test.describe("ba thẻ Ứng dụng", () => {
     // transform dung yen o 0 cho den het gio. Ro lai moi vong thi mot lan xe
     // dich khong lam hong ca phep do.
     const card = page.locator(".tc-card").first();
+    // Giu lai ket qua doc duoc NGAY TRONG vong doi, khong doc lai sau do.
+    //
+    // Doc lai sau khi `poll` xong la mot cua so ho: giua hai lan doc, chi can
+    // trang xe dich mot nhip (lat nen phia duoi vua tai xong) la con tro tuot
+    // ra khoi the, the ha xuong, va phep do thanh 0 du vua moi thay no nhac.
+    // Day la cho da lam test nay do that thuong — chay rieng thi qua, chay ca
+    // bo thi thinh thoang truot.
+    let seen: number[] = [];
     await expect
       .poll(
         async () => {
           await card.hover();
-          return (await shift())[0];
+          seen = await shift();
+          return seen[0];
         },
         { message: "ruột thẻ 0 phải nhấc lên" },
       )
       .toBeLessThan(-4);
 
     // Dung the duoc tro vao nhac len; hai the kia dung yen.
-    const after = await shift();
-    expect(after[0], "thẻ 0 phải nhấc").toBeLessThan(-4);
-    expect(after[1], "thẻ 1 không được nhấc").toBe(0);
-    expect(after[2], "thẻ 2 không được nhấc").toBe(0);
+    expect(seen[0], "thẻ 0 phải nhấc").toBeLessThan(-4);
+    expect(seen[1], "thẻ 1 không được nhấc").toBe(0);
+    expect(seen[2], "thẻ 2 không được nhấc").toBe(0);
   });
 
   test("khung thẻ không xê dịch khi rê chuột", async ({ page }) => {
