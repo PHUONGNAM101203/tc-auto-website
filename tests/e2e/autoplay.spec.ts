@@ -108,6 +108,42 @@ test.describe("băng hero trang chủ — 3 giây", () => {
     );
     expect(waited, "rê chuột thì phải đứng yên").toBe(Number.POSITIVE_INFINITY);
   });
+
+  test("mũi tên không sinh thêm khung nào khi rê chuột hay bấm", async ({ page }) => {
+    // Khach bao mui ten "bi de border khi hover vao va bam" (01/10/2026). Co
+    // HAI thu phai cung sach thi moi het: o nen do CSS to khi :hover (da bo), va
+    // mieng chep de trong chinh anh hero (xem verify:hero). Bai nay giu phan CSS.
+    await page.goto("/");
+    await page.waitForTimeout(300);
+
+    const arrow = page.locator(".tc-hero-arrow").first();
+    const bare = async (when: string) => {
+      const box = await arrow.evaluate((el) => {
+        const cs = getComputedStyle(el);
+        return {
+          bg: cs.backgroundColor,
+          border: parseFloat(cs.borderTopWidth),
+          shadow: cs.boxShadow,
+          // `outlineWidth` chu khong phai cai can doc: voi `outline: none`
+          // Chrome van tra ve be rong mac dinh (2.25px) vi be rong DUNG moi
+          // bang 0. Kieu net moi la cai noi len co ve hay khong.
+          outline: cs.outlineStyle,
+        };
+      });
+      expect(box.bg, `${when}: không được tô nền`).toMatch(/rgba\(0, 0, 0, 0\)|transparent/);
+      expect(box.border, `${when}: không được có viền`).toBe(0);
+      expect(box.shadow, `${when}: không được có bóng đổ`).toBe("none");
+      expect(box.outline, `${when}: không được có viền ngoài`).toBe("none");
+    };
+
+    await bare("lúc nghỉ");
+    await arrow.hover();
+    await page.waitForTimeout(350);
+    await bare("khi rê chuột");
+    await arrow.click();
+    await page.waitForTimeout(350);
+    await bare("sau khi bấm");
+  });
 });
 
 test.describe("các băng phía dưới — 5 giây", () => {

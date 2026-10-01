@@ -107,6 +107,11 @@
   position: fixed;
   inset: 62px 0 auto;
   z-index: 39;
+  /* Xoe het ca ba muc co trang con thi danh sach dai hon man hinh — khong gioi
+     han thi cac muc cuoi tran ra ngoai va khong cuon toi duoc. */
+  max-height: calc(100dvh - 62px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 10px 18px 22px;
   background: #041a2a;
   box-shadow: 0 24px 50px -20px rgba(0, 0, 0, 0.9);
@@ -122,17 +127,126 @@
   display: grid;
 }
 
-.tc-m-drawer a {
-  padding: 15px 4px;
+.tc-m-navhead {
+  display: flex;
+  align-items: stretch;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tc-m-navhead > a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 15px 4px;
   font: 700 14px/1 "Montserrat", sans-serif;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.86);
   text-decoration: none;
 }
 
-.tc-m-drawer a[data-active] {
+.tc-m-navhead > a[data-active] {
   color: var(--red-nav);
+}
+
+/* 44x44 — nguong vung cham cua ca Apple lan Google. Nut nay nam SAT canh mot
+   lien ket; nho hon thi bam truot sang lien ket, mo nham trang. */
+.tc-m-navtoggle,
+.tc-m-tree-toggle {
+  flex: none;
+  width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  color: var(--red-nav);
+  cursor: pointer;
+}
+
+.tc-m-navtoggle svg,
+.tc-m-tree-toggle svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.tc-m-navtoggle[aria-expanded="true"] svg,
+.tc-m-tree-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-m-navtoggle svg,
+  .tc-m-tree-toggle svg {
+    transition: none;
+  }
+}
+
+.tc-m-navbranch {
+  padding: 4px 0 10px;
+}
+
+/* ---------- Muc luc dang cay ---------- */
+.tc-m-tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+/* Vach doc chi ro nhanh con thuoc ve hang nao phia tren. */
+.tc-m-tree[data-level="1"],
+.tc-m-tree[data-level="2"] {
+  margin-left: 10px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(194, 35, 38, 0.38);
+}
+
+.tc-m-tree-row {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tc-m-tree-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 13px 4px 13px 16px;
+  min-height: 44px;
+  font: 600 14px/1.4 "Montserrat", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tc-m-tree-row:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tc-m-tree-leaf {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  color: var(--red-nav);
+}
+
+.tc-m-tree-branch {
+  margin-top: 2px;
+}
+
+/* Cac cap sau nho dan, de nhin mot cai la doan duoc do sau. */
+.tc-m-tree[data-level="1"] .tc-m-tree-link {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tc-m-tree[data-level="2"] .tc-m-tree-link {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .tc-m-scrim {
@@ -179,11 +293,16 @@
   text-transform: uppercase;
 }
 
-.tc-m-hero-text p {
-  margin-top: 8px;
-  font: italic 400 12.5px/1.5 "Montserrat", sans-serif;
+/* `:not(.tc-m-hero-title)` la phan quan trong nhat o day. Tua de hero cung la
+   mot the <p> (xem chu thich trong MobilePage), ma luat nay dung sau luat
+   .tc-m-hero-title o tren — bang do uu tien nen no THANG, keo tua de tu
+   clamp(30px, 9vw, 42px) xuong 12,5px tren ca sau trang chinh lan 31 trang con.
+   Do duoc tren may that: khoi chu cao 19px. */
+.tc-m-hero-text p:not(.tc-m-hero-title) {
+  margin-top: 10px;
+  font: italic 400 14px/1.5 "Montserrat", sans-serif;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.66);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 /* ---------- Tung muc ---------- */
@@ -357,20 +476,9 @@
   text-transform: uppercase;
 }
 
-.tc-m-children a {
-  display: block;
-  padding: 15px 16px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  font: 600 14px/1.4 "Montserrat", sans-serif;
-  color: #fff;
-  text-decoration: none;
-}
-
-.tc-m-children a::after {
-  content: " ›";
-  color: var(--red-nav);
-}
+/* Cac hang do <MobileTree> ve — xem phan "Muc luc dang cay" ben duoi. Luat
+   `a::after { content: " ›" }` cu da bo: mui ten nay la phan tu that, vi hang
+   nao co trang con thi no phai bam duoc. */
 
 /* ---------- Chan trang ---------- */
 /* Desktop ve chan trang chet vao anh nen; ban mobile dung lai bang phan tu that

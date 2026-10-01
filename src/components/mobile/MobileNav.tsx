@@ -4,6 +4,21 @@ import { asset } from "@/lib/asset-version";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { NavSpec } from "@/lib/types";
+import { MobileTree } from "@/components/mobile/MobileTree";
+import { buildTree, type TreeNode } from "@/lib/mobile-tree";
+
+/**
+ * Cay trang con cua tung muc cha, dung MOT lan khi nap module.
+ *
+ * Dung san thay vi tinh trong than component: MobileNav nam tren MOI trang,
+ * dung lai cay o moi lan ve lai la viec thua.
+ */
+const TREES: Readonly<Record<string, readonly TreeNode[]>> = Object.fromEntries(
+  ["trai-nghiem", "giai-phap", "cong-nghe", "dai-ly", "nhan-su"].map((slug) => [
+    `/${slug}`,
+    buildTree(slug),
+  ]),
+);
 
 /**
  * Thanh dieu huong cho dien thoai: logo + nut mo ngan keo.
@@ -13,6 +28,8 @@ import type { NavSpec } from "@/lib/types";
  */
 export function MobileNav({ nav }: { nav: readonly NavSpec[] }) {
   const [open, setOpen] = useState(false);
+  /** Muc nao trong ngan keo dang xoe trang con ra. Chi mot muc mot luc. */
+  const [branch, setBranch] = useState<string | null>(null);
 
   // Mo ngan keo thi khoa cuon nen, va Esc dong lai.
   useEffect(() => {
@@ -64,18 +81,61 @@ export function MobileNav({ nav }: { nav: readonly NavSpec[] }) {
         data-open={open || undefined}
         hidden={!open}
       >
+        {/* Moi muc cha deu co trang con, nhung truoc day ngan keo chi liet ke
+            SAU muc cha — muon biet trong "Công nghệ" co gi thi phai vao trang
+            do da. Nay bam mui ten la xoe ca cay ra ngay tai day. */}
         <nav aria-label="Menu chính">
-          {nav.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              prefetch={false}
-              data-active={link.active || undefined}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {nav.map((link) => {
+            const children = TREES[link.href] ?? [];
+            const id = `tc-m-branch-${link.href.replace(/[^a-z0-9]+/gi, "-")}`;
+            const expanded = branch === link.href;
+            return (
+              <div className="tc-m-navrow" key={link.href}>
+                <div className="tc-m-navhead">
+                  <Link
+                    href={link.href}
+                    prefetch={false}
+                    data-active={link.active || undefined}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                  {children.length > 0 ? (
+                    <button
+                      type="button"
+                      className="tc-m-navtoggle"
+                      aria-expanded={expanded}
+                      aria-controls={id}
+                      aria-label={
+                        expanded
+                          ? `Thu gọn ${link.label}`
+                          : `Mở ${children.length} trang trong ${link.label}`
+                      }
+                      onClick={() =>
+                        setBranch((current) => (current === link.href ? null : link.href))
+                      }
+                    >
+                      <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+                        <path
+                          d="M4 6 L8 10.5 L12 6"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  ) : null}
+                </div>
+                {children.length > 0 ? (
+                  <div id={id} className="tc-m-navbranch" hidden={!expanded}>
+                    <MobileTree nodes={children} />
+                  </div>
+                ) : null}
+              </div>
+            );
+          })}
         </nav>
       </div>
 

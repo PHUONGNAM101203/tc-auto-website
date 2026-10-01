@@ -84,13 +84,39 @@ test.describe("không để chữ hiện bóng đôi lúc tải", () => {
   }) => {
     // Chan het woff2 de gia lap mang hong.
     await page.route("**/*.woff2", (route) => route.abort());
-    const started = Date.now();
+
+    // Dong ho dat TRONG trang va tinh tu luc trinh duyet nhan byte dau tien,
+    // chu khong phai tu luc goi page.goto(). Dem bang Date.now() ben ngoai thi
+    // han 4 giay phai gom ca thoi gian may chu tra trang — chay song song 5
+    // luong thi rieng khoan do da hon 4 giay va bai bao sai oan, trong khi cai
+    // can do la nhip du phong 2 giay cua script noi tuyen.
+    await page.addInitScript(() => {
+      const root = document.documentElement;
+      const stamp = () => {
+        const nav = performance.getEntriesByType("navigation")[0] as
+          | PerformanceNavigationTiming
+          | undefined;
+        (window as unknown as { __tcFontWait?: number }).__tcFontWait =
+          performance.now() - (nav?.responseStart ?? 0);
+      };
+      const watcher = new MutationObserver(() => {
+        if (!root.classList.contains("tc-fontwait")) {
+          stamp();
+          watcher.disconnect();
+        }
+      });
+      watcher.observe(root, { attributes: true, attributeFilter: ["class"] });
+    });
+
     await page.goto("/", { waitUntil: "commit" });
     await page.waitForFunction(
       () => !document.documentElement.classList.contains("tc-fontwait"),
       null,
-      { timeout: 6000 },
+      { timeout: 10_000 },
     );
-    expect(Date.now() - started).toBeLessThan(4000);
+    const took = await page.evaluate(
+      () => (window as unknown as { __tcFontWait?: number }).__tcFontWait ?? 0,
+    );
+    expect(took, "nhịp dự phòng là 2 giây, cho dư 1 giây").toBeLessThan(3000);
   });
 });

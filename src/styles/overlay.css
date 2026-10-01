@@ -466,15 +466,18 @@
   display: block;
 }
 
+/* KHONG to nen o day. Thiet ke chi ve moi NET mui ten, khong co o nen nao —
+   phu rgba(255,255,255,0.08) len mot vung 40x50 bo tron thi hien ra mot cai
+   khung xam chong len anh, dung cai ma khach da bao bo o thanh menu. Phan hoi
+   khi ro chuot: net sang len va to ra mot chut, the la du. */
 .tc-hero-arrow:hover {
   color: #fff;
-}
-
-.tc-hero-arrow:hover {
-  background: rgba(255, 255, 255, 0.08);
   transform: scale(1.12);
 }
 
+/* Chi hien khi di BAN PHIM (Chrome khong bat :focus-visible cho nut bam bang
+   chuot), nen no khong phai cai khung khach thay luc bam. Giu lai vi bo han
+   dau hieu tieu diem la chan nguoi dung ban phim. */
 .tc-hero-arrow:focus-visible {
   box-shadow: 0 0 0 2px var(--red-nav);
 }

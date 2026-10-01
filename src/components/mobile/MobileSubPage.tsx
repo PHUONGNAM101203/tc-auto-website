@@ -1,6 +1,8 @@
 import { MobileFooter } from "@/components/mobile/MobileFooter";
 import Link from "next/link";
 import { MobileNav } from "@/components/mobile/MobileNav";
+import { MobileTree } from "@/components/mobile/MobileTree";
+import { buildTree } from "@/lib/mobile-tree";
 import { getMobileHero, type MobileBlock } from "@/lib/mobile-subpage";
 import type { SubPageSpec } from "@/lib/subpage-schema";
 import type { PpfCard } from "@/lib/ppf-cards";
@@ -51,6 +53,14 @@ export function MobileSubPage({
   // bang chu that, nen dung ban cat da bo cot do — neu khong tua de hien hai
   // lan, chong len nhau.
   const hero = getMobileHero(page.slug) ?? page.slices[0]?.src ?? null;
+
+  // Dung lai tu `childPages` chu khong goi buildTree(page.slug): ban desktop
+  // ve danh sach tu DUNG prop nay, hai ban phai liet ke y het nhau.
+  const tree = childPages.map((child) => ({
+    href: child.route,
+    label: child.title,
+    children: buildTree(child.slug, 2),
+  }));
 
   return (
     <div className="tc-m">
@@ -170,14 +180,13 @@ export function MobileSubPage({
         </nav>
       ) : null}
 
-      {childPages.length > 0 ? (
+      {/* Danh sach PHANG truoc day giau mat cap thu ba: dung o "Ứng dụng" thi
+          khong the biet duoi no con "Kho ứng dụng" va "Cập nhật và lỗi". Nay
+          hang nao con trang con thi co mui ten rieng, bam vao mo ngay tai cho. */}
+      {tree.length > 0 ? (
         <nav className="tc-m-children" aria-label="Nội dung trong mục này">
           <h2>Xem thêm trong mục này</h2>
-          {childPages.map((child) => (
-            <Link key={child.slug} href={child.route} prefetch={false}>
-              {child.title}
-            </Link>
-          ))}
+          <MobileTree nodes={tree} />
         </nav>
       ) : null}
 

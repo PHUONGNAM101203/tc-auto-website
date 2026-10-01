@@ -75,10 +75,17 @@ test.describe("dải BỘ SƯU TẬP", () => {
   test("TỰ CHẠY khi không ai đụng vào", async ({ page }) => {
     // Bo chuot ra khoi dai thi nhip tu chay tiep tuc.
     await page.mouse.move(10, 10);
+
+    // Doi `data-playing` xuat hien ROI moi bam gio. Truoc day bai nay bam gio
+    // ngay sau khi roi chuot, nen han 12 giay phai gom ca do tre cua
+    // onMouseLeave lan cua IntersectionObserver; chay mot minh thi du, chay
+    // song song 5 luong thi thinh thoang hut mot nhip 5 giay va bao sai oan.
+    await expect(page.locator(".tc-cover")).toHaveAttribute("data-playing", "true");
+
     const first = (await cards(page)).find((r) => r.centre)!.src;
     await expect
       .poll(async () => (await cards(page)).find((r) => r.centre)!.src, {
-        timeout: 12_000,
+        timeout: 20_000,
         message: "dải phải tự đổi ảnh",
       })
       .not.toBe(first);

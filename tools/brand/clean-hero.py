@@ -23,13 +23,20 @@ chu la bo han.
 Ba vung duoi day do bang cach so anh goc voi lat nen roi khoanh cac cho khac
 nhau (nguong 40/255).
 
-── Va van con phai xoa cac dieu khien ve san ──────────────────────────────
-Bang hero gio co dieu khien THAT (bam duoc, chay theo slide, dung duoc bang ban
-phim). Anh goc van co san vach chi muc va hai mui ten ve chet vao do — thanh ra
-ve doi, va vach sang cua anh nen (vach thu 3) khong khop voi vach sang that.
+── Khong con buoc xoa dieu khien ve san ───────────────────────────────────
+Bang hero co dieu khien THAT (bam duoc, chay theo slide, dung duoc bang ban
+phim). Hoi con cat anh tu lat nen `home-0` thi lat do nuong san vach chi muc va
+hai mui ten, nen phai chep mot dai pixel ben canh de len cho mat.
 
-Cach xoa: cac vung nay rat nho va nam tren nen troi/co muot, nen chi can chep
-mot dai pixel ngay ben canh de len la khong con dau vet.
+Tu khi doi sang NAM TAM ANH GOC thi khong con gi de xoa — da cat thu ca ba
+vung tren ca nam tam: troi, bien, co, deu sach, khong mot net dieu khien nao.
+Nhung buoc chep de van o lai, va chinh no ve ra mot O XAM: dai pixel chep tu
+ben canh khong noi lien mach voi van song nuoc / canh bien bao, de lai bon
+canh sac net dung bang khung cua nut. Khach bao "nut nay co border san trong
+hinh" (01/10/2026) — do la cai o do, khong phai CSS.
+
+Bai hoc: buoc don dep nao cung phai kem cach TU KIEM xem no con viec de lam
+khong. Buoc nay thanh ra tu tao ra dung cai no di xoa.
 
 PHAI chay SAU tools/patch-retina-main.py: logo va cot bieu tuong duoc dan lai
 TU LAT NEN, ma ban @3x cua lat do luc moi cat ra con nuong san chu — bo va kia
@@ -76,40 +83,6 @@ KEEP = (
     (78, 30, 236, 78),      # logo TC AUTO SOLUTIONS
     (1184, 495, 1364, 744),  # cot CLARITY / PROTECTION / COMFORT / CONFIDENCE
 )
-
-# Vung can xoa, tinh theo he toa do canvas 1440px (co noi rong vai pixel).
-#   vach chi muc : y 825.5..828, x 640..800
-#   mui ten trai : y 437..464,   x 32..40
-#   mui ten phai : y 432..464,   x 1400..1410
-# Huong lay pixel thay the la huong NAM SAU TRONG ANH, khong phai huong ra mep:
-# mui ten trai sat mep trai nen phai lay dai ben PHAI no, va nguoc lai. Lay ra
-# ngoai mep thi PIL tra ve vung den va de lai vet.
-REGIONS = [
-    # (x0, y0, x1, y1, lay pixel tu dau)
-    (632, 820, 808, 833, "above"),  # vach chi muc — nen co, doi cham theo chieu doc
-    (24, 428, 50, 470, "right"),    # mui ten trai — lay dai ngay ben phai
-    (1392, 424, 1418, 470, "left"), # mui ten phai — lay dai ngay ben trai
-]
-
-
-def scrub(image: Image.Image, scale: int) -> Image.Image:
-    out = image.copy()
-    for x0, y0, x1, y1, source in REGIONS:
-        left, top = round(x0 * scale), round(y0 * scale)
-        right, bottom = round(x1 * scale), round(y1 * scale)
-        width, height = right - left, bottom - top
-
-        if source == "above":
-            # Lay dai ngay PHIA TREN vung can xoa (troi/co doi rat cham theo chieu doc).
-            patch = out.crop((left, top - height, right, top))
-        elif source == "left":
-            patch = out.crop((left - width, top, left, bottom))
-        else:
-            patch = out.crop((right, top, right + width, bottom))
-
-        out.paste(patch, (left, top))
-    return out
-
 
 def fit(photo: Image.Image, width: int, height: int) -> Image.Image:
     """Phong anh cho PHU KIN khung roi cat bot phan thua o hai ben.
@@ -226,7 +199,7 @@ def build(name: str, source: str, scale: int) -> Image.Image:
         for x0, y0, x1, y1 in KEEP:
             box = (x0 * scale, y0 * scale, x1 * scale, y1 * scale)
             out.paste(backdrop.crop(box).convert("RGBA"), (box[0], box[1]))
-        return scrub(out.convert("RGB"), scale)
+        return out.convert("RGB")
 
     # Logo va cot bieu tuong la phan CHUNG cua bang hero, phai co tren MOI tam;
     # anh goc khong co chung va cung khong co phan tu that nao thay the.
@@ -238,7 +211,7 @@ def build(name: str, source: str, scale: int) -> Image.Image:
     for patch, at in patches:
         out.alpha_composite(patch, at)
 
-    return scrub(out.convert("RGB"), scale)
+    return out.convert("RGB")
 
 
 def main() -> int:

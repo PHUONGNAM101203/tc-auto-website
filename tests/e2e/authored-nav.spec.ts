@@ -20,7 +20,9 @@ test.describe("trang tự soạn", () => {
       await expect(page.locator(".tc-m-bar")).toBeVisible();
       await page.locator(".tc-m-burger").click();
 
-      const links = page.locator("#tc-m-drawer a");
+      // `.tc-m-navhead > a` chu khong phai moi the <a> trong ngan keo: tu khi
+      // moi muc cha xoe duoc cay trang con, ngan keo chua 36 lien ket.
+      const links = page.locator("#tc-m-drawer .tc-m-navhead > a");
       await expect(links, "phải có đủ 5 mục chính").toHaveCount(5);
       await links.first().click();
       await expect(page).toHaveURL(/\/trai-nghiem$/);

@@ -49,7 +49,7 @@ test.describe("liên kết trong trang — bản điện thoại", () => {
     await expect(page.locator(".tc-m-bar")).toBeVisible();
     await expect(page.locator(".tc-totop")).toHaveCount(1);
     await page.locator(".tc-m-burger").click();
-    await expect(page.locator("#tc-m-drawer a")).toHaveCount(5);
+    await expect(page.locator("#tc-m-drawer .tc-m-navhead > a")).toHaveCount(5);
   });
 
   test("không trang nào tràn ngang", async ({ page }) => {

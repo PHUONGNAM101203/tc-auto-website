@@ -34,13 +34,34 @@ test.describe("bản mobile", () => {
     });
   }
 
+  test("tiêu đề băng hero không bị luật khác kéo nhỏ lại", async ({ page }) => {
+    // Khach bao chu o bang dau trang "khá nhỏ" (01/10/2026). Do ra: 12,5px.
+    // Thu pham la `.tc-m-hero-text p` — tua de cung la the <p>, ma luat do dung
+    // SAU `.tc-m-hero-title` trong cung tep nen bang diem uu tien thi no thang.
+    // Day la loai loi khong con dau vet trong ma nguon, chi do moi thay.
+    for (const route of ["/", "/giai-phap", "/cong-nghe/ung-dung"]) {
+      await page.goto(route);
+      const title = page.locator(".tc-m-hero-title");
+      await expect(title).toBeVisible();
+      const [size, family] = await title.evaluate((el) => {
+        const cs = getComputedStyle(el);
+        return [parseFloat(cs.fontSize), cs.fontFamily];
+      });
+      expect(size, `${route}: tiêu đề hero phải lớn`).toBeGreaterThanOrEqual(28);
+      expect(family, `${route}: phải là chữ Cormorant của thiết kế`).toContain(
+        "Cormorant",
+      );
+    }
+  });
+
   test("menu mở ra đủ các mục và đóng được", async ({ page }) => {
     await page.goto("/");
     const burger = page.locator(".tc-m-burger");
     await expect(burger).toBeVisible();
 
     await burger.click();
-    const links = page.locator(".tc-m-drawer a");
+    // Chi dem muc cha — tung muc con xoe ra mot cay trang con rieng.
+    const links = page.locator(".tc-m-drawer .tc-m-navhead > a");
     await expect(links).toHaveCount(5);
 
     await links.first().click();

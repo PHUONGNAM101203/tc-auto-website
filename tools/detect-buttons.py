@@ -131,12 +131,19 @@ def validate() -> int:
     # thiet ke MOI — xem tools/patch-page-items.py. Cac trang con lai van doi
     # chieu voi bo khung cung doi voi prototype dang dung.
     #
-    # Lay nham bo la ham nay bao sai theo ca hai chieu: doi chieu trang Cong
-    # nghe (da bo mot nut) voi thiet ke cu thi bao "thua 1 nut", con doi chieu
-    # nam trang kia voi thiet ke moi thi bao lech vi tri.
+    # Lay nham bo la ham nay bao sai theo ca hai chieu: doi chieu mot trang da
+    # va voi thiet ke cu thi bao "thua nut", con doi chieu trang chua va voi
+    # thiet ke moi thi bao lech vi tri.
     #
-    # BO SLUG KHOI DAY khi da co ban export prototype moi.
-    PATCHED_TO_NEW_DESIGN = {"cong-nghe"}
+    # Bo nay HIEN DANG RONG. "cong-nghe" tung nam trong day vi thiet ke 28/09
+    # gop hai khoi lam mot va bo mot nut "TÌM HIỂU THÊM". Ngay 30/09 khach yeu
+    # cau giu lai tieu de phu cu nen muc va trong patch-page-items.py da bi go,
+    # ma dong nay thi quen — tu do den gio cua kiem van doi chieu trang Cong
+    # nghe voi thiet ke moi va bao sai 1 nut. Do lai: doi chieu voi khung cu
+    # thi khop ca 5/5.
+    #
+    # THEM SLUG VAO DAY khi va items theo thiet ke moi, va GO RA khi thoi va.
+    PATCHED_TO_NEW_DESIGN: set[str] = set()
 
     total_expected = total_matched = total_extra = 0
 
