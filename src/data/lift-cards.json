@@ -11,7 +11,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-hanh-trinh.webp",
+        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=ac1f7b36",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -25,7 +25,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp",
+        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=b1aa8526",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -39,7 +39,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-khoanh-khac.webp",
+        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=0eb05ef8",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -53,7 +53,7 @@
         "y": 927,
         "width": 258,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-phong-cach-song.webp",
+        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=60ac093e",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -67,7 +67,7 @@
         "y": 2066,
         "width": 262,
         "height": 330,
-        "src": "/lift/home-innovation.webp",
+        "src": "/lift/home-innovation.webp?v=0fb4d3ba",
         "group": "home"
       },
       {
@@ -79,7 +79,7 @@
         "y": 2066,
         "width": 262,
         "height": 330,
-        "src": "/lift/home-applications.webp",
+        "src": "/lift/home-applications.webp?v=68c4e08e",
         "group": "home"
       },
       {
@@ -91,7 +91,7 @@
         "y": 2066,
         "width": 262,
         "height": 330,
-        "src": "/lift/home-warranty.webp",
+        "src": "/lift/home-warranty.webp?v=d94b7ecf",
         "group": "home"
       },
       {
@@ -103,7 +103,7 @@
         "y": 2066,
         "width": 260,
         "height": 330,
-        "src": "/lift/home-experience-lab.webp",
+        "src": "/lift/home-experience-lab.webp?v=4b0574b3",
         "group": "home"
       }
     ],
@@ -117,7 +117,7 @@
         "y": 1574,
         "width": 358,
         "height": 495,
-        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp",
+        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=543818cc",
         "group": "dai-ly"
       },
       {
@@ -129,7 +129,7 @@
         "y": 1574,
         "width": 358,
         "height": 495,
-        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp",
+        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=4bf12546",
         "group": "dai-ly"
       }
     ],
@@ -143,7 +143,7 @@
         "y": 2205,
         "width": 429,
         "height": 697,
-        "src": "/lift/giai-phap-phim-3m.webp",
+        "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea",
         "group": "giai-phap"
       },
       {
@@ -155,7 +155,7 @@
         "y": 2205,
         "width": 429,
         "height": 697,
-        "src": "/lift/giai-phap-phim-nano-sun.webp",
+        "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739",
         "group": "giai-phap"
       },
       {
@@ -167,7 +167,7 @@
         "y": 2205,
         "width": 429,
         "height": 697,
-        "src": "/lift/giai-phap-phim-5do.webp",
+        "src": "/lift/giai-phap-phim-5do.webp?v=390d453c",
         "group": "giai-phap"
       },
       {
@@ -179,7 +179,7 @@
         "y": 4665,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-winca.webp",
+        "src": "/lift/giai-phap-man-hinh-winca.webp?v=5c8dcf2d",
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-man-hinh"
@@ -193,7 +193,7 @@
         "y": 4665,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-bravo.webp",
+        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=b2b78725",
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-man-hinh"
@@ -207,7 +207,7 @@
         "y": 2964,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-3m.webp",
+        "src": "/lift/giai-phap-ppf-3m.webp?v=718e86a6",
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf"
@@ -221,7 +221,7 @@
         "y": 3193,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-nano-sun.webp",
+        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=3dba15cd",
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf"
@@ -235,7 +235,7 @@
         "y": 3422,
         "width": 672,
         "height": 199,
-        "src": "/lift/giai-phap-ppf-5do.webp",
+        "src": "/lift/giai-phap-ppf-5do.webp?v=012e3a2d",
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf"

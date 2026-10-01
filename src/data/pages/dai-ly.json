@@ -28,7 +28,7 @@
       }
     },
     {
-      "src": "/slices/dai-ly-1.webp?v=d930be4e",
+      "src": "/slices/dai-ly-1.webp?v=f0124098",
       "y": 900.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -36,11 +36,11 @@
       "bytes": 67076,
       "srcSet": [
         {
-          "src": "/slices/dai-ly-1.webp?v=d930be4e",
+          "src": "/slices/dai-ly-1.webp?v=f0124098",
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-1@3x.webp?v=0c4c4016",
+          "src": "/slices/dai-ly-1@3x.webp?v=ad5edc9a",
           "scale": 3
         }
       ],
@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/dai-ly-2.webp?v=f6e766c5",
+      "src": "/slices/dai-ly-2.webp?v=c56e8208",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 76842,
       "srcSet": [
         {
-          "src": "/slices/dai-ly-2.webp?v=f6e766c5",
+          "src": "/slices/dai-ly-2.webp?v=c56e8208",
           "scale": 2
         },
         {
-          "src": "/slices/dai-ly-2@3x.webp?v=c2830c05",
+          "src": "/slices/dai-ly-2@3x.webp?v=1d45ad6d",
           "scale": 3
         }
       ],
