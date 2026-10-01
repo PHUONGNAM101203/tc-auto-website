@@ -26,6 +26,7 @@ const GATES = [
   "verify:lazy",
   "verify:reach",
   "verify:readmore",
+  "verify:metadata",
   "verify:zoom",
 ];
 

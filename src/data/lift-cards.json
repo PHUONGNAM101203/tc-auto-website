@@ -11,7 +11,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=cafee64c",
+        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=2191e728",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -25,7 +25,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=00308670",
+        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=42265e75",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -39,7 +39,7 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=b591ff3b",
+        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=8b767073",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -53,7 +53,7 @@
         "y": 927,
         "width": 258,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=19f71e48",
+        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=2489f2ad",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem"
@@ -140,7 +140,7 @@
         "subtitle": "Giải pháp cách nhiệt cao cấp",
         "href": "/giai-phap/phim-dan-kinh",
         "x": 49,
-        "y": 2205,
+        "y": 2717,
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea",
@@ -152,7 +152,7 @@
         "subtitle": "Công nghệ Nano window film",
         "href": "/giai-phap/phim-dan-kinh",
         "x": 502,
-        "y": 2205,
+        "y": 2717,
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739",
@@ -164,7 +164,7 @@
         "subtitle": "Lựa chọn tối ưu chi phí",
         "href": "/giai-phap/phim-dan-kinh",
         "x": 955,
-        "y": 2205,
+        "y": 2717,
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-5do.webp?v=390d453c",
@@ -176,17 +176,17 @@
         "subtitle": "Màn hình Android Winca – hiển thị QLED 2K sắc nét",
         "href": "/giai-phap/man-hinh",
         "x": 576,
-        "y": 4665,
+        "y": 1945,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-winca.webp?v=9b0d9b90",
+        "src": "/lift/giai-phap-man-hinh-winca.webp?v=5c8dcf2d",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-man-hinh-winca.webp?v=9b0d9b90",
+            "src": "/lift/giai-phap-man-hinh-winca.webp?v=5c8dcf2d",
             "width": 750
           },
           {
-            "src": "/lift/giai-phap-man-hinh-winca@3x.webp?v=25a06e41",
+            "src": "/lift/giai-phap-man-hinh-winca@3x.webp?v=4909ce0b",
             "width": 1125
           }
         ],
@@ -200,17 +200,17 @@
         "subtitle": "Màn hình Android Bravo – cấu hình ổn định",
         "href": "/giai-phap/man-hinh/bravo",
         "x": 984,
-        "y": 4665,
+        "y": 1945,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=ea6594a5",
+        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=b2b78725",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-man-hinh-bravo.webp?v=ea6594a5",
+            "src": "/lift/giai-phap-man-hinh-bravo.webp?v=b2b78725",
             "width": 750
           },
           {
-            "src": "/lift/giai-phap-man-hinh-bravo@3x.webp?v=80d35ce3",
+            "src": "/lift/giai-phap-man-hinh-bravo@3x.webp?v=210b4e16",
             "width": 1125
           }
         ],
@@ -224,17 +224,17 @@
         "subtitle": "Phim bảo vệ sơn 3M",
         "href": "/giai-phap/ppf",
         "x": 80,
-        "y": 2964,
+        "y": 3476,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-3m.webp?v=1c8e1be3",
+        "src": "/lift/giai-phap-ppf-3m.webp?v=fd392db9",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-ppf-3m.webp?v=1c8e1be3",
+            "src": "/lift/giai-phap-ppf-3m.webp?v=fd392db9",
             "width": 1344
           },
           {
-            "src": "/lift/giai-phap-ppf-3m@3x.webp?v=adb054c1",
+            "src": "/lift/giai-phap-ppf-3m@3x.webp?v=3b486502",
             "width": 2016
           }
         ],
@@ -248,17 +248,17 @@
         "subtitle": "Phim bảo vệ sơn Nano Sun",
         "href": "/giai-phap/ppf",
         "x": 80,
-        "y": 3193,
+        "y": 3705,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=05a03e36",
+        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=98d8bff1",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-ppf-nano-sun.webp?v=05a03e36",
+            "src": "/lift/giai-phap-ppf-nano-sun.webp?v=98d8bff1",
             "width": 1344
           },
           {
-            "src": "/lift/giai-phap-ppf-nano-sun@3x.webp?v=4155cb70",
+            "src": "/lift/giai-phap-ppf-nano-sun@3x.webp?v=37da714c",
             "width": 2016
           }
         ],
@@ -272,17 +272,17 @@
         "subtitle": "Phim bảo vệ sơn 5DO",
         "href": "/giai-phap/ppf",
         "x": 80,
-        "y": 3422,
+        "y": 3934,
         "width": 672,
         "height": 199,
-        "src": "/lift/giai-phap-ppf-5do.webp?v=1e50a25e",
+        "src": "/lift/giai-phap-ppf-5do.webp?v=7a55fd89",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-ppf-5do.webp?v=1e50a25e",
+            "src": "/lift/giai-phap-ppf-5do.webp?v=7a55fd89",
             "width": 1344
           },
           {
-            "src": "/lift/giai-phap-ppf-5do@3x.webp?v=740775c8",
+            "src": "/lift/giai-phap-ppf-5do@3x.webp?v=ccd17a42",
             "width": 2016
           }
         ],

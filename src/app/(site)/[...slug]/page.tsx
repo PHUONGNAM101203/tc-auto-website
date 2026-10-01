@@ -18,9 +18,14 @@ import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 import { getAuthoredPage, getAuthoredSlugs } from "@/lib/authored-pages";
 import { getSpotArticle, getSpotArticles } from "@/lib/spot-articles";
 import { SpotArticle } from "@/components/site/SpotArticle";
-import { CataloguePage, CATALOGUE_SLUG, CATALOGUE_ROUTE } from "@/components/site/CataloguePage";
+import {
+  CataloguePage,
+  CATALOGUE_SLUG,
+  CATALOGUE_ROUTE,
+} from "@/components/site/CataloguePage";
 import { categoryOf, getProduct, getProductSlugs } from "@/lib/products";
 import { getChildren, getSubPage, getSubPageSlugs } from "@/lib/subpages";
+import { canonicalRouteOf } from "@/lib/canonical";
 
 export const revalidate = 300;
 /** Chi 31 slug duoc sinh tinh ton tai — moi duong dan khac tra 404. */
@@ -96,7 +101,11 @@ export async function generateMetadata({
             },
           ],
         },
-        twitter: { card: "summary_large_image", title: product.name, description: text },
+        twitter: {
+          card: "summary_large_image",
+          title: product.name,
+          description: text,
+        },
       };
     }
     const article = getSpotArticle(slug);
@@ -144,7 +153,7 @@ export async function generateMetadata({
   return {
     title: `${page.title} | ${SITE.name}`,
     description,
-    alternates: { canonical: page.route },
+    alternates: { canonical: canonicalRouteOf(slug, page.route) },
     openGraph: {
       title: page.title,
       description,
@@ -227,7 +236,10 @@ export default async function SubPage({
           {isQuiz && <StyleQuiz />}
           {isScreens && <ScreenTabs />}
           {pager && <Pagination model={pager} label={page.title} />}
-          <ReadMore spots={getCtaSpots(slug).filter((spot) => !covered(spot))} posts={posts} />
+          <ReadMore
+            spots={getCtaSpots(slug).filter((spot) => !covered(spot))}
+            posts={posts}
+          />
         </>
       }
       mobileFeature={

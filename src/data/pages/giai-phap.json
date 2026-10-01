@@ -6,7 +6,7 @@
   "height": 5977.0,
   "slices": [
     {
-      "src": "/slices/giai-phap-0.webp?v=6090a096",
+      "src": "/slices/giai-phap-0.webp?v=bc69ded0",
       "y": 0.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -14,11 +14,11 @@
       "bytes": 136788,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-0.webp?v=6090a096",
+          "src": "/slices/giai-phap-0.webp?v=bc69ded0",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-0@3x.webp?v=84048cdc",
+          "src": "/slices/giai-phap-0@3x.webp?v=47c3f092",
           "scale": 3
         }
       ],
@@ -28,7 +28,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-1.webp?v=77cd1472",
+      "src": "/slices/giai-phap-1.webp?v=11ffba1e",
       "y": 900.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -36,11 +36,11 @@
       "bytes": 81110,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-1.webp?v=77cd1472",
+          "src": "/slices/giai-phap-1.webp?v=11ffba1e",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-1@3x.webp?v=a5a6fbf7",
+          "src": "/slices/giai-phap-1@3x.webp?v=7f803da5",
           "scale": 3
         }
       ],
@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-2.webp?v=441c373e",
+      "src": "/slices/giai-phap-2.webp?v=d90ccbd5",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 144408,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-2.webp?v=441c373e",
+          "src": "/slices/giai-phap-2.webp?v=d90ccbd5",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-2@3x.webp?v=53a88d79",
+          "src": "/slices/giai-phap-2@3x.webp?v=8660ff48",
           "scale": 3
         }
       ],
@@ -72,7 +72,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-3.webp?v=45afb10b",
+      "src": "/slices/giai-phap-3.webp?v=80aaf641",
       "y": 2700.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -80,11 +80,11 @@
       "bytes": 98872,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-3.webp?v=45afb10b",
+          "src": "/slices/giai-phap-3.webp?v=80aaf641",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-3@3x.webp?v=e28a8bd5",
+          "src": "/slices/giai-phap-3@3x.webp?v=f78d0d06",
           "scale": 3
         }
       ],
@@ -94,7 +94,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-4.webp?v=80a3c7a5",
+      "src": "/slices/giai-phap-4.webp?v=b9214ee3",
       "y": 3600.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -102,11 +102,11 @@
       "bytes": 75738,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-4.webp?v=80a3c7a5",
+          "src": "/slices/giai-phap-4.webp?v=b9214ee3",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-4@3x.webp?v=c7f6bf4c",
+          "src": "/slices/giai-phap-4@3x.webp?v=27446606",
           "scale": 3
         }
       ],
@@ -116,7 +116,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-5.webp?v=24fcdf01",
+      "src": "/slices/giai-phap-5.webp?v=2ca87553",
       "y": 4500.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -124,11 +124,11 @@
       "bytes": 78754,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-5.webp?v=24fcdf01",
+          "src": "/slices/giai-phap-5.webp?v=2ca87553",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-5@3x.webp?v=3eea91c6",
+          "src": "/slices/giai-phap-5@3x.webp?v=6f3d6c5c",
           "scale": 3
         }
       ],
@@ -138,7 +138,7 @@
       }
     },
     {
-      "src": "/slices/giai-phap-6.webp?v=86d4cde7",
+      "src": "/slices/giai-phap-6.webp?v=0aa13422",
       "y": 5400.0,
       "displayHeight": 577.0,
       "intrinsicWidth": 2880,
@@ -146,11 +146,11 @@
       "bytes": 180912,
       "srcSet": [
         {
-          "src": "/slices/giai-phap-6.webp?v=86d4cde7",
+          "src": "/slices/giai-phap-6.webp?v=0aa13422",
           "scale": 2
         },
         {
-          "src": "/slices/giai-phap-6@3x.webp?v=aa2bda93",
+          "src": "/slices/giai-phap-6@3x.webp?v=03a12a18",
           "scale": 3
         }
       ],
@@ -267,7 +267,7 @@
         "lbl"
       ],
       "x": 56.0,
-      "y": 2006.0,
+      "y": 2518.0,
       "w": 420.0,
       "h": 40.0,
       "css": {
@@ -287,7 +287,7 @@
         "hi"
       ],
       "x": 420.0,
-      "y": 2078.0,
+      "y": 2590.0,
       "w": 600.0,
       "h": null,
       "css": {
@@ -306,7 +306,7 @@
         "lbl"
       ],
       "x": 808.0,
-      "y": 2982.0,
+      "y": 3494.0,
       "w": 160.0,
       "h": 38.0,
       "css": {
@@ -326,7 +326,7 @@
         "h"
       ],
       "x": 806.0,
-      "y": 3183.0,
+      "y": 3695.0,
       "w": 580.0,
       "h": null,
       "css": {
@@ -344,7 +344,7 @@
         "raw"
       ],
       "x": 812.0,
-      "y": 3305.0,
+      "y": 3817.0,
       "w": 420.0,
       "h": null,
       "css": {},
@@ -359,7 +359,7 @@
         "pi"
       ],
       "x": 812.0,
-      "y": 3377.0,
+      "y": 3889.0,
       "w": 500.0,
       "h": null,
       "css": {
@@ -378,7 +378,7 @@
         "btn"
       ],
       "x": 813.0,
-      "y": 3596.0,
+      "y": 4108.0,
       "w": 179.0,
       "h": 34.0,
       "css": {},
@@ -393,7 +393,7 @@
         "lbl"
       ],
       "x": 84.0,
-      "y": 3758.0,
+      "y": 4270.0,
       "w": 330.0,
       "h": 40.0,
       "css": {
@@ -413,7 +413,7 @@
         "hi"
       ],
       "x": 82.0,
-      "y": 3872.0,
+      "y": 4384.0,
       "w": 440.0,
       "h": null,
       "css": {
@@ -431,7 +431,7 @@
         "p"
       ],
       "x": 758.0,
-      "y": 3876.0,
+      "y": 4388.0,
       "w": 602.0,
       "h": null,
       "css": {
@@ -451,7 +451,7 @@
         "lbl"
       ],
       "x": 84.0,
-      "y": 4676.0,
+      "y": 1956.0,
       "w": 360.0,
       "h": 40.0,
       "css": {
@@ -471,7 +471,7 @@
         "h"
       ],
       "x": 82.0,
-      "y": 4742.0,
+      "y": 2022.0,
       "w": 470.0,
       "h": null,
       "css": {
@@ -489,7 +489,7 @@
         "pi"
       ],
       "x": 86.0,
-      "y": 4870.0,
+      "y": 2150.0,
       "w": 400.0,
       "h": null,
       "css": {
@@ -508,7 +508,7 @@
         "btn"
       ],
       "x": 93.0,
-      "y": 5040.0,
+      "y": 2320.0,
       "w": 179.0,
       "h": 34.0,
       "css": {},
@@ -608,5 +608,6 @@
   ],
   "contactForm": {
     "y": 5854.0
-  }
+  },
+  "solutionsReordered": true
 }

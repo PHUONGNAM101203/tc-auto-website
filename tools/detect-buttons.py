@@ -120,6 +120,25 @@ def detect(path: Path) -> list[dict[str, int]]:
     return find_rects(mask)
 
 
+
+#: Phep doi NGUOC cua tools/brand/reorder-solutions.py — toa do moi -> toa do
+#: trong anh thiet ke goc. Giu dong bo voi ba hang so o do.
+_BLOCK_TOP, _BLOCK_BOTTOM, _INSERT_AT = 4640, 5152, 1920
+_BLOCK_HEIGHT = _BLOCK_BOTTOM - _BLOCK_TOP
+_SHIFT_UP = _BLOCK_TOP - _INSERT_AT
+
+
+def unreorder(y: float) -> float:
+    """Toa do sau khi doi thu tu -> toa do trong anh thiet ke goc."""
+    if y < _INSERT_AT:
+        return y
+    if y < _INSERT_AT + _BLOCK_HEIGHT:
+        return y + _SHIFT_UP
+    if y < _BLOCK_BOTTOM:
+        return y - _BLOCK_HEIGHT
+    return y
+
+
 def validate() -> int:
     """Doi chieu ket qua do voi toa do that cua 6 trang chinh."""
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -150,8 +169,19 @@ def validate() -> int:
     for slug, entry in mains.items():
         source_root = new_root if slug in PATCHED_TO_NEW_DESIGN else main_root
         spec = json.loads((ROOT / "src" / "data" / "pages" / f"{slug}.json").read_text("utf-8"))
+        # Trang Giai phap da duoc DOI THU TU muc theo yeu cau cua khach: mien
+        # 1920..5152 bi hoan vi hai khoi. Anh thiet ke thi van theo thu tu cu,
+        # nen phai dua toa do do CHIEU NGUOC lai truoc khi doi chieu — neu
+        # khong thi hai nut "KHÁM PHÁ NGAY" bao lech ca nghin pixel.
+        # Xem tools/brand/reorder-solutions.py.
+        undo = unreorder if spec.get("solutionsReordered") else (lambda y: y)
         expected = [
-            {"x": round(i["x"]), "y": round(i["y"]), "w": round(i["w"]), "h": round(i["h"])}
+            {
+                "x": round(i["x"]),
+                "y": round(undo(i["y"])),
+                "w": round(i["w"]),
+                "h": round(i["h"]),
+            }
             for i in spec["items"]
             if "btn" in i["classes"]
         ]

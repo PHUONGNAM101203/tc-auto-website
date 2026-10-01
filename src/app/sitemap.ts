@@ -8,6 +8,7 @@ import { CATALOGUE_ROUTE } from "@/components/site/CataloguePage";
 import { FAQ_ROUTE } from "@/components/site/FaqPage";
 import { SITE } from "@/lib/site-config";
 import { getAllSubPages } from "@/lib/subpages";
+import { isDuplicateOfAnother } from "@/lib/canonical";
 
 /**
  * Sitemap DAY DU.
@@ -28,13 +29,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: page.slug === "home" ? 1 : 0.9,
   }));
 
-  const subs = getAllSubPages().map((page) => ({
-    url: `${base}${page.route}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    // Trang cang sau thi do uu tien cang thap.
-    priority: Math.max(0.4, 0.8 - (page.slug.split("/").length - 2) * 0.15),
-  }));
+  // Bo cac ban PHU: chung khai canonical tro sang trang khac, ma liet ke mot
+  // trang roi lai bao no khong phai ban chinh la gui tin hieu mau thuan.
+  // Xem src/lib/canonical.ts.
+  const subs = getAllSubPages()
+    .filter((page) => !isDuplicateOfAnother(page.slug))
+    .map((page) => ({
+      url: `${base}${page.route}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      // Trang cang sau thi do uu tien cang thap.
+      priority: Math.max(0.4, 0.8 - (page.slug.split("/").length - 2) * 0.15),
+    }));
 
   const products = getProducts().map((product) => ({
     url: `${base}${product.route}`,

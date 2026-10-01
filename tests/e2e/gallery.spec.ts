@@ -76,11 +76,28 @@ test.describe("dải BỘ SƯU TẬP", () => {
     // Bo chuot ra khoi dai thi nhip tu chay tiep tuc.
     await page.mouse.move(10, 10);
 
-    // Doi `data-playing` xuat hien ROI moi bam gio. Truoc day bai nay bam gio
-    // ngay sau khi roi chuot, nen han 12 giay phai gom ca do tre cua
-    // onMouseLeave lan cua IntersectionObserver; chay mot minh thi du, chay
-    // song song 5 luong thi thinh thoang hut mot nhip 5 giay va bao sai oan.
-    await expect(page.locator(".tc-cover")).toHaveAttribute("data-playing", "true");
+    // Dai chi chay khi HOI DU bon dieu (xem useAutoplay.ts): trong khung nhin,
+    // chuot khong o tren no, vua roi khong ai bam, va may khong bat "giam
+    // chuyen dong". Doi `data-playing` len ROI moi bam gio — bam gio ngay sau
+    // khi roi chuot thi han cho phai gom ca do tre cua onMouseLeave lan cua
+    // IntersectionObserver.
+    //
+    // `expect.poll` chu khong `toHaveAttribute`: cai sau chi doi THUOC TINH
+    // doi, con day con cuon lai dai vao khung nhin moi vong — chay song song
+    // nam luong thi co luc dai bi day ra ngoai khung va `visible` thanh false,
+    // luc do doi mai cung khong len.
+    await expect
+      .poll(
+        async () => {
+          await page.locator(".tc-cover").scrollIntoViewIfNeeded();
+          await page.mouse.move(10, 10);
+          return page
+            .locator(".tc-cover")
+            .evaluate((el) => el.getAttribute("data-playing"));
+        },
+        { message: "dải phải vào trạng thái tự chạy" },
+      )
+      .toBe("true");
 
     const first = (await cards(page)).find((r) => r.centre)!.src;
     await expect

@@ -66,13 +66,27 @@ test.describe("tab WINCA / BRAVO — bản desktop", () => {
 
   test("ảnh trong thẻ không tràn ra đè lên chữ", async ({ page }) => {
     // Anh hang cao hon khung (chung goi ca ten dong lan day o thong so). Hoi
-    // dau `place-items: center` cho chung tran xuong de len ten va mo ta.
+    // dau `place-items: center` cho chung tran xuong de len ten va mo ta, roi
+    // `padding` lam anh cao hon khung dung hai lan padding.
+    //
+    // Do bang `expect.poll` chu khong do mot phat: trong mot nhip ngan luc anh
+    // duoc hoan doi, hop anh bi lech vai pixel so voi khung du chieu cao hai
+    // ben deu dung 241px. Do mot phat thi cu vai lan lai bao sai oan mot lan.
     await page.goto(PAGE);
     await page.locator(".tc-screen-tab").nth(1).click();
     const card = page.locator(".tc-screen-card").first();
-    const art = await card.locator(".tc-screen-art").boundingBox();
-    const img = await card.locator("img").boundingBox();
-    expect(img!.y + img!.height).toBeLessThanOrEqual(art!.y + art!.height + 1);
+
+    await expect
+      .poll(
+        async () =>
+          card.evaluate((el) => {
+            const art = el.querySelector(".tc-screen-art")!.getBoundingClientRect();
+            const img = el.querySelector("img")!.getBoundingClientRect();
+            return Math.round(img.bottom - art.bottom);
+          }),
+        { message: "ảnh không được tràn xuống dưới khung" },
+      )
+      .toBeLessThanOrEqual(1);
   });
 
   test("trang Bravo riêng vẫn còn — thẻ dẫn tới đó để xem thông số", async ({

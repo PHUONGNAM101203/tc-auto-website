@@ -167,6 +167,18 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "Dai anh du an duoc dung lai thanh bang chuyen bam duoc; cac tam khong " +
       "lam nghieng vi anh goc la anh phang.",
   },
+  // ── Doi thu tu muc giai phap ────────────────────────────────────────────
+  {
+    page: "giai-phap",
+    // Mien bi hoan vi: dai MÀN HÌNH [4640,5152) duoc dua len 1920, ba muc kia
+    // bi day xuong 512. Chieu cao trang khong doi.
+    box: { x: 0, y: 1920, width: 1440, height: 5152 - 1920 },
+    reason:
+      "Khach yeu cau dua muc MÀN HÌNH Ô TÔ len tren PHIM CÁCH NHIỆT " +
+      "(01/10/2026). Ban thiet ke xep PHIM -> PPF -> LOA -> MÀN HÌNH; ca bon " +
+      "muc deu ve chet trong anh nen nen phai hoan vi ca dai anh lan moi toa " +
+      "do tro vao do. Xem tools/brand/reorder-solutions.py.",
+  },
   // ── Anh hero trang chu: bo phan chu nuong san trong anh ──────────────────
   // Ban thiet ke nuong "DRIVE · EXPERIENCE · ELEVATE" va ba dong gioi thieu
   // vao chinh tam anh hero, trong khi chinh nhung dong do cung la phan tu that

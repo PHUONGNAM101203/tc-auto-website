@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
+import { isDuplicateOfAnother } from "@/lib/canonical";
 
 interface IndexRow {
   slug: string;
@@ -204,13 +205,22 @@ test.describe("31 trang con", () => {
     expect(response?.status()).toBe(404);
   });
 
-  test("sitemap liệt kê đủ 31 trang con, không sót trang nào", async ({
+  test("sitemap liệt kê mọi trang con, trừ bản phụ đã khai canonical", async ({
     request,
   }) => {
     const response = await request.get("/sitemap.xml");
     expect(response.status()).toBe(200);
     const body = await response.text();
     for (const row of INDEX) {
+      if (isDuplicateOfAnother(row.slug)) {
+        // Ban phu KHONG duoc nam trong sitemap: liet ke mot trang roi lai bao
+        // no khong phai ban chinh la gui tin hieu mau thuan cho cong cu tim
+        // kiem. Xem src/lib/canonical.ts.
+        expect(body, `${row.route} là bản phụ, phải vắng mặt`).not.toContain(
+          `${row.route}<`,
+        );
+        continue;
+      }
       expect(body, row.route).toContain(row.route);
     }
     // Truoc day cho nay rang "dung 37" (6 trang chinh + 31 trang con). Con so

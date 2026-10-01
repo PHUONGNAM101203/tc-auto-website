@@ -2104,14 +2104,16 @@ a.tc-appfoot-btn:focus-visible {
    nhin thi tuong dep, do ra moi biet anh cao 1020px trong mot khung 875px.
    De `stretch` (mac dinh) thi o luoi dung bang khung, va `object-fit: contain`
    lo viec can giua. */
+/* KHONG dat `padding` o day. Anh con dat `height: 100%`, ma tri so do an theo
+   HOP VIEN chu khong theo hop noi dung — do duoc: anh cao hon khung dung 20px,
+   bang dung hai lan padding. Anh hang von da co le trang san nen bo padding
+   khong lam no sat mep. */
 .tc-screen-art {
   flex: none;
   display: grid;
   min-height: 0;
   overflow: hidden;
   background: #fff;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .tc-screen-art img {
