@@ -114,6 +114,14 @@
 /* ---------- Tim kiem dai ly ----------
    O chon va nut da duoc ve san trong anh nen, nen dieu khien that o day trong
    suot khi nhan roi va chi hien khi cham vao — giong cach xu ly header/form. */
+/* Khoi boc cua DealerSearch ban canvas. `display: contents` chu khong phai
+   `position: static`: the <div> nay khong duoc tao ra mot hop bo tri nao, vi
+   cac o chon ben trong deu `position: absolute` va phai bam vao `.pg` nhu cu.
+   Them mot hop vao giua la day moi thu xuong vai pixel — gate pixel bat ngay. */
+.tc-dealer-canvas {
+  display: contents;
+}
+
 .tc-field {
   position: absolute;
   appearance: none;

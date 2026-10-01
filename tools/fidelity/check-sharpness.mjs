@@ -66,7 +66,12 @@ const SOURCE_LIMITED = new Set([
 function routes() {
   const main = ["/", "/trai-nghiem", "/giai-phap", "/cong-nghe", "/dai-ly", "/nhan-su"];
   const sub = readdirSync("src/data/subpages")
-    .filter((name) => name.endsWith(".json"))
+    // `index.json` la BAN MUC LUC liet ke 31 trang con, khong phai mot trang.
+    // Dem no vao thanh route `/index` — tung lam sap trang chu that: `/index`
+    // bam vao cung tep dem `.next/server/app/index.html` voi `/`. Da chan bang
+    // chuyen huong trong next.config.ts, nhung day van khong phai mot trang nen
+    // do do net no la vo nghia.
+    .filter((name) => name.endsWith(".json") && name !== "index.json")
     .map((name) => "/" + name.slice(0, -5).replaceAll("__", "/"));
   return [...main, ...sub];
 }

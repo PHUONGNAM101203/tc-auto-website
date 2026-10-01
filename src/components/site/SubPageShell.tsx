@@ -20,6 +20,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { hasRelatedStrip } from "@/lib/related-strip";
 import type { SubPageSpec } from "@/lib/subpage-schema";
 import { getMobileBlocks } from "@/lib/mobile-subpage";
+import { getMobileStrips } from "@/lib/mobile-subpage-strips";
 import { getMobileLinks } from "@/lib/mobile-links";
 import { getScreenModels } from "@/lib/screen-catalogue";
 import { getPageText, type TextBlock } from "@/lib/subpage-text";
@@ -42,6 +43,14 @@ interface SubPageShellProps {
   readonly childPages?: readonly SubPageSpec[];
   /** Tinh nang tuong tac rieng cua trang (vi du form tim dai ly). */
   readonly feature?: React.ReactNode;
+  /**
+   * Phan tuong tac dat trong lop MOBILE.
+   *
+   * `feature` nam trong canvas, ma duoi 900px canvas bi an han — nen khoi nao
+   * can bam duoc tren dien thoai (trac nghiem, o tim dai ly) phai co ban rieng
+   * dat o day.
+   */
+  readonly mobileFeature?: React.ReactNode;
 }
 
 /**
@@ -61,6 +70,7 @@ export function SubPageShell({
   hotspots = [],
   childPages = [],
   feature,
+  mobileFeature,
 }: SubPageShellProps) {
   return (
     <>
@@ -72,6 +82,8 @@ export function SubPageShell({
         page={page}
         nav={page.nav}
         blocks={getMobileBlocks(page)}
+        strips={getMobileStrips(page.slug)}
+        feature={mobileFeature}
         childPages={childPages}
         links={getMobileLinks(page.slug)}
         contact={

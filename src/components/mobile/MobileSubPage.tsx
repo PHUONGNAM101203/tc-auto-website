@@ -1,8 +1,12 @@
 import { MobileFooter } from "@/components/mobile/MobileFooter";
 import Link from "next/link";
 import { MobileNav } from "@/components/mobile/MobileNav";
+import { MobileStrip } from "@/components/mobile/MobileStrip";
+import { headingAlreadyShown } from "@/lib/mobile-heading";
+import { mergeByY } from "@/lib/mobile-order";
 import { MobileTree } from "@/components/mobile/MobileTree";
 import { buildTree } from "@/lib/mobile-tree";
+import type { MobileBlock as MobileStripBlock } from "@/lib/mobile-blocks";
 import { getMobileHero, type MobileBlock } from "@/lib/mobile-subpage";
 import type { SubPageSpec } from "@/lib/subpage-schema";
 import type { PpfCard } from "@/lib/ppf-cards";
@@ -21,6 +25,8 @@ export function MobileSubPage({
   page,
   nav,
   blocks,
+  strips = [],
+  feature,
   childPages,
   links = [],
   products = [],
@@ -30,6 +36,20 @@ export function MobileSubPage({
   page: SubPageSpec;
   nav: readonly NavSpec[];
   blocks: readonly MobileBlock[];
+  /**
+   * Cac DAI anh cua trang (bang "BỘ SƯU TẬP", dai "CÁC BÀI VIẾT KHÁC").
+   *
+   * Tren desktop chung la bang chuyen co chieu sau dung toa do canvas 1440px,
+   * nen duoi 900px thi mat han. Xem src/lib/mobile-subpage-strips.ts.
+   */
+  strips?: readonly MobileStripBlock[];
+  /**
+   * Khoi tuong tac cua rieng trang nay (trac nghiem, o tim dai ly).
+   *
+   * Ban desktop dat chung tuyet doi len dung cho ve san trong anh nen; o day
+   * la CUNG component do nhung xep doc — xem thuoc tinh `layout`.
+   */
+  feature?: React.ReactNode;
   childPages: readonly SubPageSpec[];
   /** Lien ket trong long trang — xem src/lib/mobile-links.ts. */
   links?: readonly { href: string; label: string; external: boolean }[];
@@ -56,6 +76,12 @@ export function MobileSubPage({
 
   // Dung lai tu `childPages` chu khong goi buildTree(page.slug): ban desktop
   // ve danh sach tu DUNG prop nay, hai ban phai liet ke y het nhau.
+  // Tieu de ma bai viet DA in ra roi — "CÁC BÀI VIẾT KHÁC" la mot the h2
+  // trong chinh mach chu, nen dai cung ten thi khong in nhan nua.
+  const shownHeadings = blocks
+    .filter((block) => block.kind === "heading")
+    .map((block) => block.text);
+
   const tree = childPages.map((child) => ({
     href: child.route,
     label: child.title,
@@ -80,21 +106,26 @@ export function MobileSubPage({
         </div>
       </section>
 
+      {/* Dai anh duoc TRON vao giua cac doan chu theo do cao tren canvas, chu
+          khong day xuong cuoi: bang "BỘ SƯU TẬP" nam o y 1761 trong mot trang
+          cao 2644, day xuong cuoi la doc sai mach cua ban desktop. */}
       <article className="tc-m-article">
-        {blocks.map((block, index) => {
-          const key = `${index}-${block.image ?? block.text.slice(0, 14)}`;
-          if (block.kind === "figure") {
-            return (
-              // eslint-disable-next-line @next/next/no-img-element -- anh cat san
-              <img key={key} className="tc-m-shot" src={block.image} alt="" loading="lazy" />
-            );
-          }
-          return block.kind === "heading" ? (
-            <h2 key={key}>{block.text}</h2>
-          ) : (
-            <p key={key}>{block.text}</p>
-          );
-        })}
+        {mergeByY(
+          blocks.map((block, index) => ({
+            y: block.y,
+            item: renderText(block, index),
+          })),
+          strips.map((strip) => ({
+            y: strip.y,
+            item: (
+              <MobileStrip
+                key={strip.id}
+                block={strip}
+                showLabel={!headingAlreadyShown(strip.label, shownHeadings)}
+              />
+            ),
+          })),
+        )}
       </article>
 
       {cards.length > 0 ? (
@@ -154,6 +185,8 @@ export function MobileSubPage({
           suot dat theo toa do canvas, ma canvas thi bi an duoi 900px. Khong co
           khoi nay thi tren dien thoai trang "Kho ứng dụng" co 15 tep tai ma
           khong bam duoc cai nao. Xem src/lib/mobile-links.ts. */}
+      {feature}
+
       {links.length > 0 ? (
         <nav className="tc-m-links" aria-label="Liên kết trong trang">
           <h2>Trong trang này</h2>
@@ -198,5 +231,21 @@ export function MobileSubPage({
       ) : null}
       <MobileFooter nav={nav} />
     </div>
+  );
+}
+
+/** Mot khoi chu cua bai: tieu de, doan van, hoac mot tam anh cat san. */
+function renderText(block: MobileBlock, index: number) {
+  const key = `${index}-${block.image ?? block.text.slice(0, 14)}`;
+  if (block.kind === "figure") {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element -- anh cat san
+      <img key={key} className="tc-m-shot" src={block.image} alt="" loading="lazy" />
+    );
+  }
+  return block.kind === "heading" ? (
+    <h2 key={key}>{block.text}</h2>
+  ) : (
+    <p key={key}>{block.text}</p>
   );
 }

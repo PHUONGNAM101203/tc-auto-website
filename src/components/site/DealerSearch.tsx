@@ -23,7 +23,21 @@ const BUTTON = { left: 83, top: 1377, width: 179, height: 34 } as const;
 /** Vung ket qua — dung cho vi tri ma thiet ke dat danh sach dai ly. */
 const PANEL = { left: 830, top: 1100, width: 545, height: 640 } as const;
 
-export function DealerSearch() {
+/**
+ * `canvas` = dat tuyet doi len dung o chon ve san trong anh nen.
+ * `mobile`  = xep doc, co dan theo be rong man hinh.
+ *
+ * Mot component chu khong phai hai: duoi 900px canvas bi an han, nen truoc day
+ * tren dien thoai trang "Mạng lưới đại lý" KHONG CO cach nao tim dai ly —
+ * ca hai o chon lan nut deu nam trong canvas.
+ */
+export function DealerSearch({
+  layout = "canvas",
+}: {
+  readonly layout?: "canvas" | "mobile";
+}) {
+  const flow = layout === "mobile";
+  const at = <T,>(style: T): T | undefined => (flow ? undefined : style);
   const [brand, setBrand] = useState("");
   const [province, setProvince] = useState("");
   const [result, setResult] = useState<{
@@ -41,11 +55,16 @@ export function DealerSearch() {
   }
 
   return (
-    <>
+    <div className={flow ? "tc-dealer-m" : "tc-dealer-canvas"}>
       <form onSubmit={submit} aria-label="Tìm kiếm đại lý">
         <select
           className="tc-field"
-          style={{ left: FIELD.left, top: BRAND_TOP, width: FIELD.width, height: FIELD.height }}
+          style={at({
+            left: FIELD.left,
+            top: BRAND_TOP,
+            width: FIELD.width,
+            height: FIELD.height,
+          })}
           value={brand}
           data-filled={brand ? "true" : "false"}
           onChange={(event) => setBrand(event.target.value)}
@@ -61,7 +80,12 @@ export function DealerSearch() {
 
         <select
           className="tc-field"
-          style={{ left: FIELD.left, top: PROVINCE_TOP, width: FIELD.width, height: FIELD.height }}
+          style={at({
+            left: FIELD.left,
+            top: PROVINCE_TOP,
+            width: FIELD.width,
+            height: FIELD.height,
+          })}
           value={province}
           data-filled={province ? "true" : "false"}
           onChange={(event) => setProvince(event.target.value)}
@@ -78,7 +102,12 @@ export function DealerSearch() {
         <button
           type="submit"
           className="tc-field-submit"
-          style={{ left: BUTTON.left, top: BUTTON.top, width: BUTTON.width, height: BUTTON.height }}
+          style={at({
+            left: BUTTON.left,
+            top: BUTTON.top,
+            width: BUTTON.width,
+            height: BUTTON.height,
+          })}
         >
           TÌM KIẾM
         </button>
@@ -87,7 +116,12 @@ export function DealerSearch() {
       {result && (
         <div
           className="tc-dealer-panel"
-          style={{ left: PANEL.left, top: PANEL.top, width: PANEL.width, maxHeight: PANEL.height }}
+          style={at({
+            left: PANEL.left,
+            top: PANEL.top,
+            width: PANEL.width,
+            maxHeight: PANEL.height,
+          })}
           role="region"
           aria-live="polite"
           aria-label="Kết quả tìm đại lý"
@@ -134,6 +168,6 @@ export function DealerSearch() {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }

@@ -34,8 +34,18 @@ const EMPTY: State = {
   done: false,
 };
 
-export function StyleQuiz() {
+/**
+ * `canvas` = dat tuyet doi theo toa do 1440px cua ban thiet ke.
+ * `mobile`  = xep doc, co dan theo be rong man hinh.
+ *
+ * Mot component chu khong phai hai: logic cham diem, trang thai "Khác" va dieu
+ * kien di tiep deu phai y het nhau. Chep ra hai ban thi som muon cung lech.
+ */
+export function StyleQuiz({ layout = "canvas" }: { readonly layout?: "canvas" | "mobile" }) {
   const [state, setState] = useState<State>(EMPTY);
+  const flow = layout === "mobile";
+  /** Tren dien thoai thi BO het toa do tuyet doi — CSS lo phan xep doc. */
+  const at = <T,>(style: T): T | undefined => (flow ? undefined : style);
   const question = QUESTIONS[state.step];
   const last = state.step === QUESTIONS.length - 1;
   const picked = state.chosen[state.step];
@@ -67,17 +77,20 @@ export function StyleQuiz() {
 
   return (
     <div
-      className="tc-quiz"
-      style={{
+      className={flow ? "tc-quiz tc-quiz-m" : "tc-quiz"}
+      style={at({
         left: `${QUIZ_BOX.x}px`,
         top: `${QUIZ_BOX.y}px`,
         width: `${QUIZ_BOX.width}px`,
         height: `${QUIZ_BOX.height}px`,
-      }}
+      })}
     >
       <h2
         className="tc-quiz-title"
-        style={{ top: `${box.title.y - QUIZ_BOX.y - 8}px`, fontSize: `${box.title.fontSize}px` }}
+        style={at({
+          top: `${box.title.y - QUIZ_BOX.y - 8}px`,
+          fontSize: `${box.title.fontSize}px`,
+        })}
       >
         PHONG CÁCH CHƠI XE CỦA BẠN LÀ GÌ?
       </h2>
@@ -88,25 +101,25 @@ export function StyleQuiz() {
         <>
           <p
             className="tc-quiz-q"
-            style={{
+            style={at({
               left: `${box.question.x - QUIZ_BOX.x}px`,
               top: `${box.question.y - QUIZ_BOX.y - 6}px`,
               fontSize: `${box.question.fontSize}px`,
               lineHeight: `${box.question.lineHeight}px`,
-            }}
+            })}
           >
             <span aria-hidden="true">•</span> {question.prompt}
           </p>
 
           <fieldset
             className="tc-quiz-options"
-            style={{
+            style={at({
               left: `${box.options.x - QUIZ_BOX.x}px`,
               top: `${box.options.y - QUIZ_BOX.y - 5}px`,
               fontSize: `${box.options.fontSize}px`,
               lineHeight: `${box.options.lineHeight}px`,
               ["--quiz-step" as string]: `${box.options.step}px`,
-            }}
+            })}
           >
             <legend className="tc-sr">{question.prompt}</legend>
             {question.options.map((option) => (
@@ -133,13 +146,13 @@ export function StyleQuiz() {
             onChange={(event) =>
               setState((current) => ({ ...current, other: event.target.value }))
             }
-            style={{
+            style={at({
               left: `${box.input.x - QUIZ_BOX.x}px`,
               top: `${box.input.y - QUIZ_BOX.y}px`,
               width: `${box.input.width}px`,
               height: `${box.input.height}px`,
               fontSize: `${box.input.fontSize}px`,
-            }}
+            })}
           />
 
           <button
@@ -147,12 +160,12 @@ export function StyleQuiz() {
             className="tc-quiz-next"
             disabled={!ready}
             onClick={next}
-            style={{
+            style={at({
               left: `${box.button.x - QUIZ_BOX.x}px`,
               top: `${box.button.y - QUIZ_BOX.y}px`,
               width: `${box.button.width}px`,
               height: `${box.button.height}px`,
-            }}
+            })}
           >
             <span>{last ? "XEM KẾT QUẢ" : "CÂU TIẾP THEO"}</span>
             <i aria-hidden="true">›</i>

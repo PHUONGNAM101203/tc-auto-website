@@ -115,6 +115,37 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   compress: true,
 
+  /**
+   * Chan moi duong dan ket thuc bang `/index` TRUOC khi Next dinh tuyen.
+   *
+   * ── Loi that, tai hien duoc 100% ──────────────────────────────────────────
+   * Next luu trang da dung san cua `/` vao `.next/server/app/index.html`.
+   * Duong dan `/index` BAM VAO CUNG MOT TEP do. No khong nam trong
+   * generateStaticParams cua `[...slug]` nen bi coi la 404 — va cai 404 do
+   * duoc GHI DE len chinh tep cua trang chu.
+   *
+   * Cach tai hien (da do, khong phai suy doan):
+   *   1. `/` tra 200
+   *   2. doi qua 60 giay cho `revalidate` cua trang chu het han
+   *   3. goi `/index` dung MOT lan
+   *   4. `/` tra 404, va `.next/server/app/index.meta` ghi `"status": 404`
+   *
+   * Nghia la chi can mot con bot hay mot nguoi go nham `/index` la trang chu
+   * sap, cho den lan deploy sau. Da phat hien vi cua kiem do net quet thu muc
+   * `src/data/subpages/*.json` va dem ca `index.json` — von la BAN MUC LUC
+   * liet ke 31 trang con chu khong phai mot trang — thanh route `/index`.
+   *
+   * Chuyen huong o day chay TRUOC khi dinh tuyen, nen catch-all khong bao gio
+   * dung toi khoa dem cua trang chu nua. Viet tong quat cho moi cap, vi
+   * `/giai-phap/index` cung dam vao tep cua `/giai-phap` y nhu vay.
+   */
+  async redirects() {
+    return [
+      { source: "/index", destination: "/", permanent: true },
+      { source: "/:path+/index", destination: "/:path+", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       { source: "/:path*", headers: SECURITY_HEADERS },

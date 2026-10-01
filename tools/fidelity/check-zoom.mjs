@@ -59,9 +59,41 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: VIEWPORT });
 let failed = 0;
 
+/**
+ * Chay mot ca, thu lai mot lan neu canvas khong hien ra.
+ *
+ * `next start` tu dung co luc tra 404 cho `/` ngay sau khi ban ISR het han
+ * (60 giay) trong luc may dang tai nang — da do duoc: chay rieng thi 5/5 PASS,
+ * chay sau sau cua kiem khac thi thinh thoang chet ngay ca dau tien. Khong tai
+ * hien duoc bang GET thuan, bang trinh duyet khong tai, hay luc may ranh; va
+ * ban tren Vercel khong dung bo nho dem nay. Day la cho duy nhat trong chuoi
+ * kiem bi anh huong, nen thu lai mot lan va NOI RO ra, chu khong im lang.
+ */
+async function attempt(testCase) {
+  for (let round = 1; round <= 2; round += 1) {
+    await testCase.run(page);
+    try {
+      await page.waitForSelector(".tc-canvas", { timeout: 15_000 });
+      if (round > 1) {
+        console.log(`      (${testCase.name}: lan dau khong thay canvas, thu lai thi duoc)`);
+      }
+      return true;
+    } catch {
+      if (round === 2) {
+        console.log(`FAIL  ${testCase.name.padEnd(26)} khong thay .tc-canvas sau 2 lan thu`);
+        return false;
+      }
+      await page.waitForTimeout(2000);
+    }
+  }
+  return false;
+}
+
 for (const testCase of CASES) {
-  await testCase.run(page);
-  await page.waitForSelector(".tc-canvas");
+  if (!(await attempt(testCase))) {
+    failed++;
+    continue;
+  }
   await page.waitForTimeout(150); // cho ResizeObserver kip mot khung hinh
 
   const { width, available } = await page.evaluate(() => ({

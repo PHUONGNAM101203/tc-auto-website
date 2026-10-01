@@ -241,7 +241,10 @@ test.describe("tìm kiếm đại lý", () => {
   test("form dùng được và trả đúng đại lý từ thiết kế", async ({ page }) => {
     await page.goto("/dai-ly/mang-luoi-dai-ly");
 
-    const selects = page.locator("select.tc-field");
+    // `.tc-dealer-canvas` chu khong phai toan trang: o tim dai ly nay co HAI
+    // ban trong DOM — ban canvas dat len dung o chon ve san trong anh nen, va
+    // ban mobile xep doc (duoi 900px canvas bi an han). Xem tests/e2e/mobile-parity.spec.ts.
+    const selects = page.locator(".tc-dealer-canvas select.tc-field");
     await expect(selects).toHaveCount(2);
 
     // Nhan roi: trong suot de khong de len o chon da ve san trong anh
@@ -252,9 +255,9 @@ test.describe("tìm kiếm đại lý", () => {
     // Da chon thi phai doc duoc
     await expect(selects.first()).not.toHaveCSS("color", "rgba(0, 0, 0, 0)");
 
-    await page.locator("button.tc-field-submit").click();
+    await page.locator(".tc-dealer-canvas button.tc-field-submit").click();
 
-    const panel = page.locator(".tc-dealer-panel");
+    const panel = page.locator(".tc-dealer-canvas .tc-dealer-panel");
     await expect(panel).toBeVisible();
     await expect(panel.locator("li")).toHaveCount(16);
     await expect(panel).toContainText("Thanh Bình Auto CMT8");
@@ -265,11 +268,11 @@ test.describe("tìm kiếm đại lý", () => {
     page,
   }) => {
     await page.goto("/dai-ly/mang-luoi-dai-ly");
-    await page.locator("select.tc-field").nth(0).selectOption("3M");
-    await page.locator("select.tc-field").nth(1).selectOption("Huế");
-    await page.locator("button.tc-field-submit").click();
+    await page.locator(".tc-dealer-canvas select.tc-field").nth(0).selectOption("3M");
+    await page.locator(".tc-dealer-canvas select.tc-field").nth(1).selectOption("Huế");
+    await page.locator(".tc-dealer-canvas button.tc-field-submit").click();
 
-    const empty = page.locator(".tc-dealer-empty");
+    const empty = page.locator(".tc-dealer-canvas .tc-dealer-empty");
     await expect(empty).toBeVisible();
     await expect(empty).toContainText("đang được cập nhật");
     await expect(empty).toContainText("093");
@@ -277,13 +280,13 @@ test.describe("tìm kiếm đại lý", () => {
 
   test("đóng được bảng kết quả", async ({ page }) => {
     await page.goto("/dai-ly/mang-luoi-dai-ly");
-    await page.locator("select.tc-field").nth(0).selectOption("3M");
-    await page.locator("select.tc-field").nth(1).selectOption("Đà Nẵng");
-    await page.locator("button.tc-field-submit").click();
-    await expect(page.locator(".tc-dealer-panel")).toBeVisible();
+    await page.locator(".tc-dealer-canvas select.tc-field").nth(0).selectOption("3M");
+    await page.locator(".tc-dealer-canvas select.tc-field").nth(1).selectOption("Đà Nẵng");
+    await page.locator(".tc-dealer-canvas button.tc-field-submit").click();
+    await expect(page.locator(".tc-dealer-canvas .tc-dealer-panel")).toBeVisible();
 
-    await page.locator(".tc-dealer-close").click();
-    await expect(page.locator(".tc-dealer-panel")).toHaveCount(0);
+    await page.locator(".tc-dealer-canvas .tc-dealer-close").click();
+    await expect(page.locator(".tc-dealer-canvas .tc-dealer-panel")).toHaveCount(0);
   });
 });
 

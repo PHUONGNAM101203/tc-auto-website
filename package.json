@@ -48,7 +48,8 @@
     "verify:retina": "python3 tools/fidelity/check-retina-parity.py",
     "verify:sharpness": "node tools/fidelity/check-sharpness.mjs",
     "verify:readmore": "node tools/fidelity/check-readmore.mjs",
-    "verify:hero": "python3 tools/fidelity/check-hero-controls.py"
+    "verify:hero": "python3 tools/fidelity/check-hero-controls.py",
+    "verify:live": "node tools/verify-live.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

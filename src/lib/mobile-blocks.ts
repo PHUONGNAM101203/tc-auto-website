@@ -1,5 +1,6 @@
 import { getLiftCards } from "./lift-cards";
 import { getPhotoSliders } from "./photo-sliders";
+import { getProjectPhotos, PROJECT_CENTRE } from "./projects";
 import { SOLUTION_CARD, SOLUTION_CARDS } from "./solution-cards";
 import type { PageSlug } from "./types";
 
@@ -69,6 +70,38 @@ function photoBlocks(slug: PageSlug): MobileBlock[] {
   }));
 }
 
+/**
+ * Dai "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" o cuoi trang Giai phap.
+ *
+ * Tren desktop day la mot bang chuyen co chieu sau (`ProjectCoverflow`): bam
+ * vao tam nao thi tam do chay vao giua. Phep nghieng do dua tren toa do canvas
+ * 1440px nen khong mang xuong dien thoai duoc — ban mobile dung lai bang
+ * `MobileCarousel`, cuon ngang va tu chay, tu CUNG BON TAM ANH GOC.
+ *
+ * Thieu khoi nay thi tren dien thoai trang Giai phap mat han phan dan chung
+ * duy nhat cua no: bon le ky ket dai ly.
+ */
+function projectBlock(slug: PageSlug): MobileBlock[] {
+  const photos = getProjectPhotos(slug);
+  if (photos.length === 0) {
+    return [];
+  }
+  return [
+    {
+      kind: "carousel",
+      id: "du-an",
+      y: PROJECT_CENTRE.y,
+      label: "Các dự án đã triển khai",
+      ratio: `${PROJECT_CENTRE.width} / ${PROJECT_CENTRE.height}`,
+      slides: photos.map((photo) => ({
+        key: photo.id,
+        src: photo.src,
+        alt: photo.alt,
+      })),
+    },
+  ];
+}
+
 function solutionBlock(slug: PageSlug): MobileBlock[] {
   if (slug !== "home") {
     return [];
@@ -126,7 +159,12 @@ function liftBlocks(slug: PageSlug): MobileBlock[] {
 }
 
 export function getMobileBlocks(slug: PageSlug): readonly MobileBlock[] {
-  return [...photoBlocks(slug), ...solutionBlock(slug), ...liftBlocks(slug)].sort(
+  return [
+    ...photoBlocks(slug),
+    ...solutionBlock(slug),
+    ...liftBlocks(slug),
+    ...projectBlock(slug),
+  ].sort(
     (a, b) => a.y - b.y,
   );
 }

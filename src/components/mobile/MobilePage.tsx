@@ -2,8 +2,10 @@ import { MobileFooter } from "@/components/mobile/MobileFooter";
 import Link from "next/link";
 import { MobileCarousel, type MobileSlide } from "@/components/mobile/MobileCarousel";
 import { MobileNav } from "@/components/mobile/MobileNav";
-import { SLIDER_AUTOPLAY_MS } from "@/lib/slider-timing";
+import { MobileStrip } from "@/components/mobile/MobileStrip";
 import { headingLines, type MobileHero, type MobileSection } from "@/lib/mobile-sections";
+import { headingAlreadyShown } from "@/lib/mobile-heading";
+import { mergeByY } from "@/lib/mobile-order";
 import type { MobileBlock } from "@/lib/mobile-blocks";
 import type { NavSpec } from "@/lib/types";
 
@@ -38,6 +40,11 @@ export function MobilePage({
   blocks?: readonly MobileBlock[];
   contact?: React.ReactNode;
 }) {
+  // Tieu de ma mach chu cua trang DA in ra roi — dai nao trung thi thoi.
+  const shownHeadings = sections.flatMap((section) =>
+    [section.label, section.heading].filter((text): text is string => Boolean(text)),
+  );
+
   return (
     <div className="tc-m">
       <MobileNav nav={nav} />
@@ -64,12 +71,19 @@ export function MobilePage({
       ) : null}
 
       {/* Tron muc chu va khoi, xep theo do cao tren canvas desktop. */}
-      {[
-        ...sections.map((section) => ({ y: section.y, node: renderSection(section) })),
-        ...blocks.map((block) => ({ y: block.y, node: renderBlock(block) })),
-      ]
-        .sort((a, b) => a.y - b.y)
-        .map((row) => row.node)}
+      {mergeByY(
+        sections.map((section) => ({ y: section.y, item: renderSection(section) })),
+        blocks.map((block) => ({
+          y: block.y,
+          item: (
+            <MobileStrip
+              key={block.id}
+              block={block}
+              showLabel={!headingAlreadyShown(block.label, shownHeadings)}
+            />
+          ),
+        })),
+      )}
 
       {contact ? (
         <section className="tc-m-contact">
@@ -119,44 +133,3 @@ function renderSection(section: MobileSection) {
 }
 
 /** Mot khoi dua xuong tu ban desktop: bang anh hoac dai the. */
-function renderBlock(block: MobileBlock) {
-  if (block.kind === "carousel") {
-    return (
-      <section key={block.id} className="tc-m-sec">
-        <p className="tc-m-label">{block.label}</p>
-        <MobileCarousel
-          slides={block.slides}
-          label={block.label}
-          everyMs={SLIDER_AUTOPLAY_MS}
-          ratio={block.ratio}
-        />
-      </section>
-    );
-  }
-
-  return (
-    <section key={block.id} className="tc-m-sec">
-      <ul
-        className="tc-m-tiles"
-        style={{ ["--tc-m-tile" as string]: block.ratio }}
-      >
-        {block.tiles.map((tile) => (
-          <li key={tile.href + tile.title}>
-            {/* `aria-label` luon co: chu cua the nam trong anh nen neu khong
-                khai thi day la mot lien ket KHONG CO TEN. */}
-            <Link
-              href={tile.href}
-              prefetch={false}
-              aria-label={tile.label || undefined}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san */}
-              <img src={tile.src} alt="" loading="lazy" decoding="async" />
-              {tile.title ? <strong>{tile.title}</strong> : null}
-              {tile.subtitle ? <em>{tile.subtitle}</em> : null}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}

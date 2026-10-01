@@ -226,6 +226,12 @@ export default async function SubPage({
           <ReadMore spots={getCtaSpots(slug).filter((spot) => !covered(spot))} posts={posts} />
         </>
       }
+      mobileFeature={
+        <>
+          {isDealerNetwork && <DealerSearch layout="mobile" />}
+          {isQuiz && <StyleQuiz layout="mobile" />}
+        </>
+      }
     />
   );
 }
