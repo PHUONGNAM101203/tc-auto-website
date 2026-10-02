@@ -49,6 +49,14 @@ export interface LiftCard {
    * nen du noi dung y het.
    */
   readonly srcSet?: readonly { readonly src: string; readonly width: number }[];
+  /**
+   * Ban HEP 360px, chi dung o luoi mobile.
+   *
+   * O do moi o chi rong 169px ma anh goc rong 750 — gap hon bon lan. Do duoc:
+   * trang Giai phap tren dien thoai NANG HON tren may ban dung vi may tam
+   * nay. Xem tools/brand/make-mobile-products.py.
+   */
+  readonly mobileSrc?: string;
 }
 
 /**

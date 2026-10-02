@@ -288,8 +288,11 @@
 .tc-m-hero-title {
   font-family: "Cormorant Infant", serif;
   font-weight: 700;
-  font-size: clamp(30px, 9vw, 42px);
-  line-height: 1.1;
+  /* 35,1px ở 390px. Đây là tiêu đề TRANG nên to nhất, nhưng hạ từ 9vw xuống
+     8vw: tên trang dài như "TRỞ THÀNH ĐẠI LÝ WINCA CHÍNH HÃNG" ở cỡ cũ tràn
+     ba dòng và đẩy hết ảnh hero xuống. */
+  font-size: clamp(26px, 8vw, 38px);
+  line-height: 1.14;
   text-transform: uppercase;
 }
 
@@ -329,13 +332,21 @@
   border-bottom: 4px solid transparent;
 }
 
+/* Cỡ chữ đo trên máy thật ở bề ngang 390px: luật cũ clamp(24px, 7vw, 32px)
+   cho ra 27,3px, và tiêu đề tiếng Việt IN HOA có dấu ở cỡ đó tràn 3–4 dòng,
+   chiếm gần hết màn hình. Khách bảo "to quá chiếm hết cả màn hình nhìn bị xấu"
+   (02/10/2026).
+
+   Nay clamp(20px, 5.6vw, 26px) → 21,8px ở 390px, 23px ở 412px (Pixel), vẫn
+   26px trên máy tính bảng. Giữ nguyên phông và chữ hoa của thiết kế, chỉ hạ
+   cỡ. Giãn dòng nới từ 1,16 lên 1,22 vì chữ hoa có dấu cần chỗ cho dấu. */
 .tc-m-sec h2 {
   display: grid;
   margin-top: 12px;
   font-family: "Cormorant Infant", serif;
   font-weight: 700;
-  font-size: clamp(24px, 7vw, 32px);
-  line-height: 1.16;
+  font-size: clamp(20px, 5.6vw, 26px);
+  line-height: 1.22;
   text-transform: uppercase;
 }
 
@@ -442,12 +453,14 @@
   padding: 34px 20px 0;
 }
 
+/* Như trên: 24,96px → 19,9px ở 390px. Đây là tiêu đề TRONG bài, nhỏ hơn tiêu
+   đề mục một bậc nên phải nhỏ hơn hẳn chứ không chỉ nhỏ hơn một chút. */
 .tc-m-article h2 {
   margin-top: 30px;
   font-family: "Cormorant Infant", serif;
   font-weight: 700;
-  font-size: clamp(22px, 6.4vw, 28px);
-  line-height: 1.2;
+  font-size: clamp(18px, 5.1vw, 24px);
+  line-height: 1.25;
   text-transform: uppercase;
 }
 

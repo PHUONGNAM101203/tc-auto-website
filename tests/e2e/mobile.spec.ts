@@ -54,6 +54,43 @@ test.describe("bản mobile", () => {
     }
   });
 
+  test("chữ IN HOA không được to đến mức chiếm hết màn hình", async ({ page }) => {
+    // Khach bao (02/10/2026): "mấy phần chữ in hoa hết trên mobile … đừng để
+    // nó bị to quá chiếm hết cả màn hình". Do duoc hoi do: tieu de muc 27,3px
+    // va tieu de trong bai 24,96px — chu hoa tieng Viet co dau o co do tran
+    // ba bon dong tren man 390px.
+    for (const route of ["/", "/giai-phap", "/cong-nghe/ung-dung"]) {
+      await page.goto(route);
+      const rows = await page.$$eval(
+        ".tc-m h2, .tc-m .tc-m-hero-title",
+        (els) =>
+          els
+            .filter((el) => (el as HTMLElement).offsetParent !== null)
+            .map((el) => {
+              const style = getComputedStyle(el);
+              const text = (el.textContent ?? "").trim();
+              return {
+                text: text.slice(0, 30),
+                size: parseFloat(style.fontSize),
+                lines: Math.round(
+                  el.getBoundingClientRect().height / parseFloat(style.lineHeight),
+                ),
+                isHeroTitle: el.classList.contains("tc-m-hero-title"),
+              };
+            }),
+      );
+      expect(rows.length, route).toBeGreaterThan(0);
+
+      for (const row of rows) {
+        // Tieu de TRANG duoc to hon mot bac; cac tieu de khac phai duoi 24px.
+        const ceiling = row.isHeroTitle ? 34 : 24;
+        expect(row.size, `${route} — "${row.text}"`).toBeLessThanOrEqual(ceiling);
+        // Va khong tieu de nao duoc dai qua bon dong.
+        expect(row.lines, `${route} — "${row.text}" quá nhiều dòng`).toBeLessThanOrEqual(4);
+      }
+    }
+  });
+
   test("menu mở ra đủ các mục và đóng được", async ({ page }) => {
     await page.goto("/");
     const burger = page.locator(".tc-m-burger");

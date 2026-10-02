@@ -22,6 +22,8 @@ import type { PageSlug } from "./types";
 export interface MobileTile {
   readonly href: string;
   readonly src: string;
+  /** Ban hep 360px — xem tools/brand/make-mobile-products.py. */
+  readonly mobileSrc?: string;
   /** De trong khi tieu de da nam san trong anh — tranh doc thay hai lan. */
   readonly title: string;
   readonly subtitle: string;
@@ -136,6 +138,7 @@ function liftBlocks(slug: PageSlug): MobileBlock[] {
       {
         href: card.href,
         src: card.src,
+        mobileSrc: card.mobileSrc,
         title: card.captionInImage ? "" : card.title,
         subtitle: card.captionInImage ? "" : card.subtitle,
         label: [card.title, card.subtitle].filter(Boolean).join(" — "),

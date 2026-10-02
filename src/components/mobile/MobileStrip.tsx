@@ -58,7 +58,17 @@ export function MobileStrip({
                 khai thi day la mot lien ket KHONG CO TEN. */}
             <Link href={tile.href} prefetch={false} aria-label={tile.label || undefined}>
               {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san */}
-              <img src={tile.src} alt="" loading="lazy" decoding="async" />
+              <img
+                src={tile.mobileSrc ?? tile.src}
+                srcSet={
+                  tile.mobileSrc ? `${tile.mobileSrc} 360w, ${tile.src} 750w` : undefined
+                }
+                /* Luoi hai cot: moi o chiem nua be ngang, tru le va khe giua. */
+                sizes={tile.mobileSrc ? "calc((100vw - 52px) / 2)" : undefined}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
               {tile.title ? <strong>{tile.title}</strong> : null}
               {tile.subtitle ? <em>{tile.subtitle}</em> : null}
             </Link>

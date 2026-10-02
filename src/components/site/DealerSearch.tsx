@@ -16,10 +16,24 @@ import { BRANDS, findDealers, mapHref, PROVINCES, type Dealer } from "@/lib/deal
  *   nut        x 83  y 1377  179x34   (trung voi nut do detector do duoc)
  */
 
-const FIELD = { left: 84, width: 354, height: 48 } as const;
-const BRAND_TOP = 1237;
+/**
+ * Toa do do LAI bang cach quet chinh anh nen (02/10/2026), khong lay uoc chung
+ * tu frame nua.
+ *
+ * Ban cu de `left: 84, height: 48` trong khi hop ve san la x 83..436,
+ * y 1235..1286 — tuc la phan tu that nam THUT VAO trong hop ve san 1-2px moi
+ * phia. Khi chon gia tri, phan tu ve vien cua no va nguoi dung thay HAI duong
+ * vien long nhau. Khach chi dung cho do: "không được cho nó có phần bị đè như
+ * này ở bất cứ phần nào".
+ *
+ * Nay phan tu phu KHIT hop ve san, va khi co nen duc thi no che han vien ve
+ * san di — chi con mot duong vien duy nhat.
+ */
+const FIELD = { left: 83, width: 354, height: 52 } as const;
+const BRAND_TOP = 1235;
 const PROVINCE_TOP = 1305;
-const BUTTON = { left: 83, top: 1377, width: 179, height: 34 } as const;
+/** Nut do ve san: x 83..262, y 1377..1410 (do bang cach quet diem mau do). */
+const BUTTON = { left: 83, top: 1377, width: 180, height: 34 } as const;
 /** Vung ket qua — dung cho vi tri ma thiet ke dat danh sach dai ly. */
 const PANEL = { left: 830, top: 1100, width: 545, height: 640 } as const;
 

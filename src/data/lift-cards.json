@@ -14,7 +14,8 @@
         "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=2191e728",
         "grow": true,
         "captionInImage": true,
-        "group": "home-trai-nghiem"
+        "group": "home-trai-nghiem",
+        "mobileSrc": "/lift/home-trai-nghiem-hanh-trinh@m.webp?v=2a0da7f9"
       },
       {
         "id": "ban-sac-rieng",
@@ -28,7 +29,8 @@
         "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=42265e75",
         "grow": true,
         "captionInImage": true,
-        "group": "home-trai-nghiem"
+        "group": "home-trai-nghiem",
+        "mobileSrc": "/lift/home-trai-nghiem-ban-sac-rieng@m.webp?v=e3ba8e47"
       },
       {
         "id": "khoanh-khac",
@@ -42,7 +44,8 @@
         "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=8b767073",
         "grow": true,
         "captionInImage": true,
-        "group": "home-trai-nghiem"
+        "group": "home-trai-nghiem",
+        "mobileSrc": "/lift/home-trai-nghiem-khoanh-khac@m.webp?v=1633ad41"
       },
       {
         "id": "phong-cach-song",
@@ -56,7 +59,8 @@
         "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=2489f2ad",
         "grow": true,
         "captionInImage": true,
-        "group": "home-trai-nghiem"
+        "group": "home-trai-nghiem",
+        "mobileSrc": "/lift/home-trai-nghiem-phong-cach-song@m.webp?v=61f652b4"
       },
       {
         "id": "innovation",
@@ -68,7 +72,8 @@
         "width": 262,
         "height": 330,
         "src": "/lift/home-innovation.webp?v=0fb4d3ba",
-        "group": "home"
+        "group": "home",
+        "mobileSrc": "/lift/home-innovation@m.webp?v=209b31ae"
       },
       {
         "id": "applications",
@@ -80,7 +85,8 @@
         "width": 262,
         "height": 330,
         "src": "/lift/home-applications.webp?v=68c4e08e",
-        "group": "home"
+        "group": "home",
+        "mobileSrc": "/lift/home-applications@m.webp?v=a03f1d11"
       },
       {
         "id": "warranty",
@@ -92,7 +98,8 @@
         "width": 262,
         "height": 330,
         "src": "/lift/home-warranty.webp?v=d94b7ecf",
-        "group": "home"
+        "group": "home",
+        "mobileSrc": "/lift/home-warranty@m.webp?v=a536dc1f"
       },
       {
         "id": "experience-lab",
@@ -104,7 +111,8 @@
         "width": 260,
         "height": 330,
         "src": "/lift/home-experience-lab.webp?v=4b0574b3",
-        "group": "home"
+        "group": "home",
+        "mobileSrc": "/lift/home-experience-lab@m.webp?v=011f58f3"
       }
     ],
     "dai-ly": [
@@ -118,7 +126,8 @@
         "width": 358,
         "height": 495,
         "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=543818cc",
-        "group": "dai-ly"
+        "group": "dai-ly",
+        "mobileSrc": "/lift/dai-ly-hanh-trinh-hop-tac@m.webp?v=0e1939e7"
       },
       {
         "id": "gia-tri-cung-dat-duoc",
@@ -130,7 +139,8 @@
         "width": 358,
         "height": 495,
         "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=4bf12546",
-        "group": "dai-ly"
+        "group": "dai-ly",
+        "mobileSrc": "/lift/dai-ly-gia-tri-cung-dat-duoc@m.webp?v=088742ab"
       }
     ],
     "giai-phap": [
@@ -144,7 +154,8 @@
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea",
-        "group": "giai-phap"
+        "group": "giai-phap",
+        "mobileSrc": "/lift/giai-phap-phim-3m@m.webp?v=0008fdc2"
       },
       {
         "id": "phim-nano-sun",
@@ -156,7 +167,8 @@
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739",
-        "group": "giai-phap"
+        "group": "giai-phap",
+        "mobileSrc": "/lift/giai-phap-phim-nano-sun@m.webp?v=7e2436a8"
       },
       {
         "id": "phim-5do",
@@ -168,7 +180,8 @@
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-5do.webp?v=390d453c",
-        "group": "giai-phap"
+        "group": "giai-phap",
+        "mobileSrc": "/lift/giai-phap-phim-5do@m.webp?v=8e0a18b7"
       },
       {
         "id": "winca",
@@ -192,7 +205,8 @@
         ],
         "grow": true,
         "captionInImage": true,
-        "group": "giai-phap-man-hinh"
+        "group": "giai-phap-man-hinh",
+        "mobileSrc": "/lift/giai-phap-man-hinh-winca@m.webp?v=50464971"
       },
       {
         "id": "bravo",
@@ -216,7 +230,8 @@
         ],
         "grow": true,
         "captionInImage": true,
-        "group": "giai-phap-man-hinh"
+        "group": "giai-phap-man-hinh",
+        "mobileSrc": "/lift/giai-phap-man-hinh-bravo@m.webp?v=e9321674"
       },
       {
         "id": "3m",
@@ -240,7 +255,8 @@
         ],
         "grow": true,
         "captionInImage": true,
-        "group": "giai-phap-ppf"
+        "group": "giai-phap-ppf",
+        "mobileSrc": "/lift/giai-phap-ppf-3m@m.webp?v=ccf80d3f"
       },
       {
         "id": "nano-sun",
@@ -264,7 +280,8 @@
         ],
         "grow": true,
         "captionInImage": true,
-        "group": "giai-phap-ppf"
+        "group": "giai-phap-ppf",
+        "mobileSrc": "/lift/giai-phap-ppf-nano-sun@m.webp?v=150346bd"
       },
       {
         "id": "5do",
@@ -288,7 +305,8 @@
         ],
         "grow": true,
         "captionInImage": true,
-        "group": "giai-phap-ppf"
+        "group": "giai-phap-ppf",
+        "mobileSrc": "/lift/giai-phap-ppf-5do@m.webp?v=16ab7656"
       }
     ]
   }
