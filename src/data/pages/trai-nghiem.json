@@ -28,7 +28,7 @@
       }
     },
     {
-      "src": "/slices/trai-nghiem-1.webp?v=db71b826",
+      "src": "/slices/trai-nghiem-1.webp?v=6c876470",
       "y": 900.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -36,11 +36,11 @@
       "bytes": 141230,
       "srcSet": [
         {
-          "src": "/slices/trai-nghiem-1.webp?v=db71b826",
+          "src": "/slices/trai-nghiem-1.webp?v=6c876470",
           "scale": 2
         },
         {
-          "src": "/slices/trai-nghiem-1@3x.webp?v=5cc94175",
+          "src": "/slices/trai-nghiem-1@3x.webp?v=b0a7e37d",
           "scale": 3
         }
       ],
@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/trai-nghiem-2.webp?v=56adf287",
+      "src": "/slices/trai-nghiem-2.webp?v=75739078",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 101474,
       "srcSet": [
         {
-          "src": "/slices/trai-nghiem-2.webp?v=56adf287",
+          "src": "/slices/trai-nghiem-2.webp?v=75739078",
           "scale": 2
         },
         {
-          "src": "/slices/trai-nghiem-2@3x.webp?v=82311fc6",
+          "src": "/slices/trai-nghiem-2@3x.webp?v=1218f30c",
           "scale": 3
         }
       ],
@@ -451,5 +451,6 @@
   ],
   "contactForm": {
     "y": 3341.0
-  }
+  },
+  "lightBandsDarkened": true
 }

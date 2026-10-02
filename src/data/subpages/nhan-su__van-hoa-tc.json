@@ -15,7 +15,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc-0@3x.webp?v=ce341ed6",
+          "src": "/slices/sub/nhan-su__van-hoa-tc-0@3x.webp?v=a3b486e2",
           "scale": 3
         }
       ],
@@ -52,14 +52,14 @@
       }
     },
     {
-      "src": "/slices/sub/nhan-su__van-hoa-tc-2@2x.webp?v=10f8a22c",
+      "src": "/slices/sub/nhan-su__van-hoa-tc-2@2x.webp?v=887e2ec8",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc-2@2x.webp?v=10f8a22c",
+          "src": "/slices/sub/nhan-su__van-hoa-tc-2@2x.webp?v=887e2ec8",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__van-hoa-tc-2@3x.webp?v=3c1c5828",
+          "src": "/slices/sub/nhan-su__van-hoa-tc-2@3x.webp?v=edd248be",
           "scale": 3
         }
       ],
@@ -141,5 +141,6 @@
       "href": "/nhan-su"
     }
   ],
-  "sourceFile": "2.1 VĂN HOÁ TC.png"
+  "sourceFile": "2.1 VĂN HOÁ TC.png",
+  "lightBandsDarkened": true
 }

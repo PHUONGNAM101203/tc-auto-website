@@ -14,7 +14,15 @@ Sinh ban 360px de dat canh ban goc trong `srcset`; trinh duyet tu chon. Trang
 chi tiet san pham van dung ban goc — o do anh hien to han.
 
 Chay: python3 tools/brand/make-mobile-products.py
-Vi tri trong chuoi: trong `parse:cta`, SAU `extract-products.py`.
+
+Vi tri trong chuoi: HAI CHO, va phai du ca hai.
+  - `parse:cta`, sau `extract-products.py`  -> cho anh san pham
+  - `parse:prototype`, sau `extract-lift-cards.py` -> cho the noi
+
+De thieu mot cho la cho do mat `mobileSrc` sau lan chay chuoi tiep theo, va
+ban dien thoai lai keo ve anh to. Da dinh dung cai bay do: chay lai
+`parse:prototype` lam trang Giai phap tren dien thoai vot tu 1,36 len 2,94 MB,
+`verify:weight` bat duoc.
 """
 from __future__ import annotations
 

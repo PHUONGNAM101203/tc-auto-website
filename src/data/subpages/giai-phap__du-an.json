@@ -15,7 +15,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an-0@3x.webp?v=7027b812",
+          "src": "/slices/sub/giai-phap__du-an-0@3x.webp?v=303ac0f0",
           "scale": 3
         }
       ],
@@ -30,14 +30,14 @@
       }
     },
     {
-      "src": "/slices/sub/giai-phap__du-an-1@2x.webp?v=58a41918",
+      "src": "/slices/sub/giai-phap__du-an-1@2x.webp?v=a2ae6904",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__du-an-1@2x.webp?v=58a41918",
+          "src": "/slices/sub/giai-phap__du-an-1@2x.webp?v=a2ae6904",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an-1@3x.webp?v=309a7046",
+          "src": "/slices/sub/giai-phap__du-an-1@3x.webp?v=30eba75c",
           "scale": 3
         }
       ],
@@ -52,14 +52,14 @@
       }
     },
     {
-      "src": "/slices/sub/giai-phap__du-an-2@2x.webp?v=ba3449cc",
+      "src": "/slices/sub/giai-phap__du-an-2@2x.webp?v=56ab69a5",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__du-an-2@2x.webp?v=ba3449cc",
+          "src": "/slices/sub/giai-phap__du-an-2@2x.webp?v=56ab69a5",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an-2@3x.webp?v=65ea5fa8",
+          "src": "/slices/sub/giai-phap__du-an-2@3x.webp?v=539ea547",
           "scale": 3
         }
       ],
@@ -74,14 +74,14 @@
       }
     },
     {
-      "src": "/slices/sub/giai-phap__du-an-3@2x.webp?v=28b24a52",
+      "src": "/slices/sub/giai-phap__du-an-3@2x.webp?v=70020f99",
       "srcSet": [
         {
-          "src": "/slices/sub/giai-phap__du-an-3@2x.webp?v=28b24a52",
+          "src": "/slices/sub/giai-phap__du-an-3@2x.webp?v=70020f99",
           "scale": 2
         },
         {
-          "src": "/slices/sub/giai-phap__du-an-3@3x.webp?v=a47420e1",
+          "src": "/slices/sub/giai-phap__du-an-3@3x.webp?v=6f6f8123",
           "scale": 3
         }
       ],
@@ -163,5 +163,6 @@
       "href": "/giai-phap"
     }
   ],
-  "sourceFile": "6.1 CÁC DỰ ÁN ĐÃ TRIỂN KHAI.png"
+  "sourceFile": "6.1 CÁC DỰ ÁN ĐÃ TRIỂN KHAI.png",
+  "lightBandsDarkened": true
 }

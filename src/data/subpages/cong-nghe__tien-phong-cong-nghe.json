@@ -15,7 +15,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@3x.webp?v=ce7db2fd",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-0@3x.webp?v=7f3804ce",
           "scale": 3
         }
       ],
@@ -30,14 +30,14 @@
       }
     },
     {
-      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-1@2x.webp?v=75368415",
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-1@2x.webp?v=f418ee03",
       "srcSet": [
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-1@2x.webp?v=75368415",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-1@2x.webp?v=f418ee03",
           "scale": 2
         },
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-1@3x.webp?v=9b7bd917",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-1@3x.webp?v=e801d3c0",
           "scale": 3
         }
       ],
@@ -52,14 +52,14 @@
       }
     },
     {
-      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-2@2x.webp?v=400723da",
+      "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-2@2x.webp?v=1c0b56c2",
       "srcSet": [
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-2@2x.webp?v=400723da",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-2@2x.webp?v=1c0b56c2",
           "scale": 2
         },
         {
-          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-2@3x.webp?v=592c6ff8",
+          "src": "/slices/sub/cong-nghe__tien-phong-cong-nghe-2@3x.webp?v=1336e1d3",
           "scale": 3
         }
       ],
@@ -119,5 +119,6 @@
       "href": "/cong-nghe"
     }
   ],
-  "sourceFile": "2.1 Tiên Phong Công Nghệ.png"
+  "sourceFile": "2.1 Tiên Phong Công Nghệ.png",
+  "lightBandsDarkened": true
 }

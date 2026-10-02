@@ -167,6 +167,48 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "Dai anh du an duoc dung lai thanh bang chuyen bam duoc; cac tam khong " +
       "lam nghieng vi anh goc la anh phang.",
   },
+  {
+    page: "trai-nghiem",
+    box: { x: 0, y: 1442, width: 1440, height: 2034 - 1442 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
+      "(ra soat lai 02/10/2026, con nam dai nua ngoai ba dai da lam).",
+  },
+  {
+    page: "cong-nghe/tien-phong-cong-nghe",
+    box: { x: 0, y: 1696, width: 1440, height: 2339 - 1696 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
+      "(ra soat lai 02/10/2026). Xem SUB_BANDS trong tools/brand/darken-light-bands.py.",
+  },
+  {
+    page: "giai-phap/du-an",
+    box: { x: 0, y: 1376, width: 1440, height: 1881 - 1376 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
+      "(ra soat lai 02/10/2026). Xem SUB_BANDS trong tools/brand/darken-light-bands.py.",
+  },
+  {
+    page: "giai-phap/du-an",
+    box: { x: 0, y: 2365, width: 1440, height: 2869 - 2365 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
+      "(ra soat lai 02/10/2026). Xem SUB_BANDS trong tools/brand/darken-light-bands.py.",
+  },
+  {
+    page: "nhan-su/nhan-su-tc",
+    box: { x: 0, y: 1490, width: 1440, height: 2662 - 1490 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
+      "(ra soat lai 02/10/2026). Xem SUB_BANDS trong tools/brand/darken-light-bands.py.",
+  },
+  {
+    page: "nhan-su/van-hoa-tc",
+    box: { x: 0, y: 1891, width: 1440, height: 2559 - 1891 },
+    reason:
+      "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
+      "(ra soat lai 02/10/2026). Xem SUB_BANDS trong tools/brand/darken-light-bands.py.",
+  },
   // ── Doi thu tu muc giai phap ────────────────────────────────────────────
   {
     page: "giai-phap",

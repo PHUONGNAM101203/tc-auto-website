@@ -15,7 +15,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-0@3x.webp?v=d0df0a8a",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-0@3x.webp?v=cec7272d",
           "scale": 3
         }
       ],
@@ -30,14 +30,14 @@
       }
     },
     {
-      "src": "/slices/sub/nhan-su__nhan-su-tc-1@2x.webp?v=59eb74e4",
+      "src": "/slices/sub/nhan-su__nhan-su-tc-1@2x.webp?v=61cc13cb",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-1@2x.webp?v=59eb74e4",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-1@2x.webp?v=61cc13cb",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-1@3x.webp?v=696f7393",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-1@3x.webp?v=349edcd5",
           "scale": 3
         }
       ],
@@ -52,14 +52,14 @@
       }
     },
     {
-      "src": "/slices/sub/nhan-su__nhan-su-tc-2@2x.webp?v=cd278e82",
+      "src": "/slices/sub/nhan-su__nhan-su-tc-2@2x.webp?v=ae4bb99b",
       "srcSet": [
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-2@2x.webp?v=cd278e82",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-2@2x.webp?v=ae4bb99b",
           "scale": 2
         },
         {
-          "src": "/slices/sub/nhan-su__nhan-su-tc-2@3x.webp?v=7143d338",
+          "src": "/slices/sub/nhan-su__nhan-su-tc-2@3x.webp?v=d9130cd8",
           "scale": 3
         }
       ],
@@ -141,5 +141,6 @@
       "href": "/nhan-su"
     }
   ],
-  "sourceFile": "3. NHÂN SỰ TC.png"
+  "sourceFile": "3. NHÂN SỰ TC.png",
+  "lightBandsDarkened": true
 }

@@ -83,8 +83,13 @@
   font-style: italic;
 }
 
+/* Lop nay sinh ra cho chu nam tren DAI NEN TRANG cua thiet ke. Bon dai trang
+   do nay da duoc to thanh navy cho dong bo voi ca site (khach yeu cau
+   01/10/2026, ra soat lai 02/10), nen chu o do phai sang chu khong con toi.
+   Da doi chieu: ca bon muc mang lop `dark` deu nam trong mot dai da to toi,
+   khong con cho nao con nen trang de dung mau cu. */
 .dark {
-  color: var(--navy);
+  color: #fff;
 }
 
 .herot {

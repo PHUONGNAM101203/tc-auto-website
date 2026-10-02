@@ -609,5 +609,6 @@
   "contactForm": {
     "y": 5854.0
   },
-  "solutionsReordered": true
+  "solutionsReordered": true,
+  "lightBandsDarkened": true
 }
