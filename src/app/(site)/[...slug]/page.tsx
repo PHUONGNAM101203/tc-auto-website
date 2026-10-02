@@ -12,6 +12,7 @@ import { ProductPage } from "@/components/site/ProductPage";
 import { SubPageShell } from "@/components/site/SubPageShell";
 import { getHotspots } from "@/lib/hotspots";
 import { getCtaSpots } from "@/lib/cta-links";
+import { ownedCtaRects } from "@/lib/owned-cta";
 import { getPagination } from "@/lib/pagination";
 import { listPublishedPosts } from "@/lib/posts";
 import { SITE } from "@/lib/site-config";
@@ -213,11 +214,14 @@ export default async function SubPage({
   const hotspots = getHotspots(slug);
 
   /**
-   * Nut nao DA co vung bam rieng (bang hotspots) thi khong phu them lop
-   * "xem them" len nua — neu khong se co hai lop chong nhau tren cung mot nut.
+   * Nut nao DA co vung bam rieng thi khong phu them lop "xem them" len nua —
+   * neu khong se co hai lop chong nhau tren cung mot nut, va lop tren nuot
+   * het cu bam. Hai nguon: `hotspots` (vung bam khai tay) va `ownedCtaRects`
+   * (nut that do component rieng cua trang ve — xem src/lib/owned-cta.ts).
    */
+  const taken = [...hotspots, ...ownedCtaRects(slug)];
   const covered = (spot: { x: number; y: number; w: number; h: number }) =>
-    hotspots.some(
+    taken.some(
       (hot) =>
         spot.x < hot.x + hot.w &&
         spot.x + spot.w > hot.x &&

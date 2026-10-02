@@ -11,11 +11,11 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=2191e728",
+        "src": "/lift/home-trai-nghiem-hanh-trinh.webp?v=cafee64c",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem",
-        "mobileSrc": "/lift/home-trai-nghiem-hanh-trinh@m.webp?v=2a0da7f9"
+        "mobileSrc": "/lift/home-trai-nghiem-hanh-trinh@m.webp?v=9d24440c"
       },
       {
         "id": "ban-sac-rieng",
@@ -26,11 +26,11 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=42265e75",
+        "src": "/lift/home-trai-nghiem-ban-sac-rieng.webp?v=00308670",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem",
-        "mobileSrc": "/lift/home-trai-nghiem-ban-sac-rieng@m.webp?v=e3ba8e47"
+        "mobileSrc": "/lift/home-trai-nghiem-ban-sac-rieng@m.webp?v=8fc17a47"
       },
       {
         "id": "khoanh-khac",
@@ -41,11 +41,11 @@
         "y": 927,
         "width": 257,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=8b767073",
+        "src": "/lift/home-trai-nghiem-khoanh-khac.webp?v=b591ff3b",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem",
-        "mobileSrc": "/lift/home-trai-nghiem-khoanh-khac@m.webp?v=1633ad41"
+        "mobileSrc": "/lift/home-trai-nghiem-khoanh-khac@m.webp?v=cd211fc4"
       },
       {
         "id": "phong-cach-song",
@@ -56,11 +56,11 @@
         "y": 927,
         "width": 258,
         "height": 455,
-        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=2489f2ad",
+        "src": "/lift/home-trai-nghiem-phong-cach-song.webp?v=19f71e48",
         "grow": true,
         "captionInImage": true,
         "group": "home-trai-nghiem",
-        "mobileSrc": "/lift/home-trai-nghiem-phong-cach-song@m.webp?v=61f652b4"
+        "mobileSrc": "/lift/home-trai-nghiem-phong-cach-song@m.webp?v=0a13db65"
       },
       {
         "id": "innovation",
@@ -125,9 +125,9 @@
         "y": 1574,
         "width": 358,
         "height": 495,
-        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=543818cc",
+        "src": "/lift/dai-ly-hanh-trinh-hop-tac.webp?v=2ae0bc2c",
         "group": "dai-ly",
-        "mobileSrc": "/lift/dai-ly-hanh-trinh-hop-tac@m.webp?v=0e1939e7"
+        "mobileSrc": "/lift/dai-ly-hanh-trinh-hop-tac@m.webp?v=28df8f84"
       },
       {
         "id": "gia-tri-cung-dat-duoc",
@@ -138,9 +138,9 @@
         "y": 1574,
         "width": 358,
         "height": 495,
-        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=4bf12546",
+        "src": "/lift/dai-ly-gia-tri-cung-dat-duoc.webp?v=6e133a52",
         "group": "dai-ly",
-        "mobileSrc": "/lift/dai-ly-gia-tri-cung-dat-duoc@m.webp?v=088742ab"
+        "mobileSrc": "/lift/dai-ly-gia-tri-cung-dat-duoc@m.webp?v=4fce56ab"
       }
     ],
     "giai-phap": [
@@ -150,7 +150,7 @@
         "subtitle": "Giải pháp cách nhiệt cao cấp",
         "href": "/giai-phap/phim-dan-kinh",
         "x": 49,
-        "y": 2717,
+        "y": 2205,
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-3m.webp?v=2da587ea",
@@ -163,7 +163,7 @@
         "subtitle": "Công nghệ Nano window film",
         "href": "/giai-phap/phim-dan-kinh",
         "x": 502,
-        "y": 2717,
+        "y": 2205,
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-nano-sun.webp?v=8f962739",
@@ -176,7 +176,7 @@
         "subtitle": "Lựa chọn tối ưu chi phí",
         "href": "/giai-phap/phim-dan-kinh",
         "x": 955,
-        "y": 2717,
+        "y": 2205,
         "width": 429,
         "height": 697,
         "src": "/lift/giai-phap-phim-5do.webp?v=390d453c",
@@ -189,24 +189,24 @@
         "subtitle": "Màn hình Android Winca – hiển thị QLED 2K sắc nét",
         "href": "/giai-phap/man-hinh",
         "x": 576,
-        "y": 1945,
+        "y": 4665,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-winca.webp?v=5c8dcf2d",
+        "src": "/lift/giai-phap-man-hinh-winca.webp?v=fe5e3d33",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-man-hinh-winca.webp?v=5c8dcf2d",
+            "src": "/lift/giai-phap-man-hinh-winca.webp?v=fe5e3d33",
             "width": 750
           },
           {
-            "src": "/lift/giai-phap-man-hinh-winca@3x.webp?v=4909ce0b",
+            "src": "/lift/giai-phap-man-hinh-winca@3x.webp?v=f7662622",
             "width": 1125
           }
         ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-man-hinh",
-        "mobileSrc": "/lift/giai-phap-man-hinh-winca@m.webp?v=50464971"
+        "mobileSrc": "/lift/giai-phap-man-hinh-winca@m.webp?v=f1df591d"
       },
       {
         "id": "bravo",
@@ -214,24 +214,24 @@
         "subtitle": "Màn hình Android Bravo – cấu hình ổn định",
         "href": "/giai-phap/man-hinh?tab=bravo",
         "x": 984,
-        "y": 1945,
+        "y": 4665,
         "width": 375,
         "height": 487,
-        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=b2b78725",
+        "src": "/lift/giai-phap-man-hinh-bravo.webp?v=acff54d2",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-man-hinh-bravo.webp?v=b2b78725",
+            "src": "/lift/giai-phap-man-hinh-bravo.webp?v=acff54d2",
             "width": 750
           },
           {
-            "src": "/lift/giai-phap-man-hinh-bravo@3x.webp?v=210b4e16",
+            "src": "/lift/giai-phap-man-hinh-bravo@3x.webp?v=890eee6e",
             "width": 1125
           }
         ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-man-hinh",
-        "mobileSrc": "/lift/giai-phap-man-hinh-bravo@m.webp?v=e9321674"
+        "mobileSrc": "/lift/giai-phap-man-hinh-bravo@m.webp?v=e55f990e"
       },
       {
         "id": "3m",
@@ -239,24 +239,24 @@
         "subtitle": "Phim bảo vệ sơn 3M",
         "href": "/giai-phap/ppf",
         "x": 80,
-        "y": 3476,
+        "y": 2964,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-3m.webp?v=fd392db9",
+        "src": "/lift/giai-phap-ppf-3m.webp?v=4c68b672",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-ppf-3m.webp?v=fd392db9",
+            "src": "/lift/giai-phap-ppf-3m.webp?v=4c68b672",
             "width": 1344
           },
           {
-            "src": "/lift/giai-phap-ppf-3m@3x.webp?v=3b486502",
+            "src": "/lift/giai-phap-ppf-3m@3x.webp?v=08d729d2",
             "width": 2016
           }
         ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf",
-        "mobileSrc": "/lift/giai-phap-ppf-3m@m.webp?v=ccf80d3f"
+        "mobileSrc": "/lift/giai-phap-ppf-3m@m.webp?v=50cc409a"
       },
       {
         "id": "nano-sun",
@@ -264,24 +264,24 @@
         "subtitle": "Phim bảo vệ sơn Nano Sun",
         "href": "/giai-phap/ppf",
         "x": 80,
-        "y": 3705,
+        "y": 3193,
         "width": 672,
         "height": 204,
-        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=98d8bff1",
+        "src": "/lift/giai-phap-ppf-nano-sun.webp?v=4c68b672",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-ppf-nano-sun.webp?v=98d8bff1",
+            "src": "/lift/giai-phap-ppf-nano-sun.webp?v=4c68b672",
             "width": 1344
           },
           {
-            "src": "/lift/giai-phap-ppf-nano-sun@3x.webp?v=37da714c",
+            "src": "/lift/giai-phap-ppf-nano-sun@3x.webp?v=08d729d2",
             "width": 2016
           }
         ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf",
-        "mobileSrc": "/lift/giai-phap-ppf-nano-sun@m.webp?v=150346bd"
+        "mobileSrc": "/lift/giai-phap-ppf-nano-sun@m.webp?v=50cc409a"
       },
       {
         "id": "5do",
@@ -289,24 +289,24 @@
         "subtitle": "Phim bảo vệ sơn 5DO",
         "href": "/giai-phap/ppf",
         "x": 80,
-        "y": 3934,
+        "y": 3422,
         "width": 672,
         "height": 199,
-        "src": "/lift/giai-phap-ppf-5do.webp?v=7a55fd89",
+        "src": "/lift/giai-phap-ppf-5do.webp?v=2104f434",
         "srcSet": [
           {
-            "src": "/lift/giai-phap-ppf-5do.webp?v=7a55fd89",
+            "src": "/lift/giai-phap-ppf-5do.webp?v=2104f434",
             "width": 1344
           },
           {
-            "src": "/lift/giai-phap-ppf-5do@3x.webp?v=ccd17a42",
+            "src": "/lift/giai-phap-ppf-5do@3x.webp?v=07de24bf",
             "width": 2016
           }
         ],
         "grow": true,
         "captionInImage": true,
         "group": "giai-phap-ppf",
-        "mobileSrc": "/lift/giai-phap-ppf-5do@m.webp?v=16ab7656"
+        "mobileSrc": "/lift/giai-phap-ppf-5do@m.webp?v=4b1c897c"
       }
     ]
   }

@@ -112,7 +112,9 @@ export function ReadMore({
                 className="tc-readmore"
                 style={{ left: spot.x, top: spot.y, width: spot.w, height: spot.h }}
                 aria-label={`Đọc bài: ${post.title}`}
-              />
+              >
+                {spot.darkText ? <Label /> : null}
+              </Link>
             ) : spot.href ? (
               <Link
                 href={spot.href}
@@ -120,7 +122,9 @@ export function ReadMore({
                 className="tc-readmore"
                 style={{ left: spot.x, top: spot.y, width: spot.w, height: spot.h }}
                 aria-label={`Xem chi tiết: ${spot.heading || "bài viết"}`}
-              />
+              >
+                {spot.darkText ? <Label /> : null}
+              </Link>
             ) : (
               <button
                 type="button"
@@ -130,7 +134,9 @@ export function ReadMore({
                 onClick={() => setOpenKey(isOpen ? null : key(spot))}
                 aria-expanded={isOpen}
                 aria-label={`${isOpen ? "Thu gọn" : "Xem thêm"}: ${spot.heading || "bài viết"}`}
-              />
+              >
+                {spot.darkText ? <Label open={isOpen} /> : null}
+              </button>
             )}
 
             {isOpen && !post ? <Expanded spot={spot} onClose={() => setOpenKey(null)} /> : null}
@@ -138,5 +144,27 @@ export function ReadMore({
         );
       })}
     </>
+  );
+}
+
+/**
+ * Nhan "XEM THÊM" ve bang PHAN TU THAT, de len cai ve san trong anh.
+ *
+ * CHI ve o nhung o co `darkText` — tuc la o nam tren DAI NEN TRANG cua thiet
+ * ke. Bon dai do nay da duoc to thanh navy cho dong bo voi ca site, va cho
+ * nao thiet ke lam MO DAN phan chu thua thi nhan "XEM THÊM" nam ngay trong
+ * vung mo, gan nhu khong doc duoc. Khach chi ra hai cho (02/10/2026):
+ * /giai-phap/du-an va /nhan-su/van-hoa-tc.
+ *
+ * Cac o con lai KHONG ve them gi: nut "XEM THÊM" cua chung la nut do ve san,
+ * trong ro rang. Ve de len la ra hai lop chong nhau — da thu va dung ngay
+ * cai bay do o dai 3M PPF.
+ */
+function Label({ open = false }: { readonly open?: boolean }) {
+  return (
+    <span className="tc-readmore-label">
+      <i aria-hidden="true">{open ? "⌃" : "›"}</i>
+      {open ? "THU GỌN" : "XEM THÊM"}
+    </span>
   );
 }

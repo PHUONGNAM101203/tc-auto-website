@@ -186,11 +186,18 @@ GROUPS = [
         # Muc nay nam tren nen TRANG THUAN -> chi can to trang, khong can noi suy.
         "rebuild": "white",
         # Nen sau hai the nay trong thiet ke la DAI TRANG, nen khi cat ra thi
-        # bon goc cua anh giu lai mau trang do. Luc nghi khong ai thay vi the
-        # nam trung khit len cho cu; nhung ro chuot la the nhac len 14px va bon
-        # o trang lo ra tren nen toi. Bo goc de chung trong suot han.
-        # Ban kinh do truc tiep tu anh da cat: 75px o ti le 3x = 25px canvas.
-        "cornerRadius": 25,
+        # bon goc cua anh giu lai mau trang do. Bo goc de chung trong suot han.
+        #
+        # 64 chu khong phai 25. Lan truoc do "75px o ti le 3x = 25px canvas" —
+        # do nham mot thu khac. Ban kinh THAT cua the suy tu chinh anh da cat:
+        # diem trang con sot nam cach goc 10,4..26,3px canvas, ma mot goc bo
+        # ban kinh R thi cho gan goc nhat o 0,414·R; 26,3 / 0,414 = 63,5.
+        # Lay 64, va dai o bang 0 — khong con diem sang nao o bon goc.
+        #
+        # Hau qua cua viec do thieu: mot cung TRANG mong o ca bon goc, lo ra
+        # ro nhat tren luoi mobile voi nen navy. Khach chi dung cho do
+        # (02/10/2026): "sao chỗ này lại có mấy cái trắng bao bọc 4 góc nhỉ".
+        "cornerRadius": 64,
         "cards": [
             {
                 "id": "hanh-trinh-hop-tac",

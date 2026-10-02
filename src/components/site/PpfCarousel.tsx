@@ -41,6 +41,15 @@ interface State {
  */
 const AUTOPLAY = false;
 
+/**
+ * Do cao cua mui ten, tinh tu dinh dai.
+ *
+ * Toa do trong thiet ke (y 1305) roi vao NGAY TIEU DE cua the — mui ten de len
+ * chu "… Gloss Series" va che mat mot doan. Dua len giua vung ANH cua the
+ * (anh chiem tu dinh the den `layout.title.top`) thi khong cham vao chu nao.
+ */
+const ARROW_TOP = Math.round(PPF_LAYOUT.title.top / 2 - PPF_ARROWS.prev.height / 2 - 12);
+
 export function PpfCarousel() {
   const [state, setState] = useState<State>({ step: 0, animate: true });
 
@@ -183,11 +192,13 @@ export function PpfCarousel() {
         onClick={() => moveByHand(-1)}
         style={{
           left: `${PPF_ARROWS.prev.x - PPF_VIEW.x - 12}px`,
-          top: `${PPF_ARROWS.prev.y - PPF_VIEW.y - 12}px`,
+          top: `${ARROW_TOP}px`,
           width: `${PPF_ARROWS.prev.width + 24}px`,
           height: `${PPF_ARROWS.prev.height + 24}px`,
         }}
-      />
+      >
+        <Chevron direction="left" />
+      </button>
       <button
         type="button"
         className="tc-ppf-arrow"
@@ -195,11 +206,39 @@ export function PpfCarousel() {
         onClick={() => moveByHand(1)}
         style={{
           left: `${PPF_ARROWS.next.x - PPF_VIEW.x - 12}px`,
-          top: `${PPF_ARROWS.next.y - PPF_VIEW.y - 12}px`,
+          top: `${ARROW_TOP}px`,
           width: `${PPF_ARROWS.next.width + 24}px`,
           height: `${PPF_ARROWS.next.height + 24}px`,
         }}
-      />
+      >
+        <Chevron direction="right" />
+      </button>
     </div>
+  );
+}
+
+/**
+ * Mui ten "‹ ›" ve bang phan tu that.
+ *
+ * Truoc day hai nut nay la vung bam TRONG SUOT, dat len cho ma thiet ke dang
+ * ra ve mui ten. Nhung o cho do anh nen hoan toan trong — do duoc: diem sang
+ * nhat 18/255, tuc la navy thuan. Nen nguoi dung khong he biet dai nay lat
+ * duoc. Khach bao: "chỗ này vẫn chưa có nút qua lại để xem hết nha"
+ * (02/10/2026).
+ *
+ * Do day net va ti le lay theo mui ten cua bang hero, de hai cho giong nhau.
+ */
+function Chevron({ direction }: { readonly direction: "left" | "right" }) {
+  return (
+    <svg viewBox="0 0 12 34" aria-hidden="true" focusable="false">
+      <path
+        d={direction === "left" ? "M10 2 L2 17 L10 32" : "M2 2 L10 17 L2 32"}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }

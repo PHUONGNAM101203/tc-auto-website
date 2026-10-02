@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { MobileSubPage } from "@/components/mobile/MobileSubPage";
-import { productsIn, productsOfBrand } from "@/lib/products";
+import { productsIn, productsOfBrand, type Product } from "@/lib/products";
 import { getBravoCards } from "@/lib/screen-tabs";
+import { BRAND_DEFAULT, getBrandTabs } from "@/lib/brand-tabs";
 import { PPF_CARDS } from "@/lib/ppf-cards";
 import { SliceImage } from "@/components/canvas/SliceImage";
 import { ContactForm } from "@/components/site/ContactForm";
@@ -285,25 +286,64 @@ function ReadableText({
  * ve khoi san pham phang nhu cu.
  */
 function screenTabsFor(slug: string) {
-  if (slug !== "giai-phap/man-hinh") {
-    return undefined;
+  if (slug === "giai-phap/man-hinh") {
+    return {
+      label: "Màn hình ô tô",
+      groups: [
+        {
+          id: "winca",
+          label: "WINCA",
+          // `productsOfBrand(slug, undefined)` = nhung san pham KHONG khai
+          // thuong hieu, tuc la Winca. Ba dong Bravo cung nam trong danh muc
+          // nay nhung thuoc tab kia.
+          items: productsOfBrand(slug).map(toTabItem),
+        },
+        {
+          id: "bravo",
+          label: "BRAVO",
+          items: getBravoCards().map((card) => ({
+            id: card.id,
+            name: card.name,
+            image: card.image,
+            href: card.href,
+          })),
+        },
+      ],
+    };
   }
+
+  if (slug === "dai-ly/gallery-by-brand") {
+    // Ba tab 5DO / 3M / NANO SUN. Ban desktop ve chung len thanh co san trong
+    // anh nen; duoi 900px canvas bi an nen phai co ban rieng — neu khong thi
+    // tren dien thoai trang nay khong co tab nao ca.
+    return {
+      label: "Bộ sưu tập thương hiệu",
+      initial: BRAND_DEFAULT,
+      groups: getBrandTabs().map((brand) => ({
+        id: brand.id,
+        label: brand.label,
+        items: brand.items.map(toTabItem),
+        empty: (
+          <p>
+            Bộ sưu tập {brand.label} đang được cập nhật. Gọi{" "}
+            <a href="tel:+84936176996">093&nbsp;617&nbsp;6996</a> để TC Auto gửi
+            bảng giá và mẫu phim.
+          </p>
+        ),
+      })),
+    };
+  }
+
+  return undefined;
+}
+
+/** San pham -> o trong luoi tab cua ban dien thoai. */
+function toTabItem(product: Product) {
   return {
-    // `productsOfBrand(slug, undefined)` = nhung san pham KHONG khai thuong
-    // hieu, tuc la Winca. Ba dong Bravo cung nam trong danh muc nay nhung
-    // thuoc tab kia.
-    winca: productsOfBrand(slug).map((product) => ({
-      id: product.slug,
-      name: product.name,
-      image: product.image,
-      mobileImage: product.mobileImage,
-      href: product.route,
-    })),
-    bravo: getBravoCards().map((card) => ({
-      id: card.id,
-      name: card.name,
-      image: card.image,
-      href: card.href,
-    })),
+    id: product.slug,
+    name: product.name,
+    image: product.image,
+    mobileImage: product.mobileImage,
+    href: product.route,
   };
 }

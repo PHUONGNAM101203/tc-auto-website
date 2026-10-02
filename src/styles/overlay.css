@@ -649,8 +649,10 @@
    Nut da ve san trong anh nen; day chi la vung bam trong suot dat dung cho. */
 .tc-readmore {
   position: absolute;
-  display: block;
+  display: flex;
+  align-items: center;
   border: 0;
+  padding: 0;
   background: transparent;
   border-radius: 6px;
   cursor: pointer;
@@ -661,9 +663,40 @@
     transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.tc-readmore:hover {
+/* Nền ĐỤC chứ không trong suốt — nhưng CHỈ ở những ô có vẽ lại nhãn. Nhãn
+   "XEM THÊM" vẽ sẵn trong ảnh nền ở đó nằm ngay trong vùng mà thiết kế làm mờ
+   dần phần chữ thừa, nên gần như không đọc được; phần tử thật che hẳn nó đi
+   rồi vẽ lại cho rõ. Các ô khác giữ nguyên trong suốt — nút đỏ vẽ sẵn của
+   chúng vốn đã rõ. Xem `Label` trong ReadMore.tsx. */
+.tc-readmore:has(.tc-readmore-label) {
+  background: var(--navy);
+}
+
+.tc-readmore-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font: 700 12.5px/1 "Unbounded", sans-serif;
+  letter-spacing: 0.1em;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.tc-readmore-label i {
+  font-style: normal;
+  font-size: 15px;
+  color: var(--red-nav);
+}
+
+/* KHÔNG dời chỗ khi rê chuột: nhãn vẽ sẵn nằm ngay dưới, dời đi là lộ ra.
+   Sáng lên là đủ. */
+.tc-readmore:hover .tc-readmore-label {
+  color: var(--red-nav);
+}
+
+/* Ô không vẽ lại nhãn thì giữ nguyên hiệu ứng cũ. */
+.tc-readmore:not(:has(.tc-readmore-label)):hover {
   background: rgba(255, 255, 255, 0.07);
-  transform: translateX(3px);
 }
 
 .tc-readmore:focus-visible {
@@ -1271,8 +1304,12 @@
   color: rgb(255 255 255 / 0.74);
 }
 
+/* `z-index` cao hơn `.tc-readmore` (6): vùng bấm "xem thêm" của mục là một
+   hình chữ nhật lớn trùm cả thẻ, nên nó phủ lên nút CTA của chính thẻ đó —
+   nút nhìn thấy mà bấm không được. `verify:clickable` bắt được chỗ này. */
 .tc-ppf-cta {
   position: absolute;
+  z-index: 7;
   display: grid;
   place-items: center;
   font-size: 13px;
@@ -1288,13 +1325,55 @@
   background: var(--red, #c8102e);
 }
 
+/* Mũi tên VẼ THẬT, không phải vùng bấm trong suốt: ở chỗ này ảnh nền hoàn
+   toàn trống (đo được điểm sáng nhất 18/255) nên trước đây người dùng không
+   hề biết dải lật được. Xem `Chevron` trong PpfCarousel.tsx. */
 .tc-ppf-arrow {
   position: absolute;
   appearance: none;
+  display: grid;
+  place-items: center;
   background: none;
   border: 0;
   padding: 0;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  /* Đĩa tối mờ phía sau: mũi tên nằm ở mép dải, mà dải thì trượt nên có lúc
+     nền sau nó là một tấm ảnh sáng. Không có đĩa thì chevron chìm mất. */
+  border-radius: 999px;
+  background: rgba(2, 17, 28, 0.55);
+  backdrop-filter: blur(2px);
+  transition:
+    color 0.2s,
+    background 0.2s,
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tc-ppf-arrow svg {
+  width: 13px;
+  height: 36px;
+  display: block;
+}
+
+.tc-ppf-arrow:hover {
+  color: #fff;
+  background: rgba(2, 17, 28, 0.78);
+  transform: scale(1.14);
+}
+
+.tc-ppf-arrow:focus-visible {
+  box-shadow: 0 0 0 2px var(--red-nav);
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-ppf-arrow {
+    transition: color 0.2s;
+  }
+  .tc-ppf-arrow:hover {
+    transform: none;
+  }
 }
 
 /* ── Trac nghiem "Phong cách chơi xe" (/trai-nghiem/ban-sac-rieng) ────────
@@ -1866,7 +1945,10 @@
   color: #fff;
 }
 
+/* Như `.tc-ppf-cta`: nút "TẢI VỀ" nằm dưới vùng bấm "xem thêm" của mục. */
 a.tc-appfoot-btn {
+  position: relative;
+  z-index: 7;
   pointer-events: auto;
   text-decoration: none;
 }

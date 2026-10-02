@@ -452,7 +452,22 @@
 /* ---------- Nhan muc dung lam loi vao trang con ----------
    Thiet ke khong ve nut cho vai muc, nen chinh nhan muc tro thanh lien ket.
    Trang thai TINH giu nguyen 100%; chi them tin hieu khi ro chuot vao. */
+/* Nút CTA đỏ cũng phải nằm TRÊN thẻ nổi — cùng lý do với `.tc-label-link`
+   bên dưới. Đo được trên /giai-phap: nút "KHÁM PHÁ NGAY" (y 2321) nằm gọn
+   trong thẻ nổi và bị ảnh của thẻ chặn hoàn toàn. `verify:clickable` bắt. */
+a.it.btn {
+  position: relative;
+  z-index: 7;
+}
+
+/* `z-index` để nhãn mục nằm TRÊN thẻ nổi.
+   Nhãn và thẻ đều đặt tuyệt đối trên canvas và có vùng chồng nhau; không khai
+   lớp thì thứ tự DOM quyết định, mà nhãn đứng trước nên thẻ phủ lên — nhãn
+   nhìn thấy nhưng BẤM KHÔNG ĐƯỢC. Đo được trên /giai-phap: chồng thẻ ở
+   "PHIM CÁCH NHIỆT" (nhãn y 2518, thẻ y 2205..2902). Có bài e2e giữ chỗ này. */
 .tc-label-link {
+  position: relative;
+  z-index: 7;
   text-decoration: none;
   cursor: pointer;
 }

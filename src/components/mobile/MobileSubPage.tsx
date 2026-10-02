@@ -3,9 +3,9 @@ import Link from "next/link";
 import { MobileNav } from "@/components/mobile/MobileNav";
 import { MobileStrip } from "@/components/mobile/MobileStrip";
 import {
-  MobileScreenTabs,
-  type MobileScreenItem,
-} from "@/components/mobile/MobileScreenTabs";
+  MobileTabs,
+  type MobileTabGroup,
+} from "@/components/mobile/MobileTabs";
 import { headingAlreadyShown } from "@/lib/mobile-heading";
 import { mergeByY } from "@/lib/mobile-order";
 import { MobileTree } from "@/components/mobile/MobileTree";
@@ -67,14 +67,15 @@ export function MobileSubPage({
    */
   products?: readonly Product[];
   /**
-   * Hai tab WINCA / BRAVO cua trang "Màn hình ô tô".
+   * Bo TAB cua trang (WINCA/BRAVO, hoac 5DO/3M/NANO SUN).
    *
    * Co no thi khoi san pham phang o duoi KHONG ve nua — neu khong thi cung
    * mot danh sach hien hai lan.
    */
   screenTabs?: {
-    readonly winca: readonly MobileScreenItem[];
-    readonly bravo: readonly MobileScreenItem[];
+    readonly label: string;
+    readonly initial?: string;
+    readonly groups: readonly MobileTabGroup[];
   };
   /**
    * Dai the 3M PPF. Ban desktop cho no truot ngang bang mui ten ve san trong
@@ -159,7 +160,11 @@ export function MobileSubPage({
       ) : null}
 
       {screenTabs ? (
-        <MobileScreenTabs winca={screenTabs.winca} bravo={screenTabs.bravo} />
+        <MobileTabs
+          groups={screenTabs.groups}
+          label={screenTabs.label}
+          initial={screenTabs.initial}
+        />
       ) : null}
 
       {!screenTabs && products.length > 0 ? (

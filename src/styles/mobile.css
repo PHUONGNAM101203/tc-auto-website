@@ -1060,3 +1060,25 @@
   object-fit: contain;
   background: #fff;
 }
+
+/* Nhóm tab rỗng — nói thẳng chứ không để một khoảng trắng. */
+.tc-m-tabempty p {
+  margin: 0;
+  padding: 16px 18px;
+  border-left: 2px solid var(--red-nav);
+  background: rgba(255, 255, 255, 0.04);
+  font: 400 14px/1.7 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tc-m-tabempty a {
+  color: var(--sky);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(166, 228, 255, 0.4);
+}
+
+/* Ba tab thì mỗi ô hẹp hơn — cỡ chữ phải theo. */
+.tc-m-tabs:has(> :nth-child(3)) .tc-m-tab {
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+}

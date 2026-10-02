@@ -47,9 +47,18 @@ const HOTSPOT_TARGETS: Readonly<Record<string, string>> = {
   // trang duoc soan (src/data/authored-pages.json).
   "cong-nghe/ung-dung#2": "/cong-nghe/ung-dung/hieu-suat",
 
-  // Mạng lưới đại lý -> các trang tiếp theo
-  "dai-ly/mang-luoi-dai-ly#0": "/dai-ly/mang-luoi-dai-ly/mien-trung",
-  "dai-ly/mang-luoi-dai-ly/mien-trung#0": "/dai-ly/mang-luoi-dai-ly/mien-nam",
+  // Mạng lưới đại lý: KHONG co vung bam nao o day.
+  //
+  // Truoc day hai dong duoi day tro nut do duy nhat cua trang sang trang mien
+  // ke tiep. Nhung nut do la nut "TÌM KIẾM" cua form tim dai ly — bo do nut
+  // chi thay mot hinh chu nhat do va doan la nut sang trang. Hau qua: vung bam
+  // nam CHONG KHIT len nut tim kiem that (ca hai deu o 83,1377 179x34), nen
+  // `verify:clickable` bao no khong bam duoc.
+  //
+  // Ba trang "mạng lưới" thuc ra la BA TRANG THAI cua cung mot trang trong bo
+  // thiet ke, va viec chuyen giua chung chinh la viec cua form tim kiem.
+  //   "dai-ly/mang-luoi-dai-ly#0": "/dai-ly/mang-luoi-dai-ly/mien-trung",
+  //   "dai-ly/mang-luoi-dai-ly/mien-trung#0": "/dai-ly/mang-luoi-dai-ly/mien-nam",
 
   // Chân dung đại lý -> bài viết
   "dai-ly/chan-dung-dai-ly#0": "/dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto",
