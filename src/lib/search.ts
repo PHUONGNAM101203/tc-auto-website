@@ -1,6 +1,7 @@
 import { getAllPageSpecs } from "./pages";
 import { getAllPageText } from "./subpage-text";
 import { getSubPage } from "./subpages";
+import { isDuplicateOfAnother } from "./canonical";
 
 export interface SearchHit {
   readonly pageTitle: string;
@@ -75,6 +76,14 @@ function buildIndex(): readonly IndexEntry[] {
   const subs = getAllPageText().flatMap(([slug, text]) => {
     const page = getSubPage(slug);
     if (!page) {
+      return [];
+    }
+    // Ban phu cua mot bai khac thi khong vao chi muc. Hai duong dan cung noi
+    // dung se tra ve HAI dong giong het nhau — da thay tren ban dung that voi
+    // bai Pham Gia Auto. Gom theo `route` khong cuu duoc vi dung la hai route
+    // khac nhau; phai loai tu goc. Duong dan phu van song, chi la khong tu tim
+    // thay — dung voi `<link rel="canonical">` da khai.
+    if (isDuplicateOfAnother(slug)) {
       return [];
     }
     return text.blocks

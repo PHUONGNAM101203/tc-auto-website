@@ -72,8 +72,15 @@ test.describe("bài viết mở ra từ XEM THÊM", () => {
       "/trai-nghiem/phong-cach-song/co-nhung-khoang-rieng-tu-khong-can-noi-ra",
     );
     await expect(page.locator(".tc-doc-crumbs")).toBeVisible();
-    await expect(page.locator(".tc-m-bar")).toBeVisible();
     await expect(page.locator(".tc-totop")).toHaveCount(1);
+
+    // Man rong: header giong het trang chu. Man hep: thanh ba gach.
+    await expect(page.locator(".tc-dochdr")).toBeVisible();
+    await expect(page.locator(".tc-docnav-m")).toBeHidden();
+    await page.setViewportSize({ width: 390, height: 844 });
+    await expect(page.locator(".tc-m-bar")).toBeVisible();
+    await expect(page.locator(".tc-dochdr")).toBeHidden();
+    await page.setViewportSize({ width: 1280, height: 900 });
 
     // Quay lai duoc trang cha.
     await page.locator('.tc-doc-crumbs a[href="/trai-nghiem/phong-cach-song"]').click();

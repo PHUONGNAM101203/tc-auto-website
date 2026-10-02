@@ -1,6 +1,8 @@
 {
   "_doc": "Ma noi dung cua anh duoc goi thang trong ma nguon. Dung qua src/lib/asset-version.ts de trinh duyet khong giu ban cu.",
   "versions": {
+    "/brand/header-strip@2x.webp": "b6d883d6",
+    "/brand/header-strip@3x.webp": "dc3f6f92",
     "/brand/logo-horizontal-on-dark.png": "6c5d7005",
     "/brand/logo-mono-black.png": "589e27c8",
     "/brand/logo-mono-white.png": "6c72a346",

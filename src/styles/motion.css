@@ -318,8 +318,8 @@
   position: absolute;
   left: 0;
   top: 36px;
-  width: 235px;
-  max-height: 268px;
+  width: 300px;
+  max-height: 300px;
   overflow-y: auto;
   background: #06203a;
   border: 1px solid rgba(166, 228, 255, 0.35);
@@ -348,7 +348,7 @@
   border-radius: 5px;
   padding: 7px 9px;
   color: #fff;
-  font: 400 10.5px/14px "Montserrat", sans-serif;
+  font: 400 12px/16px "Montserrat", sans-serif;
   cursor: pointer;
   transition: background 0.16s;
 }
@@ -360,7 +360,7 @@
 
 .tc-search-hit span {
   display: block;
-  font: 700 9px/12px "Unbounded", sans-serif;
+  font: 700 11px/14px "Unbounded", sans-serif;
   color: var(--red-nav);
   text-transform: uppercase;
   margin-bottom: 2px;
@@ -368,7 +368,7 @@
 
 .tc-search-empty {
   padding: 10px;
-  font: 300 10px "Montserrat", sans-serif;
+  font: 300 12px/17px "Montserrat", sans-serif;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -455,8 +455,10 @@
 /* Nút CTA đỏ cũng phải nằm TRÊN thẻ nổi — cùng lý do với `.tc-label-link`
    bên dưới. Đo được trên /giai-phap: nút "KHÁM PHÁ NGAY" (y 2321) nằm gọn
    trong thẻ nổi và bị ảnh của thẻ chặn hoàn toàn. `verify:clickable` bắt. */
+/* CHI `z-index`, KHONG dat `position`. `.it` da la `position: absolute` theo
+   toa do canvas; ghi de thanh `relative` la day no ve dong chay binh thuong
+   va ca trang xo lech — gate pixel bao 15.000-31.000 diem tren nam trang. */
 a.it.btn {
-  position: relative;
   z-index: 7;
 }
 
@@ -464,9 +466,10 @@ a.it.btn {
    Nhãn và thẻ đều đặt tuyệt đối trên canvas và có vùng chồng nhau; không khai
    lớp thì thứ tự DOM quyết định, mà nhãn đứng trước nên thẻ phủ lên — nhãn
    nhìn thấy nhưng BẤM KHÔNG ĐƯỢC. Đo được trên /giai-phap: chồng thẻ ở
-   "PHIM CÁCH NHIỆT" (nhãn y 2518, thẻ y 2205..2902). Có bài e2e giữ chỗ này. */
+   "PHIM CÁCH NHIỆT" (nhãn y 2518, thẻ y 2205..2902). Có bài e2e giữ chỗ này.
+
+   KHÔNG đặt `position` — xem ghi chú ở `a.it.btn` bên trên. */
 .tc-label-link {
-  position: relative;
   z-index: 7;
   text-decoration: none;
   cursor: pointer;

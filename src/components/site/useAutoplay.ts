@@ -75,16 +75,39 @@ export function useAutoplay<T extends HTMLElement>(
 
   const playing = enabled && visible && !hovered && nudge === 0;
 
+  // Nhip phai la mot CAI DONG HO CHAY DEU, khong phai mot cai hen gio dung
+  // lai roi hen lai.
+  //
+  // Ban truoc dat `playing` vao danh sach phu thuoc, nen moi lan no doi la
+  // `clearInterval` roi `setInterval` lai tu dau. Nghe thi hop ly, nhung
+  // `visible` do IntersectionObserver sinh ra va no CHOP lien tuc trong luc
+  // trang con xep lai — anh tai theo luot lam dai bi day len xuong qua mep
+  // khung nhin. Moi lan chop la dem lai 5 giay tu dau, nen tren may cham
+  // hoac mang cham dai KHONG BAO GIO doi anh. Bat duoc vi bai kiem
+  // "TỰ CHẠY khi không ai đụng vào" thinh thoang rot khi chay song song —
+  // do la trieu chung that cua nguoi dung chu khong phai bai kiem chap chon.
+  //
+  // Nay dong ho chay suot; luc dang nghi thi chi BO QUA nhip chu khong dat
+  // lai. Doc `playing` qua ref de khong phai dung lai de doc gia tri moi.
+  const live = useRef(playing);
   useEffect(() => {
-    if (!playing) {
+    live.current = playing;
+  }, [playing]);
+
+  useEffect(() => {
+    if (!enabled) {
       return;
     }
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
-    const beat = setInterval(() => latest.current(), SLIDER_AUTOPLAY_MS);
+    const beat = setInterval(() => {
+      if (live.current) {
+        latest.current();
+      }
+    }, SLIDER_AUTOPLAY_MS);
     return () => clearInterval(beat);
-  }, [playing]);
+  }, [enabled]);
 
   return {
     attach: setNode,

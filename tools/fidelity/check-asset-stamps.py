@@ -21,12 +21,18 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 PUBLIC = ROOT / "public"
 DATA = ROOT / "src" / "data"
+SRC = ROOT / "src"
+
+#: `asset("/brand/x.webp")` trong ma nguon. Xem src/lib/asset-version.ts.
+ASSET_CALL = re.compile(r'\basset\(\s*"(/[^"]+)"')
+VERSIONS = ROOT / "src" / "data" / "asset-versions.json"
 
 
 def digest(path: Path) -> str:
@@ -70,7 +76,28 @@ def main() -> int:
                     (str(spec.relative_to(ROOT)), base, url.split("?v=", 1)[1], want)
                 )
 
-    print(f"  Da so {checked} duong dan anh trong src/data.")
+    # Anh goi tu MA NGUON qua `asset()` khong nam trong src/data, nen vong
+    # lap tren khong thay. Ma `asset()` tra ve duong dan TRAN khi thieu khoa —
+    # khong bao loi, khong canh bao, va /brand lai phuc vu `immutable`. Dung
+    # cai bay ma chu thich dau tep nay canh bao, chi la o mot cua khac: dai
+    # header cua `DocHeader` da nam duoi dang khong dau dung mot lan.
+    stamped = json.loads(VERSIONS.read_text(encoding="utf-8"))["versions"]
+    for source in sorted(SRC.rglob("*.ts")) + sorted(SRC.rglob("*.tsx")):
+        for url in ASSET_CALL.findall(source.read_text(encoding="utf-8")):
+            path = PUBLIC / url.lstrip("/")
+            if not path.is_file():
+                missing.append((str(source.relative_to(ROOT)), f"{url} (khong co tep)"))
+                continue
+            checked += 1
+            have = stamped.get(url)
+            if have is None:
+                missing.append((str(source.relative_to(ROOT)), url))
+            elif have != digest(path):
+                stale.append(
+                    (str(source.relative_to(ROOT)), url, have, digest(path))
+                )
+
+    print(f"  Da so {checked} duong dan anh trong src/data va cac loi goi asset().")
     if not stale and not missing:
         print("  Ma bam nao cung khop noi dung tep.")
         return 0
@@ -83,7 +110,10 @@ def main() -> int:
         print(f"\n  {len(missing)} duong dan THIEU ma bam:")
         for spec, url in missing[:20]:
             print(f"    {url}   ({spec})")
-    print("\n  Chay `python3 tools/stamp-slices.py` de dong dau lai.")
+    print(
+        "\n  Chay `python3 tools/stamp-slices.py` (anh trong src/data) hoac"
+        "\n  `python3 tools/stamp-assets.py` (anh goi qua asset()) de dong dau lai."
+    )
     return 1
 
 

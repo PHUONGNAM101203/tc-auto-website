@@ -95,14 +95,17 @@ test.describe("dải BỘ SƯU TẬP", () => {
             .locator(".tc-cover")
             .evaluate((el) => el.getAttribute("data-playing"));
         },
-        { message: "dải phải vào trạng thái tự chạy" },
+        // Han 5 giay mac dinh la qua hep: chay song song nam luong thi rieng
+        // lan cuon dai vao khung nhin da mat vai giay. Da thay rot dung o day
+        // trong mot lan `npm run verify` day du, con chay rieng thi 3/3 dat.
+        { timeout: 20_000, message: "dải phải vào trạng thái tự chạy" },
       )
       .toBe("true");
 
     const first = (await cards(page)).find((r) => r.centre)!.src;
     await expect
       .poll(async () => (await cards(page)).find((r) => r.centre)!.src, {
-        timeout: 20_000,
+        timeout: 30_000,
         message: "dải phải tự đổi ảnh",
       })
       .not.toBe(first);

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/site/JsonLd";
 import { PostArticle } from "@/components/site/PostArticle";
+import { DocHeader } from "@/components/site/DocHeader";
+import { getPageSpec } from "@/lib/pages";
 import { articleLd, breadcrumbLd } from "@/lib/structured-data";
 import { getPublishedPost } from "@/lib/posts";
 import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
@@ -74,6 +76,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           { name: post.title, url: `/bai-viet/${post.slug}` },
         ])}
       />
+      {/* Header dat o TUYEN chu khong trong <PostArticle />: component do dung
+          chung voi khung xem truoc trong quan tri, ma o day chi can xem than
+          bai. Lay nav cua trang chu vi bai CMS khong thuoc muc nao — khong
+          muc nao duoc sang. */}
+      <DocHeader nav={getPageSpec("home").nav} />
       <PostArticle post={post} />
     </>
   );

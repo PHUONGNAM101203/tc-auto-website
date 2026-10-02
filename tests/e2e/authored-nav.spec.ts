@@ -15,6 +15,11 @@ test.describe("trang tự soạn", () => {
     test(`${path} có thanh điều hướng đi được sang mục khác`, async ({
       page,
     }) => {
+      // Tu khi co `DocHeader`, trang tu soan dung DUNG header cua trang chu
+      // khi man rong (khach yeu cau 02/10/2026: "menu header y chang"). Thanh
+      // ba gach chi con o duoi 900px — nen phai thu nho cua so truoc khi doi
+      // no, khong thi ca hai header cung hien.
+      await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(path);
       await expect(page.locator(".tc-m-bar")).toBeVisible();
       await page.locator(".tc-m-burger").click();
@@ -25,6 +30,24 @@ test.describe("trang tự soạn", () => {
       await expect(links, "phải có đủ 5 mục chính").toHaveCount(5);
       await links.first().click();
       await expect(page).toHaveURL(/\/trai-nghiem$/);
+    });
+
+    test(`${path} dùng đúng header của trang chủ khi màn rộng`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width: 1440, height: 900 });
+      await page.goto(path);
+
+      await expect(page.locator(".tc-dochdr")).toBeVisible();
+      await expect(
+        page.locator(".tc-dochdr a.nv"),
+        "đủ 5 mục như ngoài trang chủ",
+      ).toHaveCount(5);
+      await expect(page.locator(".tc-dochdr .search input")).toBeVisible();
+      await expect(
+        page.locator(".tc-docnav-m"),
+        "thanh ba gạch phải tắt hẳn ở màn rộng",
+      ).toBeHidden();
     });
   }
 

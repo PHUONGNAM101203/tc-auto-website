@@ -2429,3 +2429,55 @@ a.tc-appfoot-btn:focus-visible {
   text-decoration: none;
   border-bottom: 1px solid rgba(166, 228, 255, 0.4);
 }
+
+/* ---------- Header cho trang ngoài canvas ----------
+   Bài viết, sản phẩm, danh mục, FAQ không có canvas nên trước đây phải dùng
+   thanh điều hướng của điện thoại ngay cả trên màn rộng. Khối này dựng lại
+   đúng header của canvas: một dải 1440px phóng theo bề ngang cửa sổ, nền là
+   ảnh cắt sẵn, còn chữ nav và ô tìm kiếm là phần tử thật.
+   Xem src/components/site/DocHeader.tsx. */
+.tc-dochdr {
+  display: none;
+}
+
+.tc-dochdr-canvas {
+  position: relative;
+  width: 1440px;
+  height: 100px;
+  /* Cùng phép phóng với canvas, nên header ở đây và ở trang chính khớp nhau
+     từng pixel ở mọi bề ngang cửa sổ. */
+  zoom: var(--tc-zoom, 1);
+}
+
+.tc-dochdr-bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 1440px;
+  height: 100px;
+}
+
+/* Dải ảnh chỉ cao 100px nên đáy nó là một nhát cắt ngang giữa bức ảnh: dưới
+   vạch đó là nền navy phẳng, trên là ảnh núi. Ngoài trang chủ không thấy vì
+   ảnh hero chạy tiếp xuống dưới.
+
+   Làm mờ bằng MẶT NẠ trên chính ảnh, không phải một lớp phủ đè lên trên.
+   Lớp phủ `::after` của khung là con vẽ SAU mọi con khác, nên nó nằm trên cả
+   chữ nav và ô tìm kiếm — ô tìm kiếm kết thúc ở y=67px nên đã chạm vào vùng
+   chuyển màu. Mặt nạ thì chỉ tác động lên ảnh; phần mờ đi để lộ đúng nền
+   `--navy` của trang nằm sau. */
+.tc-dochdr-bg {
+  mask-image: linear-gradient(to bottom, #000 66px, transparent 100px);
+}
+
+@media (min-width: 900px) {
+  .tc-dochdr {
+    display: block;
+  }
+
+  /* Thanh điều hướng của điện thoại phải tắt hẳn ở đây — nếu không thì trên
+     màn rộng hiện HAI thanh chồng nhau. */
+  .tc-docnav-m {
+    display: none;
+  }
+}

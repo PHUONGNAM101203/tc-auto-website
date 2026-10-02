@@ -30,6 +30,7 @@ const GATES = [
   "verify:weight",
   "verify:clickable",
   "verify:zoom",
+  "verify:responsive",
 ];
 
 function run(command, args, options = {}) {

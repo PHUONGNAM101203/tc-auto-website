@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { assetUrl } from "@/lib/asset-url";
-import { MobileNav } from "@/components/mobile/MobileNav";
+import { DocHeader } from "@/components/site/DocHeader";
 import { BackToTop } from "@/components/site/BackToTop";
 import { JsonLd } from "@/components/site/JsonLd";
 import { authoredProductLd, breadcrumbLd } from "@/lib/structured-data";
@@ -13,10 +13,11 @@ import { getPageSpec } from "@/lib/pages";
  * Khong dung canvas 1440px: trang nay co dan theo be rong man hinh nen doc tot
  * tren dien thoai. Mau sac va kieu chu lay dung tu bo nhan dien.
  *
- * Thanh dieu huong o day dung ban CO DAN (`MobileNav`) chu khong phai thanh
- * ngang cua canvas: thanh kia dat tuyet doi theo he toa do 1440px nen roi khoi
- * canvas la vo bo cuc. Truoc day ba trang tu soan khong co thanh nao ca —
- * vao roi la cut duong, phai bam nut lui cua trinh duyet moi ra duoc.
+ * Header dung `DocHeader`: tren man rong la DUNG header cua trang chu, duoi
+ * 900px thi doi sang nut ba gach. Truoc day ba trang tu soan khong co thanh
+ * nao ca — vao roi la cut duong, phai bam nut lui cua trinh duyet moi ra
+ * duoc; roi co nut ba gach nhung no hien ca tren man rong nen nhin ra mot
+ * site khac han sau trang chinh.
  */
 export function AuthoredPage({ page }: { page: Page }) {
   // Danh sach muc menu lay tu dac ta cua chinh muc cha, nen thu tu va nhan
@@ -25,7 +26,7 @@ export function AuthoredPage({ page }: { page: Page }) {
 
   return (
     <>
-      <MobileNav nav={nav} />
+      <DocHeader nav={nav} />
       <main className="tc-doc">
         {/* Khai khop tung muc voi <nav> ngay duoi. */}
         <JsonLd

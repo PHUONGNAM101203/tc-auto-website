@@ -93,6 +93,14 @@ for (const route of routes()) {
       if (!hit) continue;
       if (hit === el || el.contains(hit) || hit.contains(el)) continue;
 
+      // Bi che boi mot lien ket DAN TOI CUNG MOT CHO thi khong phai loi:
+      // nguoi dung bam vao van den dung noi can den. Vi du tren /giai-phap,
+      // nhan "PHIM CÁCH NHIỆT" nam de len the noi cua chinh muc do, va ca hai
+      // deu tro ve /giai-phap/phim-dan-kinh.
+      const mine = el.getAttribute("href");
+      const theirs = hit.closest("a")?.getAttribute("href") ?? null;
+      if (mine && theirs && mine === theirs) continue;
+
       out.push({
         label: (el.textContent ?? "").trim().slice(0, 28) ||
           el.getAttribute("aria-label")?.slice(0, 28) || "(không chữ)",

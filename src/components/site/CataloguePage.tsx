@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MobileNav } from "@/components/mobile/MobileNav";
+import { DocHeader } from "@/components/site/DocHeader";
 import { BackToTop } from "@/components/site/BackToTop";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ScreenCatalogue } from "@/components/site/ScreenCatalogue";
@@ -27,7 +27,7 @@ export function CataloguePage() {
 
   return (
     <>
-      <MobileNav nav={nav} />
+      <DocHeader nav={nav} />
 
       <JsonLd
         data={breadcrumbLd([

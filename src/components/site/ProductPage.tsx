@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MobileNav } from "@/components/mobile/MobileNav";
+import { DocHeader } from "@/components/site/DocHeader";
 import { BackToTop } from "@/components/site/BackToTop";
 import { getPageSpec } from "@/lib/pages";
 import type { PageSlug } from "@/lib/types";
@@ -53,9 +53,7 @@ export function ProductPage({ product }: { product: Product }) {
       {/* Thanh dieu huong co dan. 17 trang san pham truoc day khong co thanh
           nao — tren dien thoai vao roi la cut duong, giong het loi da sua cho
           ba trang tu soan. */}
-      <MobileNav
-        nav={getPageSpec(category.parent.replace("/", "") as PageSlug).nav}
-      />
+      <DocHeader nav={getPageSpec(category.parent.replace("/", "") as PageSlug).nav} />
 
       <main className="tc-doc tc-prod">
       {/* Thong so di kem vao `additionalProperty` cua mau San pham — do cung

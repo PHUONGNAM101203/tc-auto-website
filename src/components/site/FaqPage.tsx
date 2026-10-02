@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MobileNav } from "@/components/mobile/MobileNav";
+import { DocHeader } from "@/components/site/DocHeader";
 import { BackToTop } from "@/components/site/BackToTop";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getFaq } from "@/lib/faq";
@@ -23,7 +23,7 @@ export function FaqPage() {
 
   return (
     <>
-      <MobileNav nav={getPageSpec("home").nav} />
+      <DocHeader nav={getPageSpec("home").nav} />
 
       <JsonLd
         data={breadcrumbLd([
