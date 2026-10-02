@@ -47,3 +47,13 @@ next-env.d.ts
 /playwright-report/
 coverage/
 tsconfig.tsbuildinfo
+
+# Sơ đồ tri thức dự án (graphify). Dựng lại bằng:
+#   graphify update .          (không cần LLM, không tốn gì)
+#   graphify cluster-only .    (đặt tên cụm, cần đăng nhập Claude)
+#
+# Chỉ GRAPH_REPORT.md được đưa lên kho — nó đọc được và đáng để xem lịch sử.
+# Các tệp còn lại là dữ liệu dẫn xuất và nặng: graph.json 1,7MB, graph.html
+# 1,4MB, cache 1,4MB, và mỗi lần chạy lại đẻ thêm một thư mục sao lưu theo ngày.
+graphify-out/*
+!graphify-out/GRAPH_REPORT.md
