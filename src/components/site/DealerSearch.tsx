@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { BRANDS, findDealers, mapHref, PROVINCES, type Dealer } from "@/lib/dealers";
+import {
+  BRANDS,
+  findDealers,
+  mapHref,
+  PROVINCES,
+  type DealerResult,
+} from "@/lib/dealers";
 
 /**
  * Tim kiem dai ly tren trang "Mạng lưới đại lý".
@@ -54,11 +60,9 @@ export function DealerSearch({
   const at = <T,>(style: T): T | undefined => (flow ? undefined : style);
   const [brand, setBrand] = useState("");
   const [province, setProvince] = useState("");
-  const [result, setResult] = useState<{
-    dealers: readonly Dealer[];
-    pending: boolean;
-    province: string;
-  } | null>(null);
+  const [result, setResult] = useState<(DealerResult & { province: string }) | null>(
+    null,
+  );
 
   function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -171,10 +175,36 @@ export function DealerSearch({
               ))}
             </ul>
           ) : (
-            <p className="tc-dealer-empty">
-              Danh sách đại lý khu vực này đang được cập nhật. Vui lòng gọi hotline
-              093&nbsp;617&nbsp;6996 để được hỗ trợ ngay.
-            </p>
+            <div className="tc-dealer-empty">
+              <p>
+                Danh sách đại lý {result.province} đang được cập nhật. Gọi{" "}
+                <a href="tel:+84936176996">093&nbsp;617&nbsp;6996</a> hoặc nhắn{" "}
+                <a href="mailto:infor@tcautosolutions.vn">
+                  infor@tcautosolutions.vn
+                </a>{" "}
+                để TC Auto giới thiệu đại lý gần bạn nhất.
+              </p>
+              {/* Khu vuc nguoi dung chon chua co thi it ra chi duoc cho gan
+                  nhat, thay vi de ho tu mo. */}
+              {(result.nearby?.length ?? 0) > 0 ? (
+                <p className="tc-dealer-nearby">
+                  Khu vực gần nhất đang có đại lý:{" "}
+                  {result.nearby!.map((name, index) => (
+                    <button
+                      key={name}
+                      type="button"
+                      onClick={() => {
+                        setProvince(name);
+                        setResult({ ...findDealers({ brand, province: name }), province: name });
+                      }}
+                    >
+                      {name}
+                      {index < result.nearby!.length - 1 ? "," : ""}
+                    </button>
+                  ))}
+                </p>
+              ) : null}
+            </div>
           )}
 
           <button type="button" className="tc-dealer-close" onClick={() => setResult(null)}>

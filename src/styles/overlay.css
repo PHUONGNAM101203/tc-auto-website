@@ -2199,3 +2199,35 @@ a.tc-appfoot-btn:focus-visible {
 :root[data-screen-tab="bravo"] .tc-pager {
   display: none;
 }
+
+/* Khu vực chưa có đại lý — không để người dùng tự mò.
+   Thiết kế chỉ liệt kê đại lý của MỘT tỉnh (Đà Nẵng, 16 đại lý); năm tỉnh còn
+   lại trong ô chọn chưa có tên. Đó là số liệu kinh doanh, chỉ TC Auto mới có —
+   không được tự điền. Nhưng báo "đang cập nhật" rồi thôi là phí một khách. */
+.tc-dealer-empty p {
+  margin: 0 0 12px;
+  font: 400 14px/1.7 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.tc-dealer-empty a {
+  color: var(--sky);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(166, 228, 255, 0.4);
+}
+
+.tc-dealer-nearby button {
+  margin: 0 2px;
+  padding: 2px 4px;
+  border: 0;
+  background: none;
+  color: var(--sky);
+  font: 600 14px/1.7 "Montserrat", sans-serif;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tc-dealer-nearby button:hover {
+  color: #fff;
+}

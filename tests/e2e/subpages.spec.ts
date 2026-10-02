@@ -288,6 +288,29 @@ test.describe("tìm kiếm đại lý", () => {
     await expect(empty).toContainText("093");
   });
 
+  test("khu vực chưa có đại lý thì chỉ chỗ gần nhất, bấm được luôn", async ({
+    page,
+  }) => {
+    // Thiet ke chi liet ke dai ly cua MOT tinh (Da Nang); nam tinh con lai
+    // trong o chon chua co ten — do la so lieu kinh doanh, khong tu dien vao
+    // duoc. Nhung bao "dang cap nhat" roi thoi la phi mot khach.
+    await page.goto("/dai-ly/mang-luoi-dai-ly");
+    await page.locator(".tc-dealer-canvas select.tc-field").nth(0).selectOption("3M");
+    await page.locator(".tc-dealer-canvas select.tc-field").nth(1).selectOption("Huế");
+    await page.locator(".tc-dealer-canvas button.tc-field-submit").click();
+
+    const panel = page.locator(".tc-dealer-canvas .tc-dealer-panel");
+    await expect(panel.locator(".tc-dealer-empty")).toBeVisible();
+    // Phai co ca so dien thoai lan email, va ca hai deu bam duoc.
+    await expect(panel.locator('a[href^="tel:"]')).toHaveCount(1);
+    await expect(panel.locator('a[href^="mailto:"]')).toHaveCount(1);
+
+    const nearby = panel.locator(".tc-dealer-nearby button");
+    await expect(nearby.first()).toHaveText(/Đà Nẵng/);
+    await nearby.first().click();
+    await expect(panel.locator(".tc-dealer-head")).toHaveText(/16 đại lý tại Đà Nẵng/);
+  });
+
   test("đóng được bảng kết quả", async ({ page }) => {
     await page.goto("/dai-ly/mang-luoi-dai-ly");
     await page.locator(".tc-dealer-canvas select.tc-field").nth(0).selectOption("3M");

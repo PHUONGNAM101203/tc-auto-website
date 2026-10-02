@@ -64,6 +64,8 @@ export interface DealerQuery {
 }
 
 export interface DealerResult {
+  /** Tinh gan nhat dang co dai ly, khi tinh duoc chon chua co. */
+  readonly nearby?: readonly string[];
   readonly dealers: readonly Dealer[];
   /** true khi tinh do chua co du lieu trong thiet ke — khac voi "khong co dai ly". */
   readonly pending: boolean;
@@ -78,7 +80,38 @@ export function findDealers({ brand, province }: DealerQuery): DealerResult {
     (dealer) => dealer.brand === brand && dealer.province === province,
   );
 
-  return { dealers, pending: dealers.length === 0 };
+  return {
+    dealers,
+    pending: dealers.length === 0,
+    // Tinh chua co dai ly thi it ra chi duoc cho gan nhat.
+    nearby: dealers.length === 0 ? nearestWithDealers(brand, province) : [],
+  };
+}
+
+/**
+ * Cac tinh GAN NHAT ma dang co dai ly, khi tinh nguoi dung chon chua co.
+ *
+ * Thiet ke chi liet ke dai ly cua MOT tinh (Da Nang, 16 dai ly); nam tinh con
+ * lai trong o chon va bon tinh nua tren ban do thi chua co ten. Do la so lieu
+ * kinh doanh, chi TC Auto moi co — khong duoc tu dien vao.
+ *
+ * Nhung bao "dang cap nhat" roi de nguoi dung tu lo thi phi mot khach. O day
+ * sap theo khoang cach DIA LY that (dua tren thu tu Bac vao Nam cua
+ * `provinces`), de goi y cho gan nhat truoc.
+ */
+function nearestWithDealers(brand: string, province: string): readonly string[] {
+  const order = DATA.provinces;
+  const from = order.indexOf(province);
+  const having = [...new Set(
+    DATA.dealers.filter((dealer) => dealer.brand === brand).map((d) => d.province),
+  )];
+  if (from < 0) {
+    return having;
+  }
+  return having
+    .map((name) => ({ name, gap: Math.abs(order.indexOf(name) - from) }))
+    .sort((a, b) => a.gap - b.gap)
+    .map((entry) => entry.name);
 }
 
 export function countByProvince(): ReadonlyMap<string, number> {
