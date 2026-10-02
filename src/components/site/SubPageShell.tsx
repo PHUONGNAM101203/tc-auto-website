@@ -7,6 +7,7 @@ import { PPF_CARDS } from "@/lib/ppf-cards";
 import { SliceImage } from "@/components/canvas/SliceImage";
 import { ContactForm } from "@/components/site/ContactForm";
 import { FooterSocial } from "@/components/site/FooterSocial";
+import { FooterAddress } from "@/components/site/FooterAddress";
 import { RelatedStrip } from "@/components/site/RelatedStrip";
 import { BackToTop } from "@/components/site/BackToTop";
 import { Coverflow } from "@/components/site/Coverflow";
@@ -234,6 +235,7 @@ export function SubPageShell({
 
           <ContactForm y={page.contactForm.y} sourcePage={page.route} />
           <FooterSocial pageHeight={page.height} />
+          <FooterAddress pageHeight={page.height} />
         </section>
       </div>
 

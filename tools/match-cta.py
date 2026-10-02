@@ -233,12 +233,14 @@ def title_groups(blocks: list[dict]) -> list[dict]:
             if same_title:
                 last["text"] += " " + block["text"]
                 last["bottom"] = block["y"] + block["h"]
+                last["right"] = max(last["right"], block["x"] + block["w"])
                 continue
         groups.append(
             {
                 "text": block["text"],
                 "y": block["y"],
                 "x": block["x"],
+                "right": block["x"] + block["w"],
                 "bottom": block["y"] + block["h"],
             }
         )
@@ -247,8 +249,14 @@ def title_groups(blocks: list[dict]) -> list[dict]:
 
 def nearest_title(
     blocks: list[dict], button_y: float, button_x: float
-) -> tuple[str | None, float]:
-    """Tieu de gan nhat nam NGAY TREN nut, CUNG COT voi nut, kem toa do day.
+) -> tuple[str | None, float, dict | None]:
+    """Tieu de gan nhat nam NGAY TREN nut, CUNG COT voi nut, kem hop bao.
+
+    Tra ve ca hop bao de ben hien thi VE DE duoc tieu de that len cho tieu de
+    mau "TÊN BÀI VIẾT" — khong co toa do nay thi chu mau trong anh nen van
+    nam do, bai that chi la mot vung bam trong suot. Da sap bay dung vay
+    (02/10/2026): nam o co lien ket that nhung tren man hinh van doc ra
+    "TÊN BÀI VIẾT".
 
     Rang buoc cung cot la bat buoc: bai viet nam mot cot, con chan trang / logo
     nam cot khac. Khong rang buoc thi chu "TC AUTO" duoi chan trang (x=230) bi
@@ -263,7 +271,15 @@ def nearest_title(
             continue
         if best is None or group["bottom"] > best["bottom"]:
             best = group
-    return (best["text"], best["bottom"]) if best else (None, 0.0)
+    if not best:
+        return (None, 0.0, None)
+    box = {
+        "x": round(best["x"], 1),
+        "y": round(best["y"], 1),
+        "width": round(best["right"] - best["x"], 1),
+        "height": round(best["bottom"] - best["y"], 1),
+    }
+    return (best["text"], best["bottom"], box)
 
 
 def paragraphs_between(
@@ -463,7 +479,7 @@ def main() -> int:
             if overlaps_red_button(block, rects):
                 skipped += 1
 
-            title, title_bottom = nearest_title(blocks, block["y"], block["x"])
+            title, title_bottom, title_box = nearest_title(blocks, block["y"], block["x"])
             href, score = best_page(title, by_title) if title else (None, 0.0)
             # Nut nam trong nut do cua mot san pham thi tro thang toi san pham
             # do, khong hoi den phep so khop theo ten nua.
@@ -501,6 +517,8 @@ def main() -> int:
                 "body": body,
                 # Hop bao cua khoi chu — de xo noi dung ra dung cho do.
                 "bodyBox": body_box,
+                # Hop bao cua TIEU DE. Can de ve de tieu de that len tieu de mau.
+                "headingBox": title_box,
             }
             red_rect = red_button_of(block, rects)
             if red_rect:

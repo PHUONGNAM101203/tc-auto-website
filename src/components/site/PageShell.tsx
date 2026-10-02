@@ -4,6 +4,7 @@ import { AppCards } from "@/components/site/AppCards";
 import { CanvasSlices } from "@/components/canvas/CanvasSlices";
 import { ContactForm } from "@/components/site/ContactForm";
 import { FooterSocial } from "@/components/site/FooterSocial";
+import { FooterAddress } from "@/components/site/FooterAddress";
 import { HeroSlider } from "@/components/site/HeroSlider";
 import { PhotoSliders } from "@/components/site/PhotoSlider";
 import { SolutionCarousel } from "@/components/site/SolutionCarousel";
@@ -119,6 +120,7 @@ export function PageShell({ page }: PageShellProps) {
 
           {/* Ba bieu tuong mang xa hoi ve san trong chan trang — o bam trong suot. */}
           <FooterSocial pageHeight={page.height} />
+          <FooterAddress pageHeight={page.height} />
         </section>
       </div>
 

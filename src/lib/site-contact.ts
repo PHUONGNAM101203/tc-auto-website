@@ -7,6 +7,15 @@
  */
 export const SITE_CONTACT = {
   phone: "093 617 6996",
+  /**
+   * Tru so. Khach cung cap 02/10/2026; trung voi mot trong hai dia chi dang
+   * ghi tren tcauto.vn. Co no moi khai duoc `LocalBusiness` — xem
+   * structured-data.ts. KHONG tu them phuong/quan: chi ghi dung phan khach
+   * doc, vi don vi hanh chinh Da Nang vua sap xep lai nam 2025.
+   */
+  address: "463 Trưng Nữ Vương, Đà Nẵng",
+  addressLocality: "Đà Nẵng",
+  addressCountry: "VN",
   email: "infor@tcautosolutions.vn",
   hours: "Thứ 2 - 7 | 8:00 - 17:30",
   slogan: "DRIVE · EXPERIENCE · ELEVATE",

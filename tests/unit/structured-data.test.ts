@@ -20,8 +20,16 @@ import { getProducts } from "@/lib/products";
 describe("dữ liệu có cấu trúc", () => {
   it("pháp nhân: chỉ liệt kê trang mạng xã hội CÓ THẬT", () => {
     const org = organizationLd();
-    expect(org["@type"]).toBe("Organization");
+    // Tu 02/10/2026 khai hai kieu: `AutoPartsStore` (kieu con cua
+    // `LocalBusiness`) de len duoc ket qua tim kiem dia phuong. Kieu do BAT
+    // BUOC co `address`, nen test giu luon dieu kien dia chi phai that.
+    expect(org["@type"]).toEqual(["Organization", "AutoPartsStore"]);
     expect(org["@id"]).toBe(ORG_ID);
+    const address = org.address as Record<string, string>;
+    expect(address["@type"]).toBe("PostalAddress");
+    expect(address.streetAddress).toBeTruthy();
+    expect(address.addressLocality).toBeTruthy();
+    expect(address.addressCountry).toBe("VN");
     // TC Auto chua co Instagram — SOCIAL de href la null cho muc do.
     for (const link of org.sameAs as string[]) {
       expect(link).toMatch(/^https:\/\//);

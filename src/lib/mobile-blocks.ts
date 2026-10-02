@@ -97,7 +97,14 @@ function projectBlock(slug: PageSlug): MobileBlock[] {
       ratio: `${PROJECT_CENTRE.width} / ${PROJECT_CENTRE.height}`,
       slides: photos.map((photo) => ({
         key: photo.id,
-        src: photo.src,
+        // Mac dinh la ban hep; trinh duyet nao can net hon thi lay ban goc
+        // qua `srcSet`. Khong lam vay thi trang Giai phap tren dien thoai
+        // NANG HON tren may ban — cua `verify:weight` bat dung cho do sau khi
+        // ba tam nay duoc thay bang ban goc 1920px.
+        src: photo.mobileSrc ?? photo.src,
+        srcSet: photo.mobileSrc
+          ? `${photo.mobileSrc} 720w, ${photo.src} 1920w`
+          : undefined,
         alt: photo.alt,
       })),
     },
@@ -133,6 +140,11 @@ function liftBlocks(slug: PageSlug): MobileBlock[] {
   const groups = new Map<string, MobileTile[]>();
   const tops = new Map<string, number>();
   for (const card of getLiftCards(slug)) {
+    // Xem `hideOnMobile` trong lift-cards.ts: vai the chi la vung bam nam
+    // duoi mot thanh phan khac, anh cua chung gan nhu trong.
+    if (card.hideOnMobile) {
+      continue;
+    }
     groups.set(card.group, [
       ...(groups.get(card.group) ?? []),
       {
@@ -148,6 +160,9 @@ function liftBlocks(slug: PageSlug): MobileBlock[] {
   }
   const shape = new Map<string, string>();
   for (const card of getLiftCards(slug)) {
+    if (card.hideOnMobile) {
+      continue;
+    }
     shape.set(card.group, `${card.width} / ${card.height}`);
   }
   return [...groups].map(([name, tiles]) => ({

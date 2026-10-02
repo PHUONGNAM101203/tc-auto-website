@@ -2,7 +2,7 @@
 
 import { asset } from "@/lib/asset-version";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { NavSpec } from "@/lib/types";
 import { MobileTree } from "@/components/mobile/MobileTree";
 import { buildTree, type TreeNode } from "@/lib/mobile-tree";
@@ -30,6 +30,35 @@ export function MobileNav({ nav }: { nav: readonly NavSpec[] }) {
   const [open, setOpen] = useState(false);
   /** Muc nao trong ngan keo dang xoe trang con ra. Chi mot muc mot luc. */
   const [branch, setBranch] = useState<string | null>(null);
+  const bar = useRef<HTMLElement>(null);
+
+  // Ngan keo phai dinh sat DAY thanh header.
+  //
+  // Truoc day CSS ghi cung `inset: 62px 0 auto` — tuc la doan thanh header
+  // luon cao dung 62px. Khong dung: chieu cao cua no do logo va phan dem
+  // quyet dinh, va doi theo be ngang man hinh. O may be ngang thanh cao hon
+  // 62px, va giua thanh voi ngan keo ho ra mot khe nhin thau xuong trang —
+  // khach chup lai (02/10/2026).
+  //
+  // Do that bang `ResizeObserver` roi ghi vao bien CSS. Do khi MO ngan keo la
+  // khong du: xoay ngang may hay doi be ngang cua so thi thanh doi chieu cao
+  // ma khe lai ho ra.
+  useEffect(() => {
+    const node = bar.current;
+    if (!node) {
+      return;
+    }
+    const apply = () => {
+      document.documentElement.style.setProperty(
+        "--tc-m-bar-h",
+        `${Math.round(node.getBoundingClientRect().height)}px`,
+      );
+    };
+    apply();
+    const watcher = new ResizeObserver(apply);
+    watcher.observe(node);
+    return () => watcher.disconnect();
+  }, []);
 
   // Mo ngan keo thi khoa cuon nen, va Esc dong lai.
   useEffect(() => {
@@ -52,7 +81,7 @@ export function MobileNav({ nav }: { nav: readonly NavSpec[] }) {
 
   return (
     <>
-      <header className="tc-m-bar">
+      <header className="tc-m-bar" ref={bar}>
         <Link href="/" className="tc-m-logo" aria-label="TC Auto Solutions — trang chủ">
           {/* eslint-disable-next-line @next/next/no-img-element -- logo SVG tinh */}
           <img

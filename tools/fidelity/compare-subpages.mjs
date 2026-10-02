@@ -17,7 +17,10 @@ import { fileURLToPath } from "node:url";
 // Doc THANG tu nguon chuan — Node tu lot kieu cua tep .ts (can Node >= 22.18).
 // Truoc day cho nay la mot BAN CHEP TAY kem giao uoc "sua o do thi sua ca o day";
 // giao uoc do da dut o gate trang chinh, nen bo han ban chep.
-import { deviationsFor } from "../../src/lib/design-deviations.ts";
+import {
+  deviationsFor,
+  FOOTER_DEVIATION,
+} from "../../src/lib/design-deviations.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(HERE, "../..");
@@ -161,6 +164,13 @@ async function main() {
           w: box.width,
           h: box.height,
         })),
+        // Dong dia chi tru so — bam day trang nen `y` suy tu chieu cao that.
+        {
+          x: FOOTER_DEVIATION.box.x,
+          y: height - FOOTER_DEVIATION.fromBottom,
+          w: FOOTER_DEVIATION.box.width,
+          h: FOOTER_DEVIATION.box.height,
+        },
       ];
       const blackOut = (data, rowWidth) => {
         for (const maskBox of maskBoxes) {

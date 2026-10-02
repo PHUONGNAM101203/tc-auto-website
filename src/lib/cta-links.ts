@@ -43,6 +43,19 @@ export interface CtaSpot {
     readonly paragraphGap: number;
   } | null;
   /**
+   * Hop bao cua TIEU DE the.
+   *
+   * Can de ve de tieu de that len tieu de mau "TÊN BÀI VIẾT" — thieu no thi
+   * o co lien ket that nhung mat van doc ra chu mau cua thiet ke.
+   * Xem src/components/site/PostCards.tsx.
+   */
+  readonly headingBox?: {
+    readonly x: number;
+    readonly y: number;
+    readonly width: number;
+    readonly height: number;
+  } | null;
+  /**
    * Nut DO ve san bao quanh chu "XEM THÊM", do bang tools/detect-buttons.py.
    * Mang che phai phu kin ca cai nay, khong thi mep do con tho ra ben canh nut
    * "Thu gọn" cua ta. Nut nao khong nam trong khung do nao thi khong co truong

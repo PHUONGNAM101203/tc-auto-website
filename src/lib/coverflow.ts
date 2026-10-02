@@ -9,6 +9,14 @@ export interface CoverPhoto {
   readonly src: string;
   readonly width: number;
   readonly height: number;
+  /**
+   * Ban hep cho dien thoai (tools/brand/make-mobile-products.py).
+   *
+   * Ban may ban KHONG dung toi: o do anh hien to va `ProjectCoverflow` can do
+   * net. Chi lop mobile dung — dai nay chay tran be ngang nen o chi rong
+   * 350px CSS, ma ban goc rong toi 1920px.
+   */
+  readonly mobileSrc?: string;
 }
 
 export interface Box {

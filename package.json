@@ -14,7 +14,7 @@
     "test:e2e": "playwright test",
     "verify:fidelity": "node tools/fidelity/compare.mjs",
     "parse:prototype": "python3 tools/parse-prototype.py && python3 tools/patch-page-items.py && python3 tools/add-retina-main.py && python3 tools/patch-from-design.py && python3 tools/scrub-nav.py --main && python3 tools/brand/extract-cards.py && python3 tools/brand/extract-solution-cards.py && python3 tools/brand/extract-lift-cards.py && python3 tools/brand/extract-photo-sliders.py && python3 tools/brand/extract-projects.py && python3 tools/brand/scrub-decks.py && python3 tools/brand/extract-mobile-tiles.py && python3 tools/patch-retina-main.py && python3 tools/brand/cut-header-strip.py && python3 tools/stamp-assets.py && python3 tools/brand/clean-hero.py && python3 tools/brand/make-mobile-hero.py && python3 tools/brand/reorder-solutions.py && python3 tools/brand/darken-light-bands.py && python3 tools/brand/make-mobile-products.py && python3 tools/stamp-slices.py",
-    "verify": "npm run typecheck && npm run lint && npm run test:coverage && npm run build && npm run test:e2e && npm run verify:retina && npm run verify:stamps && npm run verify:hero && npm run verify:ghost && npm run verify:overlap && npm run verify:corners && npm run verify:buttons && npm run verify:pager",
+    "verify": "npm run typecheck && npm run lint && npm run test:coverage && npm run build && npm run test:e2e && npm run verify:retina && npm run verify:stamps && npm run verify:hero && npm run verify:ghost && npm run verify:overlap && npm run verify:corners && npm run verify:buttons && npm run verify:pager && npm run verify:captions && npm run verify:mobilehero",
     "parse:subpages": "python3 tools/build-subpages.py && npm run ocr:run && python3 tools/detect-buttons.py --emit && python3 tools/detect-pagination.py && python3 tools/scrub-slices.py && python3 tools/scrub-nav.py && python3 tools/brand/extract-ppf-cards.py && python3 tools/brand/extract-quiz.py && python3 tools/brand/extract-subpage-tiles.py && python3 tools/brand/extract-related-cards.py && python3 tools/brand/extract-gallery.py && python3 tools/brand/link-app-downloads.py && python3 tools/brand/build-spot-articles.py && python3 tools/brand/extract-article-shots.py && python3 tools/brand/fix-overlap-card.py && python3 tools/stamp-slices.py",
     "ocr:build": "swiftc -O -o tools/ocr/ocrbin tools/ocr/OCR.swift",
     "ocr:run": "python3 tools/ocr/run-all.py && python3 tools/ocr/clean.py",
@@ -56,7 +56,9 @@
     "verify:overlap": "python3 tools/fidelity/check-overlap.py",
     "verify:corners": "python3 tools/fidelity/check-card-corners.py",
     "verify:clickable": "node tools/fidelity/check-clickable.mjs",
-    "verify:responsive": "node tools/fidelity/check-responsive.mjs"
+    "verify:responsive": "node tools/fidelity/check-responsive.mjs",
+    "verify:captions": "node tools/fidelity/check-caption-dup.mjs",
+    "verify:mobilehero": "node tools/fidelity/check-mobile-hero.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

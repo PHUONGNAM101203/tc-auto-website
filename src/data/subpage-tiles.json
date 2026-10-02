@@ -6,7 +6,7 @@
       "tiles": [
         {
           "after": 1766.6,
-          "src": "/mobile/sub/cong-nghe__tien-phong-cong-nghe-2.webp?v=032d8ccc"
+          "src": "/mobile/sub/cong-nghe__tien-phong-cong-nghe-2.webp?v=aea5f86f"
         }
       ]
     },
@@ -35,18 +35,26 @@
       "hero": "/mobile/sub/cong-nghe__ung-dung__kho-ung-dung-hero.webp?v=d8b95f1e",
       "tiles": []
     },
+    "dai-ly/cau-chuyen-dong-hanh": {
+      "hero": "/mobile/sub/dai-ly__cau-chuyen-dong-hanh-hero.webp?v=e578850a",
+      "tiles": []
+    },
     "dai-ly/chan-dung-dai-ly": {
       "hero": "/mobile/sub/dai-ly__chan-dung-dai-ly-hero.webp?v=f6f5240d",
       "tiles": []
     },
     "dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto": {
-      "hero": null,
+      "hero": "/mobile/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-hero.webp?v=11021868",
       "tiles": [
         {
           "after": 1515.7,
           "src": "/mobile/sub/dai-ly__chan-dung-dai-ly__dai-ly-winca-pham-gia-auto-0.webp?v=af49dab1"
         }
       ]
+    },
+    "dai-ly/gallery-by-brand": {
+      "hero": "/mobile/sub/dai-ly__gallery-by-brand-hero.webp?v=8f31e823",
+      "tiles": []
     },
     "dai-ly/ho-tro-tiep-thi": {
       "hero": "/mobile/sub/dai-ly__ho-tro-tiep-thi-hero.webp?v=29839c79",
@@ -111,11 +119,11 @@
       "tiles": [
         {
           "after": 1111.8,
-          "src": "/mobile/sub/nhan-su__nhan-su-tc-1.webp?v=5c7489ec"
+          "src": "/mobile/sub/nhan-su__nhan-su-tc-1.webp?v=73261f30"
         },
         {
           "after": 1910.6,
-          "src": "/mobile/sub/nhan-su__nhan-su-tc-2.webp?v=61d89882"
+          "src": "/mobile/sub/nhan-su__nhan-su-tc-2.webp?v=14aafa4b"
         }
       ]
     },
@@ -145,7 +153,7 @@
         },
         {
           "after": 2014.2,
-          "src": "/mobile/sub/nhan-su__van-hoa-tc-1.webp?v=d7154291"
+          "src": "/mobile/sub/nhan-su__van-hoa-tc-1.webp?v=805a2dd8"
         }
       ]
     },
@@ -177,7 +185,7 @@
       ]
     },
     "trai-nghiem/khoanh-khac": {
-      "hero": "/mobile/sub/trai-nghiem__khoanh-khac-hero.webp?v=53c0af63",
+      "hero": "/mobile/sub/trai-nghiem__khoanh-khac-hero.webp?v=d3c886d8",
       "tiles": [
         {
           "after": 739.3,

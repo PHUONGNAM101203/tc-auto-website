@@ -6,7 +6,7 @@ import {
   MobileTabs,
   type MobileTabGroup,
 } from "@/components/mobile/MobileTabs";
-import { headingAlreadyShown } from "@/lib/mobile-heading";
+import { headingAlreadyShown, normalise } from "@/lib/mobile-heading";
 import { mergeByY } from "@/lib/mobile-order";
 import { MobileTree } from "@/components/mobile/MobileTree";
 import { buildTree } from "@/lib/mobile-tree";
@@ -98,6 +98,21 @@ export function MobileSubPage({
     .filter((block) => block.kind === "heading")
     .map((block) => block.text);
 
+  // Bang hero da in tua de trang roi. Khoi chu dau tien cua than bai thuong
+  // la DUNG tua de do (thiet ke ve no mot lan trong anh hero va mot lan o dau
+  // noi dung), nen tren dien thoai doc ra hai dong giong het nhau lien nhau.
+  // Bo khoi do di — chi khoi DAU TIEN, va chi khi trung khop: giua bai ma co
+  // de muc trung ten thi do la mot muc that.
+  const title = normalise(page.title);
+  const body = dropPlaceholders(
+    blocks.filter((block, index) => {
+      if (index > 0 || block.kind !== "heading") {
+        return true;
+      }
+      return normalise(block.text) !== title;
+    }),
+  );
+
   const tree = childPages.map((child) => ({
     href: child.route,
     label: child.title,
@@ -127,7 +142,7 @@ export function MobileSubPage({
           cao 2644, day xuong cuoi la doc sai mach cua ban desktop. */}
       <article className="tc-m-article">
         {mergeByY(
-          blocks.map((block, index) => ({
+          body.map((block, index) => ({
             y: block.y,
             item: renderText(block, index),
           })),
@@ -279,4 +294,38 @@ function renderText(block: MobileBlock, index: number) {
   ) : (
     <p key={key}>{block.text}</p>
   );
+}
+
+/** Tieu de mau cua ban thiet ke, da bo dau de so sanh. */
+const PLACEHOLDER = normalise("TÊN BÀI VIẾT");
+
+/**
+ * Bo cac khoi chu DAT CHO khoi ban mobile.
+ *
+ * Thiet ke de san nam the bai viet mang tieu de mau "TÊN BÀI VIẾT", kem mot
+ * doan than bai mau — ca nam the deu ke cung mot chuyen ve Pham Gia Auto. Ban
+ * desktop phu chung bang bai that (PostCards.tsx), nhung ban mobile doc thang
+ * tu van ban OCR nen van in nguyen tieu de mau va doan chu lap lai nam lan.
+ *
+ * Bo tu tieu de mau cho toi de muc that tiep theo. Khi quan tri them bai that
+ * thi bai do hien o muc rieng; con o dat cho thi khong hien gi ca — trong con
+ * hon la lap di lap lai mot cau chuyen khong lien quan.
+ */
+function dropPlaceholders(
+  blocks: readonly MobileBlock[],
+): readonly MobileBlock[] {
+  const out: MobileBlock[] = [];
+  let skipping = false;
+  for (const block of blocks) {
+    if (block.kind === "heading") {
+      skipping = normalise(block.text) === PLACEHOLDER;
+      if (skipping) {
+        continue;
+      }
+    }
+    if (!skipping) {
+      out.push(block);
+    }
+  }
+  return out;
 }

@@ -9,6 +9,7 @@ const PATHS = {
     "M4 3h3l2 5-2.2 1.2a12 12 0 0 0 5.9 5.9L14 13l5 2v3a2 2 0 0 1-2.2 2A16 16 0 0 1 2 5.2 2 2 0 0 1 4 3Z",
   mail: "M3 5h18v14H3zM3 6l9 7 9-7",
   clock: "M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 7v5l3.5 2",
+  pin: "M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11ZM12 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z",
 } as const;
 
 function Icon({ name }: { readonly name: keyof typeof PATHS }) {
@@ -52,6 +53,20 @@ export function MobileFooter({ nav }: { readonly nav: readonly NavSpec[] }) {
         <li>
           <Icon name="clock" />
           <span>{SITE_CONTACT.hours}</span>
+        </li>
+        {/* Dia chi tru so — mo thang Google Maps thay vi chi hien chu, vi tren
+            dien thoai nguoi ta doc chan trang chu yeu de tim duong. */}
+        <li>
+          <Icon name="pin" />
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+              `${SITE_CONTACT.address}`,
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {SITE_CONTACT.address}
+          </a>
         </li>
       </ul>
 

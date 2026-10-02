@@ -16,8 +16,11 @@ import { getProductSpecs } from "./product-specs";
  * ── Nguyen tac ─────────────────────────────────────────────────────────────
  * CHI khai nhung gi ta biet chac. Google phat trang khai sai lech so voi noi
  * dung nguoi dung nhin thay. Cu the o day:
- *   - KHONG dung `LocalBusiness`: no doi `address`, ma ca du an khong co dia
- *     chi tru so nao — phai xin TC Auto. Dung `Organization` cho phan biet ro.
+ *   - DA dung `LocalBusiness` tu 02/10/2026: khach cung cap dia chi tru so
+ *     (463 Trưng Nữ Vương, Đà Nẵng) nen `address` khai duoc that. Truoc do
+ *     chi dam dung `Organization` vi `LocalBusiness` BAT BUOC co `address`,
+ *     ma khai bua thi Google phat. KHONG khai `geo` (toa do) va
+ *     `openingHoursSpecification` chi tiet hon nhung gi chan trang ghi.
  *   - KHONG khai `offers`/gia tren san pham: ta khong co bang gia.
  *   - KHONG khai `SearchAction`: no doi mot duong dan trang KET QUA that, ma
  *     o tim kiem o day tra ket qua ngay tai cho chu khong co trang rieng.
@@ -44,12 +47,22 @@ export function organizationLd(): Json {
   const links = SOCIAL.filter((s) => s.href).map((s) => s.href as string);
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    // `AutoPartsStore` la kieu con cua `LocalBusiness`, sat voi viec TC Auto
+    // lam (phan phoi phu kien o to) hon la `LocalBusiness` chung chung.
+    "@type": ["Organization", "AutoPartsStore"],
     "@id": ORG_ID,
     name: SITE.name,
     url: abs("/"),
     description: SITE.description,
     slogan: SITE.slogan,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE_CONTACT.address.split(",")[0].trim(),
+      addressLocality: SITE_CONTACT.addressLocality,
+      addressCountry: SITE_CONTACT.addressCountry,
+    },
+    telephone: SITE_CONTACT.phone.replace(/\s/g, ""),
+    email: SITE_CONTACT.email,
     logo: {
       "@type": "ImageObject",
       url: abs("/brand/logo-horizontal-on-dark.png"),

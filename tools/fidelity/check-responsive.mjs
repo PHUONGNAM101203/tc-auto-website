@@ -118,8 +118,20 @@ for (const width of WIDTHS) {
       }
 
       // Chu qua nho de doc.
+      //
+      // CHI do chu NGOAI canvas. Trong canvas moi co so do thiet ke theo he
+      // 1440px roi ca khoi duoc phong bang `zoom` cho vua cua so — mot dong
+      // 8,6px o do hien ra 11,5px tren man 1920. Lay nguong co dinh ma do
+      // thi hoac bao nham moi dong chu nho cua thiet ke, hoac bat ta phai
+      // phong to mot dong len khac han ba dong ve san ngay canh no.
+      // `getComputedStyle` tra ve co TRUOC khi phong, nen con so doc duoc o
+      // trong canvas khong so sanh duoc voi pixel that.
+      const zoomed = [...document.querySelectorAll(".tc-canvas, .tc-dochdr-canvas")];
+      const insideCanvas = (el) => zoomed.some((box) => box.contains(el));
+
       for (const el of document.querySelectorAll("p, h1, h2, h3, a, span, strong, em, li")) {
         if (!el.textContent?.trim()) continue;
+        if (insideCanvas(el)) continue;
         const style = getComputedStyle(el);
         if (style.display === "none" || style.visibility === "hidden") continue;
         const size = parseFloat(style.fontSize);

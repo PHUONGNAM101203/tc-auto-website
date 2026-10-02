@@ -29,8 +29,15 @@ test.describe("dữ liệu có cấu trúc", () => {
   }) => {
     for (const path of PAGES) {
       await page.goto(path);
-      const types = (await read(page)).map((j) => j["@type"]);
+      // `@type` cua phap nhan la MOT MANG tu 02/10/2026
+      // (["Organization", "AutoPartsStore"]) — khai them kieu con cua
+      // `LocalBusiness` de len ket qua tim kiem dia phuong. Phai duyet ca
+      // mang, khong so bang dau bang.
+      const types = (await read(page)).flatMap((j) =>
+        Array.isArray(j["@type"]) ? j["@type"] : [j["@type"]],
+      );
       expect(types.filter((t) => t === "Organization"), path).toHaveLength(1);
+      expect(types.filter((t) => t === "AutoPartsStore"), path).toHaveLength(1);
       expect(types.filter((t) => t === "WebSite"), path).toHaveLength(1);
     }
   });
@@ -49,7 +56,9 @@ test.describe("dữ liệu có cấu trúc", () => {
 
   test("pháp nhân chỉ liệt kê trang mạng xã hội CÓ THẬT", async ({ page }) => {
     await page.goto("/");
-    const org = (await read(page)).find((j) => j["@type"] === "Organization")!;
+    const org = (await read(page)).find((j) =>
+      (Array.isArray(j["@type"]) ? j["@type"] : [j["@type"]]).includes("Organization"),
+    )!;
     // TC Auto chua co Instagram — khai bia mot duong dan la gui nguoi dung
     // sang tai khoan cua hang khac.
     expect(org.sameAs).toBeDefined();
@@ -57,6 +66,12 @@ test.describe("dữ liệu có cấu trúc", () => {
       expect(link).toMatch(/^https:\/\/(www\.facebook\.com|zalo\.me)\//);
     }
     expect(org.contactPoint[0].telephone).toBeTruthy();
+
+    // `AutoPartsStore` BAT BUOC co dia chi — khai kieu do ma thieu `address`
+    // thi Google bo qua ca mau.
+    expect(org.address, "phai co dia chi tru so").toBeDefined();
+    expect(org.address["@type"]).toBe("PostalAddress");
+    expect(org.address.streetAddress).toBeTruthy();
   });
 
   test("đường dẫn phân cấp khai KHỚP với đường dẫn hiện trên trang", async ({

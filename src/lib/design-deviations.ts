@@ -489,7 +489,196 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "anh (tools/scrub-slices.py), neu khong thi so trang trong anh mau thuan voi so " +
       "trang thuc. Toa do y khac nhau theo tung trang.",
   },
+  // ── O bai viet dat cho duoc phu bang bai that ───────────────────────────
+  // Ban thiet ke ve san nhung the bai viet mang tieu de mau "TÊN BÀI VIẾT",
+  // kem mot doan than bai mau (ca nam the deu ke cung mot chuyen ve Pham Gia
+  // Auto). Khi admin them bai that, cac o do duoc phu lai bang tieu de, ngay
+  // dang va mo ta that — xem src/components/site/PostCards.tsx.
+  //
+  // Danh sach nay SINH RA tu src/data/cta-links.json (tools/match-cta.py),
+  // khong chep tay: toa do o doi theo moi lan dung lai anh nen.
+  {
+    page: "cong-nghe/tien-phong-cong-nghe/bai-viet",
+    box: { x: 748, y: 937, width: 602, height: 330 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "cong-nghe/tien-phong-cong-nghe/bai-viet",
+    box: { x: 745, y: 1419, width: 609, height: 313 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "cong-nghe/tien-phong-cong-nghe/bai-viet",
+    box: { x: 745, y: 1898, width: 611, height: 326 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "cong-nghe/tien-phong-cong-nghe/bai-viet",
+    box: { x: 745, y: 2381, width: 604, height: 312 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "cong-nghe/tien-phong-cong-nghe/bai-viet",
+    box: { x: 745, y: 2853, width: 604, height: 336 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/cau-chuyen-dong-hanh",
+    box: { x: 74, y: 1096, width: 604, height: 314 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/cau-chuyen-dong-hanh",
+    box: { x: 74, y: 1575, width: 604, height: 314 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/cau-chuyen-dong-hanh",
+    box: { x: 73, y: 2054, width: 609, height: 324 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/cau-chuyen-dong-hanh",
+    box: { x: 74, y: 2536, width: 604, height: 319 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/cau-chuyen-dong-hanh",
+    box: { x: 73, y: 3012, width: 602, height: 332 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/chan-dung-dai-ly",
+    box: { x: 73, y: 1495, width: 607, height: 312 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/chan-dung-dai-ly",
+    box: { x: 73, y: 1972, width: 602, height: 314 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/chan-dung-dai-ly",
+    box: { x: 73, y: 2457, width: 607, height: 311 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/chan-dung-dai-ly",
+    box: { x: 73, y: 2934, width: 602, height: 312 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/chan-dung-dai-ly",
+    box: { x: 74, y: 3411, width: 604, height: 314 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/gallery-by-brand",
+    box: { x: 74, y: 1068, width: 619, height: 331 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/gallery-by-brand",
+    box: { x: 75, y: 1550, width: 617, height: 330 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/gallery-by-brand",
+    box: { x: 76, y: 2032, width: 617, height: 330 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/gallery-by-brand",
+    box: { x: 74, y: 2511, width: 619, height: 332 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "dai-ly/gallery-by-brand",
+    box: { x: 75, y: 2993, width: 617, height: 330 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "giai-phap/du-an",
+    box: { x: 745, y: 2916, width: 611, height: 346 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "nhan-su/tuyen-dung/vi-tri-dang-tuyen",
+    box: { x: 745, y: 2340, width: 609, height: 350 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
+  {
+    page: "nhan-su/tuyen-dung/vi-tri-dang-tuyen",
+    box: { x: 745, y: 2821, width: 611, height: 349 },
+    reason:
+      "O dat cho cua thiet ke — tieu de mau \"TÊN BÀI VIẾT\" va mot doan than " +
+      "bai mau — duoc PHU bang noi dung bai that. Xem PostCards.tsx.",
+  },
 ];
+
+/**
+ * Dong DIA CHI TRU SO them vao chan trang — ap cho MOI trang.
+ *
+ * Khac moi ngoai le khac o cho no khong co toa do `y` tuyet doi: chan trang
+ * bam day trang, ma moi trang cao mot kieu. Neu khai 37 muc thi 37 con so do
+ * tay, sai mot cai la gate bao nham. Nen khai theo KHOANG CACH TOI DAY, roi
+ * hai cua kiem pixel tu quy ra `y` bang chieu cao trang chung dang do.
+ *
+ * Ly do co dong nay: thiet ke khong ve dia chi tru so — luc do TC Auto chua
+ * cung cap. Thieu no thi khong khai duoc `LocalBusiness` nen khong len duoc
+ * ket qua tim kiem dia phuong. Khach dua dia chi 02/10/2026.
+ * Xem src/components/site/FooterAddress.tsx.
+ */
+export const FOOTER_DEVIATION = {
+  fromBottom: 78,
+  box: { x: 1230, width: 170, height: 18 },
+  reason:
+    "Dong dia chi tru so trong chan trang — thiet ke khong ve, khach cung cap sau.",
+} as const;
 
 export function deviationsFor(page: string): readonly Deviation[] {
   return DESIGN_DEVIATIONS.filter((item) => item.page === page);

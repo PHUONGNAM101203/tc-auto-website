@@ -33,6 +33,28 @@ export default function robots(): MetadataRoute.Robots {
         "Applebot-Extended",
         "CCBot",
       ].map((userAgent) => ({ userAgent, allow: "/", disallow: blocked })),
+      // Tu choi HAN cac may cao SEO thuong mai va may cao du lieu hang loat.
+      //
+      // Chung doc het site de ban lai du lieu cho ben thu ba, khong dua mot
+      // nguoi doc nao ve cho TC Auto. Phan lon nhom nay doc robots.txt roi
+      // lam nguoc lai, nen dong khai o day chi la de noi ro y dinh — cho
+      // chan that nam o src/lib/crawl-guard.ts, tra thang 403.
+      // Hai danh sach phai khop nhau.
+      ...[
+        "AhrefsBot",
+        "SemrushBot",
+        "MJ12bot",
+        "DotBot",
+        "DataForSeoBot",
+        "BLEXBot",
+        "serpstatbot",
+        "ZoominfoBot",
+        "Bytespider",
+        "PetalBot",
+        "MegaIndex",
+        "Barkrowler",
+        "ImagesiftBot",
+      ].map((userAgent) => ({ userAgent, disallow: "/" })),
     ],
     sitemap: `${base}/sitemap.xml`,
     host: base,

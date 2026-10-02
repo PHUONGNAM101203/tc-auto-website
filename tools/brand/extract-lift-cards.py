@@ -134,6 +134,14 @@ GROUPS = [
         # 2015..2065 va y 2395..2425 khong co gi.
         "rebuild": "interpolate",
         "anchor": 12,
+        # Tieu de NAM TRONG anh the (da kiem bang cach mo
+        # public/lift/home-innovation@m.webp: chu "INNOVATION / Tiên phong
+        # cong nghe" o ngay trong do). Khong khai thi ban mobile in lai chu
+        # mot lan nua, doc ra hai lop chong len nhau — khach da chup lai
+        # (02/10/2026). Chu thich o nhom `home-trai-nghiem` ghi "khong phai
+        # ngoai nhu bon o muc Cong nghe" la ghi nham, bon o nay cung co chu
+        # trong anh.
+        "captionInImage": True,
         "cards": [
             {
                 "id": "innovation",
@@ -183,6 +191,10 @@ GROUPS = [
         "source": DESIGN / "5.Page_Đại lý " / "1. Đại lý.png",
         "spec": ROOT / "src" / "data" / "pages" / "dai-ly.json",
         "slice_prefix": "dai-ly",
+        # Tieu de nam TRONG anh the — da kiem bang cach mo tep @m.webp.
+        # Khong khai thi ban mobile in lai chu mot lan nua, doc ra hai
+        # lop chong len nhau.
+        "captionInImage": True,
         # Muc nay nam tren nen TRANG THUAN -> chi can to trang, khong can noi suy.
         "rebuild": "white",
         # Nen sau hai the nay trong thiet ke la DAI TRANG, nen khi cat ra thi
@@ -227,6 +239,10 @@ GROUPS = [
         "source": DESIGN / "3.Page_Giải pháp" / "1.Giải pháp.png",
         "spec": ROOT / "src" / "data" / "pages" / "giai-phap.json",
         "slice_prefix": "giai-phap",
+        # Tieu de nam TRONG anh the — da kiem bang cach mo tep @m.webp.
+        # Khong khai thi ban mobile in lai chu mot lan nua, doc ra hai
+        # lop chong len nhau.
+        "captionInImage": True,
         # Nen quanh ba the la navy PHANG (#02111c) — to lai la xong.
         "rebuild": "fill",
         "fill": (2, 17, 28),

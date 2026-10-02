@@ -7,6 +7,8 @@ import { BrandTabs } from "@/components/site/BrandTabs";
 import { DealerSearch } from "@/components/site/DealerSearch";
 import { Pagination } from "@/components/site/Pagination";
 import { ReadMore } from "@/components/site/ReadMore";
+import { PostCards } from "@/components/site/PostCards";
+import { StoryTabs } from "@/components/site/StoryTabs";
 import { AuthoredPage } from "@/components/site/AuthoredPage";
 import { ProductPage } from "@/components/site/ProductPage";
 import { SubPageShell } from "@/components/site/SubPageShell";
@@ -210,6 +212,7 @@ export default async function SubPage({
   const isScreens = slug === "giai-phap/man-hinh";
   /** Trang co ba tab 5DO / 3M / NANO SUN. */
   const isBrandGallery = slug === "dai-ly/gallery-by-brand";
+  const isStoryPage = slug === "dai-ly/cau-chuyen-dong-hanh";
   const pager = getPagination(slug);
   const hotspots = getHotspots(slug);
 
@@ -243,11 +246,15 @@ export default async function SubPage({
           {isQuiz && <StyleQuiz />}
           {isScreens && <ScreenTabs />}
           {isBrandGallery && <BrandTabs />}
+          {isStoryPage && <StoryTabs />}
           {pager && <Pagination model={pager} label={page.title} />}
           <ReadMore
             spots={getCtaSpots(slug).filter((spot) => !covered(spot))}
             posts={posts}
           />
+          {/* `ReadMore` chi dat vung bam len nut "XEM THÊM"; lop nay moi ve de
+              TIEU DE va MO TA that len cho tieu de mau trong anh nen. */}
+          <PostCards spots={getCtaSpots(slug)} posts={posts} />
         </>
       }
       mobileFeature={

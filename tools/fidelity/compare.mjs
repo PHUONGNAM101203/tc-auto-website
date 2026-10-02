@@ -16,7 +16,10 @@ import { fileURLToPath } from "node:url";
 // Doc THANG tu nguon chuan — Node tu lot kieu cua tep .ts (can Node >= 22.18).
 // Truoc day cho nay la mot BAN CHEP TAY va no da lech: danh sach o day thieu ba
 // dai the duoc nhac len (home, dai-ly, giai-phap) nen gate bao lech gia.
-import { deviationsFor } from "../../src/lib/design-deviations.ts";
+import {
+  deviationsFor,
+  FOOTER_DEVIATION,
+} from "../../src/lib/design-deviations.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = resolve(HERE, "out");
@@ -215,9 +218,23 @@ function maskOut(png, boxes) {
 }
 
 function compare(protoBuffer, nextBuffer, slug) {
-  const boxes = deviationsFor(slug).map((item) => item.box);
-  const a = maskOut(PNG.sync.read(protoBuffer), boxes);
-  const b = maskOut(PNG.sync.read(nextBuffer), boxes);
+  const rawA = PNG.sync.read(protoBuffer);
+  const rawB = PNG.sync.read(nextBuffer);
+
+  // Dong dia chi bam DAY trang, nen `y` cua no phai suy ra tu chieu cao that
+  // cua anh chu khong khai san duoc — moi trang cao mot kieu.
+  // Anh chup o ty le 1:1 voi canvas 1440px nen khong can quy doi.
+  const pageBottom = Math.min(rawA.height, rawB.height);
+  const footer = {
+    x: FOOTER_DEVIATION.box.x,
+    y: pageBottom - FOOTER_DEVIATION.fromBottom,
+    width: FOOTER_DEVIATION.box.width,
+    height: FOOTER_DEVIATION.box.height,
+  };
+
+  const boxes = [...deviationsFor(slug).map((item) => item.box), footer];
+  const a = maskOut(rawA, boxes);
+  const b = maskOut(rawB, boxes);
 
   const width = Math.min(a.width, b.width);
   const height = Math.min(a.height, b.height);

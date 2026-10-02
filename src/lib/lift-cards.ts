@@ -41,6 +41,16 @@ export interface LiftCard {
    */
   readonly captionInImage?: boolean;
   /**
+   * The nay KHONG duoc hien tren lop mobile.
+   *
+   * Tren canvas, vai the chi la VUNG BAM nam duoi mot thanh phan khac
+   * (`ScreenTabs` che the Winca/Bravo, `PpfCarousel` che dai 3M/Nano Sun/5DO).
+   * Anh cat ra cua chung vi vay gan nhu trong — dung tren desktop vi khong ai
+   * nhin thay, nhung lop mobile khong co gi che nen hien ra thanh o toi om,
+   * khong ten. Khach chup lai (02/10/2026).
+   */
+  readonly hideOnMobile?: boolean;
+  /**
    * Cac ban do phan giai khac nhau cua CHINH tam anh nay.
    *
    * Ban dau tien luon la ban @2x — do la ban ma gate pixel nhin thay o ti le

@@ -359,6 +359,39 @@ def main() -> int:
             if hero_x1 - hero_x0 >= 320
             else None
         )
+
+        # Du phong theo CHIEU DOC.
+        #
+        # Phep cat tren chi thu hep theo chieu NGANG. Vai trang co tua de trai
+        # gan het be ngang bang hero (dai-ly/cau-chuyen-dong-hanh,
+        # dai-ly/gallery-by-brand, trang chan dung Pham Gia Auto) nen khong con
+        # cot nao rong 320px — va truoc day chung khong co anh hero nao ca.
+        #
+        # Hau qua KHONG phai la "thieu anh": `MobileSubPage` roi xuong dong du
+        # phong lay thang lat thiet ke 1440px, ma lat do DA CO tua de ve trong
+        # anh — nen tren dien thoai tua de hien HAI LAN, lech nhau, kem logo bi
+        # cat. Khach chup lai 02/10/2026.
+        #
+        # Nen khi khong co cot sach thi tim mot DAI NGANG khong dinh chu: lay
+        # khoang ho lon nhat giua cac dong chu trong bang hero.
+        if hero is None and hero_text:
+            spans = sorted((b["y"], b["y"] + b["h"]) for b in hero_text)
+            free: list[tuple[float, float]] = []
+            cursor = float(HERO_TOP)
+            for top, bottom in spans:
+                if top - cursor > 0:
+                    free.append((cursor, top))
+                cursor = max(cursor, bottom)
+            if HERO_BOTTOM - cursor > 0:
+                free.append((cursor, float(HERO_BOTTOM)))
+            # Le an toan de khong liem phai net chu.
+            padded = [(a + 10, b - 10) for a, b in free]
+            tall = max((b - a, a, b) for a, b in padded) if padded else (0, 0, 0)
+            if tall[0] >= 150:
+                hero = read_band(
+                    spec, path.stem, round(tall[1]), round(tall[2]), 0, CANVAS_WIDTH
+                )
+
         hero_src = None
         if hero is not None:
             hero = centre_crop(hero)

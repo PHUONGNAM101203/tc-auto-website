@@ -2481,3 +2481,203 @@ a.tc-appfoot-btn:focus-visible {
     display: none;
   }
 }
+
+/* ---------- Dòng địa chỉ trụ sở trong chân trang canvas ----------
+   Kiểu chữ dò từ chính lát nền: cao chữ 5px canvas → Montserrat ~9,5px, màu
+   điểm sáng nhất #edf1f5. Xem src/components/site/FooterAddress.tsx. */
+.tc-footaddr {
+  position: absolute;
+  left: 1235px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #edf1f5;
+  /* Ba dòng có sẵn đều NGHIÊNG — đo lại cỡ bằng cách so bề ngang chuỗi
+     email với vệt chữ trong lát nền (1251..1358 = 107px cho 24 ký tự). */
+  font: italic 400 8.6px/1 "Montserrat", sans-serif;
+  letter-spacing: 0.1px;
+  text-decoration: none;
+  white-space: nowrap;
+  z-index: 7;
+  transition: color 0.2s;
+}
+
+.tc-footaddr svg {
+  width: 11px;
+  height: 11px;
+  flex: none;
+}
+
+.tc-footaddr:hover {
+  color: var(--sky);
+}
+
+/* ---------- Thẻ bài viết vẽ đè lên ô đặt chỗ của thiết kế ----------
+   Bản thiết kế để tiêu đề mẫu "TÊN BÀI VIẾT" và một đoạn thân bài mẫu, cả hai
+   nằm trong ảnh nền. Lớp này phủ đục lên đó rồi vẽ lại nội dung thật.
+   Kiểu chữ đo từ chính ảnh thiết kế — xem PostCards.tsx. */
+.tc-postcard {
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: none;
+  /* Đệm trên, KHÔNG phải nới mép trên.
+     Chữ hoa tiếng Việt có dấu chồng (Ố, Ế, Ẫ) vươn cao hơn thân chữ hoa và
+     tràn lên trên hộp dòng. Lớp phủ có `overflow: hidden` nên phần dấu đó bị
+     xén — "BỐN ĐIỀU BIẾT" đọc ra thành "BÔN ĐIÊU BIÊT", trông hệt như lỗi
+     thiếu font (đã kiểm: font vẽ đủ dấu). Nới mép trên không cứu được vì chữ
+     dịch lên theo; phải chừa đệm BÊN TRONG để chữ nằm thấp hơn mép cắt. */
+  padding-top: 14px;
+}
+
+.tc-postcard > * {
+  pointer-events: auto;
+}
+
+.tc-postcard-title {
+  display: block;
+  margin: 0;
+  font: 800 27px/1.18 "Unbounded", sans-serif;
+  color: var(--red);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0;
+  transition: color 0.2s;
+}
+
+.tc-postcard-title:hover {
+  color: var(--red-nav);
+}
+
+.tc-postcard-date {
+  margin: 10px 0 0;
+  font: italic 400 15px/1.4 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.tc-postcard-excerpt {
+  margin: 14px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Mấy đoạn đầu của bài, để thẻ không rỗng hoác như khi chỉ có tóm tắt.
+   Mờ dần theo thứ tự, giống cách thiết kế làm nhoà đoạn cuối. */
+.tc-postcard-body {
+  margin: 14px 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.tc-postcard-body ~ .tc-postcard-body {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+/* ---------- Hai tab trên trang "Câu chuyện đồng hành" ----------
+   Thanh hai ô vẽ chết trong ảnh nền, ô đầu đang sáng. Nút ở đây trong suốt,
+   đặt đúng lên ô vẽ sẵn. Xem src/components/site/StoryTabs.tsx. */
+.tc-story-tab {
+  position: absolute;
+  z-index: 4;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.tc-story-tab:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--red-nav);
+}
+
+/* Ảnh nền vẽ sẵn ô đầu đang sáng. Chọn ô kia thì làm mờ vệt sáng cũ đi…  */
+.tc-story-tab[data-off]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 17, 28, 0.55);
+  pointer-events: none;
+}
+
+/* …và đánh dấu ô đang chọn. Chỉ vẽ sau khi người dùng bấm — xem StoryTabs. */
+.tc-story-tab[data-on]::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 4px;
+  height: 2px;
+  background: var(--red-nav);
+  border-radius: 2px;
+}
+
+.tc-story-panel {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 56px 80px 0;
+}
+
+.tc-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tc-story-grid a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 32px 30px 28px;
+  border: 1px solid rgba(166, 228, 255, 0.22);
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(166, 228, 255, 0.07), rgba(255, 255, 255, 0));
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.tc-story-grid a:hover {
+  transform: translateY(-6px);
+  border-color: rgba(166, 228, 255, 0.5);
+  box-shadow: 0 24px 44px -20px rgba(0, 0, 0, 0.7);
+}
+
+.tc-story-grid strong {
+  font: 800 20px/1.25 "Unbounded", sans-serif;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.tc-story-grid em {
+  margin-top: 14px;
+  font: italic 600 15px/1.5 "Montserrat", sans-serif;
+  color: var(--sky);
+}
+
+.tc-story-grid span {
+  margin-top: 14px;
+  font: italic 400 15px/1.7 "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.tc-story-grid i {
+  margin-top: auto;
+  padding-top: 20px;
+  font: 700 12.5px/1 "Unbounded", sans-serif;
+  font-style: normal;
+  color: #fff;
+}

@@ -47,12 +47,14 @@ const SOURCE_LIMITED = new Set([
   "con-nguoi-tc-2.webp",           // Rectangle 186.png — chi co 1444px
   "con-nguoi-tc-3.webp",           // Rectangle 187.png
   "con-nguoi-tc-4.webp",           // Rectangle 188.png
-  // Bon tam trong dai "CÁC DỰ ÁN ĐÃ TRIỂN KHAI" — ban to nhat trong bo tai
-  // nguyen chi rong 1154px (Rectangle 128/183/185/188 o muc 2.5).
-  "le-ky-ket-thanh-tien-auto.webp",
-  "le-ky-ket-toyota-phu-tai-duc.webp",
+  // Dai "CÁC DỰ ÁN ĐÃ TRIỂN KHAI". Bo tai nguyen cua khach chi co ban 1154px,
+  // nhung BA trong bon tam da tim duoc ban 1920px tren chinh tcauto.vn va da
+  // thay (02/10/2026, tools/brand/find-sharper-photos.py) — chung khong con
+  // nam trong danh sach nay nua.
+  //
+  // Rieng OTUA Thanh Nien thi khong co: kho anh cua tcauto.vn khong chua buc
+  // do (tam giong nhat la le ky ket cua Tan Binh Auto, mot dai ly khac).
   "le-ky-ket-otua-thanh-nien.webp",
-  "le-ky-ket-tan-nat.webp",
   // Ba tam cua bang "BỘ SƯU TẬP" tren /trai-nghiem/khoanh-khac. Khac cac the
   // tren trang Giai phap (chung cat tu lat nen nen con nang len @3x duoc —
   // xem `retina` trong extract-lift-cards.py), ba tam nay lay THANG tu bo tai

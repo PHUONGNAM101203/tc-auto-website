@@ -105,11 +105,15 @@
 
 .tc-m-drawer {
   position: fixed;
-  inset: 62px 0 auto;
+  /* Dính sát đáy thanh header. Chiều cao thật của thanh do `ResizeObserver`
+     trong MobileNav ghi vào `--tc-m-bar-h`; 62px chỉ là giá trị đỡ cho lần vẽ
+     đầu, trước khi JS chạy. Ghi cứng 62px là ở vài bề ngang thanh cao hơn thế
+     và hở ra một khe nhìn thấu xuống trang. */
+  inset: var(--tc-m-bar-h, 62px) 0 auto;
   z-index: 39;
   /* Xoe het ca ba muc co trang con thi danh sach dai hon man hinh — khong gioi
      han thi cac muc cuoi tran ra ngoai va khong cuon toi duoc. */
-  max-height: calc(100dvh - 62px);
+  max-height: calc(100dvh - var(--tc-m-bar-h, 62px));
   overflow-y: auto;
   overscroll-behavior: contain;
   padding: 10px 18px 22px;

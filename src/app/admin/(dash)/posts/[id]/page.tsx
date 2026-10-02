@@ -4,6 +4,8 @@ import { PostEditor } from "@/components/admin/PostEditor";
 import { PreviewPane } from "@/components/admin/PreviewPane";
 import { EmptyState } from "@/components/admin/ui";
 import { getPost } from "@/lib/admin/posts";
+import { listMedia } from "@/lib/admin/queries";
+import { getPostSections } from "@/lib/post-sections";
 
 export const dynamic = "force-dynamic";
 
@@ -20,8 +22,17 @@ export default async function PostEditorPage({
   const { id } = await params;
   const { saved } = await searchParams;
 
+  // Danh sach muc sinh tu van ban thiet ke; thu vien anh de chon anh bia.
+  // Thu vien loi thi van soan bai duoc — chi mat phan chon anh.
+  const sections = getPostSections();
+  const media = await listMedia(40).catch(() => []);
+
   if (id === NEW) {
-    return <Frame title="Viết bài mới">{<PostEditor post={null} saved={false} />}</Frame>;
+    return (
+      <Frame title="Viết bài mới">
+        <PostEditor post={null} saved={false} sections={sections} media={media} />
+      </Frame>
+    );
   }
 
   let post;
@@ -42,7 +53,7 @@ export default async function PostEditorPage({
 
   return (
     <Frame title={post.title}>
-      <PostEditor post={post} saved={saved === "1"} />
+      <PostEditor post={post} saved={saved === "1"} sections={sections} media={media} />
       {/* Ban nhap cung xem truoc duoc: duong dan /admin/preview dung chung
           component voi trang that nhung doc bang quyen quan tri. Phai xem duoc
           TRUOC khi dang — dang roi moi xem thi da lo ra ngoai. */}
