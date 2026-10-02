@@ -199,13 +199,18 @@ describe("ba thẻ Ứng dụng trên trang Công nghệ", () => {
     expect(getAppCards("khong-ton-tai")).toEqual([]);
   });
 
-  it("ruột luôn nằm gọn bên trong khung của chính nó", () => {
+  it("ruột TRÙNG KHÍT với khung — một khung duy nhất, không lồng nhau", () => {
+    // Truoc day ruot thut vao trong khung 24/14/4, va chinh cho do la loi:
+    // khung bo tron sang duoc ve chet trong anh nen, con ruot thi nam thut
+    // vao trong no — nhin ra HAI hinh vuong long nhau. Khach chi dung cho do
+    // (02/10/2026): "chưa hợp nhất full khung hình vuông". Xem INSET_* trong
+    // tools/brand/extract-cards.py.
     for (const card of cards) {
       const { frame, content } = card;
-      expect(content.x, card.title).toBeGreaterThan(frame.x);
-      expect(content.y, card.title).toBeGreaterThan(frame.y);
-      expect(content.x + content.width).toBeLessThan(frame.x + frame.width);
-      expect(content.y + content.height).toBeLessThanOrEqual(frame.y + frame.height);
+      expect(content.x, card.title).toBe(frame.x);
+      expect(content.y, card.title).toBe(frame.y);
+      expect(content.width, card.title).toBe(frame.width);
+      expect(content.height, card.title).toBe(frame.height);
     }
   });
 

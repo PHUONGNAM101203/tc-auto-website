@@ -7,7 +7,14 @@ import products from "../../src/data/products.json";
  * Bo thiet ke khong ve trang cho san pham nao — cac trang nay do ta dung theo
  * mach cua trang chi tiet mau "3M Ceramic Elite IM". Xem src/lib/products.ts.
  */
-type Row = { slug: string; name: string; route: string; category: string };
+type Row = {
+  slug: string;
+  name: string;
+  route: string;
+  category: string;
+  /** Chi dat cho ba dong Bravo — xem src/lib/products.ts. */
+  brand?: string;
+};
 const LIST = (products as { products: Row[] }).products;
 /** Cac trang danh muc co san pham, va so san pham cua tung trang. */
 const BY_CATEGORY = new Map<string, Row[]>();
@@ -24,11 +31,15 @@ test.describe("trang chi tiết sản phẩm", () => {
       const hrefs = await page.$$eval("a.tc-readmore", (els) =>
         els.map((el) => el.getAttribute("href")),
       );
-      const routes = new Set(rows.map((row) => row.route));
+      // Chi dem san pham CO NUT ve san trong anh thiet ke. Ba dong Bravo
+      // khong co: the cua chung do ScreenTabs ve bang phan tu that, va chung
+      // nam o tab khac. Xem tests/e2e/screen-tabs.spec.ts.
+      const onCanvas = rows.filter((row) => row.brand !== "Bravo");
+      const routes = new Set(onCanvas.map((row) => row.route));
       const toProduct = hrefs.filter((href) => href && routes.has(href));
-      expect(toProduct.length, `phải có ${rows.length} nút`).toBe(rows.length);
+      expect(toProduct.length, `phải có ${onCanvas.length} nút`).toBe(onCanvas.length);
       // Moi nut tro toi MOT san pham khac nhau — khong hai nut cung mot dich.
-      expect(new Set(toProduct).size).toBe(rows.length);
+      expect(new Set(toProduct).size).toBe(onCanvas.length);
     });
   }
 

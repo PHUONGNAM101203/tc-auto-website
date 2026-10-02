@@ -102,8 +102,16 @@ for (const route of routes()) {
   const rows = await page.evaluate((density) => {
     const out = [];
     for (const img of document.querySelectorAll("img")) {
-      // Lop mobile dang an, va anh dung `srcset` (naturalWidth khong do duoc).
-      if (img.closest(".tc-m") || img.srcset) continue;
+      // Lop mobile dang an, va anh dung `srcset` (naturalWidth khong do duoc:
+      // tri so do da duoc chia lai theo mat do diem anh).
+      //
+      // `img.closest("picture")` la phan khong duoc quen: tu 02/10/2026 lat
+      // nen dau tien va anh hero nam trong `<picture>` voi mot `<source
+      // media>` — de duoi 900px chung khong tai, vi canvas bi an
+      // (xem SliceImage.tsx). Luc do `srcset` nam tren `<source>` chu khong
+      // tren `<img>`, nen dieu kien cu khong con bat duoc va bai nay bao sai
+      // oan ca loat anh hero.
+      if (img.closest(".tc-m") || img.srcset || img.closest("picture")) continue;
       if (!img.currentSrc || img.naturalWidth <= 1) continue;
       const shown = img.getBoundingClientRect().width;
       if (shown < 2) continue;

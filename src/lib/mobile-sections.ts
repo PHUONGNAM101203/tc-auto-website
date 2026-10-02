@@ -101,6 +101,12 @@ export function getMobileHeroSlides(slug: PageSlug) {
   return getHeroSlides().map((slide) => ({
     key: slide.id,
     src: slide.src,
+    // Ban hep 720px di kem ban @2x 2880px. Mo ta `w` chu khong `x`: khung
+    // hero tren dien thoai co dan theo be rong man hinh, ma mo ta `x` thi
+    // trinh duyet chi nhin mat do diem anh. Xem tools/brand/make-mobile-hero.py.
+    srcSet: slide.mobileSrc
+      ? `${slide.mobileSrc} 720w, ${slide.src} 2880w`
+      : undefined,
     alt: slide.alt,
   }));
 }

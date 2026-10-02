@@ -170,7 +170,14 @@ export function MobileSubPage({
                 <Link href={product.route} prefetch={false}>
                   {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san */}
                   <img
-                    src={product.image}
+                    src={product.mobileImage ?? product.image}
+                    srcSet={
+                      product.mobileImage
+                        ? `${product.mobileImage} 360w, ${product.image} ${product.imageWidth}w`
+                        : undefined
+                    }
+                    /* Danh sach mot cot: anh chiem het be ngang tru le. */
+                    sizes={product.mobileImage ? "calc(100vw - 40px)" : undefined}
                     alt=""
                     width={product.imageWidth}
                     height={product.imageHeight}

@@ -567,17 +567,18 @@ test.describe("mọi trang đều bấm tới được", () => {
 });
 
 test.describe("ba thẻ Ứng dụng trên trang Công nghệ", () => {
-  test("thẻ ở giữa dẫn thẳng sang trang của mục đó", async ({ page }) => {
-    // Ba the nay xep kieu bang chuyen: bam the ben canh thi no chay vao giua,
-    // chi the DANG O GIUA moi dan sang trang. Xem AppCards.tsx.
+  test("thẻ nào cũng dẫn thẳng sang trang của mục đó", async ({ page }) => {
+    // Truoc day ba the xep kieu bang chuyen: bam the ben canh thi no chay vao
+    // giua, chi the dang o giua moi dan sang trang. Khach bo han cach do
+    // (02/10/2026). Chi tiet o tests/e2e/app-cards.spec.ts.
     await page.goto("/cong-nghe");
     await page.locator(".tc-cards").scrollIntoViewIfNeeded();
-    await page.waitForTimeout(400);
-    const middle = page.locator(".tc-card[data-on]");
-    await expect(middle).toHaveCount(1);
-    const href = await middle.getAttribute("href");
-    expect(href).toMatch(/^\/cong-nghe\//);
-    await middle.click();
-    await expect(page).toHaveURL(href!);
+    const cards = page.locator(".tc-card");
+    await expect(cards).toHaveCount(3);
+    for (const href of await cards.evaluateAll((els) =>
+      els.map((el) => el.getAttribute("href")),
+    )) {
+      expect(href).toMatch(/^\/cong-nghe\//);
+    }
   });
 });

@@ -441,6 +441,113 @@
           "value": "Cảm biến áp suất lốp; định vị xe"
         }
       ]
+    },
+    "bravo-b10-lite": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-bravo-lite",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "1280 × 720"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "CPU 8581, 8 nhân, 1.6 GHz"
+        },
+        {
+          "label": "RAM / Bộ nhớ trong",
+          "value": "2 GB / 32 GB"
+        },
+        {
+          "label": "IC radio",
+          "value": "8035"
+        },
+        {
+          "label": "Kết nối",
+          "value": "Bluetooth"
+        }
+      ]
+    },
+    "bravo-b100": {
+      "source": "https://wincavn.com/man-hinh-dvd-android-o-to-bravo-b100-plus",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "9 – 10 inch, chống chói"
+        },
+        {
+          "label": "Độ phân giải",
+          "value": "1280 × 720"
+        },
+        {
+          "label": "Hệ điều hành",
+          "value": "Android 10.0"
+        },
+        {
+          "label": "Vi xử lý",
+          "value": "CPU 8581, 8 nhân, 1.6 GHz"
+        },
+        {
+          "label": "RAM / Bộ nhớ trong",
+          "value": "4 GB / 32 GB"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Camera",
+          "value": "Camera hành trình và camera lùi góc rộng"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live cài sẵn, Google Maps, Navitel"
+        },
+        {
+          "label": "Tiện ích khác",
+          "value": "Cảm biến áp suất lốp; điều khiển giọng nói; nút bấm trên vô lăng"
+        }
+      ]
+    },
+    "bravo-b100-pro": {
+      "source": "https://wincavn.com/man-hinh-android-bravo-b100-pro",
+      "specs": [
+        {
+          "label": "Màn hình",
+          "value": "9 – 10 inch"
+        },
+        {
+          "label": "Camera 360",
+          "value": "4 mắt camera SONY, hiển thị toàn cảnh 360°"
+        },
+        {
+          "label": "Camera hành trình",
+          "value": "Ghi hình lịch trình di chuyển kèm âm thanh"
+        },
+        {
+          "label": "Âm thanh",
+          "value": "DSP điều chỉnh âm thanh"
+        },
+        {
+          "label": "Kết nối",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Điều khiển giọng nói",
+          "value": "Nhận giọng ba miền"
+        },
+        {
+          "label": "Bản đồ",
+          "value": "Vietmap Live, Google Maps, Navitel"
+        }
+      ]
     }
   }
 }

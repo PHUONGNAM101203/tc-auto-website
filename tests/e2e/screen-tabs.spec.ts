@@ -56,7 +56,11 @@ test.describe("tab WINCA / BRAVO — bản desktop", () => {
     const cards = page.locator(".tc-screen-card");
     for (let index = 0; index < 3; index += 1) {
       const card = cards.nth(index);
-      await expect(card).toHaveAttribute("href", "/giai-phap/man-hinh/bravo");
+      // Moi dong dan toi TRANG SAN PHAM cua chinh no.
+      await expect(card).toHaveAttribute(
+        "href",
+        /^\/giai-phap\/man-hinh\/bravo-[a-z0-9-]+$/,
+      );
       const loaded = await card
         .locator("img")
         .evaluate((img) => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 1);
@@ -89,10 +93,64 @@ test.describe("tab WINCA / BRAVO — bản desktop", () => {
       .toBeLessThanOrEqual(1);
   });
 
-  test("trang Bravo riêng vẫn còn — thẻ dẫn tới đó để xem thông số", async ({
+  test("trang Bravo gộp cũ đã BỊ XOÁ; mỗi dòng có trang riêng", async ({
     request,
   }) => {
-    expect((await request.get("/giai-phap/man-hinh/bravo")).status()).toBe(200);
+    // Khach yeu cau bo trang gop (02/10/2026): Bravo chi la mot tab, con tung
+    // dong thi co trang san pham cua rieng no — dung nhu chin dong Winca.
+    expect((await request.get("/giai-phap/man-hinh/bravo")).status()).toBe(404);
+    for (const slug of ["bravo-b10-lite", "bravo-b100", "bravo-b100-pro"]) {
+      expect(
+        (await request.get(`/giai-phap/man-hinh/${slug}`)).status(),
+        slug,
+      ).toBe(200);
+    }
+  });
+
+  test("ở tab Bravo KHÔNG còn mẩu nào của lưới Winca lọt ra", async ({ page }) => {
+    // Khach chi dung cho nay (02/10/2026): vung che cu ket thuc o 2460 trong
+    // khi hang the thu ba keo toi 2616, nen 156px cuoi cua ba tam Winca van
+    // hien ra duoi ba the Bravo. Thanh phan trang ve san (2688..2744) cung
+    // vay. Nay vung che keo toi 2750, ngay truoc nut "XEM TẤT CẢ".
+    await page.goto(PAGE);
+    await page.locator(".tc-screen-tab").nth(1).click();
+    await expect(page.locator(".tc-screen-swap")).toBeVisible();
+
+    // Do bang `offsetTop/offsetHeight` chu khong `boundingBox()`: ca canvas
+    // duoc phong bang CSS `zoom`, nen hop bao tra ve toa do MAN HINH da nhan
+    // ti le, con day can toa do CANVAS de so voi cac moc da biet.
+    const box = await page.evaluate(() => {
+      const at = (selector: string) => {
+        const el = document.querySelector<HTMLElement>(selector);
+        return el ? { top: el.offsetTop, bottom: el.offsetTop + el.offsetHeight } : null;
+      };
+      return {
+        cover: at(".tc-screen-swap"),
+        pager: at(".tc-pager"),
+        allModels: at(".tc-allmodels"),
+      };
+    });
+
+    // Vung che phai trum qua het luoi VA ca thanh phan trang ve san (ket thuc
+    // o 2744), nhung khong duoc de len nut "XEM TẤT CẢ" (bat dau o 2758).
+    expect(box.cover).not.toBeNull();
+    expect(box.cover!.bottom).toBeGreaterThan(box.pager!.bottom);
+    expect(box.cover!.bottom).toBeLessThanOrEqual(box.allModels!.top);
+  });
+
+  test("nút XEM TẤT CẢ còn ở CẢ HAI tab — nó liệt kê cả hai thương hiệu", async ({
+    page,
+  }) => {
+    await page.goto(PAGE);
+    await expect(page.locator(".tc-allmodels")).toBeVisible();
+    await page.locator(".tc-screen-tab").nth(1).click();
+    await expect(page.locator(".tc-allmodels")).toBeVisible();
+  });
+
+  test("`?tab=bravo` mở thẳng sang tab Bravo", async ({ page }) => {
+    // The noi "MÀN HÌNH BRAVO" tren trang Giai phap dan toi day.
+    await page.goto(`${PAGE}?tab=bravo`);
+    await expect(page.locator(".tc-screen-card")).toHaveCount(3);
   });
 });
 

@@ -7,6 +7,11 @@ export interface MobileScreenItem {
   readonly id: string;
   readonly name: string;
   readonly image: string;
+  /**
+   * Ban hep 360px. O luoi hai cot moi o chi rong 169px, ma anh goc rong 1062.
+   * Xem tools/brand/make-mobile-products.py.
+   */
+  readonly mobileImage?: string;
   readonly href: string;
 }
 
@@ -55,7 +60,19 @@ export function MobileScreenTabs({
           <li key={item.id}>
             <Link href={item.href} prefetch={false}>
               {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san */}
-              <img src={item.image} alt="" loading="lazy" decoding="async" />
+              <img
+                src={item.mobileImage ?? item.image}
+                srcSet={
+                  item.mobileImage
+                    ? `${item.mobileImage} 360w, ${item.image} 1062w`
+                    : undefined
+                }
+                /* Luoi hai cot: moi o chiem nua be ngang, tru le va khe giua. */
+                sizes={item.mobileImage ? "calc((100vw - 52px) / 2)" : undefined}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
               <strong>{item.name}</strong>
             </Link>
           </li>

@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 
+/** Anh 1x1 trong suot cho tam chua den luot tai. */
+const BLANK =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 /**
  * Bang anh cho ban MOBILE.
  *
@@ -18,6 +22,14 @@ import { useEffect, useState } from "react";
 export interface MobileSlide {
   readonly key: string;
   readonly src: string;
+  /**
+   * Cac ban do phan giai khac nhau, mo ta bang `w`.
+   *
+   * Khong co no thi dai hero lay ban @2x rong 2880px cho mot khung chi rong
+   * 350px — gap BON lan muc can, va hai tam hero chiem gan nua tong luong tai
+   * cua trang chu ban dien thoai. Xem tools/brand/make-mobile-hero.py.
+   */
+  readonly srcSet?: string;
   readonly alt: string;
   readonly href?: string;
   readonly caption?: string;
@@ -39,6 +51,22 @@ export function MobileCarousel({
   const [track, setTrack] = useState<HTMLUListElement | null>(null);
   const [at, setAt] = useState(0);
   const [held, setHeld] = useState(false);
+  /**
+   * Tam XA NHAT nguoi dung da xem toi. Moi tam tu day tro ve truoc duoc tai.
+   *
+   * `loading="lazy"` KHONG giup gi o day: no do khoang cach theo chieu DOC, ma
+   * ca nam tam deu nam trong mot dai cuon NGANG — voi trinh duyet thi chung
+   * deu "gan khung nhin" nen tai het ngay lap tuc. Do duoc: tren dien thoai
+   * trang chu keo ve ca nam anh hero (~1MB) trong khi ban may ban chi lay hai.
+   *
+   * Giu mot CON SO chu khong phai mot tap hop, va suy ra lam gi tai luc ve chu
+   * khong dat trong effect: dat state trong effect lam React ve lai day chuyen
+   * (eslint bat duoc), va o day hoan toan khong can — "da xem toi dau" la mot
+   * ham thuan cua `at`.
+   */
+  const [seen, setSeen] = useState(1);
+  /** Luon mo san tam ke tiep, de vuot sang khong phai cho. */
+  const reach = Math.min(Math.max(seen, at + 1), slides.length - 1);
 
   // Theo doi tam nao dang o giua khung nhin, de to dung cham chi muc.
   useEffect(() => {
@@ -47,7 +75,9 @@ export function MobileCarousel({
     }
     const onScroll = () => {
       const step = track.scrollWidth / slides.length;
-      setAt(Math.round(track.scrollLeft / step) % slides.length);
+      const now = Math.round(track.scrollLeft / step) % slides.length;
+      setAt(now);
+      setSeen((far) => Math.max(far, now + 1));
     };
     track.addEventListener("scroll", onScroll, { passive: true });
     return () => track.removeEventListener("scroll", onScroll);
@@ -100,11 +130,19 @@ export function MobileCarousel({
         onMouseEnter={() => setHeld(true)}
         onMouseLeave={() => setHeld(false)}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, index) => (
           <li key={slide.key}>
             {/* eslint-disable-next-line @next/next/no-img-element -- anh cat san
                 tu ban thiet ke, khong qua image optimizer */}
-            <img src={slide.src} alt={slide.alt} loading="lazy" decoding="async" />
+            <img
+              src={index <= reach ? slide.src : BLANK}
+              srcSet={index <= reach ? slide.srcSet : undefined}
+              /* Dai chiem het be ngang man hinh, tru 40px le hai ben. */
+              sizes={slide.srcSet ? "calc(100vw - 40px)" : undefined}
+              alt={index <= reach ? slide.alt : ""}
+              loading="lazy"
+              decoding="async"
+            />
             {slide.caption ? <span>{slide.caption}</span> : null}
           </li>
         ))}

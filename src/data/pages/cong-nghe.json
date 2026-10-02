@@ -50,7 +50,7 @@
       }
     },
     {
-      "src": "/slices/cong-nghe-2.webp?v=1b9c05b6",
+      "src": "/slices/cong-nghe-2.webp?v=3eacf22b",
       "y": 1800.0,
       "displayHeight": 900.0,
       "intrinsicWidth": 2880,
@@ -58,11 +58,11 @@
       "bytes": 65724,
       "srcSet": [
         {
-          "src": "/slices/cong-nghe-2.webp?v=1b9c05b6",
+          "src": "/slices/cong-nghe-2.webp?v=3eacf22b",
           "scale": 2
         },
         {
-          "src": "/slices/cong-nghe-2@3x.webp?v=ad2044e7",
+          "src": "/slices/cong-nghe-2@3x.webp?v=eec82de8",
           "scale": 3
         }
       ],
@@ -106,7 +106,7 @@
           "scale": 2
         },
         {
-          "src": "/slices/cong-nghe-4@3x.webp?v=aa9200a0",
+          "src": "/slices/cong-nghe-4@3x.webp?v=d157e0d1",
           "scale": 3
         }
       ],

@@ -20,14 +20,18 @@ describe("sản phẩm màn hình ô tô", () => {
   const all = getProducts();
 
   it("gom đủ sản phẩm của cả ba trang danh mục", () => {
-    // 9 man hinh + 5 phim dan kinh + 3 PPF. "3M Ceramic Elite IM" khong nam o
-    // day vi thiet ke da ve san trang rieng cho no.
-    expect(all).toHaveLength(17);
+    // 9 man hinh Winca + 3 dong Bravo + 5 phim dan kinh + 3 PPF.
+    // "3M Ceramic Elite IM" khong nam o day vi thiet ke da ve san trang rieng.
+    // Ba dong Bravo duoc noi vao tu src/data/bravo-models.json — xem
+    // tools/brand/add-bravo-products.py.
+    expect(all).toHaveLength(20);
     const perCategory = new Map<string, number>();
     for (const product of all) {
       perCategory.set(product.category, (perCategory.get(product.category) ?? 0) + 1);
     }
-    expect(perCategory.get("giai-phap/man-hinh")).toBe(9);
+    // 9 Winca + 3 Bravo cung nam trong danh muc "Màn hình ô tô" — chung deu
+    // la man hinh o to va deu thuoc trang do, chi khac tab.
+    expect(perCategory.get("giai-phap/man-hinh")).toBe(12);
     expect(perCategory.get("giai-phap/phim-dan-kinh")).toBe(5);
     expect(perCategory.get("giai-phap/ppf")).toBe(3);
   });
@@ -65,7 +69,11 @@ describe("sản phẩm màn hình ô tô", () => {
   it("tên và mô tả đều đọc được, không để trống", () => {
     for (const product of all) {
       expect(product.name.length, product.slug).toBeGreaterThan(3);
-      expect(product.description.length, product.slug).toBeGreaterThan(40);
+      // 40 ky tu cho san pham cat tu thiet ke (mo ta la mot doan van); ba
+      // dong Bravo thi mo ta la mot DONG NGAN kieu tieu de phu
+      // ("Bản tiết kiệm nhất, giữ nguyên cách dùng" — dung 40 ky tu).
+      const least = product.brand === "Bravo" ? 20 : 40;
+      expect(product.description.length, product.slug).toBeGreaterThan(least);
     }
   });
 
@@ -81,7 +89,11 @@ describe("sản phẩm màn hình ô tô", () => {
   it("ảnh cắt ở @3x của khung thẻ trong thiết kế", () => {
     // The rong 354 tren canvas 1440 -> 1062px o @3x. Be cao khac nhau tung
     // trang (anh the trang man hinh thap hon trang phim), nen chi chan hai dau.
-    for (const product of all) {
+    //
+    // Ba dong Bravo KHONG nam trong rang buoc nay: anh cua chung lay tu trang
+    // chinh hang (tools/brand/fetch-bravo-images.py) chu khong cat tu thiet
+    // ke — thiet ke khong he ve the nao cho Bravo.
+    for (const product of all.filter((item) => item.brand !== "Bravo")) {
       expect(product.imageWidth, product.slug).toBe(1062);
       expect(product.imageHeight, product.slug).toBeGreaterThan(560);
       expect(product.imageHeight, product.slug).toBeLessThan(760);

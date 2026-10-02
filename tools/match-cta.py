@@ -433,7 +433,13 @@ def main() -> int:
     if PRODUCTS.is_file():
         catalogue = json.loads(PRODUCTS.read_text(encoding="utf-8"))
         for product in catalogue["products"]:
-            cta = product["cta"]
+            # San pham nao KHONG co `cta` thi khong co nut nao ve san tren
+            # canvas de so khop — ba dong Bravo la vay: the cua chung do
+            # ScreenTabs ve bang phan tu that, khong nam trong anh thiet ke.
+            # Xem tools/brand/add-bravo-products.py.
+            cta = product.get("cta")
+            if not cta:
+                continue
             product_at[(product["category"], round(cta["x"]), round(cta["y"]))] = product["route"]
 
     out: dict[str, list[dict]] = {}

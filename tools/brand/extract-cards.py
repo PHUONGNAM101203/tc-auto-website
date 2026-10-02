@@ -74,16 +74,31 @@ FRAMES = [
     },
 ]
 
-# Ruot nam thut vao trong khung bao nhieu. Hai ben thut nhieu de chua lot dai
-# moc noi suy; day gan nhu khong thut vi dong phu de nam sat vien.
-INSET_SIDE = 24
-INSET_TOP = 14
-INSET_BOTTOM = 4
+# Ruot nam thut vao trong khung bao nhieu.
+#
+# ĐỀU BẰNG 0 tu 02/10/2026. Truoc day thut 24/14/4, va chinh cho do la loi:
+# khung bo tron SANG duoc ve chet trong anh nen, con ruot thi cat thut vao
+# trong no — nhin ra HAI hinh vuong long nhau, mot nho trong mot to. Khach chi
+# dung cho do: "chưa hợp nhất full khung hình vuông".
+#
+# Hoi do thut vao de chua lot dai moc noi suy, vi the con TRAO CHO cho nhau:
+# ruot chay sang khung khac thi nen phia sau phai dung lai. Nay khach da bo
+# han viec trao cho (bam the nao di thang the do), nen the dung yen va khong
+# con ly do gi de thut.
+INSET_SIDE = 0
+INSET_TOP = 0
+INSET_BOTTOM = 0
 
 # Be day dai moc noi suy, tinh theo pixel hien thi.
 ANCHOR = 14
-# Be day vien mo dan cua anh ruot.
-FEATHER = 7
+# Be day vien mo dan cua anh the.
+#
+# BANG 0 tu 02/10/2026, cung luc voi INSET_* o tren. Lam mo dan chi dung khi
+# anh cat THUT VAO trong khung: luc do mep anh nam giua vung nen, mo dan de
+# khong lo duong cat. Nay anh cat TRUM ca khung, nen mep anh CHINH LA net vien
+# sang cua khung — lam mo no di la net vien nhat han so voi thiet ke. Do duoc:
+# 681 diem lech doc canh tren cua the giua.
+FEATHER = 0
 
 # The nao noi suy ngang duoc, the nao phai muon nen cua the khac. Suy tu du lieu
 # chu khong viet cung: the to nhat la the giua.

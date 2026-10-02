@@ -300,13 +300,19 @@ test.describe("thẻ mới trên trang Giải pháp", () => {
   });
 
   test("hai thẻ màn hình dẫn đúng chỗ", async ({ page }) => {
+    // The BRAVO mo thang sang TAB Bravo cua chinh trang Man hinh — truoc no
+    // tro sang mot trang Bravo rieng, ma trang do khach da yeu cau bo
+    // (02/10/2026). Xem tests/e2e/screen-tabs.spec.ts.
     const winca = page.locator('.tc-lift-card[href="/giai-phap/man-hinh"]');
-    const bravo = page.locator('.tc-lift-card[href="/giai-phap/man-hinh/bravo"]');
+    const bravo = page.locator(
+      '.tc-lift-card[href="/giai-phap/man-hinh?tab=bravo"]',
+    );
     await expect(winca).toHaveCount(1);
     await expect(bravo).toHaveCount(1);
 
     await bravo.click();
-    await expect(page).toHaveURL(/\/giai-phap\/man-hinh\/bravo$/);
+    await expect(page).toHaveURL(/\/giai-phap\/man-hinh\?tab=bravo$/);
+    await expect(page.locator(".tc-screen-card")).toHaveCount(3);
   });
 
   test("ba thẻ PPF đều dẫn sang trang PPF", async ({ page }) => {
@@ -315,7 +321,7 @@ test.describe("thẻ mới trên trang Giải pháp", () => {
   });
 
   for (const [what, href] of [
-    ["màn hình", "/giai-phap/man-hinh/bravo"],
+    ["màn hình", "/giai-phap/man-hinh?tab=bravo"],
     ["PPF", "/giai-phap/ppf"],
   ] as const) {
     test(`rê chuột vào thẻ ${what} thì nó nổi lên, thẻ cùng nhóm mờ đi`, async ({

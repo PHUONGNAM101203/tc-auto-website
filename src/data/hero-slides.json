@@ -45,7 +45,8 @@
           "src": "/hero/hero-1@3x.webp?v=b1159b1c",
           "scale": 3
         }
-      ]
+      ],
+      "mobileSrc": "/hero/hero-1@m.webp?v=35c82738"
     },
     {
       "id": "hero-2",
@@ -60,7 +61,8 @@
           "src": "/hero/hero-2@3x.webp?v=caae5837",
           "scale": 3
         }
-      ]
+      ],
+      "mobileSrc": "/hero/hero-2@m.webp?v=37d7b481"
     },
     {
       "id": "hero-3",
@@ -75,7 +77,8 @@
           "src": "/hero/hero-3@3x.webp?v=4e97c58b",
           "scale": 3
         }
-      ]
+      ],
+      "mobileSrc": "/hero/hero-3@m.webp?v=98834550"
     },
     {
       "id": "hero-4",
@@ -90,7 +93,8 @@
           "src": "/hero/hero-4@3x.webp?v=c9825b45",
           "scale": 3
         }
-      ]
+      ],
+      "mobileSrc": "/hero/hero-4@m.webp?v=6d1cf6fc"
     },
     {
       "id": "hero-5",
@@ -105,7 +109,8 @@
           "src": "/hero/hero-5@3x.webp?v=5c4e94bd",
           "scale": 3
         }
-      ]
+      ],
+      "mobileSrc": "/hero/hero-5@m.webp?v=8244e326"
     }
   ],
   "_placeholder": "KHONG con anh tam. Truoc day slide 2-5 muon thang LAT NEN cua bon trang kia, nen chung mang theo ca chu, logo va CA KHUNG DANH DAU MUC MENU cua trang do — nguoi dung thay hai khung cung luc tren thanh menu. Nay moi slide dung tam anh hero rieng cua tung trang trong bo tai nguyen, sach hoan toan, roi dan lai logo va cot bieu tuong. Xem tools/brand/clean-hero.py.",

@@ -112,24 +112,37 @@ export function HeroSlider() {
       aria-label="Ảnh giới thiệu TC Auto"
     >
       {slides.map((slide, i) => (
-        // eslint-disable-next-line @next/next/no-img-element -- anh nen cat san, xem CanvasSlices
-        <img
-          key={slide.id}
-          className={`tc-hero-slide${i === index ? " is-on" : ""}`}
-          src={armed.has(i) ? slide.src : BLANK}
-          /* Mo ta `w` chu khong phai `x`: anh hero rong dung bang canvas, ma
-             canvas duoc phong to theo be rong cua so. Voi `x` thi man retina
-             rong hon 1440px se lay ban thieu do phan giai roi keo gian ra —
-             xem src/lib/slice-srcset.ts. */
-          srcSet={armed.has(i) ? sliceSrcSet(slide.srcSet) : undefined}
-          sizes={sliceSizes()}
-          alt={i === index ? slide.alt : ""}
-          width={HERO_REGION.width}
-          height={HERO_REGION.height}
-          loading={i === 0 ? "eager" : "lazy"}
-          decoding="async"
-          aria-hidden={i !== index}
-        />
+        /* `<picture>` voi `media` CHU KHONG phai mot the <img> tran. Duoi
+           900px ca canvas bi `display: none`, nhung the <img> co
+           `loading="eager"` thi VAN TAI — `display:none` chi chan duoc anh
+           lazy. Do duoc: tam hero dau tien (0,22 MB) bi keo ve tren dien
+           thoai du khong bao gio duoc nhin thay; ban mobile da co bang hero
+           rieng voi anh hep 720px. Cung ly do nhu trong SliceImage.tsx. */
+        <picture key={slide.id}>
+          {armed.has(i) ? (
+            <source
+              media="(min-width: 900px)"
+              /* Mo ta `w` chu khong phai `x`: anh hero rong dung bang canvas,
+                 ma canvas duoc phong to theo be rong cua so. Voi `x` thi man
+                 retina rong hon 1440px se lay ban thieu do phan giai roi keo
+                 gian ra — xem src/lib/slice-srcset.ts. */
+              srcSet={sliceSrcSet(slide.srcSet)}
+              sizes={sliceSizes()}
+              type="image/webp"
+            />
+          ) : null}
+          {/* eslint-disable-next-line @next/next/no-img-element -- anh nen cat san, xem CanvasSlices */}
+          <img
+            className={`tc-hero-slide${i === index ? " is-on" : ""}`}
+            src={BLANK}
+            alt={i === index ? slide.alt : ""}
+            width={HERO_REGION.width}
+            height={HERO_REGION.height}
+            loading={i === 0 ? "eager" : "lazy"}
+            decoding="async"
+            aria-hidden={i !== index}
+          />
+        </picture>
       ))}
 
       {/* Slide 1 co san mui ten ve trong anh, cac slide khac thi khong —

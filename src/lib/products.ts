@@ -24,9 +24,26 @@ export interface Product {
   readonly route: string;
   /** Trang danh muc chua san pham nay, vi du "giai-phap/man-hinh". */
   readonly category: string;
+  /**
+   * Thuong hieu, chi dat khi CAN TACH trong cung mot danh muc.
+   *
+   * Ba dong Bravo cung category `giai-phap/man-hinh` voi Winca — chung deu la
+   * man hinh o to va deu thuoc trang do — nhung luoi cua tab Winca khong duoc
+   * co chung. San pham khong khai truong nay thi coi la Winca.
+   */
+  readonly brand?: string;
   readonly name: string;
   readonly description: string;
   readonly image: string;
+  /**
+   * Ban HEP 360px, chi dung cho luoi hai cot tren dien thoai.
+   *
+   * O do moi o chi rong 169px, ma anh goc rong 1062 — gap ba lan muc can.
+   * Tren may ban cac the nay ve chet trong anh nen nen khong tai gi ca; thanh
+   * ra truoc khi co ban nay, trang "Màn hình ô tô" tren dien thoai NANG HON
+   * tren may ban. Xem tools/brand/make-mobile-products.py.
+   */
+  readonly mobileImage?: string;
   readonly imageWidth: number;
   readonly imageHeight: number;
   /** Thu tu xuat hien tren trang danh muc — giu dung mach cua thiet ke. */
@@ -98,4 +115,9 @@ export function otherProducts(slug: string, limit = 4): readonly Product[] {
 /** Cac san pham cua mot trang danh muc, dung thu tu tren trang. */
 export function productsIn(category: string): readonly Product[] {
   return PRODUCTS.filter((product) => product.category === category);
+}
+
+/** San pham cua mot danh muc, loc theo thuong hieu. */
+export function productsOfBrand(category: string, brand?: string): readonly Product[] {
+  return productsIn(category).filter((product) => (product.brand ?? undefined) === brand);
 }

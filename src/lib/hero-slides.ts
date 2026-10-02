@@ -20,6 +20,13 @@ export interface HeroSlide {
   readonly alt: string;
   readonly src: string;
   readonly srcSet: readonly SlideVariant[];
+  /**
+   * Ban HEP 720px, chi dung cho bang hero tren dien thoai.
+   *
+   * O do khung anh rong khoang 350px, ma ban @2x rong 2880 — gap bon lan muc
+   * can. Xem tools/brand/make-mobile-hero.py.
+   */
+  readonly mobileSrc?: string;
   /** true = anh muon tam de gui khach review, chua phai anh thiet ke cho hero. */
   readonly placeholder?: boolean;
 }
@@ -56,6 +63,7 @@ export function getHeroSlides(): readonly HeroSlide[] {
   return DATA.slides.map((slide) => ({
     ...slide,
     src: assetUrl(slide.src),
+    mobileSrc: slide.mobileSrc ? assetUrl(slide.mobileSrc) : undefined,
     srcSet: slide.srcSet.map((variant) => ({ ...variant, src: assetUrl(variant.src) })),
   }));
 }

@@ -300,7 +300,9 @@ GROUPS = [
                 "id": "bravo",
                 "title": "MÀN HÌNH BRAVO",
                 "subtitle": "Màn hình Android Bravo – cấu hình ổn định",
-                "href": "/giai-phap/man-hinh/bravo",
+                # Tab Bravo ngay tren trang do, khong phai mot trang rieng —
+                # khach da bo trang rieng (02/10/2026). ScreenTabs doc `?tab=`.
+                "href": "/giai-phap/man-hinh?tab=bravo",
                 "x": 984,
                 "y": 4665,
                 "width": 375,

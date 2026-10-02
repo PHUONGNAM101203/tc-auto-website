@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   getBravoCards,
+  getBravoCopy,
   SCREEN_BACKGROUND,
   SCREEN_GRID,
   SCREEN_GRID_COVER,
@@ -26,9 +28,21 @@ import {
  * khac nen khong voi toi bang props.
  */
 const CARDS = getBravoCards();
+const COPY = getBravoCopy();
 
-export function ScreenTabs() {
-  const [tab, setTab] = useState<"winca" | "bravo">("winca");
+function ScreenTabsInner() {
+  // `?tab=bravo` mo thang sang tab Bravo. The noi "MÀN HÌNH BRAVO" tren trang
+  // Giai phap dan toi day — truoc no tro sang mot trang Bravo rieng, ma trang
+  // do khach da yeu cau bo (02/10/2026).
+  //
+  // SUY ra chu khong chot vao `useState`: trang nay duoc dung san tu truoc nen
+  // o lan ve dau tien `useSearchParams()` con rong, gia tri khoi tao se luon
+  // la "winca" va tab khong bao gio mo dung. Giu rieng lua chon cua nguoi
+  // dung; chua bam thi theo dia chi.
+  const fromUrl = useSearchParams().get("tab") === "bravo" ? "bravo" : "winca";
+  const [picked, setPicked] = useState<"winca" | "bravo" | null>(null);
+  const tab = picked ?? fromUrl;
+  const setTab = setPicked;
 
   useEffect(() => {
     const root = document.documentElement;
@@ -74,6 +88,9 @@ export function ScreenTabs() {
           role="region"
           aria-label="Màn hình Bravo"
         >
+          {/* Luoi thiet ke co CHIN o, ma Bravo chi co ba dong — de khong thi
+              con mot khoang trong cao hon 1500px. Phan chu duoi day chinh la
+              noi dung cua trang Bravo cu, dua vao day thay vi bo di. */}
           {CARDS.map((card, index) => (
             <Link
               key={card.id}
@@ -99,8 +116,45 @@ export function ScreenTabs() {
               <span className="tc-screen-cta">XEM THÊM</span>
             </Link>
           ))}
+
+          <div
+            className="tc-screen-copy"
+            style={{ top: (SCREEN_GRID.rows[1] ?? 0) - SCREEN_GRID_COVER.y }}
+          >
+            <p className="tc-screen-lead">{COPY.lead}</p>
+            <div className="tc-screen-cols">
+              {COPY.blocks.map((block) => (
+                <section key={block.heading}>
+                  <h3>{block.heading}</h3>
+                  {block.paragraphs.map((text) => (
+                    <p key={text.slice(0, 24)}>{text}</p>
+                  ))}
+                </section>
+              ))}
+            </div>
+            <p className="tc-screen-pending">
+              <strong>{COPY.pending.heading}:</strong>{" "}
+              {COPY.pending.items.join(" · ")}
+            </p>
+          </div>
         </div>
       ) : null}
     </>
+  );
+}
+
+/**
+ * Vo boc Suspense — Next BAT BUOC khi dung `useSearchParams` trong mot trang
+ * duoc dung san. Khong co no thi `next build` dung han: "useSearchParams()
+ * should be wrapped in a suspense boundary".
+ *
+ * `fallback` de trong: luc chua co dia chi thi tab Winca dang hien, ma luoi
+ * Winca von ve chet trong anh nen — nguoi xem khong thay gi nhap nhay.
+ */
+export function ScreenTabs() {
+  return (
+    <Suspense fallback={null}>
+      <ScreenTabsInner />
+    </Suspense>
   );
 }

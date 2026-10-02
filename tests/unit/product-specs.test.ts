@@ -43,7 +43,11 @@ describe("thông số kỹ thuật sản phẩm", () => {
   it("không dòng nào để trống nhãn hay giá trị", () => {
     for (const product of screens) {
       const specs = getProductSpecs(product.slug)!;
-      expect(specs.specs.length, product.slug).toBeGreaterThanOrEqual(8);
+      // Toi thieu 8 muc voi dong Winca; ba dong Bravo thi it hon vi trang
+      // hang cong bo it hon — B10 LITE chi co 6. Nguyen tac la KHONG DOAN cho
+      // hang chua noi, nen khong the ep cho du 8.
+      const least = product.brand === "Bravo" ? 5 : 8;
+      expect(specs.specs.length, product.slug).toBeGreaterThanOrEqual(least);
       for (const row of specs.specs) {
         expect(row.label.trim().length, product.slug).toBeGreaterThan(0);
         expect(row.value.trim().length, product.slug).toBeGreaterThan(0);

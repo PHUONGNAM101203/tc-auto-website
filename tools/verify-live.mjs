@@ -27,6 +27,7 @@ const GATES = [
   "verify:reach",
   "verify:readmore",
   "verify:metadata",
+  "verify:weight",
   "verify:zoom",
 ];
 

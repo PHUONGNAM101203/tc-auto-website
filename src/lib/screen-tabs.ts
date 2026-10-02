@@ -1,11 +1,13 @@
-import { getAuthoredPage } from "./authored-pages";
+import data from "@/data/bravo-models.json";
+import { assetUrl } from "./asset-url";
 
 /**
  * Hai tab WINCA / BRAVO tren trang "Màn hình ô tô".
  *
- * Truoc day BRAVO la mot lien ket sang trang rieng `/giai-phap/man-hinh/bravo`.
- * Khach yeu cau (01/10/2026) no phai doi NGAY TAI CHO nhu mot tab that: bam
- * BRAVO thi luoi san pham doi, khong roi trang.
+ * Truoc day BRAVO la mot lien ket sang trang rieng. Khach yeu cau (01/10/2026)
+ * no phai doi NGAY TAI CHO nhu mot tab that, va sau do (02/10/2026) bo han
+ * trang rieng di: Bravo chi la mot tab, con tung dong thi co trang san pham
+ * cua rieng no.
  *
  * Luoi Winca duoc VE CHET trong anh nen (chi 9 nut "XEM THÊM" la phan tu that),
  * nen tab Bravo phai ve mot luoi THAT de len. Hinh hoc duoi day do thang tu
@@ -38,40 +40,69 @@ export const SCREEN_GRID = {
   artHeight: 241,
 } as const;
 
-/** Vung phai che kin khi doi sang tab Bravo — ca ba hang the. */
+/**
+ * Vung phai che kin khi doi sang tab Bravo — CA BA hang the.
+ *
+ * Day o 2750 chu khong phai 2460: hang the thu ba keo toi 2616, va ngay duoi
+ * no la THANH PHAN TRANG ve san trong anh (2688..2744). Thanh phan trang that
+ * da duoc an o tab Bravo — ba dong thi khong co trang nao de lat — nhung cai
+ * ve chet thi van hien, lo ra hai vach mo. Lay 2460 thi lo ca 156px cuoi cua
+ * ba tam Winca; lay 2640 thi het the nhung con hai vach do.
+ *
+ * 2750 dung ngay truoc nut "XEM TẤT CẢ … MẪU MÀN HÌNH" (2758) — nut do liet
+ * ke ca Winca lan Bravo nen phai giu lai o ca hai tab.
+ */
 export const SCREEN_GRID_COVER = {
   x: 0,
   y: 1090,
   width: 1440,
-  height: 2460 - 1090,
+  height: 2750 - 1090,
 } as const;
 
 /** Mau nen cua trang, do thang tu lat nen o ngoai luoi. */
 export const SCREEN_BACKGROUND = "#03111c";
 
-const BRAVO_SLUG = "giai-phap/man-hinh/bravo";
-const BRAVO_ROUTE = "/giai-phap/man-hinh/bravo";
+/** Doan gioi thieu va cac muc chu cua tab Bravo. */
+export interface BravoCopy {
+  readonly heading: string;
+  readonly lead: string;
+  readonly intro: string;
+  readonly blocks: readonly {
+    readonly heading: string;
+    readonly paragraphs: readonly string[];
+  }[];
+  readonly pending: { readonly heading: string; readonly items: readonly string[] };
+}
 
-interface BravoItem {
+interface BravoModel {
+  readonly slug: string;
   readonly name: string;
   readonly tagline: string;
   readonly image: string;
 }
 
+const BRAVO = data as unknown as BravoCopy & { readonly models: readonly BravoModel[] };
+
 /**
- * Ba dong Bravo, lay tu CHINH trang Bravo da soan — khong chep lai.
+ * Ba dong Bravo, lay tu `src/data/bravo-models.json`.
  *
- * Trang do van giu nguyen va van co day du thong so; nut "XEM THÊM" cua tung
- * the dan toi do. Doi so lieu thi chi phai sua mot cho.
+ * Moi dong co mot TRANG SAN PHAM that o `/giai-phap/man-hinh/<slug>`, dung nhu
+ * chin dong Winca — xem tools/brand/add-bravo-products.py. Truoc day chung chi
+ * tro chung toi mot trang Bravo gop, ma trang do khach da yeu cau bo
+ * (02/10/2026).
  */
 export function getBravoCards(): readonly ScreenTabCard[] {
-  const page = getAuthoredPage(BRAVO_SLUG);
-  const items = (page?.products?.items ?? []) as readonly BravoItem[];
-  return items.map((item) => ({
-    id: item.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-    name: item.name,
-    tagline: item.tagline,
-    image: item.image,
-    href: BRAVO_ROUTE,
+  return BRAVO.models.map((model) => ({
+    id: model.slug,
+    name: model.name,
+    tagline: model.tagline,
+    image: assetUrl(model.image),
+    href: `/giai-phap/man-hinh/${model.slug}`,
   }));
+}
+
+/** Phan chu cua tab Bravo — truoc day nam tren trang rieng da bo. */
+export function getBravoCopy(): BravoCopy {
+  const { heading, lead, intro, blocks, pending } = BRAVO;
+  return { heading, lead, intro, blocks, pending };
 }

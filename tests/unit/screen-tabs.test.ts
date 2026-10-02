@@ -15,7 +15,9 @@ describe("thẻ cho tab Bravo", () => {
   it("thẻ nào cũng có ảnh và chỗ để bấm tới", () => {
     for (const card of getBravoCards()) {
       expect(card.image).toMatch(/^\/products\//);
-      expect(card.href).toBe("/giai-phap/man-hinh/bravo");
+      // Moi dong dan toi TRANG SAN PHAM cua chinh no — trang Bravo gop cu da
+      // bi xoa (02/10/2026). Xem tests/unit/bravo-models.test.ts.
+      expect(card.href).toBe(`/giai-phap/man-hinh/${card.id}`);
       expect(card.tagline.length).toBeGreaterThan(0);
       expect(card.id).toMatch(/^[a-z0-9-]+$/);
     }

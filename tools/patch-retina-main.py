@@ -31,6 +31,7 @@ mat na rong, khong doi gi them.
 """
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -73,6 +74,22 @@ CANVAS_WIDTH = 1440
 #: Chua logo (x 78..314) — logo duoc ve chet o ca hai ban va giong het nhau.
 HEADER_BAND = {"x": 400, "y": 18, "width": 980, "height": 78}
 
+#: Dai FORM LIEN HE: cung ly do nhu HEADER_BAND, luon lay tu @2x.
+#:
+#: O nhap cua ban thiet ke cung la khung vien 1px cong chu goi y xam nhat tren
+#: nen phang — y het o tim kiem. Chenh lech tut xuong duoi nguong 18 nen mat na
+#: bo qua, va ban @3x giu nguyen ca khung lan chu goi y ve san. Tren man retina
+#: rong, chu goi y hien HAI LAN, lech nhau vai pixel: khach bao 02/10/2026,
+#: "tại sao chỗ này lại bị đè lên như này".
+#:
+#: Te hon ca o tim kiem: o day mat na bat duoc MOT PHAN (vai chu dam hon
+#: nguong) nen chu ve san bi xoa lo cho, con lai nhung manh roi rac — nhin ra
+#: chu nhoe chu khong ra chu doi.
+#:
+#: Toa do `x`/`width` lay tu `.ff` trong canvas.css; `y` thi khac nhau tung
+#: trang nen doc tu `contactForm.y` cua page spec.
+FORM_BAND = {"x": 726, "width": 390, "height": 100, "padTop": 6}
+
 
 def build_mask(up: Image.Image, three: Image.Image) -> Image.Image | None:
     """
@@ -99,6 +116,22 @@ def build_mask(up: Image.Image, three: Image.Image) -> Image.Image | None:
     )
 
 
+def form_band(slug: str) -> dict | None:
+    """Dai form lien he cua mot trang, theo he toa do canvas."""
+    spec_path = ROOT / "src" / "data" / "pages" / f"{slug}.json"
+    if not spec_path.is_file():
+        return None
+    form = json.loads(spec_path.read_text(encoding="utf-8")).get("contactForm")
+    if not form or "y" not in form:
+        return None
+    return {
+        "x": FORM_BAND["x"],
+        "y": form["y"] - FORM_BAND["padTop"],
+        "width": FORM_BAND["width"],
+        "height": FORM_BAND["height"],
+    }
+
+
 def header_forced(name: Path, size: tuple[int, int]) -> Image.Image | None:
     """
     Mat na ep buoc cho dai header, hoac None neu anh nay khong chua header.
@@ -113,24 +146,53 @@ def header_forced(name: Path, size: tuple[int, int]) -> Image.Image | None:
     """
     parts = name.parts
     stem = name.stem.removesuffix("@2x")
-    at_top = (parts[0] == "slices" and stem.endswith("-0")) or parts[0] == "hero"
-    if not at_top:
-        return None
-
     scale = size[0] / CANVAS_WIDTH
-    box = (
-        round(HEADER_BAND["x"] * scale),
-        round(HEADER_BAND["y"] * scale),
-        round((HEADER_BAND["x"] + HEADER_BAND["width"]) * scale),
-        round((HEADER_BAND["y"] + HEADER_BAND["height"]) * scale),
-    )
-    if box[1] >= size[1]:
+    boxes: list[tuple[int, int, int, int]] = []
+
+    at_top = (parts[0] == "slices" and stem.endswith("-0")) or parts[0] == "hero"
+    if at_top:
+        boxes.append((
+            round(HEADER_BAND["x"] * scale),
+            round(HEADER_BAND["y"] * scale),
+            round((HEADER_BAND["x"] + HEADER_BAND["width"]) * scale),
+            round((HEADER_BAND["y"] + HEADER_BAND["height"]) * scale),
+        ))
+
+    # Form lien he nam o lat NAO cung duoc — phai suy tu do cao cua lat.
+    if parts[0] == "slices" and "-" in stem:
+        slug, _, index = stem.rpartition("-")
+        band = form_band(slug) if index.isdigit() else None
+        if band:
+            top = slice_top(slug, int(index))
+            if top is not None:
+                local = band["y"] - top
+                boxes.append((
+                    round(band["x"] * scale),
+                    round(local * scale),
+                    round((band["x"] + band["width"]) * scale),
+                    round((local + band["height"]) * scale),
+                ))
+
+    inside = [
+        box for box in boxes if box[3] > 0 and box[1] < size[1]
+    ]
+    if not inside:
         return None
 
     mask = Image.new("L", size, 0)
-    mask.paste(255, box)
+    for box in inside:
+        mask.paste(255, (box[0], max(0, box[1]), box[2], min(size[1], box[3])))
     # Mo mep de khong lo ranh gioi giua vung lay tu @2x va vung giu @3x.
     return mask.filter(ImageFilter.GaussianBlur(FEATHER))
+
+
+def slice_top(slug: str, index: int) -> float | None:
+    """Do cao cua lat thu `index` tren he toa do canvas."""
+    spec_path = ROOT / "src" / "data" / "pages" / f"{slug}.json"
+    if not spec_path.is_file():
+        return None
+    slices = json.loads(spec_path.read_text(encoding="utf-8"))["slices"]
+    return slices[index]["y"] if index < len(slices) else None
 
 
 def pairs():

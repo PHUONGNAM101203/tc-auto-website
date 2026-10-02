@@ -39,7 +39,8 @@
         "y": 1498,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s170-plus-qled-2k-pro-360@m.webp?v=87c95068"
     },
     {
       "slug": "s200-plus-13-inch-2k",
@@ -56,7 +57,8 @@
         "y": 1498,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s200-plus-13-inch-2k@m.webp?v=35a52da8"
     },
     {
       "slug": "s200-plus-13-inch-2k-pro-360",
@@ -73,7 +75,8 @@
         "y": 1498,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s200-plus-13-inch-2k-pro-360@m.webp?v=166debe9"
     },
     {
       "slug": "s150-plus-qled",
@@ -90,7 +93,8 @@
         "y": 2028,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s150-plus-qled@m.webp?v=11af10c8"
     },
     {
       "slug": "s170-plus-qled",
@@ -107,7 +111,8 @@
         "y": 2028,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s170-plus-qled@m.webp?v=c2964a2f"
     },
     {
       "slug": "s170-plus-qled-2k",
@@ -124,7 +129,8 @@
         "y": 2028,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s170-plus-qled-2k@m.webp?v=56de43c0"
     },
     {
       "slug": "s200-plus-qled-2k",
@@ -141,7 +147,8 @@
         "y": 2558,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s200-plus-qled-2k@m.webp?v=29414644"
     },
     {
       "slug": "s200-plus-360-qled-2k",
@@ -158,7 +165,8 @@
         "y": 2558,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s200-plus-360-qled-2k@m.webp?v=c9573630"
     },
     {
       "slug": "s300-plus-qled-2k-dts",
@@ -175,7 +183,8 @@
         "y": 2558,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/s300-plus-qled-2k-dts@m.webp?v=787100b4"
     },
     {
       "slug": "3m-ceramic-hong-ngoai",
@@ -192,7 +201,8 @@
         "y": 1488,
         "w": 158,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/3m-ceramic-hong-ngoai@m.webp?v=42ad4d3b"
     },
     {
       "slug": "3m-ceramic-crystalline",
@@ -209,7 +219,8 @@
         "y": 1488,
         "w": 158,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/3m-ceramic-crystalline@m.webp?v=d643da52"
     },
     {
       "slug": "nano-sun-blue",
@@ -226,7 +237,8 @@
         "y": 2175,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/nano-sun-blue@m.webp?v=8800682f"
     },
     {
       "slug": "nano-sun-blue-light",
@@ -243,7 +255,8 @@
         "y": 2175,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/nano-sun-blue-light@m.webp?v=ee439a7c"
     },
     {
       "slug": "nano-sun-premium",
@@ -260,7 +273,8 @@
         "y": 2175,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/nano-sun-premium@m.webp?v=79b0a151"
     },
     {
       "slug": "nano-eco-lite",
@@ -277,7 +291,8 @@
         "y": 2176,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/nano-eco-lite@m.webp?v=1f6ed84c"
     },
     {
       "slug": "nano-protect",
@@ -294,7 +309,8 @@
         "y": 2176,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/nano-protect@m.webp?v=844d5a36"
     },
     {
       "slug": "nano-premium",
@@ -311,7 +327,47 @@
         "y": 2176,
         "w": 159,
         "h": 32
-      }
+      },
+      "mobileImage": "/products/nano-premium@m.webp?v=d19aa814"
+    },
+    {
+      "slug": "bravo-b10-lite",
+      "route": "/giai-phap/man-hinh/bravo-b10-lite",
+      "category": "giai-phap/man-hinh",
+      "brand": "Bravo",
+      "name": "Bravo B10 LITE",
+      "description": "Bản tiết kiệm nhất, giữ nguyên cách dùng",
+      "image": "/products/bravo-b10-lite.webp?v=b4adfc72",
+      "imageWidth": 731,
+      "imageHeight": 826,
+      "order": 9,
+      "mobileImage": "/products/bravo-b10-lite@m.webp?v=e2680037"
+    },
+    {
+      "slug": "bravo-b100",
+      "route": "/giai-phap/man-hinh/bravo-b100",
+      "category": "giai-phap/man-hinh",
+      "brand": "Bravo",
+      "name": "Bravo B100",
+      "description": "Nhiều RAM hơn cho người hay mở nhiều ứng dụng",
+      "image": "/products/bravo-b100.webp?v=3478be7c",
+      "imageWidth": 855,
+      "imageHeight": 826,
+      "order": 10,
+      "mobileImage": "/products/bravo-b100@m.webp?v=454009b8"
+    },
+    {
+      "slug": "bravo-b100-pro",
+      "route": "/giai-phap/man-hinh/bravo-b100-pro",
+      "category": "giai-phap/man-hinh",
+      "brand": "Bravo",
+      "name": "Bravo B100 PRO",
+      "description": "Bản cao nhất của dòng Bravo",
+      "image": "/products/bravo-b100-pro.webp?v=e2fcd46f",
+      "imageWidth": 817,
+      "imageHeight": 825,
+      "order": 11,
+      "mobileImage": "/products/bravo-b100-pro@m.webp?v=c8abe4a8"
     }
   ]
 }

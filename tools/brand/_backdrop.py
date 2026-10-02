@@ -75,6 +75,16 @@ def feathered(card: Image.Image, pad: int) -> Image.Image:
     """
     width, height = card.size
 
+    # `pad = 0` nghia la KHONG lam mo — dung khi anh cat trum ca khung, luc do
+    # mep anh chinh la net vien cua khung va lam mo no di la lam nhat net.
+    #
+    # Phai chan rieng: `line[-0:]` trong Python la CA DONG chu khong phai rong,
+    # nen nhanh ben duoi se gan mot mang rong vao ca dong va nem
+    # "could not broadcast input array from shape (0,)". Bo cat tung chet am
+    # tham vi loi nay — da mat mot vong de tim ra.
+    if pad <= 0:
+        return card.convert("RGBA")
+
     def ramp(length: int) -> np.ndarray:
         line = np.ones(length, dtype=np.float32)
         edge = np.linspace(0.0, 1.0, pad, dtype=np.float32)

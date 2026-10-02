@@ -99,57 +99,82 @@ test.describe("ba thẻ Ứng dụng", () => {
 });
 
 /**
- * Ba the muc "Ứng dụng" xep kieu bang chuyen: bam the ben canh thi ruot cua no
- * chay vao khung giua; chi the DANG O GIUA moi dan sang trang.
+ * Ba the muc "Ứng dụng" tren trang Cong nghe.
  *
- * Truoc day bam the nao cung di thang. Rieng "Hiệu suất" khong co trang rieng
- * nen no tro ve trang "Ứng dụng" — ma trang do mo ra lai thay tieu de "KHO ỨNG
- * DỤNG", nen nguoi dung tuong bam nham (khach bao 30/09/2026).
+ * Bam the nao thi di THANG sang trang cua the do. Ro chuot thi the noi len,
+ * chi vay thoi.
+ *
+ * Truoc day bam the ben canh thi ruot cua no chay vao khung giua nhu mot bang
+ * chuyen, va chi the dang o giua moi dan sang trang. Khach bo han cach do
+ * (02/10/2026): "bấm cái nào nó vào cái đấy luôn không cần ra giữa nữa mà chỉ
+ * có khi hover nó nổi lên thôi".
  */
-test.describe("ba thẻ Ứng dụng đổi chỗ vào giữa", () => {
+test.describe("ba thẻ Ứng dụng", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("/cong-nghe");
     await page.locator(".tc-cards").scrollIntoViewIfNeeded();
     await page.waitForTimeout(400);
   });
 
-  test("bấm thẻ bên cạnh thì chính nó vào giữa, KHÔNG rời trang", async ({
+  test("bấm thẻ nào thì đi THẲNG sang trang của thẻ đó", async ({ page }) => {
+    const cards = page.locator(".tc-card");
+    await expect(cards).toHaveCount(3);
+
+    for (let index = 0; index < 3; index += 1) {
+      await page.goto("/cong-nghe");
+      await page.locator(".tc-cards").scrollIntoViewIfNeeded();
+      const card = page.locator(".tc-card").nth(index);
+      const href = await card.getAttribute("href");
+      await card.click();
+      await expect(page).toHaveURL(new RegExp(`${href}$`));
+    }
+  });
+
+  test("thẻ nào cũng là liên kết — không còn nút đổi chỗ", async ({ page }) => {
+    const tags = await page.$$eval(".tc-card", (els) => els.map((el) => el.tagName));
+    expect(tags).toEqual(["A", "A", "A"]);
+  });
+
+  test("ba thẻ dẫn tới ba trang KHÁC NHAU", async ({ page }) => {
+    // Hoi truoc "Hiệu suất" khong co trang rieng nen no tro ve trang "Ứng
+    // dụng" — ma trang do mo ra lai thay tieu de "KHO ỨNG DỤNG", nguoi dung
+    // tuong bam nham (khach bao 30/09/2026). Nay moi the mot dich.
+    const hrefs = await page.$$eval(".tc-card", (els) =>
+      els.map((el) => el.getAttribute("href")),
+    );
+    expect(new Set(hrefs).size).toBe(3);
+  });
+
+  test("ảnh thẻ phủ KÍN khung — không còn hình vuông trong hình vuông", async ({
     page,
   }) => {
-    const middle = () =>
-      page.$eval(".tc-card[data-on]", (el) => el.getAttribute("aria-label"));
-    const before = await middle();
-
-    const side = page.locator(".tc-card:not([data-on])").first();
-    const label = (await side.getAttribute("aria-label"))!.split(" — ")[0];
-    await side.click();
-    await page.waitForTimeout(900);
-
-    await expect(page).toHaveURL(/\/cong-nghe$/);
-    expect(await middle()).toBe(label);
-    expect(await middle()).not.toBe(before);
-  });
-
-  test("thẻ ở giữa là liên kết, thẻ bên cạnh là nút", async ({ page }) => {
-    expect(
-      await page.$eval(".tc-card[data-on]", (el) => el.tagName),
-    ).toBe("A");
-    const sides = await page.$$eval(".tc-card:not([data-on])", (els) =>
-      els.map((el) => el.tagName),
-    );
-    expect(sides.every((tag) => tag === "BUTTON")).toBe(true);
-  });
-
-  test("khung giữa luôn to hơn hai khung bên", async ({ page }) => {
-    const widths = await page.$$eval(".tc-card", (els) =>
-      els.map((el) => ({
-        on: el.hasAttribute("data-on"),
-        w: Math.round(el.getBoundingClientRect().width),
-      })),
-    );
-    const mid = widths.find((w) => w.on)!;
-    for (const other of widths.filter((w) => !w.on)) {
-      expect(other.w).toBeLessThan(mid.w);
+    // Khung bo tron ve chet trong anh nen; truoc day anh the cat thut vao
+    // trong no 24px moi ben nen lo ra hai hinh vuong long nhau.
+    for (const gap of await page.$$eval(".tc-card", (els) =>
+      els.map((el) => {
+        const box = el.getBoundingClientRect();
+        const img = el.querySelector("img")!.getBoundingClientRect();
+        return Math.round(
+          Math.max(
+            img.left - box.left,
+            box.right - img.right,
+            img.top - box.top,
+            box.bottom - img.bottom,
+          ),
+        );
+      }),
+    )) {
+      expect(gap).toBeLessThanOrEqual(1);
     }
+  });
+
+  test("rê chuột vào thẻ nào thì đúng thẻ đó nổi lên", async ({ page }) => {
+    const card = page.locator(".tc-card").first();
+    const lift = card.locator(".tc-card-lift");
+    const at = () => lift.evaluate((el) => getComputedStyle(el).transform);
+
+    const rest = await at();
+    await card.hover();
+    await expect.poll(async () => (await at()) !== rest).toBe(true);
   });
 });

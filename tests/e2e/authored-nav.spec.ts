@@ -7,8 +7,7 @@ import { expect, test } from "@playwright/test";
  */
 const AUTHORED = [
   "/cong-nghe/bao-hanh",
-  "/giai-phap/man-hinh/bravo",
-  "/nhan-su/nhan-su-tieu-bieu",
+    "/nhan-su/nhan-su-tieu-bieu",
 ];
 
 test.describe("trang tự soạn", () => {

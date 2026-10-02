@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MobileSubPage } from "@/components/mobile/MobileSubPage";
-import { productsIn } from "@/lib/products";
+import { productsIn, productsOfBrand } from "@/lib/products";
 import { getBravoCards } from "@/lib/screen-tabs";
 import { PPF_CARDS } from "@/lib/ppf-cards";
 import { SliceImage } from "@/components/canvas/SliceImage";
@@ -289,10 +289,14 @@ function screenTabsFor(slug: string) {
     return undefined;
   }
   return {
-    winca: productsIn(slug).map((product) => ({
+    // `productsOfBrand(slug, undefined)` = nhung san pham KHONG khai thuong
+    // hieu, tuc la Winca. Ba dong Bravo cung nam trong danh muc nay nhung
+    // thuoc tab kia.
+    winca: productsOfBrand(slug).map((product) => ({
       id: product.slug,
       name: product.name,
       image: product.image,
+      mobileImage: product.mobileImage,
       href: product.route,
     })),
     bravo: getBravoCards().map((card) => ({
