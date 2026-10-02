@@ -209,6 +209,15 @@ export const DESIGN_DEVIATIONS: readonly Deviation[] = [
       "Dai nen trang doi sang navy cho dong bo voi ca site — khach yeu cau " +
       "(ra soat lai 02/10/2026). Xem SUB_BANDS trong tools/brand/darken-light-bands.py.",
   },
+  {
+    page: "dai-ly/gallery-by-brand",
+    box: { x: 0, y: 1020, width: 1440, height: 3430 - 1020 },
+    reason:
+      "Ba tab 5DO / 3M / NANO SUN nay bam duoc — khach hoi vi sao chua lam " +
+      "(02/10/2026). Thiet ke ve san NAM bai viet giong het nhau, tieu de con " +
+      "de nguyen chu 'TÊN BÀI VIẾT'; vung do duoc che di va ve lai bang san " +
+      "pham that cua tung hang. Xem src/components/site/BrandTabs.tsx.",
+  },
   // ── Doi thu tu muc giai phap ────────────────────────────────────────────
   {
     page: "giai-phap",

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { PpfCarousel } from "@/components/site/PpfCarousel";
 import { StyleQuiz } from "@/components/site/StyleQuiz";
 import { ScreenTabs } from "@/components/site/ScreenTabs";
+import { BrandTabs } from "@/components/site/BrandTabs";
 import { DealerSearch } from "@/components/site/DealerSearch";
 import { Pagination } from "@/components/site/Pagination";
 import { ReadMore } from "@/components/site/ReadMore";
@@ -206,6 +207,8 @@ export default async function SubPage({
   const isQuiz = slug === "trai-nghiem/ban-sac-rieng";
   /** Trang co hai tab WINCA / BRAVO doi luoi san pham ngay tai cho. */
   const isScreens = slug === "giai-phap/man-hinh";
+  /** Trang co ba tab 5DO / 3M / NANO SUN. */
+  const isBrandGallery = slug === "dai-ly/gallery-by-brand";
   const pager = getPagination(slug);
   const hotspots = getHotspots(slug);
 
@@ -235,6 +238,7 @@ export default async function SubPage({
           {isPpf && <PpfCarousel />}
           {isQuiz && <StyleQuiz />}
           {isScreens && <ScreenTabs />}
+          {isBrandGallery && <BrandTabs />}
           {pager && <Pagination model={pager} label={page.title} />}
           <ReadMore
             spots={getCtaSpots(slug).filter((spot) => !covered(spot))}
