@@ -17,8 +17,12 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import design_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE_ROOT = Path("/Users/phuongnam/Downloads/[TC] Website/Website_TC")
+SOURCE_ROOT = design_root()
 
 CANVAS_WIDTH = 1440
 BRIGHT = 185

@@ -62,9 +62,13 @@ function TreeRow({ node, level }: { readonly node: TreeNode; readonly level: num
           </button>
         ) : (
           /* Khong co trang con thi van ve mui ten di toi, nhung la ky hieu
-             trang tri nam trong the <a> — khong tao vung cham gia. */
+             trang tri nam trong the <a> — khong tao vung cham gia.
+             Dung CHINH hinh cua `Caret`, chi xoay di: truoc day day la ky tu
+             chu "›", ma chu thi nho hon han mui ten ve bang SVG nen hai loai
+             mui ten trong mot danh sach khong deu nhau (khach chi ra
+             02/10/2026). */
           <span className="tc-m-tree-leaf" aria-hidden="true">
-            ›
+            <Caret />
           </span>
         )}
       </div>

@@ -23,7 +23,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools" / "brand"))
 from _backdrop import feathered  # noqa: E402
 
-DESIGN = Path("/Users/phuongnam/Downloads/[TC] Website/Website_TC")
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import design_root  # noqa: E402
+
+DESIGN = design_root()
 SLICE_DIR = ROOT / "public" / "slices"
 PAGES = ROOT / "src" / "data" / "pages"
 

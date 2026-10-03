@@ -2392,11 +2392,13 @@ a.tc-appfoot-btn:focus-visible {
   }
 }
 
+/* `contain` chứ không `cover`, và khung theo đúng tỉ lệ ảnh.
+   `cover` ở khung 4/3 cắt mất 13% hai bên của ảnh sản phẩm — mà ảnh hãng gói
+   sẵn tên dòng ở mép nên cắt là mất chữ. Gate `verify:cropped` bắt được. */
 .tc-brand-grid img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
   background: #fff;
 }
 

@@ -22,18 +22,21 @@ Vi sao can cho nay:
 """
 from __future__ import annotations
 
+import sys
 import unicodedata
 from pathlib import Path
 
-DOWNLOADS = Path.home() / "Downloads"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots  # noqa: E402
 
 #: Xep theo do moi. Thu tu khong quyet dinh ket qua — kich thuoc moi quyet
 #: dinh — nhung giup tim thay som va bao cao cho de doc.
-ROOTS: tuple[Path, ...] = (
-    DOWNLOADS / "Tài nguyên Web 2",
-    DOWNLOADS / "Tài nguyên Web",
-    DOWNLOADS / "[TC] Website" / "Tài nguyên Web",
-)
+#:
+#: Danh sach do `design_root.asset_roots()` dung: no tim trong CA
+#: `~/Documents/TC-Auto` lan `~/Downloads`. Truoc day o day ghi cung
+#: `~/Downloads`, va khi khach don tai nguyen sang cho khac (03/10/2026) thi
+#: moi bo trich deu gay.
+ROOTS: tuple[Path, ...] = asset_roots()
 
 _area_cache: dict[Path, int] = {}
 

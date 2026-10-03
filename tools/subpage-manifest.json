@@ -1,8 +1,8 @@
 {
-  "_doc": "Ban do 37 frame thiet ke -> route. File nguon nam trong '[TC] Website/Website_TC'. 6 frame dau moi section la trang chinh (da build tu prototype HTML, KHONG slice lai o day).",
-  "sourceRoot": "/Users/phuongnam/Downloads/Website_TC",
+  "_doc": "Ban do 37 frame thiet ke -> route. 6 frame dau moi section la trang chinh (da build tu prototype HTML, KHONG slice lai o day). `sourceRoot` va `mainSourceRoot` ghi TEN THU MUC chu khong phai duong dan tuyet doi — tools/brand/design_root.py tim chung trong ~/Documents/TC-Auto roi moi toi ~/Downloads. Truoc 03/10/2026 o day ghi duong dan tuyet doi vao ~/Downloads; khach don tai nguyen sang cho khac la ca muoi hai bo trich gay cung luc.",
+  "sourceRoot": "Website_TC",
   "_doc_mainSourceRoot": "Nguon khung @3x cho 6 TRANG CHINH. PHAI khop doi voi ban export prototype HTML dang dung (TC-Auto-Website-Prototype.html): chu va nut tren trang chinh la phan tu that sinh tu prototype, con anh nen @3x lay tu day. Hai ben lech nhau la man retina hien mot dang, man thuong mot neo — ma gate pixel chay o ti le 1 nen KHONG bat duoc. Chi doi cho nay khi da co prototype moi.",
-  "mainSourceRoot": "/Users/phuongnam/Downloads/[TC] Website/Website_TC",
+  "mainSourceRoot": "[TC] Website/Website_TC",
   "pages": [
     {
       "dir": "1. Page_Home",

@@ -219,7 +219,7 @@ export function MobileSubPage({
           15px. */}
       {page.slug === "giai-phap/man-hinh" ? (
         <Link
-          className="tc-m-cta"
+          className="tc-m-cta tc-m-cta-solo"
           href="/giai-phap/man-hinh/tat-ca"
           prefetch={false}
         >
@@ -275,7 +275,7 @@ export function MobileSubPage({
           {contact}
         </section>
       ) : null}
-      <MobileFooter nav={nav} />
+      <MobileFooter />
     </div>
   );
 }
@@ -318,6 +318,13 @@ function dropPlaceholders(
   let skipping = false;
   for (const block of blocks) {
     if (block.kind === "heading") {
+      // Dong ngay thang di LIEN sau tieu de mau cung la cua o dat cho — thiet
+      // ke ve "Ngày 20.8.2026" cho ca nam o. No duoc nhan dang la mot de muc
+      // nen neu khong xet rieng thi no CAT DUT mach bo qua va hien ra mot
+      // minh, khong dinh vao dau ca.
+      if (skipping && /^ngay\s/i.test(normalise(block.text))) {
+        continue;
+      }
       skipping = normalise(block.text) === PLACEHOLDER;
       if (skipping) {
         continue;

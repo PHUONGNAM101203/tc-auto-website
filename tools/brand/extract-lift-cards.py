@@ -19,8 +19,12 @@ from PIL import Image, ImageChops, ImageDraw
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _backdrop import feathered, rebuild_background  # noqa: E402
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots, design_root, design_system  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent.parent
-DESIGN = Path("/Users/phuongnam/Downloads/[TC] Website/Website_TC")
+DESIGN = design_root()
 OUT = ROOT / "public" / "lift"
 SLICE_DIR = ROOT / "public" / "slices"
 DATA = ROOT / "src" / "data" / "lift-cards.json"

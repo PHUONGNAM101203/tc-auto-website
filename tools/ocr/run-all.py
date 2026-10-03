@@ -13,6 +13,10 @@ import sys
 import time
 from pathlib import Path
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "brand"))
+from design_root import resolve_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent.parent
 BIN = ROOT / "tools" / "ocr" / "ocrbin"
 MANIFEST = ROOT / "tools" / "subpage-manifest.json"
@@ -25,7 +29,7 @@ def main() -> int:
         return 1
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    source_root = resolve_root(manifest["sourceRoot"])
     pages = [p for p in manifest["pages"] if not p.get("main")]
 
     OUT.mkdir(parents=True, exist_ok=True)

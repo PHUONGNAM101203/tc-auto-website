@@ -58,7 +58,8 @@
     "verify:clickable": "node tools/fidelity/check-clickable.mjs",
     "verify:responsive": "node tools/fidelity/check-responsive.mjs",
     "verify:captions": "node tools/fidelity/check-caption-dup.mjs",
-    "verify:mobilehero": "node tools/fidelity/check-mobile-hero.mjs"
+    "verify:mobilehero": "node tools/fidelity/check-mobile-hero.mjs",
+    "verify:cropped": "node tools/fidelity/check-cropped.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

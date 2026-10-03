@@ -91,7 +91,7 @@ export function MobilePage({
           {contact}
         </section>
       ) : null}
-      <MobileFooter nav={nav} />
+      <MobileFooter />
     </div>
   );
 }

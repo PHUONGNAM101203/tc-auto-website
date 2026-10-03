@@ -18,8 +18,12 @@ from pathlib import Path
 
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import design_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
-DESIGN = Path("/Users/phuongnam/Downloads/[TC] Website/Website_TC")
+DESIGN = design_root()
 TARGET = ROOT / "src" / "data" / "cta-links.json"
 SUBPAGES = ROOT / "src" / "data" / "subpages"
 

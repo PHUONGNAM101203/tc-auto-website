@@ -22,6 +22,10 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import resolve_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "tools" / "subpage-manifest.json"
 
@@ -142,8 +146,8 @@ def unreorder(y: float) -> float:
 def validate() -> int:
     """Doi chieu ket qua do voi toa do that cua 6 trang chinh."""
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    main_root = Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
-    new_root = Path(manifest["sourceRoot"])
+    main_root = resolve_root(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
+    new_root = resolve_root(manifest["sourceRoot"])
     mains = {e["slug"]: e for e in manifest["pages"] if e.get("main")}
 
     # Trang nao co PHAN TU da duoc va theo thiet ke moi thi phai doi chieu voi
@@ -226,7 +230,7 @@ def validate() -> int:
 
 def emit() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    source_root = resolve_root(manifest["sourceRoot"])
     out: dict[str, list[dict[str, int]]] = {}
 
     for entry in manifest["pages"]:

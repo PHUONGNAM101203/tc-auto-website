@@ -16,8 +16,12 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots, design_root, design_system  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent.parent
-SOURCE = Path("/Users/phuongnam/Downloads/[TC] Website/Design system/Design System 3.png")
+SOURCE = design_system()
 OUT = ROOT / "public" / "brand"
 
 # Bien the logo va vung chua no trong anh nguon (toa do pixel goc).

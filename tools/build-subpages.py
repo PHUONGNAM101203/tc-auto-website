@@ -21,6 +21,10 @@ from pathlib import Path
 
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import resolve_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "tools" / "subpage-manifest.json"
 SLICE_DIR = ROOT / "public" / "slices" / "sub"
@@ -204,7 +208,7 @@ def main() -> int:
     args = parser.parse_args()
 
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    source_root = resolve_root(manifest["sourceRoot"])
     entries = manifest["pages"]
 
     titles = {e["slug"]: e.get("title", e["slug"]) for e in entries}

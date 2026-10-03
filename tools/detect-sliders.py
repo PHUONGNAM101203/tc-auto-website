@@ -23,6 +23,10 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import resolve_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "tools" / "subpage-manifest.json"
 TARGET = ROOT / "src" / "data" / "detected-sliders.json"
@@ -107,7 +111,7 @@ def find_bars(gray: np.ndarray) -> list[dict]:
 
 def main() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    source_root = resolve_root(manifest["sourceRoot"])
 
     result: dict[str, list[dict]] = {}
     total = 0

@@ -16,6 +16,10 @@ from pathlib import Path
 
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import resolve_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "tools" / "subpage-manifest.json"
 DATA_DIR = ROOT / "src" / "data" / "pages"
@@ -33,7 +37,7 @@ def main() -> int:
     # sang bo khung moi. Anh nen @3x cua trang chinh phai cung doi voi ban
     # prototype HTML dang dung, neu khong thi man retina va man thuong hien hai
     # thiet ke khac nhau — ma gate pixel chay o ti le 1 nen khong bat duoc.
-    source_root = Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
+    source_root = resolve_root(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
     mains = {p["slug"]: p for p in manifest["pages"] if p.get("main")}
 
     total = 0

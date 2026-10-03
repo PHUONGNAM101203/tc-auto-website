@@ -150,11 +150,32 @@ function insideButton(block: TextBlock, rects: readonly DetectedRect[]): boolean
   );
 }
 
+/**
+ * Vung cua KHOI TIM KIEM DAI LY tren tung trang.
+ *
+ * Chu trong do — "Đà Nẵng", "3M", "TÌM KIẾM NGAY" — khong phai noi dung trang
+ * ma la NHAN VE SAN trong hai o chon va cai nut. Tren may ban chung nam duoi
+ * phan tu that nen khong lo; ban mobile doc thang tu OCR nen in ra thanh may
+ * dong roi rac vo nghia, ngay duoi de muc "CHỌN KHU VỰC" (khach chup lai
+ * 02/10/2026). Khoi tim kiem that do `DealerSearch layout="mobile"` ve, co
+ * nhan rieng.
+ *
+ * Toa do khop voi DEALER_SPOTS trong src/components/site/DealerSearch.tsx.
+ */
+const SEARCH_BANDS: Readonly<Record<string, { top: number; bottom: number }>> = {
+  "dai-ly/mang-luoi-dai-ly": { top: 1225, bottom: 1420 },
+  "dai-ly/chan-dung-dai-ly": { top: 1085, bottom: 1300 },
+};
+
 function usable(
   block: TextBlock,
   pageHeight: number,
   buttons: readonly DetectedRect[],
+  band?: { top: number; bottom: number },
 ): boolean {
+  if (band && block.y >= band.top && block.y <= band.bottom) {
+    return false;
+  }
   if (block.y < HEADER_BOTTOM) {
     return false;
   }
@@ -227,8 +248,9 @@ function toColumns(band: readonly TextBlock[]): TextBlock[][] {
  */
 export function getMobileBlocks(page: SubPageSpec): readonly MobileBlock[] {
   const buttons = DETECTED[page.slug] ?? [];
+  const band = SEARCH_BANDS[page.slug];
   const usableBlocks = [...getPageText(page.slug).blocks]
-    .filter((block) => usable(block, page.height, buttons))
+    .filter((block) => usable(block, page.height, buttons, band))
     .sort((a, b) => a.y - b.y || a.x - b.x);
 
   const columns = toBands(usableBlocks).flatMap((band) => toColumns(band));

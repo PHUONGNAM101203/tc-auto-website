@@ -60,8 +60,16 @@ const HOTSPOT_TARGETS: Readonly<Record<string, string>> = {
   //   "dai-ly/mang-luoi-dai-ly#0": "/dai-ly/mang-luoi-dai-ly/mien-trung",
   //   "dai-ly/mang-luoi-dai-ly/mien-trung#0": "/dai-ly/mang-luoi-dai-ly/mien-nam",
 
-  // Chân dung đại lý -> bài viết
-  "dai-ly/chan-dung-dai-ly#0": "/dai-ly/chan-dung-dai-ly/dai-ly-winca-pham-gia-auto",
+  // Chân dung đại lý: KHÔNG gán nút #0.
+  //
+  // Nút đỏ duy nhất bộ dò tìm thấy trên trang này là "TÌM KIẾM NGAY" của khối
+  // tìm kiếm đại lý, chứ không phải nút dẫn sang bài viết. Lúc gán (trước
+  // 02/10/2026) trang chưa có ô tìm kiếm nào hoạt động nên nhầm lẫn không lộ
+  // ra; khi `DealerSearch` được nối cho trang này thì nút thật và vùng bấm
+  // nhầm nằm CHỒNG KHÍT lên nhau — `verify:clickable` bắt được ngay.
+  //
+  // Bài viết vẫn tới được: danh sách trang con ngay trong thân trang có liên
+  // kết thật (đo được 437x19 px, hiện rõ ở 1440px), và ngăn kéo menu cũng có.
 
   // Văn hoá TC -> câu chuyện khởi nghiệp
   "nhan-su/van-hoa-tc#0": "/nhan-su/van-hoa-tc/cau-chuyen-khoi-nghiep",

@@ -35,13 +35,53 @@ import {
  * Nay phan tu phu KHIT hop ve san, va khi co nen duc thi no che han vien ve
  * san di — chi con mot duong vien duy nhat.
  */
-const FIELD = { left: 83, width: 354, height: 52 } as const;
-const BRAND_TOP = 1235;
-const PROVINCE_TOP = 1305;
-/** Nut do ve san: x 83..262, y 1377..1410 (do bang cach quet diem mau do). */
-const BUTTON = { left: 83, top: 1377, width: 180, height: 34 } as const;
-/** Vung ket qua — dung cho vi tri ma thiet ke dat danh sach dai ly. */
-const PANEL = { left: 830, top: 1100, width: 545, height: 640 } as const;
+interface Spot {
+  readonly field: { readonly left: number; readonly width: number; readonly height: number };
+  readonly brandTop: number;
+  readonly provinceTop: number;
+  readonly button: {
+    readonly left: number;
+    readonly top: number;
+    readonly width: number;
+    readonly height: number;
+  };
+  readonly panel: {
+    readonly left: number;
+    readonly top: number;
+    readonly width: number;
+    readonly height: number;
+  };
+}
+
+/** Trang "Mạng lưới đại lý" — toa do goc, da do lai tu anh nen. */
+const NETWORK: Spot = {
+  field: { left: 83, width: 354, height: 52 },
+  brandTop: 1235,
+  provinceTop: 1305,
+  /** Nut do ve san: x 83..262, y 1377..1410 (do bang cach quet diem mau do). */
+  button: { left: 83, top: 1377, width: 180, height: 34 },
+  /** Vung ket qua — dung cho vi tri ma thiet ke dat danh sach dai ly. */
+  panel: { left: 830, top: 1100, width: 545, height: 640 },
+};
+
+/**
+ * Trang "Chân dung đại lý" cung ve mot khoi tim kiem y het — cung hai o chon
+ * va cung nut "TÌM KIẾM NGAY" — nhung truoc day KHONG o nao bam duoc, ca tren
+ * may ban lan dien thoai: `DealerSearch` chi duoc noi cho trang Mang luoi.
+ * Khach chi dung cho do (02/10/2026).
+ *
+ * Toa do do tu chinh anh nen. Luu y THU TU NGUOC voi trang kia: o day o KHU
+ * VUC nam tren, o THUONG HIEU nam duoi.
+ */
+const PORTRAIT: Spot = {
+  field: { left: 537, width: 353, height: 52 },
+  provinceTop: 1111,
+  brandTop: 1180,
+  button: { left: 630, top: 1253, width: 179, height: 35 },
+  panel: { left: 537, top: 1310, width: 545, height: 560 },
+};
+
+export const DEALER_SPOTS = { network: NETWORK, portrait: PORTRAIT } as const;
 
 /**
  * `canvas` = dat tuyet doi len dung o chon ve san trong anh nen.
@@ -53,10 +93,15 @@ const PANEL = { left: 830, top: 1100, width: 545, height: 640 } as const;
  */
 export function DealerSearch({
   layout = "canvas",
+  spot = "network",
 }: {
   readonly layout?: "canvas" | "mobile";
+  /** Trang nao — moi trang ve khoi tim kiem o mot cho khac. */
+  readonly spot?: keyof typeof DEALER_SPOTS;
 }) {
   const flow = layout === "mobile";
+  const { field: FIELD, brandTop: BRAND_TOP, provinceTop: PROVINCE_TOP, button: BUTTON, panel: PANEL } =
+    DEALER_SPOTS[spot];
   const at = <T,>(style: T): T | undefined => (flow ? undefined : style);
   const [brand, setBrand] = useState("");
   const [province, setProvince] = useState("");

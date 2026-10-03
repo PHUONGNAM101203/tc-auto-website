@@ -202,6 +202,9 @@ export default async function SubPage({
   // Trang mang luoi dai ly: hai o chon va nut "TÌM KIẾM" da duoc ve san trong
   // anh nen — gan dieu khien that de len de form dung duoc.
   const isDealerNetwork = slug.startsWith("dai-ly/mang-luoi-dai-ly");
+  // Trang "Chân dung đại lý" cũng vẽ sẵn một khối "TÌM KIẾM ĐẠI LÝ" y hệt,
+  // nhưng trước đây không ô nào bấm được. Toạ độ riêng — xem DEALER_SPOTS.
+  const isDealerPortrait = slug === "dai-ly/chan-dung-dai-ly";
   // Dai the "3M PPF": thiet ke ve chet bon the kem hai mui ten hai ben. Dai da
   // duoc tach ra khoi anh nen de hai mui ten do bam duoc.
   const isPpf = slug === "giai-phap/ppf";
@@ -242,6 +245,7 @@ export default async function SubPage({
       feature={
         <>
           {isDealerNetwork && <DealerSearch />}
+          {isDealerPortrait && <DealerSearch spot="portrait" />}
           {isPpf && <PpfCarousel />}
           {isQuiz && <StyleQuiz />}
           {isScreens && <ScreenTabs />}
@@ -260,6 +264,7 @@ export default async function SubPage({
       mobileFeature={
         <>
           {isDealerNetwork && <DealerSearch layout="mobile" />}
+          {isDealerPortrait && <DealerSearch layout="mobile" spot="portrait" />}
           {isQuiz && <StyleQuiz layout="mobile" />}
         </>
       }

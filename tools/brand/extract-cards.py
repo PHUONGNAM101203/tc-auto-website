@@ -29,9 +29,13 @@ from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _backdrop import feathered, rebuild_columns  # noqa: E402
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots, design_root, design_system  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent.parent
 SOURCE = Path(
-    "/Users/phuongnam/Downloads/[TC] Website/Website_TC/4.Page_Công nghệ /1. Công Nghệ.png"
+    design_root() / "4.Page_Công nghệ " / "1. Công Nghệ.png"
 )
 OUT = ROOT / "public" / "cards"
 SLICE_DIR = ROOT / "public" / "slices"

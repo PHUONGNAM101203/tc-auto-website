@@ -24,11 +24,15 @@ from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-DOWNLOADS = Path("/Users/phuongnam/Downloads/[TC] Website")
+DOWNLOADS = design_root().parent
 SOURCE = DOWNLOADS / "Website_TC" / "1. Page_Home" / "Home.png"
 # Tim khap ca ba bo tai nguyen, lay ban to nhat — xem tools/brand/asset_source.py
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from asset_source import find as find_asset  # noqa: E402
+
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots, design_root, design_system  # noqa: E402
 
 ASSET_DIR = "0. Homepage"
 OUT = ROOT / "public" / "solutions"

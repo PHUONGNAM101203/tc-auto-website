@@ -11,7 +11,8 @@ import { chromium } from "@playwright/test";
 import { PNG } from "pngjs";
 import pixelmatch from "pixelmatch";
 import sharp from "sharp";
-import { readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { readFileSync, mkdirSync, writeFileSync, existsSync } from "node:fs";
+import { homedir } from "node:os";
 import { dirname, resolve, join } from "node:path";
 import { fileURLToPath } from "node:url";
 // Doc THANG tu nguon chuan — Node tu lot kieu cua tep .ts (can Node >= 22.18).
@@ -44,8 +45,44 @@ const PAGER_PAD = 26;
 const index = JSON.parse(
   readFileSync(join(ROOT, "src/data/subpages/index.json"), "utf8"),
 );
+/**
+ * Giai duong dan toi bo thiet ke goc.
+ *
+ * `subpage-manifest.json` tung ghi duong dan TUYET DOI tro vao `~/Downloads`.
+ * Ngay 03/10/2026 khach don het tai nguyen sang `~/Documents/TC-Auto/` va xoa
+ * cho cu — cua kiem nay chet ngay voi "Input file is missing".
+ *
+ * Giong `resolve_root` ben Python (tools/brand/design_root.py): con duong dan
+ * nao ton tai thi dung luon, khong thi tim lai doan ten cuoi trong cac goc
+ * da biet.
+ */
+function resolveRoot(value) {
+  if (existsSync(value)) return value;
+  const parts = value.split("/").filter(Boolean);
+  const tails = [parts.slice(-2).join("/"), parts.at(-1)].filter(Boolean);
+  const bases = [
+    join(homedir(), "Documents", "TC-Auto"),
+    join(homedir(), "Downloads"),
+  ];
+  for (const base of bases) {
+    for (const tail of tails) {
+      const path = join(base, tail);
+      if (existsSync(path)) return path;
+    }
+  }
+  throw new Error(
+    `Khong tim thay bo thiet ke. Da thu: ${bases.join(", ")} voi ${tails.join(", ")}`,
+  );
+}
+
+const SUB_ROOT = resolveRoot(manifest.sourceRoot);
+const MAIN_ROOT = resolveRoot(manifest.mainSourceRoot ?? manifest.sourceRoot);
+
 const sourceBySlug = new Map(
-  manifest.pages.map((p) => [p.slug, join(manifest.sourceRoot, p.dir, p.file)]),
+  manifest.pages.map((p) => [
+    p.slug,
+    join(p.main ? MAIN_ROOT : SUB_ROOT, p.dir, p.file),
+  ]),
 );
 
 const FREEZE = `(() => {

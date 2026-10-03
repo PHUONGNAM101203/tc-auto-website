@@ -17,17 +17,21 @@ neo. Gate pixel chay o ti le 1 nen KHONG bat duoc chuyen do.
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import resolve_root  # noqa: E402
 
 
 def main_root(manifest: dict) -> Path:
     """Bo khung cho 6 trang chinh."""
-    return Path(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
+    return resolve_root(manifest.get("mainSourceRoot") or manifest["sourceRoot"])
 
 
 def sub_root(manifest: dict) -> Path:
     """Bo khung cho 31 trang con."""
-    return Path(manifest["sourceRoot"])
+    return resolve_root(manifest["sourceRoot"])
 
 
 def root_for(manifest: dict, entry: dict) -> Path:

@@ -29,10 +29,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _backdrop import rebuild_background  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-DOWNLOADS = Path("/Users/phuongnam/Downloads/[TC] Website")
+DOWNLOADS = design_root().parent
 SOURCE = DOWNLOADS / "Website_TC" / "3.Page_Giải pháp" / "3.PPF.png"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from asset_source import find as find_asset  # noqa: E402
+
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots, design_root, design_system  # noqa: E402
 
 ASSET_DIR = "2. Page_Giải pháp/2.3. PPF"
 OUT = ROOT / "public" / "ppf"

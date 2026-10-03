@@ -234,8 +234,16 @@
   flex: none;
   display: grid;
   place-items: center;
-  width: 28px;
+  /* 44px như nút xổ bên cạnh, để hai loại mũi tên thẳng hàng với nhau. */
+  width: 44px;
   color: var(--red-nav);
+}
+
+/* Cùng cỡ, cùng nét với mũi tên xổ — chỉ xoay sang phải. */
+.tc-m-tree-leaf svg {
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
 }
 
 .tc-m-tree-branch {
@@ -379,6 +387,17 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+/* Nút ĐỨNG RIÊNG — không nối tiếp một đoạn văn nào — thì canh giữa.
+   Nút `tc-m-cta` thường nằm ngay dưới một đoạn mô tả nên bám lề trái theo
+   mạch đọc; riêng nút cuối lưới sản phẩm thì đứng một mình, dính lề trái
+   nhìn lệch hẳn (khách chỉ ra 03/10/2026). */
+.tc-m-cta-solo {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tc-m-contact {
@@ -624,15 +643,35 @@
   padding: 0;
 }
 
-.tc-m-foot-social a {
-  display: inline-block;
-  padding: 9px 16px;
-  border-radius: 999px;
-  border: 1px solid rgb(255 255 255 / 0.18);
-  color: rgb(255 255 255 / 0.8);
+/* Vòng tròn có biểu tượng, giống hệt chân trang máy bàn — trước đây ở đây là
+   ba viền chữ "Facebook / Zalo", hai bản nhìn ra hai site khác nhau. */
+.tc-m-foot-social a,
+.tc-m-foot-social span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgb(166 228 255 / 0.5);
+  color: var(--sky);
   text-decoration: none;
-  font: 600 12px/1 "Montserrat", sans-serif;
-  letter-spacing: 0.04em;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tc-m-foot-social a:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* Instagram chưa có tài khoản nên là vòng tròn tĩnh — mờ hơn để thấy rõ là
+   chưa bấm được, chứ không dẫn sang một tài khoản bịa. */
+.tc-m-foot-social span {
+  opacity: 0.45;
+}
+
+.tc-m-foot-social svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ---------- Bang anh cuon ngang ---------- */
@@ -1057,12 +1096,22 @@
   line-height: 1.4;
 }
 
-/* `contain` chứ không `cover`: ảnh hãng gói sẵn TÊN DÒNG ở mép trên, cắt theo
-   `cover` là mất chữ — đo được "S170+ QLED 2K" chỉ còn "S170+ QLED 2". */
+/* KHÔNG ép khung theo một tỉ lệ cố định.
+   Ảnh sản phẩm của hãng có tỉ lệ rất khác nhau — đo 20 tệp: từ 0,88 đến 1,71.
+   Ép tất cả vào 4/3 thì ảnh ngang bị đệm một dải trắng dày ở trên và dưới,
+   nhìn ra như ảnh bị cắt cụt (khách chụp lại 02/10/2026). Để `height: auto`
+   thì mỗi thẻ cao đúng theo ảnh của nó: không cắt, không đệm.
+   Lý do cũ vẫn giữ: tuyệt đối không `cover` — ảnh hãng gói sẵn TÊN DÒNG ở mép
+   trên, cắt là mất chữ ("S170+ QLED 2K" từng chỉ còn "S170+ QLED 2"). */
 .tc-m-prods-2 img {
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
+  height: auto;
   background: #fff;
+}
+
+/* Ảnh cao thấp khác nhau thì các thẻ phải bám MÉP TRÊN, không giãn theo thẻ
+   cao nhất — giãn ra là lại sinh khoảng trắng y như cũ. */
+.tc-m-prods-2 {
+  align-items: start;
 }
 
 /* Nhóm tab rỗng — nói thẳng chứ không để một khoảng trắng. */

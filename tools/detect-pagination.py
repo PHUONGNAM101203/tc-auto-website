@@ -17,6 +17,10 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent / "brand"))
+from design_root import resolve_root  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "tools" / "subpage-manifest.json"
 INDEX = ROOT / "src" / "data" / "subpages" / "index.json"
@@ -78,7 +82,7 @@ def find_box(gray: np.ndarray, height: int) -> dict | None:
 
 def main() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    source_root = Path(manifest["sourceRoot"])
+    source_root = resolve_root(manifest["sourceRoot"])
     index = {row["slug"]: row for row in json.loads(INDEX.read_text(encoding="utf-8"))}
 
     out: dict[str, dict] = {}

@@ -23,10 +23,14 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-DOWNLOADS = Path("/Users/phuongnam/Downloads/[TC] Website")
+DOWNLOADS = design_root().parent
 DESIGN = DOWNLOADS / "Website_TC"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from asset_source import find as find_asset  # noqa: E402
+
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from design_root import asset_roots, design_root, design_system  # noqa: E402
 
 
 def ASSET(*parts: str):
