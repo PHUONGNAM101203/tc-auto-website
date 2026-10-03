@@ -57,3 +57,6 @@ tsconfig.tsbuildinfo
 # 1,4MB, cache 1,4MB, và mỗi lần chạy lại đẻ thêm một thư mục sao lưu theo ngày.
 graphify-out/*
 !graphify-out/GRAPH_REPORT.md
+
+# Ban xuat du lieu Supabase — CO DU LIEU CA NHAN, khong bao gio len git.
+.backup/

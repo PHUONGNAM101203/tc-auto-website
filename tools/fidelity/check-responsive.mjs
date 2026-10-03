@@ -16,7 +16,6 @@
  * Can may chu o cong 3311 — chay qua `npm run verify:live`.
  */
 import { chromium } from "@playwright/test";
-import { readdirSync } from "node:fs";
 
 const BASE = process.argv[2] ?? "http://127.0.0.1:3311";
 
